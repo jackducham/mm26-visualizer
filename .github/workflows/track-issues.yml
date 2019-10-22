@@ -1,0 +1,16 @@
+name: Add new issues to the project board
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  add-team-label:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Add Team Label
+        uses: jackducham/mm26-automation@master
+        with:
+          myToken: ${{ secrets.GITHUB_TOKEN }}
