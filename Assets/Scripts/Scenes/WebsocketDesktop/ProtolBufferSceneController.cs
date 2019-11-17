@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.IO;
+using UnityEngine.UI;
 using Google.Protobuf;
 using MM26.IO;
 
@@ -7,7 +7,10 @@ namespace MM26.Scenes.WebsocketDesktop
 {
     public class ProtolBufferSceneController : MonoBehaviour
     {
-        MemoryStream stream = new MemoryStream();
+        [SerializeField]
+        private Text _turnNumberText = null;
+
+        private byte[] _bytes = null;
 
         void Awake()
         {
@@ -16,16 +19,13 @@ namespace MM26.Scenes.WebsocketDesktop
                 TurnNumber = 17,
             };
 
-            turn.WriteTo(this.stream);
-
-            byte[] buffer = this.stream.GetBuffer();
+            _bytes = turn.ToByteArray();
         }
 
         void Start()
         {
-            VisualizerTurn turn = VisualizerTurn.Parser.ParseFrom(this.stream);
-
-            Debug.Log(turn.TurnNumber);
+            VisualizerTurn turn = VisualizerTurn.Parser.ParseFrom(_bytes);
+            _turnNumberText.text = $"Turn Number = {turn.TurnNumber}";
         }
     }
 }
