@@ -3,9 +3,9 @@ using UnityEngine.UI;
 using Google.Protobuf;
 using MM26.IO;
 
-namespace MM26.Scenes.WebsocketDesktop
+namespace MM26.Scenes.IO.ProtocolBuffer
 {
-    public class ProtolBufferSceneController : MonoBehaviour
+    public class ProtocolBufferSceneController : MonoBehaviour
     {
         [SerializeField]
         private Text _turnNumberText = null;
