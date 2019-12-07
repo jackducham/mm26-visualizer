@@ -19,9 +19,9 @@ namespace MM26.Map
         public override void OnInspectorGUI()
         {
             DrawDefaultInspector();
-            if (GUILayout.Button("Read Map from File"))
+            if (GUILayout.Button("Save Map from File"))
                 current.ReadMapFrom(0);
-            if (GUILayout.Button("Read Map from Tilemap"))
+            if (GUILayout.Button("Save Map from Tilemap"))
                 current.ReadMapFrom(1);
         }
     }
