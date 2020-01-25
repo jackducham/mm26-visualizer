@@ -1,15 +1,40 @@
+using UnityEngine;
+using Google.Protobuf;
+
 namespace MM26.IO
 {
-    public interface IDataProvider
+    public class DataProvider: MonoBehaviour
     {
-        VisualizerChange GetChange(int changeIndex);
-        VisualizerTurn GetTurn(int turnIndex);
-    }
+#region Variables
+        private MessageParser<VisualizerChange> _changeParser = null;
+        private MessageParser<VisualizerTurn> _turnParser = null;
+#endregion
 
-    public class DataProvider
-    {
-        public static IDataProvider ForDesktop() { return null; }
-        public static IDataProvider ForBrowser() { return null; }
-        public static IDataProvider Default() { return null; }
+#region MonoBehaviour APIs
+        private void Awake()
+        {
+            _changeParser = VisualizerChange.Parser;
+            _turnParser = VisualizerTurn.Parser;
+        }
+#endregion
+
+#region JS to C Sharp Functions
+        private void ProcessChangeData(byte[] bytes)
+        {
+            Debug.Log("Got new bytes");
+        }
+#endregion
+
+#region Public APIs
+        public VisualizerChange GetChange(int fromTurn, int toTurn)
+        {
+            return null;
+        }
+
+        public VisualizerTurn GetTurn(int turn)
+        {
+            return null;
+        }
+#endregion
     }
 }
