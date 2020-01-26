@@ -1,31 +1,33 @@
+using System.Threading;
 using UnityEngine;
 using Google.Protobuf;
 
 namespace MM26.IO
 {
-    public class DataProvider: MonoBehaviour
+    public sealed class DataProvider: MonoBehaviour
     {
-#region Variables
         private MessageParser<VisualizerChange> _changeParser = null;
         private MessageParser<VisualizerTurn> _turnParser = null;
-#endregion
 
-#region MonoBehaviour APIs
+#if UNITY_STANDALONE
+        WebSocketListener _webSocketListener;
+#endif
+
         private void Awake()
         {
+#if UNITY_STANDALONE
+            _webSocketListener = new WebSocketListener(SynchronizationContext.Current);
+            _webSocketListener.NewMessage += this.ProcessChangeData;
+#endif
             _changeParser = VisualizerChange.Parser;
             _turnParser = VisualizerTurn.Parser;
         }
-#endregion
 
-#region JS to C Sharp Functions
-        private void ProcessChangeData(byte[] bytes)
+        public void ProcessChangeData(object sender, byte[] bytes)
         {
             Debug.Log("Got new bytes");
         }
-#endregion
 
-#region Public APIs
         public VisualizerChange GetChange(int fromTurn, int toTurn)
         {
             return null;
@@ -35,6 +37,5 @@ namespace MM26.IO
         {
             return null;
         }
-#endregion
     }
 }
