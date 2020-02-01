@@ -25,9 +25,9 @@ namespace MM26.IO {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChV2aXN1YWxpemVyX3R1cm4ucHJvdG8SCnZpc3VhbGl6ZXIiJAoOVmlzdWFs",
-            "aXplclR1cm4SEgoKdHVybk51bWJlchgBIAEoA0JTCjFtZWNoLm1hbmlhLk1N",
-            "MjZHYW1lRW5naW5lLnZpc3VhbGl6ZXJDb21tdW5pY2F0aW9uQhRWaXN1YWxp",
-            "emVyVHVyblByb3Rvc6oCB01NMjYuSU9iBnByb3RvMw=="));
+            "aXplclR1cm4SEgoKdHVybk51bWJlchgBIAEoA0JZCjdtZWNoLm1hbmlhLmVu",
+            "Z2luZS5zZXJ2ZXIuY29tbXVuaWNhdGlvbi52aXN1YWxpemVyLm1vZGVsQhRW",
+            "aXN1YWxpemVyVHVyblByb3Rvc6oCB01NMjYuSU9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

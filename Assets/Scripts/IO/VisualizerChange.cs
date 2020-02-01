@@ -24,14 +24,14 @@ namespace MM26.IO {
     static VisualizerChangeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chd2aXN1YWxpemVyX2NoYW5nZS5wcm90bxIKdmlzdWFsaXplciIlChBWaXN1",
-            "YWxpemVyQ2hhbmdlEhEKCXRpbWVzdGFtcBgBIAEoA0JTCjFtZWNoLm1hbmlh",
-            "Lk1NMjZHYW1lRW5naW5lLnZpc3VhbGl6ZXJDb21tdW5pY2F0aW9uQhRWaXN1",
-            "YWxpemVyVHVyblByb3Rvc6oCB01NMjYuSU9iBnByb3RvMw=="));
+            "Chd2aXN1YWxpemVyX2NoYW5nZS5wcm90bxIKdmlzdWFsaXplciIoChBWaXN1",
+            "YWxpemVyQ2hhbmdlEhQKDGNoYW5nZU51bWJlchgBIAEoA0JTCjFtZWNoLm1h",
+            "bmlhLk1NMjZHYW1lRW5naW5lLnZpc3VhbGl6ZXJDb21tdW5pY2F0aW9uQhRW",
+            "aXN1YWxpemVyVHVyblByb3Rvc6oCB01NMjYuSU9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.VisualizerChange), global::MM26.IO.VisualizerChange.Parser, new[]{ "Timestamp" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.VisualizerChange), global::MM26.IO.VisualizerChange.Parser, new[]{ "ChangeNumber" }, null, null, null, null)
           }));
     }
     #endregion
@@ -63,7 +63,7 @@ namespace MM26.IO {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public VisualizerChange(VisualizerChange other) : this() {
-      timestamp_ = other.timestamp_;
+      changeNumber_ = other.changeNumber_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -72,14 +72,14 @@ namespace MM26.IO {
       return new VisualizerChange(this);
     }
 
-    /// <summary>Field number for the "timestamp" field.</summary>
-    public const int TimestampFieldNumber = 1;
-    private long timestamp_;
+    /// <summary>Field number for the "changeNumber" field.</summary>
+    public const int ChangeNumberFieldNumber = 1;
+    private long changeNumber_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long Timestamp {
-      get { return timestamp_; }
+    public long ChangeNumber {
+      get { return changeNumber_; }
       set {
-        timestamp_ = value;
+        changeNumber_ = value;
       }
     }
 
@@ -96,14 +96,14 @@ namespace MM26.IO {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Timestamp != other.Timestamp) return false;
+      if (ChangeNumber != other.ChangeNumber) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Timestamp != 0L) hash ^= Timestamp.GetHashCode();
+      if (ChangeNumber != 0L) hash ^= ChangeNumber.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -117,9 +117,9 @@ namespace MM26.IO {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Timestamp != 0L) {
+      if (ChangeNumber != 0L) {
         output.WriteRawTag(8);
-        output.WriteInt64(Timestamp);
+        output.WriteInt64(ChangeNumber);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -129,8 +129,8 @@ namespace MM26.IO {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Timestamp != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Timestamp);
+      if (ChangeNumber != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ChangeNumber);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -143,8 +143,8 @@ namespace MM26.IO {
       if (other == null) {
         return;
       }
-      if (other.Timestamp != 0L) {
-        Timestamp = other.Timestamp;
+      if (other.ChangeNumber != 0L) {
+        ChangeNumber = other.ChangeNumber;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -158,7 +158,7 @@ namespace MM26.IO {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Timestamp = input.ReadInt64();
+            ChangeNumber = input.ReadInt64();
             break;
           }
         }
