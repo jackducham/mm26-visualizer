@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace MM26.IO
 {
+#if UNITY_STANDALONE
     public sealed class WebSocketListener: IDisposable
     {
         public event EventHandler<byte[]> NewMessage;
@@ -73,4 +74,5 @@ namespace MM26.IO
             }
         }
     }
+#endif
 }
