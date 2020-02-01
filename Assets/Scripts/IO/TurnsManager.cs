@@ -6,10 +6,10 @@ namespace MM26.IO
     public class TurnsManager : MonoBehaviour
     {
         [SerializeField]
-        string _changeSocket;
+        string _changeSocket = "";
 
         [SerializeField]
-        string _editorChangeSocket;
+        string _editorChangeSocket = "";
 
         DataProvider _dataProvider;
 
@@ -20,6 +20,7 @@ namespace MM26.IO
 #else
             _dataProvider = new DataProvider(_changeSocket);
 #endif
+            _dataProvider.NewChange += OnNewChange;
         }
 
         /// <summary>
@@ -31,6 +32,11 @@ namespace MM26.IO
         public void TakeChangeData(byte[] bytes)
         {
             _dataProvider.OnChangeData(this, bytes);
+        }
+
+        void OnNewChange(object sender, EventArgs e)
+        {
+
         }
     }
 }

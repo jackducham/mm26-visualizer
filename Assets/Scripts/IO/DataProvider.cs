@@ -18,7 +18,7 @@ namespace MM26.IO
 #endif
         long _latestChangeNumer = 0;
 
-        public Action NewChange;
+        public EventHandler NewChange;
 
         public long LatestChangeNumber
         {
@@ -47,7 +47,7 @@ namespace MM26.IO
             VisualizerChange change = _changeParser.ParseFrom(bytes);
 
             _latestChangeNumer = change.ChangeNumber;
-            NewChange?.Invoke();
+            NewChange?.Invoke(this, new EventArgs());
 
             _changes[change.ChangeNumber] = change;
         }

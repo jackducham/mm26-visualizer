@@ -129,6 +129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 118875766}
+  - component: {fileID: 118875767}
   m_Layer: 0
   m_Name: Turn Manager
   m_TagString: Untagged
@@ -148,53 +149,22 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &822811791
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 822811793}
-  - component: {fileID: 822811792}
-  m_Layer: 0
-  m_Name: Data Provider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &822811792
+--- !u!114 &118875767
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822811791}
+  m_GameObject: {fileID: 118875765}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57b17248867e043e1ae09b431f7bbfbd, type: 3}
+  m_Script: {fileID: 11500000, guid: 365b71551d92a4431858189d39d3dfc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _changeUrl: 
-  _debugChangeUrl: 
---- !u!4 &822811793
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822811791}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 80, y: 15, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  _changeSocket: ws://localhost:3000/visualizer
+  _editorChangeSocket: ws://localhost:3000/visualizer
 --- !u!1 &2100838743
 GameObject:
   m_ObjectHideFlags: 0
