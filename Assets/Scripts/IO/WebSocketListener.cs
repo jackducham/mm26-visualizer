@@ -7,21 +7,12 @@ using UnityEngine;
 namespace MM26.IO
 {
 #if UNITY_STANDALONE
-    public sealed class WebSocketListener: IDisposable
+    internal sealed class WebSocketListener: IDisposable
     {
-        public sealed class ConnectionEventArgs : EventArgs
-        {
-            public ClientWebSocket ClientWebSocket { get; set; }
-
-            public ConnectionEventArgs(ClientWebSocket clientWebSocket)
-            {
-                this.ClientWebSocket = clientWebSocket;
-            }
-        }
-
-        public event EventHandler<byte[]> NewMessage;
-        public event EventHandler<ConnectionEventArgs> ConnectionFailed;
-
+        /// <summary>
+        /// Called when a new message has been received
+        /// </summary>
+        internal event EventHandler<byte[]> NewMessage;
 
         bool _idle = true;
         ClientWebSocket _client = new ClientWebSocket();
@@ -29,7 +20,15 @@ namespace MM26.IO
 
         SynchronizationContext _context;
 
-        public WebSocketListener(SynchronizationContext context)
+        /// <summary>
+        /// Create  a websocket listener
+        /// </summary>
+        /// <param name="context">
+        /// if this is not null, then hte NewMessage event would be dispatched
+        /// to the context. Otherwise, the synchronization context would run
+        /// on whichever thread the scheduler decides
+        /// </param>
+        internal WebSocketListener(SynchronizationContext context)
         {
             _context = context;
         }
@@ -39,12 +38,22 @@ namespace MM26.IO
             _client.Dispose();
         }
 
-        public void Connect(Uri uri)
+        /// <summary>
+        /// Connect to an uri
+        /// </summary>
+        /// <param name="uri">the uri to connect websocket to</param>
+        internal void Connect(Uri uri)
         {
-            this.Connect(uri, () => { });
+            this.Connect(uri, () => { }, () => { });
         }
 
-        public void Connect(Uri uri, Action callback)
+        /// <summary>
+        /// Connect to an uri
+        /// </summary>
+        /// <param name="uri">the uri to connect websocket to</param>
+        /// <param name="onConnection">called after connection</param>
+        /// <param name="onFailure">called if failed</param>
+        internal void Connect(Uri uri, Action onConnection, Action onFailure)
         {
             if (_idle)
             {
@@ -54,12 +63,12 @@ namespace MM26.IO
                         if (_client.State != WebSocketState.Open)
                         {
                             _idle = true;
-                            this.ConnectionFailed?.Invoke(this, new ConnectionEventArgs(_client));
+                            onFailure();
 
                             return;
                         }
 
-                        callback();
+                        onConnection();
                         await this.OnConnect();
                     });
 

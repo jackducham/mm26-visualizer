@@ -6,7 +6,7 @@ using Google.Protobuf;
 
 namespace MM26.IO
 {
-    internal sealed class DataProvider
+    internal sealed class DataProvider: IDisposable
     {
         MessageParser<VisualizerChange> _changeParser = null;
         MessageParser<VisualizerTurn> _turnParser = null;
@@ -18,31 +18,56 @@ namespace MM26.IO
 #endif
         long _latestChangeNumer = 0;
 
-        public EventHandler NewChange;
+        internal EventHandler NewChange;
 
-        public long LatestChangeNumber
+        /// <summary>
+        /// Change number of the newest change
+        /// </summary>
+        internal long LatestChangeNumber
         {
             get { return _latestChangeNumer; }
         }
 
-        internal DataProvider(string changeSocket)
+        /// <summary>
+        /// Initialize a new data provider
+        /// </summary>
+        internal DataProvider()
         {
 #if UNITY_STANDALONE 
             _changeListener = new WebSocketListener(SynchronizationContext.Current);
             _changeListener.NewMessage += this.OnChangeData;
-            _changeListener.Connect(new Uri(changeSocket));
 #endif
 
             _changeParser = VisualizerChange.Parser;
             _turnParser = VisualizerTurn.Parser;
         }
 
+        public void Dispose()
+        {
+#if UNITY_STANDALONE
+            _changeListener.Dispose();
+#endif
+        }
+
+#if UNITY_STANDALONE
+        /// <summary>
+        /// Connect to a remote websocket server
+        /// </summary>
+        /// <param name="changeSocket">the address of the socket</param>
+        /// <param name="onConnection">Called after connection</param>
+        /// <param name="onFailure">Called if failed</param>
+        internal void Connect(string changeSocket, Action onConnection, Action onFailure)
+        {
+            _changeListener.Connect(new Uri(changeSocket), onConnection, onFailure);
+        }
+#endif
+
         /// <summary>
         /// Process new change data in bytes
         /// </summary>
         /// <param name="sender">the sender</param>
         /// <param name="bytes">bytes representing the change</param>
-        public void OnChangeData(object sender, byte[] bytes)
+        internal void OnChangeData(object sender, byte[] bytes)
         {
             VisualizerChange change = _changeParser.ParseFrom(bytes);
 
@@ -57,7 +82,7 @@ namespace MM26.IO
         /// </summary>
         /// <param name="change">the change number</param>
         /// <returns>a change if there is one, null otherwise</returns>
-        public VisualizerChange GetChange(int change)
+        internal VisualizerChange GetChange(int change)
         {
             return _changes[change];
         }
@@ -67,7 +92,7 @@ namespace MM26.IO
         /// </summary>
         /// <param name="turn">the turn number</param>
         /// <returns>a turn if there is one, null otherwise</returns>
-        public VisualizerTurn GetTurn(int turn)
+        internal VisualizerTurn GetTurn(int turn)
         {
             return null;
         }

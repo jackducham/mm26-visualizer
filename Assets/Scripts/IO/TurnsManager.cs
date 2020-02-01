@@ -15,12 +15,20 @@ namespace MM26.IO
 
         private void Awake()
         {
-#if UNITY_EDITOR
-            _dataProvider = new DataProvider(_editorChangeSocket);
-#else
-            _dataProvider = new DataProvider(_changeSocket);
-#endif
+            _dataProvider = new DataProvider();
             _dataProvider.NewChange += OnNewChange;
+
+#if UNITY_EDITOR
+            _dataProvider.Connect(_editorChangeSocket, this.OnConnection, this.OnFailure);
+#else
+            _dataProvider.Connect(_changeSocket, this.OnConnection, this.OnFailure);
+#endif
+            
+        }
+
+        private void OnDestroy()
+        {
+            _dataProvider.Dispose();
         }
 
         /// <summary>
@@ -32,6 +40,16 @@ namespace MM26.IO
         public void TakeChangeData(byte[] bytes)
         {
             _dataProvider.OnChangeData(this, bytes);
+        }
+
+        void OnConnection()
+        {
+
+        }
+
+        void OnFailure()
+        {
+            Debug.LogError("Websocket connection failed");
         }
 
         void OnNewChange(object sender, EventArgs e)
