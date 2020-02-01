@@ -27,7 +27,7 @@ namespace MM26.IO
 
         internal DataProvider(string changeSocket)
         {
-#if UNITY_STANDALONE
+#if UNITY_STANDALONE 
             _changeListener = new WebSocketListener(SynchronizationContext.Current);
             _changeListener.NewMessage += this.OnChangeData;
             _changeListener.Connect(new Uri(changeSocket));

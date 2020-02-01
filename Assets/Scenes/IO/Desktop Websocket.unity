@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _changeSocket: ws://localhost:3000/visualizer
-  _editorChangeSocket: ws://localhost:3000/visualizer
+  _editorChangeSocket: ws://localhost:3000/
 --- !u!1 &2100838743
 GameObject:
   m_ObjectHideFlags: 0
