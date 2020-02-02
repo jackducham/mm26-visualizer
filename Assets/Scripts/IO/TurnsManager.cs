@@ -5,41 +5,46 @@ namespace MM26.IO
 {
     public class TurnsManager : MonoBehaviour
     {
+        enum DataProviderType
+        {
+            Web,
+            Local,
+        }
+
+        [SerializeField]
+        DataProviderType _dataProviderType = DataProviderType.Web;
+
         [SerializeField]
         string _changeSocket = "";
 
         [SerializeField]
         string _editorChangeSocket = "";
 
-        DataProvider _dataProvider;
+        IDataProvider _dataProvider;
 
         private void Awake()
         {
-            _dataProvider = new DataProvider();
-            _dataProvider.NewChange += OnNewChange;
-
+            switch (_dataProviderType)
+            {
+                case DataProviderType.Web:
+                    IWebDataProvider dataProvider = DataProvider.CreateWebDataProvider();
+                    dataProvider.NewChange += this.OnNewChange;
 #if UNITY_EDITOR
-            _dataProvider.Connect(_editorChangeSocket, this.OnConnection, this.OnFailure);
+                    dataProvider.Connect(new Uri(_editorChangeSocket), this.OnConnection, this.OnFailure);
 #else
-            _dataProvider.Connect(_changeSocket, this.OnConnection, this.OnFailure);
+                    _dataProvider.Connect(_changeSocket, this.OnConnection, this.OnFailure);
 #endif
-            
+                    _dataProvider = dataProvider;
+                    break;
+                case DataProviderType.Local:
+                    _dataProvider = DataProvider.CreateFileSystemDataProvider();
+                    break;
+            }
         }
 
         private void OnDestroy()
         {
             _dataProvider.Dispose();
-        }
-
-        /// <summary>
-        /// Receive new change data.
-        ///
-        /// This method is intended to be called by the JavaScript plugin
-        /// </summary>
-        /// <param name="bytes"></param>
-        public void TakeChangeData(byte[] bytes)
-        {
-            _dataProvider.OnChangeData(this, bytes);
         }
 
         void OnConnection()
@@ -52,7 +57,7 @@ namespace MM26.IO
             Debug.LogError("Websocket connection failed");
         }
 
-        void OnNewChange(object sender, EventArgs e)
+        void OnNewChange(object sender, VisualizerChange change)
         {
 
         }

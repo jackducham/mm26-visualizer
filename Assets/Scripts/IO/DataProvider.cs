@@ -6,95 +6,160 @@ using Google.Protobuf;
 
 namespace MM26.IO
 {
-    internal sealed class DataProvider: IDisposable
+    internal interface IDataProvider: IDisposable
     {
-        MessageParser<VisualizerChange> _changeParser = null;
-        MessageParser<VisualizerTurn> _turnParser = null;
-
-        Dictionary<long, VisualizerChange> _changes = new Dictionary<long, VisualizerChange>();
-
-#if UNITY_STANDALONE
-        WebSocketListener _changeListener;
-#endif
-        long _latestChangeNumer = 0;
-
-        internal EventHandler NewChange;
-
-        /// <summary>
-        /// Change number of the newest change
-        /// </summary>
-        internal long LatestChangeNumber
-        {
-            get { return _latestChangeNumer; }
-        }
-
-        /// <summary>
-        /// Initialize a new data provider
-        /// </summary>
-        internal DataProvider()
-        {
-#if UNITY_STANDALONE 
-            _changeListener = new WebSocketListener(SynchronizationContext.Current);
-            _changeListener.NewMessage += this.OnChangeData;
-#endif
-
-            _changeParser = VisualizerChange.Parser;
-            _turnParser = VisualizerTurn.Parser;
-        }
-
-        public void Dispose()
-        {
-#if UNITY_STANDALONE
-            _changeListener.Dispose();
-#endif
-        }
-
-#if UNITY_STANDALONE
-        /// <summary>
-        /// Connect to a remote websocket server
-        /// </summary>
-        /// <param name="changeSocket">the address of the socket</param>
-        /// <param name="onConnection">Called after connection</param>
-        /// <param name="onFailure">Called if failed</param>
-        internal void Connect(string changeSocket, Action onConnection, Action onFailure)
-        {
-            _changeListener.Connect(new Uri(changeSocket), onConnection, onFailure);
-        }
-#endif
-
-        /// <summary>
-        /// Process new change data in bytes
-        /// </summary>
-        /// <param name="sender">the sender</param>
-        /// <param name="bytes">bytes representing the change</param>
-        internal void OnChangeData(object sender, byte[] bytes)
-        {
-            VisualizerChange change = _changeParser.ParseFrom(bytes);
-
-            _latestChangeNumer = change.ChangeNumber;
-            NewChange?.Invoke(this, new EventArgs());
-
-            _changes[change.ChangeNumber] = change;
-        }
-
         /// <summary>
         /// Get a change
         /// </summary>
         /// <param name="change">the change number</param>
         /// <returns>a change if there is one, null otherwise</returns>
-        internal VisualizerChange GetChange(int change)
-        {
-            return _changes[change];
-        }
+        VisualizerChange GetChange(long change);
 
         /// <summary>
         /// Get a turn
         /// </summary>
         /// <param name="turn">the turn number</param>
         /// <returns>a turn if there is one, null otherwise</returns>
-        internal VisualizerTurn GetTurn(int turn)
+        VisualizerTurn GetTurn(long change);
+    }
+
+    internal interface IWebDataProvider: IDataProvider
+    {
+        long LatestChangeNumber { get; }
+        event EventHandler<VisualizerChange> NewChange;
+
+        /// <summary>
+        /// Connect to a remote websocket server
+        /// </summary>
+        /// <param name="changeSocket">the address of the socket</param>
+        /// <param name="onConnection">Called after connection</param>
+        /// <param name="onFailure">Called if failed</param>
+        void Connect(Uri changeSocket, Action onConnection, Action onFailure);
+
+        /// <summary>
+        /// Process new change data in bytes
+        /// </summary>
+        /// <param name="sender">the sender</param>
+        /// <param name="bytes">bytes representing the change</param>
+        void AddChange(byte[] bytes);
+    }
+
+    internal class DataProvider: IDataProvider
+    {
+        public long LatestChangeNumber { get; protected set; }
+        protected Dictionary<long, VisualizerChange> Changes { get; set; } = new Dictionary<long, VisualizerChange>();
+        protected Dictionary<long, VisualizerTurn> Turns { get; set; } = new Dictionary<long, VisualizerTurn>();
+
+        protected MessageParser<VisualizerChange> ChangeParser { get; set; }
+        protected MessageParser<VisualizerTurn> TurnParser { get; set; }
+
+        internal static IWebDataProvider CreateWebDataProvider()
         {
-            return null;
+#if UNITY_STANDALONE
+            return new StandAloneWebDataProvider();
+#elif UNITY_WEBGL
+            return new WebGLDataProvider();
+#endif
+        }
+
+        internal static IDataProvider CreateFileSystemDataProvider()
+        {
+            return new StandAloneFileSystemDataProvider();
+        }
+
+        internal DataProvider()
+        {
+            this.ChangeParser = VisualizerChange.Parser;
+            this.TurnParser = VisualizerTurn.Parser;
+        }
+
+        public virtual void Dispose() { }
+
+        public virtual VisualizerChange GetChange(long change)
+        {
+            return this.Changes[change];
+        }
+
+        public virtual VisualizerTurn GetTurn(long change)
+        {
+            return this.Turns[change];
+        }
+    }
+
+    internal class WebDataProvider: DataProvider, IWebDataProvider
+    {
+        public event EventHandler<VisualizerChange> NewChange;
+        
+        public virtual void Connect(Uri changeSocket, Action onConnection, Action onFailure)
+        {
+        }
+
+        public void AddChange(byte[] bytes)
+        {
+            VisualizerChange change = this.ChangeParser.ParseFrom(bytes);
+
+            this.LatestChangeNumber = change.ChangeNumber;
+            this.NewChange?.Invoke(this, change);
+
+            this.Changes[change.ChangeNumber] = change;
+        }
+    }
+
+
+#if UNITY_STANDALONE
+    internal class StandAloneWebDataProvider: WebDataProvider
+    {
+        WebSocketListener _changeListener;
+
+        internal StandAloneWebDataProvider(): base()
+        {
+            _changeListener = new WebSocketListener(SynchronizationContext.Current);
+            _changeListener.NewMessage += (sender, bytes) =>
+            {
+                this.AddChange(bytes);
+            };
+        }
+
+        public override void Dispose()
+        {
+            _changeListener.Dispose();
+        }
+
+        public override void Connect(Uri changeSocket, Action onConnection, Action onFailure)
+        {
+            _changeListener.Connect(changeSocket, onConnection, onFailure);
+        }
+    }
+
+    internal class StandAloneFileSystemDataProvider : DataProvider
+    {
+
+    }
+#endif
+
+    internal class WebGLDataProvider: WebDataProvider
+    {
+        private class WebGLDataReceiver: MonoBehaviour
+        {
+            public event EventHandler<byte[]> NewData;
+
+            public void ReceiveData(byte[] bytes)
+            {
+                this.NewData?.Invoke(this, bytes);
+            }
+        }
+
+        GameObject _gameObject;
+
+        internal WebGLDataProvider()
+        {
+            _gameObject = new GameObject("WebGLDataReceiver");
+            WebGLDataReceiver receiver = _gameObject.AddComponent<WebGLDataReceiver>();
+
+            receiver.NewData += (sender, data) =>
+            {
+                this.AddChange(data);
+            };
         }
     }
 }
