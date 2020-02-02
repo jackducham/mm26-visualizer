@@ -78,8 +78,6 @@ namespace MM26.IO
 
         async Task OnConnect()
         {
-            Debug.LogFormat("connection state = {0}", _client.State);
-
             while (_client.State == WebSocketState.Open)
             {
                 ArraySegment<byte> segment = _buffer.ArraySegment;
@@ -89,19 +87,20 @@ namespace MM26.IO
 
                 if (result.EndOfMessage)
                 {
+                    byte[] bufferContent = _buffer.Content;
+                    _buffer.Reset();
+
                     if (_context != null)
                     {
                         _context.Post((state) =>
                         {
-                            this.NewMessage?.Invoke(this, _buffer.Content);
+                            this.NewMessage?.Invoke(this, bufferContent);
                         }, null);
                     }
                     else
                     {
-                        this.NewMessage?.Invoke(this, _buffer.Content);
+                        this.NewMessage?.Invoke(this, bufferContent);
                     }
-                    
-                    _buffer.Reset();
                 }
             }
         }

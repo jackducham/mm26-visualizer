@@ -24,10 +24,10 @@ namespace MM26.IO {
     static VisualizerChangeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chd2aXN1YWxpemVyX2NoYW5nZS5wcm90bxIKdmlzdWFsaXplciIoChBWaXN1",
-            "YWxpemVyQ2hhbmdlEhQKDGNoYW5nZU51bWJlchgBIAEoA0JTCjFtZWNoLm1h",
-            "bmlhLk1NMjZHYW1lRW5naW5lLnZpc3VhbGl6ZXJDb21tdW5pY2F0aW9uQhRW",
-            "aXN1YWxpemVyVHVyblByb3Rvc6oCB01NMjYuSU9iBnByb3RvMw=="));
+            "Chd2aXN1YWxpemVyX2NoYW5nZS5wcm90bxIKdmlzdWFsaXplciIpChBWaXN1",
+            "YWxpemVyQ2hhbmdlEhUKDWNoYW5nZV9udW1iZXIYASABKANCUwoxbWVjaC5t",
+            "YW5pYS5NTTI2R2FtZUVuZ2luZS52aXN1YWxpemVyQ29tbXVuaWNhdGlvbkIU",
+            "VmlzdWFsaXplclR1cm5Qcm90b3OqAgdNTTI2LklPYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -72,7 +72,7 @@ namespace MM26.IO {
       return new VisualizerChange(this);
     }
 
-    /// <summary>Field number for the "changeNumber" field.</summary>
+    /// <summary>Field number for the "change_number" field.</summary>
     public const int ChangeNumberFieldNumber = 1;
     private long changeNumber_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

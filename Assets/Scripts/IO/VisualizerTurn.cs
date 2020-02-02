@@ -24,10 +24,10 @@ namespace MM26.IO {
     static VisualizerTurnReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChV2aXN1YWxpemVyX3R1cm4ucHJvdG8SCnZpc3VhbGl6ZXIiJAoOVmlzdWFs",
-            "aXplclR1cm4SEgoKdHVybk51bWJlchgBIAEoA0JZCjdtZWNoLm1hbmlhLmVu",
-            "Z2luZS5zZXJ2ZXIuY29tbXVuaWNhdGlvbi52aXN1YWxpemVyLm1vZGVsQhRW",
-            "aXN1YWxpemVyVHVyblByb3Rvc6oCB01NMjYuSU9iBnByb3RvMw=="));
+            "ChV2aXN1YWxpemVyX3R1cm4ucHJvdG8SCnZpc3VhbGl6ZXIiJQoOVmlzdWFs",
+            "aXplclR1cm4SEwoLdHVybl9udW1iZXIYASABKANCWQo3bWVjaC5tYW5pYS5l",
+            "bmdpbmUuc2VydmVyLmNvbW11bmljYXRpb24udmlzdWFsaXplci5tb2RlbEIU",
+            "VmlzdWFsaXplclR1cm5Qcm90b3OqAgdNTTI2LklPYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -72,7 +72,7 @@ namespace MM26.IO {
       return new VisualizerTurn(this);
     }
 
-    /// <summary>Field number for the "turnNumber" field.</summary>
+    /// <summary>Field number for the "turn_number" field.</summary>
     public const int TurnNumberFieldNumber = 1;
     private long turnNumber_;
     /// <summary>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
+using UnityEngine;
 
 [assembly: InternalsVisibleTo("MM26.IO.Tests")]
 namespace MM26.IO
@@ -26,13 +27,16 @@ namespace MM26.IO
         }
 
         /// <summary>
-        /// Content of the buffer. Note that no copy is performed
+        /// Create a copy of the content of the buffer
         /// </summary>
         public byte[] Content
         {
             get
             {
-                return _buffer;
+                byte[] buffer = new byte[_count];
+                Array.Copy(_buffer, buffer, _count);
+
+                return buffer;
             }
         }
 
