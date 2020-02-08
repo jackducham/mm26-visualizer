@@ -5,38 +5,57 @@ namespace MM26.IO
 {
     public class TurnsManager : MonoBehaviour
     {
-        enum DataProviderType
+        enum DataSource
         {
             Web,
             Local,
         }
 
+        enum Mode
+        {
+            Listen,
+            Replay
+        }
+
+        public NetworkEndpoints Endpoints
+        {
+            get
+            {
+#if UNITY_EDITOR
+                return _debugEndpoints;
+#else
+                return _endpoints;
+#endif
+            }
+        }
+
+        [Header("Settings")]
         [SerializeField]
-        DataProviderType _dataProviderType = DataProviderType.Web;
+        DataSource _dataSource = DataSource.Web;
 
         [SerializeField]
-        string _changeSocket = "";
+        Mode _mode = Mode.Listen;
 
         [SerializeField]
-        string _editorChangeSocket = "";
+        NetworkEndpoints _endpoints;
+
+        [SerializeField]
+        NetworkEndpoints _debugEndpoints;
 
         IDataProvider _dataProvider;
 
         private void Awake()
         {
-            switch (_dataProviderType)
+            switch (_dataSource)
             {
-                case DataProviderType.Web:
+                case DataSource.Web:
                     IWebDataProvider dataProvider = DataProvider.CreateWebDataProvider();
                     dataProvider.NewChange += this.OnNewChange;
-#if UNITY_EDITOR
-                    dataProvider.Connect(new Uri(_editorChangeSocket), this.OnConnection, this.OnFailure);
-#else
-                    _dataProvider.Connect(_changeSocket, this.OnConnection, this.OnFailure);
-#endif
+                    dataProvider.UseEndpoints(this.Endpoints, this.OnConnection, this.OnFailure);
+
                     _dataProvider = dataProvider;
                     break;
-                case DataProviderType.Local:
+                case DataSource.Local:
                     _dataProvider = DataProvider.CreateFileSystemDataProvider();
                     break;
             }
@@ -49,7 +68,7 @@ namespace MM26.IO
 
         void OnConnection()
         {
-
+            Debug.Log("On connection");
         }
 
         void OnFailure()
@@ -59,7 +78,7 @@ namespace MM26.IO
 
         void OnNewChange(object sender, VisualizerChange change)
         {
-
+            Debug.Log("New change received");
         }
     }
 }

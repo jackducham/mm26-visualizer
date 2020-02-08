@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -163,8 +163,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 365b71551d92a4431858189d39d3dfc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _changeSocket: ws://localhost:3000/visualizer
-  _editorChangeSocket: ws://localhost:3000/
+  _dataSource: 0
+  _mode: 0
+  _endpoints:
+    ChangeSocket: ws://localhost:3000/visualizer
+    TurnHttp: 
+    ChangeHttp: 
+  _debugEndpoints:
+    ChangeSocket: ws://localhost:3000/visualizer
+    TurnHttp: 
+    ChangeHttp: 
 --- !u!1 &2100838743
 GameObject:
   m_ObjectHideFlags: 0
