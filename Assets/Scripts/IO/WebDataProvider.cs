@@ -14,15 +14,39 @@ namespace MM26.IO
     internal class WebDataProvider : DataProvider, IWebDataProvider
     {
         public NetworkEndpoints Endpoints { get; set; }
+        public long StartTurnNumber { get; set; } = 0;
         public event EventHandler<VisualizerChange> NewChange;
+
+#if !UNITY_WEBGL
+        protected SynchronizationContext SynchronizationContext;
+#endif
+
+        private bool _hasStartTurn = false;
+        
+        public WebDataProvider()
+        {
+            SynchronizationContext = SynchronizationContext.Current;
+        }
+
 
         public virtual void UseEndpoints(NetworkEndpoints endpoints, Action onConnection, Action onFailure)
         {
             this.Endpoints = endpoints;
         }
 
-        public void AddChange(byte[] bytes)
+        protected void ProcessBytes(byte[] bytes)
         {
+            if (!_hasStartTurn)
+            {
+                VisualizerTurn turn = this.TurnParser.ParseFrom(bytes);
+                this.Turns[turn.TurnNumber] = turn;
+
+                _hasStartTurn = true;
+                StartTurnNumber = turn.TurnNumber;
+
+                return;
+            }
+
             VisualizerChange change = this.ChangeParser.ParseFrom(bytes);
 
             this.LatestChangeNumber = change.ChangeNumber;
@@ -35,11 +59,28 @@ namespace MM26.IO
         {
             this.Run(() =>
             {
-                UnityWebRequest request = UnityWebRequest.Get("");
+                UnityWebRequest request = UnityWebRequest.Post(this.Endpoints.ChangeHttp, this.Endpoints.ChangeHttp);
+                UnityWebRequestAsyncOperation sendRequestOperation = request.SendWebRequest();
 
-                while (!request.isDone)
+                sendRequestOperation.completed += (AsyncOperation operation) =>
                 {
-                }
+                    if (request.isDone)
+                    {
+                        DownloadHandler handler = request.downloadHandler;
+
+                        if (handler.data != null)
+                        {
+                            VisualizerChange newChange = this.ChangeParser.ParseFrom(handler.data);
+
+                            this.RunOnMainThread(() =>
+                            {
+                                callback(newChange);
+                            });
+                        }
+
+                        request.Dispose();
+                    }
+                };
             });
 
         }
@@ -55,6 +96,25 @@ namespace MM26.IO
             action();
 #endif
             Task.Run(action);
+        }
+
+        /// <summary>
+        /// Either schedule or execute an action on the main thread
+        /// </summary>
+        /// <param name="action">the action</param>
+        protected void RunOnMainThread(Action action)
+        {
+#if UNITY_WEBGL
+            action();
+#else
+            if (this.SynchronizationContext != null)
+            {
+                this.SynchronizationContext.Post((state) =>
+                {
+                    action();
+                }, null);
+            }
+#endif
         }
     }
 }

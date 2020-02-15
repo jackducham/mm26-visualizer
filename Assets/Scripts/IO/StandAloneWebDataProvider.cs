@@ -1,13 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Networking;
-using Google.Protobuf;
-
-#if !UNITY_WEBGL
-using System.Threading;
-using System.Threading.Tasks;
-#endif
 
 namespace MM26.IO
 {
@@ -18,10 +9,13 @@ namespace MM26.IO
 
         internal StandAloneWebDataProvider() : base()
         {
-            _changeListener = new WebSocketListener(SynchronizationContext.Current);
+            _changeListener = new WebSocketListener();
             _changeListener.NewMessage += (sender, bytes) =>
             {
-                this.AddChange(bytes);
+                this.RunOnMainThread(() =>
+                {
+                    this.ProcessBytes(bytes);
+                });
             };
         }
 

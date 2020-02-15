@@ -10,28 +10,14 @@ namespace MM26.IO
     internal sealed class WebSocketListener: IDisposable
     {
         /// <summary>
-        /// Called when a new message has been received
+        /// Called when a new message has been received. May run on a
+        /// separate thread!
         /// </summary>
         internal event EventHandler<byte[]> NewMessage;
 
         bool _idle = true;
         ClientWebSocket _client = new ClientWebSocket();
         Buffer _buffer = new Buffer();
-
-        SynchronizationContext _context;
-
-        /// <summary>
-        /// Create  a websocket listener
-        /// </summary>
-        /// <param name="context">
-        /// if this is not null, then hte NewMessage event would be dispatched
-        /// to the context. Otherwise, the synchronization context would run
-        /// on whichever thread the scheduler decides
-        /// </param>
-        internal WebSocketListener(SynchronizationContext context)
-        {
-            _context = context;
-        }
 
         public void Dispose()
         {
@@ -90,17 +76,7 @@ namespace MM26.IO
                     byte[] bufferContent = _buffer.Content;
                     _buffer.Reset();
 
-                    if (_context != null)
-                    {
-                        _context.Post((state) =>
-                        {
-                            this.NewMessage?.Invoke(this, bufferContent);
-                        }, null);
-                    }
-                    else
-                    {
-                        this.NewMessage?.Invoke(this, bufferContent);
-                    }
+                    this.NewMessage?.Invoke(this, bufferContent);
                 }
             }
         }

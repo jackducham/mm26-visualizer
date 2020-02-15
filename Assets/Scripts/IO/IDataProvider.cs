@@ -52,12 +52,5 @@ namespace MM26.IO
         /// <param name="onConnection">Called after connection</param>
         /// <param name="onFailure">Called if failed</param>
         void UseEndpoints(NetworkEndpoints endpoints, Action onConnection, Action onFailure);
-
-        /// <summary>
-        /// Process new change data in bytes
-        /// </summary>
-        /// <param name="sender">the sender</param>
-        /// <param name="bytes">bytes representing the change</param>
-        void AddChange(byte[] bytes);
     }
 }

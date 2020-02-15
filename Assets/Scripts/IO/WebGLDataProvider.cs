@@ -24,7 +24,7 @@ namespace MM26.IO
 
             receiver.NewData += (sender, data) =>
             {
-                this.AddChange(data);
+                this.ProcessBytes(data);
             };
         }
     }
