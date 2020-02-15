@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using Google.Protobuf;
 using MM26.IO;
+using MM26.IO.Models;
 
 namespace MM26.Scenes.IO.ProtocolBuffer
 {
@@ -14,18 +15,18 @@ namespace MM26.Scenes.IO.ProtocolBuffer
 
         void Awake()
         {
-            VisualizerTurn turn = new VisualizerTurn
+            GameState state = new GameState
             {
                 TurnNumber = 17,
             };
 
-            _bytes = turn.ToByteArray();
+            _bytes = state.ToByteArray();
         }
 
         void Start()
         {
-            VisualizerTurn turn = VisualizerTurn.Parser.ParseFrom(_bytes);
-            _turnNumberText.text = $"Turn Number = {turn.TurnNumber}";
+            GameState state = GameState.Parser.ParseFrom(_bytes);
+            _turnNumberText.text = $"Turn Number = {state.TurnNumber}";
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using MM26.IO.Models;
 
 namespace MM26.IO
 {
@@ -15,7 +16,7 @@ namespace MM26.IO
         /// the call back would be invoked when the change is available
         /// </param>
         /// <returns>a change if there is one, null otherwise</returns>
-        void GetChange(long change, Action<VisualizerChange> callback);
+        void GetChange(long change, Action<GameChange> callback);
 
         /// <summary>
         /// Get a turn
@@ -25,7 +26,7 @@ namespace MM26.IO
         /// the call back would be invoked when the turn is available
         /// </param>
         /// <returns>a turn if there is one, null otherwise</returns>
-        void GetTurn(long change, Action<VisualizerTurn> callback);
+        void GetTurn(long change, Action<GameState> callback);
     }
 
     /// <summary>
@@ -43,7 +44,7 @@ namespace MM26.IO
         /// <summary>
         /// This event is fired when a new change is available over the network
         /// </summary>
-        event EventHandler<VisualizerChange> NewChange;
+        event EventHandler<GameChange> NewChange;
 
         /// <summary>
         /// Use network endpoints

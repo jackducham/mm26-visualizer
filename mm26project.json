@@ -1,0 +1,11 @@
+{
+  "outputDir": "Assets/Scripts/IO/Models",
+  "language": "csharp",
+  "sources": [
+    "board.proto",
+    "character.proto",
+    "item.proto",
+    "game_state.proto",
+    "game_change.proto"
+  ]
+}

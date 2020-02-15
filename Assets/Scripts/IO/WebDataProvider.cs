@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
-using Google.Protobuf;
+using MM26.IO.Models;
 
 #if !UNITY_WEBGL
 using System.Threading;
@@ -15,7 +14,7 @@ namespace MM26.IO
     {
         public NetworkEndpoints Endpoints { get; set; }
         public long StartTurnNumber { get; set; } = 0;
-        public event EventHandler<VisualizerChange> NewChange;
+        public event EventHandler<GameChange> NewChange;
 
 #if !UNITY_WEBGL
         protected SynchronizationContext SynchronizationContext;
@@ -38,7 +37,7 @@ namespace MM26.IO
         {
             if (!_hasStartTurn)
             {
-                VisualizerTurn turn = this.TurnParser.ParseFrom(bytes);
+                GameState turn = this.TurnParser.ParseFrom(bytes);
                 this.Turns[turn.TurnNumber] = turn;
 
                 _hasStartTurn = true;
@@ -47,15 +46,15 @@ namespace MM26.IO
                 return;
             }
 
-            VisualizerChange change = this.ChangeParser.ParseFrom(bytes);
+            GameChange change = this.ChangeParser.ParseFrom(bytes);
 
-            this.LatestChangeNumber = change.ChangeNumber;
+            this.LatestChangeNumber = change.TurnNumber;
             this.NewChange?.Invoke(this, change);
 
-            this.Changes[change.ChangeNumber] = change;
+            this.Changes[change.TurnNumber] = change;
         }
 
-        public override void GetChange(long change, Action<VisualizerChange> callback)
+        public override void GetChange(long change, Action<GameChange> callback)
         {
             this.Run(() =>
             {
@@ -70,7 +69,7 @@ namespace MM26.IO
 
                         if (handler.data != null)
                         {
-                            VisualizerChange newChange = this.ChangeParser.ParseFrom(handler.data);
+                            GameChange newChange = this.ChangeParser.ParseFrom(handler.data);
 
                             this.RunOnMainThread(() =>
                             {

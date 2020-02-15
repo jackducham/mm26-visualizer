@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using MM26.IO.Models;
 
 namespace MM26.IO
 {
@@ -76,7 +77,7 @@ namespace MM26.IO
             Debug.LogError("Websocket connection failed");
         }
 
-        void OnNewChange(object sender, VisualizerChange change)
+        void OnNewChange(object sender, GameChange change)
         {
             Debug.Log("New change received");
         }
