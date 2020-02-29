@@ -37,7 +37,13 @@ namespace MM26.IO
         /// <summary>
         /// The newest change number observed from the network
         /// </summary>
-        long LatestChangeNumber { get; }
+        long LatestChangeId { get; }
+
+        /// <summary>
+        /// The ID of the first state
+        /// </summary>
+        /// <value></value>
+        long FirstStateId { get; }
 
         /// <summary>
         /// Endpoints used by the web data provider

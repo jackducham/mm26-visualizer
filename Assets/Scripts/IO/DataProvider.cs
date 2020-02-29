@@ -14,7 +14,7 @@ namespace MM26.IO
         /// Lastest change number
         /// </summary>
         /// <value>some change number</value>
-        public long LatestChangeNumber { get; protected set; }
+        public long LatestChangeId { get; protected set; }
 
         /// <summary>
         /// A record of all the changes up to this point

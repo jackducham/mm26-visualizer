@@ -25,7 +25,7 @@ namespace MM26.IO
         /// The ID of the first state
         /// </summary>
         /// <value></value>
-        public long FirstStateNumber { get; set; } = 0;
+        public long FirstStateId { get; set; } = 0;
 
         /// <summary>
         /// Fired when a change has been received
@@ -71,20 +71,20 @@ namespace MM26.IO
             if (!_hasFirstState)
             {
                 GameState turn = this.StateParser.ParseFrom(bytes);
-                this.States[turn.StateNumber] = turn;
+                this.States[turn.StateId] = turn;
 
                 _hasFirstState = true;
-                FirstStateNumber = turn.StateNumber;
+                FirstStateId = turn.StateId;
 
                 return;
             }
 
             GameChange change = this.ChangeParser.ParseFrom(bytes);
 
-            this.LatestChangeNumber = change.ChangeNumber;
+            this.LatestChangeId = change.ChangeId;
             this.NewChange?.Invoke(this, change);
 
-            this.Changes[change.ChangeNumber] = change;
+            this.Changes[change.ChangeId] = change;
         }
 
         /// <summary>

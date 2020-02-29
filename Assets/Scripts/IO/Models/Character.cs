@@ -24,25 +24,26 @@ namespace MM26.IO.Models {
     static CharacterReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg9jaGFyYWN0ZXIucHJvdG8SCWNoYXJhY3RlchoKaXRlbS5wcm90byKSAQoF",
-            "RW5lbXkSFQoNY3VycmVudEhlYWx0aBgBIAEoARISCgpleHBlcmllbmNlGAIg",
-            "ASgFEiUKCHBvc2l0aW9uGAMgASgLMhMuY2hhcmFjdGVyLlBvc2l0aW9uEhwK",
-            "BndlYXBvbhgEIAEoCzIMLml0ZW0uV2VhcG9uEhkKBWRyb3BzGAUgAygLMgou",
-            "aXRlbS5JdGVtIqsCCgZQbGF5ZXISDAoEbmFtZRgBIAEoCRIWCgNoYXQYAiAB",
-            "KAsyCS5pdGVtLkhhdBIeCgdjbG90aGVzGAMgASgLMg0uaXRlbS5DbG90aGVz",
-            "EhoKBXNob2VzGAQgASgLMgsuaXRlbS5TaG9lcxIcCgZ3ZWFwb24YBSABKAsy",
-            "DC5pdGVtLldlYXBvbhIdCglpbnZlbnRvcnkYBiADKAsyCi5pdGVtLkl0ZW0S",
-            "FQoNY3VycmVudEhlYWx0aBgHIAEoARISCgpleHBlcmllbmNlGAggASgFEiUK",
-            "CHBvc2l0aW9uGAkgASgLMhMuY2hhcmFjdGVyLlBvc2l0aW9uEjAKDmFjdGl2",
-            "ZV9lZmZlY3RzGAogAygLMhguaXRlbS5UZW1wU3RhdHVzTW9kaWZpZXIiMQoI",
-            "UG9zaXRpb24SDwoHYm9hcmRJZBgBIAEoCRIJCgF4GAIgASgFEgkKAXkYAyAB",
-            "KAVCRQohbWVjaC5tYW5pYS5lbmdpbmUuZ2FtZS5jaGFyYWN0ZXJzQg9DaGFy",
-            "YWN0ZXJQcm90b3OqAg5NTTI2LklPLk1vZGVsc2IGcHJvdG8z"));
+            "Cg9jaGFyYWN0ZXIucHJvdG8SCWNoYXJhY3RlchoKaXRlbS5wcm90byKTAQoF",
+            "RW5lbXkSFgoOY3VycmVudF9oZWFsdGgYASABKAESEgoKZXhwZXJpZW5jZRgC",
+            "IAEoBRIlCghwb3NpdGlvbhgDIAEoCzITLmNoYXJhY3Rlci5Qb3NpdGlvbhIc",
+            "CgZ3ZWFwb24YBCABKAsyDC5pdGVtLldlYXBvbhIZCgVkcm9wcxgFIAMoCzIK",
+            "Lml0ZW0uSXRlbSLCAgoGUGxheWVyEhYKDmN1cnJlbnRfaGVhbHRoGAEgASgB",
+            "EhIKCmV4cGVyaWVuY2UYAiABKAUSJQoIcG9zaXRpb24YAyABKAsyEy5jaGFy",
+            "YWN0ZXIuUG9zaXRpb24SHAoGd2VhcG9uGAQgASgLMgwuaXRlbS5XZWFwb24S",
+            "FQoNaW52ZW50b3J5U2l6ZRgFIAEoBRIMCgRuYW1lGAYgASgJEhYKA2hhdBgH",
+            "IAEoCzIJLml0ZW0uSGF0Eh4KB2Nsb3RoZXMYCCABKAsyDS5pdGVtLkNsb3Ro",
+            "ZXMSGgoFc2hvZXMYCSABKAsyCy5pdGVtLlNob2VzEh0KCWludmVudG9yeRgK",
+            "IAMoCzIKLml0ZW0uSXRlbRIvCg1hY3RpdmVFZmZlY3RzGAsgAygLMhguaXRl",
+            "bS5UZW1wU3RhdHVzTW9kaWZpZXIiMQoIUG9zaXRpb24SDwoHYm9hcmRJZBgB",
+            "IAEoCRIJCgF4GAIgASgFEgkKAXkYAyABKAVCRQohbWVjaC5tYW5pYS5lbmdp",
+            "bmUuZ2FtZS5jaGFyYWN0ZXJzQg9DaGFyYWN0ZXJQcm90b3OqAg5NTTI2LklP",
+            "Lk1vZGVsc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::MM26.IO.Models.ItemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Enemy), global::MM26.IO.Models.Enemy.Parser, new[]{ "CurrentHealth", "Experience", "Position", "Weapon", "Drops" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Player), global::MM26.IO.Models.Player.Parser, new[]{ "Name", "Hat", "Clothes", "Shoes", "Weapon", "Inventory", "CurrentHealth", "Experience", "Position", "ActiveEffects" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Player), global::MM26.IO.Models.Player.Parser, new[]{ "CurrentHealth", "Experience", "Position", "Weapon", "InventorySize", "Name", "Hat", "Clothes", "Shoes", "Inventory", "ActiveEffects" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Position), global::MM26.IO.Models.Position.Parser, new[]{ "BoardId", "X", "Y" }, null, null, null, null)
           }));
     }
@@ -88,7 +89,7 @@ namespace MM26.IO.Models {
       return new Enemy(this);
     }
 
-    /// <summary>Field number for the "currentHealth" field.</summary>
+    /// <summary>Field number for the "current_health" field.</summary>
     public const int CurrentHealthFieldNumber = 1;
     private double currentHealth_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -320,15 +321,16 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Player(Player other) : this() {
+      currentHealth_ = other.currentHealth_;
+      experience_ = other.experience_;
+      position_ = other.position_ != null ? other.position_.Clone() : null;
+      weapon_ = other.weapon_ != null ? other.weapon_.Clone() : null;
+      inventorySize_ = other.inventorySize_;
       name_ = other.name_;
       hat_ = other.hat_ != null ? other.hat_.Clone() : null;
       clothes_ = other.clothes_ != null ? other.clothes_.Clone() : null;
       shoes_ = other.shoes_ != null ? other.shoes_.Clone() : null;
-      weapon_ = other.weapon_ != null ? other.weapon_.Clone() : null;
       inventory_ = other.inventory_.Clone();
-      currentHealth_ = other.currentHealth_;
-      experience_ = other.experience_;
-      position_ = other.position_ != null ? other.position_.Clone() : null;
       activeEffects_ = other.activeEffects_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -338,73 +340,8 @@ namespace MM26.IO.Models {
       return new Player(this);
     }
 
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
-    private string name_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "hat" field.</summary>
-    public const int HatFieldNumber = 2;
-    private global::MM26.IO.Models.Hat hat_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::MM26.IO.Models.Hat Hat {
-      get { return hat_; }
-      set {
-        hat_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "clothes" field.</summary>
-    public const int ClothesFieldNumber = 3;
-    private global::MM26.IO.Models.Clothes clothes_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::MM26.IO.Models.Clothes Clothes {
-      get { return clothes_; }
-      set {
-        clothes_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "shoes" field.</summary>
-    public const int ShoesFieldNumber = 4;
-    private global::MM26.IO.Models.Shoes shoes_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::MM26.IO.Models.Shoes Shoes {
-      get { return shoes_; }
-      set {
-        shoes_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "weapon" field.</summary>
-    public const int WeaponFieldNumber = 5;
-    private global::MM26.IO.Models.Weapon weapon_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::MM26.IO.Models.Weapon Weapon {
-      get { return weapon_; }
-      set {
-        weapon_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "inventory" field.</summary>
-    public const int InventoryFieldNumber = 6;
-    private static readonly pb::FieldCodec<global::MM26.IO.Models.Item> _repeated_inventory_codec
-        = pb::FieldCodec.ForMessage(50, global::MM26.IO.Models.Item.Parser);
-    private readonly pbc::RepeatedField<global::MM26.IO.Models.Item> inventory_ = new pbc::RepeatedField<global::MM26.IO.Models.Item>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::MM26.IO.Models.Item> Inventory {
-      get { return inventory_; }
-    }
-
-    /// <summary>Field number for the "currentHealth" field.</summary>
-    public const int CurrentHealthFieldNumber = 7;
+    /// <summary>Field number for the "current_health" field.</summary>
+    public const int CurrentHealthFieldNumber = 1;
     private double currentHealth_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public double CurrentHealth {
@@ -415,7 +352,7 @@ namespace MM26.IO.Models {
     }
 
     /// <summary>Field number for the "experience" field.</summary>
-    public const int ExperienceFieldNumber = 8;
+    public const int ExperienceFieldNumber = 2;
     private int experience_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Experience {
@@ -426,7 +363,7 @@ namespace MM26.IO.Models {
     }
 
     /// <summary>Field number for the "position" field.</summary>
-    public const int PositionFieldNumber = 9;
+    public const int PositionFieldNumber = 3;
     private global::MM26.IO.Models.Position position_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::MM26.IO.Models.Position Position {
@@ -436,10 +373,86 @@ namespace MM26.IO.Models {
       }
     }
 
-    /// <summary>Field number for the "active_effects" field.</summary>
-    public const int ActiveEffectsFieldNumber = 10;
+    /// <summary>Field number for the "weapon" field.</summary>
+    public const int WeaponFieldNumber = 4;
+    private global::MM26.IO.Models.Weapon weapon_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::MM26.IO.Models.Weapon Weapon {
+      get { return weapon_; }
+      set {
+        weapon_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "inventorySize" field.</summary>
+    public const int InventorySizeFieldNumber = 5;
+    private int inventorySize_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int InventorySize {
+      get { return inventorySize_; }
+      set {
+        inventorySize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 6;
+    private string name_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "hat" field.</summary>
+    public const int HatFieldNumber = 7;
+    private global::MM26.IO.Models.Hat hat_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::MM26.IO.Models.Hat Hat {
+      get { return hat_; }
+      set {
+        hat_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "clothes" field.</summary>
+    public const int ClothesFieldNumber = 8;
+    private global::MM26.IO.Models.Clothes clothes_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::MM26.IO.Models.Clothes Clothes {
+      get { return clothes_; }
+      set {
+        clothes_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "shoes" field.</summary>
+    public const int ShoesFieldNumber = 9;
+    private global::MM26.IO.Models.Shoes shoes_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::MM26.IO.Models.Shoes Shoes {
+      get { return shoes_; }
+      set {
+        shoes_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "inventory" field.</summary>
+    public const int InventoryFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::MM26.IO.Models.Item> _repeated_inventory_codec
+        = pb::FieldCodec.ForMessage(82, global::MM26.IO.Models.Item.Parser);
+    private readonly pbc::RepeatedField<global::MM26.IO.Models.Item> inventory_ = new pbc::RepeatedField<global::MM26.IO.Models.Item>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::MM26.IO.Models.Item> Inventory {
+      get { return inventory_; }
+    }
+
+    /// <summary>Field number for the "activeEffects" field.</summary>
+    public const int ActiveEffectsFieldNumber = 11;
     private static readonly pb::FieldCodec<global::MM26.IO.Models.TempStatusModifier> _repeated_activeEffects_codec
-        = pb::FieldCodec.ForMessage(82, global::MM26.IO.Models.TempStatusModifier.Parser);
+        = pb::FieldCodec.ForMessage(90, global::MM26.IO.Models.TempStatusModifier.Parser);
     private readonly pbc::RepeatedField<global::MM26.IO.Models.TempStatusModifier> activeEffects_ = new pbc::RepeatedField<global::MM26.IO.Models.TempStatusModifier>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::MM26.IO.Models.TempStatusModifier> ActiveEffects {
@@ -459,15 +472,16 @@ namespace MM26.IO.Models {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(CurrentHealth, other.CurrentHealth)) return false;
+      if (Experience != other.Experience) return false;
+      if (!object.Equals(Position, other.Position)) return false;
+      if (!object.Equals(Weapon, other.Weapon)) return false;
+      if (InventorySize != other.InventorySize) return false;
       if (Name != other.Name) return false;
       if (!object.Equals(Hat, other.Hat)) return false;
       if (!object.Equals(Clothes, other.Clothes)) return false;
       if (!object.Equals(Shoes, other.Shoes)) return false;
-      if (!object.Equals(Weapon, other.Weapon)) return false;
       if(!inventory_.Equals(other.inventory_)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(CurrentHealth, other.CurrentHealth)) return false;
-      if (Experience != other.Experience) return false;
-      if (!object.Equals(Position, other.Position)) return false;
       if(!activeEffects_.Equals(other.activeEffects_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -475,15 +489,16 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (CurrentHealth != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(CurrentHealth);
+      if (Experience != 0) hash ^= Experience.GetHashCode();
+      if (position_ != null) hash ^= Position.GetHashCode();
+      if (weapon_ != null) hash ^= Weapon.GetHashCode();
+      if (InventorySize != 0) hash ^= InventorySize.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (hat_ != null) hash ^= Hat.GetHashCode();
       if (clothes_ != null) hash ^= Clothes.GetHashCode();
       if (shoes_ != null) hash ^= Shoes.GetHashCode();
-      if (weapon_ != null) hash ^= Weapon.GetHashCode();
       hash ^= inventory_.GetHashCode();
-      if (CurrentHealth != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(CurrentHealth);
-      if (Experience != 0) hash ^= Experience.GetHashCode();
-      if (position_ != null) hash ^= Position.GetHashCode();
       hash ^= activeEffects_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -498,39 +513,43 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
-      if (hat_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Hat);
-      }
-      if (clothes_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Clothes);
-      }
-      if (shoes_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(Shoes);
-      }
-      if (weapon_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(Weapon);
-      }
-      inventory_.WriteTo(output, _repeated_inventory_codec);
       if (CurrentHealth != 0D) {
-        output.WriteRawTag(57);
+        output.WriteRawTag(9);
         output.WriteDouble(CurrentHealth);
       }
       if (Experience != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(16);
         output.WriteInt32(Experience);
       }
       if (position_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(26);
         output.WriteMessage(Position);
       }
+      if (weapon_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Weapon);
+      }
+      if (InventorySize != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(InventorySize);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Name);
+      }
+      if (hat_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Hat);
+      }
+      if (clothes_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(Clothes);
+      }
+      if (shoes_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(Shoes);
+      }
+      inventory_.WriteTo(output, _repeated_inventory_codec);
       activeEffects_.WriteTo(output, _repeated_activeEffects_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -540,6 +559,21 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (CurrentHealth != 0D) {
+        size += 1 + 8;
+      }
+      if (Experience != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Experience);
+      }
+      if (position_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Position);
+      }
+      if (weapon_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Weapon);
+      }
+      if (InventorySize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(InventorySize);
+      }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
@@ -552,19 +586,7 @@ namespace MM26.IO.Models {
       if (shoes_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Shoes);
       }
-      if (weapon_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Weapon);
-      }
       size += inventory_.CalculateSize(_repeated_inventory_codec);
-      if (CurrentHealth != 0D) {
-        size += 1 + 8;
-      }
-      if (Experience != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Experience);
-      }
-      if (position_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Position);
-      }
       size += activeEffects_.CalculateSize(_repeated_activeEffects_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -576,6 +598,27 @@ namespace MM26.IO.Models {
     public void MergeFrom(Player other) {
       if (other == null) {
         return;
+      }
+      if (other.CurrentHealth != 0D) {
+        CurrentHealth = other.CurrentHealth;
+      }
+      if (other.Experience != 0) {
+        Experience = other.Experience;
+      }
+      if (other.position_ != null) {
+        if (position_ == null) {
+          Position = new global::MM26.IO.Models.Position();
+        }
+        Position.MergeFrom(other.Position);
+      }
+      if (other.weapon_ != null) {
+        if (weapon_ == null) {
+          Weapon = new global::MM26.IO.Models.Weapon();
+        }
+        Weapon.MergeFrom(other.Weapon);
+      }
+      if (other.InventorySize != 0) {
+        InventorySize = other.InventorySize;
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
@@ -598,25 +641,7 @@ namespace MM26.IO.Models {
         }
         Shoes.MergeFrom(other.Shoes);
       }
-      if (other.weapon_ != null) {
-        if (weapon_ == null) {
-          Weapon = new global::MM26.IO.Models.Weapon();
-        }
-        Weapon.MergeFrom(other.Weapon);
-      }
       inventory_.Add(other.inventory_);
-      if (other.CurrentHealth != 0D) {
-        CurrentHealth = other.CurrentHealth;
-      }
-      if (other.Experience != 0) {
-        Experience = other.Experience;
-      }
-      if (other.position_ != null) {
-        if (position_ == null) {
-          Position = new global::MM26.IO.Models.Position();
-        }
-        Position.MergeFrom(other.Position);
-      }
       activeEffects_.Add(other.activeEffects_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -629,58 +654,62 @@ namespace MM26.IO.Models {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 18: {
-            if (hat_ == null) {
-              Hat = new global::MM26.IO.Models.Hat();
-            }
-            input.ReadMessage(Hat);
-            break;
-          }
-          case 26: {
-            if (clothes_ == null) {
-              Clothes = new global::MM26.IO.Models.Clothes();
-            }
-            input.ReadMessage(Clothes);
-            break;
-          }
-          case 34: {
-            if (shoes_ == null) {
-              Shoes = new global::MM26.IO.Models.Shoes();
-            }
-            input.ReadMessage(Shoes);
-            break;
-          }
-          case 42: {
-            if (weapon_ == null) {
-              Weapon = new global::MM26.IO.Models.Weapon();
-            }
-            input.ReadMessage(Weapon);
-            break;
-          }
-          case 50: {
-            inventory_.AddEntriesFrom(input, _repeated_inventory_codec);
-            break;
-          }
-          case 57: {
+          case 9: {
             CurrentHealth = input.ReadDouble();
             break;
           }
-          case 64: {
+          case 16: {
             Experience = input.ReadInt32();
             break;
           }
-          case 74: {
+          case 26: {
             if (position_ == null) {
               Position = new global::MM26.IO.Models.Position();
             }
             input.ReadMessage(Position);
             break;
           }
+          case 34: {
+            if (weapon_ == null) {
+              Weapon = new global::MM26.IO.Models.Weapon();
+            }
+            input.ReadMessage(Weapon);
+            break;
+          }
+          case 40: {
+            InventorySize = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            Name = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (hat_ == null) {
+              Hat = new global::MM26.IO.Models.Hat();
+            }
+            input.ReadMessage(Hat);
+            break;
+          }
+          case 66: {
+            if (clothes_ == null) {
+              Clothes = new global::MM26.IO.Models.Clothes();
+            }
+            input.ReadMessage(Clothes);
+            break;
+          }
+          case 74: {
+            if (shoes_ == null) {
+              Shoes = new global::MM26.IO.Models.Shoes();
+            }
+            input.ReadMessage(Shoes);
+            break;
+          }
           case 82: {
+            inventory_.AddEntriesFrom(input, _repeated_inventory_codec);
+            break;
+          }
+          case 90: {
             activeEffects_.AddEntriesFrom(input, _repeated_activeEffects_codec);
             break;
           }

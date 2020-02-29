@@ -24,35 +24,38 @@ namespace MM26.IO.Models {
     static ItemReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgppdGVtLnByb3RvEgRpdGVtIrABCgRJdGVtEiAKB2Nsb3RoZXMYASABKAsy",
-            "DS5pdGVtLkNsb3RoZXNIABIYCgNoYXQYAiABKAsyCS5pdGVtLkhhdEgAEhwK",
-            "BXNob2VzGAMgASgLMgsuaXRlbS5TaG9lc0gAEh4KBndlYXBvbhgEIAEoCzIM",
-            "Lml0ZW0uV2VhcG9uSAASJgoKY29uc3VtYWJsZRgFIAEoCzIQLml0ZW0uQ29u",
-            "c3VtYWJsZUgAQgYKBGl0ZW0iLgoHQ2xvdGhlcxIjCgVzdGF0cxgBIAEoCzIU",
-            "Lml0ZW0uU3RhdHVzTW9kaWZpZXIiRQoDSGF0EicKCmhhdF9lZmZlY3QYASAB",
-            "KA4yEy5pdGVtLkhhdC5IYXRFZmZlY3QiFQoJSGF0RWZmZWN0EggKBFRFU1QQ",
-            "ACIsCgVTaG9lcxIjCgVzdGF0cxgBIAEoCzIULml0ZW0uU3RhdHVzTW9kaWZp",
-            "ZXIiXAoGV2VhcG9uEg0KBXJhbmdlGAEgASgFEhQKDHNwbGFzaFJhZGl1cxgC",
-            "IAEoBRItCgtvbkhpdEVmZmVjdBgDIAEoCzIYLml0ZW0uVGVtcFN0YXR1c01v",
-            "ZGlmaWVyIjYKCkNvbnN1bWFibGUSKAoGZWZmZWN0GAEgASgLMhguaXRlbS5U",
-            "ZW1wU3RhdHVzTW9kaWZpZXIi1AEKDlN0YXR1c01vZGlmaWVyEhQKDHNwZWVk",
-            "X2NoYW5nZRgBIAEoBRIVCg1oZWFsdGhfY2hhbmdlGAIgASgFEhkKEWV4cGVy",
-            "aWVuY2VfY2hhbmdlGAMgASgFEhsKE21hZ2ljX2RhbWFnZV9jaGFuZ2UYBCAB",
-            "KAUSHgoWcGh5c2ljYWxfZGFtYWdlX2NoYW5nZRgFIAEoBRIcChRtYWdpY19k",
-            "ZWZlbnNlX2NoYW5nZRgGIAEoBRIfChdwaHlzaWNhbF9kZWZlbnNlX2NoYW5n",
-            "ZRgHIAEoBSJkChJUZW1wU3RhdHVzTW9kaWZpZXISIwoFc3RhdHMYASABKAsy",
-            "FC5pdGVtLlN0YXR1c01vZGlmaWVyEhcKD2RhbWFnZV9wZXJfdHVybhgCIAEo",
-            "ARIQCghkdXJhdGlvbhgDIAEoBUI7ChxtZWNoLm1hbmlhLmVuZ2luZS5nYW1l",
-            "Lml0ZW1zQgpJdGVtUHJvdG9zqgIOTU0yNi5JTy5Nb2RlbHNiBnByb3RvMw=="));
+            "CgppdGVtLnByb3RvEgRpdGVtIugBCgRJdGVtEhEKCW1heF9zdGFjaxgBIAEo",
+            "BRIjCgVzdGF0cxgCIAEoCzIULml0ZW0uU3RhdHVzTW9kaWZpZXISIAoHY2xv",
+            "dGhlcxgDIAEoCzINLml0ZW0uQ2xvdGhlc0gAEhgKA2hhdBgEIAEoCzIJLml0",
+            "ZW0uSGF0SAASHAoFc2hvZXMYBSABKAsyCy5pdGVtLlNob2VzSAASHgoGd2Vh",
+            "cG9uGAYgASgLMgwuaXRlbS5XZWFwb25IABImCgpjb25zdW1hYmxlGAcgASgL",
+            "MhAuaXRlbS5Db25zdW1hYmxlSABCBgoEaXRlbSIuCgdDbG90aGVzEiMKBXN0",
+            "YXRzGAEgASgLMhQuaXRlbS5TdGF0dXNNb2RpZmllciJqCgNIYXQSIwoFc3Rh",
+            "dHMYASABKAsyFC5pdGVtLlN0YXR1c01vZGlmaWVyEicKCmhhdF9lZmZlY3QY",
+            "AiABKA4yEy5pdGVtLkhhdC5IYXRFZmZlY3QiFQoJSGF0RWZmZWN0EggKBFRF",
+            "U1QQACIsCgVTaG9lcxIjCgVzdGF0cxgBIAEoCzIULml0ZW0uU3RhdHVzTW9k",
+            "aWZpZXIihAEKBldlYXBvbhIjCgVzdGF0cxgBIAEoCzIULml0ZW0uU3RhdHVz",
+            "TW9kaWZpZXISDQoFcmFuZ2UYAiABKAUSFQoNc3BsYXNoX3JhZGl1cxgDIAEo",
+            "BRIvCg1vbl9oaXRfZWZmZWN0GAQgASgLMhguaXRlbS5UZW1wU3RhdHVzTW9k",
+            "aWZpZXIiNQoKQ29uc3VtYWJsZRInCgVzdGF0cxgBIAEoCzIYLml0ZW0uVGVt",
+            "cFN0YXR1c01vZGlmaWVyItQBCg5TdGF0dXNNb2RpZmllchIUCgxzcGVlZF9j",
+            "aGFuZ2UYASABKAUSFQoNaGVhbHRoX2NoYW5nZRgCIAEoBRIZChFleHBlcmll",
+            "bmNlX2NoYW5nZRgDIAEoBRIbChNtYWdpY19kYW1hZ2VfY2hhbmdlGAQgASgF",
+            "Eh4KFnBoeXNpY2FsX2RhbWFnZV9jaGFuZ2UYBSABKAUSHAoUbWFnaWNfZGVm",
+            "ZW5zZV9jaGFuZ2UYBiABKAUSHwoXcGh5c2ljYWxfZGVmZW5zZV9jaGFuZ2UY",
+            "ByABKAUiZAoSVGVtcFN0YXR1c01vZGlmaWVyEiMKBXN0YXRzGAEgASgLMhQu",
+            "aXRlbS5TdGF0dXNNb2RpZmllchIXCg9kYW1hZ2VfcGVyX3R1cm4YAiABKAES",
+            "EAoIZHVyYXRpb24YAyABKAVCOwocbWVjaC5tYW5pYS5lbmdpbmUuZ2FtZS5p",
+            "dGVtc0IKSXRlbVByb3Rvc6oCDk1NMjYuSU8uTW9kZWxzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Item), global::MM26.IO.Models.Item.Parser, new[]{ "Clothes", "Hat", "Shoes", "Weapon", "Consumable" }, new[]{ "Item" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Item), global::MM26.IO.Models.Item.Parser, new[]{ "MaxStack", "Stats", "Clothes", "Hat", "Shoes", "Weapon", "Consumable" }, new[]{ "Item" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Clothes), global::MM26.IO.Models.Clothes.Parser, new[]{ "Stats" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Hat), global::MM26.IO.Models.Hat.Parser, new[]{ "HatEffect" }, null, new[]{ typeof(global::MM26.IO.Models.Hat.Types.HatEffect) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Hat), global::MM26.IO.Models.Hat.Parser, new[]{ "Stats", "HatEffect" }, null, new[]{ typeof(global::MM26.IO.Models.Hat.Types.HatEffect) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Shoes), global::MM26.IO.Models.Shoes.Parser, new[]{ "Stats" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Weapon), global::MM26.IO.Models.Weapon.Parser, new[]{ "Range", "SplashRadius", "OnHitEffect" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Consumable), global::MM26.IO.Models.Consumable.Parser, new[]{ "Effect" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Weapon), global::MM26.IO.Models.Weapon.Parser, new[]{ "Stats", "Range", "SplashRadius", "OnHitEffect" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Consumable), global::MM26.IO.Models.Consumable.Parser, new[]{ "Stats" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.StatusModifier), global::MM26.IO.Models.StatusModifier.Parser, new[]{ "SpeedChange", "HealthChange", "ExperienceChange", "MagicDamageChange", "PhysicalDamageChange", "MagicDefenseChange", "PhysicalDefenseChange" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.TempStatusModifier), global::MM26.IO.Models.TempStatusModifier.Parser, new[]{ "Stats", "DamagePerTurn", "Duration" }, null, null, null, null)
           }));
@@ -86,6 +89,8 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Item(Item other) : this() {
+      maxStack_ = other.maxStack_;
+      stats_ = other.stats_ != null ? other.stats_.Clone() : null;
       switch (other.ItemCase) {
         case ItemOneofCase.Clothes:
           Clothes = other.Clothes.Clone();
@@ -112,8 +117,33 @@ namespace MM26.IO.Models {
       return new Item(this);
     }
 
+    /// <summary>Field number for the "max_stack" field.</summary>
+    public const int MaxStackFieldNumber = 1;
+    private int maxStack_;
+    /// <summary>
+    /// Stand-in for inheritance
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int MaxStack {
+      get { return maxStack_; }
+      set {
+        maxStack_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "stats" field.</summary>
+    public const int StatsFieldNumber = 2;
+    private global::MM26.IO.Models.StatusModifier stats_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::MM26.IO.Models.StatusModifier Stats {
+      get { return stats_; }
+      set {
+        stats_ = value;
+      }
+    }
+
     /// <summary>Field number for the "clothes" field.</summary>
-    public const int ClothesFieldNumber = 1;
+    public const int ClothesFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::MM26.IO.Models.Clothes Clothes {
       get { return itemCase_ == ItemOneofCase.Clothes ? (global::MM26.IO.Models.Clothes) item_ : null; }
@@ -124,7 +154,7 @@ namespace MM26.IO.Models {
     }
 
     /// <summary>Field number for the "hat" field.</summary>
-    public const int HatFieldNumber = 2;
+    public const int HatFieldNumber = 4;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::MM26.IO.Models.Hat Hat {
       get { return itemCase_ == ItemOneofCase.Hat ? (global::MM26.IO.Models.Hat) item_ : null; }
@@ -135,7 +165,7 @@ namespace MM26.IO.Models {
     }
 
     /// <summary>Field number for the "shoes" field.</summary>
-    public const int ShoesFieldNumber = 3;
+    public const int ShoesFieldNumber = 5;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::MM26.IO.Models.Shoes Shoes {
       get { return itemCase_ == ItemOneofCase.Shoes ? (global::MM26.IO.Models.Shoes) item_ : null; }
@@ -146,7 +176,7 @@ namespace MM26.IO.Models {
     }
 
     /// <summary>Field number for the "weapon" field.</summary>
-    public const int WeaponFieldNumber = 4;
+    public const int WeaponFieldNumber = 6;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::MM26.IO.Models.Weapon Weapon {
       get { return itemCase_ == ItemOneofCase.Weapon ? (global::MM26.IO.Models.Weapon) item_ : null; }
@@ -157,7 +187,7 @@ namespace MM26.IO.Models {
     }
 
     /// <summary>Field number for the "consumable" field.</summary>
-    public const int ConsumableFieldNumber = 5;
+    public const int ConsumableFieldNumber = 7;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::MM26.IO.Models.Consumable Consumable {
       get { return itemCase_ == ItemOneofCase.Consumable ? (global::MM26.IO.Models.Consumable) item_ : null; }
@@ -171,11 +201,11 @@ namespace MM26.IO.Models {
     /// <summary>Enum of possible cases for the "item" oneof.</summary>
     public enum ItemOneofCase {
       None = 0,
-      Clothes = 1,
-      Hat = 2,
-      Shoes = 3,
-      Weapon = 4,
-      Consumable = 5,
+      Clothes = 3,
+      Hat = 4,
+      Shoes = 5,
+      Weapon = 6,
+      Consumable = 7,
     }
     private ItemOneofCase itemCase_ = ItemOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -202,6 +232,8 @@ namespace MM26.IO.Models {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (MaxStack != other.MaxStack) return false;
+      if (!object.Equals(Stats, other.Stats)) return false;
       if (!object.Equals(Clothes, other.Clothes)) return false;
       if (!object.Equals(Hat, other.Hat)) return false;
       if (!object.Equals(Shoes, other.Shoes)) return false;
@@ -214,6 +246,8 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (MaxStack != 0) hash ^= MaxStack.GetHashCode();
+      if (stats_ != null) hash ^= Stats.GetHashCode();
       if (itemCase_ == ItemOneofCase.Clothes) hash ^= Clothes.GetHashCode();
       if (itemCase_ == ItemOneofCase.Hat) hash ^= Hat.GetHashCode();
       if (itemCase_ == ItemOneofCase.Shoes) hash ^= Shoes.GetHashCode();
@@ -233,24 +267,32 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+      if (MaxStack != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(MaxStack);
+      }
+      if (stats_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Stats);
+      }
       if (itemCase_ == ItemOneofCase.Clothes) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(26);
         output.WriteMessage(Clothes);
       }
       if (itemCase_ == ItemOneofCase.Hat) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(34);
         output.WriteMessage(Hat);
       }
       if (itemCase_ == ItemOneofCase.Shoes) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(42);
         output.WriteMessage(Shoes);
       }
       if (itemCase_ == ItemOneofCase.Weapon) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(50);
         output.WriteMessage(Weapon);
       }
       if (itemCase_ == ItemOneofCase.Consumable) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(58);
         output.WriteMessage(Consumable);
       }
       if (_unknownFields != null) {
@@ -261,6 +303,12 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (MaxStack != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxStack);
+      }
+      if (stats_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stats);
+      }
       if (itemCase_ == ItemOneofCase.Clothes) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Clothes);
       }
@@ -286,6 +334,15 @@ namespace MM26.IO.Models {
     public void MergeFrom(Item other) {
       if (other == null) {
         return;
+      }
+      if (other.MaxStack != 0) {
+        MaxStack = other.MaxStack;
+      }
+      if (other.stats_ != null) {
+        if (stats_ == null) {
+          Stats = new global::MM26.IO.Models.StatusModifier();
+        }
+        Stats.MergeFrom(other.Stats);
       }
       switch (other.ItemCase) {
         case ItemOneofCase.Clothes:
@@ -331,7 +388,18 @@ namespace MM26.IO.Models {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 8: {
+            MaxStack = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            if (stats_ == null) {
+              Stats = new global::MM26.IO.Models.StatusModifier();
+            }
+            input.ReadMessage(Stats);
+            break;
+          }
+          case 26: {
             global::MM26.IO.Models.Clothes subBuilder = new global::MM26.IO.Models.Clothes();
             if (itemCase_ == ItemOneofCase.Clothes) {
               subBuilder.MergeFrom(Clothes);
@@ -340,7 +408,7 @@ namespace MM26.IO.Models {
             Clothes = subBuilder;
             break;
           }
-          case 18: {
+          case 34: {
             global::MM26.IO.Models.Hat subBuilder = new global::MM26.IO.Models.Hat();
             if (itemCase_ == ItemOneofCase.Hat) {
               subBuilder.MergeFrom(Hat);
@@ -349,7 +417,7 @@ namespace MM26.IO.Models {
             Hat = subBuilder;
             break;
           }
-          case 26: {
+          case 42: {
             global::MM26.IO.Models.Shoes subBuilder = new global::MM26.IO.Models.Shoes();
             if (itemCase_ == ItemOneofCase.Shoes) {
               subBuilder.MergeFrom(Shoes);
@@ -358,7 +426,7 @@ namespace MM26.IO.Models {
             Shoes = subBuilder;
             break;
           }
-          case 34: {
+          case 50: {
             global::MM26.IO.Models.Weapon subBuilder = new global::MM26.IO.Models.Weapon();
             if (itemCase_ == ItemOneofCase.Weapon) {
               subBuilder.MergeFrom(Weapon);
@@ -367,7 +435,7 @@ namespace MM26.IO.Models {
             Weapon = subBuilder;
             break;
           }
-          case 42: {
+          case 58: {
             global::MM26.IO.Models.Consumable subBuilder = new global::MM26.IO.Models.Consumable();
             if (itemCase_ == ItemOneofCase.Consumable) {
               subBuilder.MergeFrom(Consumable);
@@ -542,6 +610,7 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Hat(Hat other) : this() {
+      stats_ = other.stats_ != null ? other.stats_.Clone() : null;
       hatEffect_ = other.hatEffect_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -551,8 +620,19 @@ namespace MM26.IO.Models {
       return new Hat(this);
     }
 
+    /// <summary>Field number for the "stats" field.</summary>
+    public const int StatsFieldNumber = 1;
+    private global::MM26.IO.Models.StatusModifier stats_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::MM26.IO.Models.StatusModifier Stats {
+      get { return stats_; }
+      set {
+        stats_ = value;
+      }
+    }
+
     /// <summary>Field number for the "hat_effect" field.</summary>
-    public const int HatEffectFieldNumber = 1;
+    public const int HatEffectFieldNumber = 2;
     private global::MM26.IO.Models.Hat.Types.HatEffect hatEffect_ = global::MM26.IO.Models.Hat.Types.HatEffect.Test;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::MM26.IO.Models.Hat.Types.HatEffect HatEffect {
@@ -575,6 +655,7 @@ namespace MM26.IO.Models {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(Stats, other.Stats)) return false;
       if (HatEffect != other.HatEffect) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -582,6 +663,7 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (stats_ != null) hash ^= Stats.GetHashCode();
       if (HatEffect != global::MM26.IO.Models.Hat.Types.HatEffect.Test) hash ^= HatEffect.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -596,8 +678,12 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+      if (stats_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Stats);
+      }
       if (HatEffect != global::MM26.IO.Models.Hat.Types.HatEffect.Test) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(16);
         output.WriteEnum((int) HatEffect);
       }
       if (_unknownFields != null) {
@@ -608,6 +694,9 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (stats_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stats);
+      }
       if (HatEffect != global::MM26.IO.Models.Hat.Types.HatEffect.Test) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) HatEffect);
       }
@@ -621,6 +710,12 @@ namespace MM26.IO.Models {
     public void MergeFrom(Hat other) {
       if (other == null) {
         return;
+      }
+      if (other.stats_ != null) {
+        if (stats_ == null) {
+          Stats = new global::MM26.IO.Models.StatusModifier();
+        }
+        Stats.MergeFrom(other.Stats);
       }
       if (other.HatEffect != global::MM26.IO.Models.Hat.Types.HatEffect.Test) {
         HatEffect = other.HatEffect;
@@ -636,7 +731,14 @@ namespace MM26.IO.Models {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 10: {
+            if (stats_ == null) {
+              Stats = new global::MM26.IO.Models.StatusModifier();
+            }
+            input.ReadMessage(Stats);
+            break;
+          }
+          case 16: {
             HatEffect = (global::MM26.IO.Models.Hat.Types.HatEffect) input.ReadEnum();
             break;
           }
@@ -820,6 +922,7 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Weapon(Weapon other) : this() {
+      stats_ = other.stats_ != null ? other.stats_.Clone() : null;
       range_ = other.range_;
       splashRadius_ = other.splashRadius_;
       onHitEffect_ = other.onHitEffect_ != null ? other.onHitEffect_.Clone() : null;
@@ -831,8 +934,19 @@ namespace MM26.IO.Models {
       return new Weapon(this);
     }
 
+    /// <summary>Field number for the "stats" field.</summary>
+    public const int StatsFieldNumber = 1;
+    private global::MM26.IO.Models.StatusModifier stats_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::MM26.IO.Models.StatusModifier Stats {
+      get { return stats_; }
+      set {
+        stats_ = value;
+      }
+    }
+
     /// <summary>Field number for the "range" field.</summary>
-    public const int RangeFieldNumber = 1;
+    public const int RangeFieldNumber = 2;
     private int range_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Range {
@@ -842,8 +956,8 @@ namespace MM26.IO.Models {
       }
     }
 
-    /// <summary>Field number for the "splashRadius" field.</summary>
-    public const int SplashRadiusFieldNumber = 2;
+    /// <summary>Field number for the "splash_radius" field.</summary>
+    public const int SplashRadiusFieldNumber = 3;
     private int splashRadius_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int SplashRadius {
@@ -853,8 +967,8 @@ namespace MM26.IO.Models {
       }
     }
 
-    /// <summary>Field number for the "onHitEffect" field.</summary>
-    public const int OnHitEffectFieldNumber = 3;
+    /// <summary>Field number for the "on_hit_effect" field.</summary>
+    public const int OnHitEffectFieldNumber = 4;
     private global::MM26.IO.Models.TempStatusModifier onHitEffect_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::MM26.IO.Models.TempStatusModifier OnHitEffect {
@@ -877,6 +991,7 @@ namespace MM26.IO.Models {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(Stats, other.Stats)) return false;
       if (Range != other.Range) return false;
       if (SplashRadius != other.SplashRadius) return false;
       if (!object.Equals(OnHitEffect, other.OnHitEffect)) return false;
@@ -886,6 +1001,7 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (stats_ != null) hash ^= Stats.GetHashCode();
       if (Range != 0) hash ^= Range.GetHashCode();
       if (SplashRadius != 0) hash ^= SplashRadius.GetHashCode();
       if (onHitEffect_ != null) hash ^= OnHitEffect.GetHashCode();
@@ -902,16 +1018,20 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+      if (stats_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Stats);
+      }
       if (Range != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(16);
         output.WriteInt32(Range);
       }
       if (SplashRadius != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteInt32(SplashRadius);
       }
       if (onHitEffect_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(34);
         output.WriteMessage(OnHitEffect);
       }
       if (_unknownFields != null) {
@@ -922,6 +1042,9 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (stats_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stats);
+      }
       if (Range != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Range);
       }
@@ -941,6 +1064,12 @@ namespace MM26.IO.Models {
     public void MergeFrom(Weapon other) {
       if (other == null) {
         return;
+      }
+      if (other.stats_ != null) {
+        if (stats_ == null) {
+          Stats = new global::MM26.IO.Models.StatusModifier();
+        }
+        Stats.MergeFrom(other.Stats);
       }
       if (other.Range != 0) {
         Range = other.Range;
@@ -965,15 +1094,22 @@ namespace MM26.IO.Models {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Range = input.ReadInt32();
+          case 10: {
+            if (stats_ == null) {
+              Stats = new global::MM26.IO.Models.StatusModifier();
+            }
+            input.ReadMessage(Stats);
             break;
           }
           case 16: {
+            Range = input.ReadInt32();
+            break;
+          }
+          case 24: {
             SplashRadius = input.ReadInt32();
             break;
           }
-          case 26: {
+          case 34: {
             if (onHitEffect_ == null) {
               OnHitEffect = new global::MM26.IO.Models.TempStatusModifier();
             }
@@ -1011,7 +1147,7 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Consumable(Consumable other) : this() {
-      effect_ = other.effect_ != null ? other.effect_.Clone() : null;
+      stats_ = other.stats_ != null ? other.stats_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1020,14 +1156,14 @@ namespace MM26.IO.Models {
       return new Consumable(this);
     }
 
-    /// <summary>Field number for the "effect" field.</summary>
-    public const int EffectFieldNumber = 1;
-    private global::MM26.IO.Models.TempStatusModifier effect_;
+    /// <summary>Field number for the "stats" field.</summary>
+    public const int StatsFieldNumber = 1;
+    private global::MM26.IO.Models.TempStatusModifier stats_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::MM26.IO.Models.TempStatusModifier Effect {
-      get { return effect_; }
+    public global::MM26.IO.Models.TempStatusModifier Stats {
+      get { return stats_; }
       set {
-        effect_ = value;
+        stats_ = value;
       }
     }
 
@@ -1044,14 +1180,14 @@ namespace MM26.IO.Models {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Effect, other.Effect)) return false;
+      if (!object.Equals(Stats, other.Stats)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (effect_ != null) hash ^= Effect.GetHashCode();
+      if (stats_ != null) hash ^= Stats.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1065,9 +1201,9 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (effect_ != null) {
+      if (stats_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(Effect);
+        output.WriteMessage(Stats);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1077,8 +1213,8 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (effect_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Effect);
+      if (stats_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stats);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1091,11 +1227,11 @@ namespace MM26.IO.Models {
       if (other == null) {
         return;
       }
-      if (other.effect_ != null) {
-        if (effect_ == null) {
-          Effect = new global::MM26.IO.Models.TempStatusModifier();
+      if (other.stats_ != null) {
+        if (stats_ == null) {
+          Stats = new global::MM26.IO.Models.TempStatusModifier();
         }
-        Effect.MergeFrom(other.Effect);
+        Stats.MergeFrom(other.Stats);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1109,10 +1245,10 @@ namespace MM26.IO.Models {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (effect_ == null) {
-              Effect = new global::MM26.IO.Models.TempStatusModifier();
+            if (stats_ == null) {
+              Stats = new global::MM26.IO.Models.TempStatusModifier();
             }
-            input.ReadMessage(Effect);
+            input.ReadMessage(Stats);
             break;
           }
         }

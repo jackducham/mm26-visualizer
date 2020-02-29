@@ -17,7 +17,7 @@ namespace MM26.Scenes.IO.ProtocolBuffer
         {
             GameState state = new GameState
             {
-                StateNumber = 17,
+                StateId = 17,
             };
 
             _bytes = state.ToByteArray();
@@ -26,7 +26,7 @@ namespace MM26.Scenes.IO.ProtocolBuffer
         void Start()
         {
             GameState state = GameState.Parser.ParseFrom(_bytes);
-            _turnNumberText.text = $"Turn Number = {state.StateNumber}";
+            _turnNumberText.text = $"Turn Number = {state.StateId}";
         }
     }
 }

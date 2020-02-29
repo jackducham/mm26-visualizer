@@ -69,17 +69,18 @@ namespace MM26.IO
 
         void OnConnection()
         {
-            Debug.Log("On connection");
+            // Debug.Log("On connection");
         }
 
         void OnFailure()
         {
-            Debug.LogError("Websocket connection failed");
+            // Debug.LogError("Websocket connection failed");
         }
 
         void OnNewChange(object sender, GameChange change)
         {
-            Debug.Log("New change received");
+            IWebDataProvider webDataProvider = sender as IWebDataProvider;
+            // do something with webDataProvider
         }
     }
 }
