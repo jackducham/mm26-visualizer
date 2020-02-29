@@ -8,7 +8,7 @@ namespace MM26.Map
     [CustomEditor(typeof(MapDataGenerator))]
     public class MapGeneratorEditor : Editor
     {
-        public MapDataGenerator current
+        public MapDataGenerator Current
         {
             get
             {
@@ -20,9 +20,9 @@ namespace MM26.Map
         {
             DrawDefaultInspector();
             if (GUILayout.Button("Save Map from File"))
-                current.ReadMapFrom(0);
+                Current.ReadMapFrom(0);
             if (GUILayout.Button("Save Map from Tilemap"))
-                current.ReadMapFrom(1);
+                Current.ReadMapFrom(1);
         }
     }
 }

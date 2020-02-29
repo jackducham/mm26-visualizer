@@ -8,7 +8,7 @@ namespace MM26.Map
     [CustomEditor(typeof(TilemapGenerator))]
     public class TilemapGeneratorEditor : Editor
     {
-        public TilemapGenerator current
+        public TilemapGenerator Current
         {
             get
             {
@@ -20,12 +20,12 @@ namespace MM26.Map
         {
             DrawDefaultInspector();
             if (GUILayout.Button("Fill Tilemap"))
-                current.FillTilemap();
+                Current.FillTilemap();
             if (GUILayout.Button("Clear Tilemap"))
-                current.ClearTilemap();
+                Current.ClearTilemap();
 
             if (GUILayout.Button("Set Tilemap Size"))
-                current.SetCellBoundsByEditor();
+                Current.SetCellBoundsByEditor();
         }
     }
 }
