@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace MM26.Map {
+namespace MM26.Map
+{
     [System.Serializable]
     public struct MapTile
     {

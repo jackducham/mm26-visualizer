@@ -23,8 +23,8 @@ namespace MM26.Map
                 SetCellBounds();
             else
                 SetCellBoundsByEditor();
-            
-            for(int i = 0; i < board.Tiles.Count; i++)
+
+            for (int i = 0; i < board.Tiles.Count; i++)
             {
                 tilemap.SetTile(board.Tiles[i].GetCoordinates(), board.TilePrefabs[board.Tiles[i].tileType]);
             }

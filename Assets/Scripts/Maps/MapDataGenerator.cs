@@ -17,7 +17,7 @@ namespace MM26.Map
         {
             TXT, JSON
         }
-        
+
         [Header("Important GameObjects")]
         public Tilemap tilemap;
 
@@ -85,7 +85,8 @@ namespace MM26.Map
                     board = ParseMapFromTilemap();
 
                 AssetDatabase.CreateAsset(board, newAssetPath);
-            } else
+            }
+            else
             {
                 Debug.Log("File already exists");
             }
@@ -101,9 +102,9 @@ namespace MM26.Map
             List<Tile> tileList = new List<Tile>();
 
             int tileCount = 0;
-            for(int x = 0; x < width; x++)
+            for (int x = 0; x < width; x++)
             {
-                for(int y = 0; y < height; y++)
+                for (int y = 0; y < height; y++)
                 {
                     Tile curTile = (Tile)tilemap.GetTile(new Vector3Int(x, y, 0));
 
@@ -137,15 +138,15 @@ namespace MM26.Map
             int height = int.Parse(dim[1]);
 
 
-            for(int i = 1; i <= height; i++)
+            for (int i = 1; i <= height; i++)
             {
                 int y = i - 1;
                 string[] cells = text[i].Split(',');
-                for(int j = 0; j < width; j++)
+                for (int j = 0; j < width; j++)
                 {
                     int x = j;
                     int cellData;
-                    if((cellData = int.Parse(cells[j])) != 0)
+                    if ((cellData = int.Parse(cells[j])) != 0)
                     {
                         MapTile curTile = new MapTile(x, y, cellData - 1);
                         Tiles.Add(curTile);
@@ -155,7 +156,7 @@ namespace MM26.Map
 
             List<Tile> defaultTiles = new List<Tile>();
 
-            foreach(Tile t in tilePrefabs)
+            foreach (Tile t in tilePrefabs)
             {
                 defaultTiles.Add(t);
             }
