@@ -9,10 +9,10 @@ namespace MM26.IO
     {
         public long LatestChangeNumber { get; protected set; }
         protected Dictionary<long, GameChange> Changes { get; set; } = new Dictionary<long, GameChange>();
-        protected Dictionary<long, GameState> Turns { get; set; } = new Dictionary<long, GameState>();
+        protected Dictionary<long, GameState> States { get; set; } = new Dictionary<long, GameState>();
 
         protected MessageParser<GameChange> ChangeParser { get; set; }
-        protected MessageParser<GameState> TurnParser { get; set; }
+        protected MessageParser<GameState> StateParser { get; set; }
 
         internal static IWebDataProvider CreateWebDataProvider()
         {
@@ -31,7 +31,7 @@ namespace MM26.IO
         internal DataProvider()
         {
             this.ChangeParser = GameChange.Parser;
-            this.TurnParser = GameState.Parser;
+            this.StateParser = GameState.Parser;
         }
 
         public virtual void Dispose() { }
@@ -41,9 +41,9 @@ namespace MM26.IO
             callback(this.Changes[change]);
         }
 
-        public virtual void GetTurn(long turn, Action<GameState> callback)
+        public virtual void GetState(long turn, Action<GameState> callback)
         {
-            callback(this.Turns[turn]);
+            callback(this.States[turn]);
         }
     }
 }

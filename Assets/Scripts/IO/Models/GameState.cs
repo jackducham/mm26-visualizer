@@ -25,13 +25,15 @@ namespace MM26.IO.Models {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChBnYW1lX3N0YXRlLnByb3RvEgpnYW1lX3N0YXRlGgtib2FyZC5wcm90bxoP",
-            "Y2hhcmFjdGVyLnByb3RvIiAKCUdhbWVTdGF0ZRITCgt0dXJuX251bWJlchgB",
-            "IAEoA0I6ChZtZWNoLm1hbmlhLmVuZ2luZS5nYW1lQg9HYW1lU3RhdGVQcm90",
-            "b3OqAg5NTTI2LklPLk1vZGVsc2IGcHJvdG8z"));
+            "Y2hhcmFjdGVyLnByb3RvIiEKCUdhbWVTdGF0ZRIUCgxzdGF0ZV9udW1iZXIY",
+            "ASABKAMiIwoKR2FtZUNoYW5nZRIVCg1jaGFuZ2VfbnVtYmVyGAEgASgDQjoK",
+            "Fm1lY2gubWFuaWEuZW5naW5lLmdhbWVCD0dhbWVTdGF0ZVByb3Rvc6oCDk1N",
+            "MjYuSU8uTW9kZWxzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::MM26.IO.Models.BoardReflection.Descriptor, global::MM26.IO.Models.CharacterReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.GameState), global::MM26.IO.Models.GameState.Parser, new[]{ "TurnNumber" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.GameState), global::MM26.IO.Models.GameState.Parser, new[]{ "StateNumber" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.GameChange), global::MM26.IO.Models.GameChange.Parser, new[]{ "ChangeNumber" }, null, null, null, null)
           }));
     }
     #endregion
@@ -63,7 +65,7 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GameState(GameState other) : this() {
-      turnNumber_ = other.turnNumber_;
+      stateNumber_ = other.stateNumber_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -72,17 +74,17 @@ namespace MM26.IO.Models {
       return new GameState(this);
     }
 
-    /// <summary>Field number for the "turn_number" field.</summary>
-    public const int TurnNumberFieldNumber = 1;
-    private long turnNumber_;
+    /// <summary>Field number for the "state_number" field.</summary>
+    public const int StateNumberFieldNumber = 1;
+    private long stateNumber_;
     /// <summary>
     /// TODO
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long TurnNumber {
-      get { return turnNumber_; }
+    public long StateNumber {
+      get { return stateNumber_; }
       set {
-        turnNumber_ = value;
+        stateNumber_ = value;
       }
     }
 
@@ -99,14 +101,14 @@ namespace MM26.IO.Models {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (TurnNumber != other.TurnNumber) return false;
+      if (StateNumber != other.StateNumber) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (TurnNumber != 0L) hash ^= TurnNumber.GetHashCode();
+      if (StateNumber != 0L) hash ^= StateNumber.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -120,9 +122,9 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (TurnNumber != 0L) {
+      if (StateNumber != 0L) {
         output.WriteRawTag(8);
-        output.WriteInt64(TurnNumber);
+        output.WriteInt64(StateNumber);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -132,8 +134,8 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (TurnNumber != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TurnNumber);
+      if (StateNumber != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(StateNumber);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -146,8 +148,8 @@ namespace MM26.IO.Models {
       if (other == null) {
         return;
       }
-      if (other.TurnNumber != 0L) {
-        TurnNumber = other.TurnNumber;
+      if (other.StateNumber != 0L) {
+        StateNumber = other.StateNumber;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -161,7 +163,136 @@ namespace MM26.IO.Models {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            TurnNumber = input.ReadInt64();
+            StateNumber = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class GameChange : pb::IMessage<GameChange> {
+    private static readonly pb::MessageParser<GameChange> _parser = new pb::MessageParser<GameChange>(() => new GameChange());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GameChange> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::MM26.IO.Models.GameStateReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GameChange() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GameChange(GameChange other) : this() {
+      changeNumber_ = other.changeNumber_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GameChange Clone() {
+      return new GameChange(this);
+    }
+
+    /// <summary>Field number for the "change_number" field.</summary>
+    public const int ChangeNumberFieldNumber = 1;
+    private long changeNumber_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long ChangeNumber {
+      get { return changeNumber_; }
+      set {
+        changeNumber_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GameChange);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GameChange other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ChangeNumber != other.ChangeNumber) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ChangeNumber != 0L) hash ^= ChangeNumber.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (ChangeNumber != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(ChangeNumber);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ChangeNumber != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ChangeNumber);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GameChange other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ChangeNumber != 0L) {
+        ChangeNumber = other.ChangeNumber;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            ChangeNumber = input.ReadInt64();
             break;
           }
         }

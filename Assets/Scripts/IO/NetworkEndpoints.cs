@@ -19,7 +19,7 @@ namespace MM26.IO
         /// A http path at which turns are fetched
         /// </summary>
         [Tooltip("A http path at which turns are fetched")]
-        public string TurnHttp;
+        public string StateHttp;
 
         /// <summary>
         /// A http path at which the change is observed

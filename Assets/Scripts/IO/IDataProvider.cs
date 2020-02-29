@@ -26,7 +26,7 @@ namespace MM26.IO
         /// the call back would be invoked when the turn is available
         /// </param>
         /// <returns>a turn if there is one, null otherwise</returns>
-        void GetTurn(long change, Action<GameState> callback);
+        void GetState(long change, Action<GameState> callback);
     }
 
     /// <summary>

@@ -37,21 +37,21 @@ namespace MM26.IO
         {
             if (!_hasStartTurn)
             {
-                GameState turn = this.TurnParser.ParseFrom(bytes);
-                this.Turns[turn.TurnNumber] = turn;
+                GameState turn = this.StateParser.ParseFrom(bytes);
+                this.States[turn.StateNumber] = turn;
 
                 _hasStartTurn = true;
-                StartTurnNumber = turn.TurnNumber;
+                StartTurnNumber = turn.StateNumber;
 
                 return;
             }
 
             GameChange change = this.ChangeParser.ParseFrom(bytes);
 
-            this.LatestChangeNumber = change.TurnNumber;
+            this.LatestChangeNumber = change.ChangeNumber;
             this.NewChange?.Invoke(this, change);
 
-            this.Changes[change.TurnNumber] = change;
+            this.Changes[change.ChangeNumber] = change;
         }
 
         public override void GetChange(long change, Action<GameChange> callback)

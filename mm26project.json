@@ -5,7 +5,6 @@
     "board.proto",
     "character.proto",
     "item.proto",
-    "game_state.proto",
-    "game_change.proto"
+    "game_state.proto"
   ]
 }

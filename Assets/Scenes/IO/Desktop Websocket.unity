@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 118875766}
   - component: {fileID: 118875767}
   m_Layer: 0
-  m_Name: Turn Manager
+  m_Name: Transition Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -160,18 +160,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 118875765}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 365b71551d92a4431858189d39d3dfc2, type: 3}
+  m_Script: {fileID: 11500000, guid: c77851856389d41cc97d966f6d5c4641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _dataSource: 0
   _mode: 0
   _endpoints:
-    ChangeSocket: ws://localhost:3000/visualizer
-    TurnHttp: 
+    ChangeSocket: 
+    StateHttp: 
     ChangeHttp: 
   _debugEndpoints:
-    ChangeSocket: ws://localhost:3000/visualizer
-    TurnHttp: 
+    ChangeSocket: 
+    StateHttp: 
     ChangeHttp: 
 --- !u!1 &2100838743
 GameObject:

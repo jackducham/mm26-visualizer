@@ -4,7 +4,7 @@ using MM26.IO.Models;
 
 namespace MM26.IO
 {
-    public class TurnsManager : MonoBehaviour
+    public class TransitionManager : MonoBehaviour
     {
         enum DataSource
         {
