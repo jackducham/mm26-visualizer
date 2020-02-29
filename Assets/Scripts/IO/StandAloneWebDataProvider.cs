@@ -3,10 +3,19 @@
 namespace MM26.IO
 {
 #if UNITY_STANDALONE
+    /// <summary>
+    /// Web data provider
+    /// </summary>
     internal class StandAloneWebDataProvider : WebDataProvider
     {
+        /// <summary>
+        /// Listener for websocket
+        /// </summary>
         WebSocketListener _changeListener;
 
+        /// <summary>
+        /// Create an empty instance of the stand alone web data provider
+        /// </summary>
         internal StandAloneWebDataProvider() : base()
         {
             _changeListener = new WebSocketListener();

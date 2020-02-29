@@ -39,6 +39,10 @@ namespace MM26.IO
         /// </summary>
         long LatestChangeNumber { get; }
 
+        /// <summary>
+        /// Endpoints used by the web data provider
+        /// </summary>
+        /// <value></value>
         NetworkEndpoints Endpoints { get; }
 
         /// <summary>

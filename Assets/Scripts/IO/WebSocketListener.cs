@@ -62,6 +62,10 @@ namespace MM26.IO
             }
         }
 
+        /// <summary>
+        /// Handle connection
+        /// </summary>
+        /// <returns>some task</returns>
         async Task OnConnect()
         {
             while (_client.State == WebSocketState.Open)
