@@ -1,55 +1,56 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Xml;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.Serialization;
 
 namespace MM26.Map
 {
     public class TilemapGenerator : MonoBehaviour
     {
         [Header("Important GameObjects")]
-        public Tilemap tilemap;
+        [FormerlySerializedAs("tilemap")]
+        public Tilemap Tilemap;
 
         [Header("Map Data")]
-        public MapData board;
+        [FormerlySerializedAs("board")]
+        public MapData Board;
 
         [Header("Set z to 0 if not in use, 1 otherwise")]
-        public Vector3Int mapSize;
+        [FormerlySerializedAs("mapSize")]
+        public Vector3Int MapSize;
 
         public void FillTilemap()
         {
-            if (mapSize.z == 0)
+            if (MapSize.z == 0)
                 SetCellBounds();
             else
                 SetCellBoundsByEditor();
 
-            for (int i = 0; i < board.Tiles.Count; i++)
+            for (int i = 0; i < Board.Tiles.Count; i++)
             {
-                tilemap.SetTile(board.Tiles[i].GetCoordinates(), board.TilePrefabs[board.Tiles[i].tileType]);
+                Tilemap.SetTile(Board.Tiles[i].GetCoordinates(), Board.TilePrefabs[Board.Tiles[i].TileType]);
             }
         }
 
         public void ClearTilemap()
         {
-            tilemap.ClearAllTiles();
+            Tilemap.ClearAllTiles();
         }
 
         private void SetCellBounds()
         {
             int width, height;
-            width = board.Width;
-            height = board.Height;
-            tilemap.size = new Vector3Int(width, height, 1);
-            tilemap.origin = new Vector3Int();
-            tilemap.ResizeBounds();
+            width = Board.Width;
+            height = Board.Height;
+            Tilemap.size = new Vector3Int(width, height, 1);
+            Tilemap.origin = new Vector3Int();
+            Tilemap.ResizeBounds();
         }
 
         public void SetCellBoundsByEditor()
         {
-            tilemap.size = mapSize;
-            tilemap.origin = new Vector3Int();
-            tilemap.ResizeBounds();
+            Tilemap.size = MapSize;
+            Tilemap.origin = new Vector3Int();
+            Tilemap.ResizeBounds();
         }
     }
 }

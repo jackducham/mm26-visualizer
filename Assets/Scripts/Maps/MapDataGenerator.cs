@@ -4,41 +4,46 @@ using UnityEngine;
 using System.IO;
 using UnityEditor;
 using UnityEngine.Tilemaps;
+using UnityEngine.Serialization;
 
 namespace MM26.Map
 {
+    public enum FileType
+    {
+        TXT, JSON
+    }
+
     /// <summary>
     /// This class is intended to be used in the editor.
     /// It should NOT be used in runtime, ever!
     /// </summary>
     public class MapDataGenerator : MonoBehaviour
     {
-        public enum FileType
-        {
-            TXT, JSON
-        }
-
         [Header("Important GameObjects")]
-        public Tilemap tilemap;
+        [FormerlySerializedAs("tilemap")]
+        public Tilemap Tilemap;
 
         [Header("Tile Prefabs")]
-        public Tile[] tilePrefabs;
+        [FormerlySerializedAs("tilemap")]
+        public Tile[] TilePrefabs;
 
         [Header("Map Object")]
-        // Assets/Resources/Maps/[MapObjectPath]
-        public string mapName;
-        public FileType fileType;
+        [FormerlySerializedAs("mapName")]
+        public string MapName;
 
-        private string mapsFolderPath;
-        private string mapFileType
+        [FormerlySerializedAs("fileType")]
+        public FileType FileType;
+
+        private string _mapsFolderPath;
+        private string _mapFileType
         {
             get
             {
-                if (fileType == FileType.TXT)
+                if (FileType == FileType.TXT)
                 {
                     return ".txt";
                 }
-                else if (fileType == FileType.JSON)
+                else if (FileType == FileType.JSON)
                 {
                     return ".json";
                 }
@@ -49,11 +54,11 @@ namespace MM26.Map
             }
         }
 
-        private string mapPath
+        private string _mapPath
         {
             get
             {
-                return mapsFolderPath + mapName + mapFileType;
+                return _mapsFolderPath + MapName + _mapFileType;
             }
         }
 
@@ -64,19 +69,19 @@ namespace MM26.Map
         /// <param name="type">0: file, 1: tilemap</param>
         public void ReadMapFrom(int type)
         {
-            mapsFolderPath = Application.dataPath + "/Resources/Maps/" + mapName + "/";
-            Debug.Log("Look at map path: " + mapPath);
-            if (!File.Exists(mapPath))
+            _mapsFolderPath = Application.dataPath + "/Resources/Maps/" + MapName + "/";
+            Debug.Log("Look at map path: " + _mapPath);
+            if (!File.Exists(_mapPath))
             {
-                Debug.Log("Map does not exist " + mapPath);
+                Debug.Log("Map does not exist " + _mapPath);
                 return;
             }
-            string newAssetPath = "Assets/Resources/Maps/" + mapName + "/" + mapName + ".asset";
+            string newAssetPath = "Assets/Resources/Maps/" + MapName + "/" + MapName + ".asset";
 
             if (!File.Exists(newAssetPath))
             {
                 Debug.Log("Map found!");
-                string[] lines = File.ReadAllLines(@"" + mapPath);
+                string[] lines = File.ReadAllLines(@"" + _mapPath);
 
                 MapData board;
                 if (type == 0)
@@ -94,8 +99,8 @@ namespace MM26.Map
 
         private MapData ParseMapFromTilemap()
         {
-            int width = tilemap.size.x;
-            int height = tilemap.size.y;
+            int width = Tilemap.size.x;
+            int height = Tilemap.size.y;
             List<MapTile> Tiles = new List<MapTile>();
 
             Dictionary<Tile, int> tileDict = new Dictionary<Tile, int>();
@@ -106,7 +111,7 @@ namespace MM26.Map
             {
                 for (int y = 0; y < height; y++)
                 {
-                    Tile curTile = (Tile)tilemap.GetTile(new Vector3Int(x, y, 0));
+                    Tile curTile = (Tile)Tilemap.GetTile(new Vector3Int(x, y, 0));
 
                     if (curTile != null)
                     {
@@ -124,7 +129,7 @@ namespace MM26.Map
                 }
             }
 
-            MapData board = MapData.CreateInstance(mapName, width, height, Tiles, tileList);
+            MapData board = MapData.CreateInstance(MapName, width, height, Tiles, tileList);
 
             return board;
         }
@@ -156,12 +161,12 @@ namespace MM26.Map
 
             List<Tile> defaultTiles = new List<Tile>();
 
-            foreach (Tile t in tilePrefabs)
+            foreach (Tile t in TilePrefabs)
             {
                 defaultTiles.Add(t);
             }
 
-            MapData board = MapData.CreateInstance(mapName, width, height, Tiles, defaultTiles);
+            MapData board = MapData.CreateInstance(MapName, width, height, Tiles, defaultTiles);
 
             return board;
         }

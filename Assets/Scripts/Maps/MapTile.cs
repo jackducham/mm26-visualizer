@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace MM26.Map
 {
@@ -8,17 +7,21 @@ namespace MM26.Map
     public struct MapTile
     {
         // x-coordinate
-        public int x;
+        [FormerlySerializedAs("x")]
+        public int X;
+
         // y-coordinate
-        public int y;
+        [FormerlySerializedAs("y")]
+        public int Y;
         // tile type (currently not in use)
-        public int tileType;
+        [FormerlySerializedAs("tileType")]
+        public int TileType;
 
         public MapTile(int x_, int y_, int tileType_)
         {
-            x = x_;
-            y = y_;
-            tileType = tileType_;
+            X = x_;
+            Y = y_;
+            TileType = tileType_;
         }
 
         /// <summary>
@@ -27,12 +30,12 @@ namespace MM26.Map
         /// <returns></returns>
         public override string ToString()
         {
-            return string.Format("[Coords: ({0}, {1}), Type: {2}]", x, y, tileType);
+            return string.Format("[Coords: ({0}, {1}), Type: {2}]", X, Y, TileType);
         }
 
         public Vector3Int GetCoordinates()
         {
-            return new Vector3Int(x, y, 0);
+            return new Vector3Int(X, Y, 0);
         }
     }
 }
