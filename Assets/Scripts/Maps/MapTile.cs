@@ -6,14 +6,21 @@ namespace MM26.Map
     [System.Serializable]
     public struct MapTile
     {
-        // x-coordinate
+        /// <summary>
+        /// x-coordinate
+        /// </summary>
         [FormerlySerializedAs("x")]
         public int X;
 
-        // y-coordinate
+        /// <summary>
+        /// y-coordinate
+        /// </summary>
         [FormerlySerializedAs("y")]
         public int Y;
-        // tile type (currently not in use)
+
+        /// <summary>
+        /// tile type (currently not in use)
+        /// </summary>
         [FormerlySerializedAs("tileType")]
         public int TileType;
 

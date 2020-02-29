@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 using System.IO;
+using UnityEngine;
 using UnityEditor;
 using UnityEngine.Tilemaps;
 using UnityEngine.Serialization;
@@ -11,6 +10,12 @@ namespace MM26.Map
     public enum FileType
     {
         TXT, JSON
+    }
+
+    public enum MapSource
+    {
+        File,
+        Tilemap,
     }
 
     /// <summary>
@@ -67,33 +72,41 @@ namespace MM26.Map
         /// Reads map from a specific type of input
         /// </summary>
         /// <param name="type">0: file, 1: tilemap</param>
-        public void ReadMapFrom(int type)
+        public void ReadMapFrom(MapSource source)
         {
-            _mapsFolderPath = Application.dataPath + "/Resources/Maps/" + MapName + "/";
-            Debug.Log("Look at map path: " + _mapPath);
+            _mapsFolderPath = Path.Combine(Application.dataPath, "Resources", "Maps", MapName);
+            // Debug.Log("Look at map path: " + _mapPath);
             if (!File.Exists(_mapPath))
             {
-                Debug.Log("Map does not exist " + _mapPath);
+                // Debug.Log("Map does not exist " + _mapPath);
                 return;
             }
-            string newAssetPath = "Assets/Resources/Maps/" + MapName + "/" + MapName + ".asset";
+
+            string newAssetPath = Path.Combine("Assets", "Resources", "Maps", MapName, $"{MapName}.asset");
 
             if (!File.Exists(newAssetPath))
             {
-                Debug.Log("Map found!");
+                // Debug.Log("Map found!");
                 string[] lines = File.ReadAllLines(@"" + _mapPath);
 
                 MapData board;
-                if (type == 0)
-                    board = ParseMapFromText(lines);
-                else //if (type == 1)
-                    board = ParseMapFromTilemap();
+
+                switch (source)
+                {
+                    case MapSource.File:
+                        board = ParseMapFromText(lines);
+                        break;
+                    case MapSource.Tilemap:
+                    default:
+                        board = ParseMapFromTilemap();
+                        break;
+                }
 
                 AssetDatabase.CreateAsset(board, newAssetPath);
             }
             else
             {
-                Debug.Log("File already exists");
+                // Debug.Log("File already exists");
             }
         }
 

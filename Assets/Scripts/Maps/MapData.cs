@@ -8,15 +8,29 @@ namespace MM26.Map
     [CreateAssetMenu(fileName = "New Map", menuName = "Map")]
     public class MapData : ScriptableObject
     {
-        // Name of the map
+        /// <summary>
+        /// Name of the map
+        /// </summary>
         public string MapName;
-        // Size of X dimension of the map
+
+        /// <summary>
+        /// Size of X dimension of the map
+        /// </summary>
         public int Width;
-        // Size of Y dimension of the map
+
+        /// <summary>
+        /// Size of Y dimension of the map
+        /// </summary>
         public int Height;
-        // List of tile coordinates (z is tile type)
+
+        /// <summary>
+        /// List of tile coordinates (z is tile type)
+        /// </summary>
         public List<MapTile> Tiles;
-        // List of tile prefabs
+
+        /// <summary>
+        /// List of tile prefabs
+        /// </summary>
         public List<Tile> TilePrefabs;
 
         public void Init(string name, int w, int h, List<MapTile> tiles)

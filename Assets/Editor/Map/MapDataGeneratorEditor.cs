@@ -20,9 +20,9 @@ namespace MM26.Map
         {
             DrawDefaultInspector();
             if (GUILayout.Button("Save Map from File"))
-                Current.ReadMapFrom(0);
+                Current.ReadMapFrom(MapSource.File);
             if (GUILayout.Button("Save Map from Tilemap"))
-                Current.ReadMapFrom(1);
+                Current.ReadMapFrom(MapSource.Tilemap);
         }
     }
 }
