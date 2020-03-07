@@ -63,3 +63,4 @@ crashlytics-build.properties
 
 # macOS
 .DS_Store
+.mm26-dev.json
