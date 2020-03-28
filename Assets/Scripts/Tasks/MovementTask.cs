@@ -5,7 +5,7 @@ namespace MM26.Tasks
 {
     public class MovementTask : Task
     {
-        public static string Type => "MovementTask";
+        public static string Type => "Movement";
 
         public Transform Destination;
 
@@ -16,7 +16,7 @@ namespace MM26.Tasks
 
         public override string GetTaskType()
         {
-            return "";
+            return MovementTask.Type;
         }
     }
 }
