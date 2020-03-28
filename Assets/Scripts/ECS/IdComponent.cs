@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class IdComponent : MonoBehaviour
 {
-	private static int _nextId;
-	public int id = _nextId++; 
+    private static int _nextId;
+    public int id = _nextId++;
 }
