@@ -19,6 +19,6 @@ namespace MM26.Tasks
             return "Rotation";
         }
 
-        public static string TYPE_STRING = "Rotation";
+        public static string Type => "Rotation";
     }
 }
