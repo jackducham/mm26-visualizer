@@ -5,7 +5,7 @@ using MM26.Components;
 using MM26.Tasks;
 using MM26.ECS;
 
-class HybridBoxRotationSystem : ComponentSystem
+public class RotationSystem : ComponentSystem
 {
     EntityQuery _query = null;
 
@@ -17,14 +17,14 @@ class HybridBoxRotationSystem : ComponentSystem
 
         tasksToFinish = new Dictionary<int, RotationTask>();
         _query = GetEntityQuery(typeof(Transform),
-                                typeof(HybridBoxRotationComponent),
+                                typeof(RotationComponent),
                                 typeof(IdComponent));
         Mailbox.Instance.SubscribeToTaskType(this, RotationTask.TYPE_STRING);
     }
 
     private void UpdateMessages()
     {
-        IList<Task> messages = Mailbox.Instance.GetSubscribedTasksForType(this, RotationTask.TYPE_STRING);
+        List<Task> messages = Mailbox.Instance.GetSubscribedTasksForType(this, RotationTask.TYPE_STRING);
 
         if (messages == null)
         {
@@ -32,7 +32,7 @@ class HybridBoxRotationSystem : ComponentSystem
         }
         foreach (RotationTask msg in messages)
         {
-            if (!msg.IsFinished())
+            if (!msg.IsFinished)
             {
                 int id = msg.entityId;
                 tasksToFinish[id] = msg;
@@ -45,7 +45,7 @@ class HybridBoxRotationSystem : ComponentSystem
     {
         UpdateMessages();
 
-        var rotationComponents = _query.ToComponentArray<HybridBoxRotationComponent>();
+        var rotationComponents = _query.ToComponentArray<RotationComponent>();
         var transformComponents = _query.ToComponentArray<Transform>();
         var idComponents = _query.ToComponentArray<IdComponent>();
 
@@ -54,7 +54,7 @@ class HybridBoxRotationSystem : ComponentSystem
             var rotationComponent = rotationComponents[i];
             var idComponent = idComponents[i];
 
-            if (tasksToFinish.ContainsKey(idComponent.id) && !tasksToFinish[idComponent.id].IsStarted())
+            if (tasksToFinish.ContainsKey(idComponent.id) && !tasksToFinish[idComponent.id].IsStarted)
             {
                 tasksToFinish[idComponent.id].Start();
                 rotationComponent.amount = tasksToFinish[idComponent.id].rotationAmount;

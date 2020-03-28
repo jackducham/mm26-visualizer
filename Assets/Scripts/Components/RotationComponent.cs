@@ -2,7 +2,7 @@
 
 namespace MM26.Components
 {
-    public class HybridBoxRotationComponent : MonoBehaviour
+    public class RotationComponent : MonoBehaviour
     {
         public float Speed = 0.0f;
         public float amount = 0.0f;

@@ -1,11 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+/// <summary>
+/// Helper for creating singletons for MonoBehavior subclasses
+/// </summary>
+/// <typeparam name="T">Type of singleton</typeparam>
 public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
     private static bool _destroyed = false;
     private static T _instance;
+
+    /// <summary>
+    /// Get the instance of singleton
+    /// </summary>
     public static T Instance
     {
         get
@@ -48,6 +54,4 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         _destroyed = true;
         _instance = null;
     }
-
-
 }
