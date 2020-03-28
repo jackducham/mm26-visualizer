@@ -9,7 +9,7 @@ public class RotationSystem : ComponentSystem
 {
     EntityQuery _query = null;
 
-    IDictionary<int, RotationTask> tasksToFinish;
+    Dictionary<int, RotationTask> tasksToFinish;
 
     protected override void OnCreate()
     {
@@ -34,7 +34,7 @@ public class RotationSystem : ComponentSystem
         {
             if (!msg.IsFinished)
             {
-                int id = msg.entityId;
+                int id = msg.EntityID;
                 tasksToFinish[id] = msg;
                 //msg.FinishMessage();
             }
@@ -54,11 +54,11 @@ public class RotationSystem : ComponentSystem
             var rotationComponent = rotationComponents[i];
             var idComponent = idComponents[i];
 
-            if (tasksToFinish.ContainsKey(idComponent.id) && !tasksToFinish[idComponent.id].IsStarted)
+            if (tasksToFinish.ContainsKey(idComponent.ID) && !tasksToFinish[idComponent.ID].IsStarted)
             {
-                tasksToFinish[idComponent.id].Start();
-                rotationComponent.amount = tasksToFinish[idComponent.id].rotationAmount;
-                rotationComponent.axis = tasksToFinish[idComponent.id].rotationAxis;
+                tasksToFinish[idComponent.ID].Start();
+                rotationComponent.amount = tasksToFinish[idComponent.ID].rotationAmount;
+                rotationComponent.axis = tasksToFinish[idComponent.ID].rotationAxis;
             }
 
             if (rotationComponent.amount > 0.0f)
@@ -70,7 +70,7 @@ public class RotationSystem : ComponentSystem
                 {
                     rotAmt = rotationComponent.amount;
                     // Finish
-                    tasksToFinish[idComponent.id].Finish();
+                    tasksToFinish[idComponent.ID].Finish();
                 }
                 rotationComponent.amount -= rotAmt;
 

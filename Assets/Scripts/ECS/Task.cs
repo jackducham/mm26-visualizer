@@ -9,7 +9,7 @@
     {
 
         private static int _nextId;
-        public int entityId;
+        public int EntityID;
 
         private readonly int _taskId;
 
@@ -27,7 +27,7 @@
 
         public Task(int id)
         {
-            entityId = id;
+            this.EntityID = id;
             IsFinished = false;
             _taskId = _nextId++;
         }
