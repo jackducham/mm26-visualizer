@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 
 namespace MM26.ECS
 {
@@ -7,7 +8,7 @@ namespace MM26.ECS
     /// Represents a batch of tasks to be completed in parallel.
     /// </summary>
     /// <remarks>This is a non-ordered collection of data, so think of it more like a set than an array.</remarks>
-    public class TasksBatch
+    public class TasksBatch : IEnumerable<Task>
     {
 
         private List<Task> _tasksSet;
@@ -35,7 +36,7 @@ namespace MM26.ECS
         /// Adds a task to the batch.
         /// </summary>
         /// <param name="task">Task to add to the batch.</param>
-        public void AddTask(Task task)
+        public void Add(Task task)
         {
             _tasksSet.Add(task);
         }
@@ -83,5 +84,14 @@ namespace MM26.ECS
             IsStarted = true;
         }
 
+        public IEnumerator<Task> GetEnumerator()
+        {
+            return _tasksSet.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return _tasksSet.GetEnumerator();
+        }
     }
 }
