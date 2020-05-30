@@ -25,18 +25,23 @@ namespace MM26.IO.Models {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChBnYW1lX3N0YXRlLnByb3RvEgpnYW1lX3N0YXRlGgtib2FyZC5wcm90bxoP",
-            "Y2hhcmFjdGVyLnByb3RvItEBCglHYW1lU3RhdGUSEAoIc3RhdGVfaWQYASAB",
-            "KAMSHgoIcHZwQm9hcmQYAiABKAsyDC5ib2FyZC5Cb2FyZBJJChJwbGF5ZXJJ",
-            "ZFRvQm9hcmRNYXAYAyADKAsyLS5nYW1lX3N0YXRlLkdhbWVTdGF0ZS5QbGF5",
-            "ZXJJZFRvQm9hcmRNYXBFbnRyeRpHChdQbGF5ZXJJZFRvQm9hcmRNYXBFbnRy",
-            "eRILCgNrZXkYASABKAkSGwoFdmFsdWUYAiABKAsyDC5ib2FyZC5Cb2FyZDoC",
-            "OAEiHwoKR2FtZUNoYW5nZRIRCgljaGFuZ2VfaWQYASABKANCQAocbWVjaC5t",
-            "YW5pYS5lbmdpbmUuZ2FtZS5tb2RlbEIPR2FtZVN0YXRlUHJvdG9zqgIOTU0y",
-            "Ni5JTy5Nb2RlbHNiBnByb3RvMw=="));
+            "Y2hhcmFjdGVyLnByb3RvIqgDCglHYW1lU3RhdGUSEAoIc3RhdGVfaWQYASAB",
+            "KAMSOgoLYm9hcmRfbmFtZXMYAiADKAsyJS5nYW1lX3N0YXRlLkdhbWVTdGF0",
+            "ZS5Cb2FyZE5hbWVzRW50cnkSPAoMcGxheWVyX25hbWVzGAMgAygLMiYuZ2Ft",
+            "ZV9zdGF0ZS5HYW1lU3RhdGUuUGxheWVyTmFtZXNFbnRyeRI+Cg1tb25zdGVy",
+            "X25hbWVzGAQgAygLMicuZ2FtZV9zdGF0ZS5HYW1lU3RhdGUuTW9uc3Rlck5h",
+            "bWVzRW50cnkaPwoPQm9hcmROYW1lc0VudHJ5EgsKA2tleRgBIAEoCRIbCgV2",
+            "YWx1ZRgCIAEoCzIMLmJvYXJkLkJvYXJkOgI4ARpFChBQbGF5ZXJOYW1lc0Vu",
+            "dHJ5EgsKA2tleRgBIAEoCRIgCgV2YWx1ZRgCIAEoCzIRLmNoYXJhY3Rlci5Q",
+            "bGF5ZXI6AjgBGkcKEU1vbnN0ZXJOYW1lc0VudHJ5EgsKA2tleRgBIAEoCRIh",
+            "CgV2YWx1ZRgCIAEoCzISLmNoYXJhY3Rlci5Nb25zdGVyOgI4ASIfCgpHYW1l",
+            "Q2hhbmdlEhEKCWNoYW5nZV9pZBgBIAEoA0JAChxtZWNoLm1hbmlhLmVuZ2lu",
+            "ZS5nYW1lLm1vZGVsQg9HYW1lU3RhdGVQcm90b3OqAg5NTTI2LklPLk1vZGVs",
+            "c2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::MM26.IO.Models.BoardReflection.Descriptor, global::MM26.IO.Models.CharacterReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.GameState), global::MM26.IO.Models.GameState.Parser, new[]{ "StateId", "PvpBoard", "PlayerIdToBoardMap" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.GameState), global::MM26.IO.Models.GameState.Parser, new[]{ "StateId", "BoardNames", "PlayerNames", "MonsterNames" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.GameChange), global::MM26.IO.Models.GameChange.Parser, new[]{ "ChangeId" }, null, null, null, null)
           }));
     }
@@ -70,8 +75,9 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GameState(GameState other) : this() {
       stateId_ = other.stateId_;
-      pvpBoard_ = other.pvpBoard_ != null ? other.pvpBoard_.Clone() : null;
-      playerIdToBoardMap_ = other.playerIdToBoardMap_.Clone();
+      boardNames_ = other.boardNames_.Clone();
+      playerNames_ = other.playerNames_.Clone();
+      monsterNames_ = other.monsterNames_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -91,25 +97,34 @@ namespace MM26.IO.Models {
       }
     }
 
-    /// <summary>Field number for the "pvpBoard" field.</summary>
-    public const int PvpBoardFieldNumber = 2;
-    private global::MM26.IO.Models.Board pvpBoard_;
+    /// <summary>Field number for the "board_names" field.</summary>
+    public const int BoardNamesFieldNumber = 2;
+    private static readonly pbc::MapField<string, global::MM26.IO.Models.Board>.Codec _map_boardNames_codec
+        = new pbc::MapField<string, global::MM26.IO.Models.Board>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::MM26.IO.Models.Board.Parser), 18);
+    private readonly pbc::MapField<string, global::MM26.IO.Models.Board> boardNames_ = new pbc::MapField<string, global::MM26.IO.Models.Board>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::MM26.IO.Models.Board PvpBoard {
-      get { return pvpBoard_; }
-      set {
-        pvpBoard_ = value;
-      }
+    public pbc::MapField<string, global::MM26.IO.Models.Board> BoardNames {
+      get { return boardNames_; }
     }
 
-    /// <summary>Field number for the "playerIdToBoardMap" field.</summary>
-    public const int PlayerIdToBoardMapFieldNumber = 3;
-    private static readonly pbc::MapField<string, global::MM26.IO.Models.Board>.Codec _map_playerIdToBoardMap_codec
-        = new pbc::MapField<string, global::MM26.IO.Models.Board>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::MM26.IO.Models.Board.Parser), 26);
-    private readonly pbc::MapField<string, global::MM26.IO.Models.Board> playerIdToBoardMap_ = new pbc::MapField<string, global::MM26.IO.Models.Board>();
+    /// <summary>Field number for the "player_names" field.</summary>
+    public const int PlayerNamesFieldNumber = 3;
+    private static readonly pbc::MapField<string, global::MM26.IO.Models.Player>.Codec _map_playerNames_codec
+        = new pbc::MapField<string, global::MM26.IO.Models.Player>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::MM26.IO.Models.Player.Parser), 26);
+    private readonly pbc::MapField<string, global::MM26.IO.Models.Player> playerNames_ = new pbc::MapField<string, global::MM26.IO.Models.Player>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::MapField<string, global::MM26.IO.Models.Board> PlayerIdToBoardMap {
-      get { return playerIdToBoardMap_; }
+    public pbc::MapField<string, global::MM26.IO.Models.Player> PlayerNames {
+      get { return playerNames_; }
+    }
+
+    /// <summary>Field number for the "monster_names" field.</summary>
+    public const int MonsterNamesFieldNumber = 4;
+    private static readonly pbc::MapField<string, global::MM26.IO.Models.Monster>.Codec _map_monsterNames_codec
+        = new pbc::MapField<string, global::MM26.IO.Models.Monster>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::MM26.IO.Models.Monster.Parser), 34);
+    private readonly pbc::MapField<string, global::MM26.IO.Models.Monster> monsterNames_ = new pbc::MapField<string, global::MM26.IO.Models.Monster>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, global::MM26.IO.Models.Monster> MonsterNames {
+      get { return monsterNames_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -126,8 +141,9 @@ namespace MM26.IO.Models {
         return true;
       }
       if (StateId != other.StateId) return false;
-      if (!object.Equals(PvpBoard, other.PvpBoard)) return false;
-      if (!PlayerIdToBoardMap.Equals(other.PlayerIdToBoardMap)) return false;
+      if (!BoardNames.Equals(other.BoardNames)) return false;
+      if (!PlayerNames.Equals(other.PlayerNames)) return false;
+      if (!MonsterNames.Equals(other.MonsterNames)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -135,8 +151,9 @@ namespace MM26.IO.Models {
     public override int GetHashCode() {
       int hash = 1;
       if (StateId != 0L) hash ^= StateId.GetHashCode();
-      if (pvpBoard_ != null) hash ^= PvpBoard.GetHashCode();
-      hash ^= PlayerIdToBoardMap.GetHashCode();
+      hash ^= BoardNames.GetHashCode();
+      hash ^= PlayerNames.GetHashCode();
+      hash ^= MonsterNames.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -154,11 +171,9 @@ namespace MM26.IO.Models {
         output.WriteRawTag(8);
         output.WriteInt64(StateId);
       }
-      if (pvpBoard_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(PvpBoard);
-      }
-      playerIdToBoardMap_.WriteTo(output, _map_playerIdToBoardMap_codec);
+      boardNames_.WriteTo(output, _map_boardNames_codec);
+      playerNames_.WriteTo(output, _map_playerNames_codec);
+      monsterNames_.WriteTo(output, _map_monsterNames_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -170,10 +185,9 @@ namespace MM26.IO.Models {
       if (StateId != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(StateId);
       }
-      if (pvpBoard_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PvpBoard);
-      }
-      size += playerIdToBoardMap_.CalculateSize(_map_playerIdToBoardMap_codec);
+      size += boardNames_.CalculateSize(_map_boardNames_codec);
+      size += playerNames_.CalculateSize(_map_playerNames_codec);
+      size += monsterNames_.CalculateSize(_map_monsterNames_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -188,13 +202,9 @@ namespace MM26.IO.Models {
       if (other.StateId != 0L) {
         StateId = other.StateId;
       }
-      if (other.pvpBoard_ != null) {
-        if (pvpBoard_ == null) {
-          PvpBoard = new global::MM26.IO.Models.Board();
-        }
-        PvpBoard.MergeFrom(other.PvpBoard);
-      }
-      playerIdToBoardMap_.Add(other.playerIdToBoardMap_);
+      boardNames_.Add(other.boardNames_);
+      playerNames_.Add(other.playerNames_);
+      monsterNames_.Add(other.monsterNames_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -211,14 +221,15 @@ namespace MM26.IO.Models {
             break;
           }
           case 18: {
-            if (pvpBoard_ == null) {
-              PvpBoard = new global::MM26.IO.Models.Board();
-            }
-            input.ReadMessage(PvpBoard);
+            boardNames_.AddEntriesFrom(input, _map_boardNames_codec);
             break;
           }
           case 26: {
-            playerIdToBoardMap_.AddEntriesFrom(input, _map_playerIdToBoardMap_codec);
+            playerNames_.AddEntriesFrom(input, _map_playerNames_codec);
+            break;
+          }
+          case 34: {
+            monsterNames_.AddEntriesFrom(input, _map_monsterNames_codec);
             break;
           }
         }

@@ -25,20 +25,18 @@ namespace MM26.IO.Models {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cgtib2FyZC5wcm90bxIFYm9hcmQaCml0ZW0ucHJvdG8aD2NoYXJhY3Rlci5w",
-            "cm90byLAAQoFQm9hcmQSDAoEcm93cxgBIAEoBRIPCgdjb2x1bW5zGAIgASgF",
-            "EhkKBGdyaWQYAyADKAsyCy5ib2FyZC5UaWxlEiEKB2VuZW1pZXMYBCADKAsy",
-            "EC5jaGFyYWN0ZXIuRW5lbXkSIgoHcGxheWVycxgFIAMoCzIRLmNoYXJhY3Rl",
-            "ci5QbGF5ZXISJAoHcG9ydGFscxgGIAMoCzITLmNoYXJhY3Rlci5Qb3NpdGlv",
-            "bhIQCghib2FyZF9pZBgHIAEoCSKQAQoEVGlsZRInCgl0aWxlX3R5cGUYASAB",
+            "cm90byJnCgVCb2FyZBIMCgRyb3dzGAEgASgFEg8KB2NvbHVtbnMYAiABKAUS",
+            "GQoEZ3JpZBgDIAMoCzILLmJvYXJkLlRpbGUSJAoHcG9ydGFscxgEIAMoCzIT",
+            "LmNoYXJhY3Rlci5Qb3NpdGlvbiKHAQoEVGlsZRInCgl0aWxlX3R5cGUYASAB",
             "KA4yFC5ib2FyZC5UaWxlLlRpbGVUeXBlEhkKBWl0ZW1zGAIgAygLMgouaXRl",
-            "bS5JdGVtIkQKCFRpbGVUeXBlEggKBFZPSUQQABIJCgVCTEFOSxABEg4KCklN",
-            "UEFTU0lCTEUQAhIHCgNJTk4QAxIKCgZQT1JUQUwQBEI8ChxtZWNoLm1hbmlh",
-            "LmVuZ2luZS5nYW1lLmJvYXJkQgtCb2FyZFByb3Rvc6oCDk1NMjYuSU8uTW9k",
-            "ZWxzYgZwcm90bzM="));
+            "bS5JdGVtIjsKCFRpbGVUeXBlEggKBFZPSUQQABIJCgVCTEFOSxABEg4KCklN",
+            "UEFTU0lCTEUQAhIKCgZQT1JUQUwQA0I8ChxtZWNoLm1hbmlhLmVuZ2luZS5n",
+            "YW1lLmJvYXJkQgtCb2FyZFByb3Rvc6oCDk1NMjYuSU8uTW9kZWxzYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::MM26.IO.Models.ItemReflection.Descriptor, global::MM26.IO.Models.CharacterReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Board), global::MM26.IO.Models.Board.Parser, new[]{ "Rows", "Columns", "Grid", "Enemies", "Players", "Portals", "BoardId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Board), global::MM26.IO.Models.Board.Parser, new[]{ "Rows", "Columns", "Grid", "Portals" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Tile), global::MM26.IO.Models.Tile.Parser, new[]{ "TileType", "Items" }, null, new[]{ typeof(global::MM26.IO.Models.Tile.Types.TileType) }, null, null)
           }));
     }
@@ -74,10 +72,7 @@ namespace MM26.IO.Models {
       rows_ = other.rows_;
       columns_ = other.columns_;
       grid_ = other.grid_.Clone();
-      enemies_ = other.enemies_.Clone();
-      players_ = other.players_.Clone();
       portals_ = other.portals_.Clone();
-      boardId_ = other.boardId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -114,52 +109,21 @@ namespace MM26.IO.Models {
         = pb::FieldCodec.ForMessage(26, global::MM26.IO.Models.Tile.Parser);
     private readonly pbc::RepeatedField<global::MM26.IO.Models.Tile> grid_ = new pbc::RepeatedField<global::MM26.IO.Models.Tile>();
     /// <summary>
-    /// Protos only have 1D lists
+    /// Protos only have 1D lists (row-major)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::MM26.IO.Models.Tile> Grid {
       get { return grid_; }
     }
 
-    /// <summary>Field number for the "enemies" field.</summary>
-    public const int EnemiesFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::MM26.IO.Models.Enemy> _repeated_enemies_codec
-        = pb::FieldCodec.ForMessage(34, global::MM26.IO.Models.Enemy.Parser);
-    private readonly pbc::RepeatedField<global::MM26.IO.Models.Enemy> enemies_ = new pbc::RepeatedField<global::MM26.IO.Models.Enemy>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::MM26.IO.Models.Enemy> Enemies {
-      get { return enemies_; }
-    }
-
-    /// <summary>Field number for the "players" field.</summary>
-    public const int PlayersFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::MM26.IO.Models.Player> _repeated_players_codec
-        = pb::FieldCodec.ForMessage(42, global::MM26.IO.Models.Player.Parser);
-    private readonly pbc::RepeatedField<global::MM26.IO.Models.Player> players_ = new pbc::RepeatedField<global::MM26.IO.Models.Player>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::MM26.IO.Models.Player> Players {
-      get { return players_; }
-    }
-
     /// <summary>Field number for the "portals" field.</summary>
-    public const int PortalsFieldNumber = 6;
+    public const int PortalsFieldNumber = 4;
     private static readonly pb::FieldCodec<global::MM26.IO.Models.Position> _repeated_portals_codec
-        = pb::FieldCodec.ForMessage(50, global::MM26.IO.Models.Position.Parser);
+        = pb::FieldCodec.ForMessage(34, global::MM26.IO.Models.Position.Parser);
     private readonly pbc::RepeatedField<global::MM26.IO.Models.Position> portals_ = new pbc::RepeatedField<global::MM26.IO.Models.Position>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::MM26.IO.Models.Position> Portals {
       get { return portals_; }
-    }
-
-    /// <summary>Field number for the "board_id" field.</summary>
-    public const int BoardIdFieldNumber = 7;
-    private string boardId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string BoardId {
-      get { return boardId_; }
-      set {
-        boardId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -178,10 +142,7 @@ namespace MM26.IO.Models {
       if (Rows != other.Rows) return false;
       if (Columns != other.Columns) return false;
       if(!grid_.Equals(other.grid_)) return false;
-      if(!enemies_.Equals(other.enemies_)) return false;
-      if(!players_.Equals(other.players_)) return false;
       if(!portals_.Equals(other.portals_)) return false;
-      if (BoardId != other.BoardId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -191,10 +152,7 @@ namespace MM26.IO.Models {
       if (Rows != 0) hash ^= Rows.GetHashCode();
       if (Columns != 0) hash ^= Columns.GetHashCode();
       hash ^= grid_.GetHashCode();
-      hash ^= enemies_.GetHashCode();
-      hash ^= players_.GetHashCode();
       hash ^= portals_.GetHashCode();
-      if (BoardId.Length != 0) hash ^= BoardId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -217,13 +175,7 @@ namespace MM26.IO.Models {
         output.WriteInt32(Columns);
       }
       grid_.WriteTo(output, _repeated_grid_codec);
-      enemies_.WriteTo(output, _repeated_enemies_codec);
-      players_.WriteTo(output, _repeated_players_codec);
       portals_.WriteTo(output, _repeated_portals_codec);
-      if (BoardId.Length != 0) {
-        output.WriteRawTag(58);
-        output.WriteString(BoardId);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -239,12 +191,7 @@ namespace MM26.IO.Models {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Columns);
       }
       size += grid_.CalculateSize(_repeated_grid_codec);
-      size += enemies_.CalculateSize(_repeated_enemies_codec);
-      size += players_.CalculateSize(_repeated_players_codec);
       size += portals_.CalculateSize(_repeated_portals_codec);
-      if (BoardId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(BoardId);
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -263,12 +210,7 @@ namespace MM26.IO.Models {
         Columns = other.Columns;
       }
       grid_.Add(other.grid_);
-      enemies_.Add(other.enemies_);
-      players_.Add(other.players_);
       portals_.Add(other.portals_);
-      if (other.BoardId.Length != 0) {
-        BoardId = other.BoardId;
-      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -293,19 +235,7 @@ namespace MM26.IO.Models {
             break;
           }
           case 34: {
-            enemies_.AddEntriesFrom(input, _repeated_enemies_codec);
-            break;
-          }
-          case 42: {
-            players_.AddEntriesFrom(input, _repeated_players_codec);
-            break;
-          }
-          case 50: {
             portals_.AddEntriesFrom(input, _repeated_portals_codec);
-            break;
-          }
-          case 58: {
-            BoardId = input.ReadString();
             break;
           }
         }
@@ -469,8 +399,7 @@ namespace MM26.IO.Models {
         [pbr::OriginalName("VOID")] Void = 0,
         [pbr::OriginalName("BLANK")] Blank = 1,
         [pbr::OriginalName("IMPASSIBLE")] Impassible = 2,
-        [pbr::OriginalName("INN")] Inn = 3,
-        [pbr::OriginalName("PORTAL")] Portal = 4,
+        [pbr::OriginalName("PORTAL")] Portal = 3,
       }
 
     }
