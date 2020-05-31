@@ -1,91 +1,51 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net;
-using System.Reflection;
-using System.Linq;
+﻿using System.Net;
+using System.Threading.Tasks;
 using UnityEngine;
-using UnityEditor;
 
-public class TestServer : EditorWindow
+/// <summary>
+/// Test server
+/// </summary>
+public class TestServer
 {
-    [MenuItem("Window/Test Server")]
-    public static void OpenTestServer()
-    {
-        TestServer server = GetWindow<TestServer>("Test Server");
+    private HttpListener _listener = null;
 
-        server.GenerateScenarios();
+    /// <summary>
+    /// Construct a test server instance
+    /// </summary>
+    public TestServer()
+    {
     }
 
-    enum State
+    /// <summary>
+    /// Start the server on a port
+    /// </summary>
+    /// <param name="port"></param>
+    public void Start(int port)
     {
-        Idle,
-        Running,
-    }
+        _listener = new HttpListener();
+        _listener.Prefixes.Add($"http://localhost:{port}/");
+        _listener.Start();
 
-    private State _state = State.Idle;
-
-    private Dictionary<string, Type> _scenarios;
-    private string[] _scenarioNames;
-
-    private void OnGUI()
-    {
-        switch (_state)
+        _listener.GetContextAsync().ContinueWith(task =>
         {
-            case State.Idle:
-                EditorGUILayout.LabelField("Status", "Idle");
+            HttpListenerContext context = task.Result;
 
-                EditorGUILayout.Popup("Scenario", 0, _scenarioNames);
-
-                if (GUILayout.Button("Start Server"))
-                {
-                    _state = this.StartServer();
-                }
-
-                break;
-            case State.Running:
-                EditorGUILayout.LabelField("Status", "Running");
-
-                if (GUILayout.Button("Shutdown Server"))
-                {
-                    _state = this.ShutdownServer();
-                }
-                break;
-        }
-
-        if (GUILayout.Button("Re-scan Codebase for Scenarios"))
-        {
-            this.GenerateScenarios();
-        }
-    }
-
-    private void GenerateScenarios()
-    {
-        _scenarios = new Dictionary<string, Type>();
-        List<string> scenarioNames = new List<string>();
-
-        Assembly assembly = Assembly.GetCallingAssembly();
-        IEnumerable<Type> scenarioTypes = assembly.GetTypes()
-            .Where((Type type) => { return type.IsSubclassOf(typeof(TestScenario)); });
-
-        foreach (Type type in scenarioTypes)
-        {
-            foreach (TestScenarioAttribute attribute in type.GetCustomAttributes<TestScenarioAttribute>())
+            if (context.Request.IsWebSocketRequest)
             {
-                _scenarios[attribute.Name] = type;
-                scenarioNames.Add(attribute.Name);
+                Debug.Log("Is web socket");
             }
-        }
-
-        _scenarioNames = scenarioNames.ToArray();
+            else
+            {
+                Debug.LogError("Request is not websocket");
+            }
+        });
     }
 
-    private State StartServer()
+    /// <summary>
+    /// Stop the server
+    /// </summary>
+    public void Stop()
     {
-        return State.Running;
-    }
-
-    private State ShutdownServer()
-    {
-        return State.Idle;
+        _listener.Stop();
     }
 }

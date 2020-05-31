@@ -8,6 +8,14 @@ public class TestScenarioAttribute : Attribute
     public string Name { get; set; }
 }
 
-public class TestScenario
+/// <summary>
+/// A test scenario
+/// </summary>
+public abstract class TestScenario
 {
+    /// <summary>
+    /// Invoked when the scenario is started
+    /// </summary>
+    /// <param name="server"></param>
+    public abstract void Start(TestServer server); 
 }
