@@ -1,13 +1,27 @@
-﻿using System.Net;
-using System.Threading.Tasks;
-using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
 
 /// <summary>
 /// Test server
 /// </summary>
 public class TestServer
 {
-    private HttpListener _listener = null;
+    [Serializable]
+    private struct Change
+    {
+        public float delay;
+        public byte[] data;
+    }
+
+    [Serializable]
+    private struct Configuration
+    {
+        public byte[] state;
+        public Change[] changes;
+    }
+
+    public byte[] State { get; set; }
+    private List<Change> _changes = new List<Change>();
 
     /// <summary>
     /// Construct a test server instance
@@ -17,35 +31,29 @@ public class TestServer
     }
 
     /// <summary>
-    /// Start the server on a port
+    /// Send the configuration to the server
     /// </summary>
     /// <param name="port"></param>
-    public void Start(int port)
+    public void SendConfiguration(int port)
     {
-        _listener = new HttpListener();
-        _listener.Prefixes.Add($"http://localhost:{port}/");
-        _listener.Start();
-
-        _listener.GetContextAsync().ContinueWith(task =>
+        var configuration = new Configuration()
         {
-            HttpListenerContext context = task.Result;
+            state = this.State,
+            changes = new Change[]
+            {
+                new Change()
+                {
+                    data = new byte[]{ 17 }
+                }
 
-            if (context.Request.IsWebSocketRequest)
-            {
-                Debug.Log("Is web socket");
             }
-            else
-            {
-                Debug.LogError("Request is not websocket");
-            }
-        });
+        };
+
+        Http.Post($"http://localhost:{port}/configure/", configuration);
     }
 
-    /// <summary>
-    /// Stop the server
-    /// </summary>
-    public void Stop()
+    public void AddChange(byte[] data, float delay = 0.0f)
     {
-        _listener.Stop();
+        _changes.Add(new Change() { data = data, delay = delay });
     }
 }

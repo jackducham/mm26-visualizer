@@ -170,7 +170,7 @@ MonoBehaviour:
     StateHttp: 
     ChangeHttp: 
   _debugEndpoints:
-    ChangeSocket: 
+    ChangeSocket: ws://localhost:3000/visualizer
     StateHttp: 
     ChangeHttp: 
 --- !u!1 &2100838743

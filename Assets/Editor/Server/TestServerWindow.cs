@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Reflection;
 using System.Linq;
 using UnityEngine;
@@ -19,15 +20,6 @@ public class TestServerWindow : EditorWindow
     }
 
     /// <summary>
-    /// If scenario is running or not
-    /// </summary>
-    enum State
-    {
-        Idle,
-        Running,
-    }
-
-    /// <summary>
     /// The server instance
     /// </summary>
     private static TestServer _server = null;
@@ -38,14 +30,9 @@ public class TestServerWindow : EditorWindow
     private static TestScenario _scenario = null;
 
     /// <summary>
-    /// Current state
-    /// </summary>
-    private static State _state = State.Idle;
-
-    /// <summary>
     /// Port on which the scenario is running, (at localhost)
     /// </summary>
-    private static string _port = "3000";
+    private static string _port = "5000";
 
     /// <summary>
     /// String to Type mapping of all possible scenarios
@@ -69,28 +56,19 @@ public class TestServerWindow : EditorWindow
 
     private void OnGUI()
     {
-        switch (_state)
+        if (_scenarios == null || _scenarioNames == null)
         {
-            case State.Idle:
-                EditorGUILayout.LabelField("Status", "Idle");
+            this.FindScenarios();
+        }
 
-                _selectedScenario = EditorGUILayout.Popup("Scenario", _selectedScenario, _scenarioNames);
-                _port = EditorGUILayout.TextField("Port", _port);
+        EditorGUILayout.LabelField("Status", "Idle");
 
-                if (GUILayout.Button("Start Server"))
-                {
-                    _state = this.StartServer(_scenarioNames[_selectedScenario]);
-                }
+        _selectedScenario = EditorGUILayout.Popup("Scenario", _selectedScenario, _scenarioNames);
+        _port = EditorGUILayout.TextField("Port", _port);
 
-                break;
-            case State.Running:
-                EditorGUILayout.LabelField("Status", "Running");
-
-                if (GUILayout.Button("Shutdown Server"))
-                {
-                    _state = this.ShutdownServer();
-                }
-                break;
+        if (GUILayout.Button("Start Scenario"))
+        {
+            this.StartServer(_scenarioNames[_selectedScenario]);
         }
 
         if (GUILayout.Button("Re-scan Codebase for Scenarios"))
@@ -131,32 +109,19 @@ public class TestServerWindow : EditorWindow
     /// if succeeds, return <c>State.Running</c>, otherwise, returns
     /// <c>State.Idle</c>
     /// </returns>
-    private State StartServer(string scenarioName)
+    private void StartServer(string scenarioName)
     {
         try
         {
             _server = new TestServer();
-            _server.Start(Convert.ToInt32(_port));
-
             _scenario = (TestScenario)Activator.CreateInstance(_scenarios[scenarioName]);
+
             _scenario.Start(_server);
+            _server.SendConfiguration(Convert.ToInt32(_port));
         }
         catch (Exception e)
         {
             Debug.LogError(e);
-            return State.Idle;
         }
-
-        return State.Running;
-    }
-
-    /// <summary>
-    /// Shut down the server
-    /// </summary>
-    /// <returns></returns>
-    private State ShutdownServer()
-    {
-        _server.Stop();
-        return State.Idle;
     }
 }
