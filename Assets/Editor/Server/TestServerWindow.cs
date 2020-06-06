@@ -66,7 +66,7 @@ public class TestServerWindow : EditorWindow
         _selectedScenario = EditorGUILayout.Popup("Scenario", _selectedScenario, _scenarioNames);
         _port = EditorGUILayout.TextField("Port", _port);
 
-        if (GUILayout.Button("Start Scenario"))
+        if (GUILayout.Button("Send Configuration"))
         {
             this.StartServer(_scenarioNames[_selectedScenario]);
         }
