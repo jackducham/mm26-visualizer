@@ -54,7 +54,7 @@ namespace MM26.IO
                             return;
                         }
 
-                        onConnection();
+                        //onConnection();
                         await this.OnConnect();
                     });
 

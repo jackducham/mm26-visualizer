@@ -46,7 +46,14 @@ namespace MM26.IO
 
         public WebDataProvider()
         {
+#if !UNITY_WEBGL
             SynchronizationContext = SynchronizationContext.Current;
+
+            if (this.SynchronizationContext == null)
+            {
+                throw new Exception("Unable to obtain SynchronizationContext.Current");
+            }
+#endif
         }
 
         /// <summary>
@@ -92,38 +99,40 @@ namespace MM26.IO
         /// </summary>
         /// <param name="change">the change id</param>
         /// <param name="callback">fired when the change is available</param>
-        public override void GetChange(long change, Action<GameChange> callback)
-        {
-            this.Run(() =>
-            {
-                UnityWebRequest request = UnityWebRequest.Post(
-                    this.Endpoints.ChangeHttp,
-                    this.Endpoints.ChangeHttp);
+        //public override void GetChange(long change, Action<GameChange> callback)
+        //{
+        //    if (this.Changes.ContainsKey(change))
+        //    {
+        //        callback(this.Changes[change]);
+        //        return;
+        //    }
 
-                UnityWebRequestAsyncOperation sendRequestOperation = request.SendWebRequest();
+        //    UnityWebRequest request = UnityWebRequest.Post(
+        //            this.Endpoints.ChangeHttp,
+        //            this.Endpoints.ChangeHttp);
 
-                sendRequestOperation.completed += (AsyncOperation operation) =>
-                {
-                    if (request.isDone)
-                    {
-                        DownloadHandler handler = request.downloadHandler;
+        //    UnityWebRequestAsyncOperation sendRequestOperation = request.SendWebRequest();
 
-                        if (handler.data != null)
-                        {
-                            GameChange newChange = this.ChangeParser.ParseFrom(handler.data);
+        //    sendRequestOperation.completed += (AsyncOperation operation) =>
+        //    {
+        //        if (request.isDone)
+        //        {
+        //            DownloadHandler handler = request.downloadHandler;
 
-                            this.RunOnMainThread(() =>
-                            {
-                                callback(newChange);
-                            });
-                        }
+        //            if (handler.data != null)
+        //            {
+        //                GameChange newChange = this.ChangeParser.ParseFrom(handler.data);
 
-                        request.Dispose();
-                    }
-                };
-            });
+        //                this.RunOnMainThread(() =>
+        //                {
+        //                    callback(newChange);
+        //                });
+        //            }
 
-        }
+        //            request.Dispose();
+        //        }
+        //    };
+        //}
 
         /// <summary>
         /// Run an action on main thread when in WebGL, and in a

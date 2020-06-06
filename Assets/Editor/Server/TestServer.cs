@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Google.Protobuf;
 
 /// <summary>
 /// Test server
@@ -20,7 +21,7 @@ public class TestServer
         public Change[] changes;
     }
 
-    public byte[] State { get; set; }
+    private byte[] _state = null;
     private List<Change> _changes = new List<Change>();
 
     /// <summary>
@@ -38,22 +39,24 @@ public class TestServer
     {
         var configuration = new Configuration()
         {
-            state = this.State,
-            changes = new Change[]
-            {
-                new Change()
-                {
-                    data = new byte[]{ 17 }
-                }
-
-            }
+            state = _state,
+            changes = _changes.ToArray()
         };
 
         Http.Post($"http://localhost:{port}/configure/", configuration);
     }
 
-    public void AddChange(byte[] data, float delay = 0.0f)
+    public void Add<T>(T change, float delay = 0.0f) where T: IMessage<T>
     {
-        _changes.Add(new Change() { data = data, delay = delay });
+        _changes.Add(new Change()
+        {
+            data = change.ToByteArray(),
+            delay = delay
+        });
+    }
+
+    public void SetState<T>(T state) where T: IMessage<T>
+    {
+        _state = state.ToByteArray();
     }
 }

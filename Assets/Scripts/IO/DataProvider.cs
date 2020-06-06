@@ -20,13 +20,13 @@ namespace MM26.IO
         /// A record of all the changes up to this point
         /// </summary>
         /// <returns>A reference to the changes</returns>
-        protected Dictionary<long, GameChange> Changes { get; set; } = new Dictionary<long, GameChange>();
+        public Dictionary<long, GameChange> Changes { get; private set; } = new Dictionary<long, GameChange>();
 
         /// <summary>
         /// A record of all the states up to this point
         /// </summary>
         /// <returns>A reference to the states</returns>
-        protected Dictionary<long, GameState> States { get; set; } = new Dictionary<long, GameState>();
+        public Dictionary<long, GameState> States { get; private set; } = new Dictionary<long, GameState>();
 
         /// <summary>
         /// Parser for changes

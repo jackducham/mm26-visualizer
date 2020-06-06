@@ -11,7 +11,7 @@ namespace MM26.IO
         /// <summary>
         /// Listener for websocket
         /// </summary>
-        WebSocketListener _changeListener;
+        private WebSocketListener _changeListener;
 
         /// <summary>
         /// Create an empty instance of the stand alone web data provider
@@ -19,13 +19,17 @@ namespace MM26.IO
         internal StandAloneWebDataProvider() : base()
         {
             _changeListener = new WebSocketListener();
-            _changeListener.NewMessage += (sender, bytes) =>
+            _changeListener.NewMessage += this.OnNewMessage;
+        }
+
+        private void OnNewMessage(object sender, byte[] bytes)
+        {
+            // Since WebSocketListener.NewMessage may run another thread,
+            // we need to make sure that this is run on the main thread
+            this.RunOnMainThread(() =>
             {
-                this.RunOnMainThread(() =>
-                {
-                    this.ProcessBytes(bytes);
-                });
-            };
+                this.ProcessBytes(bytes);
+            });
         }
 
         public override void Dispose()

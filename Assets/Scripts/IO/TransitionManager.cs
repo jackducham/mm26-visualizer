@@ -67,20 +67,20 @@ namespace MM26.IO
             _dataProvider.Dispose();
         }
 
-        void OnConnection()
+        private void OnConnection()
         {
-            // Debug.Log("On connection");
+            Debug.Log("On Connection");
         }
 
-        void OnFailure()
+        private void OnFailure()
         {
-            // Debug.LogError("Websocket connection failed");
+            Debug.LogError("Websocket connection failed");
         }
 
-        void OnNewChange(object sender, GameChange change)
+        private void OnNewChange(object sender, GameChange change)
         {
-            IWebDataProvider webDataProvider = sender as IWebDataProvider;
-            // do something with webDataProvider
+            Debug.LogFormat("On Change = {0}", change.ChangeId);
+            Debug.LogFormat("sender = {0}", sender, sender.GetType().Name);
         }
     }
 }

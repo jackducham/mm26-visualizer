@@ -1,10 +1,22 @@
-﻿[TestScenario(Name = "Test Server")]
+﻿using MM26.IO.Models;
+
+[TestScenario(Name = "Test Server")]
 public class TestServerScenario : TestScenario
 {
     public override void Start(TestServer server)
     {
-        server.State = new byte[] { 17 };
-        server.AddChange(new byte[] { 177 }, 0.1f);
-        server.AddChange(new byte[] { 178 }, 1.0f);
+        var state = new GameState()
+        {
+            StateId = 0
+        };
+
+        server.SetState(state);
+
+        var change = new GameChange()
+        {
+            ChangeId = 0
+        };
+
+        server.Add(change);
     }
 }
