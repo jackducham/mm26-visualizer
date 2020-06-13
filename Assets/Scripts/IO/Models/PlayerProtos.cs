@@ -50,7 +50,11 @@ namespace MM26.IO.Models {
   /// <summary>
   /// Proto sent from player to engine
   /// </summary>
-  public sealed partial class PlayerDecision : pb::IMessage<PlayerDecision> {
+  public sealed partial class PlayerDecision : pb::IMessage<PlayerDecision>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<PlayerDecision> _parser = new pb::MessageParser<PlayerDecision>(() => new PlayerDecision());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -220,6 +224,9 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -243,7 +250,37 @@ namespace MM26.IO.Models {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            DecisionType = (global::MM26.IO.Models.PlayerDecision.Types.DecisionType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (targetPosition_ == null) {
+              TargetPosition = new global::MM26.IO.Models.Position();
+            }
+            input.ReadMessage(TargetPosition);
+            break;
+          }
+          case 24: {
+            Index = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the PlayerDecision message type.</summary>
@@ -267,7 +304,11 @@ namespace MM26.IO.Models {
   /// <summary>
   /// Proto sent from engine to player
   /// </summary>
-  public sealed partial class PlayerTurn : pb::IMessage<PlayerTurn> {
+  public sealed partial class PlayerTurn : pb::IMessage<PlayerTurn>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<PlayerTurn> _parser = new pb::MessageParser<PlayerTurn>(() => new PlayerTurn());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -462,6 +503,9 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -485,7 +529,37 @@ namespace MM26.IO.Models {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (gameState_ == null) {
+              GameState = new global::MM26.IO.Models.GameState();
+            }
+            input.ReadMessage(GameState);
+            break;
+          }
+          case 18: {
+            Test1 = input.ReadString();
+            break;
+          }
+          case 24: {
+            Test2 = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

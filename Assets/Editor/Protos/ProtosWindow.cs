@@ -19,7 +19,7 @@ public class ProtosWindow : EditorWindow
     private void OnGUI()
     {
         EditorGUILayout.LabelField("Protos Folder", _protosFolder);
-        _protocPath = EditorGUILayout.TextField("\"protoc\" Path", "protoc");
+        _protocPath = EditorGUILayout.TextField("\"protoc\" Path", _protocPath);
 
         if (GUILayout.Button("Select Protos Folder"))
         {

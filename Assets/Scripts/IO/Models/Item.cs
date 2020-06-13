@@ -75,7 +75,11 @@ namespace MM26.IO.Models {
 
   }
   #region Messages
-  public sealed partial class Item : pb::IMessage<Item> {
+  public sealed partial class Item : pb::IMessage<Item>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Item> _parser = new pb::MessageParser<Item>(() => new Item());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -393,6 +397,9 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -457,11 +464,86 @@ namespace MM26.IO.Models {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            MaxStack = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            if (stats_ == null) {
+              Stats = new global::MM26.IO.Models.StatusModifier();
+            }
+            input.ReadMessage(Stats);
+            break;
+          }
+          case 26: {
+            global::MM26.IO.Models.Clothes subBuilder = new global::MM26.IO.Models.Clothes();
+            if (itemCase_ == ItemOneofCase.Clothes) {
+              subBuilder.MergeFrom(Clothes);
+            }
+            input.ReadMessage(subBuilder);
+            Clothes = subBuilder;
+            break;
+          }
+          case 34: {
+            global::MM26.IO.Models.Hat subBuilder = new global::MM26.IO.Models.Hat();
+            if (itemCase_ == ItemOneofCase.Hat) {
+              subBuilder.MergeFrom(Hat);
+            }
+            input.ReadMessage(subBuilder);
+            Hat = subBuilder;
+            break;
+          }
+          case 42: {
+            global::MM26.IO.Models.Shoes subBuilder = new global::MM26.IO.Models.Shoes();
+            if (itemCase_ == ItemOneofCase.Shoes) {
+              subBuilder.MergeFrom(Shoes);
+            }
+            input.ReadMessage(subBuilder);
+            Shoes = subBuilder;
+            break;
+          }
+          case 50: {
+            global::MM26.IO.Models.Weapon subBuilder = new global::MM26.IO.Models.Weapon();
+            if (itemCase_ == ItemOneofCase.Weapon) {
+              subBuilder.MergeFrom(Weapon);
+            }
+            input.ReadMessage(subBuilder);
+            Weapon = subBuilder;
+            break;
+          }
+          case 58: {
+            global::MM26.IO.Models.Consumable subBuilder = new global::MM26.IO.Models.Consumable();
+            if (itemCase_ == ItemOneofCase.Consumable) {
+              subBuilder.MergeFrom(Consumable);
+            }
+            input.ReadMessage(subBuilder);
+            Consumable = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class Clothes : pb::IMessage<Clothes> {
+  public sealed partial class Clothes : pb::IMessage<Clothes>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Clothes> _parser = new pb::MessageParser<Clothes>(() => new Clothes());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -577,6 +659,9 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -592,11 +677,37 @@ namespace MM26.IO.Models {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (stats_ == null) {
+              Stats = new global::MM26.IO.Models.StatusModifier();
+            }
+            input.ReadMessage(Stats);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class Hat : pb::IMessage<Hat> {
+  public sealed partial class Hat : pb::IMessage<Hat>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Hat> _parser = new pb::MessageParser<Hat>(() => new Hat());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -736,6 +847,9 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -755,7 +869,33 @@ namespace MM26.IO.Models {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (stats_ == null) {
+              Stats = new global::MM26.IO.Models.StatusModifier();
+            }
+            input.ReadMessage(Stats);
+            break;
+          }
+          case 16: {
+            HatEffect = (global::MM26.IO.Models.Hat.Types.HatEffect) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Hat message type.</summary>
@@ -773,7 +913,11 @@ namespace MM26.IO.Models {
 
   }
 
-  public sealed partial class Shoes : pb::IMessage<Shoes> {
+  public sealed partial class Shoes : pb::IMessage<Shoes>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Shoes> _parser = new pb::MessageParser<Shoes>(() => new Shoes());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -889,6 +1033,9 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -904,11 +1051,37 @@ namespace MM26.IO.Models {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (stats_ == null) {
+              Stats = new global::MM26.IO.Models.StatusModifier();
+            }
+            input.ReadMessage(Stats);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class Weapon : pb::IMessage<Weapon> {
+  public sealed partial class Weapon : pb::IMessage<Weapon>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Weapon> _parser = new pb::MessageParser<Weapon>(() => new Weapon());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1147,6 +1320,9 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1185,11 +1361,60 @@ namespace MM26.IO.Models {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (stats_ == null) {
+              Stats = new global::MM26.IO.Models.StatusModifier();
+            }
+            input.ReadMessage(Stats);
+            break;
+          }
+          case 16: {
+            Range = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            SplashRadius = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            MagicDamage = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            PhysicalDamage = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            if (onHitEffect_ == null) {
+              OnHitEffect = new global::MM26.IO.Models.TempStatusModifier();
+            }
+            input.ReadMessage(OnHitEffect);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class Consumable : pb::IMessage<Consumable> {
+  public sealed partial class Consumable : pb::IMessage<Consumable>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Consumable> _parser = new pb::MessageParser<Consumable>(() => new Consumable());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1329,6 +1554,9 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1348,11 +1576,41 @@ namespace MM26.IO.Models {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (effect_ == null) {
+              Effect = new global::MM26.IO.Models.TempStatusModifier();
+            }
+            input.ReadMessage(Effect);
+            break;
+          }
+          case 16: {
+            Stacks = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class StatusModifier : pb::IMessage<StatusModifier> {
+  public sealed partial class StatusModifier : pb::IMessage<StatusModifier>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<StatusModifier> _parser = new pb::MessageParser<StatusModifier>(() => new StatusModifier());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1801,6 +2059,9 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1869,11 +2130,90 @@ namespace MM26.IO.Models {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            FlatSpeedChange = input.ReadInt32();
+            break;
+          }
+          case 21: {
+            PercentSpeedChange = input.ReadFloat();
+            break;
+          }
+          case 24: {
+            FlatHealthChange = input.ReadInt32();
+            break;
+          }
+          case 37: {
+            PercentHealthChange = input.ReadFloat();
+            break;
+          }
+          case 40: {
+            FlatExperienceChange = input.ReadInt32();
+            break;
+          }
+          case 53: {
+            PercentExperienceChange = input.ReadFloat();
+            break;
+          }
+          case 56: {
+            FlatMagicDamageChange = input.ReadInt32();
+            break;
+          }
+          case 69: {
+            PercentMagicDamageChange = input.ReadFloat();
+            break;
+          }
+          case 72: {
+            FlatPhysicalDamageChange = input.ReadInt32();
+            break;
+          }
+          case 85: {
+            PercentPhysicalDamageChange = input.ReadFloat();
+            break;
+          }
+          case 88: {
+            FlatMagicDefenseChange = input.ReadInt32();
+            break;
+          }
+          case 101: {
+            PercentMagicDefenseChange = input.ReadFloat();
+            break;
+          }
+          case 104: {
+            FlatPhysicalDefenseChange = input.ReadInt32();
+            break;
+          }
+          case 117: {
+            PercentPhysicalDefenseChange = input.ReadFloat();
+            break;
+          }
+          case 120: {
+            FlatRegenPerTurn = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class TempStatusModifier : pb::IMessage<TempStatusModifier> {
+  public sealed partial class TempStatusModifier : pb::IMessage<TempStatusModifier>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TempStatusModifier> _parser = new pb::MessageParser<TempStatusModifier>(() => new TempStatusModifier());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2085,6 +2425,9 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -2116,7 +2459,45 @@ namespace MM26.IO.Models {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (stats_ == null) {
+              Stats = new global::MM26.IO.Models.StatusModifier();
+            }
+            input.ReadMessage(Stats);
+            break;
+          }
+          case 16: {
+            FlatMagicalDamagePerTurn = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            FlatPhysicalDamagePerTurn = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            FlatRegenPerTurn = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            Duration = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
