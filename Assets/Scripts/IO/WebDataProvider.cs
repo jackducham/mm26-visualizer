@@ -13,7 +13,7 @@ namespace MM26.IO
     /// <summary>
     /// Base class of all web-based data providers
     /// </summary>
-    internal class WebDataProvider : DataProvider, IWebDataProvider
+    internal class WebDataProvider : LegacyDataProvider, IWebDataProvider
     {
         /// <summary>
         /// Endpoints used by the data provider

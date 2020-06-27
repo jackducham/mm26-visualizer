@@ -232,9 +232,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d963d50d14846b6a145b2bf154ea38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneLifeCycleService: {fileID: 11400000, guid: e5a30a7b0ac1e4833a29854a0f787d12,
-    type: 2}
-  _dataService: {fileID: 11400000, guid: 10eb0f1c65a9f486fb08761d63b81067, type: 2}
+  _sceneLifeCycle: {fileID: 0}
+  _data: {fileID: 0}
 --- !u!4 &1756003119
 Transform:
   m_ObjectHideFlags: 0
@@ -292,9 +291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b417a0e3a21b34e5688cd797a49c329b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneLifeCycleService: {fileID: 11400000, guid: e5a30a7b0ac1e4833a29854a0f787d12,
-    type: 2}
-  _dataService: {fileID: 11400000, guid: 10eb0f1c65a9f486fb08761d63b81067, type: 2}
+  _sceneLifeCycle: {fileID: 0}
+  _data: {fileID: 0}
 --- !u!1 &1958935462
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,8 +322,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349a6d2ed19bc47a18100b1d102d53b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneLifeCycleService: {fileID: 11400000, guid: e5a30a7b0ac1e4833a29854a0f787d12,
-    type: 2}
+  _createMap: 1
+  _createTokens: 1
+  _sceneLifeCycle: {fileID: 11400000, guid: e5a30a7b0ac1e4833a29854a0f787d12, type: 2}
+  _data: {fileID: 11400000, guid: 10eb0f1c65a9f486fb08761d63b81067, type: 2}
+  _dataProvider: {fileID: 11400000, guid: 745c654c2381940cfa52e27f2453693a, type: 2}
 --- !u!4 &1958935464
 Transform:
   m_ObjectHideFlags: 0

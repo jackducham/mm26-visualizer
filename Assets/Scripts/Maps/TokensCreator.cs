@@ -6,24 +6,24 @@ namespace MM26.Map
     {
         [Header("Services")]
         [SerializeField]
-        SceneLifeCycleService _sceneLifeCycleService = null;
+        SceneLifeCycle _sceneLifeCycle = null;
 
         [SerializeField]
-        DataService _dataService = null;
+        Data _data = null;
 
         private void OnEnable()
         {
-            _sceneLifeCycleService.CreateTokens.AddListener(this.OnCreateTokens);
+            _sceneLifeCycle.CreateTokens.AddListener(this.OnCreateTokens);
         }
 
         private void OnDisable()
         {
-            _sceneLifeCycleService.CreateTokens.RemoveListener(this.OnCreateTokens);
+            _sceneLifeCycle.CreateTokens.RemoveListener(this.OnCreateTokens);
         }
 
         private void OnCreateTokens()
         {
-
+            _sceneLifeCycle.FinishCreatingTokens();
         }
     }
 }

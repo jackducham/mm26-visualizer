@@ -3,10 +3,10 @@
 namespace MM26
 {
     [CreateAssetMenu(menuName = "Services/Reset", fileName = "Reset")]
-    public class ResetService : StatefulService
+    public class Resets : Resettable
     {
         [SerializeField]
-        StatefulService[] _resets = null;
+        Resettable[] _resets = null;
 
         public override void Reset()
         {

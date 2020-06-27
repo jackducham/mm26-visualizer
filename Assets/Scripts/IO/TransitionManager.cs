@@ -50,14 +50,14 @@ namespace MM26.IO
             switch (_dataSource)
             {
                 case DataSource.Web:
-                    IWebDataProvider dataProvider = DataProvider.CreateWebDataProvider();
+                    IWebDataProvider dataProvider = LegacyDataProvider.CreateWebDataProvider();
                     dataProvider.NewChange += this.OnNewChange;
                     dataProvider.UseEndpoints(this.Endpoints, this.OnConnection, this.OnFailure);
 
                     _dataProvider = dataProvider;
                     break;
                 case DataSource.Local:
-                    _dataProvider = DataProvider.CreateFileSystemDataProvider();
+                    _dataProvider = LegacyDataProvider.CreateFileSystemDataProvider();
                     break;
             }
         }

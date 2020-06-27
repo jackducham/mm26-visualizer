@@ -8,7 +8,7 @@ namespace MM26.IO
     /// <summary>
     /// Base class of all data providers
     /// </summary>
-    internal class DataProvider : IDataProvider
+    internal class LegacyDataProvider : IDataProvider
     {
         /// <summary>
         /// Lastest change number
@@ -74,7 +74,7 @@ namespace MM26.IO
         /// <summary>
         /// Create an empty data provider
         /// </summary>
-        internal DataProvider()
+        internal LegacyDataProvider()
         {
             this.ChangeParser = GameChange.Parser;
             this.StateParser = GameState.Parser;

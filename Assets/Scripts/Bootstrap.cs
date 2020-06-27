@@ -7,34 +7,26 @@ namespace MM26
     {
         [Header("Settings")]
         [SerializeField]
-        private string _map = "pvp";
-
-        [SerializeField]
         private string _mainScene = "Main";
 
-        [Header("Services")]
         [SerializeField]
-        private ResetService _resetService = null;
-
-        [SerializeField]
-        private DataService _dataService = null;
+        private WebsocketDataProvider _websocketDataProvider = null;
 
         private AsyncOperation _loadingOperation = null;
 
         private void Start()
         {
-            _resetService.Reset();
-            _dataService.Connect();
+            _websocketDataProvider.Connect();
         }
 
         private void OnEnable()
         {
-            _dataService.Connected.AddListener(this.OnConnected);
+            _websocketDataProvider.Connected.AddListener(this.OnConnected);
         }
 
         private void OnDisable()
         {
-            _dataService.Connected.RemoveListener(this.OnConnected);
+            _websocketDataProvider.Connected.RemoveListener(this.OnConnected);
         }
 
         private void OnConnected()
