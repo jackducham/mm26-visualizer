@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7480089d8da434a4a8cc8f8f69173691, type: 3}
+  m_Name: SceneLifeCycle
+  m_EditorClassIdentifier: 
+  _state: 0
+  _createMap:
+    m_PersistentCalls:
+      m_Calls: []
+  _createTokens:
+    m_PersistentCalls:
+      m_Calls: []
+  _play:
+    m_PersistentCalls:
+      m_Calls: []
