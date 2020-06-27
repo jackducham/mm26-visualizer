@@ -24,7 +24,7 @@ namespace MM26.IO.Models {
     static CharacterReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg9jaGFyYWN0ZXIucHJvdG8SCWNoYXJhY3RlchoKaXRlbS5wcm90byLYAwoJ",
+            "Cg9jaGFyYWN0ZXIucHJvdG8SCWNoYXJhY3RlchoKaXRlbS5wcm90byKDBAoJ",
             "Q2hhcmFjdGVyEhYKDmN1cnJlbnRfaGVhbHRoGAEgASgFEhcKD2Jhc2VfbWF4",
             "X2hlYWx0aBgCIAEoBRISCgpleHBlcmllbmNlGAMgASgFEg0KBWxldmVsGAQg",
             "ASgFEhIKCmJhc2Vfc3BlZWQYBSABKAUSJQoIcG9zaXRpb24YBiABKAsyEy5j",
@@ -34,20 +34,23 @@ namespace MM26.IO.Models {
             "ZmllchJMChV0YWdnZWRfcGxheWVyc19kYW1hZ2UYCiADKAsyLS5jaGFyYWN0",
             "ZXIuQ2hhcmFjdGVyLlRhZ2dlZFBsYXllcnNEYW1hZ2VFbnRyeRIPCgdpc19k",
             "ZWFkGAsgASgIEhkKEXRpY2tzX3NpbmNlX2RlYXRoGAwgASgFEgwKBG5hbWUY",
-            "DSABKAkaOgoYVGFnZ2VkUGxheWVyc0RhbWFnZUVudHJ5EgsKA2tleRgBIAEo",
-            "CRINCgV2YWx1ZRgCIAEoBToCOAEiTQoHTW9uc3RlchInCgljaGFyYWN0ZXIY",
-            "ASABKAsyFC5jaGFyYWN0ZXIuQ2hhcmFjdGVyEhkKBWRyb3BzGAIgAygLMgou",
-            "aXRlbS5JdGVtIqQBCgZQbGF5ZXISJwoJY2hhcmFjdGVyGAEgASgLMhQuY2hh",
-            "cmFjdGVyLkNoYXJhY3RlchIWCgNoYXQYAiABKAsyCS5pdGVtLkhhdBIeCgdj",
-            "bG90aGVzGAMgASgLMg0uaXRlbS5DbG90aGVzEhoKBXNob2VzGAQgASgLMgsu",
-            "aXRlbS5TaG9lcxIdCglpbnZlbnRvcnkYBSADKAsyCi5pdGVtLkl0ZW0iMgoI",
-            "UG9zaXRpb24SEAoIYm9hcmRfaWQYASABKAkSCQoBeBgCIAEoBRIJCgF5GAMg",
-            "ASgFQkUKIW1lY2gubWFuaWEuZW5naW5lLmdhbWUuY2hhcmFjdGVyc0IPQ2hh",
-            "cmFjdGVyUHJvdG9zqgIOTU0yNi5JTy5Nb2RlbHNiBnByb3RvMw=="));
+            "DSABKAkSEwoLYmFzZV9hdHRhY2sYDiABKAUSFAoMYmFzZV9kZWZlbnNlGA8g",
+            "ASgFGjoKGFRhZ2dlZFBsYXllcnNEYW1hZ2VFbnRyeRILCgNrZXkYASABKAkS",
+            "DQoFdmFsdWUYAiABKAU6AjgBIk0KB01vbnN0ZXISJwoJY2hhcmFjdGVyGAEg",
+            "ASgLMhQuY2hhcmFjdGVyLkNoYXJhY3RlchIZCgVkcm9wcxgCIAMoCzIKLml0",
+            "ZW0uSXRlbSKkAQoGUGxheWVyEicKCWNoYXJhY3RlchgBIAEoCzIULmNoYXJh",
+            "Y3Rlci5DaGFyYWN0ZXISFgoDaGF0GAIgASgLMgkuaXRlbS5IYXQSHgoHY2xv",
+            "dGhlcxgDIAEoCzINLml0ZW0uQ2xvdGhlcxIaCgVzaG9lcxgEIAEoCzILLml0",
+            "ZW0uU2hvZXMSHQoJaW52ZW50b3J5GAUgAygLMgouaXRlbS5JdGVtIjIKCFBv",
+            "c2l0aW9uEhAKCGJvYXJkX2lkGAEgASgJEgkKAXgYAiABKAUSCQoBeRgDIAEo",
+            "BSpbCgxEZWNpc2lvblR5cGUSCAoETk9ORRAAEggKBE1PVkUQARIKCgZBVFRB",
+            "Q0sQAhIKCgZQT1JUQUwQAxIICgREUk9QEAQSCQoFRVFVSVAQBRIKCgZQSUNL",
+            "VVAQBkJFCiFtZWNoLm1hbmlhLmVuZ2luZS5nYW1lLmNoYXJhY3RlcnNCD0No",
+            "YXJhY3RlclByb3Rvc6oCDk1NMjYuSU8uTW9kZWxzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::MM26.IO.Models.ItemReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Character), global::MM26.IO.Models.Character.Parser, new[]{ "CurrentHealth", "BaseMaxHealth", "Experience", "Level", "BaseSpeed", "Position", "SpawnPoint", "Weapon", "ActiveEffects", "TaggedPlayersDamage", "IsDead", "TicksSinceDeath", "Name" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MM26.IO.Models.DecisionType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Character), global::MM26.IO.Models.Character.Parser, new[]{ "CurrentHealth", "BaseMaxHealth", "Experience", "Level", "BaseSpeed", "Position", "SpawnPoint", "Weapon", "ActiveEffects", "TaggedPlayersDamage", "IsDead", "TicksSinceDeath", "Name", "BaseAttack", "BaseDefense" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Monster), global::MM26.IO.Models.Monster.Parser, new[]{ "Character", "Drops" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Player), global::MM26.IO.Models.Player.Parser, new[]{ "Character", "Hat", "Clothes", "Shoes", "Inventory" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Position), global::MM26.IO.Models.Position.Parser, new[]{ "BoardId", "X", "Y" }, null, null, null, null)
@@ -56,6 +59,19 @@ namespace MM26.IO.Models {
     #endregion
 
   }
+  #region Enums
+  public enum DecisionType {
+    [pbr::OriginalName("NONE")] None = 0,
+    [pbr::OriginalName("MOVE")] Move = 1,
+    [pbr::OriginalName("ATTACK")] Attack = 2,
+    [pbr::OriginalName("PORTAL")] Portal = 3,
+    [pbr::OriginalName("DROP")] Drop = 4,
+    [pbr::OriginalName("EQUIP")] Equip = 5,
+    [pbr::OriginalName("PICKUP")] Pickup = 6,
+  }
+
+  #endregion
+
   #region Messages
   public sealed partial class Character : pb::IMessage<Character>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -99,6 +115,8 @@ namespace MM26.IO.Models {
       isDead_ = other.isDead_;
       ticksSinceDeath_ = other.ticksSinceDeath_;
       name_ = other.name_;
+      baseAttack_ = other.baseAttack_;
+      baseDefense_ = other.baseDefense_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -251,6 +269,28 @@ namespace MM26.IO.Models {
       }
     }
 
+    /// <summary>Field number for the "base_attack" field.</summary>
+    public const int BaseAttackFieldNumber = 14;
+    private int baseAttack_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int BaseAttack {
+      get { return baseAttack_; }
+      set {
+        baseAttack_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "base_defense" field.</summary>
+    public const int BaseDefenseFieldNumber = 15;
+    private int baseDefense_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int BaseDefense {
+      get { return baseDefense_; }
+      set {
+        baseDefense_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Character);
@@ -277,6 +317,8 @@ namespace MM26.IO.Models {
       if (IsDead != other.IsDead) return false;
       if (TicksSinceDeath != other.TicksSinceDeath) return false;
       if (Name != other.Name) return false;
+      if (BaseAttack != other.BaseAttack) return false;
+      if (BaseDefense != other.BaseDefense) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -296,6 +338,8 @@ namespace MM26.IO.Models {
       if (IsDead != false) hash ^= IsDead.GetHashCode();
       if (TicksSinceDeath != 0) hash ^= TicksSinceDeath.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (BaseAttack != 0) hash ^= BaseAttack.GetHashCode();
+      if (BaseDefense != 0) hash ^= BaseDefense.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -355,6 +399,14 @@ namespace MM26.IO.Models {
         output.WriteRawTag(106);
         output.WriteString(Name);
       }
+      if (BaseAttack != 0) {
+        output.WriteRawTag(112);
+        output.WriteInt32(BaseAttack);
+      }
+      if (BaseDefense != 0) {
+        output.WriteRawTag(120);
+        output.WriteInt32(BaseDefense);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -397,6 +449,12 @@ namespace MM26.IO.Models {
       }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (BaseAttack != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(BaseAttack);
+      }
+      if (BaseDefense != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(BaseDefense);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -452,6 +510,12 @@ namespace MM26.IO.Models {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.BaseAttack != 0) {
+        BaseAttack = other.BaseAttack;
+      }
+      if (other.BaseDefense != 0) {
+        BaseDefense = other.BaseDefense;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -528,6 +592,14 @@ namespace MM26.IO.Models {
             Name = input.ReadString();
             break;
           }
+          case 112: {
+            BaseAttack = input.ReadInt32();
+            break;
+          }
+          case 120: {
+            BaseDefense = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -601,6 +673,14 @@ namespace MM26.IO.Models {
           }
           case 106: {
             Name = input.ReadString();
+            break;
+          }
+          case 112: {
+            BaseAttack = input.ReadInt32();
+            break;
+          }
+          case 120: {
+            BaseDefense = input.ReadInt32();
             break;
           }
         }

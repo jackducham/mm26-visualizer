@@ -34,30 +34,25 @@ namespace MM26.IO.Models {
             "dHMYASABKAsyFC5pdGVtLlN0YXR1c01vZGlmaWVyEicKCmhhdF9lZmZlY3QY",
             "AiABKA4yEy5pdGVtLkhhdC5IYXRFZmZlY3QiFQoJSGF0RWZmZWN0EggKBFRF",
             "U1QQACIsCgVTaG9lcxIjCgVzdGF0cxgBIAEoCzIULml0ZW0uU3RhdHVzTW9k",
-            "aWZpZXIiswEKBldlYXBvbhIjCgVzdGF0cxgBIAEoCzIULml0ZW0uU3RhdHVz",
+            "aWZpZXIilAEKBldlYXBvbhIjCgVzdGF0cxgBIAEoCzIULml0ZW0uU3RhdHVz",
             "TW9kaWZpZXISDQoFcmFuZ2UYAiABKAUSFQoNc3BsYXNoX3JhZGl1cxgDIAEo",
-            "BRIUCgxtYWdpY19kYW1hZ2UYBCABKAUSFwoPcGh5c2ljYWxfZGFtYWdlGAUg",
-            "ASgFEi8KDW9uX2hpdF9lZmZlY3QYBiABKAsyGC5pdGVtLlRlbXBTdGF0dXNN",
-            "b2RpZmllciJGCgpDb25zdW1hYmxlEigKBmVmZmVjdBgBIAEoCzIYLml0ZW0u",
-            "VGVtcFN0YXR1c01vZGlmaWVyEg4KBnN0YWNrcxgCIAEoBSKQBAoOU3RhdHVz",
-            "TW9kaWZpZXISGQoRZmxhdF9zcGVlZF9jaGFuZ2UYASABKAUSHAoUcGVyY2Vu",
-            "dF9zcGVlZF9jaGFuZ2UYAiABKAISGgoSZmxhdF9oZWFsdGhfY2hhbmdlGAMg",
-            "ASgFEh0KFXBlcmNlbnRfaGVhbHRoX2NoYW5nZRgEIAEoAhIeChZmbGF0X2V4",
-            "cGVyaWVuY2VfY2hhbmdlGAUgASgFEiEKGXBlcmNlbnRfZXhwZXJpZW5jZV9j",
-            "aGFuZ2UYBiABKAISIAoYZmxhdF9tYWdpY19kYW1hZ2VfY2hhbmdlGAcgASgF",
-            "EiMKG3BlcmNlbnRfbWFnaWNfZGFtYWdlX2NoYW5nZRgIIAEoAhIjChtmbGF0",
-            "X3BoeXNpY2FsX2RhbWFnZV9jaGFuZ2UYCSABKAUSJgoecGVyY2VudF9waHlz",
-            "aWNhbF9kYW1hZ2VfY2hhbmdlGAogASgCEiEKGWZsYXRfbWFnaWNfZGVmZW5z",
-            "ZV9jaGFuZ2UYCyABKAUSJAoccGVyY2VudF9tYWdpY19kZWZlbnNlX2NoYW5n",
-            "ZRgMIAEoAhIkChxmbGF0X3BoeXNpY2FsX2RlZmVuc2VfY2hhbmdlGA0gASgF",
-            "EicKH3BlcmNlbnRfcGh5c2ljYWxfZGVmZW5zZV9jaGFuZ2UYDiABKAISGwoT",
-            "ZmxhdF9yZWdlbl9wZXJfdHVybhgPIAEoBSK1AQoSVGVtcFN0YXR1c01vZGlm",
-            "aWVyEiMKBXN0YXRzGAEgASgLMhQuaXRlbS5TdGF0dXNNb2RpZmllchIkChxm",
-            "bGF0X21hZ2ljYWxfZGFtYWdlX3Blcl90dXJuGAIgASgFEiUKHWZsYXRfcGh5",
-            "c2ljYWxfZGFtYWdlX3Blcl90dXJuGAMgASgFEhsKE2ZsYXRfcmVnZW5fcGVy",
-            "X3R1cm4YBCABKAUSEAoIZHVyYXRpb24YBSABKAVCOwocbWVjaC5tYW5pYS5l",
-            "bmdpbmUuZ2FtZS5pdGVtc0IKSXRlbVByb3Rvc6oCDk1NMjYuSU8uTW9kZWxz",
-            "YgZwcm90bzM="));
+            "BRIOCgZkYW1hZ2UYBCABKAUSLwoNb25faGl0X2VmZmVjdBgFIAEoCzIYLml0",
+            "ZW0uVGVtcFN0YXR1c01vZGlmaWVyIkYKCkNvbnN1bWFibGUSKAoGZWZmZWN0",
+            "GAEgASgLMhguaXRlbS5UZW1wU3RhdHVzTW9kaWZpZXISDgoGc3RhY2tzGAIg",
+            "ASgFItwCCg5TdGF0dXNNb2RpZmllchIZChFmbGF0X3NwZWVkX2NoYW5nZRgB",
+            "IAEoBRIcChRwZXJjZW50X3NwZWVkX2NoYW5nZRgCIAEoARIaChJmbGF0X2hl",
+            "YWx0aF9jaGFuZ2UYAyABKAUSHQoVcGVyY2VudF9oZWFsdGhfY2hhbmdlGAQg",
+            "ASgBEh4KFmZsYXRfZXhwZXJpZW5jZV9jaGFuZ2UYBSABKAUSIQoZcGVyY2Vu",
+            "dF9leHBlcmllbmNlX2NoYW5nZRgGIAEoARIaChJmbGF0X2RhbWFnZV9jaGFu",
+            "Z2UYByABKAUSHQoVcGVyY2VudF9kYW1hZ2VfY2hhbmdlGAggASgBEhsKE2Zs",
+            "YXRfZGVmZW5zZV9jaGFuZ2UYCSABKAUSHgoWcGVyY2VudF9kZWZlbnNlX2No",
+            "YW5nZRgKIAEoARIbChNmbGF0X3JlZ2VuX3Blcl90dXJuGAsgASgFIqkBChJU",
+            "ZW1wU3RhdHVzTW9kaWZpZXISIwoFc3RhdHMYASABKAsyFC5pdGVtLlN0YXR1",
+            "c01vZGlmaWVyEhwKFGZsYXRfZGFtYWdlX3Blcl90dXJuGAIgASgFEh8KF3Bl",
+            "cmNlbnRfZGFtYWdlX3Blcl90dXJuGAMgASgBEhsKE2ZsYXRfcmVnZW5fcGVy",
+            "X3R1cm4YBCABKAUSEgoKdHVybnNfbGVmdBgFIAEoBUI7ChxtZWNoLm1hbmlh",
+            "LmVuZ2luZS5nYW1lLml0ZW1zQgpJdGVtUHJvdG9zqgIOTU0yNi5JTy5Nb2Rl",
+            "bHNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -65,10 +60,10 @@ namespace MM26.IO.Models {
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Clothes), global::MM26.IO.Models.Clothes.Parser, new[]{ "Stats" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Hat), global::MM26.IO.Models.Hat.Parser, new[]{ "Stats", "HatEffect" }, null, new[]{ typeof(global::MM26.IO.Models.Hat.Types.HatEffect) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Shoes), global::MM26.IO.Models.Shoes.Parser, new[]{ "Stats" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Weapon), global::MM26.IO.Models.Weapon.Parser, new[]{ "Stats", "Range", "SplashRadius", "MagicDamage", "PhysicalDamage", "OnHitEffect" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Weapon), global::MM26.IO.Models.Weapon.Parser, new[]{ "Stats", "Range", "SplashRadius", "Damage", "OnHitEffect" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Consumable), global::MM26.IO.Models.Consumable.Parser, new[]{ "Effect", "Stacks" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.StatusModifier), global::MM26.IO.Models.StatusModifier.Parser, new[]{ "FlatSpeedChange", "PercentSpeedChange", "FlatHealthChange", "PercentHealthChange", "FlatExperienceChange", "PercentExperienceChange", "FlatMagicDamageChange", "PercentMagicDamageChange", "FlatPhysicalDamageChange", "PercentPhysicalDamageChange", "FlatMagicDefenseChange", "PercentMagicDefenseChange", "FlatPhysicalDefenseChange", "PercentPhysicalDefenseChange", "FlatRegenPerTurn" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.TempStatusModifier), global::MM26.IO.Models.TempStatusModifier.Parser, new[]{ "Stats", "FlatMagicalDamagePerTurn", "FlatPhysicalDamagePerTurn", "FlatRegenPerTurn", "Duration" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.StatusModifier), global::MM26.IO.Models.StatusModifier.Parser, new[]{ "FlatSpeedChange", "PercentSpeedChange", "FlatHealthChange", "PercentHealthChange", "FlatExperienceChange", "PercentExperienceChange", "FlatDamageChange", "PercentDamageChange", "FlatDefenseChange", "PercentDefenseChange", "FlatRegenPerTurn" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.TempStatusModifier), global::MM26.IO.Models.TempStatusModifier.Parser, new[]{ "Stats", "FlatDamagePerTurn", "PercentDamagePerTurn", "FlatRegenPerTurn", "TurnsLeft" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1109,8 +1104,7 @@ namespace MM26.IO.Models {
       stats_ = other.stats_ != null ? other.stats_.Clone() : null;
       range_ = other.range_;
       splashRadius_ = other.splashRadius_;
-      magicDamage_ = other.magicDamage_;
-      physicalDamage_ = other.physicalDamage_;
+      damage_ = other.damage_;
       onHitEffect_ = other.onHitEffect_ != null ? other.onHitEffect_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1153,30 +1147,19 @@ namespace MM26.IO.Models {
       }
     }
 
-    /// <summary>Field number for the "magic_damage" field.</summary>
-    public const int MagicDamageFieldNumber = 4;
-    private int magicDamage_;
+    /// <summary>Field number for the "damage" field.</summary>
+    public const int DamageFieldNumber = 4;
+    private int damage_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int MagicDamage {
-      get { return magicDamage_; }
+    public int Damage {
+      get { return damage_; }
       set {
-        magicDamage_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "physical_damage" field.</summary>
-    public const int PhysicalDamageFieldNumber = 5;
-    private int physicalDamage_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int PhysicalDamage {
-      get { return physicalDamage_; }
-      set {
-        physicalDamage_ = value;
+        damage_ = value;
       }
     }
 
     /// <summary>Field number for the "on_hit_effect" field.</summary>
-    public const int OnHitEffectFieldNumber = 6;
+    public const int OnHitEffectFieldNumber = 5;
     private global::MM26.IO.Models.TempStatusModifier onHitEffect_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::MM26.IO.Models.TempStatusModifier OnHitEffect {
@@ -1202,8 +1185,7 @@ namespace MM26.IO.Models {
       if (!object.Equals(Stats, other.Stats)) return false;
       if (Range != other.Range) return false;
       if (SplashRadius != other.SplashRadius) return false;
-      if (MagicDamage != other.MagicDamage) return false;
-      if (PhysicalDamage != other.PhysicalDamage) return false;
+      if (Damage != other.Damage) return false;
       if (!object.Equals(OnHitEffect, other.OnHitEffect)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1214,8 +1196,7 @@ namespace MM26.IO.Models {
       if (stats_ != null) hash ^= Stats.GetHashCode();
       if (Range != 0) hash ^= Range.GetHashCode();
       if (SplashRadius != 0) hash ^= SplashRadius.GetHashCode();
-      if (MagicDamage != 0) hash ^= MagicDamage.GetHashCode();
-      if (PhysicalDamage != 0) hash ^= PhysicalDamage.GetHashCode();
+      if (Damage != 0) hash ^= Damage.GetHashCode();
       if (onHitEffect_ != null) hash ^= OnHitEffect.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1242,16 +1223,12 @@ namespace MM26.IO.Models {
         output.WriteRawTag(24);
         output.WriteInt32(SplashRadius);
       }
-      if (MagicDamage != 0) {
+      if (Damage != 0) {
         output.WriteRawTag(32);
-        output.WriteInt32(MagicDamage);
-      }
-      if (PhysicalDamage != 0) {
-        output.WriteRawTag(40);
-        output.WriteInt32(PhysicalDamage);
+        output.WriteInt32(Damage);
       }
       if (onHitEffect_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(42);
         output.WriteMessage(OnHitEffect);
       }
       if (_unknownFields != null) {
@@ -1271,11 +1248,8 @@ namespace MM26.IO.Models {
       if (SplashRadius != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(SplashRadius);
       }
-      if (MagicDamage != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MagicDamage);
-      }
-      if (PhysicalDamage != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PhysicalDamage);
+      if (Damage != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Damage);
       }
       if (onHitEffect_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(OnHitEffect);
@@ -1303,11 +1277,8 @@ namespace MM26.IO.Models {
       if (other.SplashRadius != 0) {
         SplashRadius = other.SplashRadius;
       }
-      if (other.MagicDamage != 0) {
-        MagicDamage = other.MagicDamage;
-      }
-      if (other.PhysicalDamage != 0) {
-        PhysicalDamage = other.PhysicalDamage;
+      if (other.Damage != 0) {
+        Damage = other.Damage;
       }
       if (other.onHitEffect_ != null) {
         if (onHitEffect_ == null) {
@@ -1345,14 +1316,10 @@ namespace MM26.IO.Models {
             break;
           }
           case 32: {
-            MagicDamage = input.ReadInt32();
+            Damage = input.ReadInt32();
             break;
           }
-          case 40: {
-            PhysicalDamage = input.ReadInt32();
-            break;
-          }
-          case 50: {
+          case 42: {
             if (onHitEffect_ == null) {
               OnHitEffect = new global::MM26.IO.Models.TempStatusModifier();
             }
@@ -1389,14 +1356,10 @@ namespace MM26.IO.Models {
             break;
           }
           case 32: {
-            MagicDamage = input.ReadInt32();
+            Damage = input.ReadInt32();
             break;
           }
-          case 40: {
-            PhysicalDamage = input.ReadInt32();
-            break;
-          }
-          case 50: {
+          case 42: {
             if (onHitEffect_ == null) {
               OnHitEffect = new global::MM26.IO.Models.TempStatusModifier();
             }
@@ -1641,14 +1604,10 @@ namespace MM26.IO.Models {
       percentHealthChange_ = other.percentHealthChange_;
       flatExperienceChange_ = other.flatExperienceChange_;
       percentExperienceChange_ = other.percentExperienceChange_;
-      flatMagicDamageChange_ = other.flatMagicDamageChange_;
-      percentMagicDamageChange_ = other.percentMagicDamageChange_;
-      flatPhysicalDamageChange_ = other.flatPhysicalDamageChange_;
-      percentPhysicalDamageChange_ = other.percentPhysicalDamageChange_;
-      flatMagicDefenseChange_ = other.flatMagicDefenseChange_;
-      percentMagicDefenseChange_ = other.percentMagicDefenseChange_;
-      flatPhysicalDefenseChange_ = other.flatPhysicalDefenseChange_;
-      percentPhysicalDefenseChange_ = other.percentPhysicalDefenseChange_;
+      flatDamageChange_ = other.flatDamageChange_;
+      percentDamageChange_ = other.percentDamageChange_;
+      flatDefenseChange_ = other.flatDefenseChange_;
+      percentDefenseChange_ = other.percentDefenseChange_;
       flatRegenPerTurn_ = other.flatRegenPerTurn_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1671,9 +1630,9 @@ namespace MM26.IO.Models {
 
     /// <summary>Field number for the "percent_speed_change" field.</summary>
     public const int PercentSpeedChangeFieldNumber = 2;
-    private float percentSpeedChange_;
+    private double percentSpeedChange_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float PercentSpeedChange {
+    public double PercentSpeedChange {
       get { return percentSpeedChange_; }
       set {
         percentSpeedChange_ = value;
@@ -1693,9 +1652,9 @@ namespace MM26.IO.Models {
 
     /// <summary>Field number for the "percent_health_change" field.</summary>
     public const int PercentHealthChangeFieldNumber = 4;
-    private float percentHealthChange_;
+    private double percentHealthChange_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float PercentHealthChange {
+    public double PercentHealthChange {
       get { return percentHealthChange_; }
       set {
         percentHealthChange_ = value;
@@ -1715,105 +1674,61 @@ namespace MM26.IO.Models {
 
     /// <summary>Field number for the "percent_experience_change" field.</summary>
     public const int PercentExperienceChangeFieldNumber = 6;
-    private float percentExperienceChange_;
+    private double percentExperienceChange_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float PercentExperienceChange {
+    public double PercentExperienceChange {
       get { return percentExperienceChange_; }
       set {
         percentExperienceChange_ = value;
       }
     }
 
-    /// <summary>Field number for the "flat_magic_damage_change" field.</summary>
-    public const int FlatMagicDamageChangeFieldNumber = 7;
-    private int flatMagicDamageChange_;
+    /// <summary>Field number for the "flat_damage_change" field.</summary>
+    public const int FlatDamageChangeFieldNumber = 7;
+    private int flatDamageChange_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int FlatMagicDamageChange {
-      get { return flatMagicDamageChange_; }
+    public int FlatDamageChange {
+      get { return flatDamageChange_; }
       set {
-        flatMagicDamageChange_ = value;
+        flatDamageChange_ = value;
       }
     }
 
-    /// <summary>Field number for the "percent_magic_damage_change" field.</summary>
-    public const int PercentMagicDamageChangeFieldNumber = 8;
-    private float percentMagicDamageChange_;
+    /// <summary>Field number for the "percent_damage_change" field.</summary>
+    public const int PercentDamageChangeFieldNumber = 8;
+    private double percentDamageChange_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float PercentMagicDamageChange {
-      get { return percentMagicDamageChange_; }
+    public double PercentDamageChange {
+      get { return percentDamageChange_; }
       set {
-        percentMagicDamageChange_ = value;
+        percentDamageChange_ = value;
       }
     }
 
-    /// <summary>Field number for the "flat_physical_damage_change" field.</summary>
-    public const int FlatPhysicalDamageChangeFieldNumber = 9;
-    private int flatPhysicalDamageChange_;
+    /// <summary>Field number for the "flat_defense_change" field.</summary>
+    public const int FlatDefenseChangeFieldNumber = 9;
+    private int flatDefenseChange_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int FlatPhysicalDamageChange {
-      get { return flatPhysicalDamageChange_; }
+    public int FlatDefenseChange {
+      get { return flatDefenseChange_; }
       set {
-        flatPhysicalDamageChange_ = value;
+        flatDefenseChange_ = value;
       }
     }
 
-    /// <summary>Field number for the "percent_physical_damage_change" field.</summary>
-    public const int PercentPhysicalDamageChangeFieldNumber = 10;
-    private float percentPhysicalDamageChange_;
+    /// <summary>Field number for the "percent_defense_change" field.</summary>
+    public const int PercentDefenseChangeFieldNumber = 10;
+    private double percentDefenseChange_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float PercentPhysicalDamageChange {
-      get { return percentPhysicalDamageChange_; }
+    public double PercentDefenseChange {
+      get { return percentDefenseChange_; }
       set {
-        percentPhysicalDamageChange_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "flat_magic_defense_change" field.</summary>
-    public const int FlatMagicDefenseChangeFieldNumber = 11;
-    private int flatMagicDefenseChange_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int FlatMagicDefenseChange {
-      get { return flatMagicDefenseChange_; }
-      set {
-        flatMagicDefenseChange_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "percent_magic_defense_change" field.</summary>
-    public const int PercentMagicDefenseChangeFieldNumber = 12;
-    private float percentMagicDefenseChange_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float PercentMagicDefenseChange {
-      get { return percentMagicDefenseChange_; }
-      set {
-        percentMagicDefenseChange_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "flat_physical_defense_change" field.</summary>
-    public const int FlatPhysicalDefenseChangeFieldNumber = 13;
-    private int flatPhysicalDefenseChange_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int FlatPhysicalDefenseChange {
-      get { return flatPhysicalDefenseChange_; }
-      set {
-        flatPhysicalDefenseChange_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "percent_physical_defense_change" field.</summary>
-    public const int PercentPhysicalDefenseChangeFieldNumber = 14;
-    private float percentPhysicalDefenseChange_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float PercentPhysicalDefenseChange {
-      get { return percentPhysicalDefenseChange_; }
-      set {
-        percentPhysicalDefenseChange_ = value;
+        percentDefenseChange_ = value;
       }
     }
 
     /// <summary>Field number for the "flat_regen_per_turn" field.</summary>
-    public const int FlatRegenPerTurnFieldNumber = 15;
+    public const int FlatRegenPerTurnFieldNumber = 11;
     private int flatRegenPerTurn_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int FlatRegenPerTurn {
@@ -1837,19 +1752,15 @@ namespace MM26.IO.Models {
         return true;
       }
       if (FlatSpeedChange != other.FlatSpeedChange) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PercentSpeedChange, other.PercentSpeedChange)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(PercentSpeedChange, other.PercentSpeedChange)) return false;
       if (FlatHealthChange != other.FlatHealthChange) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PercentHealthChange, other.PercentHealthChange)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(PercentHealthChange, other.PercentHealthChange)) return false;
       if (FlatExperienceChange != other.FlatExperienceChange) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PercentExperienceChange, other.PercentExperienceChange)) return false;
-      if (FlatMagicDamageChange != other.FlatMagicDamageChange) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PercentMagicDamageChange, other.PercentMagicDamageChange)) return false;
-      if (FlatPhysicalDamageChange != other.FlatPhysicalDamageChange) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PercentPhysicalDamageChange, other.PercentPhysicalDamageChange)) return false;
-      if (FlatMagicDefenseChange != other.FlatMagicDefenseChange) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PercentMagicDefenseChange, other.PercentMagicDefenseChange)) return false;
-      if (FlatPhysicalDefenseChange != other.FlatPhysicalDefenseChange) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PercentPhysicalDefenseChange, other.PercentPhysicalDefenseChange)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(PercentExperienceChange, other.PercentExperienceChange)) return false;
+      if (FlatDamageChange != other.FlatDamageChange) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(PercentDamageChange, other.PercentDamageChange)) return false;
+      if (FlatDefenseChange != other.FlatDefenseChange) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(PercentDefenseChange, other.PercentDefenseChange)) return false;
       if (FlatRegenPerTurn != other.FlatRegenPerTurn) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1858,19 +1769,15 @@ namespace MM26.IO.Models {
     public override int GetHashCode() {
       int hash = 1;
       if (FlatSpeedChange != 0) hash ^= FlatSpeedChange.GetHashCode();
-      if (PercentSpeedChange != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentSpeedChange);
+      if (PercentSpeedChange != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(PercentSpeedChange);
       if (FlatHealthChange != 0) hash ^= FlatHealthChange.GetHashCode();
-      if (PercentHealthChange != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentHealthChange);
+      if (PercentHealthChange != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(PercentHealthChange);
       if (FlatExperienceChange != 0) hash ^= FlatExperienceChange.GetHashCode();
-      if (PercentExperienceChange != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentExperienceChange);
-      if (FlatMagicDamageChange != 0) hash ^= FlatMagicDamageChange.GetHashCode();
-      if (PercentMagicDamageChange != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentMagicDamageChange);
-      if (FlatPhysicalDamageChange != 0) hash ^= FlatPhysicalDamageChange.GetHashCode();
-      if (PercentPhysicalDamageChange != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentPhysicalDamageChange);
-      if (FlatMagicDefenseChange != 0) hash ^= FlatMagicDefenseChange.GetHashCode();
-      if (PercentMagicDefenseChange != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentMagicDefenseChange);
-      if (FlatPhysicalDefenseChange != 0) hash ^= FlatPhysicalDefenseChange.GetHashCode();
-      if (PercentPhysicalDefenseChange != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PercentPhysicalDefenseChange);
+      if (PercentExperienceChange != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(PercentExperienceChange);
+      if (FlatDamageChange != 0) hash ^= FlatDamageChange.GetHashCode();
+      if (PercentDamageChange != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(PercentDamageChange);
+      if (FlatDefenseChange != 0) hash ^= FlatDefenseChange.GetHashCode();
+      if (PercentDefenseChange != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(PercentDefenseChange);
       if (FlatRegenPerTurn != 0) hash ^= FlatRegenPerTurn.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1889,60 +1796,44 @@ namespace MM26.IO.Models {
         output.WriteRawTag(8);
         output.WriteInt32(FlatSpeedChange);
       }
-      if (PercentSpeedChange != 0F) {
-        output.WriteRawTag(21);
-        output.WriteFloat(PercentSpeedChange);
+      if (PercentSpeedChange != 0D) {
+        output.WriteRawTag(17);
+        output.WriteDouble(PercentSpeedChange);
       }
       if (FlatHealthChange != 0) {
         output.WriteRawTag(24);
         output.WriteInt32(FlatHealthChange);
       }
-      if (PercentHealthChange != 0F) {
-        output.WriteRawTag(37);
-        output.WriteFloat(PercentHealthChange);
+      if (PercentHealthChange != 0D) {
+        output.WriteRawTag(33);
+        output.WriteDouble(PercentHealthChange);
       }
       if (FlatExperienceChange != 0) {
         output.WriteRawTag(40);
         output.WriteInt32(FlatExperienceChange);
       }
-      if (PercentExperienceChange != 0F) {
-        output.WriteRawTag(53);
-        output.WriteFloat(PercentExperienceChange);
+      if (PercentExperienceChange != 0D) {
+        output.WriteRawTag(49);
+        output.WriteDouble(PercentExperienceChange);
       }
-      if (FlatMagicDamageChange != 0) {
+      if (FlatDamageChange != 0) {
         output.WriteRawTag(56);
-        output.WriteInt32(FlatMagicDamageChange);
+        output.WriteInt32(FlatDamageChange);
       }
-      if (PercentMagicDamageChange != 0F) {
-        output.WriteRawTag(69);
-        output.WriteFloat(PercentMagicDamageChange);
+      if (PercentDamageChange != 0D) {
+        output.WriteRawTag(65);
+        output.WriteDouble(PercentDamageChange);
       }
-      if (FlatPhysicalDamageChange != 0) {
+      if (FlatDefenseChange != 0) {
         output.WriteRawTag(72);
-        output.WriteInt32(FlatPhysicalDamageChange);
+        output.WriteInt32(FlatDefenseChange);
       }
-      if (PercentPhysicalDamageChange != 0F) {
-        output.WriteRawTag(85);
-        output.WriteFloat(PercentPhysicalDamageChange);
-      }
-      if (FlatMagicDefenseChange != 0) {
-        output.WriteRawTag(88);
-        output.WriteInt32(FlatMagicDefenseChange);
-      }
-      if (PercentMagicDefenseChange != 0F) {
-        output.WriteRawTag(101);
-        output.WriteFloat(PercentMagicDefenseChange);
-      }
-      if (FlatPhysicalDefenseChange != 0) {
-        output.WriteRawTag(104);
-        output.WriteInt32(FlatPhysicalDefenseChange);
-      }
-      if (PercentPhysicalDefenseChange != 0F) {
-        output.WriteRawTag(117);
-        output.WriteFloat(PercentPhysicalDefenseChange);
+      if (PercentDefenseChange != 0D) {
+        output.WriteRawTag(81);
+        output.WriteDouble(PercentDefenseChange);
       }
       if (FlatRegenPerTurn != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(88);
         output.WriteInt32(FlatRegenPerTurn);
       }
       if (_unknownFields != null) {
@@ -1956,44 +1847,32 @@ namespace MM26.IO.Models {
       if (FlatSpeedChange != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(FlatSpeedChange);
       }
-      if (PercentSpeedChange != 0F) {
-        size += 1 + 4;
+      if (PercentSpeedChange != 0D) {
+        size += 1 + 8;
       }
       if (FlatHealthChange != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(FlatHealthChange);
       }
-      if (PercentHealthChange != 0F) {
-        size += 1 + 4;
+      if (PercentHealthChange != 0D) {
+        size += 1 + 8;
       }
       if (FlatExperienceChange != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(FlatExperienceChange);
       }
-      if (PercentExperienceChange != 0F) {
-        size += 1 + 4;
+      if (PercentExperienceChange != 0D) {
+        size += 1 + 8;
       }
-      if (FlatMagicDamageChange != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FlatMagicDamageChange);
+      if (FlatDamageChange != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FlatDamageChange);
       }
-      if (PercentMagicDamageChange != 0F) {
-        size += 1 + 4;
+      if (PercentDamageChange != 0D) {
+        size += 1 + 8;
       }
-      if (FlatPhysicalDamageChange != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FlatPhysicalDamageChange);
+      if (FlatDefenseChange != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FlatDefenseChange);
       }
-      if (PercentPhysicalDamageChange != 0F) {
-        size += 1 + 4;
-      }
-      if (FlatMagicDefenseChange != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FlatMagicDefenseChange);
-      }
-      if (PercentMagicDefenseChange != 0F) {
-        size += 1 + 4;
-      }
-      if (FlatPhysicalDefenseChange != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FlatPhysicalDefenseChange);
-      }
-      if (PercentPhysicalDefenseChange != 0F) {
-        size += 1 + 4;
+      if (PercentDefenseChange != 0D) {
+        size += 1 + 8;
       }
       if (FlatRegenPerTurn != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(FlatRegenPerTurn);
@@ -2012,44 +1891,32 @@ namespace MM26.IO.Models {
       if (other.FlatSpeedChange != 0) {
         FlatSpeedChange = other.FlatSpeedChange;
       }
-      if (other.PercentSpeedChange != 0F) {
+      if (other.PercentSpeedChange != 0D) {
         PercentSpeedChange = other.PercentSpeedChange;
       }
       if (other.FlatHealthChange != 0) {
         FlatHealthChange = other.FlatHealthChange;
       }
-      if (other.PercentHealthChange != 0F) {
+      if (other.PercentHealthChange != 0D) {
         PercentHealthChange = other.PercentHealthChange;
       }
       if (other.FlatExperienceChange != 0) {
         FlatExperienceChange = other.FlatExperienceChange;
       }
-      if (other.PercentExperienceChange != 0F) {
+      if (other.PercentExperienceChange != 0D) {
         PercentExperienceChange = other.PercentExperienceChange;
       }
-      if (other.FlatMagicDamageChange != 0) {
-        FlatMagicDamageChange = other.FlatMagicDamageChange;
+      if (other.FlatDamageChange != 0) {
+        FlatDamageChange = other.FlatDamageChange;
       }
-      if (other.PercentMagicDamageChange != 0F) {
-        PercentMagicDamageChange = other.PercentMagicDamageChange;
+      if (other.PercentDamageChange != 0D) {
+        PercentDamageChange = other.PercentDamageChange;
       }
-      if (other.FlatPhysicalDamageChange != 0) {
-        FlatPhysicalDamageChange = other.FlatPhysicalDamageChange;
+      if (other.FlatDefenseChange != 0) {
+        FlatDefenseChange = other.FlatDefenseChange;
       }
-      if (other.PercentPhysicalDamageChange != 0F) {
-        PercentPhysicalDamageChange = other.PercentPhysicalDamageChange;
-      }
-      if (other.FlatMagicDefenseChange != 0) {
-        FlatMagicDefenseChange = other.FlatMagicDefenseChange;
-      }
-      if (other.PercentMagicDefenseChange != 0F) {
-        PercentMagicDefenseChange = other.PercentMagicDefenseChange;
-      }
-      if (other.FlatPhysicalDefenseChange != 0) {
-        FlatPhysicalDefenseChange = other.FlatPhysicalDefenseChange;
-      }
-      if (other.PercentPhysicalDefenseChange != 0F) {
-        PercentPhysicalDefenseChange = other.PercentPhysicalDefenseChange;
+      if (other.PercentDefenseChange != 0D) {
+        PercentDefenseChange = other.PercentDefenseChange;
       }
       if (other.FlatRegenPerTurn != 0) {
         FlatRegenPerTurn = other.FlatRegenPerTurn;
@@ -2072,59 +1939,43 @@ namespace MM26.IO.Models {
             FlatSpeedChange = input.ReadInt32();
             break;
           }
-          case 21: {
-            PercentSpeedChange = input.ReadFloat();
+          case 17: {
+            PercentSpeedChange = input.ReadDouble();
             break;
           }
           case 24: {
             FlatHealthChange = input.ReadInt32();
             break;
           }
-          case 37: {
-            PercentHealthChange = input.ReadFloat();
+          case 33: {
+            PercentHealthChange = input.ReadDouble();
             break;
           }
           case 40: {
             FlatExperienceChange = input.ReadInt32();
             break;
           }
-          case 53: {
-            PercentExperienceChange = input.ReadFloat();
+          case 49: {
+            PercentExperienceChange = input.ReadDouble();
             break;
           }
           case 56: {
-            FlatMagicDamageChange = input.ReadInt32();
+            FlatDamageChange = input.ReadInt32();
             break;
           }
-          case 69: {
-            PercentMagicDamageChange = input.ReadFloat();
+          case 65: {
+            PercentDamageChange = input.ReadDouble();
             break;
           }
           case 72: {
-            FlatPhysicalDamageChange = input.ReadInt32();
+            FlatDefenseChange = input.ReadInt32();
             break;
           }
-          case 85: {
-            PercentPhysicalDamageChange = input.ReadFloat();
+          case 81: {
+            PercentDefenseChange = input.ReadDouble();
             break;
           }
           case 88: {
-            FlatMagicDefenseChange = input.ReadInt32();
-            break;
-          }
-          case 101: {
-            PercentMagicDefenseChange = input.ReadFloat();
-            break;
-          }
-          case 104: {
-            FlatPhysicalDefenseChange = input.ReadInt32();
-            break;
-          }
-          case 117: {
-            PercentPhysicalDefenseChange = input.ReadFloat();
-            break;
-          }
-          case 120: {
             FlatRegenPerTurn = input.ReadInt32();
             break;
           }
@@ -2146,59 +1997,43 @@ namespace MM26.IO.Models {
             FlatSpeedChange = input.ReadInt32();
             break;
           }
-          case 21: {
-            PercentSpeedChange = input.ReadFloat();
+          case 17: {
+            PercentSpeedChange = input.ReadDouble();
             break;
           }
           case 24: {
             FlatHealthChange = input.ReadInt32();
             break;
           }
-          case 37: {
-            PercentHealthChange = input.ReadFloat();
+          case 33: {
+            PercentHealthChange = input.ReadDouble();
             break;
           }
           case 40: {
             FlatExperienceChange = input.ReadInt32();
             break;
           }
-          case 53: {
-            PercentExperienceChange = input.ReadFloat();
+          case 49: {
+            PercentExperienceChange = input.ReadDouble();
             break;
           }
           case 56: {
-            FlatMagicDamageChange = input.ReadInt32();
+            FlatDamageChange = input.ReadInt32();
             break;
           }
-          case 69: {
-            PercentMagicDamageChange = input.ReadFloat();
+          case 65: {
+            PercentDamageChange = input.ReadDouble();
             break;
           }
           case 72: {
-            FlatPhysicalDamageChange = input.ReadInt32();
+            FlatDefenseChange = input.ReadInt32();
             break;
           }
-          case 85: {
-            PercentPhysicalDamageChange = input.ReadFloat();
+          case 81: {
+            PercentDefenseChange = input.ReadDouble();
             break;
           }
           case 88: {
-            FlatMagicDefenseChange = input.ReadInt32();
-            break;
-          }
-          case 101: {
-            PercentMagicDefenseChange = input.ReadFloat();
-            break;
-          }
-          case 104: {
-            FlatPhysicalDefenseChange = input.ReadInt32();
-            break;
-          }
-          case 117: {
-            PercentPhysicalDefenseChange = input.ReadFloat();
-            break;
-          }
-          case 120: {
             FlatRegenPerTurn = input.ReadInt32();
             break;
           }
@@ -2239,10 +2074,10 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TempStatusModifier(TempStatusModifier other) : this() {
       stats_ = other.stats_ != null ? other.stats_.Clone() : null;
-      flatMagicalDamagePerTurn_ = other.flatMagicalDamagePerTurn_;
-      flatPhysicalDamagePerTurn_ = other.flatPhysicalDamagePerTurn_;
+      flatDamagePerTurn_ = other.flatDamagePerTurn_;
+      percentDamagePerTurn_ = other.percentDamagePerTurn_;
       flatRegenPerTurn_ = other.flatRegenPerTurn_;
-      duration_ = other.duration_;
+      turnsLeft_ = other.turnsLeft_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2262,25 +2097,25 @@ namespace MM26.IO.Models {
       }
     }
 
-    /// <summary>Field number for the "flat_magical_damage_per_turn" field.</summary>
-    public const int FlatMagicalDamagePerTurnFieldNumber = 2;
-    private int flatMagicalDamagePerTurn_;
+    /// <summary>Field number for the "flat_damage_per_turn" field.</summary>
+    public const int FlatDamagePerTurnFieldNumber = 2;
+    private int flatDamagePerTurn_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int FlatMagicalDamagePerTurn {
-      get { return flatMagicalDamagePerTurn_; }
+    public int FlatDamagePerTurn {
+      get { return flatDamagePerTurn_; }
       set {
-        flatMagicalDamagePerTurn_ = value;
+        flatDamagePerTurn_ = value;
       }
     }
 
-    /// <summary>Field number for the "flat_physical_damage_per_turn" field.</summary>
-    public const int FlatPhysicalDamagePerTurnFieldNumber = 3;
-    private int flatPhysicalDamagePerTurn_;
+    /// <summary>Field number for the "percent_damage_per_turn" field.</summary>
+    public const int PercentDamagePerTurnFieldNumber = 3;
+    private double percentDamagePerTurn_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int FlatPhysicalDamagePerTurn {
-      get { return flatPhysicalDamagePerTurn_; }
+    public double PercentDamagePerTurn {
+      get { return percentDamagePerTurn_; }
       set {
-        flatPhysicalDamagePerTurn_ = value;
+        percentDamagePerTurn_ = value;
       }
     }
 
@@ -2295,14 +2130,14 @@ namespace MM26.IO.Models {
       }
     }
 
-    /// <summary>Field number for the "duration" field.</summary>
-    public const int DurationFieldNumber = 5;
-    private int duration_;
+    /// <summary>Field number for the "turns_left" field.</summary>
+    public const int TurnsLeftFieldNumber = 5;
+    private int turnsLeft_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Duration {
-      get { return duration_; }
+    public int TurnsLeft {
+      get { return turnsLeft_; }
       set {
-        duration_ = value;
+        turnsLeft_ = value;
       }
     }
 
@@ -2320,10 +2155,10 @@ namespace MM26.IO.Models {
         return true;
       }
       if (!object.Equals(Stats, other.Stats)) return false;
-      if (FlatMagicalDamagePerTurn != other.FlatMagicalDamagePerTurn) return false;
-      if (FlatPhysicalDamagePerTurn != other.FlatPhysicalDamagePerTurn) return false;
+      if (FlatDamagePerTurn != other.FlatDamagePerTurn) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(PercentDamagePerTurn, other.PercentDamagePerTurn)) return false;
       if (FlatRegenPerTurn != other.FlatRegenPerTurn) return false;
-      if (Duration != other.Duration) return false;
+      if (TurnsLeft != other.TurnsLeft) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2331,10 +2166,10 @@ namespace MM26.IO.Models {
     public override int GetHashCode() {
       int hash = 1;
       if (stats_ != null) hash ^= Stats.GetHashCode();
-      if (FlatMagicalDamagePerTurn != 0) hash ^= FlatMagicalDamagePerTurn.GetHashCode();
-      if (FlatPhysicalDamagePerTurn != 0) hash ^= FlatPhysicalDamagePerTurn.GetHashCode();
+      if (FlatDamagePerTurn != 0) hash ^= FlatDamagePerTurn.GetHashCode();
+      if (PercentDamagePerTurn != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(PercentDamagePerTurn);
       if (FlatRegenPerTurn != 0) hash ^= FlatRegenPerTurn.GetHashCode();
-      if (Duration != 0) hash ^= Duration.GetHashCode();
+      if (TurnsLeft != 0) hash ^= TurnsLeft.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2352,21 +2187,21 @@ namespace MM26.IO.Models {
         output.WriteRawTag(10);
         output.WriteMessage(Stats);
       }
-      if (FlatMagicalDamagePerTurn != 0) {
+      if (FlatDamagePerTurn != 0) {
         output.WriteRawTag(16);
-        output.WriteInt32(FlatMagicalDamagePerTurn);
+        output.WriteInt32(FlatDamagePerTurn);
       }
-      if (FlatPhysicalDamagePerTurn != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(FlatPhysicalDamagePerTurn);
+      if (PercentDamagePerTurn != 0D) {
+        output.WriteRawTag(25);
+        output.WriteDouble(PercentDamagePerTurn);
       }
       if (FlatRegenPerTurn != 0) {
         output.WriteRawTag(32);
         output.WriteInt32(FlatRegenPerTurn);
       }
-      if (Duration != 0) {
+      if (TurnsLeft != 0) {
         output.WriteRawTag(40);
-        output.WriteInt32(Duration);
+        output.WriteInt32(TurnsLeft);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2379,17 +2214,17 @@ namespace MM26.IO.Models {
       if (stats_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stats);
       }
-      if (FlatMagicalDamagePerTurn != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FlatMagicalDamagePerTurn);
+      if (FlatDamagePerTurn != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FlatDamagePerTurn);
       }
-      if (FlatPhysicalDamagePerTurn != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FlatPhysicalDamagePerTurn);
+      if (PercentDamagePerTurn != 0D) {
+        size += 1 + 8;
       }
       if (FlatRegenPerTurn != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(FlatRegenPerTurn);
       }
-      if (Duration != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Duration);
+      if (TurnsLeft != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TurnsLeft);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2408,17 +2243,17 @@ namespace MM26.IO.Models {
         }
         Stats.MergeFrom(other.Stats);
       }
-      if (other.FlatMagicalDamagePerTurn != 0) {
-        FlatMagicalDamagePerTurn = other.FlatMagicalDamagePerTurn;
+      if (other.FlatDamagePerTurn != 0) {
+        FlatDamagePerTurn = other.FlatDamagePerTurn;
       }
-      if (other.FlatPhysicalDamagePerTurn != 0) {
-        FlatPhysicalDamagePerTurn = other.FlatPhysicalDamagePerTurn;
+      if (other.PercentDamagePerTurn != 0D) {
+        PercentDamagePerTurn = other.PercentDamagePerTurn;
       }
       if (other.FlatRegenPerTurn != 0) {
         FlatRegenPerTurn = other.FlatRegenPerTurn;
       }
-      if (other.Duration != 0) {
-        Duration = other.Duration;
+      if (other.TurnsLeft != 0) {
+        TurnsLeft = other.TurnsLeft;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2442,11 +2277,11 @@ namespace MM26.IO.Models {
             break;
           }
           case 16: {
-            FlatMagicalDamagePerTurn = input.ReadInt32();
+            FlatDamagePerTurn = input.ReadInt32();
             break;
           }
-          case 24: {
-            FlatPhysicalDamagePerTurn = input.ReadInt32();
+          case 25: {
+            PercentDamagePerTurn = input.ReadDouble();
             break;
           }
           case 32: {
@@ -2454,7 +2289,7 @@ namespace MM26.IO.Models {
             break;
           }
           case 40: {
-            Duration = input.ReadInt32();
+            TurnsLeft = input.ReadInt32();
             break;
           }
         }
@@ -2479,11 +2314,11 @@ namespace MM26.IO.Models {
             break;
           }
           case 16: {
-            FlatMagicalDamagePerTurn = input.ReadInt32();
+            FlatDamagePerTurn = input.ReadInt32();
             break;
           }
-          case 24: {
-            FlatPhysicalDamagePerTurn = input.ReadInt32();
+          case 25: {
+            PercentDamagePerTurn = input.ReadDouble();
             break;
           }
           case 32: {
@@ -2491,7 +2326,7 @@ namespace MM26.IO.Models {
             break;
           }
           case 40: {
-            Duration = input.ReadInt32();
+            TurnsLeft = input.ReadInt32();
             break;
           }
         }

@@ -13,11 +13,74 @@ public class ProtosWindow : EditorWindow
         GetWindow<ProtosWindow>("Protos");
     }
 
+    public static void Generate(string inDir, string protocPath)
+    {
+        string outputFolder = Path.Combine(Application.dataPath, "Scripts", "IO", "Models");
+
+        UnityEngine.Debug.LogFormat("Cleans {0}", outputFolder);
+
+        if (Directory.Exists(outputFolder))
+        {
+            Directory.Delete(outputFolder, true);
+        }
+
+        Directory.CreateDirectory(outputFolder);
+
+        IEnumerable<string> files = Directory.EnumerateFiles(inDir)
+                .Where(file => file.EndsWith(".proto"));
+
+        ProcessStartInfo startInfo = new ProcessStartInfo()
+        {
+            FileName = protocPath,
+            Arguments = string.Format(
+                "--proto_path={0} --csharp_out={1} {2}",
+                inDir,
+                outputFolder,
+                string.Join(" ", files)),
+
+            RedirectStandardError = true,
+            RedirectStandardOutput = true,
+            UseShellExecute = false,
+        };
+
+        UnityEngine.Debug.Log("Genearting Protocol Buffer");
+
+        Process process = Process.Start(startInfo);
+        process.WaitForExit();
+
+        string standardOutput = process.StandardOutput.ReadToEnd();
+        string standardError = process.StandardError.ReadToEnd();
+
+        if (standardOutput != "")
+        {
+            UnityEngine.Debug.Log(standardOutput);
+        }
+
+        if (standardError != "")
+        {
+            UnityEngine.Debug.LogError(standardError);
+        }
+
+        UnityEngine.Debug.Log("Done");
+    }
+
     private string _protosFolder = ".";
-    private string _protocPath = "protoc";
+    private string _protocPath = "";
+
+    private void ApplyDefaults()
+    {
+        if (_protocPath == "")
+        {
+#if UNITY_EDITOR_OSX
+            _protocPath = "/usr/local/bin/protoc";
+#endif
+        }
+    }
 
     private void OnGUI()
     {
+        this.ApplyDefaults();
+
         EditorGUILayout.LabelField("Protos Folder", _protosFolder);
         _protocPath = EditorGUILayout.TextField("\"protoc\" Path", _protocPath);
 
@@ -28,40 +91,7 @@ public class ProtosWindow : EditorWindow
 
         if (GUILayout.Button("Generate"))
         {
-            IEnumerable<string> files = Directory.EnumerateFiles(_protosFolder)
-                .Where(file => file.EndsWith(".proto"));
-
-            string outputFolder = Path.Combine(Application.dataPath, "Scripts", "IO", "Models");
-
-            ProcessStartInfo startInfo = new ProcessStartInfo()
-            {
-                FileName = _protocPath,
-                Arguments = string.Format(
-                    "--proto_path={0} --csharp_out={1} {2}",
-                    _protosFolder,
-                    outputFolder,
-                    string.Join(" ", files)),
-
-                RedirectStandardError = true,
-                RedirectStandardOutput = true,
-                UseShellExecute = false,
-            };
-
-            Process process = Process.Start(startInfo);
-            process.WaitForExit();
-
-            string standardOutput = process.StandardOutput.ReadToEnd();
-            string standardError = process.StandardError.ReadToEnd();
-
-            if (standardOutput != "")
-            {
-                UnityEngine.Debug.Log(standardOutput);
-            }
-
-            if (standardError != "")
-            {
-                UnityEngine.Debug.Log(standardError);
-            }
+            ProtosWindow.Generate(_protosFolder, _protocPath);
         }
     }
 }
