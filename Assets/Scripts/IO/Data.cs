@@ -5,7 +5,7 @@ using MM26.IO.Models;
 
 namespace MM26.IO
 {
-    [CreateAssetMenu(menuName = "Services/Data", fileName = "Data")]
+    [CreateAssetMenu(menuName = "IO/Data", fileName = "Data")]
     public class Data : Resettable
     {
         public GameState GameState { get; set; }

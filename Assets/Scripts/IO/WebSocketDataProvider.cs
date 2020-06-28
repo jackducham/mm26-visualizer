@@ -5,7 +5,7 @@ using MM26.IO.Models;
 
 namespace MM26.IO
 {
-    [CreateAssetMenu(menuName = "Data/Web Socket Data Provider", fileName = "WebsocketDataProvider")]
+    [CreateAssetMenu(menuName = "IO/Web Socket Data Provider", fileName = "WebsocketDataProvider")]
     public class WebSocketDataProvider : DataProvider
     {
         [Header("Settings")]

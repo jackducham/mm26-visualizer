@@ -19,7 +19,7 @@ namespace MM26
         DataProvider _dataProvider = null;
 
         [SerializeField]
-        Resets _resetsOnExit = null;
+        Data _data = null;
 
         [Header("Stages")]
         [SerializeField]
@@ -44,7 +44,8 @@ namespace MM26
             _sceneLifeCycle.MapCreated.RemoveListener(this.OnMapCreated);
             _sceneLifeCycle.TokensCreated.RemoveListener(this.OnTokensCreated);
 
-            _resetsOnExit.Reset();
+            _data.Reset();
+            _dataProvider.Reset();
         }
 
         private void Start()

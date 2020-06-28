@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
+using UnityEngine.Tilemaps;
 using MM26.IO;
+using MM26.IO.Models;
 
 namespace MM26.Map
 {
     public class MapCreator : MonoBehaviour
     {
+        [SerializeField]
+        private string _board = "pvp";
+
         [Header("Services")]
         [SerializeField]
         SceneLifeCycle  _sceneLifeCycle = null;
@@ -24,7 +29,9 @@ namespace MM26.Map
 
         private void OnCreateMap()
         {
-            Debug.Log("Create Maps");
+            Board board = _data.GameState.BoardNames[_board];
+            Debug.Log(board);
+
             _sceneLifeCycle.FinishCreatingMap();
         }
     }
