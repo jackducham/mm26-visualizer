@@ -13,7 +13,14 @@ namespace MM26
 
         public void Connect()
         {
+            
+        }
 
+        public override void Start()
+        {
+            Debug.Log("Start Websocket Data Provider");
+            base.Start();
+            this.CanStart.Invoke();
         }
     }
 }

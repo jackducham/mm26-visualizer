@@ -32,17 +32,17 @@ namespace MM26
 
         public void StartCreatingMap()
         {
-            Debug.Log("Start Scene");
+            _createMap.Invoke();
         }
 
         public void StartCreatingTokens()
         {
-
+            _createTokens.Invoke();
         }
 
         public void StartPlaying()
         {
-
+            _play.Invoke();
         }
 
         public void FinishCreatingMap()

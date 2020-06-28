@@ -17,6 +17,9 @@ namespace MM26
         [SerializeField]
         DataProvider _dataProvider = null;
 
+        [SerializeField]
+        Resets _resetsOnExit = null;
+
         [Header("Stages")]
         [SerializeField]
         bool _createMap = true;
@@ -29,21 +32,58 @@ namespace MM26
 
         private void OnEnable()
         {
-            _dataProvider.CanBegin.AddListener(this.OnCanBegin);
+            _dataProvider.CanStart.AddListener(this.OnCanStart);
+            _sceneLifeCycle.MapCreated.AddListener(this.OnMapCreated);
+            _sceneLifeCycle.TokensCreated.AddListener(this.OnTokensCreated);
         }
 
         private void OnDisable()
         {
-            _dataProvider.CanBegin.RemoveListener(this.OnCanBegin);
+            _dataProvider.CanStart.RemoveListener(this.OnCanStart);
+            _sceneLifeCycle.MapCreated.RemoveListener(this.OnMapCreated);
+            _sceneLifeCycle.TokensCreated.RemoveListener(this.OnTokensCreated);
         }
 
         private void Start()
         {
+            _resetsOnExit.Reset();
             _dataProvider.Start();
         }
 
-        private void OnCanBegin()
+        private void OnCanStart()
         {
+            if (_createMap)
+            {
+                _sceneLifeCycle.StartCreatingMap();
+            }
+            else if (_createTokens)
+            {
+                _sceneLifeCycle.StartCreatingTokens();
+            }
+            else if (_play)
+            {
+                _sceneLifeCycle.StartPlaying();
+            }
+        }
+
+        private void OnMapCreated()
+        {
+            if (_createTokens)
+            {
+                _sceneLifeCycle.StartCreatingTokens();
+            }
+            else if (_play)
+            {
+                _sceneLifeCycle.StartPlaying();
+            }
+        }
+
+        private void OnTokensCreated()
+        {
+            if (_play)
+            {
+                _sceneLifeCycle.StartPlaying();
+            }
         }
     }
 }

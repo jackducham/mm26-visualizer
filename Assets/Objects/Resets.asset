@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Resets
   m_EditorClassIdentifier: 
   _resets:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 10eb0f1c65a9f486fb08761d63b81067, type: 2}
+  - {fileID: 11400000, guid: 745c654c2381940cfa52e27f2453693a, type: 2}

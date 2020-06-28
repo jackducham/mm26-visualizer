@@ -10,11 +10,11 @@ namespace MM26
 
         [Header("Events")]
         [SerializeField]
-        UnityEvent _canBegin = null;
+        UnityEvent _canStart = null;
 
-        public UnityEvent CanBegin => _canBegin;
+        public UnityEvent CanStart => _canStart;
 
-        public void Start()
+        public virtual void Start()
         {
         }
 

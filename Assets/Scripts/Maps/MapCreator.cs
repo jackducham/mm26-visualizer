@@ -23,6 +23,7 @@ namespace MM26.Map
 
         private void OnCreateMap()
         {
+            Debug.Log("Create Maps");
             _sceneLifeCycle.FinishCreatingMap();
         }
     }

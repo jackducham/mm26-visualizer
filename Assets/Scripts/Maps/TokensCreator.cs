@@ -23,6 +23,7 @@ namespace MM26.Map
 
         private void OnCreateTokens()
         {
+            Debug.Log("Create Tokens");
             _sceneLifeCycle.FinishCreatingTokens();
         }
     }
