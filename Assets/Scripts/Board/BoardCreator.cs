@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.Tilemaps;
-using MM26.IO;
-using MM26.IO.Models;
 
 namespace MM26.Board
 {
+    using PBoard = MM26.IO.Models.Board;
+
     public class BoardCreator : MonoBehaviour
     {
         [SerializeField]
@@ -15,7 +15,13 @@ namespace MM26.Board
         SceneLifeCycle  _sceneLifeCycle = null;
 
         [SerializeField]
-        Data _data = null;
+        IO.Data _data = null;
+
+        [SerializeField]
+        Tilemap _tilemap = null;
+
+        [SerializeField]
+        Tile _tile = null;
 
         private void OnEnable()
         {
@@ -29,9 +35,10 @@ namespace MM26.Board
 
         private void OnCreateMap()
         {
-            Debug.Log("Create Board");
-            IO.Models.Board board = _data.GameState.BoardNames[_board];
-            Debug.Log(board);
+            var board = _data.GameState.BoardNames[_board];
+
+            // TODO: set tils here!
+            _tilemap.SetTile(new Vector3Int(), _tile);
 
             _sceneLifeCycle.BoardCreated.Invoke();
         }

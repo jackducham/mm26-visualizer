@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using MM26.IO;
 using MM26.IO.Models;
 
 namespace MM26.Board.Tests
@@ -8,7 +7,7 @@ namespace MM26.Board.Tests
     public class TestBoardDataProvider : MonoBehaviour
     {
         [SerializeField]
-        Data _data = null;
+        IO.Data _data = null;
 
         [SerializeField]
         SceneLifeCycle _sceneLifeCycle = null;
