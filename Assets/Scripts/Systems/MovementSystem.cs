@@ -20,8 +20,6 @@ namespace MM26.Systems
         {
             this.UpdateMessages();
 
-            float deltaTime = Time.deltaTime;
-
             this.Entities.ForEach((IdComponent id, Transform transform, MovementComponent movement) =>
             {
                 MovementTask task = tasksToFinish[id.ID] as MovementTask;

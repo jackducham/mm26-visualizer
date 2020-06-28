@@ -9,7 +9,7 @@ namespace MM26.Systems
 {
     public class RotationSystem : ComponentSystem
     {
-        EntityQuery _query = null;
+        EntityQuery _query = default;
 
         Dictionary<int, RotationTask> tasksToFinish;
 
@@ -67,7 +67,7 @@ namespace MM26.Systems
                 {
                     var transformComponent = transformComponents[i];
 
-                    float rotAmt = rotationComponent.Speed * Time.deltaTime;
+                    float rotAmt = rotationComponent.Speed * Time.DeltaTime;
                     if (rotationComponent.amount < rotAmt)
                     {
                         rotAmt = rotationComponent.amount;
