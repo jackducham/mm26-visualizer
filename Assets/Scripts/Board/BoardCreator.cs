@@ -3,9 +3,9 @@ using UnityEngine.Tilemaps;
 using MM26.IO;
 using MM26.IO.Models;
 
-namespace MM26.Map
+namespace MM26.Board
 {
-    public class MapCreator : MonoBehaviour
+    public class BoardCreator : MonoBehaviour
     {
         [SerializeField]
         private string _board = "pvp";
@@ -19,21 +19,21 @@ namespace MM26.Map
 
         private void OnEnable()
         {
-            _sceneLifeCycle.CreateMap.AddListener(this.OnCreateMap);
+            _sceneLifeCycle.CreateBoard.AddListener(this.OnCreateMap);
         }
 
         private void OnDisable()
         {
-            _sceneLifeCycle.CreateMap.RemoveListener(this.OnCreateMap);
+            _sceneLifeCycle.CreateBoard.RemoveListener(this.OnCreateMap);
         }
 
         private void OnCreateMap()
         {
-            Debug.Log("Create map");
-            Board board = _data.GameState.BoardNames[_board];
+            Debug.Log("Create Board");
+            IO.Models.Board board = _data.GameState.BoardNames[_board];
             Debug.Log(board);
 
-            _sceneLifeCycle.FinishCreatingMap();
+            _sceneLifeCycle.BoardCreated.Invoke();
         }
     }
 }

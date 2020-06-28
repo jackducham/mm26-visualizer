@@ -3,20 +3,33 @@ using UnityEngine;
 using MM26.IO;
 using MM26.IO.Models;
 
-namespace MM26.Map.Tests
+namespace MM26.Board.Tests
 {
-    [CreateAssetMenu(menuName = "Maps/Test Board Data Provider", fileName = "TestBoardDataProvider")]
-    public class TestBoardDataProvider : DataProvider
+    public class TestBoardDataProvider : MonoBehaviour
     {
+        [SerializeField]
+        Data _data = null;
+
+        [SerializeField]
+        SceneLifeCycle _sceneLifeCycle = null;
+
         [SerializeField]
         TestBoard _testBoard = null;
 
-        public override void Start()
+        private void OnEnable()
         {
-            base.Start();
+            _sceneLifeCycle.FetchData.AddListener(this.OnFetchData);
+        }
 
+        private void OnDisable()
+        {
+            _sceneLifeCycle.FetchData.RemoveListener(this.OnFetchData);
+        }
+
+        private void OnFetchData()
+        {
             var state = new GameState();
-            var board = new Board();
+            var board = new IO.Models.Board();
 
             board.Columns = _testBoard.Columns;
             board.Rows = _testBoard.Rows;
@@ -31,8 +44,8 @@ namespace MM26.Map.Tests
 
             state.BoardNames.Add(_testBoard.BoardName, board);
 
-            this.Data.GameState = state;
-            this.CanStart.Invoke();
+            _data.GameState = state;
+            _sceneLifeCycle.DataFetched.Invoke();
         }
 
         private Tile.Types.TileType GetTileType(TestTileType testTileType)

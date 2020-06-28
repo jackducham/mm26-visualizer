@@ -15,77 +15,38 @@ namespace MM26
         [SerializeField]
         SceneLifeCycle _sceneLifeCycle = null;
 
-        [SerializeField]
-        DataProvider _dataProvider = null;
-
-        [SerializeField]
-        Data _data = null;
-
         [Header("Stages")]
-        [SerializeField]
-        bool _createMap = true;
-
-        [SerializeField]
-        bool _createTokens = true;
-
         [SerializeField]
         bool _play = true;
 
         private void OnEnable()
         {
-            _dataProvider.CanStart.AddListener(this.OnCanStart);
-            _sceneLifeCycle.MapCreated.AddListener(this.OnMapCreated);
-            _sceneLifeCycle.TokensCreated.AddListener(this.OnTokensCreated);
+            _sceneLifeCycle.BoardCreated.AddListener(this.OnBoardCreated);
+            _sceneLifeCycle.DataFetched.AddListener(this.OnDataFetched);
         }
 
         private void OnDisable()
         {
-            _dataProvider.CanStart.RemoveListener(this.OnCanStart);
-            _sceneLifeCycle.MapCreated.RemoveListener(this.OnMapCreated);
-            _sceneLifeCycle.TokensCreated.RemoveListener(this.OnTokensCreated);
-
-            _data.Reset();
-            _dataProvider.Reset();
+            _sceneLifeCycle.BoardCreated.RemoveListener(this.OnBoardCreated);
+            _sceneLifeCycle.DataFetched.RemoveListener(this.OnDataFetched);
+            _sceneLifeCycle.Reset.Invoke();
         }
 
         private void Start()
         {
-            _dataProvider.Start();
+            _sceneLifeCycle.FetchData.Invoke();
         }
 
-        private void OnCanStart()
+        private void OnDataFetched()
         {
-            if (_createMap)
-            {
-                _sceneLifeCycle.StartCreatingMap();
-            }
-            else if (_createTokens)
-            {
-                _sceneLifeCycle.StartCreatingTokens();
-            }
-            else if (_play)
-            {
-                _sceneLifeCycle.StartPlaying();
-            }
+            _sceneLifeCycle.CreateBoard.Invoke();
         }
 
-        private void OnMapCreated()
-        {
-            if (_createTokens)
-            {
-                _sceneLifeCycle.StartCreatingTokens();
-            }
-            else if (_play)
-            {
-                _sceneLifeCycle.StartPlaying();
-            }
-        }
-
-        private void OnTokensCreated()
+        private void OnBoardCreated()
         {
             if (_play)
             {
-                _sceneLifeCycle.StartPlaying();
+                _sceneLifeCycle.Play.Invoke();
             }
         }
     }

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace MM26.Map.Tests
+namespace MM26.Board.Tests
 {
     [CreateAssetMenu(fileName = "New Test Board", menuName = "Maps/Test Board")]
     public class TestBoard : ScriptableObject

@@ -12,18 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7bf526b2e15a47ccb204d9dc89553f2, type: 3}
   m_Name: SceneLifeCycle
   m_EditorClassIdentifier: 
-  _createMap:
+  _fetchData:
     m_PersistentCalls:
       m_Calls: []
-  _mapCreated:
+  _dataFetched:
     m_PersistentCalls:
       m_Calls: []
-  _createTokens:
+  _createBoard:
     m_PersistentCalls:
       m_Calls: []
-  _tokensCreated:
+  _boardCreated:
     m_PersistentCalls:
       m_Calls: []
   _play:
     m_PersistentCalls:
       m_Calls: []
+  _reset:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 10eb0f1c65a9f486fb08761d63b81067, type: 2}
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

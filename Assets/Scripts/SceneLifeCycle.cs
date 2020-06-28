@@ -8,51 +8,30 @@ namespace MM26
     {
         [Header("Events")]
         [SerializeField]
-        UnityEvent _createMap = null;
+        UnityEvent _fetchData = null;
 
         [SerializeField]
-        UnityEvent _mapCreated = null;
+        UnityEvent _dataFetched = null;
 
         [SerializeField]
-        UnityEvent _createTokens = null;
+        UnityEvent _createBoard = null;
 
         [SerializeField]
-        UnityEvent _tokensCreated = null;
+        UnityEvent _boardCreated = null;
 
         [SerializeField]
         UnityEvent _play = null;
 
-        public UnityEvent CreateMap => _createMap;
-        public UnityEvent MapCreated => _mapCreated;
+        [SerializeField]
+        UnityEvent _reset = null;
 
-        public UnityEvent CreateTokens => _createTokens;
-        public UnityEvent TokensCreated => _tokensCreated;
+        public UnityEvent FetchData => _fetchData;
+        public UnityEvent DataFetched => _dataFetched;
+
+        public UnityEvent CreateBoard => _createBoard;
+        public UnityEvent BoardCreated => _boardCreated;
 
         public UnityEvent Play => _play;
-
-        public void StartCreatingMap()
-        {
-            _createMap.Invoke();
-        }
-
-        public void StartCreatingTokens()
-        {
-            _createTokens.Invoke();
-        }
-
-        public void StartPlaying()
-        {
-            _play.Invoke();
-        }
-
-        public void FinishCreatingMap()
-        {
-            _mapCreated.Invoke();
-        }
-
-        public void FinishCreatingTokens()
-        {
-            _tokensCreated.Invoke();
-        }
+        public UnityEvent Reset => _reset;
     }
 }

@@ -1,12 +1,10 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.Events;
 using MM26.IO.Models;
 
 namespace MM26.IO
 {
-    [CreateAssetMenu(menuName = "IO/Web Socket Data Provider", fileName = "WebsocketDataProvider")]
-    public class WebSocketDataProvider : DataProvider
+    public class WebSocketDataProvider : MonoBehaviour
     {
         [Header("Settings")]
         [SerializeField]
@@ -15,30 +13,39 @@ namespace MM26.IO
         [SerializeField]
         private string _releaseUri = "";
 
-        [Header("Events")]
         [SerializeField]
-        private UnityEvent _connected = null;
+        private Data _data = null;
 
         [SerializeField]
-        private UnityEvent _failed = null;
+        private SceneLifeCycle _sceneLifeCycle = null;
 
         private WebSocketListener _listener = null;
 
-        public UnityEvent Connected => _connected;
-        public UnityEvent Failed => _failed;
+        private void OnEnable()
+        {
+            _sceneLifeCycle.FetchData.AddListener(this.OnFetchData);
+        }
 
-        public void Connect()
+        private void OnDisable()
+        {
+            _sceneLifeCycle.FetchData.RemoveListener(this.OnFetchData);
+        }
+
+        private void OnDestroy()
+        {
+            _listener.Dispose();
+        }
+
+        private void OnFetchData()
         {
             _listener = WebSocketListener.Platform;
 
             Action onConnection = () =>
             {
-                this.Connected.Invoke();
             };
 
             Action onError = () =>
             {
-                this.Failed.Invoke();
                 Debug.LogError("Failed");
             };
 
@@ -51,34 +58,16 @@ namespace MM26.IO
 #endif
         }
 
-        public override void Start()
-        {
-            base.Start();
-
-            if (_listener == null)
-            {
-                this.Connect();
-            }
-        }
-
-        public override void Reset()
-        {
-            base.Reset();
-
-            _listener.Dispose();
-            _listener = null;
-        }
-
         private void OnMessage(object sender, byte[] message)
         {
-            if (this.Data.GameState == null)
+            if (_data.GameState == null)
             {
-                this.Data.GameState = GameState.Parser.ParseFrom(message);
-                this.CanStart.Invoke();
+                _data.GameState = GameState.Parser.ParseFrom(message);
+                _sceneLifeCycle.DataFetched.Invoke();
             }
             else
             {
-                this.Data.GameChanges.Enqueue(GameChange.Parser.ParseFrom(message));
+                _data.GameChanges.Enqueue(GameChange.Parser.ParseFrom(message));
             }
         }
     }

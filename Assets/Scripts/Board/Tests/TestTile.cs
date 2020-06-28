@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MM26.Map.Tests
+namespace MM26.Board.Tests
 {
     [Serializable]
     public enum TestTileType
