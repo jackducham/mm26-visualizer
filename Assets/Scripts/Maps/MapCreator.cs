@@ -29,6 +29,7 @@ namespace MM26.Map
 
         private void OnCreateMap()
         {
+            Debug.Log("Create map");
             Board board = _data.GameState.BoardNames[_board];
             Debug.Log(board);
 
