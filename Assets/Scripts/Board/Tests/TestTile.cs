@@ -1,4 +1,5 @@
 ﻿using System;
+using MM26.IO.Models;
 
 namespace MM26.Board.Tests
 {
@@ -18,6 +19,6 @@ namespace MM26.Board.Tests
         /// <summary>
         /// tile type (currently not in use)
         /// </summary>
-        public TestTileType TileType;
+        public Tile.Types.TileType TileType;
     }
 }

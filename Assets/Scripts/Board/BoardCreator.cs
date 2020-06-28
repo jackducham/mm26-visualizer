@@ -10,6 +10,10 @@ namespace MM26.Board
         [SerializeField]
         private string _board = "pvp";
 
+        [Header("Tiles")]
+        [SerializeField]
+        Tile _tile = null;
+
         [Header("Services")]
         [SerializeField]
         SceneLifeCycle  _sceneLifeCycle = null;
@@ -17,11 +21,9 @@ namespace MM26.Board
         [SerializeField]
         IO.Data _data = null;
 
+        [Header("Others")]
         [SerializeField]
         Tilemap _tilemap = null;
-
-        [SerializeField]
-        Tile _tile = null;
 
         private void OnEnable()
         {

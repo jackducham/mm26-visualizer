@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 using MM26.IO.Models;
 
 namespace MM26.IO
@@ -8,10 +9,12 @@ namespace MM26.IO
     {
         [Header("Settings")]
         [SerializeField]
-        private string _debugUri = "";
+        private string _editorUri = "ws://localhost:5000/visualizer";
 
         [SerializeField]
-        private string _releaseUri = "";
+#pragma warning disable 414
+        private string _buildUri = "";
+#pragma warning restore 414
 
         [SerializeField]
         private Data _data = null;
@@ -52,7 +55,7 @@ namespace MM26.IO
             _listener.NewMessage += this.OnMessage;
 
 #if UNITY_EDITOR
-            _listener.Connect(new Uri(_debugUri), onConnection, onError);
+            _listener.Connect(new Uri(_editorUri), onConnection, onError);
 #else
             _listener.Connect(new Uri(_releaseUri), onConnection, onError);
 #endif

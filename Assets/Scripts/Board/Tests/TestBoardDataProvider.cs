@@ -37,7 +37,7 @@ namespace MM26.Board.Tests
             {
                 board.Grid.Add(new Tile()
                 {
-                    TileType = this.GetTileType(tile.TileType)
+                    TileType = tile.TileType
                 });
             }
 
@@ -45,23 +45,6 @@ namespace MM26.Board.Tests
 
             _data.GameState = state;
             _sceneLifeCycle.DataFetched.Invoke();
-        }
-
-        private Tile.Types.TileType GetTileType(TestTileType testTileType)
-        {
-            switch (testTileType)
-            {
-                case TestTileType.Blank:
-                    return Tile.Types.TileType.Blank;
-                case TestTileType.Impassible:
-                    return Tile.Types.TileType.Impassible;
-                case TestTileType.Portal:
-                    return Tile.Types.TileType.Portal;
-                case TestTileType.Void:
-                    return Tile.Types.TileType.Void;
-                default:
-                    throw new ArgumentException(string.Format("Unable to Resolve {0}", testTileType));
-            }
         }
     }
 }

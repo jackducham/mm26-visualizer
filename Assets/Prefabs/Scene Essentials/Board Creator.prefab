@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6099384395167837155}
   - component: {fileID: 6099384395167837154}
   m_Layer: 0
-  m_Name: Map Creator
+  m_Name: Board Creator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,5 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d963d50d14846b6a145b2bf154ea38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _board: pvp
+  _tile: {fileID: 11400000, guid: 51a8ca4ed3d6b5f4d8c589774dd4ca7f, type: 2}
   _sceneLifeCycle: {fileID: 11400000, guid: e5a30a7b0ac1e4833a29854a0f787d12, type: 2}
   _data: {fileID: 11400000, guid: 10eb0f1c65a9f486fb08761d63b81067, type: 2}
+  _tilemap: {fileID: 0}

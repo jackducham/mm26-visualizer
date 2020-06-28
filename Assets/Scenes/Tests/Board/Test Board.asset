@@ -15,4 +15,5 @@ MonoBehaviour:
   BoardName: pvp
   Columns: 0
   Rows: 0
-  Grid: []
+  Grid:
+  - TileType: 0
