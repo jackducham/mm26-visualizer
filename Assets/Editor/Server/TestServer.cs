@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Google.Protobuf;
+using UnityEngine;
 
 /// <summary>
 /// Test server

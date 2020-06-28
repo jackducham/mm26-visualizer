@@ -6,21 +6,38 @@ using UnityEngine;
 
 namespace MM26.IO
 {
-#if UNITY_STANDALONE
-    internal sealed class WebSocketListener: IDisposable
+    public abstract class WebSocketListener: IDisposable
     {
         /// <summary>
         /// Called when a new message has been received. May run on a
         /// separate thread!
         /// </summary>
-        internal event EventHandler<byte[]> NewMessage;
+        public EventHandler<byte[]> NewMessage;
+        public abstract void Connect(Uri uri, Action onConnection, Action onError);
 
+        public virtual void Dispose()
+        {
+        }
+
+        public static WebSocketListener Platform
+        {
+            get
+            {
+                return new StandaloneWebSocketListener();
+            }
+        }
+    }
+
+#if UNITY_STANDALONE
+    public sealed class StandaloneWebSocketListener: WebSocketListener
+    {
         bool _idle = true;
         ClientWebSocket _client = new ClientWebSocket();
         Buffer _buffer = new Buffer();
 
-        public void Dispose()
+        public override void Dispose()
         {
+            base.Dispose();
             _client.Dispose();
         }
 
@@ -28,7 +45,7 @@ namespace MM26.IO
         /// Connect to an uri
         /// </summary>
         /// <param name="uri">the uri to connect websocket to</param>
-        internal void Connect(Uri uri)
+        public void Connect(Uri uri)
         {
             this.Connect(uri, () => { }, () => { });
         }
@@ -39,7 +56,7 @@ namespace MM26.IO
         /// <param name="uri">the uri to connect websocket to</param>
         /// <param name="onConnection">called after connection</param>
         /// <param name="onFailure">called if failed</param>
-        internal void Connect(Uri uri, Action onConnection, Action onFailure)
+        public override void Connect(Uri uri, Action onConnection, Action onFailure)
         {
             if (_idle)
             {
@@ -54,7 +71,7 @@ namespace MM26.IO
                             return;
                         }
 
-                        //onConnection();
+                        onConnection();
                         await this.OnConnect();
                     });
 

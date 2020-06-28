@@ -7,16 +7,17 @@ public class TestServerScenario : TestScenario
     {
         var state = new GameState()
         {
-            StateId = 0
+            StateId = 17
         };
 
         server.SetState(state);
 
-        var change = new GameChange()
+        for (int i = 0; i < 18; i++)
         {
-            ChangeId = 0
-        };
-
-        server.Add(change);
+            server.Add(new GameChange()
+            {
+                ChangeId = i
+            });
+        }
     }
 }

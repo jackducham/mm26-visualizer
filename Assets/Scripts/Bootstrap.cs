@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using MM26.IO;
 
 namespace MM26
 {
@@ -10,7 +11,7 @@ namespace MM26
         private string _mainScene = "Main";
 
         [SerializeField]
-        private WebsocketDataProvider _websocketDataProvider = null;
+        private WebSocketDataProvider _websocketDataProvider = null;
 
         private AsyncOperation _loadingOperation = null;
 

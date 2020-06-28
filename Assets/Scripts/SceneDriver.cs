@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using MM26.IO;
 
 namespace MM26
 {
@@ -42,11 +43,12 @@ namespace MM26
             _dataProvider.CanStart.RemoveListener(this.OnCanStart);
             _sceneLifeCycle.MapCreated.RemoveListener(this.OnMapCreated);
             _sceneLifeCycle.TokensCreated.RemoveListener(this.OnTokensCreated);
+
+            _resetsOnExit.Reset();
         }
 
         private void Start()
         {
-            _resetsOnExit.Reset();
             _dataProvider.Start();
         }
 
