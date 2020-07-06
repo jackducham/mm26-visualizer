@@ -8,32 +8,32 @@ namespace MM26.Board
 
     public class BoardCreator : MonoBehaviour
     {
-        [SerializeField]
-        private string _board = "pvp";
-
         [Header("Tiles")]
         [SerializeField]
-        Tile _voidTile = null;
+        private Tile _voidTile = null;
 
         [SerializeField]
-        Tile _portalTile = null;
+        private Tile _portalTile = null;
 
         [SerializeField]
-        Tile _impassibleTile = null;
+        private Tile _impassibleTile = null;
 
         [SerializeField]
-        Tile _blankTile = null;
+        private Tile _blankTile = null;
 
         [Header("Services")]
         [SerializeField]
-        SceneLifeCycle  _sceneLifeCycle = null;
+        private SceneConfiguration _sceneConfiguration = null;
 
         [SerializeField]
-        IO.Data _data = null;
+        private SceneLifeCycle  _sceneLifeCycle = null;
+
+        [SerializeField]
+        private IO.Data _data = null;
 
         [Header("Others")]
         [SerializeField]
-        Tilemap _tilemap = null;
+        private Tilemap _tilemap = null;
 
         private void OnEnable()
         {
@@ -47,9 +47,16 @@ namespace MM26.Board
 
         private void OnCreateMap()
         {
-            var board = _data.GameState.BoardNames[_board];
+            this.CreateMap();
+            this.CreateCharacters();
 
-            // TODO: set tils here!
+            _sceneLifeCycle.BoardCreated.Invoke();
+        }
+
+        private void CreateMap()
+        {
+            var board = _data.GameState.BoardNames[_sceneConfiguration.BoardName];
+
             for (int y = 0; y < board.Rows; y++)
             {
                 for (int x = 0; x < board.Columns; x++)
@@ -82,8 +89,11 @@ namespace MM26.Board
                     _tilemap.SetTile(new Vector3Int(x, y, 0), tile);
                 }
             }
+        }
 
-            _sceneLifeCycle.BoardCreated.Invoke();
+        private void CreateCharacters()
+        {
+
         }
     }
 }

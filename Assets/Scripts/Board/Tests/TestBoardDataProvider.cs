@@ -41,7 +41,7 @@ namespace MM26.Board.Tests
                 });
             }
 
-            state.BoardNames.Add(_testBoard.BoardName, board);
+            state.BoardNames.Add(_testBoard.Name, board);
 
             _data.GameState = state;
             _sceneLifeCycle.DataFetched.Invoke();

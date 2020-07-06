@@ -43,9 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349a6d2ed19bc47a18100b1d102d53b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneLifeCycle: {fileID: 11400000, guid: e5a30a7b0ac1e4833a29854a0f787d12, type: 2}
-  _dataProvider: {fileID: 11400000, guid: 745c654c2381940cfa52e27f2453693a, type: 2}
-  _data: {fileID: 11400000, guid: 10eb0f1c65a9f486fb08761d63b81067, type: 2}
-  _createMap: 1
-  _createTokens: 1
+  _sceneLifeCycle: {fileID: 0}
   _play: 1

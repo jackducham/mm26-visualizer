@@ -1,15 +1,10 @@
 ﻿using UnityEngine;
-using MM26.IO;
 
 namespace MM26
 {
-    public enum SceneState
-    {
-        CreatingMap,
-        CreatingTokens,
-        Playing
-    }
-
+    /// <summary>
+    /// Drives various stages of a life cycle object
+    /// </summary>
     public class SceneDriver : MonoBehaviour
     {
         [SerializeField]

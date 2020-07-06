@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 0
 --- !u!196 &4
@@ -210,11 +211,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5018251443507735758, guid: 265617c07845e47018a2a1d32b15454d,
-        type: 3}
-      propertyPath: m_Name
-      value: Driver
-      objectReference: {fileID: 0}
     - target: {fileID: 5018251443507735744, guid: 265617c07845e47018a2a1d32b15454d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -270,6 +266,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5018251443507735758, guid: 265617c07845e47018a2a1d32b15454d,
+        type: 3}
+      propertyPath: m_Name
+      value: Driver
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018251443507735759, guid: 265617c07845e47018a2a1d32b15454d,
+        type: 3}
+      propertyPath: _sceneLifeCycle
+      value: 
+      objectReference: {fileID: 11400000, guid: e5a30a7b0ac1e4833a29854a0f787d12,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 265617c07845e47018a2a1d32b15454d, type: 3}
 --- !u!1001 &6099384396637294796
@@ -284,6 +291,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: Map Creator
       objectReference: {fileID: 0}
+    - target: {fileID: 6099384395167837154, guid: 7fd854d829837454784ec17a6269900a,
+        type: 3}
+      propertyPath: _sceneConfiguration
+      value: 
+      objectReference: {fileID: 11400000, guid: 00ed0f4cb1ec244b2a9abb5ad4096e4d,
+        type: 2}
+    - target: {fileID: 6099384395167837154, guid: 7fd854d829837454784ec17a6269900a,
+        type: 3}
+      propertyPath: _sceneLifeCycle
+      value: 
+      objectReference: {fileID: 11400000, guid: e5a30a7b0ac1e4833a29854a0f787d12,
+        type: 2}
+    - target: {fileID: 6099384395167837154, guid: 7fd854d829837454784ec17a6269900a,
+        type: 3}
+      propertyPath: _data
+      value: 
+      objectReference: {fileID: 11400000, guid: 10eb0f1c65a9f486fb08761d63b81067,
+        type: 2}
     - target: {fileID: 6099384395167837155, guid: 7fd854d829837454784ec17a6269900a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -348,11 +373,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8066164496049863010, guid: 0a39c8c40c0dc419e870e66c787b9cdb,
-        type: 3}
-      propertyPath: m_Name
-      value: WebSocket Data Provider
-      objectReference: {fileID: 0}
     - target: {fileID: 8066164496049863004, guid: 0a39c8c40c0dc419e870e66c787b9cdb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -407,6 +427,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8066164496049863010, guid: 0a39c8c40c0dc419e870e66c787b9cdb,
+        type: 3}
+      propertyPath: m_Name
+      value: WebSocket Data Provider
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a39c8c40c0dc419e870e66c787b9cdb, type: 3}

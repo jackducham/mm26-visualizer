@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 namespace MM26
 {
-    [CreateAssetMenu(menuName = "Scene Life Cycle", fileName = "SceneLifeCycle")]
+    [CreateAssetMenu(menuName = "Scene Life Cycle", fileName = "Scene Life Cycle")]
     public class SceneLifeCycle : ScriptableObject
     {
         [Header("Events")]
