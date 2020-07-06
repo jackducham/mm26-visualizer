@@ -5,6 +5,8 @@ namespace MM26.Board
 {
     using PTileType = MM26.IO.Models.Tile.Types.TileType;
     using PTile = MM26.IO.Models.Tile;
+    using PCharacter = MM26.IO.Models.Character;
+    using PPosition = MM26.IO.Models.Position;
 
     public class BoardCreator : MonoBehaviour
     {
@@ -93,7 +95,16 @@ namespace MM26.Board
 
         private void CreateCharacters()
         {
+            foreach (var entry in _data.GameState.PlayerNames)
+            {
+                PCharacter character = entry.Value.Character;
+                PPosition position = character.Position;
 
+                if (position.BoardId != _sceneConfiguration.BoardName)
+                {
+                    continue;
+                }
+            }
         }
     }
 }

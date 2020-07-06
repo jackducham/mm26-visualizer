@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace MM26.Board.Tests
 {
-    [CreateAssetMenu(fileName = "New Test Board", menuName = "Board/Test Board")]
-    public class TestBoard : ScriptableObject
+    [Serializable]
+    public class TestBoard
     {
         /// <summary>
         /// Name of the map
@@ -24,5 +25,12 @@ namespace MM26.Board.Tests
         /// List of tile coordinates (z is tile type)
         /// </summary>
         public TestTile[] Grid;
+    }
+
+    [CreateAssetMenu(fileName = "New Test Board", menuName = "Board/Test Board")]
+    public class TestGameState : ScriptableObject
+    {
+        public TestBoard Board = null;
+        public TestPlayer[] Players = null;
     }
 }
