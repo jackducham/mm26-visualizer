@@ -3,18 +3,33 @@ using UnityEngine;
 
 namespace MM26.ECS
 {
+    /// <summary>
+    /// The mailbox serves as a mediator between the Tasks and the actual
+    /// systems. Tasks are logged in the <c>Mailbox</c> by the
+    /// <c>TasksManager</c> and read off from here by systems.
+    /// </summary>
     [CreateAssetMenu(fileName = "Mailbox", menuName = "ECS/Mailbox")]
     public class Mailbox : ScriptableObject
     {
+        /// <summary>
+        /// Map objects to their task types
+        /// </summary>
         private Dictionary<object, List<string>> _subscriptionMapping = null;
+
+        /// <summary>
+        /// Map task types to tasks
+        /// </summary>
         private Dictionary<string, List<Task>> _mailbox = null;
         private List<Task> _potentialTasksToDelete = null;
 
-        protected Mailbox()
+        private void OnEnable()
         {
             this.Reset();
         }
 
+        /// <summary>
+        /// Called to reset the mailbox at a scene's end
+        /// </summary>
         public void Reset()
         {
             _subscriptionMapping = new Dictionary<object, List<string>>();
@@ -22,7 +37,12 @@ namespace MM26.ECS
             _potentialTasksToDelete = new List<Task>();
         }
 
-        public void SubscribeToTaskType(object o, string taskType)
+        /// <summary>
+        /// Subscribe a subscriber object to a task type
+        /// </summary>
+        /// <param name="o">the subscriber object</param>
+        /// <typeparam name="T">the task type</typeparam>
+        public void SubscribeToTaskType<T>(object o) where T : Task
         {
             List<string> existingKey = null;
 
@@ -30,7 +50,8 @@ namespace MM26.ECS
             {
                 existingKey = _subscriptionMapping[o] = new List<string>();
             }
-            existingKey.Add(taskType);
+
+            existingKey.Add(typeof(T).Name);
         }
 
         public void SendTask(Task task)
@@ -44,10 +65,18 @@ namespace MM26.ECS
             tasks.Add(task);
         }
 
-        public List<Task> GetSubscribedTasksForType(object o, string msgType)
+        /// <summary>
+        /// Get tasks for a registered subscriber object
+        /// </summary>
+        /// <param name="o">the subscriber object</param>
+        /// <typeparam name="T">the task type</typeparam>
+        /// <returns></returns>
+        public List<Task> GetSubscribedTasksForType<T>(object o) where T : Task
         {
             List<string> msgTypes = null;
             List<Task> tasks = null;
+
+            string msgType = typeof(T).Name;
 
             if (_subscriptionMapping.TryGetValue(o, out msgTypes))
             {

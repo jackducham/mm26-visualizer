@@ -23,12 +23,12 @@ namespace MM26.Systems
                 typeof(RotationComponent),
                 typeof(IdComponent));
             _mailbox = Resources.Load<Mailbox>("Objects/Mailbox");
-            _mailbox.SubscribeToTaskType(this, RotationTask.Type);
+            _mailbox.SubscribeToTaskType<RotationTask>(this);
         }
 
         private void UpdateMessages()
         {
-            List<Task> messages = _mailbox.GetSubscribedTasksForType(this, RotationTask.Type);
+            List<Task> messages = _mailbox.GetSubscribedTasksForType<RotationTask>(this);
 
             if (messages == null)
             {
