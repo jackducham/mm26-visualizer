@@ -23,6 +23,10 @@ namespace MM26.Board
         [SerializeField]
         private Tile _blankTile = null;
 
+        [Header("Players")]
+        [SerializeField]
+        private GameObject _playerPrefab = null;
+
         [Header("Services")]
         [SerializeField]
         private SceneConfiguration _sceneConfiguration = null;
@@ -50,7 +54,7 @@ namespace MM26.Board
         private void OnCreateMap()
         {
             this.CreateMap();
-            this.CreateCharacters();
+            this.CreatePlayers();
 
             _sceneLifeCycle.BoardCreated.Invoke();
         }
@@ -93,7 +97,7 @@ namespace MM26.Board
             }
         }
 
-        private void CreateCharacters()
+        private void CreatePlayers()
         {
             foreach (var entry in _data.GameState.PlayerNames)
             {
@@ -104,6 +108,11 @@ namespace MM26.Board
                 {
                     continue;
                 }
+
+                Vector3 wordPosition = _tilemap.GetCellCenterWorld(new Vector3Int(position.X, position.Y, 0));
+                GameObject player = Instantiate(_playerPrefab, wordPosition, new Quaternion());
+
+                Debug.Log(player.GetInstanceID());
             }
         }
     }

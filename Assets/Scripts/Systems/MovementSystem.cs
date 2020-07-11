@@ -10,10 +10,12 @@ namespace MM26.Systems
     public class MovementSystem : ComponentSystem
     {
         Dictionary<int, Task> tasksToFinish = new Dictionary<int, Task>();
+        private Mailbox _mailbox = null;
 
         protected override void OnCreate()
         {
-            Mailbox.Instance.SubscribeToTaskType(this, MovementTask.Type);
+            _mailbox = Resources.Load<Mailbox>("Objects/Mailbox");
+            _mailbox.SubscribeToTaskType(this, MovementTask.Type);
         }
 
         protected override void OnUpdate()
@@ -32,7 +34,7 @@ namespace MM26.Systems
 
         private void UpdateMessages()
         {
-            List<Task> messages = Mailbox.Instance.GetSubscribedTasksForType(this, MovementTask.Type);
+            List<Task> messages = _mailbox.GetSubscribedTasksForType(this, MovementTask.Type);
 
             if (messages == null)
             {

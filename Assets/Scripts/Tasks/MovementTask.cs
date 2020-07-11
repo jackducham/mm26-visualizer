@@ -9,7 +9,7 @@ namespace MM26.Tasks
 
         public Transform Destination;
 
-        public MovementTask(int id, Transform destination): base(id)
+        public MovementTask(int id, Mailbox mailbox, Transform destination) : base(id, mailbox)
         {
             this.Destination = destination;
         }

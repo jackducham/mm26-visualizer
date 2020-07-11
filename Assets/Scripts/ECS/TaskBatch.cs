@@ -78,7 +78,7 @@ namespace MM26.ECS
         {
             for (int i = 0; i < _tasksSet.Count; i++)
             {
-                Mailbox.Instance.SendTask(_tasksSet[i]);
+                // Mailbox.Instance.SendTask(_tasksSet[i]);
 
             }
             IsStarted = true;

@@ -9,18 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70e7e37fde553104193a353b78e0baae, type: 3}
-  m_Name: State
+  m_Script: {fileID: 11500000, guid: 64430ae29ccb28f41866d8d50bb6f093, type: 3}
+  m_Name: Mailbox
   m_EditorClassIdentifier: 
-  Board:
-    Name: pvp
-    Columns: 2
-    Rows: 1
-    Grid:
-    - TileType: 0
-    - TileType: 2
-  Players:
-  - Name: Test
-    Board: pvp
-    X: 0
-    Y: 0

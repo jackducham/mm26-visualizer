@@ -1,4 +1,6 @@
-﻿namespace MM26.ECS
+﻿using UnityEngine;
+
+namespace MM26.ECS
 {
     /// <summary>Class <c>Task</c>:
     /// Represents a task on a specific entity for systems to complete.
@@ -7,10 +9,10 @@
     ///
     public abstract class Task
     {
+        public int EntityID;
+        public Mailbox Mailbox { get; private set; }
 
         private static int _nextId;
-        public int EntityID;
-
         private readonly int _taskId;
 
         /// <summary>
@@ -25,10 +27,12 @@
         /// <returns>True if the task is marked as started; false otherwise.</returns>
         public bool IsStarted { get; set; }
 
-        public Task(int id)
+        public Task(int id, Mailbox mailbox)
         {
             this.EntityID = id;
-            IsFinished = false;
+            this.Mailbox = mailbox;
+            this.IsFinished = false;
+
             _taskId = _nextId++;
         }
 
@@ -47,7 +51,7 @@
         public void Finish()
         {
             IsFinished = true;
-            Mailbox.Instance.RemoveTask(this);
+            this.Mailbox.RemoveTask(this);
         }
 
         /// <summary>

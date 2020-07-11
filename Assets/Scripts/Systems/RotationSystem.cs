@@ -10,23 +10,25 @@ namespace MM26.Systems
     public class RotationSystem : ComponentSystem
     {
         EntityQuery _query = default;
-
         Dictionary<int, RotationTask> tasksToFinish;
+        private Mailbox _mailbox = null;
 
         protected override void OnCreate()
         {
             base.OnCreate();
 
             tasksToFinish = new Dictionary<int, RotationTask>();
-            _query = GetEntityQuery(typeof(Transform),
-                                    typeof(RotationComponent),
-                                    typeof(IdComponent));
-            Mailbox.Instance.SubscribeToTaskType(this, RotationTask.Type);
+            _query = GetEntityQuery(
+                typeof(Transform),
+                typeof(RotationComponent),
+                typeof(IdComponent));
+            _mailbox = Resources.Load<Mailbox>("Objects/Mailbox");
+            _mailbox.SubscribeToTaskType(this, RotationTask.Type);
         }
 
         private void UpdateMessages()
         {
-            List<Task> messages = Mailbox.Instance.GetSubscribedTasksForType(this, RotationTask.Type);
+            List<Task> messages = _mailbox.GetSubscribedTasksForType(this, RotationTask.Type);
 
             if (messages == null)
             {
@@ -80,7 +82,7 @@ namespace MM26.Systems
                 }
             }
             // Entities.ForEach((Transform transform, BoxRotationComponent component) =>
-            // {    
+            // {
             //     transform.Translate(Vector3.forward * Time.deltaTime * component.Speed);
             // });
         }

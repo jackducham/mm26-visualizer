@@ -1,16 +1,25 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace MM26.ECS
 {
-    public class Mailbox : Singleton<Mailbox>
+    [CreateAssetMenu(fileName = "Mailbox", menuName = "ECS/Mailbox")]
+    public class Mailbox : ScriptableObject
     {
-        private Dictionary<object, List<string>> _subscriptionMapping = new Dictionary<object, List<string>>();
-        private Dictionary<string, List<Task>> _mailbox = new Dictionary<string, List<Task>>();
-        private List<Task> _potentialTasksToDelete = new List<Task>();
+        private Dictionary<object, List<string>> _subscriptionMapping = null;
+        private Dictionary<string, List<Task>> _mailbox = null;
+        private List<Task> _potentialTasksToDelete = null;
 
         protected Mailbox()
         {
+            this.Reset();
+        }
 
+        public void Reset()
+        {
+            _subscriptionMapping = new Dictionary<object, List<string>>();
+            _mailbox = new Dictionary<string, List<Task>>();
+            _potentialTasksToDelete = new List<Task>();
         }
 
         public void SubscribeToTaskType(object o, string taskType)

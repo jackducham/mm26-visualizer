@@ -4,11 +4,10 @@ namespace MM26.ECS
 {
     abstract class TaskSystem<T> : ComponentSystem where T : Task
     {
-        protected EntityQuery query = null;
+        protected EntityQuery query;
 
         protected TaskSystem()
         {
-
         }
 
         protected bool ShouldFinish()
