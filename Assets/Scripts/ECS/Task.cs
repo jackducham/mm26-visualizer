@@ -9,7 +9,7 @@ namespace MM26.ECS
     ///
     public abstract class Task
     {
-        public int EntityID;
+        public string EntityName;
         public Mailbox Mailbox { get; private set; }
 
         private static int _nextId;
@@ -27,9 +27,9 @@ namespace MM26.ECS
         /// <returns>True if the task is marked as started; false otherwise.</returns>
         public bool IsStarted { get; set; }
 
-        public Task(int id, Mailbox mailbox)
+        public Task(string entityName, Mailbox mailbox)
         {
-            this.EntityID = id;
+            this.EntityName = entityName;
             this.Mailbox = mailbox;
             this.IsFinished = false;
 

@@ -10,14 +10,14 @@ namespace MM26.Systems
     public class RotationSystem : ComponentSystem
     {
         EntityQuery _query = default;
-        Dictionary<int, RotationTask> tasksToFinish;
+        Dictionary<string, RotationTask> tasksToFinish;
         private Mailbox _mailbox = null;
 
         protected override void OnCreate()
         {
             base.OnCreate();
 
-            tasksToFinish = new Dictionary<int, RotationTask>();
+            tasksToFinish = new Dictionary<string, RotationTask>();
             _query = GetEntityQuery(
                 typeof(Transform),
                 typeof(RotationComponent),
@@ -38,8 +38,7 @@ namespace MM26.Systems
             {
                 if (!msg.IsFinished)
                 {
-                    int id = msg.EntityID;
-                    tasksToFinish[id] = msg;
+                    tasksToFinish[msg.EntityName] = msg;
                     //msg.FinishMessage();
                 }
             }
@@ -58,11 +57,11 @@ namespace MM26.Systems
                 var rotationComponent = rotationComponents[i];
                 var idComponent = idComponents[i];
 
-                if (tasksToFinish.ContainsKey(idComponent.ID) && !tasksToFinish[idComponent.ID].IsStarted)
+                if (tasksToFinish.ContainsKey(idComponent.Name) && !tasksToFinish[idComponent.Name].IsStarted)
                 {
-                    tasksToFinish[idComponent.ID].Start();
-                    rotationComponent.amount = tasksToFinish[idComponent.ID].rotationAmount;
-                    rotationComponent.axis = tasksToFinish[idComponent.ID].rotationAxis;
+                    tasksToFinish[idComponent.Name].Start();
+                    rotationComponent.amount = tasksToFinish[idComponent.Name].rotationAmount;
+                    rotationComponent.axis = tasksToFinish[idComponent.Name].rotationAxis;
                 }
 
                 if (rotationComponent.amount > 0.0f)
@@ -74,7 +73,7 @@ namespace MM26.Systems
                     {
                         rotAmt = rotationComponent.amount;
                         // Finish
-                        tasksToFinish[idComponent.ID].Finish();
+                        tasksToFinish[idComponent.Name].Finish();
                     }
                     rotationComponent.amount -= rotAmt;
 

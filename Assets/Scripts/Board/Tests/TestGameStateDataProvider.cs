@@ -66,6 +66,7 @@ namespace MM26.Board.Tests
                 {
                     Character = new PCharacter()
                     {
+                        Name = testPlayer.Name,
                         Position = new PPosition
                         {
                             BoardId = testPlayer.Board,

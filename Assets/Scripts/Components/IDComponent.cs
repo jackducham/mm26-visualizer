@@ -1,9 +1,12 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace MM26.Components
 {
     public class IDComponent : MonoBehaviour
     {
-        public int ID = 0;
+        public string Name;
     }
 }
+

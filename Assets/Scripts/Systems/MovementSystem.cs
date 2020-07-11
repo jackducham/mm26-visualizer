@@ -18,13 +18,17 @@ namespace MM26.Systems
 
             this.Entities.ForEach((IDComponent id, Transform transform, MovementComponent movement) =>
             {
-                MovementTask task = this.TasksToFinish[id.ID] as MovementTask;
-                task.Start();
-                task.Finish();
+                Task task;
 
-                transform.position = task.Destination.position;
+                if (this.TasksToFinish.TryGetValue(id.Name, out task))
+                {
+                    MovementTask movementTask = (MovementTask)task;
 
-                Debug.Log(this.TasksToFinish.Count);
+                    task.Start();
+                    task.Finish();
+
+                    transform.position = movementTask.Destination.position;
+                }
             });
         }
 

@@ -16,7 +16,7 @@ namespace MM26.ECS
         /// <typeparam name="int">the entity the task is associated with</typeparam>
         /// <typeparam name="Task">the task</typeparam>
         /// <returns></returns>
-        protected Dictionary<int, Task> TasksToFinish { get; private set; }
+        protected Dictionary<string, Task> TasksToFinish { get; private set; }
 
         /// <summary>
         /// The readonly mailbox object
@@ -40,7 +40,7 @@ namespace MM26.ECS
             base.OnCreate();
 
             this.Mailbox = this.GetMailbox();
-            this.TasksToFinish = new Dictionary<int, Task>();
+            this.TasksToFinish = new Dictionary<string, Task>();
         }
 
         /// <summary>
@@ -67,8 +67,7 @@ namespace MM26.ECS
             {
                 if (!msg.IsFinished)
                 {
-                    int id = msg.EntityID;
-                    this.TasksToFinish[id] = msg;
+                    this.TasksToFinish[msg.EntityName] = msg;
                     //msg.FinishMessage();
                 }
             }

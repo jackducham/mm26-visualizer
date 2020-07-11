@@ -102,8 +102,8 @@ namespace MM26.Board
         {
             foreach (var entry in _data.GameState.PlayerNames)
             {
-                PCharacter character = entry.Value.Character;
-                PPosition position = character.Position;
+                PCharacter playerCharacter = entry.Value.Character;
+                PPosition position = playerCharacter.Position;
 
                 if (position.BoardId != _sceneConfiguration.BoardName)
                 {
@@ -113,8 +113,9 @@ namespace MM26.Board
                 Vector3 wordPosition = _tilemap.GetCellCenterWorld(new Vector3Int(position.X, position.Y, 0));
                 GameObject player = Instantiate(_playerPrefab, wordPosition, new Quaternion());
 
-                // player.GetComponent<IdComponent>()
-                Debug.Log(player.GetInstanceID());
+                // Initialize player
+                player.name = playerCharacter.Name;
+                player.GetComponent<IDComponent>().Name = playerCharacter.Name;
             }
         }
     }
