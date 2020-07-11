@@ -2,7 +2,7 @@
 
 namespace MM26.Components
 {
-    public class IdComponent : MonoBehaviour
+    public class IDComponent : MonoBehaviour
     {
         public int ID = 0;
     }

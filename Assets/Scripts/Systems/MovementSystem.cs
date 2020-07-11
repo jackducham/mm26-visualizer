@@ -16,7 +16,7 @@ namespace MM26.Systems
         {
             base.OnUpdate();
 
-            this.Entities.ForEach((IdComponent id, Transform transform, MovementComponent movement) =>
+            this.Entities.ForEach((IDComponent id, Transform transform, MovementComponent movement) =>
             {
                 MovementTask task = this.TasksToFinish[id.ID] as MovementTask;
                 task.Start();

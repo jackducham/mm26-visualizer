@@ -21,7 +21,7 @@ namespace MM26.Systems
             _query = GetEntityQuery(
                 typeof(Transform),
                 typeof(RotationComponent),
-                typeof(IdComponent));
+                typeof(IDComponent));
             _mailbox = Resources.Load<Mailbox>("Objects/Mailbox");
             _mailbox.SubscribeToTaskType<RotationTask>(this);
         }
@@ -51,7 +51,7 @@ namespace MM26.Systems
 
             var rotationComponents = _query.ToComponentArray<RotationComponent>();
             var transformComponents = _query.ToComponentArray<Transform>();
-            var idComponents = _query.ToComponentArray<IdComponent>();
+            var idComponents = _query.ToComponentArray<IDComponent>();
 
             for (int i = 0; i < transformComponents.Length; i++)
             {

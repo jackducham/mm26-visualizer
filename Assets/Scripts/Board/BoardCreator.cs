@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Tilemaps;
+using MM26.Components;
 
 namespace MM26.Board
 {
@@ -112,6 +113,7 @@ namespace MM26.Board
                 Vector3 wordPosition = _tilemap.GetCellCenterWorld(new Vector3Int(position.X, position.Y, 0));
                 GameObject player = Instantiate(_playerPrefab, wordPosition, new Quaternion());
 
+                // player.GetComponent<IdComponent>()
                 Debug.Log(player.GetInstanceID());
             }
         }
