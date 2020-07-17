@@ -10,7 +10,6 @@ namespace MM26.ECS
     /// <remarks>This is a non-ordered collection of data, so think of it more like a set than an array.</remarks>
     public class TasksBatch : IEnumerable<Task>
     {
-
         private List<Task> _tasksSet;
 
         /// <summary>
@@ -28,8 +27,9 @@ namespace MM26.ECS
         public TasksBatch()
         {
             _tasksSet = new List<Task>();
-            IsFinished = false;
-            IsStarted = false;
+
+            this.IsFinished = false;
+            this.IsStarted = false;
         }
 
         /// <summary>
@@ -67,6 +67,7 @@ namespace MM26.ECS
                 if (!_tasksSet[i].IsFinished)
                 {
                     IsFinished = false;
+                    break;
                 }
             }
         }
@@ -74,13 +75,13 @@ namespace MM26.ECS
         /// <summary>
         /// Start the batch of tasks. Will send out the tasks to the Mailbox for systems to read from and operate on.
         /// </summary>
-        public void Start()
+        public void Start(Mailbox mailbox)
         {
             for (int i = 0; i < _tasksSet.Count; i++)
             {
-                // Mailbox.Instance.SendTask(_tasksSet[i]);
-
+                mailbox.SendTask(_tasksSet[i]);
             }
+
             IsStarted = true;
         }
 

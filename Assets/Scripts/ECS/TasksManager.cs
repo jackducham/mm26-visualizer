@@ -10,6 +10,9 @@ namespace MM26.ECS
     /// <remarks>Will manage adding batches, starting batches, and determine when to move to the next batch.</remarks>
     public class TasksManager : MonoBehaviour
     {
+        [SerializeField]
+        private Mailbox _mailbox = null;
+
         private List<TasksBatch> _batches;
 
         public TasksManager()
@@ -31,13 +34,13 @@ namespace MM26.ECS
         /// </summary>
         public void Update()
         {
-            //Mailbox.Instance.Update();
+            _mailbox.Update();
 
             if (_batches.Count > 0)
             {
                 if (!_batches[0].IsStarted)
                 {
-                    _batches[0].Start();
+                    _batches[0].Start(_mailbox);
                 }
                 _batches[0].Update();
 
