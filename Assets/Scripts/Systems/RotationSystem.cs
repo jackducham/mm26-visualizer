@@ -7,83 +7,55 @@ using MM26.ECS;
 
 namespace MM26.Systems
 {
-    public class RotationSystem : ComponentSystem
+    public class RotationSystem : TaskSystem<RotationTask>
     {
-        EntityQuery _query = default;
-        Dictionary<string, RotationTask> tasksToFinish;
-        private Mailbox _mailbox = null;
+        protected override Mailbox GetMailbox()
+        {
+            return Resources.Load<Mailbox>("Objects/Mailbox");
+        }
 
         protected override void OnCreate()
         {
             base.OnCreate();
-
-            tasksToFinish = new Dictionary<string, RotationTask>();
-            _query = GetEntityQuery(
-                typeof(Transform),
-                typeof(RotationComponent),
-                typeof(IDComponent));
-            _mailbox = Resources.Load<Mailbox>("Objects/Mailbox");
-            _mailbox.SubscribeToTaskType<RotationTask>(this);
-        }
-
-        private void UpdateMessages()
-        {
-            List<Task> messages = _mailbox.GetSubscribedTasksForType<RotationTask>(this);
-
-            if (messages == null)
-            {
-                return;
-            }
-            foreach (RotationTask msg in messages)
-            {
-                if (!msg.IsFinished)
-                {
-                    tasksToFinish[msg.EntityName] = msg;
-                    //msg.FinishMessage();
-                }
-            }
         }
 
         protected override void OnUpdate()
         {
-            UpdateMessages();
+            base.OnUpdate();
 
-            var rotationComponents = _query.ToComponentArray<RotationComponent>();
-            var transformComponents = _query.ToComponentArray<Transform>();
-            var idComponents = _query.ToComponentArray<IDComponent>();
-
-            for (int i = 0; i < transformComponents.Length; i++)
+            this.Entities.ForEach((Transform transform, IDComponent id, RotationComponent rotation) =>
             {
-                var rotationComponent = rotationComponents[i];
-                var idComponent = idComponents[i];
+                Task task;
 
-                if (tasksToFinish.ContainsKey(idComponent.Name) && !tasksToFinish[idComponent.Name].IsStarted)
+                if (!this.TasksToFinish.TryGetValue(id.Name, out task))
                 {
-                    tasksToFinish[idComponent.Name].Start();
-                    rotationComponent.amount = tasksToFinish[idComponent.Name].rotationAmount;
-                    rotationComponent.axis = tasksToFinish[idComponent.Name].rotationAxis;
+                    return;
                 }
 
-                if (rotationComponent.amount > 0.0f)
-                {
-                    var transformComponent = transformComponents[i];
+                RotationTask rotationTask = (RotationTask)task;
 
-                    float rotAmt = rotationComponent.Speed * Time.DeltaTime;
-                    if (rotationComponent.amount < rotAmt)
+                if (!rotationTask.IsStarted)
+                {
+                    this.TasksToFinish[id.Name].Start();
+                    rotation.amount = rotationTask.RotationAmount;
+                    rotation.axis = rotationTask.RotationAxis;
+                }
+
+                if (rotation.amount > 0.0f)
+                {
+                    float rotAmt = rotation.Speed * Time.DeltaTime;
+                    if (rotation.amount < rotAmt)
                     {
-                        rotAmt = rotationComponent.amount;
+                        rotAmt = rotation.amount;
                         // Finish
-                        tasksToFinish[idComponent.Name].Finish();
+                        this.TasksToFinish[id.Name].Finish();
                     }
-                    rotationComponent.amount -= rotAmt;
 
-                    transformComponent.Rotate(rotationComponent.axis, rotAmt);
+                    rotation.amount -= rotAmt;
+
+                    transform.Rotate(rotation.axis, rotAmt);
                 }
-            }
-            // Entities.ForEach((Transform transform, BoxRotationComponent component) =>
-            // {
-            //     transform.Translate(Vector3.forward * Time.deltaTime * component.Speed);
-            // });
+            });
         }
     }
 

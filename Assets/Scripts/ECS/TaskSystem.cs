@@ -13,7 +13,7 @@ namespace MM26.ECS
         /// <summary>
         /// A list of tasks to finish
         /// </summary>
-        /// <typeparam name="int">the entity the task is associated with</typeparam>
+        /// <typeparam name="string">the entity the task is associated with</typeparam>
         /// <typeparam name="Task">the task</typeparam>
         /// <returns></returns>
         protected Dictionary<string, Task> TasksToFinish { get; private set; }

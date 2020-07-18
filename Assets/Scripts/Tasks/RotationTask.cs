@@ -5,8 +5,8 @@ namespace MM26.Tasks
 {
     public class RotationTask : Task
     {
-        public float rotationAmount;
-        public Vector3 rotationAxis;
+        public float RotationAmount;
+        public Vector3 RotationAxis;
 
         public RotationTask(
             string entityName,
@@ -14,8 +14,8 @@ namespace MM26.Tasks
             float rotationAmt,
             Vector3 axis) : base(entityName, mailbox)
         {
-            rotationAmount = rotationAmt;
-            rotationAxis = axis;
+            RotationAmount = rotationAmt;
+            RotationAxis = axis;
         }
 
         public override string GetTaskType()
