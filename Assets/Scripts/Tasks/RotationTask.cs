@@ -17,12 +17,5 @@ namespace MM26.Tasks
             RotationAmount = rotationAmt;
             RotationAxis = axis;
         }
-
-        public override string GetTaskType()
-        {
-            return "Rotation";
-        }
-
-        public static string Type => "Rotation";
     }
 }

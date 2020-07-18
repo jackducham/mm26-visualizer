@@ -57,11 +57,13 @@ namespace MM26.ECS
         public void SendTask(Task task)
         {
             List<Task> tasks = null;
+            string taskName = task.GetType().Name;
 
-            if (!_mailbox.TryGetValue(task.GetTaskType(), out tasks))
+            if (!_mailbox.TryGetValue(taskName, out tasks))
             {
-                tasks = _mailbox[task.GetTaskType()] = new List<Task>();
+                tasks = _mailbox[taskName] = new List<Task>();
             }
+
             tasks.Add(task);
         }
 
@@ -91,8 +93,10 @@ namespace MM26.ECS
 
         public void RemoveTask(Task msg)
         {
+            string taskName = msg.GetType().Name;
+
             // Remove from mailbox
-            _mailbox[msg.GetTaskType()].RemoveAll(m => m != null && m.GetId() == msg.GetId());
+            _mailbox[taskName].RemoveAll(m => m != null && m.GetId() == msg.GetId());
 
             // Remove from potential mesages to delete
             _potentialTasksToDelete.RemoveAll(m => m != null && m.GetId() == msg.GetId());

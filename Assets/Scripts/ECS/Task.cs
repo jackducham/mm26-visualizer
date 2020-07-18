@@ -55,13 +55,6 @@ namespace MM26.ECS
         }
 
         /// <summary>
-        /// The string representation of the task type. This is required for Mailbox to properly register the task.
-        /// </summary>
-        /// <remarks>Make sure that this task type is unique. If you have multiple task subclasses with the same task string, errors will like occur.</remarks>
-        /// <returns>The string represention of the task type.</returns>
-        public abstract string GetTaskType();
-
-        /// <summary>
         /// Get the id of the task.
         /// </summary>
         /// <returns>id of the task.</returns>

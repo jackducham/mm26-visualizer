@@ -16,10 +16,5 @@ namespace MM26.Tasks
         {
             this.Destination = destination;
         }
-
-        public override string GetTaskType()
-        {
-            return MovementTask.Type;
-        }
     }
 }
