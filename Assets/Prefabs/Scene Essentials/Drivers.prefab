@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5018251443507735744}
   - component: {fileID: 5018251443507735759}
-  - component: {fileID: 3381639951303634202}
   m_Layer: 0
   m_Name: Drivers
   m_TagString: Untagged
@@ -46,16 +45,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sceneLifeCycle: {fileID: 0}
   _play: 1
---- !u!114 &3381639951303634202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5018251443507735758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 243eca46bb1c8d149a869c5a64151b0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _mailbox: {fileID: 11400000, guid: 107bc346b39dd46378a4e6c11216dfe0, type: 2}

@@ -8,14 +8,20 @@ namespace MM26.ECS
     /// Manages the task batches.
     /// </summary>
     /// <remarks>Will manage adding batches, starting batches, and determine when to move to the next batch.</remarks>
-    public class TasksManager : MonoBehaviour
+    [CreateAssetMenu(fileName = "TaskManager", menuName = "ECS/Task Manager")]
+    public class TasksManager : ScriptableObject
     {
         [SerializeField]
         private Mailbox _mailbox = null;
 
         private List<TasksBatch> _batches;
 
-        public TasksManager()
+        private void OnEnable()
+        {
+            this.Reset();
+        }
+
+        public void Reset()
         {
             _batches = new List<TasksBatch>();
         }
@@ -34,8 +40,6 @@ namespace MM26.ECS
         /// </summary>
         public void Update()
         {
-            _mailbox.Update();
-
             if (_batches.Count > 0)
             {
                 if (!_batches[0].IsStarted)

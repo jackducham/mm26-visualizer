@@ -23,6 +23,9 @@ namespace MM26
         UnityEvent _play = null;
 
         [SerializeField]
+        UnityEvent _update = null;
+
+        [SerializeField]
         UnityEvent _reset = null;
 
         public UnityEvent FetchData => _fetchData;
@@ -32,6 +35,7 @@ namespace MM26
         public UnityEvent BoardCreated => _boardCreated;
 
         public UnityEvent Play => _play;
+        public UnityEvent Update => _update;
         public UnityEvent Reset => _reset;
     }
 }

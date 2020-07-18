@@ -32,6 +32,11 @@ namespace MM26
             _sceneLifeCycle.FetchData.Invoke();
         }
 
+        private void Update()
+        {
+            _sceneLifeCycle.Update.Invoke();
+        }
+
         private void OnDataFetched()
         {
             _sceneLifeCycle.CreateBoard.Invoke();

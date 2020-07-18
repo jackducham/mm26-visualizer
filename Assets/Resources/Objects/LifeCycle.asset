@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7bf526b2e15a47ccb204d9dc89553f2, type: 3}
-  m_Name: Life Cycle
+  m_Name: LifeCycle
   m_EditorClassIdentifier: 
   _fetchData:
     m_PersistentCalls:
@@ -27,6 +27,31 @@ MonoBehaviour:
   _play:
     m_PersistentCalls:
       m_Calls: []
+  _update:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 107bc346b39dd46378a4e6c11216dfe0, type: 2}
+        m_MethodName: Update
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 42860c13965964ab487fc8e80037fa50, type: 2}
+        m_MethodName: Update
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _reset:
     m_PersistentCalls:
       m_Calls:
@@ -42,6 +67,17 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 11400000, guid: 107bc346b39dd46378a4e6c11216dfe0, type: 2}
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 42860c13965964ab487fc8e80037fa50, type: 2}
         m_MethodName: Reset
         m_Mode: 1
         m_Arguments:
