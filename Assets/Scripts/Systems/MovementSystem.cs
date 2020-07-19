@@ -31,10 +31,5 @@ namespace MM26.Systems
                 }
             });
         }
-
-        protected override Mailbox GetMailbox()
-        {
-            return Resources.Load<Mailbox>("Objects/Mailbox");
-        }
     }
 }

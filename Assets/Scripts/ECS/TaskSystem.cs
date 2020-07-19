@@ -8,7 +8,7 @@ namespace MM26.ECS
     /// Base class for task systems
     /// </summary>
     /// <typeparam name="T">the task type</typeparam>
-    public abstract class TaskSystem<T> : ComponentSystem where T : Task
+    public abstract class TaskSystem<T> : SystemBase where T : Task
     {
         /// <summary>
         /// A list of tasks to finish
@@ -28,7 +28,10 @@ namespace MM26.ECS
         /// Subclass should must this method to provide a custom mailbox
         /// </summary>
         /// <returns></returns>
-        protected abstract Mailbox GetMailbox();
+        protected virtual Mailbox GetMailbox()
+        {
+            return Resources.Load<Mailbox>("Objects/Mailbox");
+        }
 
         protected bool ShouldFinish()
         {

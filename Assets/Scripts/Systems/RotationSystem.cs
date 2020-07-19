@@ -9,11 +9,6 @@ namespace MM26.Systems
 {
     public class RotationSystem : TaskSystem<RotationTask>
     {
-        protected override Mailbox GetMailbox()
-        {
-            return Resources.Load<Mailbox>("Objects/Mailbox");
-        }
-
         protected override void OnCreate()
         {
             base.OnCreate();
