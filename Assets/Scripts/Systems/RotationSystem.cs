@@ -18,39 +18,42 @@ namespace MM26.Systems
         {
             base.OnUpdate();
 
-            this.Entities.ForEach((Transform transform, IDComponent id, RotationComponent rotation) =>
-            {
-                Task task;
-
-                if (!this.TasksToFinish.TryGetValue(id.Name, out task))
+            this.Entities
+                .WithoutBurst()
+                .ForEach((Transform transform, IDComponent id, RotationComponent rotation) =>
                 {
-                    return;
-                }
+                    Task task;
 
-                RotationTask rotationTask = (RotationTask)task;
-
-                if (!rotationTask.IsStarted)
-                {
-                    this.TasksToFinish[id.Name].Start();
-                    rotation.amount = rotationTask.RotationAmount;
-                    rotation.axis = rotationTask.RotationAxis;
-                }
-
-                if (rotation.amount > 0.0f)
-                {
-                    float rotAmt = rotation.Speed * Time.DeltaTime;
-                    if (rotation.amount < rotAmt)
+                    if (!this.TasksToFinish.TryGetValue(id.Name, out task))
                     {
-                        rotAmt = rotation.amount;
-                        // Finish
-                        this.TasksToFinish[id.Name].Finish();
+                        return;
                     }
 
-                    rotation.amount -= rotAmt;
+                    RotationTask rotationTask = (RotationTask)task;
 
-                    transform.Rotate(rotation.axis, rotAmt);
-                }
-            });
+                    if (!rotationTask.IsStarted)
+                    {
+                        this.TasksToFinish[id.Name].Start();
+                        rotation.amount = rotationTask.RotationAmount;
+                        rotation.axis = rotationTask.RotationAxis;
+                    }
+
+                    if (rotation.amount > 0.0f)
+                    {
+                        float rotAmt = rotation.Speed * Time.DeltaTime;
+                        if (rotation.amount < rotAmt)
+                        {
+                            rotAmt = rotation.amount;
+                            // Finish
+                            this.TasksToFinish[id.Name].Finish();
+                        }
+
+                        rotation.amount -= rotAmt;
+
+                        transform.Rotate(rotation.axis, rotAmt);
+                    }
+                })
+                .Run();
         }
     }
 

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Unity.Entities;
 using MM26.ECS;
 using MM26.Components;
 using MM26.Tasks;
@@ -16,20 +17,23 @@ namespace MM26.Systems
         {
             base.OnUpdate();
 
-            this.Entities.ForEach((IDComponent id, Transform transform, MovementComponent movement) =>
-            {
-                Task task;
-
-                if (this.TasksToFinish.TryGetValue(id.Name, out task))
+            this.Entities
+                .WithoutBurst()
+                .ForEach((IDComponent id, Transform transform, MovementComponent movement) =>
                 {
-                    MovementTask movementTask = (MovementTask)task;
+                    Task task;
 
-                    task.Start();
-                    task.Finish();
+                    if (this.TasksToFinish.TryGetValue(id.Name, out task))
+                    {
+                        MovementTask movementTask = (MovementTask)task;
 
-                    transform.position = movementTask.Destination.position;
-                }
-            });
+                        task.Start();
+                        task.Finish();
+
+                        transform.position = movementTask.Destination.position;
+                    }
+                })
+                .Run();
         }
     }
 }
