@@ -13,6 +13,11 @@ namespace MM26
         /// Name of the board
         /// </summary>
         public string BoardName;
+
+        /// <summary>
+        /// URL to connect websocket to
+        /// </summary>
+        public string WebSocketURL;
     }
 }
 

@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7072844bdd73949f1bb0f7c15bee2bed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _debugUri: ws://localhost:5000
-  _releaseUri: 
+  _sceneConfiguration: {fileID: 11400000, guid: 00ed0f4cb1ec244b2a9abb5ad4096e4d,
+    type: 2}
   _data: {fileID: 11400000, guid: 10eb0f1c65a9f486fb08761d63b81067, type: 2}
   _sceneLifeCycle: {fileID: 11400000, guid: e5a30a7b0ac1e4833a29854a0f787d12, type: 2}

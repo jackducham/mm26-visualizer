@@ -9,12 +9,7 @@ namespace MM26.IO
     {
         [Header("Settings")]
         [SerializeField]
-        private string _editorUri = "ws://localhost:5000/visualizer";
-
-        [SerializeField]
-#pragma warning disable 414
-        private string _buildUri = "";
-#pragma warning restore 414
+        private SceneConfiguration _sceneConfiguration = null;
 
         [SerializeField]
         private Data _data = null;
@@ -45,20 +40,18 @@ namespace MM26.IO
 
             Action onConnection = () =>
             {
+                // Please preserve this log message for diagnostic purpose
+                Debug.Log("Connected");
             };
 
             Action onError = () =>
             {
+                // Please preserve this log message for diagnostic purpose
                 Debug.LogError("Failed");
             };
 
             _listener.NewMessage += this.OnMessage;
-
-#if UNITY_EDITOR
-            _listener.Connect(new Uri(_editorUri), onConnection, onError);
-#else
-            _listener.Connect(new Uri(_releaseUri), onConnection, onError);
-#endif
+            _listener.Connect(new Uri(_sceneConfiguration.WebSocketURL), onConnection, onError);
         }
 
         private void OnMessage(object sender, byte[] message)
@@ -72,6 +65,9 @@ namespace MM26.IO
             {
                 _data.GameChanges.Enqueue(GameChange.Parser.ParseFrom(message));
             }
+
+            // Please preserve this log message for diagnostic purpose
+            Debug.LogFormat("Message received, length = {0}", message.Length);
         }
     }
 }
