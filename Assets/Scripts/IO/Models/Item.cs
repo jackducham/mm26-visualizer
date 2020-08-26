@@ -36,23 +36,23 @@ namespace MM26.IO.Models {
             "U1QQACIsCgVTaG9lcxIjCgVzdGF0cxgBIAEoCzIULml0ZW0uU3RhdHVzTW9k",
             "aWZpZXIilAEKBldlYXBvbhIjCgVzdGF0cxgBIAEoCzIULml0ZW0uU3RhdHVz",
             "TW9kaWZpZXISDQoFcmFuZ2UYAiABKAUSFQoNc3BsYXNoX3JhZGl1cxgDIAEo",
-            "BRIOCgZkYW1hZ2UYBCABKAUSLwoNb25faGl0X2VmZmVjdBgFIAEoCzIYLml0",
+            "BRIOCgZhdHRhY2sYBCABKAUSLwoNb25faGl0X2VmZmVjdBgFIAEoCzIYLml0",
             "ZW0uVGVtcFN0YXR1c01vZGlmaWVyIkYKCkNvbnN1bWFibGUSKAoGZWZmZWN0",
             "GAEgASgLMhguaXRlbS5UZW1wU3RhdHVzTW9kaWZpZXISDgoGc3RhY2tzGAIg",
             "ASgFItwCCg5TdGF0dXNNb2RpZmllchIZChFmbGF0X3NwZWVkX2NoYW5nZRgB",
             "IAEoBRIcChRwZXJjZW50X3NwZWVkX2NoYW5nZRgCIAEoARIaChJmbGF0X2hl",
             "YWx0aF9jaGFuZ2UYAyABKAUSHQoVcGVyY2VudF9oZWFsdGhfY2hhbmdlGAQg",
             "ASgBEh4KFmZsYXRfZXhwZXJpZW5jZV9jaGFuZ2UYBSABKAUSIQoZcGVyY2Vu",
-            "dF9leHBlcmllbmNlX2NoYW5nZRgGIAEoARIaChJmbGF0X2RhbWFnZV9jaGFu",
-            "Z2UYByABKAUSHQoVcGVyY2VudF9kYW1hZ2VfY2hhbmdlGAggASgBEhsKE2Zs",
+            "dF9leHBlcmllbmNlX2NoYW5nZRgGIAEoARIaChJmbGF0X2F0dGFja19jaGFu",
+            "Z2UYByABKAUSHQoVcGVyY2VudF9hdHRhY2tfY2hhbmdlGAggASgBEhsKE2Zs",
             "YXRfZGVmZW5zZV9jaGFuZ2UYCSABKAUSHgoWcGVyY2VudF9kZWZlbnNlX2No",
             "YW5nZRgKIAEoARIbChNmbGF0X3JlZ2VuX3Blcl90dXJuGAsgASgFIqkBChJU",
             "ZW1wU3RhdHVzTW9kaWZpZXISIwoFc3RhdHMYASABKAsyFC5pdGVtLlN0YXR1",
             "c01vZGlmaWVyEhwKFGZsYXRfZGFtYWdlX3Blcl90dXJuGAIgASgFEh8KF3Bl",
             "cmNlbnRfZGFtYWdlX3Blcl90dXJuGAMgASgBEhsKE2ZsYXRfcmVnZW5fcGVy",
-            "X3R1cm4YBCABKAUSEgoKdHVybnNfbGVmdBgFIAEoBUI7ChxtZWNoLm1hbmlh",
-            "LmVuZ2luZS5nYW1lLml0ZW1zQgpJdGVtUHJvdG9zqgIOTU0yNi5JTy5Nb2Rl",
-            "bHNiBnByb3RvMw=="));
+            "X3R1cm4YBCABKAUSEgoKdHVybnNfbGVmdBgFIAEoBUI9Ch5tZWNoLm1hbmlh",
+            "LmVuZ2luZS5kb21haW4ubW9kZWxCCkl0ZW1Qcm90b3OqAg5NTTI2LklPLk1v",
+            "ZGVsc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -60,9 +60,9 @@ namespace MM26.IO.Models {
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Clothes), global::MM26.IO.Models.Clothes.Parser, new[]{ "Stats" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Hat), global::MM26.IO.Models.Hat.Parser, new[]{ "Stats", "HatEffect" }, null, new[]{ typeof(global::MM26.IO.Models.Hat.Types.HatEffect) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Shoes), global::MM26.IO.Models.Shoes.Parser, new[]{ "Stats" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Weapon), global::MM26.IO.Models.Weapon.Parser, new[]{ "Stats", "Range", "SplashRadius", "Damage", "OnHitEffect" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Weapon), global::MM26.IO.Models.Weapon.Parser, new[]{ "Stats", "Range", "SplashRadius", "Attack", "OnHitEffect" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Consumable), global::MM26.IO.Models.Consumable.Parser, new[]{ "Effect", "Stacks" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.StatusModifier), global::MM26.IO.Models.StatusModifier.Parser, new[]{ "FlatSpeedChange", "PercentSpeedChange", "FlatHealthChange", "PercentHealthChange", "FlatExperienceChange", "PercentExperienceChange", "FlatDamageChange", "PercentDamageChange", "FlatDefenseChange", "PercentDefenseChange", "FlatRegenPerTurn" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.StatusModifier), global::MM26.IO.Models.StatusModifier.Parser, new[]{ "FlatSpeedChange", "PercentSpeedChange", "FlatHealthChange", "PercentHealthChange", "FlatExperienceChange", "PercentExperienceChange", "FlatAttackChange", "PercentAttackChange", "FlatDefenseChange", "PercentDefenseChange", "FlatRegenPerTurn" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.TempStatusModifier), global::MM26.IO.Models.TempStatusModifier.Parser, new[]{ "Stats", "FlatDamagePerTurn", "PercentDamagePerTurn", "FlatRegenPerTurn", "TurnsLeft" }, null, null, null, null)
           }));
     }
@@ -1104,7 +1104,7 @@ namespace MM26.IO.Models {
       stats_ = other.stats_ != null ? other.stats_.Clone() : null;
       range_ = other.range_;
       splashRadius_ = other.splashRadius_;
-      damage_ = other.damage_;
+      attack_ = other.attack_;
       onHitEffect_ = other.onHitEffect_ != null ? other.onHitEffect_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1147,14 +1147,14 @@ namespace MM26.IO.Models {
       }
     }
 
-    /// <summary>Field number for the "damage" field.</summary>
-    public const int DamageFieldNumber = 4;
-    private int damage_;
+    /// <summary>Field number for the "attack" field.</summary>
+    public const int AttackFieldNumber = 4;
+    private int attack_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Damage {
-      get { return damage_; }
+    public int Attack {
+      get { return attack_; }
       set {
-        damage_ = value;
+        attack_ = value;
       }
     }
 
@@ -1185,7 +1185,7 @@ namespace MM26.IO.Models {
       if (!object.Equals(Stats, other.Stats)) return false;
       if (Range != other.Range) return false;
       if (SplashRadius != other.SplashRadius) return false;
-      if (Damage != other.Damage) return false;
+      if (Attack != other.Attack) return false;
       if (!object.Equals(OnHitEffect, other.OnHitEffect)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1196,7 +1196,7 @@ namespace MM26.IO.Models {
       if (stats_ != null) hash ^= Stats.GetHashCode();
       if (Range != 0) hash ^= Range.GetHashCode();
       if (SplashRadius != 0) hash ^= SplashRadius.GetHashCode();
-      if (Damage != 0) hash ^= Damage.GetHashCode();
+      if (Attack != 0) hash ^= Attack.GetHashCode();
       if (onHitEffect_ != null) hash ^= OnHitEffect.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1223,9 +1223,9 @@ namespace MM26.IO.Models {
         output.WriteRawTag(24);
         output.WriteInt32(SplashRadius);
       }
-      if (Damage != 0) {
+      if (Attack != 0) {
         output.WriteRawTag(32);
-        output.WriteInt32(Damage);
+        output.WriteInt32(Attack);
       }
       if (onHitEffect_ != null) {
         output.WriteRawTag(42);
@@ -1248,8 +1248,8 @@ namespace MM26.IO.Models {
       if (SplashRadius != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(SplashRadius);
       }
-      if (Damage != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Damage);
+      if (Attack != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Attack);
       }
       if (onHitEffect_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(OnHitEffect);
@@ -1277,8 +1277,8 @@ namespace MM26.IO.Models {
       if (other.SplashRadius != 0) {
         SplashRadius = other.SplashRadius;
       }
-      if (other.Damage != 0) {
-        Damage = other.Damage;
+      if (other.Attack != 0) {
+        Attack = other.Attack;
       }
       if (other.onHitEffect_ != null) {
         if (onHitEffect_ == null) {
@@ -1316,7 +1316,7 @@ namespace MM26.IO.Models {
             break;
           }
           case 32: {
-            Damage = input.ReadInt32();
+            Attack = input.ReadInt32();
             break;
           }
           case 42: {
@@ -1356,7 +1356,7 @@ namespace MM26.IO.Models {
             break;
           }
           case 32: {
-            Damage = input.ReadInt32();
+            Attack = input.ReadInt32();
             break;
           }
           case 42: {
@@ -1604,8 +1604,8 @@ namespace MM26.IO.Models {
       percentHealthChange_ = other.percentHealthChange_;
       flatExperienceChange_ = other.flatExperienceChange_;
       percentExperienceChange_ = other.percentExperienceChange_;
-      flatDamageChange_ = other.flatDamageChange_;
-      percentDamageChange_ = other.percentDamageChange_;
+      flatAttackChange_ = other.flatAttackChange_;
+      percentAttackChange_ = other.percentAttackChange_;
       flatDefenseChange_ = other.flatDefenseChange_;
       percentDefenseChange_ = other.percentDefenseChange_;
       flatRegenPerTurn_ = other.flatRegenPerTurn_;
@@ -1683,25 +1683,25 @@ namespace MM26.IO.Models {
       }
     }
 
-    /// <summary>Field number for the "flat_damage_change" field.</summary>
-    public const int FlatDamageChangeFieldNumber = 7;
-    private int flatDamageChange_;
+    /// <summary>Field number for the "flat_attack_change" field.</summary>
+    public const int FlatAttackChangeFieldNumber = 7;
+    private int flatAttackChange_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int FlatDamageChange {
-      get { return flatDamageChange_; }
+    public int FlatAttackChange {
+      get { return flatAttackChange_; }
       set {
-        flatDamageChange_ = value;
+        flatAttackChange_ = value;
       }
     }
 
-    /// <summary>Field number for the "percent_damage_change" field.</summary>
-    public const int PercentDamageChangeFieldNumber = 8;
-    private double percentDamageChange_;
+    /// <summary>Field number for the "percent_attack_change" field.</summary>
+    public const int PercentAttackChangeFieldNumber = 8;
+    private double percentAttackChange_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public double PercentDamageChange {
-      get { return percentDamageChange_; }
+    public double PercentAttackChange {
+      get { return percentAttackChange_; }
       set {
-        percentDamageChange_ = value;
+        percentAttackChange_ = value;
       }
     }
 
@@ -1757,8 +1757,8 @@ namespace MM26.IO.Models {
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(PercentHealthChange, other.PercentHealthChange)) return false;
       if (FlatExperienceChange != other.FlatExperienceChange) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(PercentExperienceChange, other.PercentExperienceChange)) return false;
-      if (FlatDamageChange != other.FlatDamageChange) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(PercentDamageChange, other.PercentDamageChange)) return false;
+      if (FlatAttackChange != other.FlatAttackChange) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(PercentAttackChange, other.PercentAttackChange)) return false;
       if (FlatDefenseChange != other.FlatDefenseChange) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(PercentDefenseChange, other.PercentDefenseChange)) return false;
       if (FlatRegenPerTurn != other.FlatRegenPerTurn) return false;
@@ -1774,8 +1774,8 @@ namespace MM26.IO.Models {
       if (PercentHealthChange != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(PercentHealthChange);
       if (FlatExperienceChange != 0) hash ^= FlatExperienceChange.GetHashCode();
       if (PercentExperienceChange != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(PercentExperienceChange);
-      if (FlatDamageChange != 0) hash ^= FlatDamageChange.GetHashCode();
-      if (PercentDamageChange != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(PercentDamageChange);
+      if (FlatAttackChange != 0) hash ^= FlatAttackChange.GetHashCode();
+      if (PercentAttackChange != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(PercentAttackChange);
       if (FlatDefenseChange != 0) hash ^= FlatDefenseChange.GetHashCode();
       if (PercentDefenseChange != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(PercentDefenseChange);
       if (FlatRegenPerTurn != 0) hash ^= FlatRegenPerTurn.GetHashCode();
@@ -1816,13 +1816,13 @@ namespace MM26.IO.Models {
         output.WriteRawTag(49);
         output.WriteDouble(PercentExperienceChange);
       }
-      if (FlatDamageChange != 0) {
+      if (FlatAttackChange != 0) {
         output.WriteRawTag(56);
-        output.WriteInt32(FlatDamageChange);
+        output.WriteInt32(FlatAttackChange);
       }
-      if (PercentDamageChange != 0D) {
+      if (PercentAttackChange != 0D) {
         output.WriteRawTag(65);
-        output.WriteDouble(PercentDamageChange);
+        output.WriteDouble(PercentAttackChange);
       }
       if (FlatDefenseChange != 0) {
         output.WriteRawTag(72);
@@ -1862,10 +1862,10 @@ namespace MM26.IO.Models {
       if (PercentExperienceChange != 0D) {
         size += 1 + 8;
       }
-      if (FlatDamageChange != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FlatDamageChange);
+      if (FlatAttackChange != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FlatAttackChange);
       }
-      if (PercentDamageChange != 0D) {
+      if (PercentAttackChange != 0D) {
         size += 1 + 8;
       }
       if (FlatDefenseChange != 0) {
@@ -1906,11 +1906,11 @@ namespace MM26.IO.Models {
       if (other.PercentExperienceChange != 0D) {
         PercentExperienceChange = other.PercentExperienceChange;
       }
-      if (other.FlatDamageChange != 0) {
-        FlatDamageChange = other.FlatDamageChange;
+      if (other.FlatAttackChange != 0) {
+        FlatAttackChange = other.FlatAttackChange;
       }
-      if (other.PercentDamageChange != 0D) {
-        PercentDamageChange = other.PercentDamageChange;
+      if (other.PercentAttackChange != 0D) {
+        PercentAttackChange = other.PercentAttackChange;
       }
       if (other.FlatDefenseChange != 0) {
         FlatDefenseChange = other.FlatDefenseChange;
@@ -1960,11 +1960,11 @@ namespace MM26.IO.Models {
             break;
           }
           case 56: {
-            FlatDamageChange = input.ReadInt32();
+            FlatAttackChange = input.ReadInt32();
             break;
           }
           case 65: {
-            PercentDamageChange = input.ReadDouble();
+            PercentAttackChange = input.ReadDouble();
             break;
           }
           case 72: {
@@ -2018,11 +2018,11 @@ namespace MM26.IO.Models {
             break;
           }
           case 56: {
-            FlatDamageChange = input.ReadInt32();
+            FlatAttackChange = input.ReadInt32();
             break;
           }
           case 65: {
-            PercentDamageChange = input.ReadDouble();
+            PercentAttackChange = input.ReadDouble();
             break;
           }
           case 72: {

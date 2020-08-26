@@ -25,21 +25,21 @@ namespace MM26.IO.Models {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChB2aXN1YWxpemVyLnByb3RvEhRwbGF5ZXJfY29tbXVuaWNhdGlvbhoPY2hh",
-            "cmFjdGVyLnByb3RvIvIBChBWaXN1YWxpemVyQ2hhbmdlEhgKEG5ld19wbGF5",
-            "ZXJfbmFtZXMYASADKAkSYAoWY2hhcmFjdGVyX3N0YXRfY2hhbmdlcxgCIAMo",
-            "CzJALnBsYXllcl9jb21tdW5pY2F0aW9uLlZpc3VhbGl6ZXJDaGFuZ2UuQ2hh",
-            "cmFjdGVyU3RhdENoYW5nZXNFbnRyeRpiChlDaGFyYWN0ZXJTdGF0Q2hhbmdl",
-            "c0VudHJ5EgsKA2tleRgBIAEoCRI0CgV2YWx1ZRgCIAEoCzIlLnBsYXllcl9j",
-            "b21tdW5pY2F0aW9uLkNoYXJhY3RlckNoYW5nZToCOAEihQEKD0NoYXJhY3Rl",
-            "ckNoYW5nZRIMCgRkaWVkGAEgASgIEhEKCXJlc3Bhd25lZBgCIAEoCBIuCg1k",
-            "ZWNpc2lvbl90eXBlGAMgASgOMhcuY2hhcmFjdGVyLkRlY2lzaW9uVHlwZRIh",
-            "CgRwYXRoGAQgAygLMhMuY2hhcmFjdGVyLlBvc2l0aW9uQlwKN21lY2gubWFu",
-            "aWEuZW5naW5lLnNlcnZlci5jb21tdW5pY2F0aW9uLnZpc3VhbGl6ZXIubW9k",
-            "ZWxCEFZpc3VhbGl6ZXJQcm90b3OqAg5NTTI2LklPLk1vZGVsc2IGcHJvdG8z"));
+            "cmFjdGVyLnByb3RvIuYBCgpHYW1lQ2hhbmdlEhgKEG5ld19wbGF5ZXJfbmFt",
+            "ZXMYASADKAkSWgoWY2hhcmFjdGVyX3N0YXRfY2hhbmdlcxgCIAMoCzI6LnBs",
+            "YXllcl9jb21tdW5pY2F0aW9uLkdhbWVDaGFuZ2UuQ2hhcmFjdGVyU3RhdENo",
+            "YW5nZXNFbnRyeRpiChlDaGFyYWN0ZXJTdGF0Q2hhbmdlc0VudHJ5EgsKA2tl",
+            "eRgBIAEoCRI0CgV2YWx1ZRgCIAEoCzIlLnBsYXllcl9jb21tdW5pY2F0aW9u",
+            "LkNoYXJhY3RlckNoYW5nZToCOAEihQEKD0NoYXJhY3RlckNoYW5nZRIMCgRk",
+            "aWVkGAEgASgIEhEKCXJlc3Bhd25lZBgCIAEoCBIuCg1kZWNpc2lvbl90eXBl",
+            "GAMgASgOMhcuY2hhcmFjdGVyLkRlY2lzaW9uVHlwZRIhCgRwYXRoGAQgAygL",
+            "MhMuY2hhcmFjdGVyLlBvc2l0aW9uQkMKHm1lY2gubWFuaWEuZW5naW5lLmRv",
+            "bWFpbi5tb2RlbEIQVmlzdWFsaXplclByb3Rvc6oCDk1NMjYuSU8uTW9kZWxz",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::MM26.IO.Models.CharacterReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.VisualizerChange), global::MM26.IO.Models.VisualizerChange.Parser, new[]{ "NewPlayerNames", "CharacterStatChanges" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.GameChange), global::MM26.IO.Models.GameChange.Parser, new[]{ "NewPlayerNames", "CharacterStatChanges" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.CharacterChange), global::MM26.IO.Models.CharacterChange.Parser, new[]{ "Died", "Respawned", "DecisionType", "Path" }, null, null, null, null)
           }));
     }
@@ -47,15 +47,15 @@ namespace MM26.IO.Models {
 
   }
   #region Messages
-  public sealed partial class VisualizerChange : pb::IMessage<VisualizerChange>
+  public sealed partial class GameChange : pb::IMessage<GameChange>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<VisualizerChange> _parser = new pb::MessageParser<VisualizerChange>(() => new VisualizerChange());
+    private static readonly pb::MessageParser<GameChange> _parser = new pb::MessageParser<GameChange>(() => new GameChange());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<VisualizerChange> Parser { get { return _parser; } }
+    public static pb::MessageParser<GameChange> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -68,22 +68,22 @@ namespace MM26.IO.Models {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public VisualizerChange() {
+    public GameChange() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public VisualizerChange(VisualizerChange other) : this() {
+    public GameChange(GameChange other) : this() {
       newPlayerNames_ = other.newPlayerNames_.Clone();
       characterStatChanges_ = other.characterStatChanges_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public VisualizerChange Clone() {
-      return new VisualizerChange(this);
+    public GameChange Clone() {
+      return new GameChange(this);
     }
 
     /// <summary>Field number for the "new_player_names" field.</summary>
@@ -108,11 +108,11 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as VisualizerChange);
+      return Equals(other as GameChange);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(VisualizerChange other) {
+    public bool Equals(GameChange other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -161,7 +161,7 @@ namespace MM26.IO.Models {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(VisualizerChange other) {
+    public void MergeFrom(GameChange other) {
       if (other == null) {
         return;
       }

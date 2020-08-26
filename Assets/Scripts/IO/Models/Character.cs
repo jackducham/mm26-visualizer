@@ -41,18 +41,26 @@ namespace MM26.IO.Models {
             "ZW0uSXRlbSKkAQoGUGxheWVyEicKCWNoYXJhY3RlchgBIAEoCzIULmNoYXJh",
             "Y3Rlci5DaGFyYWN0ZXISFgoDaGF0GAIgASgLMgkuaXRlbS5IYXQSHgoHY2xv",
             "dGhlcxgDIAEoCzINLml0ZW0uQ2xvdGhlcxIaCgVzaG9lcxgEIAEoCzILLml0",
-            "ZW0uU2hvZXMSHQoJaW52ZW50b3J5GAUgAygLMgouaXRlbS5JdGVtIjIKCFBv",
-            "c2l0aW9uEhAKCGJvYXJkX2lkGAEgASgJEgkKAXgYAiABKAUSCQoBeRgDIAEo",
-            "BSpbCgxEZWNpc2lvblR5cGUSCAoETk9ORRAAEggKBE1PVkUQARIKCgZBVFRB",
-            "Q0sQAhIKCgZQT1JUQUwQAxIICgREUk9QEAQSCQoFRVFVSVAQBRIKCgZQSUNL",
-            "VVAQBkJFCiFtZWNoLm1hbmlhLmVuZ2luZS5nYW1lLmNoYXJhY3RlcnNCD0No",
-            "YXJhY3RlclByb3Rvc6oCDk1NMjYuSU8uTW9kZWxzYgZwcm90bzM="));
+            "ZW0uU2hvZXMSHQoJaW52ZW50b3J5GAUgAygLMgouaXRlbS5JdGVtIsYBCgtQ",
+            "bGF5ZXJTdGF0cxINCgVsZXZlbBgBIAEoBRISCgpleHBlcmllbmNlGAIgASgF",
+            "EhYKDm1vbnN0ZXJzX3NsYWluGAMgASgFEg4KBmF0dGFjaxgEIAEoBRIPCgdk",
+            "ZWZlbnNlGAUgASgFEhYKDmN1cnJlbnRfaGVhbHRoGAYgASgFEhIKCm1heF9o",
+            "ZWFsdGgYByABKAUSEwoLZGVhdGhfY291bnQYCCABKAUSGgoSdHVybnNfc2lu",
+            "Y2Vfam9pbmVkGAkgASgFIjoKEVBsYXllclN0YXRzQnVuZGxlEiUKBXN0YXRz",
+            "GAEgAygLMhYuY2hhcmFjdGVyLlBsYXllclN0YXRzIjIKCFBvc2l0aW9uEhAK",
+            "CGJvYXJkX2lkGAEgASgJEgkKAXgYAiABKAUSCQoBeRgDIAEoBSpbCgxEZWNp",
+            "c2lvblR5cGUSCAoETk9ORRAAEggKBE1PVkUQARIKCgZBVFRBQ0sQAhIKCgZQ",
+            "T1JUQUwQAxIICgREUk9QEAQSCQoFRVFVSVAQBRIKCgZQSUNLVVAQBkJCCh5t",
+            "ZWNoLm1hbmlhLmVuZ2luZS5kb21haW4ubW9kZWxCD0NoYXJhY3RlclByb3Rv",
+            "c6oCDk1NMjYuSU8uTW9kZWxzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::MM26.IO.Models.ItemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MM26.IO.Models.DecisionType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Character), global::MM26.IO.Models.Character.Parser, new[]{ "CurrentHealth", "BaseMaxHealth", "Experience", "Level", "BaseSpeed", "Position", "SpawnPoint", "Weapon", "ActiveEffects", "TaggedPlayersDamage", "IsDead", "TicksSinceDeath", "Name", "BaseAttack", "BaseDefense" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Monster), global::MM26.IO.Models.Monster.Parser, new[]{ "Character", "Drops" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Player), global::MM26.IO.Models.Player.Parser, new[]{ "Character", "Hat", "Clothes", "Shoes", "Inventory" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.PlayerStats), global::MM26.IO.Models.PlayerStats.Parser, new[]{ "Level", "Experience", "MonstersSlain", "Attack", "Defense", "CurrentHealth", "MaxHealth", "DeathCount", "TurnsSinceJoined" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.PlayerStatsBundle), global::MM26.IO.Models.PlayerStatsBundle.Parser, new[]{ "Stats" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Position), global::MM26.IO.Models.Position.Parser, new[]{ "BoardId", "X", "Y" }, null, null, null, null)
           }));
     }
@@ -1189,6 +1197,564 @@ namespace MM26.IO.Models {
 
   }
 
+  public sealed partial class PlayerStats : pb::IMessage<PlayerStats>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PlayerStats> _parser = new pb::MessageParser<PlayerStats>(() => new PlayerStats());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PlayerStats> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::MM26.IO.Models.CharacterReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PlayerStats() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PlayerStats(PlayerStats other) : this() {
+      level_ = other.level_;
+      experience_ = other.experience_;
+      monstersSlain_ = other.monstersSlain_;
+      attack_ = other.attack_;
+      defense_ = other.defense_;
+      currentHealth_ = other.currentHealth_;
+      maxHealth_ = other.maxHealth_;
+      deathCount_ = other.deathCount_;
+      turnsSinceJoined_ = other.turnsSinceJoined_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PlayerStats Clone() {
+      return new PlayerStats(this);
+    }
+
+    /// <summary>Field number for the "level" field.</summary>
+    public const int LevelFieldNumber = 1;
+    private int level_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Level {
+      get { return level_; }
+      set {
+        level_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "experience" field.</summary>
+    public const int ExperienceFieldNumber = 2;
+    private int experience_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Experience {
+      get { return experience_; }
+      set {
+        experience_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "monsters_slain" field.</summary>
+    public const int MonstersSlainFieldNumber = 3;
+    private int monstersSlain_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int MonstersSlain {
+      get { return monstersSlain_; }
+      set {
+        monstersSlain_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "attack" field.</summary>
+    public const int AttackFieldNumber = 4;
+    private int attack_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Attack {
+      get { return attack_; }
+      set {
+        attack_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "defense" field.</summary>
+    public const int DefenseFieldNumber = 5;
+    private int defense_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Defense {
+      get { return defense_; }
+      set {
+        defense_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "current_health" field.</summary>
+    public const int CurrentHealthFieldNumber = 6;
+    private int currentHealth_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CurrentHealth {
+      get { return currentHealth_; }
+      set {
+        currentHealth_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "max_health" field.</summary>
+    public const int MaxHealthFieldNumber = 7;
+    private int maxHealth_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int MaxHealth {
+      get { return maxHealth_; }
+      set {
+        maxHealth_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "death_count" field.</summary>
+    public const int DeathCountFieldNumber = 8;
+    private int deathCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int DeathCount {
+      get { return deathCount_; }
+      set {
+        deathCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "turns_since_joined" field.</summary>
+    public const int TurnsSinceJoinedFieldNumber = 9;
+    private int turnsSinceJoined_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int TurnsSinceJoined {
+      get { return turnsSinceJoined_; }
+      set {
+        turnsSinceJoined_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PlayerStats);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PlayerStats other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Level != other.Level) return false;
+      if (Experience != other.Experience) return false;
+      if (MonstersSlain != other.MonstersSlain) return false;
+      if (Attack != other.Attack) return false;
+      if (Defense != other.Defense) return false;
+      if (CurrentHealth != other.CurrentHealth) return false;
+      if (MaxHealth != other.MaxHealth) return false;
+      if (DeathCount != other.DeathCount) return false;
+      if (TurnsSinceJoined != other.TurnsSinceJoined) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Level != 0) hash ^= Level.GetHashCode();
+      if (Experience != 0) hash ^= Experience.GetHashCode();
+      if (MonstersSlain != 0) hash ^= MonstersSlain.GetHashCode();
+      if (Attack != 0) hash ^= Attack.GetHashCode();
+      if (Defense != 0) hash ^= Defense.GetHashCode();
+      if (CurrentHealth != 0) hash ^= CurrentHealth.GetHashCode();
+      if (MaxHealth != 0) hash ^= MaxHealth.GetHashCode();
+      if (DeathCount != 0) hash ^= DeathCount.GetHashCode();
+      if (TurnsSinceJoined != 0) hash ^= TurnsSinceJoined.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Level != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Level);
+      }
+      if (Experience != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(Experience);
+      }
+      if (MonstersSlain != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(MonstersSlain);
+      }
+      if (Attack != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(Attack);
+      }
+      if (Defense != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(Defense);
+      }
+      if (CurrentHealth != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(CurrentHealth);
+      }
+      if (MaxHealth != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(MaxHealth);
+      }
+      if (DeathCount != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(DeathCount);
+      }
+      if (TurnsSinceJoined != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(TurnsSinceJoined);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Level != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Level);
+      }
+      if (Experience != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Experience);
+      }
+      if (MonstersSlain != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MonstersSlain);
+      }
+      if (Attack != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Attack);
+      }
+      if (Defense != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Defense);
+      }
+      if (CurrentHealth != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CurrentHealth);
+      }
+      if (MaxHealth != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxHealth);
+      }
+      if (DeathCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DeathCount);
+      }
+      if (TurnsSinceJoined != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TurnsSinceJoined);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PlayerStats other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Level != 0) {
+        Level = other.Level;
+      }
+      if (other.Experience != 0) {
+        Experience = other.Experience;
+      }
+      if (other.MonstersSlain != 0) {
+        MonstersSlain = other.MonstersSlain;
+      }
+      if (other.Attack != 0) {
+        Attack = other.Attack;
+      }
+      if (other.Defense != 0) {
+        Defense = other.Defense;
+      }
+      if (other.CurrentHealth != 0) {
+        CurrentHealth = other.CurrentHealth;
+      }
+      if (other.MaxHealth != 0) {
+        MaxHealth = other.MaxHealth;
+      }
+      if (other.DeathCount != 0) {
+        DeathCount = other.DeathCount;
+      }
+      if (other.TurnsSinceJoined != 0) {
+        TurnsSinceJoined = other.TurnsSinceJoined;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Level = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            Experience = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            MonstersSlain = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            Attack = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            Defense = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            CurrentHealth = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            MaxHealth = input.ReadInt32();
+            break;
+          }
+          case 64: {
+            DeathCount = input.ReadInt32();
+            break;
+          }
+          case 72: {
+            TurnsSinceJoined = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Level = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            Experience = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            MonstersSlain = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            Attack = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            Defense = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            CurrentHealth = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            MaxHealth = input.ReadInt32();
+            break;
+          }
+          case 64: {
+            DeathCount = input.ReadInt32();
+            break;
+          }
+          case 72: {
+            TurnsSinceJoined = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class PlayerStatsBundle : pb::IMessage<PlayerStatsBundle>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PlayerStatsBundle> _parser = new pb::MessageParser<PlayerStatsBundle>(() => new PlayerStatsBundle());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PlayerStatsBundle> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::MM26.IO.Models.CharacterReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PlayerStatsBundle() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PlayerStatsBundle(PlayerStatsBundle other) : this() {
+      stats_ = other.stats_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PlayerStatsBundle Clone() {
+      return new PlayerStatsBundle(this);
+    }
+
+    /// <summary>Field number for the "stats" field.</summary>
+    public const int StatsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::MM26.IO.Models.PlayerStats> _repeated_stats_codec
+        = pb::FieldCodec.ForMessage(10, global::MM26.IO.Models.PlayerStats.Parser);
+    private readonly pbc::RepeatedField<global::MM26.IO.Models.PlayerStats> stats_ = new pbc::RepeatedField<global::MM26.IO.Models.PlayerStats>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::MM26.IO.Models.PlayerStats> Stats {
+      get { return stats_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PlayerStatsBundle);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PlayerStatsBundle other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!stats_.Equals(other.stats_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= stats_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      stats_.WriteTo(output, _repeated_stats_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += stats_.CalculateSize(_repeated_stats_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PlayerStatsBundle other) {
+      if (other == null) {
+        return;
+      }
+      stats_.Add(other.stats_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            stats_.AddEntriesFrom(input, _repeated_stats_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            stats_.AddEntriesFrom(ref input, _repeated_stats_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   public sealed partial class Position : pb::IMessage<Position>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1201,7 +1767,7 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MM26.IO.Models.CharacterReflection.Descriptor.MessageTypes[3]; }
+      get { return global::MM26.IO.Models.CharacterReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

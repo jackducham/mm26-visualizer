@@ -25,18 +25,17 @@ namespace MM26.IO.Models {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CgxwbGF5ZXIucHJvdG8SFHBsYXllcl9jb21tdW5pY2F0aW9uGhBnYW1lX3N0",
-            "YXRlLnByb3RvGg9jaGFyYWN0ZXIucHJvdG8iYQoKUGxheWVyVHVybhIpCgpn",
-            "YW1lX3N0YXRlGAEgASgLMhUuZ2FtZV9zdGF0ZS5HYW1lU3RhdGUSDwoFdGVz",
-            "dDEYAiABKAlIABIPCgV0ZXN0MhgDIAEoBUgAQgYKBHRlc3QifQoOUGxheWVy",
-            "RGVjaXNpb24SLgoNZGVjaXNpb25fdHlwZRgBIAEoDjIXLmNoYXJhY3Rlci5E",
-            "ZWNpc2lvblR5cGUSLAoPdGFyZ2V0X3Bvc2l0aW9uGAIgASgLMhMuY2hhcmFj",
-            "dGVyLlBvc2l0aW9uEg0KBWluZGV4GAMgASgFQlQKM21lY2gubWFuaWEuZW5n",
-            "aW5lLnNlcnZlci5jb21tdW5pY2F0aW9uLnBsYXllci5tb2RlbEIMUGxheWVy",
-            "UHJvdG9zqgIOTU0yNi5JTy5Nb2RlbHNiBnByb3RvMw=="));
+            "YXRlLnByb3RvGg9jaGFyYWN0ZXIucHJvdG8iTAoKUGxheWVyVHVybhIpCgpn",
+            "YW1lX3N0YXRlGAEgASgLMhUuZ2FtZV9zdGF0ZS5HYW1lU3RhdGUSEwoLcGxh",
+            "eWVyX25hbWUYAiABKAkifQoOUGxheWVyRGVjaXNpb24SLgoNZGVjaXNpb25f",
+            "dHlwZRgBIAEoDjIXLmNoYXJhY3Rlci5EZWNpc2lvblR5cGUSLAoPdGFyZ2V0",
+            "X3Bvc2l0aW9uGAIgASgLMhMuY2hhcmFjdGVyLlBvc2l0aW9uEg0KBWluZGV4",
+            "GAMgASgFQj8KHm1lY2gubWFuaWEuZW5naW5lLmRvbWFpbi5tb2RlbEIMUGxh",
+            "eWVyUHJvdG9zqgIOTU0yNi5JTy5Nb2RlbHNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::MM26.IO.Models.GameStateReflection.Descriptor, global::MM26.IO.Models.CharacterReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.PlayerTurn), global::MM26.IO.Models.PlayerTurn.Parser, new[]{ "GameState", "Test1", "Test2" }, new[]{ "Test" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.PlayerTurn), global::MM26.IO.Models.PlayerTurn.Parser, new[]{ "GameState", "PlayerName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.PlayerDecision), global::MM26.IO.Models.PlayerDecision.Parser, new[]{ "DecisionType", "TargetPosition", "Index" }, null, null, null, null)
           }));
     }
@@ -77,15 +76,7 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PlayerTurn(PlayerTurn other) : this() {
       gameState_ = other.gameState_ != null ? other.gameState_.Clone() : null;
-      switch (other.TestCase) {
-        case TestOneofCase.Test1:
-          Test1 = other.Test1;
-          break;
-        case TestOneofCase.Test2:
-          Test2 = other.Test2;
-          break;
-      }
-
+      playerName_ = other.playerName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -105,45 +96,15 @@ namespace MM26.IO.Models {
       }
     }
 
-    /// <summary>Field number for the "test1" field.</summary>
-    public const int Test1FieldNumber = 2;
+    /// <summary>Field number for the "player_name" field.</summary>
+    public const int PlayerNameFieldNumber = 2;
+    private string playerName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Test1 {
-      get { return testCase_ == TestOneofCase.Test1 ? (string) test_ : ""; }
+    public string PlayerName {
+      get { return playerName_; }
       set {
-        test_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-        testCase_ = TestOneofCase.Test1;
+        playerName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
-    }
-
-    /// <summary>Field number for the "test2" field.</summary>
-    public const int Test2FieldNumber = 3;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Test2 {
-      get { return testCase_ == TestOneofCase.Test2 ? (int) test_ : 0; }
-      set {
-        test_ = value;
-        testCase_ = TestOneofCase.Test2;
-      }
-    }
-
-    private object test_;
-    /// <summary>Enum of possible cases for the "test" oneof.</summary>
-    public enum TestOneofCase {
-      None = 0,
-      Test1 = 2,
-      Test2 = 3,
-    }
-    private TestOneofCase testCase_ = TestOneofCase.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public TestOneofCase TestCase {
-      get { return testCase_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void ClearTest() {
-      testCase_ = TestOneofCase.None;
-      test_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -160,9 +121,7 @@ namespace MM26.IO.Models {
         return true;
       }
       if (!object.Equals(GameState, other.GameState)) return false;
-      if (Test1 != other.Test1) return false;
-      if (Test2 != other.Test2) return false;
-      if (TestCase != other.TestCase) return false;
+      if (PlayerName != other.PlayerName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -170,9 +129,7 @@ namespace MM26.IO.Models {
     public override int GetHashCode() {
       int hash = 1;
       if (gameState_ != null) hash ^= GameState.GetHashCode();
-      if (testCase_ == TestOneofCase.Test1) hash ^= Test1.GetHashCode();
-      if (testCase_ == TestOneofCase.Test2) hash ^= Test2.GetHashCode();
-      hash ^= (int) testCase_;
+      if (PlayerName.Length != 0) hash ^= PlayerName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -190,13 +147,9 @@ namespace MM26.IO.Models {
         output.WriteRawTag(10);
         output.WriteMessage(GameState);
       }
-      if (testCase_ == TestOneofCase.Test1) {
+      if (PlayerName.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(Test1);
-      }
-      if (testCase_ == TestOneofCase.Test2) {
-        output.WriteRawTag(24);
-        output.WriteInt32(Test2);
+        output.WriteString(PlayerName);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -209,11 +162,8 @@ namespace MM26.IO.Models {
       if (gameState_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameState);
       }
-      if (testCase_ == TestOneofCase.Test1) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Test1);
-      }
-      if (testCase_ == TestOneofCase.Test2) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Test2);
+      if (PlayerName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerName);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,15 +182,9 @@ namespace MM26.IO.Models {
         }
         GameState.MergeFrom(other.GameState);
       }
-      switch (other.TestCase) {
-        case TestOneofCase.Test1:
-          Test1 = other.Test1;
-          break;
-        case TestOneofCase.Test2:
-          Test2 = other.Test2;
-          break;
+      if (other.PlayerName.Length != 0) {
+        PlayerName = other.PlayerName;
       }
-
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -263,11 +207,7 @@ namespace MM26.IO.Models {
             break;
           }
           case 18: {
-            Test1 = input.ReadString();
-            break;
-          }
-          case 24: {
-            Test2 = input.ReadInt32();
+            PlayerName = input.ReadString();
             break;
           }
         }
@@ -292,11 +232,7 @@ namespace MM26.IO.Models {
             break;
           }
           case 18: {
-            Test1 = input.ReadString();
-            break;
-          }
-          case 24: {
-            Test2 = input.ReadInt32();
+            PlayerName = input.ReadString();
             break;
           }
         }

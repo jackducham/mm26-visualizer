@@ -16,7 +16,7 @@ public class TestServerScenario : TestScenario
         {
             server.Add(new GameChange()
             {
-                ChangeId = i
+                //ChangeId = i
             });
         }
     }

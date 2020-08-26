@@ -43,5 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349a6d2ed19bc47a18100b1d102d53b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneLifeCycle: {fileID: 0}
+  _sceneLifeCycle: {fileID: 11400000, guid: e5a30a7b0ac1e4833a29854a0f787d12, type: 2}
   _play: 1

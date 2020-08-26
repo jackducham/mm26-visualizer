@@ -34,15 +34,13 @@ namespace MM26.IO.Models {
             "YWx1ZRgCIAEoCzIMLmJvYXJkLkJvYXJkOgI4ARpFChBQbGF5ZXJOYW1lc0Vu",
             "dHJ5EgsKA2tleRgBIAEoCRIgCgV2YWx1ZRgCIAEoCzIRLmNoYXJhY3Rlci5Q",
             "bGF5ZXI6AjgBGkcKEU1vbnN0ZXJOYW1lc0VudHJ5EgsKA2tleRgBIAEoCRIh",
-            "CgV2YWx1ZRgCIAEoCzISLmNoYXJhY3Rlci5Nb25zdGVyOgI4ASIfCgpHYW1l",
-            "Q2hhbmdlEhEKCWNoYW5nZV9pZBgBIAEoA0JAChxtZWNoLm1hbmlhLmVuZ2lu",
-            "ZS5nYW1lLm1vZGVsQg9HYW1lU3RhdGVQcm90b3OqAg5NTTI2LklPLk1vZGVs",
-            "c2IGcHJvdG8z"));
+            "CgV2YWx1ZRgCIAEoCzISLmNoYXJhY3Rlci5Nb25zdGVyOgI4AUJCCh5tZWNo",
+            "Lm1hbmlhLmVuZ2luZS5kb21haW4ubW9kZWxCD0dhbWVTdGF0ZVByb3Rvc6oC",
+            "Dk1NMjYuSU8uTW9kZWxzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::MM26.IO.Models.BoardReflection.Descriptor, global::MM26.IO.Models.CharacterReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.GameState), global::MM26.IO.Models.GameState.Parser, new[]{ "StateId", "BoardNames", "PlayerNames", "MonsterNames" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.GameChange), global::MM26.IO.Models.GameChange.Parser, new[]{ "ChangeId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.GameState), global::MM26.IO.Models.GameState.Parser, new[]{ "StateId", "BoardNames", "PlayerNames", "MonsterNames" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, })
           }));
     }
     #endregion
@@ -267,161 +265,6 @@ namespace MM26.IO.Models {
           }
           case 34: {
             monsterNames_.AddEntriesFrom(ref input, _map_monsterNames_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  public sealed partial class GameChange : pb::IMessage<GameChange>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<GameChange> _parser = new pb::MessageParser<GameChange>(() => new GameChange());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<GameChange> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::MM26.IO.Models.GameStateReflection.Descriptor.MessageTypes[1]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GameChange() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GameChange(GameChange other) : this() {
-      changeId_ = other.changeId_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GameChange Clone() {
-      return new GameChange(this);
-    }
-
-    /// <summary>Field number for the "change_id" field.</summary>
-    public const int ChangeIdFieldNumber = 1;
-    private long changeId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long ChangeId {
-      get { return changeId_; }
-      set {
-        changeId_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as GameChange);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(GameChange other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (ChangeId != other.ChangeId) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (ChangeId != 0L) hash ^= ChangeId.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (ChangeId != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(ChangeId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (ChangeId != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ChangeId);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(GameChange other) {
-      if (other == null) {
-        return;
-      }
-      if (other.ChangeId != 0L) {
-        ChangeId = other.ChangeId;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            ChangeId = input.ReadInt64();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            ChangeId = input.ReadInt64();
             break;
           }
         }

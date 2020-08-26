@@ -30,9 +30,9 @@ namespace MM26.IO.Models {
             "LmNoYXJhY3Rlci5Qb3NpdGlvbiKHAQoEVGlsZRInCgl0aWxlX3R5cGUYASAB",
             "KA4yFC5ib2FyZC5UaWxlLlRpbGVUeXBlEhkKBWl0ZW1zGAIgAygLMgouaXRl",
             "bS5JdGVtIjsKCFRpbGVUeXBlEggKBFZPSUQQABIJCgVCTEFOSxABEg4KCklN",
-            "UEFTU0lCTEUQAhIKCgZQT1JUQUwQA0I8ChxtZWNoLm1hbmlhLmVuZ2luZS5n",
-            "YW1lLmJvYXJkQgtCb2FyZFByb3Rvc6oCDk1NMjYuSU8uTW9kZWxzYgZwcm90",
-            "bzM="));
+            "UEFTU0lCTEUQAhIKCgZQT1JUQUwQA0I+Ch5tZWNoLm1hbmlhLmVuZ2luZS5k",
+            "b21haW4ubW9kZWxCC0JvYXJkUHJvdG9zqgIOTU0yNi5JTy5Nb2RlbHNiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::MM26.IO.Models.ItemReflection.Descriptor, global::MM26.IO.Models.CharacterReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

@@ -25,14 +25,16 @@ namespace MM26.IO.Models {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CgtpbmZyYS5wcm90bxIFaW5mcmEiNQoLSW5mcmFQbGF5ZXISEwoLcGxheWVy",
-            "X25hbWUYASABKAkSEQoJcGxheWVyX2lwGAIgASgJIi4KC0luZnJhU3RhdHVz",
-            "Eg4KBnN0YXR1cxgBIAEoBRIPCgdtZXNzYWdlGAIgASgJQlIKMm1lY2gubWFu",
-            "aWEuZW5naW5lLnNlcnZlci5jb21tdW5pY2F0aW9uLmluZnJhLm1vZGVsQgtJ",
-            "bmZyYVByb3Rvc6oCDk1NMjYuSU8uTW9kZWxzYgZwcm90bzM="));
+            "X25hbWUYASABKAkSEQoJcGxheWVyX2lwGAIgASgJIjEKD0luZnJhVmlzdWFs",
+            "aXplchIeChZ2aXN1YWxpemVyX2Nvbm5lY3RfdXJsGAEgASgJIi4KC0luZnJh",
+            "U3RhdHVzEg4KBnN0YXR1cxgBIAEoBRIPCgdtZXNzYWdlGAIgASgJQj4KHm1l",
+            "Y2gubWFuaWEuZW5naW5lLmRvbWFpbi5tb2RlbEILSW5mcmFQcm90b3OqAg5N",
+            "TTI2LklPLk1vZGVsc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.InfraPlayer), global::MM26.IO.Models.InfraPlayer.Parser, new[]{ "PlayerName", "PlayerIp" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.InfraVisualizer), global::MM26.IO.Models.InfraVisualizer.Parser, new[]{ "VisualizerConnectUrl" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.InfraStatus), global::MM26.IO.Models.InfraStatus.Parser, new[]{ "Status", "Message" }, null, null, null, null)
           }));
     }
@@ -227,6 +229,161 @@ namespace MM26.IO.Models {
 
   }
 
+  public sealed partial class InfraVisualizer : pb::IMessage<InfraVisualizer>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<InfraVisualizer> _parser = new pb::MessageParser<InfraVisualizer>(() => new InfraVisualizer());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<InfraVisualizer> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::MM26.IO.Models.InfraReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InfraVisualizer() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InfraVisualizer(InfraVisualizer other) : this() {
+      visualizerConnectUrl_ = other.visualizerConnectUrl_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public InfraVisualizer Clone() {
+      return new InfraVisualizer(this);
+    }
+
+    /// <summary>Field number for the "visualizer_connect_url" field.</summary>
+    public const int VisualizerConnectUrlFieldNumber = 1;
+    private string visualizerConnectUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string VisualizerConnectUrl {
+      get { return visualizerConnectUrl_; }
+      set {
+        visualizerConnectUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as InfraVisualizer);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(InfraVisualizer other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (VisualizerConnectUrl != other.VisualizerConnectUrl) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (VisualizerConnectUrl.Length != 0) hash ^= VisualizerConnectUrl.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (VisualizerConnectUrl.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VisualizerConnectUrl);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (VisualizerConnectUrl.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VisualizerConnectUrl);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(InfraVisualizer other) {
+      if (other == null) {
+        return;
+      }
+      if (other.VisualizerConnectUrl.Length != 0) {
+        VisualizerConnectUrl = other.VisualizerConnectUrl;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            VisualizerConnectUrl = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            VisualizerConnectUrl = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   public sealed partial class InfraStatus : pb::IMessage<InfraStatus>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -239,7 +396,7 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MM26.IO.Models.InfraReflection.Descriptor.MessageTypes[1]; }
+      get { return global::MM26.IO.Models.InfraReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
