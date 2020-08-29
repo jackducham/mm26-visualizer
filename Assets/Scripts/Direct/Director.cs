@@ -13,5 +13,20 @@ namespace MM26.Play
 
         [SerializeField]
         private MM26.IO.Data _data = null;
+
+        private void OnEnable()
+        {
+            _sceneLifeCycle.Play.AddListener(this.Play);
+        }
+
+        private void OnDisable()
+        {
+            _sceneLifeCycle.Play.RemoveListener(this.Play);
+        }
+
+        private void Play()
+        {
+            
+        }
     }
 }
