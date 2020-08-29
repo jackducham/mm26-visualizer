@@ -5,7 +5,7 @@ namespace MM26.Play
     /// <summary>
     /// Responsible for playing the scene from deltas
     /// </summary>
-    public class Player : MonoBehaviour
+    public class Director : MonoBehaviour
     {
         [Header("Services")]
         [SerializeField]
