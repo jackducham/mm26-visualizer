@@ -9,6 +9,9 @@ namespace MM26.Board
     using PCharacter = MM26.IO.Models.Character;
     using PPosition = MM26.IO.Models.Position;
 
+    /// <summary>
+    /// Responsible for creating the board
+    /// </summary>
     public class BoardCreator : MonoBehaviour
     {
         [Header("Tiles")]

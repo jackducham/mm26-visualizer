@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace MM26.Board.Tests
 {
+    /// <summary>
+    /// Mock board
+    /// </summary>
     [Serializable]
     public class TestBoard
     {
@@ -27,6 +30,9 @@ namespace MM26.Board.Tests
         public TestTile[] Grid;
     }
 
+    /// <summary>
+    /// Mock game state
+    /// </summary>
     [CreateAssetMenu(fileName = "New Test Board", menuName = "Board/Test Board")]
     public class TestGameState : ScriptableObject
     {

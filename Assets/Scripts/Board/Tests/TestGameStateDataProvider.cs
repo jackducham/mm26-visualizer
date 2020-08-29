@@ -8,6 +8,9 @@ namespace MM26.Board.Tests
     using PCharacter = MM26.IO.Models.Character;
     using PPosition = MM26.IO.Models.Position;
 
+    /// <summary>
+    /// Mock data provider
+    /// </summary>
     public class TestGameStateDataProvider : MonoBehaviour
     {
         [SerializeField]

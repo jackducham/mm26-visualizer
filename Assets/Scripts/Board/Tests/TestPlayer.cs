@@ -2,6 +2,9 @@
 
 namespace MM26.Board.Tests
 {
+    /// <summary>
+    /// Mock player
+    /// </summary>
     [Serializable]
     public class TestPlayer
     {

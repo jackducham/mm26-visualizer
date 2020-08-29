@@ -3,6 +3,9 @@ using MM26.IO.Models;
 
 namespace MM26.Board.Tests
 {
+    /// <summary>
+    /// Mock tile type
+    /// </summary>
     [Serializable]
     public enum TestTileType
     {
@@ -12,6 +15,9 @@ namespace MM26.Board.Tests
         Portal
     }
 
+    /// <summary>
+    /// Mock tile
+    /// </summary>
     [Serializable]
     public struct TestTile
     {
