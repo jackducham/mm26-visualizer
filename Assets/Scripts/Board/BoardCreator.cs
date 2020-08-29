@@ -41,6 +41,9 @@ namespace MM26.Board
         [SerializeField]
         private IO.Data _data = null;
 
+        [SerializeField]
+        private BoardPositionLookUp _positionLookUp = null;
+
         [Header("Others")]
         [SerializeField]
         private Tilemap _tilemap = null;
@@ -59,6 +62,8 @@ namespace MM26.Board
         {
             this.CreateMap();
             this.CreatePlayers();
+
+            _positionLookUp.Tilemap = _tilemap;
 
             _sceneLifeCycle.BoardCreated.Invoke();
         }
