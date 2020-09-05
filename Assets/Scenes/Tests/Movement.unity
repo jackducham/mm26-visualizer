@@ -182,7 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data: {fileID: 11400000, guid: 10eb0f1c65a9f486fb08761d63b81067, type: 2}
   _sceneLifeCycle: {fileID: 11400000, guid: e5a30a7b0ac1e4833a29854a0f787d12, type: 2}
-  _testData: {fileID: 11400000, guid: bfa9e65b2880246619346ed96967f4e5, type: 2}
+  _testData: {fileID: 11400000, guid: 33dc85a7a7d9f452484cbbea89675d50, type: 2}
 --- !u!4 &514528950
 Transform:
   m_ObjectHideFlags: 0
@@ -333,7 +333,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _sceneConfiguration
       value: 
-      objectReference: {fileID: 11400000, guid: de3897c242d1a4bb290ef1e85b3fdc8b,
+      objectReference: {fileID: 11400000, guid: 73e160cfeabd04f08ab48c332a6cb520,
         type: 2}
     - target: {fileID: 6099384395167837154, guid: 7fd854d829837454784ec17a6269900a,
         type: 3}
@@ -660,11 +660,6 @@ PrefabInstance:
         type: 3}
       propertyPath: _createTokens
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5018251443507735759, guid: 265617c07845e47018a2a1d32b15454d,
-        type: 3}
-      propertyPath: _play
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5018251443507735759, guid: 265617c07845e47018a2a1d32b15454d,
         type: 3}

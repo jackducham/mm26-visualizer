@@ -31,10 +31,11 @@ namespace MM26.Board
         [SerializeField]
         private GameObject _playerPrefab = null;
 
-        [Header("Services")]
+        [Header("Scene Specific")]
         [SerializeField]
         private SceneConfiguration _sceneConfiguration = null;
 
+        [Header("Scene Essentials")]
         [SerializeField]
         private SceneLifeCycle  _sceneLifeCycle = null;
 

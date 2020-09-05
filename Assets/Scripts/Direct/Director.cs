@@ -7,7 +7,7 @@ namespace MM26.Play
     /// </summary>
     public class Director : MonoBehaviour
     {
-        [Header("Services")]
+        [Header("Scene Essentials")]
         [SerializeField]
         private SceneLifeCycle _sceneLifeCycle = null;
 

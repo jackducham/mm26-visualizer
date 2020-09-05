@@ -13,14 +13,14 @@ namespace MM26.Tests
     /// </summary>
     public class TestGameDataProvider : MonoBehaviour
     {
-        [Header("Essentials")]
+        [Header("Scene Essentials")]
         [SerializeField]
         IO.Data _data = null;
 
         [SerializeField]
         SceneLifeCycle _sceneLifeCycle = null;
 
-        [Header("Test Data")]
+        [Header("Scene Specific")]
         [FormerlySerializedAs("_testGameState")]
         [SerializeField]
         TestGameData _testData = null;
@@ -37,13 +37,19 @@ namespace MM26.Tests
 
         private void OnFetchData()
         {
+            this.FetchState();
+            this.FetchChange();
+            _sceneLifeCycle.DataFetched.Invoke();
+        }
+
+        private void FetchState()
+        {
             var state = new GameState();
 
             this.FetchBoard(state);
             this.FetchPlayers(state);
 
             _data.GameState = state;
-            _sceneLifeCycle.DataFetched.Invoke();
         }
 
         private void FetchBoard(GameState state)
@@ -84,6 +90,11 @@ namespace MM26.Tests
 
                 state.PlayerNames.Add(testPlayer.Name, player);
             }
+        }
+
+        private void FetchChange()
+        {
+            // TODO: add change fetching
         }
     }
 }
