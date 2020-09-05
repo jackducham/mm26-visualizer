@@ -23,14 +23,19 @@ namespace MM26.Systems
                 {
                     if (this.TasksToFinish.TryGetValue(id.Name, out Task task))
                     {
-                        float dt = UnityEngine.Time.deltaTime;
                         MovementTask movementTask = (MovementTask)task;
+
                         Vector3 target = movementTask.Path[movement.Progress];
 
-                        transform.position = target;
+                        transform.position = Vector3.SmoothDamp(
+                            current: transform.position,
+                            target: target,
+                            currentVelocity: ref movement.CurrentVelocity,
+                            smoothTime: movement.Smoothtime);
 
                         if (Vector3.Distance(target, transform.position) <= movement.Tolerance)
                         {
+                            transform.position = target;
                             movement.Progress++;
                         }
 
