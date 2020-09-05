@@ -5,11 +5,11 @@ namespace MM26.Tasks
 {
     public class MovementTask : Task
     {
-        public Transform[] Path = null;
+        public Vector3[] Path = null;
 
         public MovementTask(
             string entity,
-            Transform[] path) : base(entity)
+            Vector3[] path) : base(entity)
         {
             this.Path = path;
         }

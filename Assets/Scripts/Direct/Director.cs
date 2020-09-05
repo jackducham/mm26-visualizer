@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
+using Google.Protobuf.Collections;
 using MM26.ECS;
 using MM26.IO.Models;
+using MM26.Tasks;
+using MM26.Board;
 
 namespace MM26.Play
 {
@@ -15,6 +18,9 @@ namespace MM26.Play
 
         [SerializeField]
         private MM26.IO.Data _data = null;
+
+        [SerializeField]
+        private BoardPositionLookUp _positionLookUp = null;
 
         [SerializeField]
         private TasksManager _taskManager = null;
@@ -44,9 +50,32 @@ namespace MM26.Play
             for (int i = 0; i < _data.GameChanges.Count; i++)
             {
                 GameChange change = _data.GameChanges[i];
+                TasksBatch batch = new TasksBatch();
 
-                Debug.Log(change.NewPlayerNames.Count);
+                foreach (var pair in change.CharacterStatChanges)
+                {
+                    batch.Add(
+                        new MovementTask(
+                            pair.Key,
+                            this.GetPath(pair.Value.Path)));
+                }
+
+                _taskManager.AddTasksBatch(batch);
             }
+        }
+
+        private Vector3[] GetPath(RepeatedField<Position> path)
+        {
+            Vector3[] newPath = new Vector3[path.Count];
+
+            for (int i = 0; i < path.Count; i++)
+            {
+                Position position = path[i];
+                newPath[i] = _positionLookUp.Translate(
+                    new Vector3Int(position.X, position.Y, 0));
+            }
+
+            return newPath;
         }
     }
 }
