@@ -57,6 +57,11 @@ namespace MM26.ECS
             this.UpdateMessages();
         }
 
+        protected void Finish(Task task)
+        {
+            task.Finish(this.Mailbox);
+        }
+
         private void UpdateMessages()
         {
             List<Task> messages = this.Mailbox.GetSubscribedTasksForType<T>(this);

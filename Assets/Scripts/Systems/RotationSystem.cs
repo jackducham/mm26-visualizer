@@ -22,9 +22,7 @@ namespace MM26.Systems
                 .WithoutBurst()
                 .ForEach((Transform transform, ID id, Rotation rotation) =>
                 {
-                    Task task;
-
-                    if (!this.TasksToFinish.TryGetValue(id.Name, out task))
+                    if (!this.TasksToFinish.TryGetValue(id.Name, out Task task))
                     {
                         return;
                     }
@@ -45,7 +43,7 @@ namespace MM26.Systems
                         {
                             rotAmt = rotation.Amount;
                             // Finish
-                            this.TasksToFinish[id.Name].Finish();
+                            this.Finish(this.TasksToFinish[id.Name]);
                         }
 
                         rotation.Amount -= rotAmt;

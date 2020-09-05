@@ -10,9 +10,8 @@ namespace MM26.Tasks
 
         public RotationTask(
             string entityName,
-            Mailbox mailbox,
             float rotationAmt,
-            Vector3 axis) : base(entityName, mailbox)
+            Vector3 axis) : base(entityName)
         {
             RotationAmount = rotationAmt;
             RotationAxis = axis;

@@ -21,14 +21,12 @@ namespace MM26.Systems
                 .WithoutBurst()
                 .ForEach((ID id, Transform transform, Movement movement) =>
                 {
-                    Task task;
-
-                    if (this.TasksToFinish.TryGetValue(id.Name, out task))
+                    if (this.TasksToFinish.TryGetValue(id.Name, out Task task))
                     {
                         MovementTask movementTask = (MovementTask)task;
 
-                        task.Start();
-                        task.Finish();
+                        movementTask.Start();
+                        this.Finish(movementTask);
 
                         //transform.position = movementTask.Destination.position;
                     }

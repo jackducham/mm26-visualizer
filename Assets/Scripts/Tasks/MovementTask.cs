@@ -9,8 +9,7 @@ namespace MM26.Tasks
 
         public MovementTask(
             string entity,
-            Mailbox mailbox,
-            Transform[] path) : base(entity, mailbox)
+            Transform[] path) : base(entity)
         {
             this.Path = path;
         }

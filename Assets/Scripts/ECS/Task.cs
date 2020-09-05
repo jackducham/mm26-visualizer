@@ -10,7 +10,6 @@ namespace MM26.ECS
     public abstract class Task
     {
         public string EntityName;
-        public Mailbox Mailbox { get; private set; }
 
         private static int _nextId;
         private readonly int _taskId;
@@ -27,10 +26,9 @@ namespace MM26.ECS
         /// <returns>True if the task is marked as started; false otherwise.</returns>
         public bool IsStarted { get; set; }
 
-        public Task(string entityName, Mailbox mailbox)
+        public Task(string entityName)
         {
             this.EntityName = entityName;
-            this.Mailbox = mailbox;
             this.IsFinished = false;
 
             _taskId = _nextId++;
@@ -48,10 +46,10 @@ namespace MM26.ECS
         /// Mark a task as finished. Useful for classes to know whether a task has been finished by a system.
         /// </summary>
         /// <remarks>Will remove the task from the Mailbox system so it will no longer be returned when getting messages for a type.</remarks>
-        public void Finish()
+        public void Finish(Mailbox mailbox)
         {
             IsFinished = true;
-            this.Mailbox.RemoveTask(this);
+            mailbox.RemoveTask(this);
         }
 
         /// <summary>
