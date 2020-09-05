@@ -47,7 +47,7 @@ namespace MM26.IO
             Action onError = () =>
             {
                 // Please preserve this log message for diagnostic purpose
-                Debug.LogError("Failed");
+                Debug.LogError("Connection Failed");
             };
 
             _listener.NewMessage += this.OnMessage;
