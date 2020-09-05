@@ -47,9 +47,9 @@ namespace MM26.Play
 
         private void DispatchTasks()
         {
-            for (int i = 0; i < _data.GameChanges.Count; i++)
+            for (; _nextChangeIndex < _data.GameChanges.Count; _nextChangeIndex++)
             {
-                GameChange change = _data.GameChanges[i];
+                GameChange change = _data.GameChanges[_nextChangeIndex];
                 TasksBatch batch = new TasksBatch();
 
                 foreach (var pair in change.CharacterStatChanges)

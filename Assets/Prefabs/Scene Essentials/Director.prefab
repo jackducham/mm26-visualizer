@@ -45,4 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sceneLifeCycle: {fileID: 11400000, guid: e5a30a7b0ac1e4833a29854a0f787d12, type: 2}
   _data: {fileID: 11400000, guid: 10eb0f1c65a9f486fb08761d63b81067, type: 2}
+  _positionLookUp: {fileID: 11400000, guid: 2be8fc4b715a646b18ec12963535586d, type: 2}
   _taskManager: {fileID: 11400000, guid: 42860c13965964ab487fc8e80037fa50, type: 2}

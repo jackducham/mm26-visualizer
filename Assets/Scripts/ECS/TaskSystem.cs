@@ -33,16 +33,12 @@ namespace MM26.ECS
             return Resources.Load<Mailbox>("Objects/Mailbox");
         }
 
-        protected bool ShouldFinish()
-        {
-            return true;
-        }
-
         protected override void OnCreate()
         {
             base.OnCreate();
 
             this.Mailbox = this.GetMailbox();
+            this.Mailbox.SubscribeToTaskType<T>(this);
             this.TasksToFinish = new Dictionary<string, Task>();
         }
 
@@ -60,23 +56,24 @@ namespace MM26.ECS
         protected void Finish(Task task)
         {
             task.Finish(this.Mailbox);
+            this.TasksToFinish.Remove(task.EntityName);
         }
 
         private void UpdateMessages()
         {
-            List<Task> messages = this.Mailbox.GetSubscribedTasksForType<T>(this);
+            List<Task> tasks = this.Mailbox.GetSubscribedTasksForType<T>(this);
 
-            if (messages == null)
+            if (tasks == null)
             {
                 return;
             }
 
-            foreach (var msg in messages)
+            foreach (var task in tasks)
             {
-                if (!msg.IsFinished)
+                if (!task.IsStarted)
                 {
-                    this.TasksToFinish[msg.EntityName] = msg;
-                    //msg.FinishMessage();
+                    this.TasksToFinish[task.EntityName] = task;
+                    task.Start();
                 }
             }
         }

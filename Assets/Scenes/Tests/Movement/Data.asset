@@ -15,8 +15,29 @@ MonoBehaviour:
   State:
     Board:
       Name: pvp
-      Columns: 0
-      Rows: 0
-      Grid: []
-    Players: []
-  Changes: []
+      Columns: 3
+      Rows: 1
+      Grid:
+      - TileType: 1
+      - TileType: 1
+      - TileType: 1
+    Players:
+    - Name: player
+      Board: pvp
+      X: 0
+      Y: 0
+  Changes:
+  - CharacterChanges:
+    - Entity: player
+      Died: 0
+      Respawned: 0
+      Path:
+      - X: 0
+        Y: 0
+        BoardID: pvp
+      - X: 1
+        Y: 0
+        BoardID: pvp
+      - X: 2
+        Y: 0
+        BoardID: pvp

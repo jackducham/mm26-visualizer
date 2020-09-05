@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Serialization;
+using Google.Protobuf.Collections;
 using MM26.IO.Models;
 
 namespace MM26.Tests
@@ -94,7 +95,34 @@ namespace MM26.Tests
 
         private void FetchChange()
         {
-            // TODO: add change fetching
+            foreach (TestGameChange testChange in _testData.Changes)
+            {
+                var change = new GameChange();
+
+                foreach (TestCharacterChange testCharacterChange in testChange.CharacterChanges)
+                {
+                    var characterChange = new CharacterChange();
+
+                    if (testCharacterChange.Path != null)
+                    {
+                        foreach (var testPosition in testCharacterChange.Path)
+                        {
+                            characterChange.Path.Add(new PPosition()
+                            {
+                                X = testPosition.X,
+                                Y = testPosition.Y,
+                                BoardId = testPosition.BoardID
+                            });
+                        }
+                    }
+
+                    change.CharacterStatChanges.Add(
+                        testCharacterChange.Entity,
+                        characterChange);
+                }
+
+                _data.GameChanges.Add(change);
+            }
         }
     }
 }

@@ -14,7 +14,7 @@ namespace MM26.ECS
         [SerializeField]
         private Mailbox _mailbox = null;
 
-        private List<TasksBatch> _batches;
+        private List<TasksBatch> _batches = null;
 
         private void OnEnable()
         {
@@ -46,6 +46,7 @@ namespace MM26.ECS
                 {
                     _batches[0].Start(_mailbox);
                 }
+
                 _batches[0].Update();
 
                 if (_batches[0].IsFinished)

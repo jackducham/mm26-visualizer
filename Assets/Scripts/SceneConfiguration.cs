@@ -12,7 +12,7 @@ namespace MM26
         /// <summary>
         /// Name of the board
         /// </summary>
-        public string BoardName;
+        public string BoardName = "pvp";
 
         /// <summary>
         /// URL to connect websocket to
