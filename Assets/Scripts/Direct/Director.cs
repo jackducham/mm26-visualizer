@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using MM26.ECS;
+using MM26.IO.Models;
 
 namespace MM26.Play
 {
@@ -14,19 +16,37 @@ namespace MM26.Play
         [SerializeField]
         private MM26.IO.Data _data = null;
 
+        [SerializeField]
+        private TasksManager _taskManager = null;
+
+        private int _nextChangeIndex = 0;
+
         private void OnEnable()
         {
-            _sceneLifeCycle.Play.AddListener(this.Play);
+            _sceneLifeCycle.Play.AddListener(this.DispatchTasks);
         }
 
         private void OnDisable()
         {
-            _sceneLifeCycle.Play.RemoveListener(this.Play);
+            _sceneLifeCycle.Play.RemoveListener(this.DispatchTasks);
         }
 
-        private void Play()
+        private void Update()
         {
-            
+            if (_nextChangeIndex < _data.GameChanges.Count)
+            {
+                this.DispatchTasks();
+            }
+        }
+
+        private void DispatchTasks()
+        {
+            for (int i = 0; i < _data.GameChanges.Count; i++)
+            {
+                GameChange change = _data.GameChanges[i];
+
+                Debug.Log(change.NewPlayerNames.Count);
+            }
         }
     }
 }

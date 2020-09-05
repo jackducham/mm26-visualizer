@@ -20,7 +20,7 @@ namespace MM26.Systems
 
             this.Entities
                 .WithoutBurst()
-                .ForEach((Transform transform, IDComponent id, RotationComponent rotation) =>
+                .ForEach((Transform transform, ID id, Rotation rotation) =>
                 {
                     Task task;
 
@@ -34,23 +34,23 @@ namespace MM26.Systems
                     if (!rotationTask.IsStarted)
                     {
                         this.TasksToFinish[id.Name].Start();
-                        rotation.amount = rotationTask.RotationAmount;
-                        rotation.axis = rotationTask.RotationAxis;
+                        rotation.Amount = rotationTask.RotationAmount;
+                        rotation.Axis = rotationTask.RotationAxis;
                     }
 
-                    if (rotation.amount > 0.0f)
+                    if (rotation.Amount > 0.0f)
                     {
                         float rotAmt = rotation.Speed * Time.DeltaTime;
-                        if (rotation.amount < rotAmt)
+                        if (rotation.Amount < rotAmt)
                         {
-                            rotAmt = rotation.amount;
+                            rotAmt = rotation.Amount;
                             // Finish
                             this.TasksToFinish[id.Name].Finish();
                         }
 
-                        rotation.amount -= rotAmt;
+                        rotation.Amount -= rotAmt;
 
-                        transform.Rotate(rotation.axis, rotAmt);
+                        transform.Rotate(rotation.Axis, rotAmt);
                     }
                 })
                 .Run();

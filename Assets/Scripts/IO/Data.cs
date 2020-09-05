@@ -9,12 +9,12 @@ namespace MM26.IO
     public class Data : ScriptableObject
     {
         public GameState GameState { get; set; }
-        public Queue<GameChange> GameChanges { get; private set; } = new Queue<GameChange>();
+        public List<GameChange> GameChanges { get; private set; } = new List<GameChange>();
 
         public void Reset()
         {
             this.GameState = null;
-            this.GameChanges = new Queue<GameChange>();
+            this.GameChanges = new List<GameChange>();
         }
     }
 }

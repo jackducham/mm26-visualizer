@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace MM26.Components
 {
-    public class IDComponent : MonoBehaviour
+    public class ID : MonoBehaviour
     {
         public string Name;
     }

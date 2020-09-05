@@ -19,7 +19,7 @@ namespace MM26.Systems
 
             this.Entities
                 .WithoutBurst()
-                .ForEach((IDComponent id, Transform transform, MovementComponent movement) =>
+                .ForEach((ID id, Transform transform, Movement movement) =>
                 {
                     Task task;
 
@@ -30,7 +30,7 @@ namespace MM26.Systems
                         task.Start();
                         task.Finish();
 
-                        transform.position = movementTask.Destination.position;
+                        //transform.position = movementTask.Destination.position;
                     }
                 })
                 .Run();

@@ -63,7 +63,7 @@ namespace MM26.IO
             }
             else
             {
-                _data.GameChanges.Enqueue(GameChange.Parser.ParseFrom(message));
+                _data.GameChanges.Add(GameChange.Parser.ParseFrom(message));
             }
 
             // Please preserve this log message for diagnostic purpose

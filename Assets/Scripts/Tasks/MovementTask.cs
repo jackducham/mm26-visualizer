@@ -5,16 +5,14 @@ namespace MM26.Tasks
 {
     public class MovementTask : Task
     {
-        public static string Type => "Movement";
-
-        public Transform Destination;
+        public Transform[] Path = null;
 
         public MovementTask(
-            string entityName,
+            string entity,
             Mailbox mailbox,
-            Transform destination) : base(entityName, mailbox)
+            Transform[] path) : base(entity, mailbox)
         {
-            this.Destination = destination;
+            this.Path = path;
         }
     }
 }
