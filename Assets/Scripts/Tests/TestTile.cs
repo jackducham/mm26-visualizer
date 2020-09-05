@@ -1,7 +1,7 @@
 ﻿using System;
 using MM26.IO.Models;
 
-namespace MM26.Board.Tests
+namespace MM26.Tests
 {
     /// <summary>
     /// Mock tile type

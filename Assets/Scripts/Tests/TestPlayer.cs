@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MM26.Board.Tests
+namespace MM26.Tests
 {
     /// <summary>
     /// Mock player
