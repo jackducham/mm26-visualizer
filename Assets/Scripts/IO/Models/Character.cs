@@ -46,13 +46,15 @@ namespace MM26.IO.Models {
             "EhYKDm1vbnN0ZXJzX3NsYWluGAMgASgFEg4KBmF0dGFjaxgEIAEoBRIPCgdk",
             "ZWZlbnNlGAUgASgFEhYKDmN1cnJlbnRfaGVhbHRoGAYgASgFEhIKCm1heF9o",
             "ZWFsdGgYByABKAUSEwoLZGVhdGhfY291bnQYCCABKAUSGgoSdHVybnNfc2lu",
-            "Y2Vfam9pbmVkGAkgASgFIjoKEVBsYXllclN0YXRzQnVuZGxlEiUKBXN0YXRz",
-            "GAEgAygLMhYuY2hhcmFjdGVyLlBsYXllclN0YXRzIjIKCFBvc2l0aW9uEhAK",
-            "CGJvYXJkX2lkGAEgASgJEgkKAXgYAiABKAUSCQoBeRgDIAEoBSpbCgxEZWNp",
-            "c2lvblR5cGUSCAoETk9ORRAAEggKBE1PVkUQARIKCgZBVFRBQ0sQAhIKCgZQ",
-            "T1JUQUwQAxIICgREUk9QEAQSCQoFRVFVSVAQBRIKCgZQSUNLVVAQBkJCCh5t",
-            "ZWNoLm1hbmlhLmVuZ2luZS5kb21haW4ubW9kZWxCD0NoYXJhY3RlclByb3Rv",
-            "c6oCDk1NMjYuSU8uTW9kZWxzYgZwcm90bzM="));
+            "Y2Vfam9pbmVkGAkgASgFIpEBChFQbGF5ZXJTdGF0c0J1bmRsZRI2CgVzdGF0",
+            "cxgBIAMoCzInLmNoYXJhY3Rlci5QbGF5ZXJTdGF0c0J1bmRsZS5TdGF0c0Vu",
+            "dHJ5GkQKClN0YXRzRW50cnkSCwoDa2V5GAEgASgJEiUKBXZhbHVlGAIgASgL",
+            "MhYuY2hhcmFjdGVyLlBsYXllclN0YXRzOgI4ASIyCghQb3NpdGlvbhIQCghi",
+            "b2FyZF9pZBgBIAEoCRIJCgF4GAIgASgFEgkKAXkYAyABKAUqWwoMRGVjaXNp",
+            "b25UeXBlEggKBE5PTkUQABIICgRNT1ZFEAESCgoGQVRUQUNLEAISCgoGUE9S",
+            "VEFMEAMSCAoERFJPUBAEEgkKBUVRVUlQEAUSCgoGUElDS1VQEAZCQgoebWVj",
+            "aC5tYW5pYS5lbmdpbmUuZG9tYWluLm1vZGVsQg9DaGFyYWN0ZXJQcm90b3Oq",
+            "Ag5NTTI2LklPLk1vZGVsc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::MM26.IO.Models.ItemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MM26.IO.Models.DecisionType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -60,7 +62,7 @@ namespace MM26.IO.Models {
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Monster), global::MM26.IO.Models.Monster.Parser, new[]{ "Character", "Drops" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Player), global::MM26.IO.Models.Player.Parser, new[]{ "Character", "Hat", "Clothes", "Shoes", "Inventory" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.PlayerStats), global::MM26.IO.Models.PlayerStats.Parser, new[]{ "Level", "Experience", "MonstersSlain", "Attack", "Defense", "CurrentHealth", "MaxHealth", "DeathCount", "TurnsSinceJoined" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.PlayerStatsBundle), global::MM26.IO.Models.PlayerStatsBundle.Parser, new[]{ "Stats" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.PlayerStatsBundle), global::MM26.IO.Models.PlayerStatsBundle.Parser, new[]{ "Stats" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Position), global::MM26.IO.Models.Position.Parser, new[]{ "BoardId", "X", "Y" }, null, null, null, null)
           }));
     }
@@ -1648,11 +1650,11 @@ namespace MM26.IO.Models {
 
     /// <summary>Field number for the "stats" field.</summary>
     public const int StatsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::MM26.IO.Models.PlayerStats> _repeated_stats_codec
-        = pb::FieldCodec.ForMessage(10, global::MM26.IO.Models.PlayerStats.Parser);
-    private readonly pbc::RepeatedField<global::MM26.IO.Models.PlayerStats> stats_ = new pbc::RepeatedField<global::MM26.IO.Models.PlayerStats>();
+    private static readonly pbc::MapField<string, global::MM26.IO.Models.PlayerStats>.Codec _map_stats_codec
+        = new pbc::MapField<string, global::MM26.IO.Models.PlayerStats>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::MM26.IO.Models.PlayerStats.Parser), 10);
+    private readonly pbc::MapField<string, global::MM26.IO.Models.PlayerStats> stats_ = new pbc::MapField<string, global::MM26.IO.Models.PlayerStats>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::MM26.IO.Models.PlayerStats> Stats {
+    public pbc::MapField<string, global::MM26.IO.Models.PlayerStats> Stats {
       get { return stats_; }
     }
 
@@ -1669,14 +1671,14 @@ namespace MM26.IO.Models {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!stats_.Equals(other.stats_)) return false;
+      if (!Stats.Equals(other.Stats)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= stats_.GetHashCode();
+      hash ^= Stats.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1690,7 +1692,7 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      stats_.WriteTo(output, _repeated_stats_codec);
+      stats_.WriteTo(output, _map_stats_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1699,7 +1701,7 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      size += stats_.CalculateSize(_repeated_stats_codec);
+      size += stats_.CalculateSize(_map_stats_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1727,7 +1729,7 @@ namespace MM26.IO.Models {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            stats_.AddEntriesFrom(input, _repeated_stats_codec);
+            stats_.AddEntriesFrom(input, _map_stats_codec);
             break;
           }
         }
@@ -1745,7 +1747,7 @@ namespace MM26.IO.Models {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            stats_.AddEntriesFrom(ref input, _repeated_stats_codec);
+            stats_.AddEntriesFrom(ref input, _map_stats_codec);
             break;
           }
         }
