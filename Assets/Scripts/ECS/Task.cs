@@ -9,7 +9,7 @@ namespace MM26.ECS
     ///
     public abstract class Task
     {
-        public string EntityName;
+        public readonly string EntityName;
 
         private static int _nextId;
         private readonly int _taskId;
