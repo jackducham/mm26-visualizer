@@ -3,13 +3,11 @@ using MM26.ECS;
 
 namespace MM26.Tasks
 {
-    public class MovementTask : Task
+    public sealed class MovementTask : Task
     {
         public Vector3[] Path = null;
 
-        public MovementTask(
-            string entity,
-            Vector3[] path) : base(entity)
+        public MovementTask(string entity, Vector3[] path) : base(entity)
         {
             this.Path = path;
         }

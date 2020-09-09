@@ -3,7 +3,7 @@ using MM26.ECS;
 
 namespace MM26.Tasks
 {
-    public class RotationTask : Task
+    public sealed class RotationTask : Task
     {
         public float RotationAmount;
         public Vector3 RotationAxis;

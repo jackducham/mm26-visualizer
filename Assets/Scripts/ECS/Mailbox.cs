@@ -44,11 +44,10 @@ namespace MM26.ECS
         /// <typeparam name="T">the task type</typeparam>
         public void SubscribeToTaskType<T>(object o) where T : Task
         {
-            List<string> existingKey = null;
-
-            if (!_subscriptionMapping.TryGetValue(o, out existingKey))
+            if (!_subscriptionMapping.TryGetValue(o, out List<string> existingKey))
             {
-                existingKey = _subscriptionMapping[o] = new List<string>();
+                existingKey = new List<string>();
+                _subscriptionMapping[o] = existingKey;
             }
 
             existingKey.Add(typeof(T).Name);
@@ -56,12 +55,12 @@ namespace MM26.ECS
 
         public void SendTask(Task task)
         {
-            List<Task> tasks = null;
             string taskName = task.GetType().Name;
 
-            if (!_mailbox.TryGetValue(taskName, out tasks))
+            if (!_mailbox.TryGetValue(taskName, out List<Task> tasks))
             {
-                tasks = _mailbox[taskName] = new List<Task>();
+                tasks = new List<Task>();
+                _mailbox[taskName] = tasks;
             }
 
             tasks.Add(task);
@@ -75,12 +74,11 @@ namespace MM26.ECS
         /// <returns></returns>
         public List<Task> GetSubscribedTasksForType<T>(object o) where T : Task
         {
-            List<string> msgTypes = null;
             List<Task> tasks = null;
 
             string msgType = typeof(T).Name;
 
-            if (_subscriptionMapping.TryGetValue(o, out msgTypes))
+            if (_subscriptionMapping.TryGetValue(o, out List<string> msgTypes))
             {
                 if (msgTypes.Contains(msgType))
                 {
@@ -104,11 +102,12 @@ namespace MM26.ECS
 
         public void Update()
         {
-            IList<Task> msgsToDelete = new List<Task>();
+            var msgsToDelete = new List<Task>();
 
             for (int i = 0; i < _potentialTasksToDelete.Count; i++)
             {
                 Task msg = _potentialTasksToDelete[i];
+
                 if (msg != null && msg.IsFinished)
                 {
                     msgsToDelete.Add(msg);
