@@ -66,6 +66,7 @@ namespace MM26.IO
                         if (_client.State != WebSocketState.Open)
                         {
                             _idle = true;
+                            Debug.Log(_client.CloseStatus);
                             onFailure();
 
                             return;

@@ -32,7 +32,7 @@ public class TestServerWindow : EditorWindow
     /// <summary>
     /// Port on which the scenario is running, (at localhost)
     /// </summary>
-    private static string _port = "5000";
+    private static string _port = "8081";
 
     /// <summary>
     /// String to Type mapping of all possible scenarios
