@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Configuration
   m_EditorClassIdentifier: 
   BoardName: pvp
+  WebSocketURL: ws://localhost:8081/visualizer
