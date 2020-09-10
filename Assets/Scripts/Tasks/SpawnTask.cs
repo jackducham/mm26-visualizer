@@ -8,9 +8,9 @@ namespace MM26.Tasks
     /// </summary>
     public sealed class SpawnTask : Task
     {
-        public readonly Vector2Int Position;
+        public readonly Vector3Int Position;
 
-        public SpawnTask(string entity, Vector2Int position) : base(entity)
+        public SpawnTask(string entity, Vector3Int position) : base(entity)
         {
             this.Position = position;
         }

@@ -1,6 +1,9 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Tilemaps;
 using MM26.Components;
+using MM26.ECS;
+using MM26.Tasks;
 
 namespace MM26.Board
 {
@@ -10,9 +13,9 @@ namespace MM26.Board
     using PPosition = MM26.IO.Models.Position;
 
     /// <summary>
-    /// Responsible for creating the board
+    /// Responsible for creating and managing the board
     /// </summary>
-    public class BoardCreator : MonoBehaviour
+    public sealed class BoardCreator : MonoBehaviour
     {
         [Header("Tiles")]
         [SerializeField]
@@ -45,6 +48,10 @@ namespace MM26.Board
         [SerializeField]
         private BoardPositionLookUp _positionLookUp = null;
 
+        [Header("ECS")]
+        [SerializeField]
+        private Mailbox _mailbox = null;
+
         [Header("Others")]
         [SerializeField]
         private Tilemap _tilemap = null;
@@ -52,6 +59,7 @@ namespace MM26.Board
         private void OnEnable()
         {
             _sceneLifeCycle.CreateBoard.AddListener(this.OnCreateMap);
+            _mailbox.SubscribeToTaskType<SpawnTask>(this);
         }
 
         private void OnDisable()
@@ -59,6 +67,15 @@ namespace MM26.Board
             _sceneLifeCycle.CreateBoard.RemoveListener(this.OnCreateMap);
         }
 
+        private void Update()
+        {
+            this.HandleSpawnTasks();
+            this.HandleDespawnTasks();
+        }
+
+        /// <summary>
+        /// Event handler for <c>_sceneLifeCycle.CreateBoard</c>
+        /// </summary>
         private void OnCreateMap()
         {
             this.CreateMap();
@@ -69,6 +86,9 @@ namespace MM26.Board
             _sceneLifeCycle.BoardCreated.Invoke();
         }
 
+        /// <summary>
+        /// Helper function for creating the board
+        /// </summary>
         private void CreateMap()
         {
             var board = _data.GameState.BoardNames[_sceneConfiguration.BoardName];
@@ -107,6 +127,9 @@ namespace MM26.Board
             }
         }
 
+        /// <summary>
+        /// Helper function for creating players
+        /// </summary>
         private void CreatePlayers()
         {
             foreach (var entry in _data.GameState.PlayerNames)
@@ -119,12 +142,65 @@ namespace MM26.Board
                     continue;
                 }
 
-                Vector3 wordPosition = _tilemap.GetCellCenterWorld(new Vector3Int(position.X, position.Y, 0));
-                GameObject player = Instantiate(_playerPrefab, wordPosition, new Quaternion());
+                this.CreatePlayer(new Vector3Int(position.X, position.Y, 0), playerCharacter.Name);
+            }
+        }
 
-                // Initialize player
-                player.name = playerCharacter.Name;
-                player.GetComponent<ID>().Name = playerCharacter.Name;
+        /// <summary>
+        /// Helper function for creating a player
+        /// </summary>
+        /// <param name="position">the position at which to creat a player</param>
+        /// <param name="name">the name of the player</param>
+        private void CreatePlayer(Vector3Int position, string name)
+        {
+            Vector3 wordPosition = _tilemap.GetCellCenterWorld(position);
+
+            GameObject player = Instantiate(_playerPrefab, wordPosition, new Quaternion());
+
+            // Initialize player
+            player.name = name;
+            player.GetComponent<ID>().Name = name;
+        }
+
+        /// <summary>
+        /// Helper function to handle spawn tasks
+        ///
+        /// 
+        /// </summary>
+        private void HandleSpawnTasks()
+        {
+            List<Task> tasks = _mailbox.GetSubscribedTasksForType<SpawnTask>(this);
+
+            for (int i = 0; i < tasks.Count; i++)
+            {
+                SpawnTask task = tasks[i] as SpawnTask;
+
+                this.CreatePlayer(task.Position, task.EntityName);
+
+                task.IsFinished = true;
+                _mailbox.RemoveTask(task);
+            }
+        }
+
+        /// <summary>
+        /// Helper function to handle despawn tasks
+        /// 
+        /// <b>Noe that this is called once per frame</b>
+        /// </summary>
+        private void HandleDespawnTasks()
+        {
+            List<Task> tasks = _mailbox.GetSubscribedTasksForType<DespawnTask>(this);
+
+            for (int i = 0; i < tasks.Count; i++)
+            {
+                DespawnTask task = tasks[i] as DespawnTask;
+
+                // FIXME: might cause performance issue (this is on a hot path)
+                GameObject entity = GameObject.Find(task.EntityName);
+                GameObject.Destroy(entity);
+
+                task.IsFinished = true;
+                _mailbox.RemoveTask(task);
             }
         }
     }
