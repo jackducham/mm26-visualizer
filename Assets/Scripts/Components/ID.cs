@@ -1,11 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace MM26.Components
 {
+    /// <summary>
+    /// Carries identifying information
+    /// </summary>
     public class ID : MonoBehaviour
     {
+        /// <summary>
+        /// Name of the entity
+        /// </summary>
         public string Name;
     }
 }

@@ -6,6 +6,9 @@ using MM26.Tasks;
 
 namespace MM26.Systems
 {
+    /// <summary>
+    /// The system that moves entities
+    /// </summary>
     public class MovementSystem : TaskSystem<MovementTask>
     {
         protected override void OnCreate()

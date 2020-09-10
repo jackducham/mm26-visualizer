@@ -8,6 +8,9 @@ namespace MM26.Tasks
     /// </summary>
     public sealed class SpawnTask : Task
     {
+        /// <summary>
+        /// The position of spawning
+        /// </summary>
         public readonly Vector3Int Position;
 
         public SpawnTask(string entity, Vector3Int position) : base(entity)

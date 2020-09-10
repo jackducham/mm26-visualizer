@@ -1,8 +1,9 @@
 using System.Collections.Generic;
 using Unity.Entities;
 using UnityEngine;
+using MM26.ECS;
 
-namespace MM26.ECS
+namespace MM26.Systems
 {
     /// <summary>
     /// Base class for task systems
@@ -33,6 +34,9 @@ namespace MM26.ECS
             return Resources.Load<Mailbox>("Objects/Mailbox");
         }
 
+        /// <summary>
+        /// Perform initialization
+        /// </summary>
         protected override void OnCreate()
         {
             base.OnCreate();
@@ -53,12 +57,21 @@ namespace MM26.ECS
             this.UpdateMessages();
         }
 
+        /// <summary>
+        /// <b>
+        /// Derviced class should call this method to mark a task as finished
+        /// </b>
+        /// </summary>
+        /// <param name="task"></param>
         protected void Finish(Task task)
         {
             task.Finish(this.Mailbox);
             this.TasksToFinish.Remove(task.EntityName);
         }
 
+        /// <summary>
+        /// Helper function for updating messages
+        /// </summary>
         private void UpdateMessages()
         {
             List<Task> tasks = this.Mailbox.GetSubscribedTasksForType<T>(this);
@@ -68,8 +81,10 @@ namespace MM26.ECS
                 return;
             }
 
-            foreach (var task in tasks)
+            for (int i = 0; i < tasks.Count; i++)
             {
+                Task task = tasks[i];
+
                 if (!task.IsStarted)
                 {
                     this.TasksToFinish[task.EntityName] = task;

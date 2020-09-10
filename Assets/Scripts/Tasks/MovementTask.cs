@@ -8,6 +8,9 @@ namespace MM26.Tasks
     /// </summary>
     public sealed class MovementTask : Task
     {
+        /// <summary>
+        /// The path that the entity takes
+        /// </summary>
         public readonly Vector3[] Path;
 
         public MovementTask(string entity, Vector3[] path) : base(entity)

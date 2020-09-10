@@ -5,6 +5,9 @@ using TMPro;
 
 namespace MM26.Tests
 {
+    /// <summary>
+    /// Used to control Connection test scene
+    /// </summary>
     public sealed class ConnectionTestScene : MonoBehaviour
     {
         [SerializeField]
