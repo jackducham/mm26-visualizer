@@ -161,6 +161,10 @@ namespace MM26.Board
 
             // Initialize player
             player.name = name;
+
+            Hub hub = player.GetComponent<Hub>();
+            hub.NameLabel.text = name;
+            hub.HealthLabel.text = "";
         }
 
         /// <summary>
