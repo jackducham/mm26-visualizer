@@ -26,5 +26,8 @@ namespace MM26.Components
         /// Used by smooth damping algorithm
         /// </summary>
         public Vector3 CurrentVelocity;
+
+        [HideInInspector]
+        public Vector3[] Path = null;
     }
 }

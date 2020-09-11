@@ -43,16 +43,6 @@ namespace MM26.ECS
         }
 
         /// <summary>
-        /// Mark a task as finished. Useful for classes to know whether a task has been finished by a system.
-        /// </summary>
-        /// <remarks>Will remove the task from the Mailbox system so it will no longer be returned when getting messages for a type.</remarks>
-        public void Finish(Mailbox mailbox)
-        {
-            IsFinished = true;
-            mailbox.RemoveTask(this);
-        }
-
-        /// <summary>
         /// Get the id of the task.
         /// </summary>
         /// <returns>id of the task.</returns>
