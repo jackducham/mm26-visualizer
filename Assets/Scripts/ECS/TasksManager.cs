@@ -9,12 +9,12 @@ namespace MM26.ECS
     /// </summary>
     /// <remarks>Will manage adding batches, starting batches, and determine when to move to the next batch.</remarks>
     [CreateAssetMenu(fileName = "TaskManager", menuName = "ECS/Task Manager")]
-    public class TasksManager : ScriptableObject
+    public sealed class TasksManager : ScriptableObject
     {
         [SerializeField]
         private Mailbox _mailbox = null;
 
-        private List<TasksBatch> _batches = null;
+        private Queue<TasksBatch> _batches = null;
 
         private void OnEnable()
         {
@@ -23,7 +23,7 @@ namespace MM26.ECS
 
         public void Reset()
         {
-            _batches = new List<TasksBatch>();
+            _batches = new Queue<TasksBatch>();
         }
 
         /// <summary>
@@ -32,7 +32,7 @@ namespace MM26.ECS
         /// <param name="tasks">Batch of tasks to run.</param>
         public void AddTasksBatch(TasksBatch tasks)
         {
-            _batches.Add(tasks);
+            _batches.Enqueue(tasks);
         }
 
         /// <summary>
@@ -42,16 +42,18 @@ namespace MM26.ECS
         {
             if (_batches.Count > 0)
             {
-                if (!_batches[0].IsStarted)
+                TasksBatch top = _batches.Peek();
+
+                if (!top.IsStarted)
                 {
-                    _batches[0].Start(_mailbox);
+                    top.Start(_mailbox);
                 }
 
-                _batches[0].Update();
+                top.Update();
 
-                if (_batches[0].IsFinished)
+                if (top.IsFinished)
                 {
-                    _batches.RemoveAt(0);
+                    _batches.Dequeue();
                 }
             }
         }

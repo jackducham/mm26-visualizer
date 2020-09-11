@@ -8,7 +8,7 @@ namespace MM26.ECS
     /// Represents a batch of tasks to be completed in parallel.
     /// </summary>
     /// <remarks>This is a non-ordered collection of data, so think of it more like a set than an array.</remarks>
-    public class TasksBatch : IEnumerable<Task>
+    public sealed class TasksBatch : IEnumerable<Task>
     {
         private List<Task> _tasksSet;
 

@@ -10,18 +10,17 @@ namespace MM26.ECS
     /// <c>TasksManager</c> and read off from here by systems.
     /// </summary>
     [CreateAssetMenu(fileName = "Mailbox", menuName = "ECS/Mailbox")]
-    public class Mailbox : ScriptableObject
+    public sealed class Mailbox : ScriptableObject
     {
         /// <summary>
         /// Map objects to their task types
         /// </summary>
-        private Dictionary<object, List<string>> _subscriptionMapping = null;
+        private Dictionary<object, HashSet<string>> _subscriptionMapping = null;
 
         /// <summary>
         /// Tasks grouped by their identifiers
         /// </summary>
         private Dictionary<string, List<Task>> _tasks = null;
-        private List<Task> _potentialTasksToDelete = null;
 
         private void OnEnable()
         {
@@ -33,9 +32,8 @@ namespace MM26.ECS
         /// </summary>
         public void Reset()
         {
-            _subscriptionMapping = new Dictionary<object, List<string>>();
+            _subscriptionMapping = new Dictionary<object, HashSet<string>>();
             _tasks = new Dictionary<string, List<Task>>();
-            _potentialTasksToDelete = new List<Task>();
         }
 
         /// <summary>
@@ -47,9 +45,9 @@ namespace MM26.ECS
         {
             string taskType = typeof(T).Name;
 
-            if (!_subscriptionMapping.TryGetValue(o, out List<string> taskTypes))
+            if (!_subscriptionMapping.TryGetValue(o, out HashSet<string> taskTypes))
             {
-                taskTypes = new List<string>();
+                taskTypes = new HashSet<string>();
                 _subscriptionMapping[o] = taskTypes;
             }
 
@@ -86,7 +84,7 @@ namespace MM26.ECS
 
             string msgType = typeof(T).Name;
 
-            if (_subscriptionMapping.TryGetValue(o, out List<string> msgTypes))
+            if (_subscriptionMapping.TryGetValue(o, out HashSet<string> msgTypes))
             {
                 if (msgTypes.Contains(msgType))
                 {
@@ -108,32 +106,10 @@ namespace MM26.ECS
 
             // Remove from mailbox
             _tasks[taskName].RemoveAll(m => m != null && m.GetId() == msg.GetId());
-
-            // Remove from potential mesages to delete
-            _potentialTasksToDelete.RemoveAll(m => m != null && m.GetId() == msg.GetId());
         }
 
         public void Update()
         {
-            var msgsToDelete = new List<Task>();
-
-            for (int i = 0; i < _potentialTasksToDelete.Count; i++)
-            {
-                Task msg = _potentialTasksToDelete[i];
-
-                if (msg != null && msg.IsFinished)
-                {
-                    msgsToDelete.Add(msg);
-                }
-            }
-
-            for (int i = 0; i < msgsToDelete.Count; i++)
-            {
-                Task msg = msgsToDelete[i];
-                RemoveTask(msg);
-            }
         }
-
     }
-
 }
