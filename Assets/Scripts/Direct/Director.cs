@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using Google.Protobuf.Collections;
 using MM26.ECS;
 using MM26.IO.Models;
@@ -49,15 +50,28 @@ namespace MM26.Play
         {
             for (; _nextChangeIndex < _data.GameChanges.Count; _nextChangeIndex++)
             {
-                GameChange change = _data.GameChanges[_nextChangeIndex];
+                GameChange gameChange = _data.GameChanges[_nextChangeIndex];
                 TasksBatch batch = new TasksBatch();
 
-                foreach (var pair in change.CharacterStatChanges)
+                foreach (var pair in gameChange.CharacterStatChanges)
                 {
+                    string entity = pair.Key;
+                    CharacterChange characterChange = pair.Value;
+
+                    if (characterChange.Died)
+                    {
+                        batch.Add(new DespawnTask(entity));
+                        continue;
+                    }
+                    else if (characterChange.Respawned)
+                    {
+                        throw new NotImplementedException("Respawned not handled in Director");
+                    }
+
                     batch.Add(
                         new MovementTask(
-                            pair.Key,
-                            this.GetPath(pair.Value.Path)));
+                            entity,
+                            this.GetPath(characterChange.Path)));
                 }
 
                 _taskManager.AddTasksBatch(batch);

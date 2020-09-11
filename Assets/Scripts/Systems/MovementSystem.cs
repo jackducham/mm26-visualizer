@@ -44,6 +44,7 @@ namespace MM26.Systems
 
                         if (movement.Progress == movementTask.Path.Length)
                         {
+                            movement.Progress = 0;
                             this.Finish(movementTask);
                         }
                     }

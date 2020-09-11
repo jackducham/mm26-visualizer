@@ -41,3 +41,8 @@ MonoBehaviour:
       - X: 2
         Y: 0
         BoardID: pvp
+  - CharacterChanges:
+    - Entity: player
+      Died: 1
+      Respawned: 0
+      Path: []

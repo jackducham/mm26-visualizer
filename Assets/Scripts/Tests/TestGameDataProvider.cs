@@ -97,11 +97,13 @@ namespace MM26.Tests
         {
             foreach (TestGameChange testChange in _testData.Changes)
             {
-                var change = new GameChange();
+                var gameChange = new GameChange();
 
                 foreach (TestCharacterChange testCharacterChange in testChange.CharacterChanges)
                 {
                     var characterChange = new CharacterChange();
+                    characterChange.Died = testCharacterChange.Died;
+                    characterChange.Respawned = testCharacterChange.Respawned;
 
                     if (testCharacterChange.Path != null)
                     {
@@ -116,12 +118,12 @@ namespace MM26.Tests
                         }
                     }
 
-                    change.CharacterStatChanges.Add(
+                    gameChange.CharacterStatChanges.Add(
                         testCharacterChange.Entity,
                         characterChange);
                 }
 
-                _data.GameChanges.Add(change);
+                _data.GameChanges.Add(gameChange);
             }
         }
     }
