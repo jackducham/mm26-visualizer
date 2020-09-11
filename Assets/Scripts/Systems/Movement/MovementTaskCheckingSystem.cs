@@ -1,4 +1,5 @@
-﻿using Unity.Entities;
+﻿using UnityEngine;
+using Unity.Entities;
 using MM26.Components;
 using MM26.Tasks;
 
@@ -24,15 +25,15 @@ namespace MM26.Systems.Movement
 
             this.Entities
                 .WithoutBurst()
-                .ForEach((Entity entity, ID id, Components.Movement movement, Moving moving) =>
+                .ForEach((Entity entity, Components.Movement movement, Moving moving) =>
                 {
-                    if (_translationSystem.RunningTasks.TryGetValue(id.Name, out MovementTask task))
+                    if (_translationSystem.RunningTasks.TryGetValue(movement.name, out MovementTask task))
                     {
                         if (movement.Progress == task.Path.Length)
                         {
                             task.IsFinished = true;
                             ecb.RemoveComponent<Moving>(entity);
-                            _translationSystem.RunningTasks.Remove(id.Name);
+                            _translationSystem.RunningTasks.Remove(movement.name);
                         }
                     }
                 })

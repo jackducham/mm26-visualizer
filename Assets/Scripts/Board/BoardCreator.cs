@@ -161,7 +161,6 @@ namespace MM26.Board
 
             // Initialize player
             player.name = name;
-            player.GetComponent<ID>().Name = name;
         }
 
         /// <summary>

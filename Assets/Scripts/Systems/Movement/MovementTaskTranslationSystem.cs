@@ -35,6 +35,7 @@ namespace MM26.Systems.Movement
         {
             ReadOnlyCollection<Task> tasks = _mailbox.GetSubscribedTasksForType<MovementTask>(this);
 
+
             for (int i = 0; i < tasks.Count; i++)
             {
                 MovementTask movementTask = tasks[i] as MovementTask;
@@ -57,15 +58,17 @@ namespace MM26.Systems.Movement
 
             this.Entities
                 .WithoutBurst()
-                .ForEach((Entity entity, ID id, Components.Movement movement) =>
+                .ForEach((Entity entity, Components.Movement movement) =>
                 {
-                    if (_tasksToBeScheduled.TryGetValue(id.name, out MovementTask task))
+                    if (_tasksToBeScheduled.TryGetValue(movement.name, out MovementTask task))
                     {
                         movement.Progress = 0;
                         movement.Path = task.Path;
 
                         buffer.AddComponent<Moving>(entity);
-                        this.RunningTasks.Add(id.Name, task);
+                        this.RunningTasks.Add(movement.name, task);
+
+                        Debug.LogFormat("translate to {0}", movement.name);
                     }
                 })
                 .Run();
