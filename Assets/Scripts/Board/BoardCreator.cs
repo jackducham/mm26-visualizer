@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using MM26.Components;
@@ -60,6 +61,7 @@ namespace MM26.Board
         {
             _sceneLifeCycle.CreateBoard.AddListener(this.OnCreateMap);
             _mailbox.SubscribeToTaskType<SpawnTask>(this);
+            _mailbox.SubscribeToTaskType<DespawnTask>(this);
         }
 
         private void OnDisable()
@@ -169,7 +171,7 @@ namespace MM26.Board
         /// </summary>
         private void HandleSpawnTasks()
         {
-            List<Task> tasks = _mailbox.GetSubscribedTasksForType<SpawnTask>(this);
+            ReadOnlyCollection<Task> tasks = _mailbox.GetSubscribedTasksForType<SpawnTask>(this);
 
             for (int i = 0; i < tasks.Count; i++)
             {
@@ -189,7 +191,7 @@ namespace MM26.Board
         /// </summary>
         private void HandleDespawnTasks()
         {
-            List<Task> tasks = _mailbox.GetSubscribedTasksForType<DespawnTask>(this);
+            ReadOnlyCollection<Task> tasks = _mailbox.GetSubscribedTasksForType<DespawnTask>(this);
 
             for (int i = 0; i < tasks.Count; i++)
             {

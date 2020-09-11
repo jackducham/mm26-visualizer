@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Unity.Entities;
 using UnityEngine;
 using MM26.ECS;
@@ -74,7 +75,7 @@ namespace MM26.Systems
         /// </summary>
         private void UpdateMessages()
         {
-            List<Task> tasks = this.Mailbox.GetSubscribedTasksForType<T>(this);
+            ReadOnlyCollection<Task> tasks = this.Mailbox.GetSubscribedTasksForType<T>(this);
 
             if (tasks == null)
             {

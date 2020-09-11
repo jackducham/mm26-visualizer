@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using UnityEngine;
 
 namespace MM26.ECS
@@ -44,13 +45,13 @@ namespace MM26.ECS
         /// <typeparam name="T">the task type</typeparam>
         public void SubscribeToTaskType<T>(object o) where T : Task
         {
-            if (!_subscriptionMapping.TryGetValue(o, out List<string> existingKey))
+            if (!_subscriptionMapping.TryGetValue(o, out List<string> taskTypes))
             {
-                existingKey = new List<string>();
-                _subscriptionMapping[o] = existingKey;
+                taskTypes = new List<string>();
+                _subscriptionMapping[o] = taskTypes;
             }
 
-            existingKey.Add(typeof(T).Name);
+            taskTypes.Add(typeof(T).Name);
         }
 
         public void SendTask(Task task)
@@ -72,7 +73,7 @@ namespace MM26.ECS
         /// <param name="o">the subscriber object</param>
         /// <typeparam name="T">the task type</typeparam>
         /// <returns></returns>
-        public List<Task> GetSubscribedTasksForType<T>(object o) where T : Task
+        public ReadOnlyCollection<Task> GetSubscribedTasksForType<T>(object o) where T : Task
         {
             List<Task> tasks = null;
 
@@ -86,7 +87,12 @@ namespace MM26.ECS
                 }
             }
 
-            return tasks;
+            if (tasks == null)
+            {
+                Debug.LogErrorFormat("The object has not subscribed to messages of {0}", msgType);
+            }
+
+            return tasks.AsReadOnly();
         }
 
         public void RemoveTask(Task msg)

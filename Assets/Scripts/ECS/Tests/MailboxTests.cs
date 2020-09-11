@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using UnityEngine;
 using NUnit.Framework;
@@ -29,9 +30,29 @@ namespace MM26.ECS.Tests
             }
         }
 
-        // A Test behaves as an ordinary method
+        /// <summary>
+        /// When there is no tasks in the mailbox
+        /// </summary>
         [Test]
-        public void TestSubcriptions()
+        public void TestNoTasks()
+        {
+            var mailbox = ScriptableObject.CreateInstance<Mailbox>();
+
+            mailbox.SubscribeToTaskType<PositionTask>(this);
+            mailbox.SubscribeToTaskType<RotationTask>(this);
+
+            ReadOnlyCollection<Task> positionTasks = mailbox.GetSubscribedTasksForType<PositionTask>(this);
+            ReadOnlyCollection<Task> rotationTasks = mailbox.GetSubscribedTasksForType<PositionTask>(this);
+
+            Assert.NotNull(positionTasks);
+            Assert.NotNull(rotationTasks);
+        }
+
+        /// <summary>
+        /// Make sure that tasks can be sent regularly
+        /// </summary>
+        [Test]
+        public void TaskSendTasks()
         {
             var mailbox = ScriptableObject.CreateInstance<Mailbox>();
 
@@ -63,6 +84,9 @@ namespace MM26.ECS.Tests
             Assert.AreEqual("test-1", rotationTasks[1].EntityName);
         }
 
+        /// <summary>
+        /// Make sure <c>Update</c> method of Mailbox works as expected
+        /// </summary>
         [Test]
         public void TestUpdate()
         {
