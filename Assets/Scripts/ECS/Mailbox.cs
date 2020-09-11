@@ -18,9 +18,9 @@ namespace MM26.ECS
         private Dictionary<object, List<string>> _subscriptionMapping = null;
 
         /// <summary>
-        /// Map task types to tasks
+        /// Tasks grouped by their identifiers
         /// </summary>
-        private Dictionary<string, List<Task>> _mailbox = null;
+        private Dictionary<string, List<Task>> _tasks = null;
         private List<Task> _potentialTasksToDelete = null;
 
         private void OnEnable()
@@ -34,7 +34,7 @@ namespace MM26.ECS
         public void Reset()
         {
             _subscriptionMapping = new Dictionary<object, List<string>>();
-            _mailbox = new Dictionary<string, List<Task>>();
+            _tasks = new Dictionary<string, List<Task>>();
             _potentialTasksToDelete = new List<Task>();
         }
 
@@ -45,23 +45,30 @@ namespace MM26.ECS
         /// <typeparam name="T">the task type</typeparam>
         public void SubscribeToTaskType<T>(object o) where T : Task
         {
+            string taskType = typeof(T).Name;
+
             if (!_subscriptionMapping.TryGetValue(o, out List<string> taskTypes))
             {
                 taskTypes = new List<string>();
                 _subscriptionMapping[o] = taskTypes;
             }
 
-            taskTypes.Add(typeof(T).Name);
+            taskTypes.Add(taskType);
+
+            if (!_tasks.ContainsKey(taskType))
+            {
+                _tasks[taskType] = new List<Task>();
+            }
         }
 
         public void SendTask(Task task)
         {
             string taskName = task.GetType().Name;
 
-            if (!_mailbox.TryGetValue(taskName, out List<Task> tasks))
+            if (!_tasks.TryGetValue(taskName, out List<Task> tasks))
             {
                 tasks = new List<Task>();
-                _mailbox[taskName] = tasks;
+                _tasks[taskName] = tasks;
             }
 
             tasks.Add(task);
@@ -83,7 +90,7 @@ namespace MM26.ECS
             {
                 if (msgTypes.Contains(msgType))
                 {
-                    _mailbox.TryGetValue(msgType, out tasks);
+                    _tasks.TryGetValue(msgType, out tasks);
                 }
             }
 
@@ -100,7 +107,7 @@ namespace MM26.ECS
             string taskName = msg.GetType().Name;
 
             // Remove from mailbox
-            _mailbox[taskName].RemoveAll(m => m != null && m.GetId() == msg.GetId());
+            _tasks[taskName].RemoveAll(m => m != null && m.GetId() == msg.GetId());
 
             // Remove from potential mesages to delete
             _potentialTasksToDelete.RemoveAll(m => m != null && m.GetId() == msg.GetId());
