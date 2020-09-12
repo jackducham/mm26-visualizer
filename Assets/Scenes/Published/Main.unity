@@ -519,7 +519,7 @@ PrefabInstance:
     - target: {fileID: 6099384395167837153, guid: 7fd854d829837454784ec17a6269900a,
         type: 3}
       propertyPath: m_Name
-      value: Map Creator
+      value: Board Creator
       objectReference: {fileID: 0}
     - target: {fileID: 6099384395167837154, guid: 7fd854d829837454784ec17a6269900a,
         type: 3}

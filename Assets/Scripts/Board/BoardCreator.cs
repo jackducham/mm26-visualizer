@@ -149,7 +149,8 @@ namespace MM26.Board
         }
 
         /// <summary>
-        /// Helper function for creating a player
+        /// Helper function for creating a player. This function assumes that
+        /// the player is on the board we are currently creating
         /// </summary>
         /// <param name="position">the position at which to creat a player</param>
         /// <param name="name">the name of the player</param>
