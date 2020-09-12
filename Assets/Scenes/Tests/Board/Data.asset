@@ -12,15 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70e7e37fde553104193a353b78e0baae, type: 3}
   m_Name: Data
   m_EditorClassIdentifier: 
-  Board:
-    Name: pvp
-    Columns: 2
-    Rows: 1
-    Grid:
-    - TileType: 0
-    - TileType: 2
-  Players:
-  - Name: Test
-    Board: pvp
-    X: 0
-    Y: 0
+  InitialState:
+    Board:
+      Name: pvp
+      Columns: 3
+      Rows: 3
+      Grid:
+      - TileType: 0
+      - TileType: 0
+      - TileType: 0
+      - TileType: 0
+      - TileType: 0
+      - TileType: 0
+      - TileType: 0
+      - TileType: 0
+      - TileType: 0
+    Players:
+    - Name: Player A
+      Board: pvp
+      X: 0
+      Y: 0
+    - Name: Player B
+      Board: other
+      X: 1
+      Y: 1
+  Turns: []

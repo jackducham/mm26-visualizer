@@ -681,6 +681,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Director
       objectReference: {fileID: 0}
+    - target: {fileID: 1083450541347387380, guid: 5ca62ac10465e484388e0568343efa65,
+        type: 3}
+      propertyPath: _sceneConfiguration
+      value: 
+      objectReference: {fileID: 11400000, guid: 73e160cfeabd04f08ab48c332a6cb520,
+        type: 2}
     - target: {fileID: 1083450541347387381, guid: 5ca62ac10465e484388e0568343efa65,
         type: 3}
       propertyPath: m_LocalPosition.x

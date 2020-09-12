@@ -36,6 +36,10 @@ MonoBehaviour:
       Board: pvp
       X: 2
       Y: 2
+    - Name: Player C
+      Board: other
+      X: 1
+      Y: 1
   Turns:
   - State:
       Board:
@@ -43,7 +47,19 @@ MonoBehaviour:
         Columns: 0
         Rows: 0
         Grid: []
-      Players: []
+      Players:
+      - Name: Player A
+        Board: pvp
+        X: 2
+        Y: 2
+      - Name: Player B
+        Board: pvp
+        X: 0
+        Y: 0
+      - Name: Player C
+        Board: other
+        X: 1
+        Y: 2
     Change:
       CharacterChanges:
       - Entity: Player A
@@ -84,13 +100,35 @@ MonoBehaviour:
         - X: 0
           Y: 0
           BoardID: pvp
+      - Entity: Player C
+        Died: 0
+        Respawned: 0
+        Path:
+        - X: 1
+          Y: 1
+          BoardID: other
+        - X: 1
+          Y: 2
+          BoardID: other
   - State:
       Board:
-        Name: 
+        Name: pvp
         Columns: 0
         Rows: 0
         Grid: []
-      Players: []
+      Players:
+      - Name: Player A
+        Board: pvp
+        X: 2
+        Y: 2
+      - Name: Player B
+        Board: pvp
+        X: 0
+        Y: 0
+      - Name: Player C
+        Board: other
+        X: 1
+        Y: 2
     Change:
       CharacterChanges:
       - Entity: Player A

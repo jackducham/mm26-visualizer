@@ -27,6 +27,9 @@ namespace MM26.Play
         [SerializeField]
         private TasksManager _taskManager = null;
 
+        [SerializeField]
+        private SceneConfiguration _sceneConfiguration = null;
+
         private void OnEnable()
         {
             _sceneLifeCycle.Play.AddListener(this.DispatchTasks);
@@ -51,11 +54,37 @@ namespace MM26.Play
             {
                 Turn turn = _data.Turns.Dequeue();
                 GameChange gameChange = turn.Change;
+                GameState gameState = turn.State;
+
                 TasksBatch batch = new TasksBatch();
 
                 foreach (var pair in gameChange.CharacterStatChanges)
                 {
                     string entity = pair.Key;
+
+                    Character character = null;
+
+                    if (gameState.PlayerNames.ContainsKey(entity))
+                    {
+                        // if the entity is a player
+                        character = gameState.PlayerNames[entity].Character;
+                    }
+                    else if (gameState.MonsterNames.ContainsKey(entity))
+                    {
+                        // if the entity is a monster
+                        character = gameState.MonsterNames[entity].Character;
+                    }
+                    else
+                    {
+                        throw new Exception($"Don't know how to handle entity {entity}");
+                    }
+
+                    // skip entities not on this board
+                    if (character.Position.BoardId != _sceneConfiguration.BoardName)
+                    {
+                        continue;
+                    }
+
                     CharacterChange characterChange = pair.Value;
 
                     if (characterChange.Died)
@@ -65,8 +94,11 @@ namespace MM26.Play
                     }
                     else if (characterChange.Respawned)
                     {
-                        //batch.Add(new SpawnTask)
-                        throw new NotImplementedException("Respawned not handled in Director");
+                        batch.Add(new SpawnTask(entity, new Vector3Int(character.Position.X, character.Position.Y, 0)));
+                    }
+                    else if (characterChange.DecisionType == DecisionType.Portal)
+                    {
+                        batch.Add(new SpawnTask(entity, new Vector3Int(character.Position.X, character.Position.Y, 0)));
                     }
                     else
                     {
