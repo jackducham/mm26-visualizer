@@ -1,29 +1,24 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using NUnit.Framework;
 using MM26.ECS;
-using MM26.IO;
 using MM26.IO.Models;
 using MM26.Tasks;
 
 namespace MM26.Play.Tests
 {
-    public class MockPositionLookUp : Board.BoardPositionLookUp
-    {
-        public override Vector3 Translate(Vector3Int position)
-        {
-            return new Vector3(position.x, position.y, position.z);
-        }
-    }
-
+    /// <summary>
+    /// Test players moving, corresponding to <c>DecisionType == MOVE</c>
+    /// </summary>
     [TestFixture]
-    public class MovementTests
+    public class MoveTest
     {
         SceneConfiguration _sceneConfiguration = null;
         MockPositionLookUp _mockPositionLookup = null;
 
         [SetUp]
-        public void PreTest()
+        public void SetUp()
         {
             _sceneConfiguration = ScriptableObject.CreateInstance<SceneConfiguration>();
             _sceneConfiguration.BoardName = "test";
@@ -66,6 +61,7 @@ namespace MM26.Play.Tests
             {
                 Died = false,
                 Respawned = false,
+                DecisionType = DecisionType.Move,
             };
 
             characterChange.Path.Add(new Position()
@@ -88,17 +84,19 @@ namespace MM26.Play.Tests
             turn.Change = gameChange;
 
             TasksBatch batch = Director.GetTasksBatch(turn, _sceneConfiguration, _mockPositionLookup);
-            List<Task> tasks = batch.Tasks;
+            FollowPathTask[] tasks = batch.Tasks
+                .Select(task => task as FollowPathTask)
+                .ToArray();
 
             if (playerBoard == _sceneConfiguration.BoardName)
             {
-                Assert.AreEqual(1, tasks.Count);
+                Assert.AreEqual(1, tasks.Length);
                 Assert.AreEqual("player", tasks[0].EntityName);
-                Assert.AreEqual(2, (tasks[0] as FollowPathTask).Path.Length);
+                Assert.AreEqual(2, tasks[0].Path.Length);
             }
             else
             {
-                Assert.AreEqual(0, tasks.Count);
+                Assert.AreEqual(0, tasks.Length);
             }
         }
     }

@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using UnityEngine;
 using NUnit.Framework;
@@ -41,8 +40,8 @@ namespace MM26.ECS.Tests
             mailbox.SubscribeToTaskType<PositionTask>(this);
             mailbox.SubscribeToTaskType<RotationTask>(this);
 
-            ReadOnlyCollection<Task> positionTasks = mailbox.GetSubscribedTasksForType<PositionTask>(this);
-            ReadOnlyCollection<Task> rotationTasks = mailbox.GetSubscribedTasksForType<PositionTask>(this);
+            Task[] positionTasks = mailbox.GetSubscribedTasksForType<PositionTask>(this);
+            Task[] rotationTasks = mailbox.GetSubscribedTasksForType<PositionTask>(this);
 
             Assert.NotNull(positionTasks);
             Assert.NotNull(rotationTasks);

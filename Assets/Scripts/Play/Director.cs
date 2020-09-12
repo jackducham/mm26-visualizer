@@ -114,16 +114,33 @@ namespace MM26.Play
                 }
                 else if (characterChange.Respawned)
                 {
-                    batch.Add(new SpawnTask(entity, new Vector3Int(character.Position.X, character.Position.Y, 0)));
+                    batch.Add(
+                        new SpawnTask(
+                            entity,
+                            new Vector3Int(
+                                character.Position.X,
+                                character.Position.Y,
+                                0)));
                 }
-                else if (characterChange.DecisionType == DecisionType.Portal)
+
+                switch (characterChange.DecisionType)
                 {
-                    batch.Add(new SpawnTask(entity, new Vector3Int(character.Position.X, character.Position.Y, 0)));
-                }
-                else
-                {
-                    Vector3[] path = Director.GetPath(characterChange.Path, boardPositionLookUp);
-                    batch.Add(new FollowPathTask(entity, path));
+                    case DecisionType.Move:
+                        Vector3[] path = Director.GetPath(characterChange.Path, boardPositionLookUp);
+                        batch.Add(new FollowPathTask(entity, path));
+                        break;
+                    case DecisionType.Portal:
+                        batch.Add(
+                            new SpawnTask(
+                                entity,
+                                new Vector3Int(
+                                    character.Position.X,
+                                    character.Position.Y,
+                                    0)));
+                        break;
+                    default:
+                        Debug.LogWarningFormat("Unrecognized decision type {0}", characterChange.DecisionType);
+                        break;
                 }
             }
 
