@@ -138,6 +138,8 @@ namespace MM26.Play
                                     character.Position.Y,
                                     0)));
                         break;
+                    case DecisionType.None:
+                        break;
                     default:
                         Debug.LogWarningFormat("Unrecognized decision type {0}", characterChange.DecisionType);
                         break;
