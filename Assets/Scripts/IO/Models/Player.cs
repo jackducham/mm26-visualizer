@@ -24,16 +24,16 @@ namespace MM26.IO.Models {
     static PlayerReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgxwbGF5ZXIucHJvdG8SFHBsYXllcl9jb21tdW5pY2F0aW9uGhBnYW1lX3N0",
-            "YXRlLnByb3RvGg9jaGFyYWN0ZXIucHJvdG8iTAoKUGxheWVyVHVybhIpCgpn",
-            "YW1lX3N0YXRlGAEgASgLMhUuZ2FtZV9zdGF0ZS5HYW1lU3RhdGUSEwoLcGxh",
-            "eWVyX25hbWUYAiABKAkifQoOUGxheWVyRGVjaXNpb24SLgoNZGVjaXNpb25f",
-            "dHlwZRgBIAEoDjIXLmNoYXJhY3Rlci5EZWNpc2lvblR5cGUSLAoPdGFyZ2V0",
-            "X3Bvc2l0aW9uGAIgASgLMhMuY2hhcmFjdGVyLlBvc2l0aW9uEg0KBWluZGV4",
-            "GAMgASgFQj8KHm1lY2gubWFuaWEuZW5naW5lLmRvbWFpbi5tb2RlbEIMUGxh",
-            "eWVyUHJvdG9zqgIOTU0yNi5JTy5Nb2RlbHNiBnByb3RvMw=="));
+            "CgxwbGF5ZXIucHJvdG8SFHBsYXllcl9jb21tdW5pY2F0aW9uGgpnYW1lLnBy",
+            "b3RvGg9jaGFyYWN0ZXIucHJvdG8iRgoKUGxheWVyVHVybhIjCgpnYW1lX3N0",
+            "YXRlGAEgASgLMg8uZ2FtZS5HYW1lU3RhdGUSEwoLcGxheWVyX25hbWUYAiAB",
+            "KAkifQoOUGxheWVyRGVjaXNpb24SLgoNZGVjaXNpb25fdHlwZRgBIAEoDjIX",
+            "LmNoYXJhY3Rlci5EZWNpc2lvblR5cGUSLAoPdGFyZ2V0X3Bvc2l0aW9uGAIg",
+            "ASgLMhMuY2hhcmFjdGVyLlBvc2l0aW9uEg0KBWluZGV4GAMgASgFQj8KHm1l",
+            "Y2gubWFuaWEuZW5naW5lLmRvbWFpbi5tb2RlbEIMUGxheWVyUHJvdG9zqgIO",
+            "TU0yNi5JTy5Nb2RlbHNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::MM26.IO.Models.GameStateReflection.Descriptor, global::MM26.IO.Models.CharacterReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::MM26.IO.Models.GameReflection.Descriptor, global::MM26.IO.Models.CharacterReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.PlayerTurn), global::MM26.IO.Models.PlayerTurn.Parser, new[]{ "GameState", "PlayerName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.PlayerDecision), global::MM26.IO.Models.PlayerDecision.Parser, new[]{ "DecisionType", "TargetPosition", "Index" }, null, null, null, null)

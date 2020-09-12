@@ -52,7 +52,7 @@ namespace MM26.Play
         {
             while (_data.Turns.Count > 0)
             {
-                Turn turn = _data.Turns.Dequeue();
+                VisualizerTurn turn = _data.Turns.Dequeue();
                 GameChange gameChange = turn.Change;
                 GameState gameState = turn.State;
 

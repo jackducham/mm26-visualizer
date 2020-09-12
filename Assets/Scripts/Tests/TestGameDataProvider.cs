@@ -42,12 +42,15 @@ namespace MM26.Tests
         /// </summary>
         private void OnFetchData()
         {
-            _data.InitialState = this.GetState(_testData.InitialState);
+            _data.Initial = new VisualizerInitial();
+            _data.Initial.State = this.GetState(_testData.InitialState);
 
             for (int i = 0; i < _testData.Turns.Length; i++)
             {
                 TestGameTurn testTurn = _testData.Turns[i];
-                Turn turn = new Turn(this.GetState(testTurn.State), this.GetChange(testTurn.Change));
+                VisualizerTurn turn = new VisualizerTurn();
+                turn.State = this.GetState(testTurn.State);
+                turn.Change = this.GetChange(testTurn.Change);
 
                 _data.Turns.Enqueue(turn);
             }

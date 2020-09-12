@@ -24,41 +24,43 @@ namespace MM26.IO.Models {
     static CharacterReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg9jaGFyYWN0ZXIucHJvdG8SCWNoYXJhY3RlchoKaXRlbS5wcm90byKDBAoJ",
+            "Cg9jaGFyYWN0ZXIucHJvdG8SCWNoYXJhY3RlchoKaXRlbS5wcm90byLZBAoJ",
             "Q2hhcmFjdGVyEhYKDmN1cnJlbnRfaGVhbHRoGAEgASgFEhcKD2Jhc2VfbWF4",
             "X2hlYWx0aBgCIAEoBRISCgpleHBlcmllbmNlGAMgASgFEg0KBWxldmVsGAQg",
             "ASgFEhIKCmJhc2Vfc3BlZWQYBSABKAUSJQoIcG9zaXRpb24YBiABKAsyEy5j",
             "aGFyYWN0ZXIuUG9zaXRpb24SKAoLc3Bhd25fcG9pbnQYByABKAsyEy5jaGFy",
             "YWN0ZXIuUG9zaXRpb24SHAoGd2VhcG9uGAggASgLMgwuaXRlbS5XZWFwb24S",
-            "MAoOYWN0aXZlX2VmZmVjdHMYCSADKAsyGC5pdGVtLlRlbXBTdGF0dXNNb2Rp",
-            "ZmllchJMChV0YWdnZWRfcGxheWVyc19kYW1hZ2UYCiADKAsyLS5jaGFyYWN0",
-            "ZXIuQ2hhcmFjdGVyLlRhZ2dlZFBsYXllcnNEYW1hZ2VFbnRyeRIPCgdpc19k",
-            "ZWFkGAsgASgIEhkKEXRpY2tzX3NpbmNlX2RlYXRoGAwgASgFEgwKBG5hbWUY",
-            "DSABKAkSEwoLYmFzZV9hdHRhY2sYDiABKAUSFAoMYmFzZV9kZWZlbnNlGA8g",
-            "ASgFGjoKGFRhZ2dlZFBsYXllcnNEYW1hZ2VFbnRyeRILCgNrZXkYASABKAkS",
-            "DQoFdmFsdWUYAiABKAU6AjgBIk0KB01vbnN0ZXISJwoJY2hhcmFjdGVyGAEg",
-            "ASgLMhQuY2hhcmFjdGVyLkNoYXJhY3RlchIZCgVkcm9wcxgCIAMoCzIKLml0",
-            "ZW0uSXRlbSKkAQoGUGxheWVyEicKCWNoYXJhY3RlchgBIAEoCzIULmNoYXJh",
-            "Y3Rlci5DaGFyYWN0ZXISFgoDaGF0GAIgASgLMgkuaXRlbS5IYXQSHgoHY2xv",
-            "dGhlcxgDIAEoCzINLml0ZW0uQ2xvdGhlcxIaCgVzaG9lcxgEIAEoCzILLml0",
-            "ZW0uU2hvZXMSHQoJaW52ZW50b3J5GAUgAygLMgouaXRlbS5JdGVtIsYBCgtQ",
-            "bGF5ZXJTdGF0cxINCgVsZXZlbBgBIAEoBRISCgpleHBlcmllbmNlGAIgASgF",
-            "EhYKDm1vbnN0ZXJzX3NsYWluGAMgASgFEg4KBmF0dGFjaxgEIAEoBRIPCgdk",
-            "ZWZlbnNlGAUgASgFEhYKDmN1cnJlbnRfaGVhbHRoGAYgASgFEhIKCm1heF9o",
-            "ZWFsdGgYByABKAUSEwoLZGVhdGhfY291bnQYCCABKAUSGgoSdHVybnNfc2lu",
-            "Y2Vfam9pbmVkGAkgASgFIpEBChFQbGF5ZXJTdGF0c0J1bmRsZRI2CgVzdGF0",
-            "cxgBIAMoCzInLmNoYXJhY3Rlci5QbGF5ZXJTdGF0c0J1bmRsZS5TdGF0c0Vu",
-            "dHJ5GkQKClN0YXRzRW50cnkSCwoDa2V5GAEgASgJEiUKBXZhbHVlGAIgASgL",
-            "MhYuY2hhcmFjdGVyLlBsYXllclN0YXRzOgI4ASIyCghQb3NpdGlvbhIQCghi",
-            "b2FyZF9pZBgBIAEoCRIJCgF4GAIgASgFEgkKAXkYAyABKAUqWwoMRGVjaXNp",
-            "b25UeXBlEggKBE5PTkUQABIICgRNT1ZFEAESCgoGQVRUQUNLEAISCgoGUE9S",
-            "VEFMEAMSCAoERFJPUBAEEgkKBUVRVUlQEAUSCgoGUElDS1VQEAZCQgoebWVj",
-            "aC5tYW5pYS5lbmdpbmUuZG9tYWluLm1vZGVsQg9DaGFyYWN0ZXJQcm90b3Oq",
-            "Ag5NTTI2LklPLk1vZGVsc2IGcHJvdG8z"));
+            "RQojYWN0aXZlX2VmZmVjdHNfdGVtcF9zdGF0dXNfbW9kaWZpZXIYCSADKAsy",
+            "GC5pdGVtLlRlbXBTdGF0dXNNb2RpZmllchIdChVhY3RpdmVfZWZmZWN0c19z",
+            "b3VyY2UYCiADKAkSIAoYYWN0aXZlX2VmZmVjdHNfaXNfcGxheWVyGAsgAygI",
+            "EkwKFXRhZ2dlZF9wbGF5ZXJzX2RhbWFnZRgMIAMoCzItLmNoYXJhY3Rlci5D",
+            "aGFyYWN0ZXIuVGFnZ2VkUGxheWVyc0RhbWFnZUVudHJ5Eg8KB2lzX2RlYWQY",
+            "DSABKAgSGQoRdGlja3Nfc2luY2VfZGVhdGgYDiABKAUSDAoEbmFtZRgPIAEo",
+            "CRITCgtiYXNlX2F0dGFjaxgQIAEoBRIUCgxiYXNlX2RlZmVuc2UYESABKAUa",
+            "OgoYVGFnZ2VkUGxheWVyc0RhbWFnZUVudHJ5EgsKA2tleRgBIAEoCRINCgV2",
+            "YWx1ZRgCIAEoBToCOAEiTQoHTW9uc3RlchInCgljaGFyYWN0ZXIYASABKAsy",
+            "FC5jaGFyYWN0ZXIuQ2hhcmFjdGVyEhkKBWRyb3BzGAIgAygLMgouaXRlbS5J",
+            "dGVtIqQBCgZQbGF5ZXISJwoJY2hhcmFjdGVyGAEgASgLMhQuY2hhcmFjdGVy",
+            "LkNoYXJhY3RlchIWCgNoYXQYAiABKAsyCS5pdGVtLkhhdBIeCgdjbG90aGVz",
+            "GAMgASgLMg0uaXRlbS5DbG90aGVzEhoKBXNob2VzGAQgASgLMgsuaXRlbS5T",
+            "aG9lcxIdCglpbnZlbnRvcnkYBSADKAsyCi5pdGVtLkl0ZW0ixgEKC1BsYXll",
+            "clN0YXRzEg0KBWxldmVsGAEgASgFEhIKCmV4cGVyaWVuY2UYAiABKAUSFgoO",
+            "bW9uc3RlcnNfc2xhaW4YAyABKAUSDgoGYXR0YWNrGAQgASgFEg8KB2RlZmVu",
+            "c2UYBSABKAUSFgoOY3VycmVudF9oZWFsdGgYBiABKAUSEgoKbWF4X2hlYWx0",
+            "aBgHIAEoBRITCgtkZWF0aF9jb3VudBgIIAEoBRIaChJ0dXJuc19zaW5jZV9q",
+            "b2luZWQYCSABKAUikQEKEVBsYXllclN0YXRzQnVuZGxlEjYKBXN0YXRzGAEg",
+            "AygLMicuY2hhcmFjdGVyLlBsYXllclN0YXRzQnVuZGxlLlN0YXRzRW50cnka",
+            "RAoKU3RhdHNFbnRyeRILCgNrZXkYASABKAkSJQoFdmFsdWUYAiABKAsyFi5j",
+            "aGFyYWN0ZXIuUGxheWVyU3RhdHM6AjgBIjIKCFBvc2l0aW9uEhAKCGJvYXJk",
+            "X2lkGAEgASgJEgkKAXgYAiABKAUSCQoBeRgDIAEoBSpbCgxEZWNpc2lvblR5",
+            "cGUSCAoETk9ORRAAEggKBE1PVkUQARIKCgZBVFRBQ0sQAhIKCgZQT1JUQUwQ",
+            "AxIICgREUk9QEAQSCQoFRVFVSVAQBRIKCgZQSUNLVVAQBkJCCh5tZWNoLm1h",
+            "bmlhLmVuZ2luZS5kb21haW4ubW9kZWxCD0NoYXJhY3RlclByb3Rvc6oCDk1N",
+            "MjYuSU8uTW9kZWxzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::MM26.IO.Models.ItemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MM26.IO.Models.DecisionType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Character), global::MM26.IO.Models.Character.Parser, new[]{ "CurrentHealth", "BaseMaxHealth", "Experience", "Level", "BaseSpeed", "Position", "SpawnPoint", "Weapon", "ActiveEffects", "TaggedPlayersDamage", "IsDead", "TicksSinceDeath", "Name", "BaseAttack", "BaseDefense" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Character), global::MM26.IO.Models.Character.Parser, new[]{ "CurrentHealth", "BaseMaxHealth", "Experience", "Level", "BaseSpeed", "Position", "SpawnPoint", "Weapon", "ActiveEffectsTempStatusModifier", "ActiveEffectsSource", "ActiveEffectsIsPlayer", "TaggedPlayersDamage", "IsDead", "TicksSinceDeath", "Name", "BaseAttack", "BaseDefense" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Monster), global::MM26.IO.Models.Monster.Parser, new[]{ "Character", "Drops" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Player), global::MM26.IO.Models.Player.Parser, new[]{ "Character", "Hat", "Clothes", "Shoes", "Inventory" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.PlayerStats), global::MM26.IO.Models.PlayerStats.Parser, new[]{ "Level", "Experience", "MonstersSlain", "Attack", "Defense", "CurrentHealth", "MaxHealth", "DeathCount", "TurnsSinceJoined" }, null, null, null, null),
@@ -120,7 +122,9 @@ namespace MM26.IO.Models {
       position_ = other.position_ != null ? other.position_.Clone() : null;
       spawnPoint_ = other.spawnPoint_ != null ? other.spawnPoint_.Clone() : null;
       weapon_ = other.weapon_ != null ? other.weapon_.Clone() : null;
-      activeEffects_ = other.activeEffects_.Clone();
+      activeEffectsTempStatusModifier_ = other.activeEffectsTempStatusModifier_.Clone();
+      activeEffectsSource_ = other.activeEffectsSource_.Clone();
+      activeEffectsIsPlayer_ = other.activeEffectsIsPlayer_.Clone();
       taggedPlayersDamage_ = other.taggedPlayersDamage_.Clone();
       isDead_ = other.isDead_;
       ticksSinceDeath_ = other.ticksSinceDeath_;
@@ -223,20 +227,43 @@ namespace MM26.IO.Models {
       }
     }
 
-    /// <summary>Field number for the "active_effects" field.</summary>
-    public const int ActiveEffectsFieldNumber = 9;
-    private static readonly pb::FieldCodec<global::MM26.IO.Models.TempStatusModifier> _repeated_activeEffects_codec
+    /// <summary>Field number for the "active_effects_temp_status_modifier" field.</summary>
+    public const int ActiveEffectsTempStatusModifierFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::MM26.IO.Models.TempStatusModifier> _repeated_activeEffectsTempStatusModifier_codec
         = pb::FieldCodec.ForMessage(74, global::MM26.IO.Models.TempStatusModifier.Parser);
-    private readonly pbc::RepeatedField<global::MM26.IO.Models.TempStatusModifier> activeEffects_ = new pbc::RepeatedField<global::MM26.IO.Models.TempStatusModifier>();
+    private readonly pbc::RepeatedField<global::MM26.IO.Models.TempStatusModifier> activeEffectsTempStatusModifier_ = new pbc::RepeatedField<global::MM26.IO.Models.TempStatusModifier>();
+    /// <summary>
+    /// Parallel arrays to be stored as a triple
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::MM26.IO.Models.TempStatusModifier> ActiveEffects {
-      get { return activeEffects_; }
+    public pbc::RepeatedField<global::MM26.IO.Models.TempStatusModifier> ActiveEffectsTempStatusModifier {
+      get { return activeEffectsTempStatusModifier_; }
+    }
+
+    /// <summary>Field number for the "active_effects_source" field.</summary>
+    public const int ActiveEffectsSourceFieldNumber = 10;
+    private static readonly pb::FieldCodec<string> _repeated_activeEffectsSource_codec
+        = pb::FieldCodec.ForString(82);
+    private readonly pbc::RepeatedField<string> activeEffectsSource_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> ActiveEffectsSource {
+      get { return activeEffectsSource_; }
+    }
+
+    /// <summary>Field number for the "active_effects_is_player" field.</summary>
+    public const int ActiveEffectsIsPlayerFieldNumber = 11;
+    private static readonly pb::FieldCodec<bool> _repeated_activeEffectsIsPlayer_codec
+        = pb::FieldCodec.ForBool(90);
+    private readonly pbc::RepeatedField<bool> activeEffectsIsPlayer_ = new pbc::RepeatedField<bool>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<bool> ActiveEffectsIsPlayer {
+      get { return activeEffectsIsPlayer_; }
     }
 
     /// <summary>Field number for the "tagged_players_damage" field.</summary>
-    public const int TaggedPlayersDamageFieldNumber = 10;
+    public const int TaggedPlayersDamageFieldNumber = 12;
     private static readonly pbc::MapField<string, int>.Codec _map_taggedPlayersDamage_codec
-        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 82);
+        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 98);
     private readonly pbc::MapField<string, int> taggedPlayersDamage_ = new pbc::MapField<string, int>();
     /// <summary>
     /// Maps from player name to damage
@@ -247,7 +274,7 @@ namespace MM26.IO.Models {
     }
 
     /// <summary>Field number for the "is_dead" field.</summary>
-    public const int IsDeadFieldNumber = 11;
+    public const int IsDeadFieldNumber = 13;
     private bool isDead_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool IsDead {
@@ -258,7 +285,7 @@ namespace MM26.IO.Models {
     }
 
     /// <summary>Field number for the "ticks_since_death" field.</summary>
-    public const int TicksSinceDeathFieldNumber = 12;
+    public const int TicksSinceDeathFieldNumber = 14;
     private int ticksSinceDeath_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int TicksSinceDeath {
@@ -269,7 +296,7 @@ namespace MM26.IO.Models {
     }
 
     /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 13;
+    public const int NameFieldNumber = 15;
     private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -280,7 +307,7 @@ namespace MM26.IO.Models {
     }
 
     /// <summary>Field number for the "base_attack" field.</summary>
-    public const int BaseAttackFieldNumber = 14;
+    public const int BaseAttackFieldNumber = 16;
     private int baseAttack_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int BaseAttack {
@@ -291,7 +318,7 @@ namespace MM26.IO.Models {
     }
 
     /// <summary>Field number for the "base_defense" field.</summary>
-    public const int BaseDefenseFieldNumber = 15;
+    public const int BaseDefenseFieldNumber = 17;
     private int baseDefense_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int BaseDefense {
@@ -322,7 +349,9 @@ namespace MM26.IO.Models {
       if (!object.Equals(Position, other.Position)) return false;
       if (!object.Equals(SpawnPoint, other.SpawnPoint)) return false;
       if (!object.Equals(Weapon, other.Weapon)) return false;
-      if(!activeEffects_.Equals(other.activeEffects_)) return false;
+      if(!activeEffectsTempStatusModifier_.Equals(other.activeEffectsTempStatusModifier_)) return false;
+      if(!activeEffectsSource_.Equals(other.activeEffectsSource_)) return false;
+      if(!activeEffectsIsPlayer_.Equals(other.activeEffectsIsPlayer_)) return false;
       if (!TaggedPlayersDamage.Equals(other.TaggedPlayersDamage)) return false;
       if (IsDead != other.IsDead) return false;
       if (TicksSinceDeath != other.TicksSinceDeath) return false;
@@ -343,7 +372,9 @@ namespace MM26.IO.Models {
       if (position_ != null) hash ^= Position.GetHashCode();
       if (spawnPoint_ != null) hash ^= SpawnPoint.GetHashCode();
       if (weapon_ != null) hash ^= Weapon.GetHashCode();
-      hash ^= activeEffects_.GetHashCode();
+      hash ^= activeEffectsTempStatusModifier_.GetHashCode();
+      hash ^= activeEffectsSource_.GetHashCode();
+      hash ^= activeEffectsIsPlayer_.GetHashCode();
       hash ^= TaggedPlayersDamage.GetHashCode();
       if (IsDead != false) hash ^= IsDead.GetHashCode();
       if (TicksSinceDeath != 0) hash ^= TicksSinceDeath.GetHashCode();
@@ -395,26 +426,28 @@ namespace MM26.IO.Models {
         output.WriteRawTag(66);
         output.WriteMessage(Weapon);
       }
-      activeEffects_.WriteTo(output, _repeated_activeEffects_codec);
+      activeEffectsTempStatusModifier_.WriteTo(output, _repeated_activeEffectsTempStatusModifier_codec);
+      activeEffectsSource_.WriteTo(output, _repeated_activeEffectsSource_codec);
+      activeEffectsIsPlayer_.WriteTo(output, _repeated_activeEffectsIsPlayer_codec);
       taggedPlayersDamage_.WriteTo(output, _map_taggedPlayersDamage_codec);
       if (IsDead != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(104);
         output.WriteBool(IsDead);
       }
       if (TicksSinceDeath != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(112);
         output.WriteInt32(TicksSinceDeath);
       }
       if (Name.Length != 0) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(122);
         output.WriteString(Name);
       }
       if (BaseAttack != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(128, 1);
         output.WriteInt32(BaseAttack);
       }
       if (BaseDefense != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(136, 1);
         output.WriteInt32(BaseDefense);
       }
       if (_unknownFields != null) {
@@ -449,7 +482,9 @@ namespace MM26.IO.Models {
       if (weapon_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Weapon);
       }
-      size += activeEffects_.CalculateSize(_repeated_activeEffects_codec);
+      size += activeEffectsTempStatusModifier_.CalculateSize(_repeated_activeEffectsTempStatusModifier_codec);
+      size += activeEffectsSource_.CalculateSize(_repeated_activeEffectsSource_codec);
+      size += activeEffectsIsPlayer_.CalculateSize(_repeated_activeEffectsIsPlayer_codec);
       size += taggedPlayersDamage_.CalculateSize(_map_taggedPlayersDamage_codec);
       if (IsDead != false) {
         size += 1 + 1;
@@ -461,10 +496,10 @@ namespace MM26.IO.Models {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (BaseAttack != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(BaseAttack);
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(BaseAttack);
       }
       if (BaseDefense != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(BaseDefense);
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(BaseDefense);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -510,7 +545,9 @@ namespace MM26.IO.Models {
         }
         Weapon.MergeFrom(other.Weapon);
       }
-      activeEffects_.Add(other.activeEffects_);
+      activeEffectsTempStatusModifier_.Add(other.activeEffectsTempStatusModifier_);
+      activeEffectsSource_.Add(other.activeEffectsSource_);
+      activeEffectsIsPlayer_.Add(other.activeEffectsIsPlayer_);
       taggedPlayersDamage_.Add(other.taggedPlayersDamage_);
       if (other.IsDead != false) {
         IsDead = other.IsDead;
@@ -583,30 +620,39 @@ namespace MM26.IO.Models {
             break;
           }
           case 74: {
-            activeEffects_.AddEntriesFrom(input, _repeated_activeEffects_codec);
+            activeEffectsTempStatusModifier_.AddEntriesFrom(input, _repeated_activeEffectsTempStatusModifier_codec);
             break;
           }
           case 82: {
+            activeEffectsSource_.AddEntriesFrom(input, _repeated_activeEffectsSource_codec);
+            break;
+          }
+          case 90:
+          case 88: {
+            activeEffectsIsPlayer_.AddEntriesFrom(input, _repeated_activeEffectsIsPlayer_codec);
+            break;
+          }
+          case 98: {
             taggedPlayersDamage_.AddEntriesFrom(input, _map_taggedPlayersDamage_codec);
             break;
           }
-          case 88: {
+          case 104: {
             IsDead = input.ReadBool();
             break;
           }
-          case 96: {
+          case 112: {
             TicksSinceDeath = input.ReadInt32();
             break;
           }
-          case 106: {
+          case 122: {
             Name = input.ReadString();
             break;
           }
-          case 112: {
+          case 128: {
             BaseAttack = input.ReadInt32();
             break;
           }
-          case 120: {
+          case 136: {
             BaseDefense = input.ReadInt32();
             break;
           }
@@ -666,30 +712,39 @@ namespace MM26.IO.Models {
             break;
           }
           case 74: {
-            activeEffects_.AddEntriesFrom(ref input, _repeated_activeEffects_codec);
+            activeEffectsTempStatusModifier_.AddEntriesFrom(ref input, _repeated_activeEffectsTempStatusModifier_codec);
             break;
           }
           case 82: {
+            activeEffectsSource_.AddEntriesFrom(ref input, _repeated_activeEffectsSource_codec);
+            break;
+          }
+          case 90:
+          case 88: {
+            activeEffectsIsPlayer_.AddEntriesFrom(ref input, _repeated_activeEffectsIsPlayer_codec);
+            break;
+          }
+          case 98: {
             taggedPlayersDamage_.AddEntriesFrom(ref input, _map_taggedPlayersDamage_codec);
             break;
           }
-          case 88: {
+          case 104: {
             IsDead = input.ReadBool();
             break;
           }
-          case 96: {
+          case 112: {
             TicksSinceDeath = input.ReadInt32();
             break;
           }
-          case 106: {
+          case 122: {
             Name = input.ReadString();
             break;
           }
-          case 112: {
+          case 128: {
             BaseAttack = input.ReadInt32();
             break;
           }
-          case 120: {
+          case 136: {
             BaseDefense = input.ReadInt32();
             break;
           }

@@ -24,38 +24,32 @@ namespace MM26.IO.Models {
     static VisualizerReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChB2aXN1YWxpemVyLnByb3RvEhRwbGF5ZXJfY29tbXVuaWNhdGlvbhoPY2hh",
-            "cmFjdGVyLnByb3RvIuYBCgpHYW1lQ2hhbmdlEhgKEG5ld19wbGF5ZXJfbmFt",
-            "ZXMYASADKAkSWgoWY2hhcmFjdGVyX3N0YXRfY2hhbmdlcxgCIAMoCzI6LnBs",
-            "YXllcl9jb21tdW5pY2F0aW9uLkdhbWVDaGFuZ2UuQ2hhcmFjdGVyU3RhdENo",
-            "YW5nZXNFbnRyeRpiChlDaGFyYWN0ZXJTdGF0Q2hhbmdlc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRI0CgV2YWx1ZRgCIAEoCzIlLnBsYXllcl9jb21tdW5pY2F0aW9u",
-            "LkNoYXJhY3RlckNoYW5nZToCOAEihQEKD0NoYXJhY3RlckNoYW5nZRIMCgRk",
-            "aWVkGAEgASgIEhEKCXJlc3Bhd25lZBgCIAEoCBIuCg1kZWNpc2lvbl90eXBl",
-            "GAMgASgOMhcuY2hhcmFjdGVyLkRlY2lzaW9uVHlwZRIhCgRwYXRoGAQgAygL",
-            "MhMuY2hhcmFjdGVyLlBvc2l0aW9uQkMKHm1lY2gubWFuaWEuZW5naW5lLmRv",
-            "bWFpbi5tb2RlbEIQVmlzdWFsaXplclByb3Rvc6oCDk1NMjYuSU8uTW9kZWxz",
-            "YgZwcm90bzM="));
+            "ChB2aXN1YWxpemVyLnByb3RvEhRwbGF5ZXJfY29tbXVuaWNhdGlvbhoKZ2Ft",
+            "ZS5wcm90byIzChFWaXN1YWxpemVySW5pdGlhbBIeCgVzdGF0ZRgBIAEoCzIP",
+            "LmdhbWUuR2FtZVN0YXRlIlIKDlZpc3VhbGl6ZXJUdXJuEh4KBXN0YXRlGAEg",
+            "ASgLMg8uZ2FtZS5HYW1lU3RhdGUSIAoGY2hhbmdlGAIgASgLMhAuZ2FtZS5H",
+            "YW1lQ2hhbmdlQkMKHm1lY2gubWFuaWEuZW5naW5lLmRvbWFpbi5tb2RlbEIQ",
+            "VmlzdWFsaXplclByb3Rvc6oCDk1NMjYuSU8uTW9kZWxzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::MM26.IO.Models.CharacterReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::MM26.IO.Models.GameReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.GameChange), global::MM26.IO.Models.GameChange.Parser, new[]{ "NewPlayerNames", "CharacterStatChanges" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.CharacterChange), global::MM26.IO.Models.CharacterChange.Parser, new[]{ "Died", "Respawned", "DecisionType", "Path" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.VisualizerInitial), global::MM26.IO.Models.VisualizerInitial.Parser, new[]{ "State" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.VisualizerTurn), global::MM26.IO.Models.VisualizerTurn.Parser, new[]{ "State", "Change" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
-  public sealed partial class GameChange : pb::IMessage<GameChange>
+  public sealed partial class VisualizerInitial : pb::IMessage<VisualizerInitial>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<GameChange> _parser = new pb::MessageParser<GameChange>(() => new GameChange());
+    private static readonly pb::MessageParser<VisualizerInitial> _parser = new pb::MessageParser<VisualizerInitial>(() => new VisualizerInitial());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<GameChange> Parser { get { return _parser; } }
+    public static pb::MessageParser<VisualizerInitial> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -68,67 +62,55 @@ namespace MM26.IO.Models {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GameChange() {
+    public VisualizerInitial() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GameChange(GameChange other) : this() {
-      newPlayerNames_ = other.newPlayerNames_.Clone();
-      characterStatChanges_ = other.characterStatChanges_.Clone();
+    public VisualizerInitial(VisualizerInitial other) : this() {
+      state_ = other.state_ != null ? other.state_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GameChange Clone() {
-      return new GameChange(this);
+    public VisualizerInitial Clone() {
+      return new VisualizerInitial(this);
     }
 
-    /// <summary>Field number for the "new_player_names" field.</summary>
-    public const int NewPlayerNamesFieldNumber = 1;
-    private static readonly pb::FieldCodec<string> _repeated_newPlayerNames_codec
-        = pb::FieldCodec.ForString(10);
-    private readonly pbc::RepeatedField<string> newPlayerNames_ = new pbc::RepeatedField<string>();
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 1;
+    private global::MM26.IO.Models.GameState state_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> NewPlayerNames {
-      get { return newPlayerNames_; }
-    }
-
-    /// <summary>Field number for the "character_stat_changes" field.</summary>
-    public const int CharacterStatChangesFieldNumber = 2;
-    private static readonly pbc::MapField<string, global::MM26.IO.Models.CharacterChange>.Codec _map_characterStatChanges_codec
-        = new pbc::MapField<string, global::MM26.IO.Models.CharacterChange>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::MM26.IO.Models.CharacterChange.Parser), 18);
-    private readonly pbc::MapField<string, global::MM26.IO.Models.CharacterChange> characterStatChanges_ = new pbc::MapField<string, global::MM26.IO.Models.CharacterChange>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::MapField<string, global::MM26.IO.Models.CharacterChange> CharacterStatChanges {
-      get { return characterStatChanges_; }
+    public global::MM26.IO.Models.GameState State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as GameChange);
+      return Equals(other as VisualizerInitial);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(GameChange other) {
+    public bool Equals(VisualizerInitial other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!newPlayerNames_.Equals(other.newPlayerNames_)) return false;
-      if (!CharacterStatChanges.Equals(other.CharacterStatChanges)) return false;
+      if (!object.Equals(State, other.State)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= newPlayerNames_.GetHashCode();
-      hash ^= CharacterStatChanges.GetHashCode();
+      if (state_ != null) hash ^= State.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -142,8 +124,10 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      newPlayerNames_.WriteTo(output, _repeated_newPlayerNames_codec);
-      characterStatChanges_.WriteTo(output, _map_characterStatChanges_codec);
+      if (state_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(State);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -152,8 +136,9 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      size += newPlayerNames_.CalculateSize(_repeated_newPlayerNames_codec);
-      size += characterStatChanges_.CalculateSize(_map_characterStatChanges_codec);
+      if (state_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(State);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -161,12 +146,16 @@ namespace MM26.IO.Models {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(GameChange other) {
+    public void MergeFrom(VisualizerInitial other) {
       if (other == null) {
         return;
       }
-      newPlayerNames_.Add(other.newPlayerNames_);
-      characterStatChanges_.Add(other.characterStatChanges_);
+      if (other.state_ != null) {
+        if (state_ == null) {
+          State = new global::MM26.IO.Models.GameState();
+        }
+        State.MergeFrom(other.State);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -182,11 +171,10 @@ namespace MM26.IO.Models {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            newPlayerNames_.AddEntriesFrom(input, _repeated_newPlayerNames_codec);
-            break;
-          }
-          case 18: {
-            characterStatChanges_.AddEntriesFrom(input, _map_characterStatChanges_codec);
+            if (state_ == null) {
+              State = new global::MM26.IO.Models.GameState();
+            }
+            input.ReadMessage(State);
             break;
           }
         }
@@ -204,11 +192,10 @@ namespace MM26.IO.Models {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            newPlayerNames_.AddEntriesFrom(ref input, _repeated_newPlayerNames_codec);
-            break;
-          }
-          case 18: {
-            characterStatChanges_.AddEntriesFrom(ref input, _map_characterStatChanges_codec);
+            if (state_ == null) {
+              State = new global::MM26.IO.Models.GameState();
+            }
+            input.ReadMessage(State);
             break;
           }
         }
@@ -218,15 +205,15 @@ namespace MM26.IO.Models {
 
   }
 
-  public sealed partial class CharacterChange : pb::IMessage<CharacterChange>
+  public sealed partial class VisualizerTurn : pb::IMessage<VisualizerTurn>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<CharacterChange> _parser = new pb::MessageParser<CharacterChange>(() => new CharacterChange());
+    private static readonly pb::MessageParser<VisualizerTurn> _parser = new pb::MessageParser<VisualizerTurn>(() => new VisualizerTurn());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<CharacterChange> Parser { get { return _parser; } }
+    public static pb::MessageParser<VisualizerTurn> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -239,96 +226,69 @@ namespace MM26.IO.Models {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CharacterChange() {
+    public VisualizerTurn() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CharacterChange(CharacterChange other) : this() {
-      died_ = other.died_;
-      respawned_ = other.respawned_;
-      decisionType_ = other.decisionType_;
-      path_ = other.path_.Clone();
+    public VisualizerTurn(VisualizerTurn other) : this() {
+      state_ = other.state_ != null ? other.state_.Clone() : null;
+      change_ = other.change_ != null ? other.change_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CharacterChange Clone() {
-      return new CharacterChange(this);
+    public VisualizerTurn Clone() {
+      return new VisualizerTurn(this);
     }
 
-    /// <summary>Field number for the "died" field.</summary>
-    public const int DiedFieldNumber = 1;
-    private bool died_;
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 1;
+    private global::MM26.IO.Models.GameState state_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Died {
-      get { return died_; }
+    public global::MM26.IO.Models.GameState State {
+      get { return state_; }
       set {
-        died_ = value;
+        state_ = value;
       }
     }
 
-    /// <summary>Field number for the "respawned" field.</summary>
-    public const int RespawnedFieldNumber = 2;
-    private bool respawned_;
+    /// <summary>Field number for the "change" field.</summary>
+    public const int ChangeFieldNumber = 2;
+    private global::MM26.IO.Models.GameChange change_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Respawned {
-      get { return respawned_; }
+    public global::MM26.IO.Models.GameChange Change {
+      get { return change_; }
       set {
-        respawned_ = value;
+        change_ = value;
       }
-    }
-
-    /// <summary>Field number for the "decision_type" field.</summary>
-    public const int DecisionTypeFieldNumber = 3;
-    private global::MM26.IO.Models.DecisionType decisionType_ = global::MM26.IO.Models.DecisionType.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::MM26.IO.Models.DecisionType DecisionType {
-      get { return decisionType_; }
-      set {
-        decisionType_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "path" field.</summary>
-    public const int PathFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::MM26.IO.Models.Position> _repeated_path_codec
-        = pb::FieldCodec.ForMessage(34, global::MM26.IO.Models.Position.Parser);
-    private readonly pbc::RepeatedField<global::MM26.IO.Models.Position> path_ = new pbc::RepeatedField<global::MM26.IO.Models.Position>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::MM26.IO.Models.Position> Path {
-      get { return path_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as CharacterChange);
+      return Equals(other as VisualizerTurn);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(CharacterChange other) {
+    public bool Equals(VisualizerTurn other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Died != other.Died) return false;
-      if (Respawned != other.Respawned) return false;
-      if (DecisionType != other.DecisionType) return false;
-      if(!path_.Equals(other.path_)) return false;
+      if (!object.Equals(State, other.State)) return false;
+      if (!object.Equals(Change, other.Change)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Died != false) hash ^= Died.GetHashCode();
-      if (Respawned != false) hash ^= Respawned.GetHashCode();
-      if (DecisionType != global::MM26.IO.Models.DecisionType.None) hash ^= DecisionType.GetHashCode();
-      hash ^= path_.GetHashCode();
+      if (state_ != null) hash ^= State.GetHashCode();
+      if (change_ != null) hash ^= Change.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -342,19 +302,14 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Died != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(Died);
+      if (state_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(State);
       }
-      if (Respawned != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(Respawned);
+      if (change_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Change);
       }
-      if (DecisionType != global::MM26.IO.Models.DecisionType.None) {
-        output.WriteRawTag(24);
-        output.WriteEnum((int) DecisionType);
-      }
-      path_.WriteTo(output, _repeated_path_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -363,16 +318,12 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Died != false) {
-        size += 1 + 1;
+      if (state_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(State);
       }
-      if (Respawned != false) {
-        size += 1 + 1;
+      if (change_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Change);
       }
-      if (DecisionType != global::MM26.IO.Models.DecisionType.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DecisionType);
-      }
-      size += path_.CalculateSize(_repeated_path_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -380,20 +331,22 @@ namespace MM26.IO.Models {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(CharacterChange other) {
+    public void MergeFrom(VisualizerTurn other) {
       if (other == null) {
         return;
       }
-      if (other.Died != false) {
-        Died = other.Died;
+      if (other.state_ != null) {
+        if (state_ == null) {
+          State = new global::MM26.IO.Models.GameState();
+        }
+        State.MergeFrom(other.State);
       }
-      if (other.Respawned != false) {
-        Respawned = other.Respawned;
+      if (other.change_ != null) {
+        if (change_ == null) {
+          Change = new global::MM26.IO.Models.GameChange();
+        }
+        Change.MergeFrom(other.Change);
       }
-      if (other.DecisionType != global::MM26.IO.Models.DecisionType.None) {
-        DecisionType = other.DecisionType;
-      }
-      path_.Add(other.path_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -408,20 +361,18 @@ namespace MM26.IO.Models {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Died = input.ReadBool();
+          case 10: {
+            if (state_ == null) {
+              State = new global::MM26.IO.Models.GameState();
+            }
+            input.ReadMessage(State);
             break;
           }
-          case 16: {
-            Respawned = input.ReadBool();
-            break;
-          }
-          case 24: {
-            DecisionType = (global::MM26.IO.Models.DecisionType) input.ReadEnum();
-            break;
-          }
-          case 34: {
-            path_.AddEntriesFrom(input, _repeated_path_codec);
+          case 18: {
+            if (change_ == null) {
+              Change = new global::MM26.IO.Models.GameChange();
+            }
+            input.ReadMessage(Change);
             break;
           }
         }
@@ -438,20 +389,18 @@ namespace MM26.IO.Models {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Died = input.ReadBool();
+          case 10: {
+            if (state_ == null) {
+              State = new global::MM26.IO.Models.GameState();
+            }
+            input.ReadMessage(State);
             break;
           }
-          case 16: {
-            Respawned = input.ReadBool();
-            break;
-          }
-          case 24: {
-            DecisionType = (global::MM26.IO.Models.DecisionType) input.ReadEnum();
-            break;
-          }
-          case 34: {
-            path_.AddEntriesFrom(ref input, _repeated_path_codec);
+          case 18: {
+            if (change_ == null) {
+              Change = new global::MM26.IO.Models.GameChange();
+            }
+            input.ReadMessage(Change);
             break;
           }
         }
