@@ -90,6 +90,7 @@ MonoBehaviour:
       - Entity: Player A
         Died: 0
         Respawned: 0
+        DecisionType: 1
         Path:
         - X: 0
           Y: 0
@@ -109,6 +110,7 @@ MonoBehaviour:
       - Entity: Monster A
         Died: 0
         Respawned: 0
+        DecisionType: 1
         Path:
         - X: 2
           Y: 2
@@ -128,6 +130,7 @@ MonoBehaviour:
       - Entity: Player B
         Died: 0
         Respawned: 0
+        DecisionType: 1
         Path:
         - X: 0
           Y: 0
@@ -138,6 +141,7 @@ MonoBehaviour:
       - Entity: Monster B
         Died: 0
         Respawned: 0
+        DecisionType: 1
         Path:
         - X: 2
           Y: 2

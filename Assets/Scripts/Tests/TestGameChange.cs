@@ -1,4 +1,5 @@
 ﻿using System;
+using MM26.IO.Models;
 
 namespace MM26.Tests
 {
@@ -16,6 +17,7 @@ namespace MM26.Tests
         public string Entity;
         public bool Died;
         public bool Respawned;
+        public DecisionType DecisionType;
         public TestPosition[] Path;
     }
 

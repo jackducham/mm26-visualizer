@@ -31,13 +31,6 @@ namespace MM26.Board
         [SerializeField]
         private Tile _blankTile = null;
 
-        [Header("Prefabs")]
-        [SerializeField]
-        private GameObject _playerPrefab = null;
-
-        [SerializeField]
-        private GameObject _monsterPrefab = null;
-
         [Header("Scene Specific")]
         [SerializeField]
         private SceneConfiguration _sceneConfiguration = null;
@@ -52,30 +45,21 @@ namespace MM26.Board
         [SerializeField]
         private BoardPositionLookUp _positionLookUp = null;
 
-        [Header("ECS")]
-        [SerializeField]
-        private Mailbox _mailbox = null;
-
         [Header("Others")]
         [SerializeField]
         private Tilemap _tilemap = null;
 
+        [SerializeField]
+        internal CharactersManager CharactersManager = null;
+
         private void OnEnable()
         {
             _sceneLifeCycle.CreateBoard.AddListener(this.OnCreateMap);
-            _mailbox.SubscribeToTaskType<SpawnTask>(this);
-            _mailbox.SubscribeToTaskType<DespawnTask>(this);
         }
 
         private void OnDisable()
         {
             _sceneLifeCycle.CreateBoard.RemoveListener(this.OnCreateMap);
-        }
-
-        private void Update()
-        {
-            this.HandleSpawnTasks();
-            this.HandleDespawnTasks();
         }
 
         /// <summary>
@@ -147,7 +131,7 @@ namespace MM26.Board
                     continue;
                 }
 
-                this.CreateCharacter(_playerPrefab, new Vector3Int(position.X, position.Y, 0), character.Name);
+                this.CharactersManager.CreatePlayer(new Vector3Int(position.X, position.Y, 0), character.Name);
             }
 
             foreach (var entry in _data.Initial.State.MonsterNames)
@@ -160,70 +144,7 @@ namespace MM26.Board
                     continue;
                 }
 
-                this.CreateCharacter(_monsterPrefab, new Vector3Int(position.X, position.Y, 0), character.Name);
-            }
-        }
-
-        /// <summary>
-        /// Helper function for creating a player. This function assumes that
-        /// the player is on the board we are currently creating
-        /// </summary>
-        /// <param name="prefab">the prefab to create character from</param>
-        /// <param name="position">the position at which to creat a player</param>
-        /// <param name="name">the name of the player</param>
-        private void CreateCharacter(GameObject prefab, Vector3Int position, string name)
-        {
-            Vector3 wordPosition = _tilemap.GetCellCenterWorld(position);
-
-            GameObject player = Instantiate(prefab, wordPosition, new Quaternion());
-
-            // Initialize player
-            player.name = name;
-
-            Hub hub = player.GetComponent<Hub>();
-            hub.NameLabel.text = name;
-            hub.HealthLabel.text = "";
-        }
-
-        /// <summary>
-        /// Helper function to handle spawn tasks
-        ///
-        /// 
-        /// </summary>
-        private void HandleSpawnTasks()
-        {
-            Task[] tasks = _mailbox.GetSubscribedTasksForType<SpawnTask>(this);
-
-            for (int i = 0; i < tasks.Length; i++)
-            {
-                SpawnTask task = tasks[i] as SpawnTask;
-
-                this.CreateCharacter(_playerPrefab, task.Position, task.EntityName);
-
-                task.IsFinished = true;
-                _mailbox.RemoveTask(task);
-            }
-        }
-
-        /// <summary>
-        /// Helper function to handle despawn tasks
-        /// 
-        /// <b>Noe that this is called once per frame</b>
-        /// </summary>
-        private void HandleDespawnTasks()
-        {
-            Task[] tasks = _mailbox.GetSubscribedTasksForType<DespawnTask>(this);
-
-            for (int i = 0; i < tasks.Length; i++)
-            {
-                DespawnTask task = tasks[i] as DespawnTask;
-
-                // FIXME: might cause performance issue (this is on a hot path)
-                GameObject entity = GameObject.Find(task.EntityName);
-                GameObject.Destroy(entity);
-
-                task.IsFinished = true;
-                _mailbox.RemoveTask(task);
+                this.CharactersManager.CreateMonster(new Vector3Int(position.X, position.Y, 0), character.Name);
             }
         }
     }

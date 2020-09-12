@@ -41,13 +41,11 @@ namespace MM26.Play
 
         private void OnEnable()
         {
-            Debug.Log("on enable");
             SceneLifeCycle.Play.AddListener(this.DispatchTasks);
         }
 
         private void OnDisable()
         {
-            Debug.Log("on disable");
             SceneLifeCycle.Play.RemoveListener(this.DispatchTasks);
         }
 
@@ -60,7 +58,7 @@ namespace MM26.Play
         {
             while (Data.Turns.Count > 0)
             {
-                TaskManager.AddTasksBatch(
+                this.TaskManager.AddTasksBatch(
                     Director.GetTasksBatch(
                         Data.Turns.Dequeue(),
                         this.SceneConfiguration,
