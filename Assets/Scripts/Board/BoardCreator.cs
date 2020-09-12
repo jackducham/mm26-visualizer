@@ -192,9 +192,9 @@ namespace MM26.Board
         /// </summary>
         private void HandleSpawnTasks()
         {
-            ReadOnlyCollection<Task> tasks = _mailbox.GetSubscribedTasksForType<SpawnTask>(this);
+            Task[] tasks = _mailbox.GetSubscribedTasksForType<SpawnTask>(this);
 
-            for (int i = 0; i < tasks.Count; i++)
+            for (int i = 0; i < tasks.Length; i++)
             {
                 SpawnTask task = tasks[i] as SpawnTask;
 
@@ -212,9 +212,9 @@ namespace MM26.Board
         /// </summary>
         private void HandleDespawnTasks()
         {
-            ReadOnlyCollection<Task> tasks = _mailbox.GetSubscribedTasksForType<DespawnTask>(this);
+            Task[] tasks = _mailbox.GetSubscribedTasksForType<DespawnTask>(this);
 
-            for (int i = 0; i < tasks.Count; i++)
+            for (int i = 0; i < tasks.Length; i++)
             {
                 DespawnTask task = tasks[i] as DespawnTask;
 

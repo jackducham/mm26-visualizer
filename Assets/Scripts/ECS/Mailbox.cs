@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
+using System.Linq;
 using UnityEngine;
 
 namespace MM26.ECS
@@ -20,7 +20,7 @@ namespace MM26.ECS
         /// <summary>
         /// Tasks grouped by their identifiers
         /// </summary>
-        private Dictionary<string, List<Task>> _tasks = null;
+        private Dictionary<string, HashSet<Task>> _tasks = null;
 
         private void OnEnable()
         {
@@ -33,7 +33,7 @@ namespace MM26.ECS
         public void Reset()
         {
             _subscriptionMapping = new Dictionary<object, HashSet<string>>();
-            _tasks = new Dictionary<string, List<Task>>();
+            _tasks = new Dictionary<string, HashSet<Task>>();
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace MM26.ECS
 
             if (!_tasks.ContainsKey(taskType))
             {
-                _tasks[taskType] = new List<Task>();
+                _tasks[taskType] = new HashSet<Task>();
             }
         }
 
@@ -63,9 +63,9 @@ namespace MM26.ECS
         {
             string taskName = task.GetType().Name;
 
-            if (!_tasks.TryGetValue(taskName, out List<Task> tasks))
+            if (!_tasks.TryGetValue(taskName, out HashSet<Task> tasks))
             {
-                tasks = new List<Task>();
+                tasks = new HashSet<Task>();
                 _tasks[taskName] = tasks;
             }
 
@@ -78,9 +78,9 @@ namespace MM26.ECS
         /// <param name="o">the subscriber object</param>
         /// <typeparam name="T">the task type</typeparam>
         /// <returns></returns>
-        public ReadOnlyCollection<Task> GetSubscribedTasksForType<T>(object o) where T : Task
+        public Task[] GetSubscribedTasksForType<T>(object o) where T : Task
         {
-            List<Task> tasks = null;
+            HashSet<Task> tasks = null;
 
             string msgType = typeof(T).Name;
 
@@ -97,15 +97,13 @@ namespace MM26.ECS
                 Debug.LogErrorFormat("The object has not subscribed to messages of {0}", msgType);
             }
 
-            return tasks.AsReadOnly();
+            return tasks.ToArray();
         }
 
         public void RemoveTask(Task msg)
         {
             string taskName = msg.GetType().Name;
-
-            // Remove from mailbox
-            _tasks[taskName].RemoveAll(m => m != null && m.GetId() == msg.GetId());
+            _tasks[taskName].Remove(msg);
         }
 
         public void Update()
