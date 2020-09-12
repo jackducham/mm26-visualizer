@@ -7,6 +7,7 @@ using MM26.IO.Models;
 namespace MM26.Tests
 {
     using PPlayer = MM26.IO.Models.Player;
+    using PMonster = MM26.IO.Models.Monster;
     using PCharacter = MM26.IO.Models.Character;
     using PPosition = MM26.IO.Models.Position;
 
@@ -67,7 +68,7 @@ namespace MM26.Tests
         {
             GameState state = new GameState();
             this.ConvertBoard(state, testState);
-            this.ConvertPlayers(state, testState);
+            this.ConvertCharacter(state, testState);
 
             return state;
         }
@@ -138,25 +139,48 @@ namespace MM26.Tests
         /// </summary>
         /// <param name="state"></param>
         /// <param name="testState"></param>
-        private void ConvertPlayers(GameState state, TestGameState testState)
+        private void ConvertCharacter(GameState state, TestGameState testState)
         {
-            foreach (var testPlayer in testState.Players)
+            foreach (var testCharacter in testState.Characters)
             {
-                var player = new PPlayer()
+                switch (testCharacter.CharacterType)
                 {
-                    Character = new PCharacter()
-                    {
-                        Name = testPlayer.Name,
-                        Position = new PPosition
+                    case CharacterType.Player:
+                        var player = new PPlayer()
                         {
-                            BoardId = testPlayer.Board,
-                            X = testPlayer.X,
-                            Y = testPlayer.Y
-                        }
-                    }
-                };
+                            Character = new PCharacter()
+                            {
+                                Name = testCharacter.Name,
+                                Position = new PPosition()
+                                {
+                                    BoardId = testCharacter.Board,
+                                    X = testCharacter.X,
+                                    Y = testCharacter.Y
+                                }
+                            }
+                        };
 
-                state.PlayerNames.Add(testPlayer.Name, player);
+                        state.PlayerNames.Add(testCharacter.Name, player);
+                        break;
+                    case CharacterType.Monster:
+                        var monster = new PMonster()
+                        {
+                            Character = new PCharacter()
+                            {
+                                Name = testCharacter.Name,
+                                Position = new PPosition()
+                                {
+                                    BoardId = testCharacter.Board,
+                                    X = testCharacter.X,
+                                    Y = testCharacter.Y
+                                }
+                            }
+                        };
+
+                        state.MonsterNames.Add(testCharacter.Name, monster);
+                        break;
+                }
+                
             }
         }
 

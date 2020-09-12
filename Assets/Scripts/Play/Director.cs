@@ -42,10 +42,7 @@ namespace MM26.Play
 
         private void Update()
         {
-            if (_data.Turns.Count > 0)
-            {
-                this.DispatchTasks();
-            }
+            this.DispatchTasks();
         }
 
         private void DispatchTasks()

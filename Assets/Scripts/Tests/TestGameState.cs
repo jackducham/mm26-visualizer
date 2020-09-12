@@ -33,6 +33,6 @@ namespace MM26.Tests
     public class TestGameState
     {
         public TestBoard Board = null;
-        public TestPlayer[] Players = null;
+        public TestCharacter[] Characters = null;
     }
 }

@@ -31,9 +31,12 @@ namespace MM26.Board
         [SerializeField]
         private Tile _blankTile = null;
 
-        [Header("Players")]
+        [Header("Prefabs")]
         [SerializeField]
         private GameObject _playerPrefab = null;
+
+        [SerializeField]
+        private GameObject _monsterPrefab = null;
 
         [Header("Scene Specific")]
         [SerializeField]
@@ -81,7 +84,7 @@ namespace MM26.Board
         private void OnCreateMap()
         {
             this.CreateMap();
-            this.CreatePlayers();
+            this.CreateCharacters();
 
             _positionLookUp.Tilemap = _tilemap;
 
@@ -132,19 +135,32 @@ namespace MM26.Board
         /// <summary>
         /// Helper function for creating players
         /// </summary>
-        private void CreatePlayers()
+        private void CreateCharacters()
         {
             foreach (var entry in _data.Initial.State.PlayerNames)
             {
-                PCharacter playerCharacter = entry.Value.Character;
-                PPosition position = playerCharacter.Position;
+                PCharacter character = entry.Value.Character;
+                PPosition position = character.Position;
 
                 if (position.BoardId != _sceneConfiguration.BoardName)
                 {
                     continue;
                 }
 
-                this.CreatePlayer(new Vector3Int(position.X, position.Y, 0), playerCharacter.Name);
+                this.CreateCharacter(_playerPrefab, new Vector3Int(position.X, position.Y, 0), character.Name);
+            }
+
+            foreach (var entry in _data.Initial.State.MonsterNames)
+            {
+                PCharacter character = entry.Value.Character;
+                PPosition position = character.Position;
+
+                if (position.BoardId != _sceneConfiguration.BoardName)
+                {
+                    continue;
+                }
+
+                this.CreateCharacter(_monsterPrefab, new Vector3Int(position.X, position.Y, 0), character.Name);
             }
         }
 
@@ -152,13 +168,14 @@ namespace MM26.Board
         /// Helper function for creating a player. This function assumes that
         /// the player is on the board we are currently creating
         /// </summary>
+        /// <param name="prefab">the prefab to create character from</param>
         /// <param name="position">the position at which to creat a player</param>
         /// <param name="name">the name of the player</param>
-        private void CreatePlayer(Vector3Int position, string name)
+        private void CreateCharacter(GameObject prefab, Vector3Int position, string name)
         {
             Vector3 wordPosition = _tilemap.GetCellCenterWorld(position);
 
-            GameObject player = Instantiate(_playerPrefab, wordPosition, new Quaternion());
+            GameObject player = Instantiate(prefab, wordPosition, new Quaternion());
 
             // Initialize player
             player.name = name;
@@ -166,6 +183,8 @@ namespace MM26.Board
             Hub hub = player.GetComponent<Hub>();
             hub.NameLabel.text = name;
             hub.HealthLabel.text = "";
+
+            Debug.LogFormat("create character with name {0}", name);
         }
 
         /// <summary>
@@ -181,7 +200,7 @@ namespace MM26.Board
             {
                 SpawnTask task = tasks[i] as SpawnTask;
 
-                this.CreatePlayer(task.Position, task.EntityName);
+                this.CreateCharacter(_playerPrefab, task.Position, task.EntityName);
 
                 task.IsFinished = true;
                 _mailbox.RemoveTask(task);

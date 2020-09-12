@@ -47,7 +47,9 @@ MonoBehaviour:
   _portalTile: {fileID: 11400000, guid: 51a8ca4ed3d6b5f4d8c589774dd4ca7f, type: 2}
   _impassibleTile: {fileID: 11400000, guid: 3e2316ae3f147cb4db70fe5e469e9d61, type: 2}
   _blankTile: {fileID: 11400000, guid: 0cdfd82edbbc0384b98ce2ef5ff43205, type: 2}
-  _playerPrefab: {fileID: 1555258926759968227, guid: 78cd5a4a07e6b41e6ad1766186234769,
+  _playerPrefab: {fileID: 4388124594191054825, guid: bf99f79fcedf041d38dc32b70e9e8d85,
+    type: 3}
+  _monsterPrefab: {fileID: 1555258926759968227, guid: 78cd5a4a07e6b41e6ad1766186234769,
     type: 3}
   _sceneConfiguration: {fileID: 0}
   _sceneLifeCycle: {fileID: 11400000, guid: e5a30a7b0ac1e4833a29854a0f787d12, type: 2}
