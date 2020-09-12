@@ -1,9 +1,7 @@
-﻿using UnityEngine;
-using Unity.Entities;
+﻿using Unity.Entities;
 using MM26.Components;
-using MM26.Tasks;
 
-namespace MM26.Systems.Movement
+namespace MM26.Systems.MovementTask
 {
     [UpdateInGroup(typeof(TaskCheckingSystemGroup))]
     public class MovementTaskCheckingSystem : SystemBase
@@ -25,15 +23,18 @@ namespace MM26.Systems.Movement
 
             this.Entities
                 .WithoutBurst()
-                .ForEach((Entity entity, Components.Movement movement, Moving moving) =>
+                .ForEach((Entity entity, Character character, FollowPath followPath) =>
                 {
-                    if (_translationSystem.RunningTasks.TryGetValue(movement.name, out MovementTask task))
+                    if (_translationSystem.RunningTasks.TryGetValue(character.name, out Tasks.MovementTask task))
                     {
-                        if (movement.Progress == task.Path.Length)
+                        if (followPath.Progress == task.Path.Length)
                         {
                             task.IsFinished = true;
-                            ecb.RemoveComponent<Moving>(entity);
-                            _translationSystem.RunningTasks.Remove(movement.name);
+
+                            ecb.RemoveComponent<FollowPath>(entity);
+                            ecb.RemoveComponent<PathElement>(entity);
+
+                            _translationSystem.RunningTasks.Remove(character.name);
                         }
                     }
                 })

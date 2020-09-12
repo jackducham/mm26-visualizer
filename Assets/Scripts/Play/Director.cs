@@ -62,7 +62,7 @@ namespace MM26.Play
                 {
                     string entity = pair.Key;
 
-                    Character character = null;
+                    IO.Models.Character character = null;
 
                     if (gameState.PlayerNames.ContainsKey(entity))
                     {
