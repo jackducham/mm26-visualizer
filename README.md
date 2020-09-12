@@ -12,6 +12,7 @@
 - Andy Song
 - Aditya Bawankule
 - Andrew Chao
+- Andrew Lin
 
 ## Artists
 
