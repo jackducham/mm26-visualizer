@@ -1,15 +1,23 @@
 {
     "name": "MM26.Play.Tests",
     "references": [
-        "UnityEngine.TestRunner",
-        "UnityEditor.TestRunner"
+        "GUID:27619889b8ba8c24980f49ee34dbb44a",
+        "GUID:0acc523941302664db1f4e527237feb3",
+        "GUID:d7fbc83d0fb05488fb6c5b4745de6a80",
+        "GUID:8846f451a1bdb45e5b7da7dc52885584",
+        "GUID:fec70e8e90fa342d6b50ce82a72c4418",
+        "GUID:014fc361d318b428f9fdf82a741edb20",
+        "GUID:04ae5952361924aa5aab4233ca5b18e2",
+        "GUID:85b0aad0a5d9b456499d2d70556a1725",
+        "GUID:5ced322760b1f4ebdaaa968ecd6694d1"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
     "precompiledReferences": [
-        "nunit.framework.dll"
+        "nunit.framework.dll",
+        "Google.Protobuf.dll"
     ],
     "autoReferenced": false,
     "defineConstraints": [

@@ -1,11 +1,15 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Google.Protobuf.Collections;
 using MM26.ECS;
 using MM26.IO;
 using MM26.IO.Models;
 using MM26.Tasks;
 using MM26.Board;
+
+[assembly:InternalsVisibleTo("MM26.Play.Tests")]
 
 namespace MM26.Play
 {
@@ -16,28 +20,33 @@ namespace MM26.Play
     {
         [Header("Scene Essentials")]
         [SerializeField]
-        private SceneLifeCycle _sceneLifeCycle = null;
+        [FormerlySerializedAs("_sceneLifeCycle")]
+        internal SceneLifeCycle SceneLifeCycle = null;
 
         [SerializeField]
-        private MM26.IO.Data _data = null;
+        [FormerlySerializedAs("_data")]
+        internal MM26.IO.Data Data = null;
 
         [SerializeField]
-        private BoardPositionLookUp _positionLookUp = null;
+        [FormerlySerializedAs("_positionLookUp")]
+        internal BoardPositionLookUp PositionLookUp = null;
 
         [SerializeField]
-        private TasksManager _taskManager = null;
+        [FormerlySerializedAs("_taskManager")]
+        internal TasksManager TaskManager = null;
 
         [SerializeField]
-        private SceneConfiguration _sceneConfiguration = null;
+        [FormerlySerializedAs("_sceneConfiguration")]
+        internal SceneConfiguration SceneConfiguration = null;
 
         private void OnEnable()
         {
-            _sceneLifeCycle.Play.AddListener(this.DispatchTasks);
+            SceneLifeCycle.Play.AddListener(this.DispatchTasks);
         }
 
         private void OnDisable()
         {
-            _sceneLifeCycle.Play.RemoveListener(this.DispatchTasks);
+            SceneLifeCycle.Play.RemoveListener(this.DispatchTasks);
         }
 
         private void Update()
@@ -45,11 +54,11 @@ namespace MM26.Play
             this.DispatchTasks();
         }
 
-        private void DispatchTasks()
+        internal void DispatchTasks()
         {
-            while (_data.Turns.Count > 0)
+            while (Data.Turns.Count > 0)
             {
-                VisualizerTurn turn = _data.Turns.Dequeue();
+                VisualizerTurn turn = Data.Turns.Dequeue();
                 GameChange gameChange = turn.Change;
                 GameState gameState = turn.State;
 
@@ -77,7 +86,7 @@ namespace MM26.Play
                     }
 
                     // skip entities not on this board
-                    if (character.Position.BoardId != _sceneConfiguration.BoardName)
+                    if (character.Position.BoardId != SceneConfiguration.BoardName)
                     {
                         continue;
                     }
@@ -104,7 +113,7 @@ namespace MM26.Play
                     }
                 }
 
-                _taskManager.AddTasksBatch(batch);
+                TaskManager.AddTasksBatch(batch);
             }
         }
 
@@ -115,7 +124,7 @@ namespace MM26.Play
             for (int i = 0; i < path.Count; i++)
             {
                 Position position = path[i];
-                newPath[i] = _positionLookUp.Translate(
+                newPath[i] = PositionLookUp.Translate(
                     new Vector3Int(position.X, position.Y, 0));
             }
 

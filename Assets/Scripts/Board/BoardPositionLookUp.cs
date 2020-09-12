@@ -16,7 +16,7 @@ namespace MM26.Board
         /// </summary>
         /// <param name="position">tilemap position</param>
         /// <returns>game position</returns>
-        public Vector3 Translate(Vector3Int position)
+        public virtual Vector3 Translate(Vector3Int position)
         {
             return this.Tilemap.GetCellCenterWorld(position);
         }
