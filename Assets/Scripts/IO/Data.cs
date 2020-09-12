@@ -5,16 +5,28 @@ using MM26.IO.Models;
 
 namespace MM26.IO
 {
+    public struct Turn
+    {
+        public readonly GameState State;
+        public readonly GameChange Change;
+
+        public Turn(GameState state, GameChange change)
+        {
+            this.State = state;
+            this.Change = change;
+        }
+    }
+
     [CreateAssetMenu(menuName = "IO/Data", fileName = "Data")]
     public class Data : ScriptableObject
     {
-        public GameState GameState { get; set; }
-        public List<GameChange> GameChanges { get; private set; } = new List<GameChange>();
+        public GameState InitialState { get; set; }
+        public Queue<Turn> Turns { get; private set; } = new Queue<Turn>();
 
         public void Reset()
         {
-            this.GameState = null;
-            this.GameChanges = new List<GameChange>();
+            this.InitialState = null;
+            this.Turns = new Queue<Turn>();
         }
     }
 }

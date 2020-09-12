@@ -2,6 +2,7 @@
 using UnityEngine;
 using Google.Protobuf.Collections;
 using MM26.ECS;
+using MM26.IO;
 using MM26.IO.Models;
 using MM26.Tasks;
 using MM26.Board;
@@ -40,7 +41,7 @@ namespace MM26.Play
 
         private void Update()
         {
-            if (_nextChangeIndex < _data.GameChanges.Count)
+            if (_data.Turns.Count > 0)
             {
                 this.DispatchTasks();
             }
@@ -48,9 +49,10 @@ namespace MM26.Play
 
         private void DispatchTasks()
         {
-            for (; _nextChangeIndex < _data.GameChanges.Count; _nextChangeIndex++)
+            while (_data.Turns.Count > 0)
             {
-                GameChange gameChange = _data.GameChanges[_nextChangeIndex];
+                Turn turn = _data.Turns.Dequeue();
+                GameChange gameChange = turn.Change;
                 TasksBatch batch = new TasksBatch();
 
                 foreach (var pair in gameChange.CharacterStatChanges)

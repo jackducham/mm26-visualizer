@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Serialization;
 using Google.Protobuf.Collections;
+using MM26.IO;
 using MM26.IO.Models;
 
 namespace MM26.Tests
@@ -36,31 +37,88 @@ namespace MM26.Tests
             _sceneLifeCycle.FetchData.RemoveListener(this.OnFetchData);
         }
 
+        /// <summary>
+        /// Event handler for fetching data
+        /// </summary>
         private void OnFetchData()
         {
-            this.FetchState();
-            this.FetchChange();
+            _data.InitialState = this.GetState(_testData.InitialState);
+
+            for (int i = 0; i < _testData.Turns.Length; i++)
+            {
+                TestGameTurn testTurn = _testData.Turns[i];
+                Turn turn = new Turn(this.GetState(testTurn.State), this.GetChange(testTurn.Change));
+
+                _data.Turns.Enqueue(turn);
+            }
+
             _sceneLifeCycle.DataFetched.Invoke();
         }
 
-        private void FetchState()
+        /// <summary>
+        /// Translate from test state to state
+        /// </summary>
+        /// <param name="testState"></param>
+        /// <returns></returns>
+        private GameState GetState(TestGameState testState)
         {
-            var state = new GameState();
+            GameState state = new GameState();
+            this.ConvertBoard(state, testState);
+            this.ConvertPlayers(state, testState);
 
-            this.FetchBoard(state);
-            this.FetchPlayers(state);
-
-            _data.GameState = state;
+            return state;
         }
 
-        private void FetchBoard(GameState state)
+        /// <summary>
+        /// Translate from test change to change
+        /// </summary>
+        /// <param name="testChange"></param>
+        /// <returns></returns>
+        private GameChange GetChange(TestGameChange testChange)
+        {
+            var gameChange = new GameChange();
+
+            foreach (TestCharacterChange testCharacterChange in testChange.CharacterChanges)
+            {
+                var characterChange = new CharacterChange();
+                characterChange.Died = testCharacterChange.Died;
+                characterChange.Respawned = testCharacterChange.Respawned;
+
+                if (testCharacterChange.Path != null)
+                {
+                    foreach (var testPosition in testCharacterChange.Path)
+                    {
+                        characterChange.Path.Add(new PPosition()
+                        {
+                            X = testPosition.X,
+                            Y = testPosition.Y,
+                            BoardId = testPosition.BoardID
+                        });
+                    }
+                }
+
+                gameChange.CharacterStatChanges.Add(
+                    testCharacterChange.Entity,
+                    characterChange);
+            }
+
+            return gameChange;
+        }
+
+        /// <summary>
+        /// Helper functions for converting a board in a test state
+        /// to a board in the game state
+        /// </summary>
+        /// <param name="state"></param>
+        /// <param name="testState"></param>
+        private void ConvertBoard(GameState state, TestGameState testState)
         {
             var board = new IO.Models.Board();
 
-            board.Columns = _testData.State.Board.Columns;
-            board.Rows = _testData.State.Board.Rows;
+            board.Columns = testState.Board.Columns;
+            board.Rows = testState.Board.Rows;
 
-            foreach (var tile in _testData.State.Board.Grid)
+            foreach (var tile in testState.Board.Grid)
             {
                 board.Grid.Add(new Tile()
                 {
@@ -68,12 +126,18 @@ namespace MM26.Tests
                 });
             }
 
-            state.BoardNames.Add(_testData.State.Board.Name, board);
+            state.BoardNames.Add(testState.Board.Name, board);
         }
 
-        private void FetchPlayers(GameState state)
+        /// <summary>
+        /// Helper function for converting players in a test state
+        /// to players in the game state
+        /// </summary>
+        /// <param name="state"></param>
+        /// <param name="testState"></param>
+        private void ConvertPlayers(GameState state, TestGameState testState)
         {
-            foreach (var testPlayer in _testData.State.Players)
+            foreach (var testPlayer in testState.Players)
             {
                 var player = new PPlayer()
                 {
@@ -93,38 +157,5 @@ namespace MM26.Tests
             }
         }
 
-        private void FetchChange()
-        {
-            foreach (TestGameChange testChange in _testData.Changes)
-            {
-                var gameChange = new GameChange();
-
-                foreach (TestCharacterChange testCharacterChange in testChange.CharacterChanges)
-                {
-                    var characterChange = new CharacterChange();
-                    characterChange.Died = testCharacterChange.Died;
-                    characterChange.Respawned = testCharacterChange.Respawned;
-
-                    if (testCharacterChange.Path != null)
-                    {
-                        foreach (var testPosition in testCharacterChange.Path)
-                        {
-                            characterChange.Path.Add(new PPosition()
-                            {
-                                X = testPosition.X,
-                                Y = testPosition.Y,
-                                BoardId = testPosition.BoardID
-                            });
-                        }
-                    }
-
-                    gameChange.CharacterStatChanges.Add(
-                        testCharacterChange.Entity,
-                        characterChange);
-                }
-
-                _data.GameChanges.Add(gameChange);
-            }
-        }
     }
 }

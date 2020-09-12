@@ -56,14 +56,14 @@ namespace MM26.IO
 
         private void OnMessage(object sender, byte[] message)
         {
-            if (_data.GameState == null)
+            if (_data.InitialState == null)
             {
-                _data.GameState = GameState.Parser.ParseFrom(message);
+                _data.InitialState = GameState.Parser.ParseFrom(message);
                 _sceneLifeCycle.DataFetched.Invoke();
             }
             else
             {
-                _data.GameChanges.Add(GameChange.Parser.ParseFrom(message));
+                _data.Turns.Enqueue(new Turn(null, GameChange.Parser.ParseFrom(message)));
             }
 
             // Please preserve this log message for diagnostic purpose

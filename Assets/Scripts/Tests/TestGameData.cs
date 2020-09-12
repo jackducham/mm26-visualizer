@@ -9,7 +9,7 @@ namespace MM26.Tests
     [CreateAssetMenu(fileName = "Data", menuName = "Tests/Test Data")]
     public class TestGameData : ScriptableObject
     {
-        public TestGameState State = null;
-        public TestGameChange[] Changes = null;
+        public TestGameState InitialState = null;
+        public TestGameTurn[] Turns = null;
     }
 }

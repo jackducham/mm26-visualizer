@@ -93,7 +93,7 @@ namespace MM26.Board
         /// </summary>
         private void CreateMap()
         {
-            var board = _data.GameState.BoardNames[_sceneConfiguration.BoardName];
+            var board = _data.InitialState.BoardNames[_sceneConfiguration.BoardName];
 
             for (int y = 0; y < board.Rows; y++)
             {
@@ -134,7 +134,7 @@ namespace MM26.Board
         /// </summary>
         private void CreatePlayers()
         {
-            foreach (var entry in _data.GameState.PlayerNames)
+            foreach (var entry in _data.InitialState.PlayerNames)
             {
                 PCharacter playerCharacter = entry.Value.Character;
                 PPosition position = playerCharacter.Position;
