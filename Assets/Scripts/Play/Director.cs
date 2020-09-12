@@ -27,8 +27,6 @@ namespace MM26.Play
         [SerializeField]
         private TasksManager _taskManager = null;
 
-        private int _nextChangeIndex = 0;
-
         private void OnEnable()
         {
             _sceneLifeCycle.Play.AddListener(this.DispatchTasks);
@@ -67,13 +65,14 @@ namespace MM26.Play
                     }
                     else if (characterChange.Respawned)
                     {
+                        //batch.Add(new SpawnTask)
                         throw new NotImplementedException("Respawned not handled in Director");
                     }
-
-                    batch.Add(
-                        new MovementTask(
-                            entity,
-                            this.GetPath(characterChange.Path)));
+                    else
+                    {
+                        Vector3[] path = this.GetPath(characterChange.Path);
+                        batch.Add(new MovementTask(entity, path));
+                    }
                 }
 
                 _taskManager.AddTasksBatch(batch);
