@@ -27,5 +27,121 @@ MonoBehaviour:
       - TileType: 0
       - TileType: 0
       - TileType: 0
-    Characters: []
-  Turns: []
+    Characters:
+    - Name: Player A
+      CharacterType: 0
+      Board: pvp
+      X: 0
+      Y: 0
+    - Name: Monster A
+      CharacterType: 1
+      Board: pvp
+      X: 2
+      Y: 2
+    - Name: Player B
+      CharacterType: 0
+      Board: other
+      X: 0
+      Y: 0
+    - Name: Monster B
+      CharacterType: 1
+      Board: other
+      X: 2
+      Y: 2
+  Turns:
+  - State:
+      Board:
+        Name: pvp
+        Columns: 3
+        Rows: 3
+        Grid:
+        - TileType: 0
+        - TileType: 0
+        - TileType: 0
+        - TileType: 0
+        - TileType: 0
+        - TileType: 0
+        - TileType: 0
+        - TileType: 0
+        - TileType: 0
+      Characters:
+      - Name: Player A
+        CharacterType: 0
+        Board: pvp
+        X: 2
+        Y: 2
+      - Name: Monster A
+        CharacterType: 1
+        Board: pvp
+        X: 0
+        Y: 0
+      - Name: Player B
+        CharacterType: 0
+        Board: other
+        X: 2
+        Y: 2
+      - Name: Monster B
+        CharacterType: 0
+        Board: other
+        X: 0
+        Y: 0
+    Change:
+      CharacterChanges:
+      - Entity: Player A
+        Died: 0
+        Respawned: 0
+        Path:
+        - X: 0
+          Y: 0
+          BoardID: pvp
+        - X: 0
+          Y: 1
+          BoardID: pvp
+        - X: 0
+          Y: 2
+          BoardID: pvp
+        - X: 1
+          Y: 2
+          BoardID: pvp
+        - X: 2
+          Y: 2
+          BoardID: pvp
+      - Entity: Monster A
+        Died: 0
+        Respawned: 0
+        Path:
+        - X: 2
+          Y: 2
+          BoardID: pvp
+        - X: 2
+          Y: 1
+          BoardID: pvp
+        - X: 2
+          Y: 0
+          BoardID: pvp
+        - X: 1
+          Y: 0
+          BoardID: pvp
+        - X: 0
+          Y: 0
+          BoardID: pvp
+      - Entity: Player B
+        Died: 0
+        Respawned: 0
+        Path:
+        - X: 0
+          Y: 0
+          BoardID: other
+        - X: 2
+          Y: 2
+          BoardID: other
+      - Entity: Monster B
+        Died: 0
+        Respawned: 0
+        Path:
+        - X: 2
+          Y: 2
+          BoardID: other
+        - X: 0
+          Y: 0
+          BoardID: other

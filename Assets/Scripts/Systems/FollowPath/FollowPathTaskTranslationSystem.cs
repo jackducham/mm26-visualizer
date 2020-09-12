@@ -5,16 +5,16 @@ using Unity.Entities;
 using MM26.Components;
 using MM26.ECS;
 
-namespace MM26.Systems.MovementTask
+namespace MM26.Systems.FollowPathTask
 {
-    [UpdateInGroup(typeof(TaskConversionSystemGroup))]
-    public class MovementTaskTranslationSystem : SystemBase
+    [UpdateInGroup(typeof(TaskTranslationSystemGroup))]
+    public class FolowPathTaskTranslationSystem : SystemBase
     {
-        public Dictionary<string, Tasks.MovementTask> RunningTasks { get; private set; }
+        public Dictionary<string, Tasks.FollowPathTask> RunningTasks { get; private set; }
 
         EntityCommandBufferSystem _ecbSystem;
         Mailbox _mailbox = null;
-        Dictionary<string, Tasks.MovementTask> _tasksToBeScheduled;
+        Dictionary<string, Tasks.FollowPathTask> _tasksToBeScheduled;
 
         protected override void OnCreate()
         {
@@ -24,20 +24,20 @@ namespace MM26.Systems.MovementTask
                 .GetOrCreateSystem<EndSimulationEntityCommandBufferSystem>();
 
             _mailbox = Resources.Load<Mailbox>("Objects/Mailbox");
-            _mailbox.SubscribeToTaskType<Tasks.MovementTask>(this);
+            _mailbox.SubscribeToTaskType<Tasks.FollowPathTask>(this);
 
-            _tasksToBeScheduled = new Dictionary<string, Tasks.MovementTask>();
-            this.RunningTasks = new Dictionary<string, Tasks.MovementTask>();
+            _tasksToBeScheduled = new Dictionary<string, Tasks.FollowPathTask>();
+            this.RunningTasks = new Dictionary<string, Tasks.FollowPathTask>();
         }
 
         protected override void OnUpdate()
         {
-            ReadOnlyCollection<Task> tasks = _mailbox.GetSubscribedTasksForType<Tasks.MovementTask>(this);
+            ReadOnlyCollection<Task> tasks = _mailbox.GetSubscribedTasksForType<Tasks.FollowPathTask>(this);
 
 
             for (int i = 0; i < tasks.Count; i++)
             {
-                Tasks.MovementTask movementTask = tasks[i] as Tasks.MovementTask;
+                Tasks.FollowPathTask movementTask = tasks[i] as Tasks.FollowPathTask;
                 _tasksToBeScheduled[movementTask.EntityName] = movementTask;
                 _mailbox.RemoveTask(movementTask);
             }
@@ -59,7 +59,7 @@ namespace MM26.Systems.MovementTask
                 .WithoutBurst()
                 .ForEach((Entity entity, Character character) =>
                 {
-                    if (_tasksToBeScheduled.TryGetValue(character.name, out Tasks.MovementTask task))
+                    if (_tasksToBeScheduled.TryGetValue(character.name, out Tasks.FollowPathTask task))
                     {
                         FollowPath followPath = new FollowPath()
                         {

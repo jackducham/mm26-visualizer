@@ -183,8 +183,6 @@ namespace MM26.Board
             Hub hub = player.GetComponent<Hub>();
             hub.NameLabel.text = name;
             hub.HealthLabel.text = "";
-
-            Debug.LogFormat("create character with name {0}", name);
         }
 
         /// <summary>

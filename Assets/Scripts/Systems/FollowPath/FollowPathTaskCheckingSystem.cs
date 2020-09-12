@@ -1,20 +1,20 @@
 ﻿using Unity.Entities;
 using MM26.Components;
 
-namespace MM26.Systems.MovementTask
+namespace MM26.Systems.FollowPathTask
 {
     [UpdateInGroup(typeof(TaskCheckingSystemGroup))]
-    public class MovementTaskCheckingSystem : SystemBase
+    public class FollowPathTaskCheckingSystem : SystemBase
     {
         EntityCommandBufferSystem _ecbSystem;
-        MovementTaskTranslationSystem _translationSystem;
+        FolowPathTaskTranslationSystem _translationSystem;
 
         protected override void OnCreate()
         {
             base.OnCreate();
 
             _ecbSystem = World.GetOrCreateSystem<EndSimulationEntityCommandBufferSystem>();
-            _translationSystem = World.GetOrCreateSystem<MovementTaskTranslationSystem>();
+            _translationSystem = World.GetOrCreateSystem<FolowPathTaskTranslationSystem>();
         }
 
         protected override void OnUpdate()
@@ -25,7 +25,7 @@ namespace MM26.Systems.MovementTask
                 .WithoutBurst()
                 .ForEach((Entity entity, Character character, FollowPath followPath) =>
                 {
-                    if (_translationSystem.RunningTasks.TryGetValue(character.name, out Tasks.MovementTask task))
+                    if (_translationSystem.RunningTasks.TryGetValue(character.name, out Tasks.FollowPathTask task))
                     {
                         if (followPath.Progress == task.Path.Length)
                         {

@@ -100,7 +100,7 @@ namespace MM26.Play
                     else
                     {
                         Vector3[] path = this.GetPath(characterChange.Path);
-                        batch.Add(new MovementTask(entity, path));
+                        batch.Add(new FollowPathTask(entity, path));
                     }
                 }
 
