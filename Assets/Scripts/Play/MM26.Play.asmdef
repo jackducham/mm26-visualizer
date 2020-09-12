@@ -1,0 +1,20 @@
+{
+    "name": "MM26.Play",
+    "references": [
+        "GUID:fec70e8e90fa342d6b50ce82a72c4418",
+        "GUID:04ae5952361924aa5aab4233ca5b18e2",
+        "GUID:014fc361d318b428f9fdf82a741edb20",
+        "GUID:5ced322760b1f4ebdaaa968ecd6694d1",
+        "GUID:85b0aad0a5d9b456499d2d70556a1725",
+        "GUID:8846f451a1bdb45e5b7da7dc52885584"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

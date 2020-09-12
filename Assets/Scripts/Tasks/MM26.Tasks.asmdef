@@ -1,0 +1,15 @@
+{
+    "name": "MM26.Tasks",
+    "references": [
+        "GUID:fec70e8e90fa342d6b50ce82a72c4418"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

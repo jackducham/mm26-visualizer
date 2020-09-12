@@ -1,0 +1,21 @@
+{
+    "name": "MM26.Board",
+    "references": [
+        "GUID:27dd9a405f5404c938d4baf4334edc0f",
+        "GUID:fec70e8e90fa342d6b50ce82a72c4418",
+        "GUID:014fc361d318b428f9fdf82a741edb20",
+        "GUID:04ae5952361924aa5aab4233ca5b18e2",
+        "GUID:8846f451a1bdb45e5b7da7dc52885584",
+        "GUID:85b0aad0a5d9b456499d2d70556a1725",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,16 @@
+{
+    "name": "MM26.IO",
+    "references": [
+        "GUID:8846f451a1bdb45e5b7da7dc52885584",
+        "GUID:85b0aad0a5d9b456499d2d70556a1725"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
