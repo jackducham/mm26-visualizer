@@ -16,5 +16,5 @@ public abstract class TestScenario
     /// Invoked when the scenario is started
     /// </summary>
     /// <param name="server"></param>
-    public abstract void Start(TestServer server); 
+    public abstract void Start(TestServer server);
 }

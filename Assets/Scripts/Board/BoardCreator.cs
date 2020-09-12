@@ -44,7 +44,7 @@ namespace MM26.Board
 
         [Header("Scene Essentials")]
         [SerializeField]
-        private SceneLifeCycle  _sceneLifeCycle = null;
+        private SceneLifeCycle _sceneLifeCycle = null;
 
         [SerializeField]
         private IO.Data _data = null;

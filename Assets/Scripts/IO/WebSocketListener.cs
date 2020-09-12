@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace MM26.IO
 {
-    public abstract class WebSocketListener: IDisposable
+    public abstract class WebSocketListener : IDisposable
     {
         /// <summary>
         /// Called when a new message has been received. May run on a
@@ -29,7 +29,7 @@ namespace MM26.IO
     }
 
 #if UNITY_STANDALONE
-    public sealed class StandaloneWebSocketListener: WebSocketListener
+    public sealed class StandaloneWebSocketListener : WebSocketListener
     {
         bool _idle = true;
         ClientWebSocket _client = new ClientWebSocket();

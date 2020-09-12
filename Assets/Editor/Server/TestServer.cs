@@ -47,7 +47,7 @@ public class TestServer
         Http.Post($"http://localhost:{port}/configure/", configuration);
     }
 
-    public void Add<T>(T change, float delay = 0.0f) where T: IMessage<T>
+    public void Add<T>(T change, float delay = 0.0f) where T : IMessage<T>
     {
         _changes.Add(new Change()
         {
@@ -56,7 +56,7 @@ public class TestServer
         });
     }
 
-    public void SetState<T>(T state) where T: IMessage<T>
+    public void SetState<T>(T state) where T : IMessage<T>
     {
         _state = state.ToByteArray();
     }

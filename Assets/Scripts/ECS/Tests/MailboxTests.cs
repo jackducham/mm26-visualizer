@@ -9,7 +9,7 @@ namespace MM26.ECS.Tests
 {
     public class MailboxTests
     {
-        private class PositionTask: Task
+        private class PositionTask : Task
         {
             public PositionTask(string entity) : base(entity)
             {

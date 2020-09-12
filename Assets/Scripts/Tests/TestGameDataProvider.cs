@@ -180,7 +180,7 @@ namespace MM26.Tests
                         state.MonsterNames.Add(testCharacter.Name, monster);
                         break;
                 }
-                
+
             }
         }
 
