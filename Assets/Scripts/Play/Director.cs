@@ -41,11 +41,13 @@ namespace MM26.Play
 
         private void OnEnable()
         {
+            Debug.Log("on enable");
             SceneLifeCycle.Play.AddListener(this.DispatchTasks);
         }
 
         private void OnDisable()
         {
+            Debug.Log("on disable");
             SceneLifeCycle.Play.RemoveListener(this.DispatchTasks);
         }
 
@@ -54,77 +56,88 @@ namespace MM26.Play
             this.DispatchTasks();
         }
 
-        internal void DispatchTasks()
+        private void DispatchTasks()
         {
             while (Data.Turns.Count > 0)
             {
-                VisualizerTurn turn = Data.Turns.Dequeue();
-                GameChange gameChange = turn.Change;
-                GameState gameState = turn.State;
-
-                TasksBatch batch = new TasksBatch();
-
-                foreach (var pair in gameChange.CharacterStatChanges)
-                {
-                    string entity = pair.Key;
-
-                    IO.Models.Character character = null;
-
-                    if (gameState.PlayerNames.ContainsKey(entity))
-                    {
-                        // if the entity is a player
-                        character = gameState.PlayerNames[entity].Character;
-                    }
-                    else if (gameState.MonsterNames.ContainsKey(entity))
-                    {
-                        // if the entity is a monster
-                        character = gameState.MonsterNames[entity].Character;
-                    }
-                    else
-                    {
-                        throw new Exception($"Don't know how to handle entity {entity}");
-                    }
-
-                    // skip entities not on this board
-                    if (character.Position.BoardId != SceneConfiguration.BoardName)
-                    {
-                        continue;
-                    }
-
-                    CharacterChange characterChange = pair.Value;
-
-                    if (characterChange.Died)
-                    {
-                        batch.Add(new DespawnTask(entity));
-                        continue;
-                    }
-                    else if (characterChange.Respawned)
-                    {
-                        batch.Add(new SpawnTask(entity, new Vector3Int(character.Position.X, character.Position.Y, 0)));
-                    }
-                    else if (characterChange.DecisionType == DecisionType.Portal)
-                    {
-                        batch.Add(new SpawnTask(entity, new Vector3Int(character.Position.X, character.Position.Y, 0)));
-                    }
-                    else
-                    {
-                        Vector3[] path = this.GetPath(characterChange.Path);
-                        batch.Add(new FollowPathTask(entity, path));
-                    }
-                }
-
-                TaskManager.AddTasksBatch(batch);
+                TaskManager.AddTasksBatch(
+                    Director.GetTasksBatch(
+                        Data.Turns.Dequeue(),
+                        this.SceneConfiguration,
+                        this.PositionLookUp));
             }
         }
 
-        private Vector3[] GetPath(RepeatedField<Position> path)
+        internal static TasksBatch GetTasksBatch(
+            VisualizerTurn turn,
+            SceneConfiguration sceneConfiguration,
+            BoardPositionLookUp boardPositionLookUp)
+        {
+            GameChange gameChange = turn.Change;
+            GameState gameState = turn.State;
+
+            TasksBatch batch = new TasksBatch();
+
+            foreach (var pair in gameChange.CharacterStatChanges)
+            {
+                string entity = pair.Key;
+
+                IO.Models.Character character = null;
+
+                if (gameState.PlayerNames.ContainsKey(entity))
+                {
+                    // if the entity is a player
+                    character = gameState.PlayerNames[entity].Character;
+                }
+                else if (gameState.MonsterNames.ContainsKey(entity))
+                {
+                    // if the entity is a monster
+                    character = gameState.MonsterNames[entity].Character;
+                }
+                else
+                {
+                    throw new Exception($"Don't know how to handle entity {entity}");
+                }
+
+                // skip entities not on this board
+                if (character.Position.BoardId != sceneConfiguration.BoardName)
+                {
+                    continue;
+                }
+
+                CharacterChange characterChange = pair.Value;
+
+                if (characterChange.Died)
+                {
+                    batch.Add(new DespawnTask(entity));
+                    continue;
+                }
+                else if (characterChange.Respawned)
+                {
+                    batch.Add(new SpawnTask(entity, new Vector3Int(character.Position.X, character.Position.Y, 0)));
+                }
+                else if (characterChange.DecisionType == DecisionType.Portal)
+                {
+                    batch.Add(new SpawnTask(entity, new Vector3Int(character.Position.X, character.Position.Y, 0)));
+                }
+                else
+                {
+                    Vector3[] path = Director.GetPath(characterChange.Path, boardPositionLookUp);
+                    batch.Add(new FollowPathTask(entity, path));
+                }
+            }
+
+            return batch;
+        }
+
+        private static Vector3[] GetPath(RepeatedField<Position> path, BoardPositionLookUp boardPositionLookUp)
         {
             Vector3[] newPath = new Vector3[path.Count];
 
             for (int i = 0; i < path.Count; i++)
             {
                 Position position = path[i];
-                newPath[i] = PositionLookUp.Translate(
+                newPath[i] = boardPositionLookUp.Translate(
                     new Vector3Int(position.X, position.Y, 0));
             }
 

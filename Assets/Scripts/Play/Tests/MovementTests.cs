@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using NUnit.Framework;
 using MM26.ECS;
 using MM26.IO;
@@ -7,48 +8,26 @@ using MM26.Tasks;
 
 namespace MM26.Play.Tests
 {
-    public class MockPositionLookUp
+    public class MockPositionLookUp : Board.BoardPositionLookUp
     {
-
+        public override Vector3 Translate(Vector3Int position)
+        {
+            return new Vector3(position.x, position.y, position.z);
+        }
     }
 
     [TestFixture]
     public class MovementTests
     {
         SceneConfiguration _sceneConfiguration = null;
-        SceneLifeCycle _sceneLifeCycle = null;
-
-        TasksManager _taskManager = null;
-        Mailbox _mailbox = null;
-        Data _data = null;
-
-        Director _director;
+        MockPositionLookUp _mockPositionLookup = null;
 
         [SetUp]
         public void PreTest()
         {
             _sceneConfiguration = ScriptableObject.CreateInstance<SceneConfiguration>();
             _sceneConfiguration.BoardName = "test";
-            _sceneLifeCycle = ScriptableObject.CreateInstance<SceneLifeCycle>();
-
-            _taskManager = ScriptableObject.CreateInstance<TasksManager>();
-            _mailbox = ScriptableObject.CreateInstance<Mailbox>();
-            _data = ScriptableObject.CreateInstance<Data>();
-
-            GameObject gameObject = GameObject.CreatePrimitive(PrimitiveType.Quad);
-            Director director = gameObject.AddComponent<Director>();
-
-            _director = director;
-
-            _director.Data = _data;
-            _director.TaskManager = _taskManager;
-            _director.SceneConfiguration = _sceneConfiguration;
-            _director.SceneLifeCycle = _sceneLifeCycle;
-
-            Assert.NotNull(_director.Data);
-            Assert.NotNull(_director.TaskManager);
-            Assert.NotNull(_director.SceneConfiguration);
-            Assert.NotNull(_director.SceneLifeCycle);
+            _mockPositionLookup = ScriptableObject.CreateInstance<MockPositionLookUp>();
         }
 
         [TestCase("test")]
@@ -108,12 +87,8 @@ namespace MM26.Play.Tests
             turn.State = gameState;
             turn.Change = gameChange;
 
-            _data.Turns.Enqueue(turn);
-
-            // run director
-            _director.DispatchTasks();
-
-            var tasks = _mailbox.GetSubscribedTasksForType<FollowPathTask>(_director);
+            TasksBatch batch = Director.GetTasksBatch(turn, _sceneConfiguration, _mockPositionLookup);
+            List<Task> tasks = batch.Tasks;
 
             if (playerBoard == _sceneConfiguration.BoardName)
             {

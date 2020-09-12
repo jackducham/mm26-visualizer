@@ -10,7 +10,10 @@ namespace MM26.ECS
     /// <remarks>This is a non-ordered collection of data, so think of it more like a set than an array.</remarks>
     public sealed class TasksBatch : IEnumerable<Task>
     {
-        private List<Task> _tasksSet;
+        /// <summary>
+        /// List of tasks
+        /// </summary>
+        public List<Task> Tasks => _tasks;
 
         /// <summary>
         /// Check whether a batch has finished or not.
@@ -24,9 +27,11 @@ namespace MM26.ECS
         /// <returns>True if the batch has started; false otherwise.</returns>
         public bool IsStarted { get; set; }
 
+        private List<Task> _tasks;
+
         public TasksBatch()
         {
-            _tasksSet = new List<Task>();
+            _tasks = new List<Task>();
 
             this.IsFinished = false;
             this.IsStarted = false;
@@ -38,7 +43,7 @@ namespace MM26.ECS
         /// <param name="task">Task to add to the batch.</param>
         public void Add(Task task)
         {
-            _tasksSet.Add(task);
+            _tasks.Add(task);
         }
 
         /// <summary>
@@ -47,7 +52,7 @@ namespace MM26.ECS
         /// <param name="tasks">The batch of tasks to use.</param>
         public void SetTasksList(List<Task> tasks)
         {
-            _tasksSet = tasks;
+            _tasks = tasks;
         }
 
         /// <summary>
@@ -62,9 +67,9 @@ namespace MM26.ECS
 
             IsFinished = true;
 
-            for (int i = 0; i < _tasksSet.Count; i++)
+            for (int i = 0; i < _tasks.Count; i++)
             {
-                if (!_tasksSet[i].IsFinished)
+                if (!_tasks[i].IsFinished)
                 {
                     IsFinished = false;
                     break;
@@ -77,9 +82,9 @@ namespace MM26.ECS
         /// </summary>
         public void Start(Mailbox mailbox)
         {
-            for (int i = 0; i < _tasksSet.Count; i++)
+            for (int i = 0; i < _tasks.Count; i++)
             {
-                mailbox.SendTask(_tasksSet[i]);
+                mailbox.SendTask(_tasks[i]);
             }
 
             IsStarted = true;
@@ -87,12 +92,12 @@ namespace MM26.ECS
 
         public IEnumerator<Task> GetEnumerator()
         {
-            return _tasksSet.GetEnumerator();
+            return _tasks.GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return _tasksSet.GetEnumerator();
+            return _tasks.GetEnumerator();
         }
     }
 }

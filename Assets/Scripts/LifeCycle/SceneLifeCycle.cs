@@ -11,25 +11,25 @@ namespace MM26
     {
         [Header("Events")]
         [SerializeField]
-        UnityEvent _fetchData = null;
+        UnityEvent _fetchData = new UnityEvent();
 
         [SerializeField]
-        UnityEvent _dataFetched = null;
+        UnityEvent _dataFetched = new UnityEvent();
 
         [SerializeField]
-        UnityEvent _createBoard = null;
+        UnityEvent _createBoard = new UnityEvent();
 
         [SerializeField]
-        UnityEvent _boardCreated = null;
+        UnityEvent _boardCreated = new UnityEvent();
 
         [SerializeField]
-        UnityEvent _play = null;
+        UnityEvent _play = new UnityEvent();
 
         [SerializeField]
-        UnityEvent _update = null;
+        UnityEvent _update = new UnityEvent();
 
         [SerializeField]
-        UnityEvent _reset = null;
+        UnityEvent _reset = new UnityEvent();
 
         /// <summary>
         /// Invoked when it's about to fetch data
@@ -65,5 +65,9 @@ namespace MM26
         /// Invoked during reset (during game tear down)
         /// </summary>
         public UnityEvent Reset => _reset;
+
+        private void OnEnable()
+        {
+        }
     }
 }
