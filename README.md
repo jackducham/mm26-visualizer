@@ -18,3 +18,5 @@
 
 - Michelle Cheng
 - Andy Song
+- Kel Powers
+- Curtis Circelli
