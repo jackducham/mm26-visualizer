@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -213,11 +213,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1262103583}
+  - {fileID: 396616969}
   - {fileID: 383572686}
+  - {fileID: 585991557}
   - {fileID: 106027532}
   - {fileID: 1232651762}
-  - {fileID: 396616969}
-  - {fileID: 585991557}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -238,10 +238,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75aa5e29d85b03a4bbff73b08ec87418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneConfiguration: {fileID: 11400000, guid: 00ed0f4cb1ec244b2a9abb5ad4096e4d,
-    type: 2}
-  url: {fileID: 1841532345}
-  boardName: {fileID: 720614633}
+  _sceneConfiguration: {fileID: 0}
+  _sceneName: Main
+  _url: {fileID: 0}
+  _boardName: {fileID: 0}
 --- !u!1 &106027531
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 106027534}
   - component: {fileID: 106027533}
   m_Layer: 5
-  m_Name: boardName
+  m_Name: Board Name Field
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -275,7 +275,7 @@ RectTransform:
   - {fileID: 814860983}
   - {fileID: 720614636}
   m_Father: {fileID: 32139292}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -498,7 +498,7 @@ GameObject:
   - component: {fileID: 383572688}
   - component: {fileID: 383572687}
   m_Layer: 5
-  m_Name: url
+  m_Name: URL Field
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -518,7 +518,7 @@ RectTransform:
   - {fileID: 1617219328}
   - {fileID: 1841532346}
   m_Father: {fileID: 32139292}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -659,7 +659,7 @@ GameObject:
   - component: {fileID: 396616971}
   - component: {fileID: 396616970}
   m_Layer: 5
-  m_Name: url
+  m_Name: URL Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -677,7 +677,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 32139292}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -737,7 +737,7 @@ GameObject:
   - component: {fileID: 585991559}
   - component: {fileID: 585991558}
   m_Layer: 5
-  m_Name: boardName
+  m_Name: Board Name Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -755,7 +755,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 32139292}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1051,7 +1051,7 @@ GameObject:
   - component: {fileID: 1232651762}
   - component: {fileID: 1232651763}
   m_Layer: 0
-  m_Name: menu_scroll
+  m_Name: Menu Scroll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1069,7 +1069,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 32139292}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1232651763
 SpriteRenderer:
@@ -1134,7 +1134,7 @@ GameObject:
   - component: {fileID: 1262103587}
   - component: {fileID: 1262103586}
   m_Layer: 5
-  m_Name: LoadButton
+  m_Name: Load Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1204,7 +1204,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 32139293}
-        m_MethodName: LoadScene
+        m_MethodName: OnLoadClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1562,7 +1562,7 @@ GameObject:
   - component: {fileID: 2050259465}
   - component: {fileID: 2050259466}
   m_Layer: 0
-  m_Name: Scene Loader
+  m_Name: Main Loader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1596,8 +1596,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sceneConfiguration: {fileID: 11400000, guid: 00ed0f4cb1ec244b2a9abb5ad4096e4d,
     type: 2}
-  url: {fileID: 0}
-  boardName: {fileID: 0}
+  _sceneName: Main
+  _url: {fileID: 1841532347}
+  _boardName: {fileID: 720614634}
 --- !u!1 &2055905112
 GameObject:
   m_ObjectHideFlags: 0

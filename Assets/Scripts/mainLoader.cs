@@ -1,22 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using MM26.Components;
 
-public class mainLoader : MonoBehaviour
+namespace MM26
 {
-    public MM26.SceneConfiguration _sceneConfiguration;
-    public GameObject url;
-    public GameObject boardName;
-    public void LoadScene() {
-        _sceneConfiguration.WebSocketURL = url.GetComponent<Text>().text;
-        _sceneConfiguration.BoardName = url.GetComponent<Text>().text;
-       SceneManager.LoadScene("Main");
-    }
-    public void updateText() {
-        _sceneConfiguration.WebSocketURL = url.GetComponent<Text>().text;
-        _sceneConfiguration.BoardName = url.GetComponent<Text>().text;
+    /// <summary>
+    /// Serves as the loader for the main scene
+    /// </summary>
+    public class MainLoader : MonoBehaviour
+    {
+        [SerializeField]
+        private SceneConfiguration _sceneConfiguration = null;
+
+        [SerializeField]
+        private string _sceneName = "Main";
+
+        [SerializeField]
+        private Text _url;
+
+        [SerializeField]
+        private Text _boardName;
+
+        public void OnLoadClick()
+        {
+            _sceneConfiguration.WebSocketURL = _url.text;
+            _sceneConfiguration.BoardName = _boardName.text;
+            SceneManager.LoadScene("Main");
+        }
     }
 }
