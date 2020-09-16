@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 namespace MM26
 {
@@ -16,10 +16,10 @@ namespace MM26
         private string _sceneName = "Main";
 
         [SerializeField]
-        private Text _url;
+        private TextMeshProUGUI _url;
 
         [SerializeField]
-        private Text _boardName;
+        private TextMeshProUGUI _boardName;
 
         public void OnLoadClick()
         {
