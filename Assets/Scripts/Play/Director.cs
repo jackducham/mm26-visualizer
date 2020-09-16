@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -84,16 +85,32 @@ namespace MM26.Play
             GameState gameState = turn.State;
 
             TasksBatch batch = new TasksBatch();
+            var ignoreForHubUpdate = new HashSet<string>();
+            
 
             foreach (var pair in gameChange.CharacterChanges)
             {
                 string entity = pair.Key;
+                Character character = null;
 
-                if (!GetCharacter(
-                    gameState,
-                    sceneConfiguration,
-                    pair.Key,
-                    out Character character))
+
+                if (gameState.PlayerNames.ContainsKey(entity))
+                {
+                    // if the entity is a player
+                    character = gameState.PlayerNames[entity].Character;
+                }
+                else if (gameState.MonsterNames.ContainsKey(entity))
+                {
+                    // if the entity is a monster
+                    character = gameState.MonsterNames[entity].Character;
+                }
+                else
+                {
+                    throw new Exception($"Don't know how to handle entity {entity}");
+                }
+
+                // skip entities not on this board
+                if (character.Position.BoardId != sceneConfiguration.BoardName)
                 {
                     continue;
                 }
@@ -102,11 +119,13 @@ namespace MM26.Play
 
                 if (characterChange.Died)
                 {
+                    ignoreForHubUpdate.Add(entity);
                     batch.Add(new DespawnTask(entity));
                     continue;
                 }
                 else if (characterChange.Respawned)
                 {
+                    ignoreForHubUpdate.Add(entity);
                     batch.Add(
                         new SpawnPlayerTask(
                             entity,
@@ -123,6 +142,7 @@ namespace MM26.Play
                         batch.Add(new FollowPathTask(entity, path));
                         break;
                     case DecisionType.Portal:
+                        ignoreForHubUpdate.Add(entity);
                         batch.Add(
                             new SpawnPlayerTask(
                                 entity,
@@ -139,63 +159,24 @@ namespace MM26.Play
                 }
             }
 
-            CreateUpdateHubTasks(batch, sceneConfiguration, gameState);
+            ProcessGameState(batch, sceneConfiguration, gameState, ignoreForHubUpdate);
 
             return batch;
         }
 
         /// <summary>
-        /// Get a character object of the entity
-        /// </summary>
-        /// <param name="gameState">the game state</param>
-        /// <param name="sceneConfiguration">the scene configuration</param>
-        /// <param name="entity">the enitty</param>
-        /// <param name="character">the character</param>
-        /// <returns>
-        /// true if the character should be processed; false otherwise
-        /// </returns>
-        private static bool GetCharacter(
-            GameState gameState,
-            SceneConfiguration sceneConfiguration,
-            string entity,
-            out Character character)
-        {
-            if (gameState.PlayerNames.ContainsKey(entity))
-            {
-                // if the entity is a player
-                character = gameState.PlayerNames[entity].Character;
-            }
-            else if (gameState.MonsterNames.ContainsKey(entity))
-            {
-                // if the entity is a monster
-                character = gameState.MonsterNames[entity].Character;
-            }
-            else
-            {
-                throw new Exception($"Don't know how to handle entity {entity}");
-            }
-
-            // skip entities not on this board
-            if (character.Position.BoardId != sceneConfiguration.BoardName)
-            {
-                return false;
-            }
-
-            return true;
-        }
-
-        /// <summary>
-        /// Add update hub tasks to a task batch
+        /// Process state
         /// </summary>
         /// <param name="taskBatch">the task batch</param>
         /// <param name="sceneConfiguration">
         /// the configuration of this scene
         /// </param>
         /// <param name="gameState">the current game state</param>
-        private static void CreateUpdateHubTasks(
+        private static void ProcessGameState(
             TasksBatch taskBatch,
             SceneConfiguration sceneConfiguration,
-            GameState gameState)
+            GameState gameState,
+            HashSet<string> ignoreForHubUpdate)
         {
             foreach (var pair in gameState.PlayerNames)
             {
@@ -203,6 +184,11 @@ namespace MM26.Play
                 Player player = pair.Value;
 
                 if (player.Character.Position.BoardId != sceneConfiguration.BoardName)
+                {
+                    continue;
+                }
+
+                if (ignoreForHubUpdate.Contains(entity))
                 {
                     continue;
                 }

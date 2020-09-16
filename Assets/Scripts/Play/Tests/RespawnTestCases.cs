@@ -56,7 +56,10 @@ namespace MM26.Play.Tests
             return new object[]
             {
                 this.GetTurn("test"),
-                new HashSet<Task>(),
+                new HashSet<Task>()
+                {
+                    new SpawnPlayerTask("player", new Vector3Int(1, 1, 0))
+                }
             };
         }
 
