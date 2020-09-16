@@ -52,11 +52,14 @@ namespace MM26.IO.Models {
             "AygLMicuY2hhcmFjdGVyLlBsYXllclN0YXRzQnVuZGxlLlN0YXRzRW50cnka",
             "RAoKU3RhdHNFbnRyeRILCgNrZXkYASABKAkSJQoFdmFsdWUYAiABKAsyFi5j",
             "aGFyYWN0ZXIuUGxheWVyU3RhdHM6AjgBIjIKCFBvc2l0aW9uEhAKCGJvYXJk",
-            "X2lkGAEgASgJEgkKAXgYAiABKAUSCQoBeRgDIAEoBSpbCgxEZWNpc2lvblR5",
-            "cGUSCAoETk9ORRAAEggKBE1PVkUQARIKCgZBVFRBQ0sQAhIKCgZQT1JUQUwQ",
-            "AxIICgREUk9QEAQSCQoFRVFVSVAQBRIKCgZQSUNLVVAQBkJCCh5tZWNoLm1h",
-            "bmlhLmVuZ2luZS5kb21haW4ubW9kZWxCD0NoYXJhY3RlclByb3Rvc6oCDk1N",
-            "MjYuSU8uTW9kZWxzYgZwcm90bzM="));
+            "X2lkGAEgASgJEgkKAXgYAiABKAUSCQoBeRgDIAEoBSKAAQoRQ2hhcmFjdGVy",
+            "RGVjaXNpb24SLgoNZGVjaXNpb25fdHlwZRgBIAEoDjIXLmNoYXJhY3Rlci5E",
+            "ZWNpc2lvblR5cGUSLAoPdGFyZ2V0X3Bvc2l0aW9uGAIgASgLMhMuY2hhcmFj",
+            "dGVyLlBvc2l0aW9uEg0KBWluZGV4GAMgASgFKlsKDERlY2lzaW9uVHlwZRII",
+            "CgROT05FEAASCAoETU9WRRABEgoKBkFUVEFDSxACEgoKBlBPUlRBTBADEggK",
+            "BERST1AQBBIJCgVFUVVJUBAFEgoKBlBJQ0tVUBAGQkIKHm1lY2gubWFuaWEu",
+            "ZW5naW5lLmRvbWFpbi5tb2RlbEIPQ2hhcmFjdGVyUHJvdG9zqgIOTU0yNi5J",
+            "Ty5Nb2RlbHNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::MM26.IO.Models.ItemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MM26.IO.Models.DecisionType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -65,7 +68,8 @@ namespace MM26.IO.Models {
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Player), global::MM26.IO.Models.Player.Parser, new[]{ "Character", "Hat", "Clothes", "Shoes", "Inventory" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.PlayerStats), global::MM26.IO.Models.PlayerStats.Parser, new[]{ "Level", "Experience", "MonstersSlain", "Attack", "Defense", "CurrentHealth", "MaxHealth", "DeathCount", "TurnsSinceJoined" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.PlayerStatsBundle), global::MM26.IO.Models.PlayerStatsBundle.Parser, new[]{ "Stats" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Position), global::MM26.IO.Models.Position.Parser, new[]{ "BoardId", "X", "Y" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Position), global::MM26.IO.Models.Position.Parser, new[]{ "BoardId", "X", "Y" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.CharacterDecision), global::MM26.IO.Models.CharacterDecision.Parser, new[]{ "DecisionType", "TargetPosition", "Index" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2022,6 +2026,243 @@ namespace MM26.IO.Models {
           }
           case 24: {
             Y = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Proto sent from player to engine and from engine to visualizer
+  /// </summary>
+  public sealed partial class CharacterDecision : pb::IMessage<CharacterDecision>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CharacterDecision> _parser = new pb::MessageParser<CharacterDecision>(() => new CharacterDecision());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CharacterDecision> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::MM26.IO.Models.CharacterReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CharacterDecision() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CharacterDecision(CharacterDecision other) : this() {
+      decisionType_ = other.decisionType_;
+      targetPosition_ = other.targetPosition_ != null ? other.targetPosition_.Clone() : null;
+      index_ = other.index_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CharacterDecision Clone() {
+      return new CharacterDecision(this);
+    }
+
+    /// <summary>Field number for the "decision_type" field.</summary>
+    public const int DecisionTypeFieldNumber = 1;
+    private global::MM26.IO.Models.DecisionType decisionType_ = global::MM26.IO.Models.DecisionType.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::MM26.IO.Models.DecisionType DecisionType {
+      get { return decisionType_; }
+      set {
+        decisionType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "target_position" field.</summary>
+    public const int TargetPositionFieldNumber = 2;
+    private global::MM26.IO.Models.Position targetPosition_;
+    /// <summary>
+    /// For MOVE, ATTACK
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::MM26.IO.Models.Position TargetPosition {
+      get { return targetPosition_; }
+      set {
+        targetPosition_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "index" field.</summary>
+    public const int IndexFieldNumber = 3;
+    private int index_;
+    /// <summary>
+    /// For TRAVEL, DROP, EQUIP, PICKUP
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Index {
+      get { return index_; }
+      set {
+        index_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CharacterDecision);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CharacterDecision other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DecisionType != other.DecisionType) return false;
+      if (!object.Equals(TargetPosition, other.TargetPosition)) return false;
+      if (Index != other.Index) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (DecisionType != global::MM26.IO.Models.DecisionType.None) hash ^= DecisionType.GetHashCode();
+      if (targetPosition_ != null) hash ^= TargetPosition.GetHashCode();
+      if (Index != 0) hash ^= Index.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (DecisionType != global::MM26.IO.Models.DecisionType.None) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) DecisionType);
+      }
+      if (targetPosition_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(TargetPosition);
+      }
+      if (Index != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Index);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (DecisionType != global::MM26.IO.Models.DecisionType.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DecisionType);
+      }
+      if (targetPosition_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TargetPosition);
+      }
+      if (Index != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Index);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CharacterDecision other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DecisionType != global::MM26.IO.Models.DecisionType.None) {
+        DecisionType = other.DecisionType;
+      }
+      if (other.targetPosition_ != null) {
+        if (targetPosition_ == null) {
+          TargetPosition = new global::MM26.IO.Models.Position();
+        }
+        TargetPosition.MergeFrom(other.TargetPosition);
+      }
+      if (other.Index != 0) {
+        Index = other.Index;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            DecisionType = (global::MM26.IO.Models.DecisionType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (targetPosition_ == null) {
+              TargetPosition = new global::MM26.IO.Models.Position();
+            }
+            input.ReadMessage(TargetPosition);
+            break;
+          }
+          case 24: {
+            Index = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            DecisionType = (global::MM26.IO.Models.DecisionType) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            if (targetPosition_ == null) {
+              TargetPosition = new global::MM26.IO.Models.Position();
+            }
+            input.ReadMessage(TargetPosition);
+            break;
+          }
+          case 24: {
+            Index = input.ReadInt32();
             break;
           }
         }

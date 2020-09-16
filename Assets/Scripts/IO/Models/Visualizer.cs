@@ -25,16 +25,31 @@ namespace MM26.IO.Models {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChB2aXN1YWxpemVyLnByb3RvEhRwbGF5ZXJfY29tbXVuaWNhdGlvbhoKZ2Ft",
-            "ZS5wcm90byIzChFWaXN1YWxpemVySW5pdGlhbBIeCgVzdGF0ZRgBIAEoCzIP",
-            "LmdhbWUuR2FtZVN0YXRlIlIKDlZpc3VhbGl6ZXJUdXJuEh4KBXN0YXRlGAEg",
-            "ASgLMg8uZ2FtZS5HYW1lU3RhdGUSIAoGY2hhbmdlGAIgASgLMhAuZ2FtZS5H",
-            "YW1lQ2hhbmdlQkMKHm1lY2gubWFuaWEuZW5naW5lLmRvbWFpbi5tb2RlbEIQ",
-            "VmlzdWFsaXplclByb3Rvc6oCDk1NMjYuSU8uTW9kZWxzYgZwcm90bzM="));
+            "ZS5wcm90bxoPY2hhcmFjdGVyLnByb3RvIjMKEVZpc3VhbGl6ZXJJbml0aWFs",
+            "Eh4KBXN0YXRlGAEgASgLMg8uZ2FtZS5HYW1lU3RhdGUiYgoOVmlzdWFsaXpl",
+            "clR1cm4SHgoFc3RhdGUYASABKAsyDy5nYW1lLkdhbWVTdGF0ZRIwCgZjaGFu",
+            "Z2UYAiABKAsyIC5wbGF5ZXJfY29tbXVuaWNhdGlvbi5HYW1lQ2hhbmdlIokC",
+            "CgpHYW1lQ2hhbmdlEhgKEG5ld19wbGF5ZXJfbmFtZXMYASADKAkSUQoRY2hh",
+            "cmFjdGVyX2NoYW5nZXMYAiADKAsyNi5wbGF5ZXJfY29tbXVuaWNhdGlvbi5H",
+            "YW1lQ2hhbmdlLkNoYXJhY3RlckNoYW5nZXNFbnRyeRIuChF0aWxlX3RpbWVf",
+            "Y2hhbmdlcxgDIAMoCzITLmNoYXJhY3Rlci5Qb3NpdGlvbhpeChVDaGFyYWN0",
+            "ZXJDaGFuZ2VzRW50cnkSCwoDa2V5GAEgASgJEjQKBXZhbHVlGAIgASgLMiUu",
+            "cGxheWVyX2NvbW11bmljYXRpb24uQ2hhcmFjdGVyQ2hhbmdlOgI4ASKRAgoP",
+            "Q2hhcmFjdGVyQ2hhbmdlEgwKBGRpZWQYASABKAgSEQoJcmVzcGF3bmVkGAIg",
+            "ASgIEi4KCGRlY2lzaW9uGAMgASgLMhwuY2hhcmFjdGVyLkNoYXJhY3RlckRl",
+            "Y2lzaW9uEiEKBHBhdGgYBCADKAsyEy5jaGFyYWN0ZXIuUG9zaXRpb24SEwoL",
+            "aGF0X2NoYW5nZWQYBSABKAgSFwoPY2xvdGhlc19jaGFuZ2VkGAYgASgIEhUK",
+            "DXNob2VzX2NoYW5nZWQYByABKAgSFgoOd2VhcG9uX2NoYW5nZWQYCCABKAgS",
+            "LQoQYXR0YWNrX2xvY2F0aW9ucxgJIAMoCzITLmNoYXJhY3Rlci5Qb3NpdGlv",
+            "bkJDCh5tZWNoLm1hbmlhLmVuZ2luZS5kb21haW4ubW9kZWxCEFZpc3VhbGl6",
+            "ZXJQcm90b3OqAg5NTTI2LklPLk1vZGVsc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::MM26.IO.Models.GameReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::MM26.IO.Models.GameReflection.Descriptor, global::MM26.IO.Models.CharacterReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.VisualizerInitial), global::MM26.IO.Models.VisualizerInitial.Parser, new[]{ "State" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.VisualizerTurn), global::MM26.IO.Models.VisualizerTurn.Parser, new[]{ "State", "Change" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.VisualizerTurn), global::MM26.IO.Models.VisualizerTurn.Parser, new[]{ "State", "Change" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.GameChange), global::MM26.IO.Models.GameChange.Parser, new[]{ "NewPlayerNames", "CharacterChanges", "TileTimeChanges" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.CharacterChange), global::MM26.IO.Models.CharacterChange.Parser, new[]{ "Died", "Respawned", "Decision", "Path", "HatChanged", "ClothesChanged", "ShoesChanged", "WeaponChanged", "AttackLocations" }, null, null, null, null)
           }));
     }
     #endregion
@@ -401,6 +416,623 @@ namespace MM26.IO.Models {
               Change = new global::MM26.IO.Models.GameChange();
             }
             input.ReadMessage(Change);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class GameChange : pb::IMessage<GameChange>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GameChange> _parser = new pb::MessageParser<GameChange>(() => new GameChange());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<GameChange> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::MM26.IO.Models.VisualizerReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GameChange() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GameChange(GameChange other) : this() {
+      newPlayerNames_ = other.newPlayerNames_.Clone();
+      characterChanges_ = other.characterChanges_.Clone();
+      tileTimeChanges_ = other.tileTimeChanges_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public GameChange Clone() {
+      return new GameChange(this);
+    }
+
+    /// <summary>Field number for the "new_player_names" field.</summary>
+    public const int NewPlayerNamesFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_newPlayerNames_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> newPlayerNames_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> NewPlayerNames {
+      get { return newPlayerNames_; }
+    }
+
+    /// <summary>Field number for the "character_changes" field.</summary>
+    public const int CharacterChangesFieldNumber = 2;
+    private static readonly pbc::MapField<string, global::MM26.IO.Models.CharacterChange>.Codec _map_characterChanges_codec
+        = new pbc::MapField<string, global::MM26.IO.Models.CharacterChange>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::MM26.IO.Models.CharacterChange.Parser), 18);
+    private readonly pbc::MapField<string, global::MM26.IO.Models.CharacterChange> characterChanges_ = new pbc::MapField<string, global::MM26.IO.Models.CharacterChange>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, global::MM26.IO.Models.CharacterChange> CharacterChanges {
+      get { return characterChanges_; }
+    }
+
+    /// <summary>Field number for the "tile_time_changes" field.</summary>
+    public const int TileTimeChangesFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::MM26.IO.Models.Position> _repeated_tileTimeChanges_codec
+        = pb::FieldCodec.ForMessage(26, global::MM26.IO.Models.Position.Parser);
+    private readonly pbc::RepeatedField<global::MM26.IO.Models.Position> tileTimeChanges_ = new pbc::RepeatedField<global::MM26.IO.Models.Position>();
+    /// <summary>
+    /// Visualizer will check each tile and draw a treasure chest
+    /// if there are any items there
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::MM26.IO.Models.Position> TileTimeChanges {
+      get { return tileTimeChanges_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as GameChange);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(GameChange other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!newPlayerNames_.Equals(other.newPlayerNames_)) return false;
+      if (!CharacterChanges.Equals(other.CharacterChanges)) return false;
+      if(!tileTimeChanges_.Equals(other.tileTimeChanges_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= newPlayerNames_.GetHashCode();
+      hash ^= CharacterChanges.GetHashCode();
+      hash ^= tileTimeChanges_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      newPlayerNames_.WriteTo(output, _repeated_newPlayerNames_codec);
+      characterChanges_.WriteTo(output, _map_characterChanges_codec);
+      tileTimeChanges_.WriteTo(output, _repeated_tileTimeChanges_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += newPlayerNames_.CalculateSize(_repeated_newPlayerNames_codec);
+      size += characterChanges_.CalculateSize(_map_characterChanges_codec);
+      size += tileTimeChanges_.CalculateSize(_repeated_tileTimeChanges_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(GameChange other) {
+      if (other == null) {
+        return;
+      }
+      newPlayerNames_.Add(other.newPlayerNames_);
+      characterChanges_.Add(other.characterChanges_);
+      tileTimeChanges_.Add(other.tileTimeChanges_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            newPlayerNames_.AddEntriesFrom(input, _repeated_newPlayerNames_codec);
+            break;
+          }
+          case 18: {
+            characterChanges_.AddEntriesFrom(input, _map_characterChanges_codec);
+            break;
+          }
+          case 26: {
+            tileTimeChanges_.AddEntriesFrom(input, _repeated_tileTimeChanges_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            newPlayerNames_.AddEntriesFrom(ref input, _repeated_newPlayerNames_codec);
+            break;
+          }
+          case 18: {
+            characterChanges_.AddEntriesFrom(ref input, _map_characterChanges_codec);
+            break;
+          }
+          case 26: {
+            tileTimeChanges_.AddEntriesFrom(ref input, _repeated_tileTimeChanges_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class CharacterChange : pb::IMessage<CharacterChange>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CharacterChange> _parser = new pb::MessageParser<CharacterChange>(() => new CharacterChange());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CharacterChange> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::MM26.IO.Models.VisualizerReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CharacterChange() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CharacterChange(CharacterChange other) : this() {
+      died_ = other.died_;
+      respawned_ = other.respawned_;
+      decision_ = other.decision_ != null ? other.decision_.Clone() : null;
+      path_ = other.path_.Clone();
+      hatChanged_ = other.hatChanged_;
+      clothesChanged_ = other.clothesChanged_;
+      shoesChanged_ = other.shoesChanged_;
+      weaponChanged_ = other.weaponChanged_;
+      attackLocations_ = other.attackLocations_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CharacterChange Clone() {
+      return new CharacterChange(this);
+    }
+
+    /// <summary>Field number for the "died" field.</summary>
+    public const int DiedFieldNumber = 1;
+    private bool died_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Died {
+      get { return died_; }
+      set {
+        died_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "respawned" field.</summary>
+    public const int RespawnedFieldNumber = 2;
+    private bool respawned_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Respawned {
+      get { return respawned_; }
+      set {
+        respawned_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "decision" field.</summary>
+    public const int DecisionFieldNumber = 3;
+    private global::MM26.IO.Models.CharacterDecision decision_;
+    /// <summary>
+    /// Visualizer will have to check for decisions:
+    /// - ATTACK: must know where the attack was to put animation
+    /// - PORTAL: must know where they went to (check this Character's location)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::MM26.IO.Models.CharacterDecision Decision {
+      get { return decision_; }
+      set {
+        decision_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "path" field.</summary>
+    public const int PathFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::MM26.IO.Models.Position> _repeated_path_codec
+        = pb::FieldCodec.ForMessage(34, global::MM26.IO.Models.Position.Parser);
+    private readonly pbc::RepeatedField<global::MM26.IO.Models.Position> path_ = new pbc::RepeatedField<global::MM26.IO.Models.Position>();
+    /// <summary>
+    /// If successful MOVE decision was made, this will not be null
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::MM26.IO.Models.Position> Path {
+      get { return path_; }
+    }
+
+    /// <summary>Field number for the "hat_changed" field.</summary>
+    public const int HatChangedFieldNumber = 5;
+    private bool hatChanged_;
+    /// <summary>
+    /// If successful EQUIP decision was made, one of these will be true
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool HatChanged {
+      get { return hatChanged_; }
+      set {
+        hatChanged_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "clothes_changed" field.</summary>
+    public const int ClothesChangedFieldNumber = 6;
+    private bool clothesChanged_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool ClothesChanged {
+      get { return clothesChanged_; }
+      set {
+        clothesChanged_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "shoes_changed" field.</summary>
+    public const int ShoesChangedFieldNumber = 7;
+    private bool shoesChanged_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool ShoesChanged {
+      get { return shoesChanged_; }
+      set {
+        shoesChanged_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "weapon_changed" field.</summary>
+    public const int WeaponChangedFieldNumber = 8;
+    private bool weaponChanged_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool WeaponChanged {
+      get { return weaponChanged_; }
+      set {
+        weaponChanged_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "attack_locations" field.</summary>
+    public const int AttackLocationsFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::MM26.IO.Models.Position> _repeated_attackLocations_codec
+        = pb::FieldCodec.ForMessage(74, global::MM26.IO.Models.Position.Parser);
+    private readonly pbc::RepeatedField<global::MM26.IO.Models.Position> attackLocations_ = new pbc::RepeatedField<global::MM26.IO.Models.Position>();
+    /// <summary>
+    /// If successful ATTACK decision was made, this will not be null
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::MM26.IO.Models.Position> AttackLocations {
+      get { return attackLocations_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CharacterChange);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CharacterChange other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Died != other.Died) return false;
+      if (Respawned != other.Respawned) return false;
+      if (!object.Equals(Decision, other.Decision)) return false;
+      if(!path_.Equals(other.path_)) return false;
+      if (HatChanged != other.HatChanged) return false;
+      if (ClothesChanged != other.ClothesChanged) return false;
+      if (ShoesChanged != other.ShoesChanged) return false;
+      if (WeaponChanged != other.WeaponChanged) return false;
+      if(!attackLocations_.Equals(other.attackLocations_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Died != false) hash ^= Died.GetHashCode();
+      if (Respawned != false) hash ^= Respawned.GetHashCode();
+      if (decision_ != null) hash ^= Decision.GetHashCode();
+      hash ^= path_.GetHashCode();
+      if (HatChanged != false) hash ^= HatChanged.GetHashCode();
+      if (ClothesChanged != false) hash ^= ClothesChanged.GetHashCode();
+      if (ShoesChanged != false) hash ^= ShoesChanged.GetHashCode();
+      if (WeaponChanged != false) hash ^= WeaponChanged.GetHashCode();
+      hash ^= attackLocations_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Died != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Died);
+      }
+      if (Respawned != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(Respawned);
+      }
+      if (decision_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Decision);
+      }
+      path_.WriteTo(output, _repeated_path_codec);
+      if (HatChanged != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(HatChanged);
+      }
+      if (ClothesChanged != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(ClothesChanged);
+      }
+      if (ShoesChanged != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(ShoesChanged);
+      }
+      if (WeaponChanged != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(WeaponChanged);
+      }
+      attackLocations_.WriteTo(output, _repeated_attackLocations_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Died != false) {
+        size += 1 + 1;
+      }
+      if (Respawned != false) {
+        size += 1 + 1;
+      }
+      if (decision_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Decision);
+      }
+      size += path_.CalculateSize(_repeated_path_codec);
+      if (HatChanged != false) {
+        size += 1 + 1;
+      }
+      if (ClothesChanged != false) {
+        size += 1 + 1;
+      }
+      if (ShoesChanged != false) {
+        size += 1 + 1;
+      }
+      if (WeaponChanged != false) {
+        size += 1 + 1;
+      }
+      size += attackLocations_.CalculateSize(_repeated_attackLocations_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CharacterChange other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Died != false) {
+        Died = other.Died;
+      }
+      if (other.Respawned != false) {
+        Respawned = other.Respawned;
+      }
+      if (other.decision_ != null) {
+        if (decision_ == null) {
+          Decision = new global::MM26.IO.Models.CharacterDecision();
+        }
+        Decision.MergeFrom(other.Decision);
+      }
+      path_.Add(other.path_);
+      if (other.HatChanged != false) {
+        HatChanged = other.HatChanged;
+      }
+      if (other.ClothesChanged != false) {
+        ClothesChanged = other.ClothesChanged;
+      }
+      if (other.ShoesChanged != false) {
+        ShoesChanged = other.ShoesChanged;
+      }
+      if (other.WeaponChanged != false) {
+        WeaponChanged = other.WeaponChanged;
+      }
+      attackLocations_.Add(other.attackLocations_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Died = input.ReadBool();
+            break;
+          }
+          case 16: {
+            Respawned = input.ReadBool();
+            break;
+          }
+          case 26: {
+            if (decision_ == null) {
+              Decision = new global::MM26.IO.Models.CharacterDecision();
+            }
+            input.ReadMessage(Decision);
+            break;
+          }
+          case 34: {
+            path_.AddEntriesFrom(input, _repeated_path_codec);
+            break;
+          }
+          case 40: {
+            HatChanged = input.ReadBool();
+            break;
+          }
+          case 48: {
+            ClothesChanged = input.ReadBool();
+            break;
+          }
+          case 56: {
+            ShoesChanged = input.ReadBool();
+            break;
+          }
+          case 64: {
+            WeaponChanged = input.ReadBool();
+            break;
+          }
+          case 74: {
+            attackLocations_.AddEntriesFrom(input, _repeated_attackLocations_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Died = input.ReadBool();
+            break;
+          }
+          case 16: {
+            Respawned = input.ReadBool();
+            break;
+          }
+          case 26: {
+            if (decision_ == null) {
+              Decision = new global::MM26.IO.Models.CharacterDecision();
+            }
+            input.ReadMessage(Decision);
+            break;
+          }
+          case 34: {
+            path_.AddEntriesFrom(ref input, _repeated_path_codec);
+            break;
+          }
+          case 40: {
+            HatChanged = input.ReadBool();
+            break;
+          }
+          case 48: {
+            ClothesChanged = input.ReadBool();
+            break;
+          }
+          case 56: {
+            ShoesChanged = input.ReadBool();
+            break;
+          }
+          case 64: {
+            WeaponChanged = input.ReadBool();
+            break;
+          }
+          case 74: {
+            attackLocations_.AddEntriesFrom(ref input, _repeated_attackLocations_codec);
             break;
           }
         }

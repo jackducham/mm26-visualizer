@@ -47,11 +47,11 @@ namespace MM26.Play.Tests
                 }
             };
 
-            gameChange.CharacterStatChanges["player"] = new CharacterChange()
+            gameChange.CharacterChanges["player"] = new CharacterChange()
             {
                 Died = true,
                 Respawned = false,
-                DecisionType = DecisionType.None
+                Decision = new CharacterDecision()
             };
 
             VisualizerTurn turn = new VisualizerTurn()

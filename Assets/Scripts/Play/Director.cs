@@ -76,7 +76,7 @@ namespace MM26.Play
 
             TasksBatch batch = new TasksBatch();
 
-            foreach (var pair in gameChange.CharacterStatChanges)
+            foreach (var pair in gameChange.CharacterChanges)
             {
                 string entity = pair.Key;
 
@@ -121,7 +121,7 @@ namespace MM26.Play
                                 0)));
                 }
 
-                switch (characterChange.DecisionType)
+                switch (characterChange.Decision.DecisionType)
                 {
                     case DecisionType.Move:
                         Vector3[] path = Director.GetPath(characterChange.Path, boardPositionLookUp);
@@ -139,7 +139,7 @@ namespace MM26.Play
                     case DecisionType.None:
                         break;
                     default:
-                        Debug.LogWarningFormat("Unrecognized decision type {0}", characterChange.DecisionType);
+                        Debug.LogWarningFormat("Unrecognized decision type {0}", characterChange.Decision.DecisionType);
                         break;
                 }
             }

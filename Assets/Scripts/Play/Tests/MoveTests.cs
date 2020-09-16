@@ -61,7 +61,10 @@ namespace MM26.Play.Tests
             {
                 Died = false,
                 Respawned = false,
-                DecisionType = DecisionType.Move,
+                Decision = new CharacterDecision()
+                {
+                    DecisionType = DecisionType.Move
+                }
             };
 
             characterChange.Path.Add(new Position()
@@ -78,7 +81,7 @@ namespace MM26.Play.Tests
                 BoardId = playerBoard
             });
 
-            gameChange.CharacterStatChanges["player"] = characterChange;
+            gameChange.CharacterChanges["player"] = characterChange;
 
             turn.State = gameState;
             turn.Change = gameChange;

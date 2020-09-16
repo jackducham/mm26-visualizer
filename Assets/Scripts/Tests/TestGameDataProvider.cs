@@ -87,7 +87,10 @@ namespace MM26.Tests
                 var characterChange = new CharacterChange();
                 characterChange.Died = testCharacterChange.Died;
                 characterChange.Respawned = testCharacterChange.Respawned;
-                characterChange.DecisionType = testCharacterChange.DecisionType;
+                characterChange.Decision = new CharacterDecision()
+                {
+                    DecisionType = testCharacterChange.DecisionType
+                };
 
                 if (testCharacterChange.Path != null)
                 {
@@ -102,7 +105,7 @@ namespace MM26.Tests
                     }
                 }
 
-                gameChange.CharacterStatChanges.Add(
+                gameChange.CharacterChanges.Add(
                     testCharacterChange.Entity,
                     characterChange);
             }
