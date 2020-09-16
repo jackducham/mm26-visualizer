@@ -67,7 +67,8 @@ namespace MM26.Play.Tests
 
             if (playerBoard == _sceneConfiguration.BoardName)
             {
-                Assert.AreEqual(1, tasks.Length);
+                // also would contain a update hub task
+                Assert.AreEqual(2, tasks.Length);
                 Assert.AreEqual("player", tasks[0].EntityName);
             }
             else

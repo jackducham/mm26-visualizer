@@ -46,6 +46,7 @@ namespace MM26.Play.Tests
                 Character = new Character()
                 {
                     Name = "player",
+                    CurrentHealth = 17,
                     Position = new Position()
                     {
                         X = 0,
@@ -93,7 +94,8 @@ namespace MM26.Play.Tests
 
             if (playerBoard == _sceneConfiguration.BoardName)
             {
-                Assert.AreEqual(1, tasks.Length);
+                // would contain update hub task
+                Assert.AreEqual(2, tasks.Length);
                 Assert.AreEqual("player", tasks[0].EntityName);
                 Assert.AreEqual(2, tasks[0].Path.Length);
             }

@@ -36,6 +36,7 @@ namespace MM26.Play.Tests
             {
                 Character = new Character()
                 {
+                    CurrentHealth = 17,
                     Position = new Position()
                     {
                         BoardId = playerBoard,
@@ -68,7 +69,7 @@ namespace MM26.Play.Tests
 
             if (playerBoard == _sceneConfiguration.BoardName)
             {
-                Assert.AreEqual(1, tasks.Length);
+                Assert.AreEqual(2, tasks.Length);
                 Assert.AreEqual("player", tasks[0].EntityName);
                 Assert.AreEqual(new Vector3Int(1, 1, 0), tasks[0].Position);
             }

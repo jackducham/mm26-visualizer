@@ -59,13 +59,22 @@ namespace MM26.Play
             while (Data.Turns.Count > 0)
             {
                 this.TaskManager.AddTasksBatch(
-                    Director.GetTasksBatch(
+                    GetTasksBatch(
                         Data.Turns.Dequeue(),
                         this.SceneConfiguration,
                         this.PositionLookUp));
             }
         }
 
+        /// <summary>
+        /// Create a task batch from a turn
+        /// </summary>
+        /// <param name="turn">the turn</param>
+        /// <param name="sceneConfiguration">
+        /// configuration of this scene
+        /// </param>
+        /// <param name="boardPositionLookUp">lookup service</param>
+        /// <returns></returns>
         internal static TasksBatch GetTasksBatch(
             VisualizerTurn turn,
             SceneConfiguration sceneConfiguration,
@@ -130,6 +139,8 @@ namespace MM26.Play
                 }
             }
 
+            CreateUpdateHubTasks(batch, sceneConfiguration, gameState);
+
             return batch;
         }
 
@@ -171,6 +182,38 @@ namespace MM26.Play
             }
 
             return true;
+        }
+
+        /// <summary>
+        /// Add update hub tasks to a task batch
+        /// </summary>
+        /// <param name="taskBatch">the task batch</param>
+        /// <param name="sceneConfiguration">
+        /// the configuration of this scene
+        /// </param>
+        /// <param name="gameState">the current game state</param>
+        private static void CreateUpdateHubTasks(
+            TasksBatch taskBatch,
+            SceneConfiguration sceneConfiguration,
+            GameState gameState)
+        {
+            foreach (var pair in gameState.PlayerNames)
+            {
+                string entity = pair.Key;
+                Player player = pair.Value;
+
+                if (player.Character.Position.BoardId != sceneConfiguration.BoardName)
+                {
+                    continue;
+                }
+
+                var task = new UpdateHubTask(entity)
+                {
+                    Health = player.Character.CurrentHealth
+                };
+
+                taskBatch.Add(task);
+            }
         }
 
         private static Vector3[] GetPath(RepeatedField<Position> path, BoardPositionLookUp boardPositionLookUp)
