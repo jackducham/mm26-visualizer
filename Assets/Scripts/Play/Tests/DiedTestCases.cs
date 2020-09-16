@@ -1,6 +1,7 @@
-﻿using System.Linq;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using NUnit.Framework;
 using MM26.IO.Models;
 using MM26.ECS;
 using MM26.Tasks;
@@ -10,24 +11,9 @@ namespace MM26.Play.Tests
     /// <summary>
     /// Test when player is dead, corresonds to <c>Died = true</c>
     /// </summary>
-    [TestFixture]
-    public class DiedTests
+    public class DiedTestCases : IEnumerable
     {
-        SceneConfiguration _sceneConfiguration = null;
-        MockPositionLookUp _mockPositionLookUp = null;
-
-        [SetUp]
-        public void SetUp()
-        {
-            _sceneConfiguration = ScriptableObject.CreateInstance<SceneConfiguration>();
-            _sceneConfiguration.BoardName = "test";
-
-            _mockPositionLookUp = ScriptableObject.CreateInstance<MockPositionLookUp>();
-        }
-
-        [TestCase("test")]
-        [TestCase("other")]
-        public void Test(string playerBoard)
+        public VisualizerTurn GetTurn(string playerBoard)
         {
             GameState gameState = new GameState();
             GameChange gameChange = new GameChange();
@@ -60,21 +46,34 @@ namespace MM26.Play.Tests
                 State = gameState,
             };
 
-            TasksBatch batch = Director.GetTasksBatch(turn, _sceneConfiguration, _mockPositionLookUp);
-            DespawnTask[] tasks = batch.Tasks
-                .Select(task => task as DespawnTask)
-                .ToArray();
+            return turn;
+        }
 
-            if (playerBoard == _sceneConfiguration.BoardName)
+        private object[] GetOnBoard()
+        {
+            return new object[]
             {
-                // also would contain a update hub task
-                Assert.AreEqual(2, tasks.Length);
-                Assert.AreEqual("player", tasks[0].EntityName);
-            }
-            else
+                this.GetTurn("test"),
+                new HashSet<Task>()
+                {
+                    new DespawnTask("player")
+                }
+            };
+        }
+
+        private object[] GetNotOnBoard()
+        {
+            return new object[]
             {
-                Assert.AreEqual(0, tasks.Length);
-            }
+                this.GetTurn("other"),
+                new HashSet<Task>()
+            };
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            yield return this.GetOnBoard();
+            yield return this.GetNotOnBoard();
         }
     }
 }

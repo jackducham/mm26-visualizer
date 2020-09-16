@@ -7,14 +7,14 @@ namespace MM26.Tasks
     /// <summary>
     /// Sent when a new player appears on the current board
     /// </summary>
-    public sealed class SpawnTask : Task
+    public sealed class SpawnPlayerTask : Task
     {
         /// <summary>
         /// The position of spawning
         /// </summary>
         public readonly Vector3Int Position;
 
-        public SpawnTask(string entity, Vector3Int position) : base(entity)
+        public SpawnPlayerTask(string entity, Vector3Int position) : base(entity)
         {
             this.Position = position;
         }
@@ -31,7 +31,7 @@ namespace MM26.Tasks
 
         public override bool Equals(object obj)
         {
-            if (!(obj is SpawnMonsterTask))
+            if (!(obj is SpawnPlayerTask))
             {
                 return false;
             }
@@ -41,9 +41,14 @@ namespace MM26.Tasks
                 return false;
             }
 
-            SpawnMonsterTask task = (SpawnMonsterTask)obj;
+            SpawnPlayerTask task = (SpawnPlayerTask)obj;
 
             return this.Position == task.Position;
+        }
+
+        public override string ToString()
+        {
+            return JsonUtility.ToJson(this);
         }
     }
 }

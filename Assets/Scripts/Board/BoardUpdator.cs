@@ -14,7 +14,7 @@ namespace MM26.Board
 
         private void OnEnable()
         {
-            this.Mailbox.SubscribeToTaskType<SpawnTask>(this);
+            this.Mailbox.SubscribeToTaskType<SpawnPlayerTask>(this);
             this.Mailbox.SubscribeToTaskType<DespawnTask>(this);
         }
 
@@ -31,11 +31,11 @@ namespace MM26.Board
         /// </summary>
         private void HandleSpawnTasks()
         {
-            Task[] tasks = this.Mailbox.GetSubscribedTasksForType<SpawnTask>(this);
+            Task[] tasks = this.Mailbox.GetSubscribedTasksForType<SpawnPlayerTask>(this);
 
             for (int i = 0; i < tasks.Length; i++)
             {
-                SpawnTask task = tasks[i] as SpawnTask;
+                SpawnPlayerTask task = tasks[i] as SpawnPlayerTask;
 
                 this.CharactersManager.CreatePlayer(task.Position, task.EntityName);
 

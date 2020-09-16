@@ -7,6 +7,9 @@ using MM26.IO.Models;
 
 namespace MM26.Play.Tests
 {
+    /// <summary>
+    /// Board name: "test"
+    /// </summary>
     [TestFixture]
     public class DirectorTests
     {
@@ -22,6 +25,9 @@ namespace MM26.Play.Tests
         }
 
         [TestCaseSource(typeof(MoveTaskCases))]
+        [TestCaseSource(typeof(PortalTestCases))]
+        [TestCaseSource(typeof(DiedTestCases))]
+        [TestCaseSource(typeof(RespawnTestCases))]
         public void Test(VisualizerTurn turn, HashSet<Task> expectedTasks)
         {
             TasksBatch batch = Director.GetTasksBatch(turn, _sceneConfiguration, _mockPositionLookup);

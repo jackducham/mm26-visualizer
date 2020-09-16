@@ -9,7 +9,12 @@ namespace MM26.Play.Tests
 {
     public class MoveTaskCases : IEnumerable
     {
-        public object[] GetCase()
+        /// <summary>
+        /// Generate a turn for a given board
+        /// </summary>
+        /// <param name="boardName">the board name</param>
+        /// <returns></returns>
+        private VisualizerTurn GetTurn(string boardName)
         {
             // prepare data
             VisualizerTurn turn = new VisualizerTurn();
@@ -17,7 +22,7 @@ namespace MM26.Play.Tests
             // setup game state
             GameState gameState = new GameState();
 
-            gameState.BoardNames["test"] = new IO.Models.Board()
+            gameState.BoardNames[boardName] = new IO.Models.Board()
             {
                 Rows = 1,
                 Columns = 2,
@@ -33,7 +38,7 @@ namespace MM26.Play.Tests
                     {
                         X = 0,
                         Y = 1,
-                        BoardId = "test"
+                        BoardId = boardName
                     }
                 }
             };
@@ -54,14 +59,14 @@ namespace MM26.Play.Tests
             {
                 X = 0,
                 Y = 0,
-                BoardId = "test"
+                BoardId = boardName
             });
 
             characterChange.Path.Add(new Position()
             {
                 X = 1,
                 Y = 0,
-                BoardId = "test"
+                BoardId = boardName
             });
 
             gameChange.CharacterChanges["player"] = characterChange;
@@ -69,24 +74,41 @@ namespace MM26.Play.Tests
             turn.State = gameState;
             turn.Change = gameChange;
 
-            var expectedTasks = new HashSet<Task>()
+            return turn;
+        }
+
+        private object[] GetOnBoard()
+        {
+            return new object[]
             {
-                new FollowPathTask(
-                    "player",
-                    new Vector3[] { new Vector3(0, 0), new Vector3(1, 0) }),
-                new UpdateHubTask("player")
+                this.GetTurn("test"),
+                new HashSet<Task>()
                 {
-                    Health = 17
+                    new FollowPathTask(
+                        "player",
+                        new Vector3[] { new Vector3(0, 0), new Vector3(1, 0) }),
+                    new UpdateHubTask("player")
+                    {
+                        Health = 17
+                    }
                 }
             };
+        }
 
-            return new object[] { turn, expectedTasks };
+        private object[] GetNotOnBoard()
+        {
+            return new object[]
+            {
+                this.GetTurn("other"),
+                new HashSet<Task>()
+            };
         }
 
         // Start is called before the first frame update
         public IEnumerator GetEnumerator()
         {
-            yield return this.GetCase();
+            yield return this.GetOnBoard();
+            yield return this.GetNotOnBoard();
         }
     }
 }

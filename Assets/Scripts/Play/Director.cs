@@ -108,7 +108,7 @@ namespace MM26.Play
                 else if (characterChange.Respawned)
                 {
                     batch.Add(
-                        new SpawnTask(
+                        new SpawnPlayerTask(
                             entity,
                             new Vector3Int(
                                 character.Position.X,
@@ -124,7 +124,7 @@ namespace MM26.Play
                         break;
                     case DecisionType.Portal:
                         batch.Add(
-                            new SpawnTask(
+                            new SpawnPlayerTask(
                                 entity,
                                 new Vector3Int(
                                     character.Position.X,

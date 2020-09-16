@@ -1,4 +1,5 @@
-﻿using MM26.ECS;
+﻿using UnityEngine;
+using MM26.ECS;
 using MM26.Utilities;
 
 namespace MM26.Tasks
@@ -36,6 +37,11 @@ namespace MM26.Tasks
             UpdateHubTask task = (UpdateHubTask)obj;
 
             return this.Health == task.Health;
+        }
+
+        public override string ToString()
+        {
+            return JsonUtility.ToJson(this);
         }
     }
 }
