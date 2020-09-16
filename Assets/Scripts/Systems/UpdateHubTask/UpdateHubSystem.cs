@@ -39,10 +39,7 @@ namespace MM26.Systems.UpdateHubTask
                 {
                     if (_tasks.TryGetValue(character.name, out Tasks.UpdateHubTask task))
                     {
-                        if (task.Health.HasValue)
-                        {
-                            hub.HealthLabel.text = task.Health.Value + "";
-                        }
+                        hub.HealthLabel.text = task.Health + "";
                     }
                 })
                 .Run();

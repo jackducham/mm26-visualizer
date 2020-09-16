@@ -1,7 +1,8 @@
 {
     "name": "MM26.Tasks",
     "references": [
-        "GUID:fec70e8e90fa342d6b50ce82a72c4418"
+        "GUID:fec70e8e90fa342d6b50ce82a72c4418",
+        "GUID:8f9808d4110f04222a4b70d134a886d1"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

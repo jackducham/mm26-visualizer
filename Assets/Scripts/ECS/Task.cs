@@ -11,9 +11,6 @@ namespace MM26.ECS
     {
         public readonly string EntityName;
 
-        private static int _nextId;
-        private readonly int _taskId;
-
         /// <summary>
         /// Check whether a task has been marked as finished or not.
         /// </summary>
@@ -30,8 +27,6 @@ namespace MM26.ECS
         {
             this.EntityName = entityName;
             this.IsFinished = false;
-
-            _taskId = _nextId++;
         }
 
         /// <summary>
@@ -42,13 +37,21 @@ namespace MM26.ECS
             IsStarted = true;
         }
 
-        /// <summary>
-        /// Get the id of the task.
-        /// </summary>
-        /// <returns>id of the task.</returns>
-        public int GetId()
+        public override int GetHashCode()
         {
-            return _taskId;
+            return this.EntityName.GetHashCode();
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (!(obj is Task))
+            {
+                return false;
+            }
+
+            Task other = (Task)obj;
+
+            return other.EntityName == this.EntityName;
         }
     }
 }
