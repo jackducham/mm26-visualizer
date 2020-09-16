@@ -2,7 +2,7 @@
 using Unity.Entities;
 using MM26.Components;
 
-namespace MM26.Systems.FollowPathTask
+namespace MM26.Systems
 {
     /// <summary>
     /// The system that moves entities

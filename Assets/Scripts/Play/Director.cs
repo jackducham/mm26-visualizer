@@ -80,25 +80,11 @@ namespace MM26.Play
             {
                 string entity = pair.Key;
 
-                IO.Models.Character character = null;
-
-                if (gameState.PlayerNames.ContainsKey(entity))
-                {
-                    // if the entity is a player
-                    character = gameState.PlayerNames[entity].Character;
-                }
-                else if (gameState.MonsterNames.ContainsKey(entity))
-                {
-                    // if the entity is a monster
-                    character = gameState.MonsterNames[entity].Character;
-                }
-                else
-                {
-                    throw new Exception($"Don't know how to handle entity {entity}");
-                }
-
-                // skip entities not on this board
-                if (character.Position.BoardId != sceneConfiguration.BoardName)
+                if (!GetCharacter(
+                    gameState,
+                    sceneConfiguration,
+                    pair.Key,
+                    out Character character))
                 {
                     continue;
                 }
@@ -145,6 +131,46 @@ namespace MM26.Play
             }
 
             return batch;
+        }
+
+        /// <summary>
+        /// Get a character object of the entity
+        /// </summary>
+        /// <param name="gameState">the game state</param>
+        /// <param name="sceneConfiguration">the scene configuration</param>
+        /// <param name="entity">the enitty</param>
+        /// <param name="character">the character</param>
+        /// <returns>
+        /// true if the character should be processed; false otherwise
+        /// </returns>
+        private static bool GetCharacter(
+            GameState gameState,
+            SceneConfiguration sceneConfiguration,
+            string entity,
+            out Character character)
+        {
+            if (gameState.PlayerNames.ContainsKey(entity))
+            {
+                // if the entity is a player
+                character = gameState.PlayerNames[entity].Character;
+            }
+            else if (gameState.MonsterNames.ContainsKey(entity))
+            {
+                // if the entity is a monster
+                character = gameState.MonsterNames[entity].Character;
+            }
+            else
+            {
+                throw new Exception($"Don't know how to handle entity {entity}");
+            }
+
+            // skip entities not on this board
+            if (character.Position.BoardId != sceneConfiguration.BoardName)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         private static Vector3[] GetPath(RepeatedField<Position> path, BoardPositionLookUp boardPositionLookUp)
