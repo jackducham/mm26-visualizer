@@ -195,7 +195,9 @@ namespace MM26.Play
 
                 var task = new UpdateHubTask(entity)
                 {
-                    Health = player.Character.CurrentHealth
+                    Health = player.Character.CurrentHealth,
+                    Level = player.Character.Level,
+                    Experience = player.Character.Experience
                 };
 
                 taskBatch.Add(task);

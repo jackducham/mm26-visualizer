@@ -28,6 +28,7 @@ namespace MM26.Play.Tests
         [TestCaseSource(typeof(PortalTestCases))]
         [TestCaseSource(typeof(DiedTestCases))]
         [TestCaseSource(typeof(RespawnTestCases))]
+        [TestCaseSource(typeof(UpdateHubTestCases))]
         public void Test(VisualizerTurn turn, HashSet<Task> expectedTasks)
         {
             TasksBatch batch = Director.GetTasksBatch(turn, _sceneConfiguration, _mockPositionLookup);

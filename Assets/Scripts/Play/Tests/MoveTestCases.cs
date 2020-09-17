@@ -89,7 +89,9 @@ namespace MM26.Play.Tests
                         new Vector3[] { new Vector3(0, 0), new Vector3(1, 0) }),
                     new UpdateHubTask("player")
                     {
-                        Health = 17
+                        Health = 17,
+                        Level = 0,
+                        Experience = 0
                     }
                 }
             };
