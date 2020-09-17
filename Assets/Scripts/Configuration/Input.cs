@@ -27,6 +27,14 @@ namespace MM26.Configuration
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Zoom"",
+                    ""type"": ""Value"",
+                    ""id"": ""8740a8af-ff25-4e1b-bdd0-a0c44f2e8f81"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -84,6 +92,17 @@ namespace MM26.Configuration
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9386f69d-3cd0-4387-8788-d9703fccc567"",
+                    ""path"": ""<Mouse>/scroll"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Desktop"",
+                    ""action"": ""Zoom"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -99,6 +118,7 @@ namespace MM26.Configuration
             // Camera
             m_Camera = asset.FindActionMap("Camera", throwIfNotFound: true);
             m_Camera_Movement = m_Camera.FindAction("Movement", throwIfNotFound: true);
+            m_Camera_Zoom = m_Camera.FindAction("Zoom", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -149,11 +169,13 @@ namespace MM26.Configuration
         private readonly InputActionMap m_Camera;
         private ICameraActions m_CameraActionsCallbackInterface;
         private readonly InputAction m_Camera_Movement;
+        private readonly InputAction m_Camera_Zoom;
         public struct CameraActions
         {
             private @Input m_Wrapper;
             public CameraActions(@Input wrapper) { m_Wrapper = wrapper; }
             public InputAction @Movement => m_Wrapper.m_Camera_Movement;
+            public InputAction @Zoom => m_Wrapper.m_Camera_Zoom;
             public InputActionMap Get() { return m_Wrapper.m_Camera; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -166,6 +188,9 @@ namespace MM26.Configuration
                     @Movement.started -= m_Wrapper.m_CameraActionsCallbackInterface.OnMovement;
                     @Movement.performed -= m_Wrapper.m_CameraActionsCallbackInterface.OnMovement;
                     @Movement.canceled -= m_Wrapper.m_CameraActionsCallbackInterface.OnMovement;
+                    @Zoom.started -= m_Wrapper.m_CameraActionsCallbackInterface.OnZoom;
+                    @Zoom.performed -= m_Wrapper.m_CameraActionsCallbackInterface.OnZoom;
+                    @Zoom.canceled -= m_Wrapper.m_CameraActionsCallbackInterface.OnZoom;
                 }
                 m_Wrapper.m_CameraActionsCallbackInterface = instance;
                 if (instance != null)
@@ -173,6 +198,9 @@ namespace MM26.Configuration
                     @Movement.started += instance.OnMovement;
                     @Movement.performed += instance.OnMovement;
                     @Movement.canceled += instance.OnMovement;
+                    @Zoom.started += instance.OnZoom;
+                    @Zoom.performed += instance.OnZoom;
+                    @Zoom.canceled += instance.OnZoom;
                 }
             }
         }
@@ -189,6 +217,7 @@ namespace MM26.Configuration
         public interface ICameraActions
         {
             void OnMovement(InputAction.CallbackContext context);
+            void OnZoom(InputAction.CallbackContext context);
         }
     }
 }

@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using Unity.Entities;
 using MM26.Components;
-using MM26.Configuration;
 
 namespace MM26.Systems
 {
+    /// <summary>
+    /// Implement user controlling the camera
+    /// </summary>
     public class CameraControlSystem : SystemBase
     {
         Configuration.Input _input;
@@ -29,9 +31,9 @@ namespace MM26.Systems
                     Vector3 translation = new Vector3(input.x, input.y);
                     translation *= deltaTime;
 
-                    translation.x *= cameraSetting.Speed.x;
-                    translation.y *= cameraSetting.Speed.y;
-                    translation.z *= cameraSetting.Speed.z;
+                    translation.x *= cameraSetting.MoveSpeed.x;
+                    translation.y *= cameraSetting.MoveSpeed.y;
+                    translation.z *= cameraSetting.MoveSpeed.z;
 
                     transform.Translate(translation);
                 })

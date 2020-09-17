@@ -130,7 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13794b4a6b47a47beae4ad2eeb465f5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: {x: 0, y: 0, z: 0}
+  MoveSpeed: {x: 0, y: 0, z: 0}
+  ZoomSpeed: 1
 --- !u!114 &6038643353946968254
 MonoBehaviour:
   m_ObjectHideFlags: 0
