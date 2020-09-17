@@ -39,7 +39,21 @@ namespace MM26.Systems.UpdateHubTask
                 {
                     if (_tasks.TryGetValue(character.name, out Tasks.UpdateHubTask task))
                     {
-                        hub.HealthLabel.text = task.Health + "";
+                        if (task.Health.HasValue)
+                        {
+                            hub.HealthLabel.text = $"Health: {task.Health}";
+                        }
+
+                        if (task.Level.HasValue)
+                        {
+                            hub.LevelLabel.text = $"Level: {task.Level}";
+                        }
+
+                        if (task.Experience.HasValue)
+                        {
+                            hub.ExperienceLabel.text = $"Experience: {task.Experience}";
+                        }
+
                         task.IsFinished = true;
                     }
                 })

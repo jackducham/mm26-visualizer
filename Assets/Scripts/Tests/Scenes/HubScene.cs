@@ -34,7 +34,9 @@ namespace MM26.Tests.Scenes
             {
                 new UpdateHubTask("Test Player")
                 {
-                    Health = 50
+                    Health = 50,
+                    Level = 50,
+                    Experience = 50
                 }
             };
 

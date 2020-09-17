@@ -6,7 +6,9 @@ namespace MM26.Tasks
 {
     public sealed class UpdateHubTask : Task
     {
-        public int Health;
+        public int? Health;
+        public int? Level;
+        public int? Experience;
 
         public UpdateHubTask(string entity) : base(entity)
         {
@@ -18,6 +20,8 @@ namespace MM26.Tasks
 
             hash.Add(base.GetHashCode());
             hash.Add(this.Health.GetHashCode());
+            hash.Add(this.Level.GetHashCode());
+            hash.Add(this.Experience.GetHashCode());
 
             return hash.Value;
         }
@@ -34,9 +38,11 @@ namespace MM26.Tasks
                 return false;
             }
 
-            UpdateHubTask task = (UpdateHubTask)obj;
+            UpdateHubTask other = (UpdateHubTask)obj;
 
-            return this.Health == task.Health;
+            return this.Health == other.Health
+                && this.Level == other.Level
+                && this.Experience == other.Experience;
         }
 
         public override string ToString()
