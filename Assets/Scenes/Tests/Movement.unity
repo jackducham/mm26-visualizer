@@ -254,6 +254,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 6038643353946968248, guid: dbe5ceda4b6164862adf825609e6cede,
+        type: 3}
+      propertyPath: MoveSpeed.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6038643353946968248, guid: dbe5ceda4b6164862adf825609e6cede,
+        type: 3}
+      propertyPath: MoveSpeed.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6038643353946968250, guid: dbe5ceda4b6164862adf825609e6cede,
         type: 3}
       propertyPath: m_LocalPosition.x
