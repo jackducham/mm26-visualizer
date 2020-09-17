@@ -17,6 +17,11 @@ namespace MM26.Systems
             _input.Enable();
         }
 
+        protected override void OnDestroy()
+        {
+            _input.Dispose();
+        }
+
         protected override void OnUpdate()
         {
             this.Entities
@@ -28,8 +33,6 @@ namespace MM26.Systems
 
                     camera.orthographicSize += input.y * dt * cameraSettings.ZoomSpeed;
                     camera.orthographicSize = Mathf.Clamp(camera.orthographicSize, 0.0f, 15.0f);
-
-                    Debug.Log(input);
                 })
                 .Run();
         }

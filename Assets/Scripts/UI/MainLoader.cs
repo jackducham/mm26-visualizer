@@ -2,7 +2,7 @@
 using UnityEngine.SceneManagement;
 using TMPro;
 
-namespace MM26
+namespace MM26.UI
 {
     /// <summary>
     /// Serves as the loader for the main scene
@@ -16,10 +16,10 @@ namespace MM26
         private string _sceneName = "Main";
 
         [SerializeField]
-        private TextMeshProUGUI _url;
+        private TextMeshProUGUI _url = null;
 
         [SerializeField]
-        private TextMeshProUGUI _boardName;
+        private TextMeshProUGUI _boardName = null;
 
         public void OnLoadClick()
         {

@@ -19,6 +19,11 @@ namespace MM26.Systems
             _input.Enable();
         }
 
+        protected override void OnDestroy()
+        {
+            _input.Dispose();
+        }
+
         protected override void OnUpdate()
         {
             this.Entities
