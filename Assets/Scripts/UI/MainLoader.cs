@@ -25,7 +25,7 @@ namespace MM26
         {
             _sceneConfiguration.WebSocketURL = _url.text;
             _sceneConfiguration.BoardName = _boardName.text;
-            SceneManager.LoadScene("Main");
+            SceneManager.LoadScene(_sceneName);
         }
     }
 }

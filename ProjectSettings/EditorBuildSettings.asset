@@ -11,13 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Published/Main.unity
     guid: 2e83890a4e61e49379e195eab5892ff8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tests/Board.unity
     guid: 940b29956b83dcf4fb442224ecebf81a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tests/Connection.unity
     guid: 237da1dc67b3641d280ed1aadc594aa2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tests/Movement.unity
     guid: f418b5e916ff34a5187ce642a5755ada
   m_configObjects: {}
