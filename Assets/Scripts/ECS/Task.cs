@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿using System;
 
 namespace MM26.ECS
 {
@@ -7,6 +7,7 @@ namespace MM26.ECS
     /// </summary>
     /// <remarks>When extending this class, do not try to overload this class with too much functionality. Instead, think of it as a collection of data for a system to read.</remarks>
     ///
+    [Serializable]
     public abstract class Task
     {
         public readonly string EntityName;

@@ -17,7 +17,7 @@ namespace MM26.Systems.UpdateHubTask
             base.OnCreate();
 
             _mailbox = Resources.Load<Mailbox>("Objects/Mailbox");
-            _mailbox.SubscribeToTaskType<Tasks.FollowPathTask>(this);
+            _mailbox.SubscribeToTaskType<Tasks.UpdateHubTask>(this);
 
             _tasks = new Dictionary<string, Tasks.UpdateHubTask>();
         }
@@ -40,6 +40,7 @@ namespace MM26.Systems.UpdateHubTask
                     if (_tasks.TryGetValue(character.name, out Tasks.UpdateHubTask task))
                     {
                         hub.HealthLabel.text = task.Health + "";
+                        task.IsFinished = true;
                     }
                 })
                 .Run();
