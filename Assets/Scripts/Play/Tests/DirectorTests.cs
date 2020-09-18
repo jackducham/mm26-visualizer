@@ -34,7 +34,7 @@ namespace MM26.Play.Tests
             TasksBatch batch = turn.ToTasksBatch(_sceneConfiguration, _mockPositionLookup);
             var actualTasks = new HashSet<Task>(batch.Tasks);
 
-            CollectionAssert.AreEquivalent(actualTasks, expectedTasks);
+            CollectionAssert.AreEquivalent(expectedTasks, actualTasks);
         }
     }
 }

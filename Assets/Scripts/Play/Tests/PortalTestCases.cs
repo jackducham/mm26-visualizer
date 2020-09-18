@@ -76,6 +76,9 @@ namespace MM26.Play.Tests
             {
                 this.GetBoard("other"),
                 new HashSet<Task>()
+                {
+                    new DespawnTask("player")
+                }
             };
         }
 

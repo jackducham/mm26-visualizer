@@ -39,6 +39,7 @@ namespace MM26.Play
             {
                 string entity = pair.Key;
                 Character character = null;
+                CharacterChange characterChange = pair.Value;
 
 
                 if (gameState.PlayerNames.ContainsKey(entity))
@@ -59,10 +60,13 @@ namespace MM26.Play
                 // skip entities not on this board
                 if (character.Position.BoardId != sceneConfiguration.BoardName)
                 {
+                    if (characterChange.Decision.DecisionType == DecisionType.Portal)
+                    {
+                        batch.Add(new DespawnTask(entity));
+                    }
+
                     continue;
                 }
-
-                CharacterChange characterChange = pair.Value;
 
                 if (characterChange.Died)
                 {
@@ -90,6 +94,7 @@ namespace MM26.Play
                         break;
                     case DecisionType.Portal:
                         ignoreForHubUpdate.Add(entity);
+
                         batch.Add(
                             new SpawnPlayerTask(
                                 entity,
