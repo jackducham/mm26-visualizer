@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.Tilemaps;
 using MM26.Components;
 
@@ -8,24 +7,22 @@ namespace MM26.Board
 {
     public class CharactersManager : MonoBehaviour
     {
-        [SerializeField]
-        internal Tilemap Tilemap = null;
+        public Tilemap Tilemap = null;
 
         [Header("Prefabs")]
         [SerializeField]
-        internal GameObject PlayerPrefab = null;
-
+        private GameObject _playerPrefab = null;
         [SerializeField]
-        internal GameObject MonsterPrefab = null;
+        private GameObject _monsterPrefab = null;
 
         public void CreateMonster(Vector3Int position, string name)
         {
-            this.CreateCharacter(this.MonsterPrefab, position, name);
+            this.CreateCharacter(this._monsterPrefab, position, name);
         }
 
         public void CreatePlayer(Vector3Int position, string name)
         {
-            this.CreateCharacter(this.PlayerPrefab, position, name);
+            this.CreateCharacter(this._playerPrefab, position, name);
         }
 
         /// <summary>

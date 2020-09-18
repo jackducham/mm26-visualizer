@@ -171,6 +171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6099384395167837155}
   - component: {fileID: 4835611230717269304}
+  - component: {fileID: 8000956316918997821}
   - component: {fileID: 6099384395167837154}
   - component: {fileID: 6454628664683691712}
   m_Layer: 0
@@ -208,9 +209,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tilemap: {fileID: 7747305901183254157}
-  PlayerPrefab: {fileID: 4388124594191054825, guid: bf99f79fcedf041d38dc32b70e9e8d85,
+  _playerPrefab: {fileID: 4388124594191054825, guid: bf99f79fcedf041d38dc32b70e9e8d85,
     type: 3}
-  MonsterPrefab: {fileID: 1555258926759968227, guid: 78cd5a4a07e6b41e6ad1766186234769,
+  _monsterPrefab: {fileID: 1555258926759968227, guid: 78cd5a4a07e6b41e6ad1766186234769,
+    type: 3}
+--- !u!114 &8000956316918997821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6099384395167837153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98856f3923c474deb9562d7faa935e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _deathEffect: {fileID: 8011749595886809011, guid: 6f283982e1ac34eadb4166a9b99eee91,
+    type: 3}
+  _spawnEffect: {fileID: 7807746223094123204, guid: bb5fc2e11828a4be3a02243a76832d83,
+    type: 3}
+  _portalEffect: {fileID: 7168853509491909049, guid: 01e7f2084efc04f0a80ef5ce58d15e9f,
     type: 3}
 --- !u!114 &6099384395167837154
 MonoBehaviour:
@@ -232,7 +251,6 @@ MonoBehaviour:
   _sceneLifeCycle: {fileID: 11400000, guid: e5a30a7b0ac1e4833a29854a0f787d12, type: 2}
   _data: {fileID: 11400000, guid: 10eb0f1c65a9f486fb08761d63b81067, type: 2}
   _positionLookUp: {fileID: 11400000, guid: 2be8fc4b715a646b18ec12963535586d, type: 2}
-  _mailbox: {fileID: 11400000, guid: 107bc346b39dd46378a4e6c11216dfe0, type: 2}
   _tilemap: {fileID: 7747305901183254157}
   CharactersManager: {fileID: 4835611230717269304}
 --- !u!114 &6454628664683691712
