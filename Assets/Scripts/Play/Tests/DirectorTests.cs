@@ -31,7 +31,7 @@ namespace MM26.Play.Tests
         [TestCaseSource(typeof(UpdateHubTestCases))]
         public void Test(VisualizerTurn turn, HashSet<Task> expectedTasks)
         {
-            TasksBatch batch = Director.GetTasksBatch(turn, _sceneConfiguration, _mockPositionLookup);
+            TasksBatch batch = turn.ToTasksBatch(_sceneConfiguration, _mockPositionLookup);
             var actualTasks = new HashSet<Task>(batch.Tasks);
 
             CollectionAssert.AreEquivalent(actualTasks, expectedTasks);
