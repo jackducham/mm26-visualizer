@@ -312,6 +312,16 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4073092348896846867, guid: bf99f79fcedf041d38dc32b70e9e8d85,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.00000500679
+      objectReference: {fileID: 0}
+    - target: {fileID: 4073092348896846867, guid: bf99f79fcedf041d38dc32b70e9e8d85,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00017750263
+      objectReference: {fileID: 0}
     - target: {fileID: 4388124594191054805, guid: bf99f79fcedf041d38dc32b70e9e8d85,
         type: 3}
       propertyPath: m_LocalPosition.x
