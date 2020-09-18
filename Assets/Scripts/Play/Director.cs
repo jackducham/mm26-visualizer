@@ -202,6 +202,31 @@ namespace MM26.Play
 
                 taskBatch.Add(task);
             }
+
+            foreach (var pair in gameState.MonsterNames)
+            {
+                string entity = pair.Key;
+                Monster monster = pair.Value;
+
+                if (monster.Character.Position.BoardId != sceneConfiguration.BoardName)
+                {
+                    continue;
+                }
+
+                if (ignoreForHubUpdate.Contains(entity))
+                {
+                    continue;
+                }
+
+                var task = new UpdateHubTask(entity)
+                {
+                    Health = monster.Character.CurrentHealth,
+                    Level = monster.Character.Level,
+                    Experience = monster.Character.Experience
+                };
+
+                taskBatch.Add(task);
+            }
         }
 
         private static Vector3[] GetPath(RepeatedField<Position> path, BoardPositionLookUp boardPositionLookUp)

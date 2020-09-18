@@ -29,6 +29,22 @@ namespace MM26.Play.Tests
                 }
             };
 
+            state.MonsterNames["monster"] = new Monster()
+            {
+                Character = new Character()
+                {
+                    CurrentHealth = 10,
+                    Level = 22,
+                    Experience = 0,
+                    Position = new Position()
+                    {
+                        BoardId = playerBoard,
+                        X = 1,
+                        Y = 1
+                    }
+                }
+            };
+
             var turn = new VisualizerTurn()
             {
                 State = state,
@@ -46,6 +62,12 @@ namespace MM26.Play.Tests
                 new HashSet<Task>()
                 {
                     new UpdateHubTask("player")
+                    {
+                        Health = 10,
+                        Level = 22,
+                        Experience = 0
+                    },
+                    new UpdateHubTask("monster")
                     {
                         Health = 10,
                         Level = 22,
