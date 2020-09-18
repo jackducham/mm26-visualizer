@@ -34,7 +34,6 @@ namespace MM26.Play
             TasksBatch batch = new TasksBatch();
             var ignoreForHubUpdate = new HashSet<string>();
 
-
             foreach (var pair in gameChange.CharacterChanges)
             {
                 string entity = pair.Key;
@@ -57,63 +56,84 @@ namespace MM26.Play
                     throw new Exception($"Don't know how to handle entity {entity}");
                 }
 
-                // skip entities not on this board
-                if (character.Position.BoardId != sceneConfiguration.BoardName)
-                {
-                    if (characterChange.Decision.DecisionType == DecisionType.Portal)
-                    {
-                        batch.Add(new DespawnTask(entity));
-                    }
-
-                    continue;
-                }
-
-                if (characterChange.Died)
-                {
-                    ignoreForHubUpdate.Add(entity);
-                    batch.Add(new DespawnTask(entity));
-                    continue;
-                }
-                else if (characterChange.Respawned)
-                {
-                    ignoreForHubUpdate.Add(entity);
-                    batch.Add(
-                        new SpawnPlayerTask(
-                            entity,
-                            new Vector3Int(
-                                character.Position.X,
-                                character.Position.Y,
-                                0)));
-                }
-
-                switch (characterChange.Decision.DecisionType)
-                {
-                    case DecisionType.Move:
-                        Vector3[] path = GetPath(characterChange.Path, boardPositionLookUp);
-                        batch.Add(new FollowPathTask(entity, path));
-                        break;
-                    case DecisionType.Portal:
-                        ignoreForHubUpdate.Add(entity);
-
-                        batch.Add(
-                            new SpawnPlayerTask(
-                                entity,
-                                new Vector3Int(
-                                    character.Position.X,
-                                    character.Position.Y,
-                                    0)));
-                        break;
-                    case DecisionType.None:
-                        break;
-                    default:
-                        Debug.LogWarningFormat("Unrecognized decision type {0}", characterChange.Decision.DecisionType);
-                        break;
-                }
+                ProcessCharacter(batch, entity, character, characterChange, sceneConfiguration, boardPositionLookUp, ignoreForHubUpdate);
             }
 
             ProcessGameState(batch, sceneConfiguration, gameState, ignoreForHubUpdate);
 
             return batch;
+        }
+
+        private static void ProcessCharacter(
+            TasksBatch batch,
+            string entity,
+            Character character,
+            CharacterChange characterChange,
+            SceneConfiguration sceneConfiguration,
+            BoardPositionLookUp boardPositionLookUp,
+            HashSet<string> ignoreForHubUpdate)
+        {
+            if (characterChange.Died)
+            {
+                if (character.Position.BoardId == sceneConfiguration.BoardName)
+                {
+                    ignoreForHubUpdate.Add(entity);
+                    batch.Add(new DespawnTask(entity));
+                }
+                
+                return;
+            }
+            else if (characterChange.Respawned)
+            {
+                if (character.Position.BoardId == sceneConfiguration.BoardName)
+                {
+                    ignoreForHubUpdate.Add(entity);
+
+                    var position = new Vector3Int(
+                        character.Position.X,
+                        character.Position.Y,
+                        0);
+
+                    batch.Add(new SpawnPlayerTask(entity, position));
+                }
+                
+                return;
+            }
+
+            switch (characterChange.Decision.DecisionType)
+            {
+                case DecisionType.Move:
+                    if (character.Position.BoardId != sceneConfiguration.BoardName)
+                    {
+                        return;
+                    }
+
+                    Vector3[] path = GetPath(characterChange.Path, boardPositionLookUp);
+                    batch.Add(new FollowPathTask(entity, path));
+                    break;
+                case DecisionType.Portal:
+                    ignoreForHubUpdate.Add(entity);
+
+                    if (character.Position.BoardId != sceneConfiguration.BoardName)
+                    {
+                        batch.Add(new DespawnTask(entity));
+                    }
+                    else
+                    {
+                        var position = new Vector3Int(
+                            character.Position.X,
+                            character.Position.Y,
+                            0);
+
+                        batch.Add(new SpawnPlayerTask(entity, position));
+                    }
+                    break;
+                case DecisionType.None:
+                    break;
+                default:
+                    Debug.LogWarningFormat("Unrecognized decision type {0}", characterChange.Decision.DecisionType);
+                    break;
+            }
         }
 
         /// <summary>
