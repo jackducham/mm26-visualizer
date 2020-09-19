@@ -24,7 +24,7 @@ namespace MM26.IO.Models {
     static CharacterReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg9jaGFyYWN0ZXIucHJvdG8SCWNoYXJhY3RlchoKaXRlbS5wcm90byLZBAoJ",
+            "Cg9jaGFyYWN0ZXIucHJvdG8SCWNoYXJhY3RlchoKaXRlbS5wcm90byLpBAoJ",
             "Q2hhcmFjdGVyEhYKDmN1cnJlbnRfaGVhbHRoGAEgASgFEhcKD2Jhc2VfbWF4",
             "X2hlYWx0aBgCIAEoBRISCgpleHBlcmllbmNlGAMgASgFEg0KBWxldmVsGAQg",
             "ASgFEhIKCmJhc2Vfc3BlZWQYBSABKAUSJQoIcG9zaXRpb24YBiABKAsyEy5j",
@@ -36,34 +36,34 @@ namespace MM26.IO.Models {
             "EkwKFXRhZ2dlZF9wbGF5ZXJzX2RhbWFnZRgMIAMoCzItLmNoYXJhY3Rlci5D",
             "aGFyYWN0ZXIuVGFnZ2VkUGxheWVyc0RhbWFnZUVudHJ5Eg8KB2lzX2RlYWQY",
             "DSABKAgSGQoRdGlja3Nfc2luY2VfZGVhdGgYDiABKAUSDAoEbmFtZRgPIAEo",
-            "CRITCgtiYXNlX2F0dGFjaxgQIAEoBRIUCgxiYXNlX2RlZmVuc2UYESABKAUa",
-            "OgoYVGFnZ2VkUGxheWVyc0RhbWFnZUVudHJ5EgsKA2tleRgBIAEoCRINCgV2",
-            "YWx1ZRgCIAEoBToCOAEiTQoHTW9uc3RlchInCgljaGFyYWN0ZXIYASABKAsy",
-            "FC5jaGFyYWN0ZXIuQ2hhcmFjdGVyEhkKBWRyb3BzGAIgAygLMgouaXRlbS5J",
-            "dGVtIqQBCgZQbGF5ZXISJwoJY2hhcmFjdGVyGAEgASgLMhQuY2hhcmFjdGVy",
-            "LkNoYXJhY3RlchIWCgNoYXQYAiABKAsyCS5pdGVtLkhhdBIeCgdjbG90aGVz",
-            "GAMgASgLMg0uaXRlbS5DbG90aGVzEhoKBXNob2VzGAQgASgLMgsuaXRlbS5T",
-            "aG9lcxIdCglpbnZlbnRvcnkYBSADKAsyCi5pdGVtLkl0ZW0ixgEKC1BsYXll",
-            "clN0YXRzEg0KBWxldmVsGAEgASgFEhIKCmV4cGVyaWVuY2UYAiABKAUSFgoO",
-            "bW9uc3RlcnNfc2xhaW4YAyABKAUSDgoGYXR0YWNrGAQgASgFEg8KB2RlZmVu",
-            "c2UYBSABKAUSFgoOY3VycmVudF9oZWFsdGgYBiABKAUSEgoKbWF4X2hlYWx0",
-            "aBgHIAEoBRITCgtkZWF0aF9jb3VudBgIIAEoBRIaChJ0dXJuc19zaW5jZV9q",
-            "b2luZWQYCSABKAUikQEKEVBsYXllclN0YXRzQnVuZGxlEjYKBXN0YXRzGAEg",
-            "AygLMicuY2hhcmFjdGVyLlBsYXllclN0YXRzQnVuZGxlLlN0YXRzRW50cnka",
-            "RAoKU3RhdHNFbnRyeRILCgNrZXkYASABKAkSJQoFdmFsdWUYAiABKAsyFi5j",
-            "aGFyYWN0ZXIuUGxheWVyU3RhdHM6AjgBIjIKCFBvc2l0aW9uEhAKCGJvYXJk",
-            "X2lkGAEgASgJEgkKAXgYAiABKAUSCQoBeRgDIAEoBSKAAQoRQ2hhcmFjdGVy",
-            "RGVjaXNpb24SLgoNZGVjaXNpb25fdHlwZRgBIAEoDjIXLmNoYXJhY3Rlci5E",
-            "ZWNpc2lvblR5cGUSLAoPdGFyZ2V0X3Bvc2l0aW9uGAIgASgLMhMuY2hhcmFj",
-            "dGVyLlBvc2l0aW9uEg0KBWluZGV4GAMgASgFKlsKDERlY2lzaW9uVHlwZRII",
-            "CgROT05FEAASCAoETU9WRRABEgoKBkFUVEFDSxACEgoKBlBPUlRBTBADEggK",
-            "BERST1AQBBIJCgVFUVVJUBAFEgoKBlBJQ0tVUBAGQkIKHm1lY2gubWFuaWEu",
-            "ZW5naW5lLmRvbWFpbi5tb2RlbEIPQ2hhcmFjdGVyUHJvdG9zqgIOTU0yNi5J",
-            "Ty5Nb2RlbHNiBnByb3RvMw=="));
+            "CRITCgtiYXNlX2F0dGFjaxgQIAEoBRIUCgxiYXNlX2RlZmVuc2UYESABKAUS",
+            "DgoGc3ByaXRlGBIgASgJGjoKGFRhZ2dlZFBsYXllcnNEYW1hZ2VFbnRyeRIL",
+            "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAU6AjgBIk0KB01vbnN0ZXISJwoJ",
+            "Y2hhcmFjdGVyGAEgASgLMhQuY2hhcmFjdGVyLkNoYXJhY3RlchIZCgVkcm9w",
+            "cxgCIAMoCzIKLml0ZW0uSXRlbSKkAQoGUGxheWVyEicKCWNoYXJhY3RlchgB",
+            "IAEoCzIULmNoYXJhY3Rlci5DaGFyYWN0ZXISFgoDaGF0GAIgASgLMgkuaXRl",
+            "bS5IYXQSHgoHY2xvdGhlcxgDIAEoCzINLml0ZW0uQ2xvdGhlcxIaCgVzaG9l",
+            "cxgEIAEoCzILLml0ZW0uU2hvZXMSHQoJaW52ZW50b3J5GAUgAygLMgouaXRl",
+            "bS5JdGVtIsYBCgtQbGF5ZXJTdGF0cxINCgVsZXZlbBgBIAEoBRISCgpleHBl",
+            "cmllbmNlGAIgASgFEhYKDm1vbnN0ZXJzX3NsYWluGAMgASgFEg4KBmF0dGFj",
+            "axgEIAEoBRIPCgdkZWZlbnNlGAUgASgFEhYKDmN1cnJlbnRfaGVhbHRoGAYg",
+            "ASgFEhIKCm1heF9oZWFsdGgYByABKAUSEwoLZGVhdGhfY291bnQYCCABKAUS",
+            "GgoSdHVybnNfc2luY2Vfam9pbmVkGAkgASgFIpEBChFQbGF5ZXJTdGF0c0J1",
+            "bmRsZRI2CgVzdGF0cxgBIAMoCzInLmNoYXJhY3Rlci5QbGF5ZXJTdGF0c0J1",
+            "bmRsZS5TdGF0c0VudHJ5GkQKClN0YXRzRW50cnkSCwoDa2V5GAEgASgJEiUK",
+            "BXZhbHVlGAIgASgLMhYuY2hhcmFjdGVyLlBsYXllclN0YXRzOgI4ASIyCghQ",
+            "b3NpdGlvbhIQCghib2FyZF9pZBgBIAEoCRIJCgF4GAIgASgFEgkKAXkYAyAB",
+            "KAUigAEKEUNoYXJhY3RlckRlY2lzaW9uEi4KDWRlY2lzaW9uX3R5cGUYASAB",
+            "KA4yFy5jaGFyYWN0ZXIuRGVjaXNpb25UeXBlEiwKD3RhcmdldF9wb3NpdGlv",
+            "bhgCIAEoCzITLmNoYXJhY3Rlci5Qb3NpdGlvbhINCgVpbmRleBgDIAEoBSpb",
+            "CgxEZWNpc2lvblR5cGUSCAoETk9ORRAAEggKBE1PVkUQARIKCgZBVFRBQ0sQ",
+            "AhIKCgZQT1JUQUwQAxIICgREUk9QEAQSCQoFRVFVSVAQBRIKCgZQSUNLVVAQ",
+            "BkJCCh5tZWNoLm1hbmlhLmVuZ2luZS5kb21haW4ubW9kZWxCD0NoYXJhY3Rl",
+            "clByb3Rvc6oCDk1NMjYuSU8uTW9kZWxzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::MM26.IO.Models.ItemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MM26.IO.Models.DecisionType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Character), global::MM26.IO.Models.Character.Parser, new[]{ "CurrentHealth", "BaseMaxHealth", "Experience", "Level", "BaseSpeed", "Position", "SpawnPoint", "Weapon", "ActiveEffectsTempStatusModifier", "ActiveEffectsSource", "ActiveEffectsIsPlayer", "TaggedPlayersDamage", "IsDead", "TicksSinceDeath", "Name", "BaseAttack", "BaseDefense" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Character), global::MM26.IO.Models.Character.Parser, new[]{ "CurrentHealth", "BaseMaxHealth", "Experience", "Level", "BaseSpeed", "Position", "SpawnPoint", "Weapon", "ActiveEffectsTempStatusModifier", "ActiveEffectsSource", "ActiveEffectsIsPlayer", "TaggedPlayersDamage", "IsDead", "TicksSinceDeath", "Name", "BaseAttack", "BaseDefense", "Sprite" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Monster), global::MM26.IO.Models.Monster.Parser, new[]{ "Character", "Drops" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Player), global::MM26.IO.Models.Player.Parser, new[]{ "Character", "Hat", "Clothes", "Shoes", "Inventory" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.PlayerStats), global::MM26.IO.Models.PlayerStats.Parser, new[]{ "Level", "Experience", "MonstersSlain", "Attack", "Defense", "CurrentHealth", "MaxHealth", "DeathCount", "TurnsSinceJoined" }, null, null, null, null),
@@ -135,6 +135,7 @@ namespace MM26.IO.Models {
       name_ = other.name_;
       baseAttack_ = other.baseAttack_;
       baseDefense_ = other.baseDefense_;
+      sprite_ = other.sprite_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -332,6 +333,20 @@ namespace MM26.IO.Models {
       }
     }
 
+    /// <summary>Field number for the "sprite" field.</summary>
+    public const int SpriteFieldNumber = 18;
+    private string sprite_ = "";
+    /// <summary>
+    /// Filepath to sprite for this character
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Sprite {
+      get { return sprite_; }
+      set {
+        sprite_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Character);
@@ -362,6 +377,7 @@ namespace MM26.IO.Models {
       if (Name != other.Name) return false;
       if (BaseAttack != other.BaseAttack) return false;
       if (BaseDefense != other.BaseDefense) return false;
+      if (Sprite != other.Sprite) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -385,6 +401,7 @@ namespace MM26.IO.Models {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (BaseAttack != 0) hash ^= BaseAttack.GetHashCode();
       if (BaseDefense != 0) hash ^= BaseDefense.GetHashCode();
+      if (Sprite.Length != 0) hash ^= Sprite.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -454,6 +471,10 @@ namespace MM26.IO.Models {
         output.WriteRawTag(136, 1);
         output.WriteInt32(BaseDefense);
       }
+      if (Sprite.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(Sprite);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -504,6 +525,9 @@ namespace MM26.IO.Models {
       }
       if (BaseDefense != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(BaseDefense);
+      }
+      if (Sprite.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Sprite);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -567,6 +591,9 @@ namespace MM26.IO.Models {
       }
       if (other.BaseDefense != 0) {
         BaseDefense = other.BaseDefense;
+      }
+      if (other.Sprite.Length != 0) {
+        Sprite = other.Sprite;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -660,6 +687,10 @@ namespace MM26.IO.Models {
             BaseDefense = input.ReadInt32();
             break;
           }
+          case 146: {
+            Sprite = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -750,6 +781,10 @@ namespace MM26.IO.Models {
           }
           case 136: {
             BaseDefense = input.ReadInt32();
+            break;
+          }
+          case 146: {
+            Sprite = input.ReadString();
             break;
           }
         }

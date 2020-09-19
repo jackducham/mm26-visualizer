@@ -27,17 +27,17 @@ namespace MM26.IO.Models {
             "Cgtib2FyZC5wcm90bxIFYm9hcmQaCml0ZW0ucHJvdG8aD2NoYXJhY3Rlci5w",
             "cm90byJnCgVCb2FyZBIMCgRyb3dzGAEgASgFEg8KB2NvbHVtbnMYAiABKAUS",
             "GQoEZ3JpZBgDIAMoCzILLmJvYXJkLlRpbGUSJAoHcG9ydGFscxgEIAMoCzIT",
-            "LmNoYXJhY3Rlci5Qb3NpdGlvbiKHAQoEVGlsZRInCgl0aWxlX3R5cGUYASAB",
+            "LmNoYXJhY3Rlci5Qb3NpdGlvbiKXAQoEVGlsZRInCgl0aWxlX3R5cGUYASAB",
             "KA4yFC5ib2FyZC5UaWxlLlRpbGVUeXBlEhkKBWl0ZW1zGAIgAygLMgouaXRl",
-            "bS5JdGVtIjsKCFRpbGVUeXBlEggKBFZPSUQQABIJCgVCTEFOSxABEg4KCklN",
-            "UEFTU0lCTEUQAhIKCgZQT1JUQUwQA0I+Ch5tZWNoLm1hbmlhLmVuZ2luZS5k",
-            "b21haW4ubW9kZWxCC0JvYXJkUHJvdG9zqgIOTU0yNi5JTy5Nb2RlbHNiBnBy",
-            "b3RvMw=="));
+            "bS5JdGVtEg4KBnNwcml0ZRgDIAEoCSI7CghUaWxlVHlwZRIICgRWT0lEEAAS",
+            "CQoFQkxBTksQARIOCgpJTVBBU1NJQkxFEAISCgoGUE9SVEFMEANCPgoebWVj",
+            "aC5tYW5pYS5lbmdpbmUuZG9tYWluLm1vZGVsQgtCb2FyZFByb3Rvc6oCDk1N",
+            "MjYuSU8uTW9kZWxzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::MM26.IO.Models.ItemReflection.Descriptor, global::MM26.IO.Models.CharacterReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Board), global::MM26.IO.Models.Board.Parser, new[]{ "Rows", "Columns", "Grid", "Portals" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Tile), global::MM26.IO.Models.Tile.Parser, new[]{ "TileType", "Items" }, null, new[]{ typeof(global::MM26.IO.Models.Tile.Types.TileType) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Tile), global::MM26.IO.Models.Tile.Parser, new[]{ "TileType", "Items", "Sprite" }, null, new[]{ typeof(global::MM26.IO.Models.Tile.Types.TileType) }, null, null)
           }));
     }
     #endregion
@@ -313,6 +313,7 @@ namespace MM26.IO.Models {
     public Tile(Tile other) : this() {
       tileType_ = other.tileType_;
       items_ = other.items_.Clone();
+      sprite_ = other.sprite_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -342,6 +343,20 @@ namespace MM26.IO.Models {
       get { return items_; }
     }
 
+    /// <summary>Field number for the "sprite" field.</summary>
+    public const int SpriteFieldNumber = 3;
+    private string sprite_ = "";
+    /// <summary>
+    /// Filepath to sprite for this tile
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Sprite {
+      get { return sprite_; }
+      set {
+        sprite_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Tile);
@@ -357,6 +372,7 @@ namespace MM26.IO.Models {
       }
       if (TileType != other.TileType) return false;
       if(!items_.Equals(other.items_)) return false;
+      if (Sprite != other.Sprite) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -365,6 +381,7 @@ namespace MM26.IO.Models {
       int hash = 1;
       if (TileType != global::MM26.IO.Models.Tile.Types.TileType.Void) hash ^= TileType.GetHashCode();
       hash ^= items_.GetHashCode();
+      if (Sprite.Length != 0) hash ^= Sprite.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -383,6 +400,10 @@ namespace MM26.IO.Models {
         output.WriteEnum((int) TileType);
       }
       items_.WriteTo(output, _repeated_items_codec);
+      if (Sprite.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Sprite);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -395,6 +416,9 @@ namespace MM26.IO.Models {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TileType);
       }
       size += items_.CalculateSize(_repeated_items_codec);
+      if (Sprite.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Sprite);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -410,6 +434,9 @@ namespace MM26.IO.Models {
         TileType = other.TileType;
       }
       items_.Add(other.items_);
+      if (other.Sprite.Length != 0) {
+        Sprite = other.Sprite;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -432,6 +459,10 @@ namespace MM26.IO.Models {
             items_.AddEntriesFrom(input, _repeated_items_codec);
             break;
           }
+          case 26: {
+            Sprite = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -452,6 +483,10 @@ namespace MM26.IO.Models {
           }
           case 18: {
             items_.AddEntriesFrom(ref input, _repeated_items_codec);
+            break;
+          }
+          case 26: {
+            Sprite = input.ReadString();
             break;
           }
         }

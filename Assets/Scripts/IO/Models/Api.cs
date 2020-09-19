@@ -31,63 +31,71 @@ namespace MM26.IO.Models {
             "MhMuY2hhcmFjdGVyLlBvc2l0aW9uEiAKA2VuZBgDIAEoCzITLmNoYXJhY3Rl",
             "ci5Qb3NpdGlvbiJbChZBUElQYXRoRmluZGluZ1Jlc3BvbnNlEh4KBnN0YXR1",
             "cxgBIAEoCzIOLmFwaS5BUElTdGF0dXMSIQoEcGF0aBgCIAMoCzITLmNoYXJh",
-            "Y3Rlci5Qb3NpdGlvbiJQChVBUElGaW5kRW5lbWllc1JlcXVlc3QSIgoJZ2Ft",
-            "ZVN0YXRlGAEgASgLMg8uZ2FtZS5HYW1lU3RhdGUSEwoLcGxheWVyX25hbWUY",
-            "AiABKAkiXwoWQVBJRmluZEVuZW1pZXNSZXNwb25zZRIeCgZzdGF0dXMYASAB",
-            "KAsyDi5hcGkuQVBJU3RhdHVzEiUKB2VuZW1pZXMYAiADKAsyFC5jaGFyYWN0",
-            "ZXIuQ2hhcmFjdGVyIlEKFkFQSUZpbmRNb25zdGVyc1JlcXVlc3QSIgoJZ2Ft",
-            "ZVN0YXRlGAEgASgLMg8uZ2FtZS5HYW1lU3RhdGUSEwoLcGxheWVyX25hbWUY",
-            "AiABKAkiXwoXQVBJRmluZE1vbnN0ZXJzUmVzcG9uc2USHgoGc3RhdHVzGAEg",
-            "ASgLMg4uYXBpLkFQSVN0YXR1cxIkCghtb25zdGVycxgCIAMoCzISLmNoYXJh",
-            "Y3Rlci5Nb25zdGVyIlcKHEFQSUZpbmRFbmVtaWVzSW5SYW5nZVJlcXVlc3QS",
-            "IgoJZ2FtZVN0YXRlGAEgASgLMg8uZ2FtZS5HYW1lU3RhdGUSEwoLcGxheWVy",
-            "X25hbWUYAiABKAkiZgodQVBJRmluZEVuZW1pZXNJblJhbmdlUmVzcG9uc2US",
-            "HgoGc3RhdHVzGAEgASgLMg4uYXBpLkFQSVN0YXR1cxIlCgdlbmVtaWVzGAIg",
-            "AygLMhQuY2hhcmFjdGVyLkNoYXJhY3RlciJSChdBUElDYW5CZUF0dGFja2Vk",
-            "UmVxdWVzdBIiCglnYW1lU3RhdGUYASABKAsyDy5nYW1lLkdhbWVTdGF0ZRIT",
-            "CgtwbGF5ZXJfbmFtZRgCIAEoCSJRChhBUElDYW5CZUF0dGFja2VkUmVzcG9u",
-            "c2USHgoGc3RhdHVzGAEgASgLMg4uYXBpLkFQSVN0YXR1cxIVCg1jYW5CZUF0",
-            "dGFja2VkGAIgASgIIlYKG0FQSUZpbmRDbG9zZXN0UG9ydGFsUmVxdWVzdBIi",
-            "CglnYW1lU3RhdGUYASABKAsyDy5nYW1lLkdhbWVTdGF0ZRITCgtwbGF5ZXJf",
-            "bmFtZRgCIAEoCSJjChxBUElGaW5kQ2xvc2VzdFBvcnRhbFJlc3BvbnNlEh4K",
-            "BnN0YXR1cxgBIAEoCzIOLmFwaS5BUElTdGF0dXMSIwoGcG9ydGFsGAIgASgL",
-            "MhMuY2hhcmFjdGVyLlBvc2l0aW9uIjsKFUFQSUxlYWRlckJvYXJkUmVxdWVz",
-            "dBIiCglnYW1lU3RhdGUYASABKAsyDy5nYW1lLkdhbWVTdGF0ZSJgChZBUElM",
-            "ZWFkZXJCb2FyZFJlc3BvbnNlEh4KBnN0YXR1cxgBIAEoCzIOLmFwaS5BUElT",
-            "dGF0dXMSJgoLbGVhZGVyQm9hcmQYAiADKAsyES5jaGFyYWN0ZXIuUGxheWVy",
-            "InwKF0FQSUFsbEVuZW1pZXNIaXRSZXF1ZXN0EiIKCWdhbWVTdGF0ZRgBIAEo",
-            "CzIPLmdhbWUuR2FtZVN0YXRlEhMKC3BsYXllcl9uYW1lGAIgASgJEigKC3Rh",
-            "cmdldF9zcG90GAMgASgLMhMuY2hhcmFjdGVyLlBvc2l0aW9uImUKGEFQSUFs",
-            "bEVuZW1pZXNIaXRSZXNwb25zZRIeCgZzdGF0dXMYASABKAsyDi5hcGkuQVBJ",
-            "U3RhdHVzEikKC2VuZW1pZXNfaGl0GAIgAygLMhQuY2hhcmFjdGVyLkNoYXJh",
-            "Y3RlciJgChZBUElJdGVtc0luUmFuZ2VSZXF1ZXN0EiIKCWdhbWVTdGF0ZRgB",
-            "IAEoCzIPLmdhbWUuR2FtZVN0YXRlEhMKC3BsYXllcl9uYW1lGAIgASgJEg0K",
-            "BXJhbmdlGAMgASgFIlQKF0FQSUl0ZW1zSW5SYW5nZVJlc3BvbnNlEh4KBnN0",
-            "YXR1cxgBIAEoCzIOLmFwaS5BUElTdGF0dXMSGQoFaXRlbXMYAiADKAsyCi5p",
-            "dGVtLkl0ZW1CPAoebWVjaC5tYW5pYS5lbmdpbmUuZG9tYWluLm1vZGVsQglB",
-            "cGlQcm90b3OqAg5NTTI2LklPLk1vZGVsc2IGcHJvdG8z"));
+            "Y3Rlci5Qb3NpdGlvbiKBAQofQVBJRmluZEVuZW1pZXNCeURpc3RhbmNlUmVx",
+            "dWVzdBIiCglnYW1lU3RhdGUYASABKAsyDy5nYW1lLkdhbWVTdGF0ZRIlCghw",
+            "b3NpdGlvbhgCIAEoCzITLmNoYXJhY3Rlci5Qb3NpdGlvbhITCgtwbGF5ZXJf",
+            "bmFtZRgDIAEoCSJpCiBBUElGaW5kRW5lbWllc0J5RGlzdGFuY2VSZXNwb25z",
+            "ZRIeCgZzdGF0dXMYASABKAsyDi5hcGkuQVBJU3RhdHVzEiUKB2VuZW1pZXMY",
+            "AiADKAsyFC5jaGFyYWN0ZXIuQ2hhcmFjdGVyImgKG0FQSUZpbmRNb25zdGVy",
+            "c0J5RXhwUmVxdWVzdBIiCglnYW1lU3RhdGUYASABKAsyDy5nYW1lLkdhbWVT",
+            "dGF0ZRIlCghwb3NpdGlvbhgCIAEoCzITLmNoYXJhY3Rlci5Qb3NpdGlvbiJk",
+            "ChxBUElGaW5kTW9uc3RlcnNCeUV4cFJlc3BvbnNlEh4KBnN0YXR1cxgBIAEo",
+            "CzIOLmFwaS5BUElTdGF0dXMSJAoIbW9uc3RlcnMYAiADKAsyEi5jaGFyYWN0",
+            "ZXIuTW9uc3RlciKVAQokQVBJRmluZEl0ZW1zSW5SYW5nZUJ5RGlzdGFuY2VS",
+            "ZXF1ZXN0EiIKCWdhbWVTdGF0ZRgBIAEoCzIPLmdhbWUuR2FtZVN0YXRlEiUK",
+            "CHBvc2l0aW9uGAIgASgLMhMuY2hhcmFjdGVyLlBvc2l0aW9uEhMKC3BsYXll",
+            "cl9uYW1lGAMgASgJEg0KBXJhbmdlGAQgASgFIooBCiVBUElGaW5kSXRlbXNJ",
+            "blJhbmdlQnlEaXN0YW5jZVJlc3BvbnNlEh4KBnN0YXR1cxgBIAEoCzIOLmFw",
+            "aS5BUElTdGF0dXMSGQoFaXRlbXMYAiADKAsyCi5pdGVtLkl0ZW0SJgoJcG9z",
+            "aXRpb25zGAMgAygLMhMuY2hhcmFjdGVyLlBvc2l0aW9uIpABCi5BUElGaW5k",
+            "RW5lbWllc0luUmFuZ2VPZkF0dGFja0J5RGlzdGFuY2VSZXF1ZXN0EiIKCWdh",
+            "bWVTdGF0ZRgBIAEoCzIPLmdhbWUuR2FtZVN0YXRlEiUKCHBvc2l0aW9uGAIg",
+            "ASgLMhMuY2hhcmFjdGVyLlBvc2l0aW9uEhMKC3BsYXllcl9uYW1lGAMgASgJ",
+            "IngKL0FQSUZpbmRFbmVtaWVzSW5SYW5nZU9mQXR0YWNrQnlEaXN0YW5jZVJl",
+            "c3BvbnNlEh4KBnN0YXR1cxgBIAEoCzIOLmFwaS5BUElTdGF0dXMSJQoHZW5l",
+            "bWllcxgCIAMoCzIULmNoYXJhY3Rlci5DaGFyYWN0ZXIifQobQVBJRmluZEFs",
+            "bEVuZW1pZXNIaXRSZXF1ZXN0EiIKCWdhbWVTdGF0ZRgBIAEoCzIPLmdhbWUu",
+            "R2FtZVN0YXRlEiUKCHBvc2l0aW9uGAIgASgLMhMuY2hhcmFjdGVyLlBvc2l0",
+            "aW9uEhMKC3BsYXllcl9uYW1lGAMgASgJImkKHEFQSUZpbmRBbGxFbmVtaWVz",
+            "SGl0UmVzcG9uc2USHgoGc3RhdHVzGAEgASgLMg4uYXBpLkFQSVN0YXR1cxIp",
+            "CgtlbmVtaWVzX2hpdBgCIAMoCzIULmNoYXJhY3Rlci5DaGFyYWN0ZXIiewoZ",
+            "QVBJSW5SYW5nZU9mQXR0YWNrUmVxdWVzdBIiCglnYW1lU3RhdGUYASABKAsy",
+            "Dy5nYW1lLkdhbWVTdGF0ZRIlCghwb3NpdGlvbhgCIAEoCzITLmNoYXJhY3Rl",
+            "ci5Qb3NpdGlvbhITCgtwbGF5ZXJfbmFtZRgDIAEoCSJVChpBUElJblJhbmdl",
+            "T2ZBdHRhY2tSZXNwb25zZRIeCgZzdGF0dXMYASABKAsyDi5hcGkuQVBJU3Rh",
+            "dHVzEhcKD2luUmFuZ2VPZkF0dGFjaxgCIAEoCCJoChtBUElGaW5kQ2xvc2Vz",
+            "dFBvcnRhbFJlcXVlc3QSIgoJZ2FtZVN0YXRlGAEgASgLMg8uZ2FtZS5HYW1l",
+            "U3RhdGUSJQoIcG9zaXRpb24YAiABKAsyEy5jaGFyYWN0ZXIuUG9zaXRpb24i",
+            "YwocQVBJRmluZENsb3Nlc3RQb3J0YWxSZXNwb25zZRIeCgZzdGF0dXMYASAB",
+            "KAsyDi5hcGkuQVBJU3RhdHVzEiMKBnBvcnRhbBgCIAEoCzITLmNoYXJhY3Rl",
+            "ci5Qb3NpdGlvbiI7ChVBUElMZWFkZXJCb2FyZFJlcXVlc3QSIgoJZ2FtZVN0",
+            "YXRlGAEgASgLMg8uZ2FtZS5HYW1lU3RhdGUiYAoWQVBJTGVhZGVyQm9hcmRS",
+            "ZXNwb25zZRIeCgZzdGF0dXMYASABKAsyDi5hcGkuQVBJU3RhdHVzEiYKC2xl",
+            "YWRlckJvYXJkGAIgAygLMhEuY2hhcmFjdGVyLlBsYXllckI8Ch5tZWNoLm1h",
+            "bmlhLmVuZ2luZS5kb21haW4ubW9kZWxCCUFwaVByb3Rvc6oCDk1NMjYuSU8u",
+            "TW9kZWxzYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::MM26.IO.Models.CharacterReflection.Descriptor, global::MM26.IO.Models.GameReflection.Descriptor, global::MM26.IO.Models.ItemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIStatus), global::MM26.IO.Models.APIStatus.Parser, new[]{ "Status", "Message" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIPathFindingRequest), global::MM26.IO.Models.APIPathFindingRequest.Parser, new[]{ "GameState", "Start", "End" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIPathFindingResponse), global::MM26.IO.Models.APIPathFindingResponse.Parser, new[]{ "Status", "Path" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIFindEnemiesRequest), global::MM26.IO.Models.APIFindEnemiesRequest.Parser, new[]{ "GameState", "PlayerName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIFindEnemiesResponse), global::MM26.IO.Models.APIFindEnemiesResponse.Parser, new[]{ "Status", "Enemies" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIFindMonstersRequest), global::MM26.IO.Models.APIFindMonstersRequest.Parser, new[]{ "GameState", "PlayerName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIFindMonstersResponse), global::MM26.IO.Models.APIFindMonstersResponse.Parser, new[]{ "Status", "Monsters" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIFindEnemiesInRangeRequest), global::MM26.IO.Models.APIFindEnemiesInRangeRequest.Parser, new[]{ "GameState", "PlayerName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIFindEnemiesInRangeResponse), global::MM26.IO.Models.APIFindEnemiesInRangeResponse.Parser, new[]{ "Status", "Enemies" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APICanBeAttackedRequest), global::MM26.IO.Models.APICanBeAttackedRequest.Parser, new[]{ "GameState", "PlayerName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APICanBeAttackedResponse), global::MM26.IO.Models.APICanBeAttackedResponse.Parser, new[]{ "Status", "CanBeAttacked" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIFindClosestPortalRequest), global::MM26.IO.Models.APIFindClosestPortalRequest.Parser, new[]{ "GameState", "PlayerName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIFindEnemiesByDistanceRequest), global::MM26.IO.Models.APIFindEnemiesByDistanceRequest.Parser, new[]{ "GameState", "Position", "PlayerName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIFindEnemiesByDistanceResponse), global::MM26.IO.Models.APIFindEnemiesByDistanceResponse.Parser, new[]{ "Status", "Enemies" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIFindMonstersByExpRequest), global::MM26.IO.Models.APIFindMonstersByExpRequest.Parser, new[]{ "GameState", "Position" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIFindMonstersByExpResponse), global::MM26.IO.Models.APIFindMonstersByExpResponse.Parser, new[]{ "Status", "Monsters" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIFindItemsInRangeByDistanceRequest), global::MM26.IO.Models.APIFindItemsInRangeByDistanceRequest.Parser, new[]{ "GameState", "Position", "PlayerName", "Range" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIFindItemsInRangeByDistanceResponse), global::MM26.IO.Models.APIFindItemsInRangeByDistanceResponse.Parser, new[]{ "Status", "Items", "Positions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIFindEnemiesInRangeOfAttackByDistanceRequest), global::MM26.IO.Models.APIFindEnemiesInRangeOfAttackByDistanceRequest.Parser, new[]{ "GameState", "Position", "PlayerName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIFindEnemiesInRangeOfAttackByDistanceResponse), global::MM26.IO.Models.APIFindEnemiesInRangeOfAttackByDistanceResponse.Parser, new[]{ "Status", "Enemies" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIFindAllEnemiesHitRequest), global::MM26.IO.Models.APIFindAllEnemiesHitRequest.Parser, new[]{ "GameState", "Position", "PlayerName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIFindAllEnemiesHitResponse), global::MM26.IO.Models.APIFindAllEnemiesHitResponse.Parser, new[]{ "Status", "EnemiesHit" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIInRangeOfAttackRequest), global::MM26.IO.Models.APIInRangeOfAttackRequest.Parser, new[]{ "GameState", "Position", "PlayerName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIInRangeOfAttackResponse), global::MM26.IO.Models.APIInRangeOfAttackResponse.Parser, new[]{ "Status", "InRangeOfAttack" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIFindClosestPortalRequest), global::MM26.IO.Models.APIFindClosestPortalRequest.Parser, new[]{ "GameState", "Position" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIFindClosestPortalResponse), global::MM26.IO.Models.APIFindClosestPortalResponse.Parser, new[]{ "Status", "Portal" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APILeaderBoardRequest), global::MM26.IO.Models.APILeaderBoardRequest.Parser, new[]{ "GameState" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APILeaderBoardResponse), global::MM26.IO.Models.APILeaderBoardResponse.Parser, new[]{ "Status", "LeaderBoard" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIAllEnemiesHitRequest), global::MM26.IO.Models.APIAllEnemiesHitRequest.Parser, new[]{ "GameState", "PlayerName", "TargetSpot" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIAllEnemiesHitResponse), global::MM26.IO.Models.APIAllEnemiesHitResponse.Parser, new[]{ "Status", "EnemiesHit" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIItemsInRangeRequest), global::MM26.IO.Models.APIItemsInRangeRequest.Parser, new[]{ "GameState", "PlayerName", "Range" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APIItemsInRangeResponse), global::MM26.IO.Models.APIItemsInRangeResponse.Parser, new[]{ "Status", "Items" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.APILeaderBoardResponse), global::MM26.IO.Models.APILeaderBoardResponse.Parser, new[]{ "Status", "LeaderBoard" }, null, null, null, null)
           }));
     }
     #endregion
@@ -715,15 +723,15 @@ namespace MM26.IO.Models {
 
   }
 
-  public sealed partial class APIFindEnemiesRequest : pb::IMessage<APIFindEnemiesRequest>
+  public sealed partial class APIFindEnemiesByDistanceRequest : pb::IMessage<APIFindEnemiesByDistanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<APIFindEnemiesRequest> _parser = new pb::MessageParser<APIFindEnemiesRequest>(() => new APIFindEnemiesRequest());
+    private static readonly pb::MessageParser<APIFindEnemiesByDistanceRequest> _parser = new pb::MessageParser<APIFindEnemiesByDistanceRequest>(() => new APIFindEnemiesByDistanceRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<APIFindEnemiesRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<APIFindEnemiesByDistanceRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -736,22 +744,23 @@ namespace MM26.IO.Models {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIFindEnemiesRequest() {
+    public APIFindEnemiesByDistanceRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIFindEnemiesRequest(APIFindEnemiesRequest other) : this() {
+    public APIFindEnemiesByDistanceRequest(APIFindEnemiesByDistanceRequest other) : this() {
       gameState_ = other.gameState_ != null ? other.gameState_.Clone() : null;
+      position_ = other.position_ != null ? other.position_.Clone() : null;
       playerName_ = other.playerName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIFindEnemiesRequest Clone() {
-      return new APIFindEnemiesRequest(this);
+    public APIFindEnemiesByDistanceRequest Clone() {
+      return new APIFindEnemiesByDistanceRequest(this);
     }
 
     /// <summary>Field number for the "gameState" field.</summary>
@@ -765,8 +774,19 @@ namespace MM26.IO.Models {
       }
     }
 
+    /// <summary>Field number for the "position" field.</summary>
+    public const int PositionFieldNumber = 2;
+    private global::MM26.IO.Models.Position position_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::MM26.IO.Models.Position Position {
+      get { return position_; }
+      set {
+        position_ = value;
+      }
+    }
+
     /// <summary>Field number for the "player_name" field.</summary>
-    public const int PlayerNameFieldNumber = 2;
+    public const int PlayerNameFieldNumber = 3;
     private string playerName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PlayerName {
@@ -778,11 +798,11 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as APIFindEnemiesRequest);
+      return Equals(other as APIFindEnemiesByDistanceRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(APIFindEnemiesRequest other) {
+    public bool Equals(APIFindEnemiesByDistanceRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -790,6 +810,7 @@ namespace MM26.IO.Models {
         return true;
       }
       if (!object.Equals(GameState, other.GameState)) return false;
+      if (!object.Equals(Position, other.Position)) return false;
       if (PlayerName != other.PlayerName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -798,6 +819,7 @@ namespace MM26.IO.Models {
     public override int GetHashCode() {
       int hash = 1;
       if (gameState_ != null) hash ^= GameState.GetHashCode();
+      if (position_ != null) hash ^= Position.GetHashCode();
       if (PlayerName.Length != 0) hash ^= PlayerName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -816,8 +838,12 @@ namespace MM26.IO.Models {
         output.WriteRawTag(10);
         output.WriteMessage(GameState);
       }
-      if (PlayerName.Length != 0) {
+      if (position_ != null) {
         output.WriteRawTag(18);
+        output.WriteMessage(Position);
+      }
+      if (PlayerName.Length != 0) {
+        output.WriteRawTag(26);
         output.WriteString(PlayerName);
       }
       if (_unknownFields != null) {
@@ -831,6 +857,9 @@ namespace MM26.IO.Models {
       if (gameState_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameState);
       }
+      if (position_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Position);
+      }
       if (PlayerName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerName);
       }
@@ -841,7 +870,7 @@ namespace MM26.IO.Models {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(APIFindEnemiesRequest other) {
+    public void MergeFrom(APIFindEnemiesByDistanceRequest other) {
       if (other == null) {
         return;
       }
@@ -850,6 +879,12 @@ namespace MM26.IO.Models {
           GameState = new global::MM26.IO.Models.GameState();
         }
         GameState.MergeFrom(other.GameState);
+      }
+      if (other.position_ != null) {
+        if (position_ == null) {
+          Position = new global::MM26.IO.Models.Position();
+        }
+        Position.MergeFrom(other.Position);
       }
       if (other.PlayerName.Length != 0) {
         PlayerName = other.PlayerName;
@@ -876,6 +911,13 @@ namespace MM26.IO.Models {
             break;
           }
           case 18: {
+            if (position_ == null) {
+              Position = new global::MM26.IO.Models.Position();
+            }
+            input.ReadMessage(Position);
+            break;
+          }
+          case 26: {
             PlayerName = input.ReadString();
             break;
           }
@@ -901,6 +943,13 @@ namespace MM26.IO.Models {
             break;
           }
           case 18: {
+            if (position_ == null) {
+              Position = new global::MM26.IO.Models.Position();
+            }
+            input.ReadMessage(Position);
+            break;
+          }
+          case 26: {
             PlayerName = input.ReadString();
             break;
           }
@@ -911,15 +960,15 @@ namespace MM26.IO.Models {
 
   }
 
-  public sealed partial class APIFindEnemiesResponse : pb::IMessage<APIFindEnemiesResponse>
+  public sealed partial class APIFindEnemiesByDistanceResponse : pb::IMessage<APIFindEnemiesByDistanceResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<APIFindEnemiesResponse> _parser = new pb::MessageParser<APIFindEnemiesResponse>(() => new APIFindEnemiesResponse());
+    private static readonly pb::MessageParser<APIFindEnemiesByDistanceResponse> _parser = new pb::MessageParser<APIFindEnemiesByDistanceResponse>(() => new APIFindEnemiesByDistanceResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<APIFindEnemiesResponse> Parser { get { return _parser; } }
+    public static pb::MessageParser<APIFindEnemiesByDistanceResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -932,22 +981,22 @@ namespace MM26.IO.Models {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIFindEnemiesResponse() {
+    public APIFindEnemiesByDistanceResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIFindEnemiesResponse(APIFindEnemiesResponse other) : this() {
+    public APIFindEnemiesByDistanceResponse(APIFindEnemiesByDistanceResponse other) : this() {
       status_ = other.status_ != null ? other.status_.Clone() : null;
       enemies_ = other.enemies_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIFindEnemiesResponse Clone() {
-      return new APIFindEnemiesResponse(this);
+    public APIFindEnemiesByDistanceResponse Clone() {
+      return new APIFindEnemiesByDistanceResponse(this);
     }
 
     /// <summary>Field number for the "status" field.</summary>
@@ -973,11 +1022,11 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as APIFindEnemiesResponse);
+      return Equals(other as APIFindEnemiesByDistanceResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(APIFindEnemiesResponse other) {
+    public bool Equals(APIFindEnemiesByDistanceResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1031,7 +1080,7 @@ namespace MM26.IO.Models {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(APIFindEnemiesResponse other) {
+    public void MergeFrom(APIFindEnemiesByDistanceResponse other) {
       if (other == null) {
         return;
       }
@@ -1099,15 +1148,15 @@ namespace MM26.IO.Models {
 
   }
 
-  public sealed partial class APIFindMonstersRequest : pb::IMessage<APIFindMonstersRequest>
+  public sealed partial class APIFindMonstersByExpRequest : pb::IMessage<APIFindMonstersByExpRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<APIFindMonstersRequest> _parser = new pb::MessageParser<APIFindMonstersRequest>(() => new APIFindMonstersRequest());
+    private static readonly pb::MessageParser<APIFindMonstersByExpRequest> _parser = new pb::MessageParser<APIFindMonstersByExpRequest>(() => new APIFindMonstersByExpRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<APIFindMonstersRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<APIFindMonstersByExpRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -1120,22 +1169,22 @@ namespace MM26.IO.Models {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIFindMonstersRequest() {
+    public APIFindMonstersByExpRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIFindMonstersRequest(APIFindMonstersRequest other) : this() {
+    public APIFindMonstersByExpRequest(APIFindMonstersByExpRequest other) : this() {
       gameState_ = other.gameState_ != null ? other.gameState_.Clone() : null;
-      playerName_ = other.playerName_;
+      position_ = other.position_ != null ? other.position_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIFindMonstersRequest Clone() {
-      return new APIFindMonstersRequest(this);
+    public APIFindMonstersByExpRequest Clone() {
+      return new APIFindMonstersByExpRequest(this);
     }
 
     /// <summary>Field number for the "gameState" field.</summary>
@@ -1149,24 +1198,24 @@ namespace MM26.IO.Models {
       }
     }
 
-    /// <summary>Field number for the "player_name" field.</summary>
-    public const int PlayerNameFieldNumber = 2;
-    private string playerName_ = "";
+    /// <summary>Field number for the "position" field.</summary>
+    public const int PositionFieldNumber = 2;
+    private global::MM26.IO.Models.Position position_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string PlayerName {
-      get { return playerName_; }
+    public global::MM26.IO.Models.Position Position {
+      get { return position_; }
       set {
-        playerName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        position_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as APIFindMonstersRequest);
+      return Equals(other as APIFindMonstersByExpRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(APIFindMonstersRequest other) {
+    public bool Equals(APIFindMonstersByExpRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1174,7 +1223,7 @@ namespace MM26.IO.Models {
         return true;
       }
       if (!object.Equals(GameState, other.GameState)) return false;
-      if (PlayerName != other.PlayerName) return false;
+      if (!object.Equals(Position, other.Position)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1182,7 +1231,7 @@ namespace MM26.IO.Models {
     public override int GetHashCode() {
       int hash = 1;
       if (gameState_ != null) hash ^= GameState.GetHashCode();
-      if (PlayerName.Length != 0) hash ^= PlayerName.GetHashCode();
+      if (position_ != null) hash ^= Position.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1200,9 +1249,9 @@ namespace MM26.IO.Models {
         output.WriteRawTag(10);
         output.WriteMessage(GameState);
       }
-      if (PlayerName.Length != 0) {
+      if (position_ != null) {
         output.WriteRawTag(18);
-        output.WriteString(PlayerName);
+        output.WriteMessage(Position);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1215,8 +1264,8 @@ namespace MM26.IO.Models {
       if (gameState_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameState);
       }
-      if (PlayerName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerName);
+      if (position_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Position);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1225,7 +1274,7 @@ namespace MM26.IO.Models {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(APIFindMonstersRequest other) {
+    public void MergeFrom(APIFindMonstersByExpRequest other) {
       if (other == null) {
         return;
       }
@@ -1235,8 +1284,11 @@ namespace MM26.IO.Models {
         }
         GameState.MergeFrom(other.GameState);
       }
-      if (other.PlayerName.Length != 0) {
-        PlayerName = other.PlayerName;
+      if (other.position_ != null) {
+        if (position_ == null) {
+          Position = new global::MM26.IO.Models.Position();
+        }
+        Position.MergeFrom(other.Position);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1260,7 +1312,10 @@ namespace MM26.IO.Models {
             break;
           }
           case 18: {
-            PlayerName = input.ReadString();
+            if (position_ == null) {
+              Position = new global::MM26.IO.Models.Position();
+            }
+            input.ReadMessage(Position);
             break;
           }
         }
@@ -1285,7 +1340,10 @@ namespace MM26.IO.Models {
             break;
           }
           case 18: {
-            PlayerName = input.ReadString();
+            if (position_ == null) {
+              Position = new global::MM26.IO.Models.Position();
+            }
+            input.ReadMessage(Position);
             break;
           }
         }
@@ -1295,15 +1353,15 @@ namespace MM26.IO.Models {
 
   }
 
-  public sealed partial class APIFindMonstersResponse : pb::IMessage<APIFindMonstersResponse>
+  public sealed partial class APIFindMonstersByExpResponse : pb::IMessage<APIFindMonstersByExpResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<APIFindMonstersResponse> _parser = new pb::MessageParser<APIFindMonstersResponse>(() => new APIFindMonstersResponse());
+    private static readonly pb::MessageParser<APIFindMonstersByExpResponse> _parser = new pb::MessageParser<APIFindMonstersByExpResponse>(() => new APIFindMonstersByExpResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<APIFindMonstersResponse> Parser { get { return _parser; } }
+    public static pb::MessageParser<APIFindMonstersByExpResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -1316,22 +1374,22 @@ namespace MM26.IO.Models {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIFindMonstersResponse() {
+    public APIFindMonstersByExpResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIFindMonstersResponse(APIFindMonstersResponse other) : this() {
+    public APIFindMonstersByExpResponse(APIFindMonstersByExpResponse other) : this() {
       status_ = other.status_ != null ? other.status_.Clone() : null;
       monsters_ = other.monsters_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIFindMonstersResponse Clone() {
-      return new APIFindMonstersResponse(this);
+    public APIFindMonstersByExpResponse Clone() {
+      return new APIFindMonstersByExpResponse(this);
     }
 
     /// <summary>Field number for the "status" field.</summary>
@@ -1357,11 +1415,11 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as APIFindMonstersResponse);
+      return Equals(other as APIFindMonstersByExpResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(APIFindMonstersResponse other) {
+    public bool Equals(APIFindMonstersByExpResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1415,7 +1473,7 @@ namespace MM26.IO.Models {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(APIFindMonstersResponse other) {
+    public void MergeFrom(APIFindMonstersByExpResponse other) {
       if (other == null) {
         return;
       }
@@ -1483,15 +1541,15 @@ namespace MM26.IO.Models {
 
   }
 
-  public sealed partial class APIFindEnemiesInRangeRequest : pb::IMessage<APIFindEnemiesInRangeRequest>
+  public sealed partial class APIFindItemsInRangeByDistanceRequest : pb::IMessage<APIFindItemsInRangeByDistanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<APIFindEnemiesInRangeRequest> _parser = new pb::MessageParser<APIFindEnemiesInRangeRequest>(() => new APIFindEnemiesInRangeRequest());
+    private static readonly pb::MessageParser<APIFindItemsInRangeByDistanceRequest> _parser = new pb::MessageParser<APIFindItemsInRangeByDistanceRequest>(() => new APIFindItemsInRangeByDistanceRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<APIFindEnemiesInRangeRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<APIFindItemsInRangeByDistanceRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -1504,22 +1562,24 @@ namespace MM26.IO.Models {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIFindEnemiesInRangeRequest() {
+    public APIFindItemsInRangeByDistanceRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIFindEnemiesInRangeRequest(APIFindEnemiesInRangeRequest other) : this() {
+    public APIFindItemsInRangeByDistanceRequest(APIFindItemsInRangeByDistanceRequest other) : this() {
       gameState_ = other.gameState_ != null ? other.gameState_.Clone() : null;
+      position_ = other.position_ != null ? other.position_.Clone() : null;
       playerName_ = other.playerName_;
+      range_ = other.range_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIFindEnemiesInRangeRequest Clone() {
-      return new APIFindEnemiesInRangeRequest(this);
+    public APIFindItemsInRangeByDistanceRequest Clone() {
+      return new APIFindItemsInRangeByDistanceRequest(this);
     }
 
     /// <summary>Field number for the "gameState" field.</summary>
@@ -1533,8 +1593,499 @@ namespace MM26.IO.Models {
       }
     }
 
+    /// <summary>Field number for the "position" field.</summary>
+    public const int PositionFieldNumber = 2;
+    private global::MM26.IO.Models.Position position_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::MM26.IO.Models.Position Position {
+      get { return position_; }
+      set {
+        position_ = value;
+      }
+    }
+
     /// <summary>Field number for the "player_name" field.</summary>
-    public const int PlayerNameFieldNumber = 2;
+    public const int PlayerNameFieldNumber = 3;
+    private string playerName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PlayerName {
+      get { return playerName_; }
+      set {
+        playerName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "range" field.</summary>
+    public const int RangeFieldNumber = 4;
+    private int range_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Range {
+      get { return range_; }
+      set {
+        range_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as APIFindItemsInRangeByDistanceRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(APIFindItemsInRangeByDistanceRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(GameState, other.GameState)) return false;
+      if (!object.Equals(Position, other.Position)) return false;
+      if (PlayerName != other.PlayerName) return false;
+      if (Range != other.Range) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (gameState_ != null) hash ^= GameState.GetHashCode();
+      if (position_ != null) hash ^= Position.GetHashCode();
+      if (PlayerName.Length != 0) hash ^= PlayerName.GetHashCode();
+      if (Range != 0) hash ^= Range.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (gameState_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GameState);
+      }
+      if (position_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Position);
+      }
+      if (PlayerName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PlayerName);
+      }
+      if (Range != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(Range);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (gameState_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameState);
+      }
+      if (position_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Position);
+      }
+      if (PlayerName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerName);
+      }
+      if (Range != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Range);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(APIFindItemsInRangeByDistanceRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.gameState_ != null) {
+        if (gameState_ == null) {
+          GameState = new global::MM26.IO.Models.GameState();
+        }
+        GameState.MergeFrom(other.GameState);
+      }
+      if (other.position_ != null) {
+        if (position_ == null) {
+          Position = new global::MM26.IO.Models.Position();
+        }
+        Position.MergeFrom(other.Position);
+      }
+      if (other.PlayerName.Length != 0) {
+        PlayerName = other.PlayerName;
+      }
+      if (other.Range != 0) {
+        Range = other.Range;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (gameState_ == null) {
+              GameState = new global::MM26.IO.Models.GameState();
+            }
+            input.ReadMessage(GameState);
+            break;
+          }
+          case 18: {
+            if (position_ == null) {
+              Position = new global::MM26.IO.Models.Position();
+            }
+            input.ReadMessage(Position);
+            break;
+          }
+          case 26: {
+            PlayerName = input.ReadString();
+            break;
+          }
+          case 32: {
+            Range = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (gameState_ == null) {
+              GameState = new global::MM26.IO.Models.GameState();
+            }
+            input.ReadMessage(GameState);
+            break;
+          }
+          case 18: {
+            if (position_ == null) {
+              Position = new global::MM26.IO.Models.Position();
+            }
+            input.ReadMessage(Position);
+            break;
+          }
+          case 26: {
+            PlayerName = input.ReadString();
+            break;
+          }
+          case 32: {
+            Range = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class APIFindItemsInRangeByDistanceResponse : pb::IMessage<APIFindItemsInRangeByDistanceResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<APIFindItemsInRangeByDistanceResponse> _parser = new pb::MessageParser<APIFindItemsInRangeByDistanceResponse>(() => new APIFindItemsInRangeByDistanceResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<APIFindItemsInRangeByDistanceResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::MM26.IO.Models.ApiReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public APIFindItemsInRangeByDistanceResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public APIFindItemsInRangeByDistanceResponse(APIFindItemsInRangeByDistanceResponse other) : this() {
+      status_ = other.status_ != null ? other.status_.Clone() : null;
+      items_ = other.items_.Clone();
+      positions_ = other.positions_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public APIFindItemsInRangeByDistanceResponse Clone() {
+      return new APIFindItemsInRangeByDistanceResponse(this);
+    }
+
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 1;
+    private global::MM26.IO.Models.APIStatus status_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::MM26.IO.Models.APIStatus Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "items" field.</summary>
+    public const int ItemsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::MM26.IO.Models.Item> _repeated_items_codec
+        = pb::FieldCodec.ForMessage(18, global::MM26.IO.Models.Item.Parser);
+    private readonly pbc::RepeatedField<global::MM26.IO.Models.Item> items_ = new pbc::RepeatedField<global::MM26.IO.Models.Item>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::MM26.IO.Models.Item> Items {
+      get { return items_; }
+    }
+
+    /// <summary>Field number for the "positions" field.</summary>
+    public const int PositionsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::MM26.IO.Models.Position> _repeated_positions_codec
+        = pb::FieldCodec.ForMessage(26, global::MM26.IO.Models.Position.Parser);
+    private readonly pbc::RepeatedField<global::MM26.IO.Models.Position> positions_ = new pbc::RepeatedField<global::MM26.IO.Models.Position>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::MM26.IO.Models.Position> Positions {
+      get { return positions_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as APIFindItemsInRangeByDistanceResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(APIFindItemsInRangeByDistanceResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Status, other.Status)) return false;
+      if(!items_.Equals(other.items_)) return false;
+      if(!positions_.Equals(other.positions_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (status_ != null) hash ^= Status.GetHashCode();
+      hash ^= items_.GetHashCode();
+      hash ^= positions_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (status_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Status);
+      }
+      items_.WriteTo(output, _repeated_items_codec);
+      positions_.WriteTo(output, _repeated_positions_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (status_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Status);
+      }
+      size += items_.CalculateSize(_repeated_items_codec);
+      size += positions_.CalculateSize(_repeated_positions_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(APIFindItemsInRangeByDistanceResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.status_ != null) {
+        if (status_ == null) {
+          Status = new global::MM26.IO.Models.APIStatus();
+        }
+        Status.MergeFrom(other.Status);
+      }
+      items_.Add(other.items_);
+      positions_.Add(other.positions_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (status_ == null) {
+              Status = new global::MM26.IO.Models.APIStatus();
+            }
+            input.ReadMessage(Status);
+            break;
+          }
+          case 18: {
+            items_.AddEntriesFrom(input, _repeated_items_codec);
+            break;
+          }
+          case 26: {
+            positions_.AddEntriesFrom(input, _repeated_positions_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (status_ == null) {
+              Status = new global::MM26.IO.Models.APIStatus();
+            }
+            input.ReadMessage(Status);
+            break;
+          }
+          case 18: {
+            items_.AddEntriesFrom(ref input, _repeated_items_codec);
+            break;
+          }
+          case 26: {
+            positions_.AddEntriesFrom(ref input, _repeated_positions_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class APIFindEnemiesInRangeOfAttackByDistanceRequest : pb::IMessage<APIFindEnemiesInRangeOfAttackByDistanceRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<APIFindEnemiesInRangeOfAttackByDistanceRequest> _parser = new pb::MessageParser<APIFindEnemiesInRangeOfAttackByDistanceRequest>(() => new APIFindEnemiesInRangeOfAttackByDistanceRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<APIFindEnemiesInRangeOfAttackByDistanceRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::MM26.IO.Models.ApiReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public APIFindEnemiesInRangeOfAttackByDistanceRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public APIFindEnemiesInRangeOfAttackByDistanceRequest(APIFindEnemiesInRangeOfAttackByDistanceRequest other) : this() {
+      gameState_ = other.gameState_ != null ? other.gameState_.Clone() : null;
+      position_ = other.position_ != null ? other.position_.Clone() : null;
+      playerName_ = other.playerName_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public APIFindEnemiesInRangeOfAttackByDistanceRequest Clone() {
+      return new APIFindEnemiesInRangeOfAttackByDistanceRequest(this);
+    }
+
+    /// <summary>Field number for the "gameState" field.</summary>
+    public const int GameStateFieldNumber = 1;
+    private global::MM26.IO.Models.GameState gameState_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::MM26.IO.Models.GameState GameState {
+      get { return gameState_; }
+      set {
+        gameState_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "position" field.</summary>
+    public const int PositionFieldNumber = 2;
+    private global::MM26.IO.Models.Position position_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::MM26.IO.Models.Position Position {
+      get { return position_; }
+      set {
+        position_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "player_name" field.</summary>
+    public const int PlayerNameFieldNumber = 3;
     private string playerName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PlayerName {
@@ -1546,11 +2097,11 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as APIFindEnemiesInRangeRequest);
+      return Equals(other as APIFindEnemiesInRangeOfAttackByDistanceRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(APIFindEnemiesInRangeRequest other) {
+    public bool Equals(APIFindEnemiesInRangeOfAttackByDistanceRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1558,6 +2109,7 @@ namespace MM26.IO.Models {
         return true;
       }
       if (!object.Equals(GameState, other.GameState)) return false;
+      if (!object.Equals(Position, other.Position)) return false;
       if (PlayerName != other.PlayerName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1566,6 +2118,7 @@ namespace MM26.IO.Models {
     public override int GetHashCode() {
       int hash = 1;
       if (gameState_ != null) hash ^= GameState.GetHashCode();
+      if (position_ != null) hash ^= Position.GetHashCode();
       if (PlayerName.Length != 0) hash ^= PlayerName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1584,8 +2137,12 @@ namespace MM26.IO.Models {
         output.WriteRawTag(10);
         output.WriteMessage(GameState);
       }
-      if (PlayerName.Length != 0) {
+      if (position_ != null) {
         output.WriteRawTag(18);
+        output.WriteMessage(Position);
+      }
+      if (PlayerName.Length != 0) {
+        output.WriteRawTag(26);
         output.WriteString(PlayerName);
       }
       if (_unknownFields != null) {
@@ -1599,6 +2156,9 @@ namespace MM26.IO.Models {
       if (gameState_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameState);
       }
+      if (position_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Position);
+      }
       if (PlayerName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerName);
       }
@@ -1609,7 +2169,7 @@ namespace MM26.IO.Models {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(APIFindEnemiesInRangeRequest other) {
+    public void MergeFrom(APIFindEnemiesInRangeOfAttackByDistanceRequest other) {
       if (other == null) {
         return;
       }
@@ -1618,6 +2178,12 @@ namespace MM26.IO.Models {
           GameState = new global::MM26.IO.Models.GameState();
         }
         GameState.MergeFrom(other.GameState);
+      }
+      if (other.position_ != null) {
+        if (position_ == null) {
+          Position = new global::MM26.IO.Models.Position();
+        }
+        Position.MergeFrom(other.Position);
       }
       if (other.PlayerName.Length != 0) {
         PlayerName = other.PlayerName;
@@ -1644,6 +2210,13 @@ namespace MM26.IO.Models {
             break;
           }
           case 18: {
+            if (position_ == null) {
+              Position = new global::MM26.IO.Models.Position();
+            }
+            input.ReadMessage(Position);
+            break;
+          }
+          case 26: {
             PlayerName = input.ReadString();
             break;
           }
@@ -1669,6 +2242,13 @@ namespace MM26.IO.Models {
             break;
           }
           case 18: {
+            if (position_ == null) {
+              Position = new global::MM26.IO.Models.Position();
+            }
+            input.ReadMessage(Position);
+            break;
+          }
+          case 26: {
             PlayerName = input.ReadString();
             break;
           }
@@ -1679,19 +2259,19 @@ namespace MM26.IO.Models {
 
   }
 
-  public sealed partial class APIFindEnemiesInRangeResponse : pb::IMessage<APIFindEnemiesInRangeResponse>
+  public sealed partial class APIFindEnemiesInRangeOfAttackByDistanceResponse : pb::IMessage<APIFindEnemiesInRangeOfAttackByDistanceResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<APIFindEnemiesInRangeResponse> _parser = new pb::MessageParser<APIFindEnemiesInRangeResponse>(() => new APIFindEnemiesInRangeResponse());
+    private static readonly pb::MessageParser<APIFindEnemiesInRangeOfAttackByDistanceResponse> _parser = new pb::MessageParser<APIFindEnemiesInRangeOfAttackByDistanceResponse>(() => new APIFindEnemiesInRangeOfAttackByDistanceResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<APIFindEnemiesInRangeResponse> Parser { get { return _parser; } }
+    public static pb::MessageParser<APIFindEnemiesInRangeOfAttackByDistanceResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MM26.IO.Models.ApiReflection.Descriptor.MessageTypes[8]; }
+      get { return global::MM26.IO.Models.ApiReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1700,22 +2280,22 @@ namespace MM26.IO.Models {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIFindEnemiesInRangeResponse() {
+    public APIFindEnemiesInRangeOfAttackByDistanceResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIFindEnemiesInRangeResponse(APIFindEnemiesInRangeResponse other) : this() {
+    public APIFindEnemiesInRangeOfAttackByDistanceResponse(APIFindEnemiesInRangeOfAttackByDistanceResponse other) : this() {
       status_ = other.status_ != null ? other.status_.Clone() : null;
       enemies_ = other.enemies_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIFindEnemiesInRangeResponse Clone() {
-      return new APIFindEnemiesInRangeResponse(this);
+    public APIFindEnemiesInRangeOfAttackByDistanceResponse Clone() {
+      return new APIFindEnemiesInRangeOfAttackByDistanceResponse(this);
     }
 
     /// <summary>Field number for the "status" field.</summary>
@@ -1741,11 +2321,11 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as APIFindEnemiesInRangeResponse);
+      return Equals(other as APIFindEnemiesInRangeOfAttackByDistanceResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(APIFindEnemiesInRangeResponse other) {
+    public bool Equals(APIFindEnemiesInRangeOfAttackByDistanceResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1799,7 +2379,7 @@ namespace MM26.IO.Models {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(APIFindEnemiesInRangeResponse other) {
+    public void MergeFrom(APIFindEnemiesInRangeOfAttackByDistanceResponse other) {
       if (other == null) {
         return;
       }
@@ -1867,19 +2447,19 @@ namespace MM26.IO.Models {
 
   }
 
-  public sealed partial class APICanBeAttackedRequest : pb::IMessage<APICanBeAttackedRequest>
+  public sealed partial class APIFindAllEnemiesHitRequest : pb::IMessage<APIFindAllEnemiesHitRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<APICanBeAttackedRequest> _parser = new pb::MessageParser<APICanBeAttackedRequest>(() => new APICanBeAttackedRequest());
+    private static readonly pb::MessageParser<APIFindAllEnemiesHitRequest> _parser = new pb::MessageParser<APIFindAllEnemiesHitRequest>(() => new APIFindAllEnemiesHitRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<APICanBeAttackedRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<APIFindAllEnemiesHitRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MM26.IO.Models.ApiReflection.Descriptor.MessageTypes[9]; }
+      get { return global::MM26.IO.Models.ApiReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1888,22 +2468,23 @@ namespace MM26.IO.Models {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APICanBeAttackedRequest() {
+    public APIFindAllEnemiesHitRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APICanBeAttackedRequest(APICanBeAttackedRequest other) : this() {
+    public APIFindAllEnemiesHitRequest(APIFindAllEnemiesHitRequest other) : this() {
       gameState_ = other.gameState_ != null ? other.gameState_.Clone() : null;
+      position_ = other.position_ != null ? other.position_.Clone() : null;
       playerName_ = other.playerName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APICanBeAttackedRequest Clone() {
-      return new APICanBeAttackedRequest(this);
+    public APIFindAllEnemiesHitRequest Clone() {
+      return new APIFindAllEnemiesHitRequest(this);
     }
 
     /// <summary>Field number for the "gameState" field.</summary>
@@ -1917,8 +2498,19 @@ namespace MM26.IO.Models {
       }
     }
 
+    /// <summary>Field number for the "position" field.</summary>
+    public const int PositionFieldNumber = 2;
+    private global::MM26.IO.Models.Position position_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::MM26.IO.Models.Position Position {
+      get { return position_; }
+      set {
+        position_ = value;
+      }
+    }
+
     /// <summary>Field number for the "player_name" field.</summary>
-    public const int PlayerNameFieldNumber = 2;
+    public const int PlayerNameFieldNumber = 3;
     private string playerName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PlayerName {
@@ -1930,11 +2522,11 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as APICanBeAttackedRequest);
+      return Equals(other as APIFindAllEnemiesHitRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(APICanBeAttackedRequest other) {
+    public bool Equals(APIFindAllEnemiesHitRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1942,6 +2534,7 @@ namespace MM26.IO.Models {
         return true;
       }
       if (!object.Equals(GameState, other.GameState)) return false;
+      if (!object.Equals(Position, other.Position)) return false;
       if (PlayerName != other.PlayerName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1950,6 +2543,7 @@ namespace MM26.IO.Models {
     public override int GetHashCode() {
       int hash = 1;
       if (gameState_ != null) hash ^= GameState.GetHashCode();
+      if (position_ != null) hash ^= Position.GetHashCode();
       if (PlayerName.Length != 0) hash ^= PlayerName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1968,8 +2562,12 @@ namespace MM26.IO.Models {
         output.WriteRawTag(10);
         output.WriteMessage(GameState);
       }
-      if (PlayerName.Length != 0) {
+      if (position_ != null) {
         output.WriteRawTag(18);
+        output.WriteMessage(Position);
+      }
+      if (PlayerName.Length != 0) {
+        output.WriteRawTag(26);
         output.WriteString(PlayerName);
       }
       if (_unknownFields != null) {
@@ -1983,6 +2581,9 @@ namespace MM26.IO.Models {
       if (gameState_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameState);
       }
+      if (position_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Position);
+      }
       if (PlayerName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerName);
       }
@@ -1993,7 +2594,7 @@ namespace MM26.IO.Models {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(APICanBeAttackedRequest other) {
+    public void MergeFrom(APIFindAllEnemiesHitRequest other) {
       if (other == null) {
         return;
       }
@@ -2002,6 +2603,12 @@ namespace MM26.IO.Models {
           GameState = new global::MM26.IO.Models.GameState();
         }
         GameState.MergeFrom(other.GameState);
+      }
+      if (other.position_ != null) {
+        if (position_ == null) {
+          Position = new global::MM26.IO.Models.Position();
+        }
+        Position.MergeFrom(other.Position);
       }
       if (other.PlayerName.Length != 0) {
         PlayerName = other.PlayerName;
@@ -2028,6 +2635,13 @@ namespace MM26.IO.Models {
             break;
           }
           case 18: {
+            if (position_ == null) {
+              Position = new global::MM26.IO.Models.Position();
+            }
+            input.ReadMessage(Position);
+            break;
+          }
+          case 26: {
             PlayerName = input.ReadString();
             break;
           }
@@ -2053,6 +2667,13 @@ namespace MM26.IO.Models {
             break;
           }
           case 18: {
+            if (position_ == null) {
+              Position = new global::MM26.IO.Models.Position();
+            }
+            input.ReadMessage(Position);
+            break;
+          }
+          case 26: {
             PlayerName = input.ReadString();
             break;
           }
@@ -2063,19 +2684,19 @@ namespace MM26.IO.Models {
 
   }
 
-  public sealed partial class APICanBeAttackedResponse : pb::IMessage<APICanBeAttackedResponse>
+  public sealed partial class APIFindAllEnemiesHitResponse : pb::IMessage<APIFindAllEnemiesHitResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<APICanBeAttackedResponse> _parser = new pb::MessageParser<APICanBeAttackedResponse>(() => new APICanBeAttackedResponse());
+    private static readonly pb::MessageParser<APIFindAllEnemiesHitResponse> _parser = new pb::MessageParser<APIFindAllEnemiesHitResponse>(() => new APIFindAllEnemiesHitResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<APICanBeAttackedResponse> Parser { get { return _parser; } }
+    public static pb::MessageParser<APIFindAllEnemiesHitResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MM26.IO.Models.ApiReflection.Descriptor.MessageTypes[10]; }
+      get { return global::MM26.IO.Models.ApiReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2084,22 +2705,22 @@ namespace MM26.IO.Models {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APICanBeAttackedResponse() {
+    public APIFindAllEnemiesHitResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APICanBeAttackedResponse(APICanBeAttackedResponse other) : this() {
+    public APIFindAllEnemiesHitResponse(APIFindAllEnemiesHitResponse other) : this() {
       status_ = other.status_ != null ? other.status_.Clone() : null;
-      canBeAttacked_ = other.canBeAttacked_;
+      enemiesHit_ = other.enemiesHit_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APICanBeAttackedResponse Clone() {
-      return new APICanBeAttackedResponse(this);
+    public APIFindAllEnemiesHitResponse Clone() {
+      return new APIFindAllEnemiesHitResponse(this);
     }
 
     /// <summary>Field number for the "status" field.</summary>
@@ -2113,24 +2734,23 @@ namespace MM26.IO.Models {
       }
     }
 
-    /// <summary>Field number for the "canBeAttacked" field.</summary>
-    public const int CanBeAttackedFieldNumber = 2;
-    private bool canBeAttacked_;
+    /// <summary>Field number for the "enemies_hit" field.</summary>
+    public const int EnemiesHitFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::MM26.IO.Models.Character> _repeated_enemiesHit_codec
+        = pb::FieldCodec.ForMessage(18, global::MM26.IO.Models.Character.Parser);
+    private readonly pbc::RepeatedField<global::MM26.IO.Models.Character> enemiesHit_ = new pbc::RepeatedField<global::MM26.IO.Models.Character>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool CanBeAttacked {
-      get { return canBeAttacked_; }
-      set {
-        canBeAttacked_ = value;
-      }
+    public pbc::RepeatedField<global::MM26.IO.Models.Character> EnemiesHit {
+      get { return enemiesHit_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as APICanBeAttackedResponse);
+      return Equals(other as APIFindAllEnemiesHitResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(APICanBeAttackedResponse other) {
+    public bool Equals(APIFindAllEnemiesHitResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -2138,7 +2758,7 @@ namespace MM26.IO.Models {
         return true;
       }
       if (!object.Equals(Status, other.Status)) return false;
-      if (CanBeAttacked != other.CanBeAttacked) return false;
+      if(!enemiesHit_.Equals(other.enemiesHit_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2146,7 +2766,7 @@ namespace MM26.IO.Models {
     public override int GetHashCode() {
       int hash = 1;
       if (status_ != null) hash ^= Status.GetHashCode();
-      if (CanBeAttacked != false) hash ^= CanBeAttacked.GetHashCode();
+      hash ^= enemiesHit_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2164,9 +2784,435 @@ namespace MM26.IO.Models {
         output.WriteRawTag(10);
         output.WriteMessage(Status);
       }
-      if (CanBeAttacked != false) {
+      enemiesHit_.WriteTo(output, _repeated_enemiesHit_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (status_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Status);
+      }
+      size += enemiesHit_.CalculateSize(_repeated_enemiesHit_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(APIFindAllEnemiesHitResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.status_ != null) {
+        if (status_ == null) {
+          Status = new global::MM26.IO.Models.APIStatus();
+        }
+        Status.MergeFrom(other.Status);
+      }
+      enemiesHit_.Add(other.enemiesHit_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (status_ == null) {
+              Status = new global::MM26.IO.Models.APIStatus();
+            }
+            input.ReadMessage(Status);
+            break;
+          }
+          case 18: {
+            enemiesHit_.AddEntriesFrom(input, _repeated_enemiesHit_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (status_ == null) {
+              Status = new global::MM26.IO.Models.APIStatus();
+            }
+            input.ReadMessage(Status);
+            break;
+          }
+          case 18: {
+            enemiesHit_.AddEntriesFrom(ref input, _repeated_enemiesHit_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class APIInRangeOfAttackRequest : pb::IMessage<APIInRangeOfAttackRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<APIInRangeOfAttackRequest> _parser = new pb::MessageParser<APIInRangeOfAttackRequest>(() => new APIInRangeOfAttackRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<APIInRangeOfAttackRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::MM26.IO.Models.ApiReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public APIInRangeOfAttackRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public APIInRangeOfAttackRequest(APIInRangeOfAttackRequest other) : this() {
+      gameState_ = other.gameState_ != null ? other.gameState_.Clone() : null;
+      position_ = other.position_ != null ? other.position_.Clone() : null;
+      playerName_ = other.playerName_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public APIInRangeOfAttackRequest Clone() {
+      return new APIInRangeOfAttackRequest(this);
+    }
+
+    /// <summary>Field number for the "gameState" field.</summary>
+    public const int GameStateFieldNumber = 1;
+    private global::MM26.IO.Models.GameState gameState_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::MM26.IO.Models.GameState GameState {
+      get { return gameState_; }
+      set {
+        gameState_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "position" field.</summary>
+    public const int PositionFieldNumber = 2;
+    private global::MM26.IO.Models.Position position_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::MM26.IO.Models.Position Position {
+      get { return position_; }
+      set {
+        position_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "player_name" field.</summary>
+    public const int PlayerNameFieldNumber = 3;
+    private string playerName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PlayerName {
+      get { return playerName_; }
+      set {
+        playerName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as APIInRangeOfAttackRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(APIInRangeOfAttackRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(GameState, other.GameState)) return false;
+      if (!object.Equals(Position, other.Position)) return false;
+      if (PlayerName != other.PlayerName) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (gameState_ != null) hash ^= GameState.GetHashCode();
+      if (position_ != null) hash ^= Position.GetHashCode();
+      if (PlayerName.Length != 0) hash ^= PlayerName.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (gameState_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GameState);
+      }
+      if (position_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Position);
+      }
+      if (PlayerName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PlayerName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (gameState_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameState);
+      }
+      if (position_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Position);
+      }
+      if (PlayerName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerName);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(APIInRangeOfAttackRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.gameState_ != null) {
+        if (gameState_ == null) {
+          GameState = new global::MM26.IO.Models.GameState();
+        }
+        GameState.MergeFrom(other.GameState);
+      }
+      if (other.position_ != null) {
+        if (position_ == null) {
+          Position = new global::MM26.IO.Models.Position();
+        }
+        Position.MergeFrom(other.Position);
+      }
+      if (other.PlayerName.Length != 0) {
+        PlayerName = other.PlayerName;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (gameState_ == null) {
+              GameState = new global::MM26.IO.Models.GameState();
+            }
+            input.ReadMessage(GameState);
+            break;
+          }
+          case 18: {
+            if (position_ == null) {
+              Position = new global::MM26.IO.Models.Position();
+            }
+            input.ReadMessage(Position);
+            break;
+          }
+          case 26: {
+            PlayerName = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (gameState_ == null) {
+              GameState = new global::MM26.IO.Models.GameState();
+            }
+            input.ReadMessage(GameState);
+            break;
+          }
+          case 18: {
+            if (position_ == null) {
+              Position = new global::MM26.IO.Models.Position();
+            }
+            input.ReadMessage(Position);
+            break;
+          }
+          case 26: {
+            PlayerName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class APIInRangeOfAttackResponse : pb::IMessage<APIInRangeOfAttackResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<APIInRangeOfAttackResponse> _parser = new pb::MessageParser<APIInRangeOfAttackResponse>(() => new APIInRangeOfAttackResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<APIInRangeOfAttackResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::MM26.IO.Models.ApiReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public APIInRangeOfAttackResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public APIInRangeOfAttackResponse(APIInRangeOfAttackResponse other) : this() {
+      status_ = other.status_ != null ? other.status_.Clone() : null;
+      inRangeOfAttack_ = other.inRangeOfAttack_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public APIInRangeOfAttackResponse Clone() {
+      return new APIInRangeOfAttackResponse(this);
+    }
+
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 1;
+    private global::MM26.IO.Models.APIStatus status_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::MM26.IO.Models.APIStatus Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "inRangeOfAttack" field.</summary>
+    public const int InRangeOfAttackFieldNumber = 2;
+    private bool inRangeOfAttack_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool InRangeOfAttack {
+      get { return inRangeOfAttack_; }
+      set {
+        inRangeOfAttack_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as APIInRangeOfAttackResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(APIInRangeOfAttackResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Status, other.Status)) return false;
+      if (InRangeOfAttack != other.InRangeOfAttack) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (status_ != null) hash ^= Status.GetHashCode();
+      if (InRangeOfAttack != false) hash ^= InRangeOfAttack.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (status_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Status);
+      }
+      if (InRangeOfAttack != false) {
         output.WriteRawTag(16);
-        output.WriteBool(CanBeAttacked);
+        output.WriteBool(InRangeOfAttack);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2179,7 +3225,7 @@ namespace MM26.IO.Models {
       if (status_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Status);
       }
-      if (CanBeAttacked != false) {
+      if (InRangeOfAttack != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -2189,7 +3235,7 @@ namespace MM26.IO.Models {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(APICanBeAttackedResponse other) {
+    public void MergeFrom(APIInRangeOfAttackResponse other) {
       if (other == null) {
         return;
       }
@@ -2199,8 +3245,8 @@ namespace MM26.IO.Models {
         }
         Status.MergeFrom(other.Status);
       }
-      if (other.CanBeAttacked != false) {
-        CanBeAttacked = other.CanBeAttacked;
+      if (other.InRangeOfAttack != false) {
+        InRangeOfAttack = other.InRangeOfAttack;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2224,7 +3270,7 @@ namespace MM26.IO.Models {
             break;
           }
           case 16: {
-            CanBeAttacked = input.ReadBool();
+            InRangeOfAttack = input.ReadBool();
             break;
           }
         }
@@ -2249,7 +3295,7 @@ namespace MM26.IO.Models {
             break;
           }
           case 16: {
-            CanBeAttacked = input.ReadBool();
+            InRangeOfAttack = input.ReadBool();
             break;
           }
         }
@@ -2271,7 +3317,7 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MM26.IO.Models.ApiReflection.Descriptor.MessageTypes[11]; }
+      get { return global::MM26.IO.Models.ApiReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2289,7 +3335,7 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public APIFindClosestPortalRequest(APIFindClosestPortalRequest other) : this() {
       gameState_ = other.gameState_ != null ? other.gameState_.Clone() : null;
-      playerName_ = other.playerName_;
+      position_ = other.position_ != null ? other.position_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2309,14 +3355,14 @@ namespace MM26.IO.Models {
       }
     }
 
-    /// <summary>Field number for the "player_name" field.</summary>
-    public const int PlayerNameFieldNumber = 2;
-    private string playerName_ = "";
+    /// <summary>Field number for the "position" field.</summary>
+    public const int PositionFieldNumber = 2;
+    private global::MM26.IO.Models.Position position_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string PlayerName {
-      get { return playerName_; }
+    public global::MM26.IO.Models.Position Position {
+      get { return position_; }
       set {
-        playerName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        position_ = value;
       }
     }
 
@@ -2334,7 +3380,7 @@ namespace MM26.IO.Models {
         return true;
       }
       if (!object.Equals(GameState, other.GameState)) return false;
-      if (PlayerName != other.PlayerName) return false;
+      if (!object.Equals(Position, other.Position)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2342,7 +3388,7 @@ namespace MM26.IO.Models {
     public override int GetHashCode() {
       int hash = 1;
       if (gameState_ != null) hash ^= GameState.GetHashCode();
-      if (PlayerName.Length != 0) hash ^= PlayerName.GetHashCode();
+      if (position_ != null) hash ^= Position.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2360,9 +3406,9 @@ namespace MM26.IO.Models {
         output.WriteRawTag(10);
         output.WriteMessage(GameState);
       }
-      if (PlayerName.Length != 0) {
+      if (position_ != null) {
         output.WriteRawTag(18);
-        output.WriteString(PlayerName);
+        output.WriteMessage(Position);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2375,8 +3421,8 @@ namespace MM26.IO.Models {
       if (gameState_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameState);
       }
-      if (PlayerName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerName);
+      if (position_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Position);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2395,8 +3441,11 @@ namespace MM26.IO.Models {
         }
         GameState.MergeFrom(other.GameState);
       }
-      if (other.PlayerName.Length != 0) {
-        PlayerName = other.PlayerName;
+      if (other.position_ != null) {
+        if (position_ == null) {
+          Position = new global::MM26.IO.Models.Position();
+        }
+        Position.MergeFrom(other.Position);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2420,7 +3469,10 @@ namespace MM26.IO.Models {
             break;
           }
           case 18: {
-            PlayerName = input.ReadString();
+            if (position_ == null) {
+              Position = new global::MM26.IO.Models.Position();
+            }
+            input.ReadMessage(Position);
             break;
           }
         }
@@ -2445,7 +3497,10 @@ namespace MM26.IO.Models {
             break;
           }
           case 18: {
-            PlayerName = input.ReadString();
+            if (position_ == null) {
+              Position = new global::MM26.IO.Models.Position();
+            }
+            input.ReadMessage(Position);
             break;
           }
         }
@@ -2467,7 +3522,7 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MM26.IO.Models.ApiReflection.Descriptor.MessageTypes[12]; }
+      get { return global::MM26.IO.Models.ApiReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2672,7 +3727,7 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MM26.IO.Models.ApiReflection.Descriptor.MessageTypes[13]; }
+      get { return global::MM26.IO.Models.ApiReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2836,7 +3891,7 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MM26.IO.Models.ApiReflection.Descriptor.MessageTypes[14]; }
+      get { return global::MM26.IO.Models.ApiReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3003,847 +4058,6 @@ namespace MM26.IO.Models {
           }
           case 18: {
             leaderBoard_.AddEntriesFrom(ref input, _repeated_leaderBoard_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  public sealed partial class APIAllEnemiesHitRequest : pb::IMessage<APIAllEnemiesHitRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<APIAllEnemiesHitRequest> _parser = new pb::MessageParser<APIAllEnemiesHitRequest>(() => new APIAllEnemiesHitRequest());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<APIAllEnemiesHitRequest> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::MM26.IO.Models.ApiReflection.Descriptor.MessageTypes[15]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIAllEnemiesHitRequest() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIAllEnemiesHitRequest(APIAllEnemiesHitRequest other) : this() {
-      gameState_ = other.gameState_ != null ? other.gameState_.Clone() : null;
-      playerName_ = other.playerName_;
-      targetSpot_ = other.targetSpot_ != null ? other.targetSpot_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIAllEnemiesHitRequest Clone() {
-      return new APIAllEnemiesHitRequest(this);
-    }
-
-    /// <summary>Field number for the "gameState" field.</summary>
-    public const int GameStateFieldNumber = 1;
-    private global::MM26.IO.Models.GameState gameState_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::MM26.IO.Models.GameState GameState {
-      get { return gameState_; }
-      set {
-        gameState_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "player_name" field.</summary>
-    public const int PlayerNameFieldNumber = 2;
-    private string playerName_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string PlayerName {
-      get { return playerName_; }
-      set {
-        playerName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "target_spot" field.</summary>
-    public const int TargetSpotFieldNumber = 3;
-    private global::MM26.IO.Models.Position targetSpot_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::MM26.IO.Models.Position TargetSpot {
-      get { return targetSpot_; }
-      set {
-        targetSpot_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as APIAllEnemiesHitRequest);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(APIAllEnemiesHitRequest other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(GameState, other.GameState)) return false;
-      if (PlayerName != other.PlayerName) return false;
-      if (!object.Equals(TargetSpot, other.TargetSpot)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (gameState_ != null) hash ^= GameState.GetHashCode();
-      if (PlayerName.Length != 0) hash ^= PlayerName.GetHashCode();
-      if (targetSpot_ != null) hash ^= TargetSpot.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (gameState_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(GameState);
-      }
-      if (PlayerName.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(PlayerName);
-      }
-      if (targetSpot_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(TargetSpot);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (gameState_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameState);
-      }
-      if (PlayerName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerName);
-      }
-      if (targetSpot_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TargetSpot);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(APIAllEnemiesHitRequest other) {
-      if (other == null) {
-        return;
-      }
-      if (other.gameState_ != null) {
-        if (gameState_ == null) {
-          GameState = new global::MM26.IO.Models.GameState();
-        }
-        GameState.MergeFrom(other.GameState);
-      }
-      if (other.PlayerName.Length != 0) {
-        PlayerName = other.PlayerName;
-      }
-      if (other.targetSpot_ != null) {
-        if (targetSpot_ == null) {
-          TargetSpot = new global::MM26.IO.Models.Position();
-        }
-        TargetSpot.MergeFrom(other.TargetSpot);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (gameState_ == null) {
-              GameState = new global::MM26.IO.Models.GameState();
-            }
-            input.ReadMessage(GameState);
-            break;
-          }
-          case 18: {
-            PlayerName = input.ReadString();
-            break;
-          }
-          case 26: {
-            if (targetSpot_ == null) {
-              TargetSpot = new global::MM26.IO.Models.Position();
-            }
-            input.ReadMessage(TargetSpot);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (gameState_ == null) {
-              GameState = new global::MM26.IO.Models.GameState();
-            }
-            input.ReadMessage(GameState);
-            break;
-          }
-          case 18: {
-            PlayerName = input.ReadString();
-            break;
-          }
-          case 26: {
-            if (targetSpot_ == null) {
-              TargetSpot = new global::MM26.IO.Models.Position();
-            }
-            input.ReadMessage(TargetSpot);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  public sealed partial class APIAllEnemiesHitResponse : pb::IMessage<APIAllEnemiesHitResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<APIAllEnemiesHitResponse> _parser = new pb::MessageParser<APIAllEnemiesHitResponse>(() => new APIAllEnemiesHitResponse());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<APIAllEnemiesHitResponse> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::MM26.IO.Models.ApiReflection.Descriptor.MessageTypes[16]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIAllEnemiesHitResponse() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIAllEnemiesHitResponse(APIAllEnemiesHitResponse other) : this() {
-      status_ = other.status_ != null ? other.status_.Clone() : null;
-      enemiesHit_ = other.enemiesHit_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIAllEnemiesHitResponse Clone() {
-      return new APIAllEnemiesHitResponse(this);
-    }
-
-    /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 1;
-    private global::MM26.IO.Models.APIStatus status_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::MM26.IO.Models.APIStatus Status {
-      get { return status_; }
-      set {
-        status_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "enemies_hit" field.</summary>
-    public const int EnemiesHitFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::MM26.IO.Models.Character> _repeated_enemiesHit_codec
-        = pb::FieldCodec.ForMessage(18, global::MM26.IO.Models.Character.Parser);
-    private readonly pbc::RepeatedField<global::MM26.IO.Models.Character> enemiesHit_ = new pbc::RepeatedField<global::MM26.IO.Models.Character>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::MM26.IO.Models.Character> EnemiesHit {
-      get { return enemiesHit_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as APIAllEnemiesHitResponse);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(APIAllEnemiesHitResponse other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(Status, other.Status)) return false;
-      if(!enemiesHit_.Equals(other.enemiesHit_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (status_ != null) hash ^= Status.GetHashCode();
-      hash ^= enemiesHit_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (status_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Status);
-      }
-      enemiesHit_.WriteTo(output, _repeated_enemiesHit_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (status_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Status);
-      }
-      size += enemiesHit_.CalculateSize(_repeated_enemiesHit_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(APIAllEnemiesHitResponse other) {
-      if (other == null) {
-        return;
-      }
-      if (other.status_ != null) {
-        if (status_ == null) {
-          Status = new global::MM26.IO.Models.APIStatus();
-        }
-        Status.MergeFrom(other.Status);
-      }
-      enemiesHit_.Add(other.enemiesHit_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (status_ == null) {
-              Status = new global::MM26.IO.Models.APIStatus();
-            }
-            input.ReadMessage(Status);
-            break;
-          }
-          case 18: {
-            enemiesHit_.AddEntriesFrom(input, _repeated_enemiesHit_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (status_ == null) {
-              Status = new global::MM26.IO.Models.APIStatus();
-            }
-            input.ReadMessage(Status);
-            break;
-          }
-          case 18: {
-            enemiesHit_.AddEntriesFrom(ref input, _repeated_enemiesHit_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  public sealed partial class APIItemsInRangeRequest : pb::IMessage<APIItemsInRangeRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<APIItemsInRangeRequest> _parser = new pb::MessageParser<APIItemsInRangeRequest>(() => new APIItemsInRangeRequest());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<APIItemsInRangeRequest> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::MM26.IO.Models.ApiReflection.Descriptor.MessageTypes[17]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIItemsInRangeRequest() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIItemsInRangeRequest(APIItemsInRangeRequest other) : this() {
-      gameState_ = other.gameState_ != null ? other.gameState_.Clone() : null;
-      playerName_ = other.playerName_;
-      range_ = other.range_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIItemsInRangeRequest Clone() {
-      return new APIItemsInRangeRequest(this);
-    }
-
-    /// <summary>Field number for the "gameState" field.</summary>
-    public const int GameStateFieldNumber = 1;
-    private global::MM26.IO.Models.GameState gameState_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::MM26.IO.Models.GameState GameState {
-      get { return gameState_; }
-      set {
-        gameState_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "player_name" field.</summary>
-    public const int PlayerNameFieldNumber = 2;
-    private string playerName_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string PlayerName {
-      get { return playerName_; }
-      set {
-        playerName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "range" field.</summary>
-    public const int RangeFieldNumber = 3;
-    private int range_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Range {
-      get { return range_; }
-      set {
-        range_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as APIItemsInRangeRequest);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(APIItemsInRangeRequest other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(GameState, other.GameState)) return false;
-      if (PlayerName != other.PlayerName) return false;
-      if (Range != other.Range) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (gameState_ != null) hash ^= GameState.GetHashCode();
-      if (PlayerName.Length != 0) hash ^= PlayerName.GetHashCode();
-      if (Range != 0) hash ^= Range.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (gameState_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(GameState);
-      }
-      if (PlayerName.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(PlayerName);
-      }
-      if (Range != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(Range);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (gameState_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameState);
-      }
-      if (PlayerName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PlayerName);
-      }
-      if (Range != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Range);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(APIItemsInRangeRequest other) {
-      if (other == null) {
-        return;
-      }
-      if (other.gameState_ != null) {
-        if (gameState_ == null) {
-          GameState = new global::MM26.IO.Models.GameState();
-        }
-        GameState.MergeFrom(other.GameState);
-      }
-      if (other.PlayerName.Length != 0) {
-        PlayerName = other.PlayerName;
-      }
-      if (other.Range != 0) {
-        Range = other.Range;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (gameState_ == null) {
-              GameState = new global::MM26.IO.Models.GameState();
-            }
-            input.ReadMessage(GameState);
-            break;
-          }
-          case 18: {
-            PlayerName = input.ReadString();
-            break;
-          }
-          case 24: {
-            Range = input.ReadInt32();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (gameState_ == null) {
-              GameState = new global::MM26.IO.Models.GameState();
-            }
-            input.ReadMessage(GameState);
-            break;
-          }
-          case 18: {
-            PlayerName = input.ReadString();
-            break;
-          }
-          case 24: {
-            Range = input.ReadInt32();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  public sealed partial class APIItemsInRangeResponse : pb::IMessage<APIItemsInRangeResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<APIItemsInRangeResponse> _parser = new pb::MessageParser<APIItemsInRangeResponse>(() => new APIItemsInRangeResponse());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<APIItemsInRangeResponse> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::MM26.IO.Models.ApiReflection.Descriptor.MessageTypes[18]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIItemsInRangeResponse() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIItemsInRangeResponse(APIItemsInRangeResponse other) : this() {
-      status_ = other.status_ != null ? other.status_.Clone() : null;
-      items_ = other.items_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public APIItemsInRangeResponse Clone() {
-      return new APIItemsInRangeResponse(this);
-    }
-
-    /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 1;
-    private global::MM26.IO.Models.APIStatus status_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::MM26.IO.Models.APIStatus Status {
-      get { return status_; }
-      set {
-        status_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "items" field.</summary>
-    public const int ItemsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::MM26.IO.Models.Item> _repeated_items_codec
-        = pb::FieldCodec.ForMessage(18, global::MM26.IO.Models.Item.Parser);
-    private readonly pbc::RepeatedField<global::MM26.IO.Models.Item> items_ = new pbc::RepeatedField<global::MM26.IO.Models.Item>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::MM26.IO.Models.Item> Items {
-      get { return items_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as APIItemsInRangeResponse);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(APIItemsInRangeResponse other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(Status, other.Status)) return false;
-      if(!items_.Equals(other.items_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (status_ != null) hash ^= Status.GetHashCode();
-      hash ^= items_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (status_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Status);
-      }
-      items_.WriteTo(output, _repeated_items_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (status_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Status);
-      }
-      size += items_.CalculateSize(_repeated_items_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(APIItemsInRangeResponse other) {
-      if (other == null) {
-        return;
-      }
-      if (other.status_ != null) {
-        if (status_ == null) {
-          Status = new global::MM26.IO.Models.APIStatus();
-        }
-        Status.MergeFrom(other.Status);
-      }
-      items_.Add(other.items_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (status_ == null) {
-              Status = new global::MM26.IO.Models.APIStatus();
-            }
-            input.ReadMessage(Status);
-            break;
-          }
-          case 18: {
-            items_.AddEntriesFrom(input, _repeated_items_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (status_ == null) {
-              Status = new global::MM26.IO.Models.APIStatus();
-            }
-            input.ReadMessage(Status);
-            break;
-          }
-          case 18: {
-            items_.AddEntriesFrom(ref input, _repeated_items_codec);
             break;
           }
         }
