@@ -21,6 +21,9 @@ namespace MM26.Board
     {
         [Header("Tiles")]
         [SerializeField]
+        private TileDatabase _tileDatabase = null;
+
+        [SerializeField]
         private Tile _voidTile = null;
 
         [SerializeField]
@@ -45,9 +48,6 @@ namespace MM26.Board
 
         [SerializeField]
         private BoardPositionLookUp _positionLookUp = null;
-
-        [SerializeField]
-        private TileDatabase _tileDatabase = null;
 
         [Header("Others")]
         [SerializeField]
@@ -86,6 +86,11 @@ namespace MM26.Board
         private void CreateMap()
         {
             var board = _data.Initial.State.BoardNames[_sceneConfiguration.BoardName];
+            // Lazy load if _tileDatabase hasn't been assigned
+            if(_tileDatabase == null)
+            {
+                _tileDatabase = TileDatabase.Instance;
+            }
 
             for (int y = 0; y < board.Rows; y++)
             {
@@ -94,23 +99,28 @@ namespace MM26.Board
                     PTile ptile = board.Grid[y * board.Rows + x];
                     Tile tile = null;
 
-                    tile = _tileDatabase.GetTile("" /* expects a tile path string */);
+                    tile = _tileDatabase.GetTile(ptile.Sprite);
+                    Debug.Log(ptile.Sprite);
 
-                    //switch (ptile.TileType)
-                    //{
-                    //    case PTileType.Void:
-                    //        tile = _voidTile;
-                    //        break;
-                    //    case PTileType.Portal:
-                    //        tile = _portalTile;
-                    //        break;
-                    //    case PTileType.Impassible:
-                    //        tile = _impassibleTile;
-                    //        break;
-                    //    case PTileType.Blank:
-                    //        tile = _blankTile;
-                    //        break;
-                    //}
+                    // Until new test is generated with ptile.Sprite, use this
+                    if (tile == null)
+                    {
+                        switch (ptile.TileType)
+                        {
+                            case PTileType.Void:
+                                tile = _voidTile;
+                                break;
+                            case PTileType.Portal:
+                                tile = _portalTile;
+                                break;
+                            case PTileType.Impassible:
+                                tile = _impassibleTile;
+                                break;
+                            case PTileType.Blank:
+                                tile = _blankTile;
+                                break;
+                        }
+                    }
 
                     if (tile == null)
                     {

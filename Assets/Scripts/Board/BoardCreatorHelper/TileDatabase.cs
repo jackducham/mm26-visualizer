@@ -18,6 +18,12 @@ namespace MM26.Board.Helper
         // key: "mm_tiles/collection/" + tile png name
         public Dictionary<string, Tile> TileDictionary = new Dictionary<string, Tile>();
 
+        [SerializeField]
+        private List<Tile> TileList = new List<Tile>();
+
+        [SerializeField]
+        private List<string> TileKeys = new List<string>();
+
         public static TileDatabase Instance;
 
         private void Awake()
@@ -29,6 +35,8 @@ namespace MM26.Board.Helper
             {
                 this.gameObject.SetActive(false);
             }
+
+            TileDictionary = new Dictionary<string, Tile>();
         }
 
         public Tile GetTile(string tilePath)
@@ -43,10 +51,17 @@ namespace MM26.Board.Helper
             return TileDictionary[tilePath];
         }
 
+        public void PopulateDictionary()
+        {
+            TileDictionary = new Dictionary<string, Tile>();
+
+            for(int i = 0; i < TileList.Count; i++)
+            {
+                TileDictionary.Add(TileKeys[i], TileList[i]);
+            }
+        }
 
 #if UNITY_EDITOR
-        [SerializeField]
-        private List<Tile> TileList = new List<Tile>();
 
         public static string g_BaseTileObjPath = "Assets/Tiles/MM26_Tiles/mm_tile_objects/";
         public static string g_BaseTilesFolderPath = "Assets/Tiles/MM26_Tiles/";
@@ -54,7 +69,7 @@ namespace MM26.Board.Helper
         /// <summary>
         /// Populates Dictionary and TileList with Tiles
         /// </summary>
-        public void PopulateDictionary()
+        public void PopulateDatabase()
         {
             Debug.Log("Running populateDictionary()");
 
@@ -73,6 +88,7 @@ namespace MM26.Board.Helper
                     //Debug.Log(key);
                     TileDictionary.Add(key, val);
                     TileList.Add(val);
+                    TileKeys.Add(key);
                 }
             }
 

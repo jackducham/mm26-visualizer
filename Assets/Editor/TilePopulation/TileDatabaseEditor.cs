@@ -16,7 +16,7 @@ namespace MM26.Board.Helper
             GUILayout.Label("Remember to run this the first time it's added to a scene!");
             if (GUILayout.Button("Populate TileDatabase"))
             {
-                myScript.PopulateDictionary();
+                myScript.PopulateDatabase();
             }
 
             if (GUILayout.Button("Test TileDatabase"))
