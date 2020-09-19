@@ -130,7 +130,8 @@ namespace MM26.Tests
             {
                 board.Grid.Add(new Tile()
                 {
-                    TileType = tile.TileType
+                    TileType = tile.TileType,
+                    Sprite = tile.Sprite
                 });
             }
 
