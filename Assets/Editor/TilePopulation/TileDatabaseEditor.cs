@@ -13,9 +13,15 @@ namespace MM26.Board.Helper
             DrawDefaultInspector();
             TileDatabase myScript = (TileDatabase)target;
 
+            GUILayout.Label("Remember to run this the first time it's added to a scene!");
             if (GUILayout.Button("Populate TileDatabase"))
             {
-                myScript.populateDictionary();
+                myScript.PopulateDictionary();
+            }
+
+            if (GUILayout.Button("Test TileDatabase"))
+            {
+                myScript.TestDatabase();
             }
         }
     }
