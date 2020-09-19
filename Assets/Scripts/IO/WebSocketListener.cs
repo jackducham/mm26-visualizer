@@ -32,8 +32,8 @@ namespace MM26.IO
     public sealed class StandaloneWebSocketListener : WebSocketListener
     {
         bool _idle = true;
-        ClientWebSocket _client = new ClientWebSocket();
-        Buffer _buffer = new Buffer();
+        private readonly ClientWebSocket _client = new ClientWebSocket();
+        private readonly Buffer _buffer = new Buffer();
 
         public override void Dispose()
         {
@@ -66,7 +66,6 @@ namespace MM26.IO
                         if (_client.State != WebSocketState.Open)
                         {
                             _idle = true;
-                            Debug.Log(_client.CloseStatus);
                             onFailure();
 
                             return;

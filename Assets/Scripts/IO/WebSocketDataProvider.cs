@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
 using MM26.IO.Models;
@@ -18,40 +19,62 @@ namespace MM26.IO
         private SceneLifeCycle _sceneLifeCycle = null;
 
         private WebSocketListener _listener = null;
+        private float _waitProgress = 0.0f;
 
         private void OnEnable()
         {
-            _sceneLifeCycle.FetchData.AddListener(this.OnFetchData);
+            _sceneLifeCycle.FetchData.AddListener(this.TryConnect);
         }
 
         private void OnDisable()
         {
-            _sceneLifeCycle.FetchData.RemoveListener(this.OnFetchData);
+            _sceneLifeCycle.FetchData.RemoveListener(this.TryConnect);
         }
 
         private void OnDestroy()
         {
-            _listener.Dispose();
+            if (_listener != null)
+            {
+                _listener.Dispose();
+            }
         }
 
-        private void OnFetchData()
+        private void Update()
         {
+            if (_listener == null)
+            {
+                _waitProgress += Time.deltaTime;
+
+                if (_waitProgress >= 5.0f)
+                {
+                    _waitProgress = 0.0f;
+                    this.TryConnect();
+                }
+            }
+        }
+
+        private void TryConnect()
+        {
+            Debug.Log("Attempting to setup connection");
+
             _listener = WebSocketListener.Platform;
 
-            Action onConnection = () =>
-            {
-                // Please preserve this log message for diagnostic purpose
-                Debug.Log("Connected");
-            };
-
-            Action onError = () =>
-            {
-                // Please preserve this log message for diagnostic purpose
-                Debug.LogError("Connection Failed");
-            };
-
             _listener.NewMessage += this.OnMessage;
-            _listener.Connect(new Uri(_sceneConfiguration.WebSocketURL), onConnection, onError);
+            _listener.Connect(new Uri(_sceneConfiguration.WebSocketURL), this.OnConnection, this.OnError);
+        }
+
+        private void OnConnection()
+        {
+            // Please preserve this log message for diagnostic purpose
+            Debug.Log("Connected");
+        }
+
+        private void OnError()
+        {
+            // Please preserve this log message for diagnostic purpose
+            Debug.LogError("Connection Failed, reconnect in 5 seconds");
+            _listener.Dispose();
+            _listener = null;
         }
 
         private void OnMessage(object sender, byte[] message)

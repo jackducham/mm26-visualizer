@@ -26,5 +26,10 @@ namespace MM26.Tests
         /// tile type (currently not in use)
         /// </summary>
         public Tile.Types.TileType TileType;
+
+        /// <summary>
+        /// Sprite path
+        /// </summary>
+        public string Sprite;
     }
 }
