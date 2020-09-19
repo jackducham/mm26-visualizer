@@ -56,6 +56,7 @@ namespace MM26.Play.Tests
                 this.GetTurn("test"),
                 new HashSet<Task>()
                 {
+                    new EffectTask(EffectType.Death, new Vector3Int(0, 0, 0)),
                     new DespawnTask("player")
                 }
             };

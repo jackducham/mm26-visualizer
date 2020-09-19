@@ -20,6 +20,8 @@ namespace MM26.Tests.Scenes
 
         private IEnumerator Simulate()
         {
+            yield return new WaitForSecondsRealtime(1.0f);
+
             _mailbox.SendTask(new EffectTask(EffectType.Death, new Vector3Int(0, 0, 0)));
             yield return new WaitForSecondsRealtime(1.0f);
 

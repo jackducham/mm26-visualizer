@@ -58,6 +58,7 @@ namespace MM26.Play.Tests
                 this.GetTurn("test"),
                 new HashSet<Task>()
                 {
+                    new EffectTask(EffectType.Spawn, new Vector3Int(1, 1, 0)),
                     new SpawnPlayerTask("player", new Vector3Int(1, 1, 0))
                 }
             };
