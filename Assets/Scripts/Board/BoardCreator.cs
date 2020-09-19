@@ -5,6 +5,7 @@ using UnityEngine.Tilemaps;
 using MM26.Components;
 using MM26.ECS;
 using MM26.Tasks;
+using MM26.Board.Helper;
 
 namespace MM26.Board
 {
@@ -45,12 +46,16 @@ namespace MM26.Board
         [SerializeField]
         private BoardPositionLookUp _positionLookUp = null;
 
+        [SerializeField]
+        private TileDatabase _tileDatabase = null;
+
         [Header("Others")]
         [SerializeField]
         private Tilemap _tilemap = null;
 
         [SerializeField]
         internal CharactersManager CharactersManager = null;
+
 
         private void OnEnable()
         {
@@ -89,21 +94,23 @@ namespace MM26.Board
                     PTile ptile = board.Grid[y * board.Rows + x];
                     Tile tile = null;
 
-                    switch (ptile.TileType)
-                    {
-                        case PTileType.Void:
-                            tile = _voidTile;
-                            break;
-                        case PTileType.Portal:
-                            tile = _portalTile;
-                            break;
-                        case PTileType.Impassible:
-                            tile = _impassibleTile;
-                            break;
-                        case PTileType.Blank:
-                            tile = _blankTile;
-                            break;
-                    }
+                    tile = _tileDatabase.GetTile("" /* expects a tile path string */);
+
+                    //switch (ptile.TileType)
+                    //{
+                    //    case PTileType.Void:
+                    //        tile = _voidTile;
+                    //        break;
+                    //    case PTileType.Portal:
+                    //        tile = _portalTile;
+                    //        break;
+                    //    case PTileType.Impassible:
+                    //        tile = _impassibleTile;
+                    //        break;
+                    //    case PTileType.Blank:
+                    //        tile = _blankTile;
+                    //        break;
+                    //}
 
                     if (tile == null)
                     {

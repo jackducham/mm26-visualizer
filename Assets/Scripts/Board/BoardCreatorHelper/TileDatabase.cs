@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using ICSharpCode.NRefactory.Ast;
 #if UNITY_EDITOR
 using UnityEditor;
 using System.IO;
@@ -16,6 +17,19 @@ namespace MM26.Board.Helper
     {
         // key: "mm_tiles/collection/" + tile png name
         public Dictionary<string, Tile> TileDictionary = new Dictionary<string, Tile>();
+
+        public static TileDatabase Instance;
+
+        private void Awake()
+        {
+            if(Instance == null)
+            {
+                Instance = this;
+            } else
+            {
+                this.gameObject.SetActive(false);
+            }
+        }
 
         public Tile GetTile(string tilePath)
         {
