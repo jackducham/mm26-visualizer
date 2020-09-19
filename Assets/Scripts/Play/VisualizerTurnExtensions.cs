@@ -126,6 +126,22 @@ namespace MM26.Play
 
                     batch.Add(new EffectTask(EffectType.Portal, position));
                     break;
+                case DecisionType.Attack:
+                    if (character.Position.BoardId == sceneConfiguration.BoardName)
+                    {
+                        foreach (var location in characterChange.AttackLocations)
+                        {
+                            var attackPosition = new Vector3Int()
+                            {
+                                x = location.X,
+                                y = location.Y,
+                                z = 0
+                            };
+
+                            batch.Add(new EffectTask(EffectType.Attack, attackPosition));
+                        }
+                    }
+                    break;
                 case DecisionType.None:
                     break;
                 default:
