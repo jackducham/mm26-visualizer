@@ -21,6 +21,9 @@ namespace MM26.Board
         [SerializeField]
         private GameObject _portalEffect = null;
 
+        [SerializeField]
+        private GameObject _attackEffect = null;
+
         public void CreateDeathEffect(Vector3Int position)
         {
             this.CreateEffect(_deathEffect, position);
@@ -34,6 +37,11 @@ namespace MM26.Board
         public void CreatePortalEffect(Vector3Int position)
         {
             this.CreateEffect(_portalEffect, position);
+        }
+
+        public void CreateAttackEffect(Vector3Int position)
+        {
+            this.CreateEffect(_attackEffect, position);
         }
 
         private void CreateEffect(GameObject prefab, Vector3Int position)

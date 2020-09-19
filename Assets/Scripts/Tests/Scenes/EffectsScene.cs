@@ -29,6 +29,9 @@ namespace MM26.Tests.Scenes
             yield return new WaitForSecondsRealtime(1.0f);
 
             _mailbox.SendTask(new EffectTask(EffectType.Portal, new Vector3Int(1, 1, 0)));
+            yield return new WaitForSecondsRealtime(1.0f);
+
+            _mailbox.SendTask(new EffectTask(EffectType.Attack, new Vector3Int(2, 1, 0)));
         }
     }
 }
