@@ -13,5 +13,7 @@ namespace MM26.Components
         public TextMeshProUGUI HealthLabel = null;
         public TextMeshProUGUI LevelLabel = null;
         public TextMeshProUGUI ExperienceLabel = null;
+
+        public Canvas Canvas = null;
     }
 }

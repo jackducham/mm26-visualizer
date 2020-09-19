@@ -128,6 +128,7 @@ MonoBehaviour:
   HealthLabel: {fileID: 6816255686685982337}
   LevelLabel: {fileID: 3138662750859671704}
   ExperienceLabel: {fileID: 4090260383852669714}
+  Canvas: {fileID: 6108555224455000530}
 --- !u!114 &1555258926759968228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,6 +359,12 @@ PrefabInstance:
 --- !u!224 &7876796009664419634 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5677796541789318128, guid: 59089b71c3791419c91098811cb02fa5,
+    type: 3}
+  m_PrefabInstance: {fileID: 2565809217055767746}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &6108555224455000530 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 8601426134362950928, guid: 59089b71c3791419c91098811cb02fa5,
     type: 3}
   m_PrefabInstance: {fileID: 2565809217055767746}
   m_PrefabAsset: {fileID: 0}
