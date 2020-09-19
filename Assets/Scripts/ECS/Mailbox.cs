@@ -78,7 +78,7 @@ namespace MM26.ECS
         /// <param name="o">the subscriber object</param>
         /// <typeparam name="T">the task type</typeparam>
         /// <returns></returns>
-        public Task[] GetSubscribedTasksForType<T>(object o) where T : Task
+        public T[] GetSubscribedTasksForType<T>(object o) where T : Task
         {
             HashSet<Task> tasks = null;
 
@@ -97,7 +97,7 @@ namespace MM26.ECS
                 Debug.LogErrorFormat("The object has not subscribed to messages of {0}", msgType);
             }
 
-            return tasks.ToArray();
+            return tasks.Select(task => (T)task).ToArray();
         }
 
         public void RemoveTask(Task msg)

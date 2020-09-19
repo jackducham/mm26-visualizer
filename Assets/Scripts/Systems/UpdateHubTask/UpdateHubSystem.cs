@@ -24,11 +24,11 @@ namespace MM26.Systems.UpdateHubTask
 
         protected override void OnUpdate()
         {
-            Task[] tasks = _mailbox.GetSubscribedTasksForType<Tasks.UpdateHubTask>(this);
+            Tasks.UpdateHubTask[] tasks = _mailbox.GetSubscribedTasksForType<Tasks.UpdateHubTask>(this);
 
             for (int i = 0; i < tasks.Length; i++)
             {
-                Tasks.UpdateHubTask updateHubTask = tasks[i] as Tasks.UpdateHubTask;
+                Tasks.UpdateHubTask updateHubTask = tasks[i];
                 _tasks[updateHubTask.EntityName] = updateHubTask;
                 _mailbox.RemoveTask(updateHubTask);
             }

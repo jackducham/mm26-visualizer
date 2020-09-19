@@ -65,6 +65,7 @@ namespace MM26.Play.Tests
                 this.GetBoard("test"),
                 new HashSet<Task>()
                 {
+                    new EffectTask(EffectType.Portal, new Vector3Int(1, 1, 0)),
                     new SpawnPlayerTask("player", new Vector3Int(1, 1, 0))
                 }
             };
@@ -77,6 +78,7 @@ namespace MM26.Play.Tests
                 this.GetBoard("other"),
                 new HashSet<Task>()
                 {
+                    new EffectTask(EffectType.Portal, new Vector3Int(1, 1, 0)),
                     new DespawnTask("player")
                 }
             };

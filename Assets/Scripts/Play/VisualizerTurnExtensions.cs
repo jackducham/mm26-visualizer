@@ -73,12 +73,18 @@ namespace MM26.Play
             BoardPositionLookUp boardPositionLookUp,
             HashSet<string> ignoreForHubUpdate)
         {
+            var position = new Vector3Int(
+                character.Position.X,
+                character.Position.Y,
+                0);
+
             if (characterChange.Died)
             {
                 if (character.Position.BoardId == sceneConfiguration.BoardName)
                 {
                     ignoreForHubUpdate.Add(entity);
                     batch.Add(new DespawnTask(entity));
+                    batch.Add(new EffectTask(EffectType.Death, position));
                 }
                 
                 return;
@@ -88,13 +94,8 @@ namespace MM26.Play
                 if (character.Position.BoardId == sceneConfiguration.BoardName)
                 {
                     ignoreForHubUpdate.Add(entity);
-
-                    var position = new Vector3Int(
-                        character.Position.X,
-                        character.Position.Y,
-                        0);
-
                     batch.Add(new SpawnPlayerTask(entity, position));
+                    batch.Add(new EffectTask(EffectType.Spawn, position));
                 }
                 
                 return;
@@ -120,13 +121,10 @@ namespace MM26.Play
                     }
                     else
                     {
-                        var position = new Vector3Int(
-                            character.Position.X,
-                            character.Position.Y,
-                            0);
-
                         batch.Add(new SpawnPlayerTask(entity, position));
                     }
+
+                    batch.Add(new EffectTask(EffectType.Portal, position));
                     break;
                 case DecisionType.None:
                     break;

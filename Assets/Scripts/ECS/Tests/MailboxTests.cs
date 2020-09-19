@@ -40,8 +40,8 @@ namespace MM26.ECS.Tests
             mailbox.SubscribeToTaskType<PositionTask>(this);
             mailbox.SubscribeToTaskType<RotationTask>(this);
 
-            Task[] positionTasks = mailbox.GetSubscribedTasksForType<PositionTask>(this);
-            Task[] rotationTasks = mailbox.GetSubscribedTasksForType<PositionTask>(this);
+            PositionTask[] positionTasks = mailbox.GetSubscribedTasksForType<PositionTask>(this);
+            PositionTask[] rotationTasks = mailbox.GetSubscribedTasksForType<PositionTask>(this);
 
             Assert.NotNull(positionTasks);
             Assert.NotNull(rotationTasks);
@@ -66,17 +66,13 @@ namespace MM26.ECS.Tests
             mailbox.SendTask(new RotationTask("test-1"));
             mailbox.SendTask(new GarbageTask("test-1"));
 
-            PositionTask[] positionTasks = mailbox.GetSubscribedTasksForType<PositionTask>(this)
-                .Select((task) => { return task as PositionTask; })
-                .ToArray();
+            PositionTask[] positionTasks = mailbox.GetSubscribedTasksForType<PositionTask>(this);
 
             Assert.AreEqual(2, positionTasks.Length);
             Assert.AreEqual(positionTasks[0].EntityName, "test-0");
             Assert.AreEqual(positionTasks[1].EntityName, "test-1");
 
-            RotationTask[] rotationTasks = mailbox.GetSubscribedTasksForType<RotationTask>(this)
-                .Select((task) => { return task as RotationTask; })
-                .ToArray();
+            RotationTask[] rotationTasks = mailbox.GetSubscribedTasksForType<RotationTask>(this);
 
             Assert.AreEqual(2, rotationTasks.Length);
             Assert.AreEqual("test-0", rotationTasks[0].EntityName);
@@ -113,9 +109,7 @@ namespace MM26.ECS.Tests
 
             mailbox.Update();
 
-            RotationTask[] rotationTasks = mailbox.GetSubscribedTasksForType<RotationTask>(this)
-                .Select(task => { return task as RotationTask; })
-                .ToArray();
+            RotationTask[] rotationTasks = mailbox.GetSubscribedTasksForType<RotationTask>(this);
 
             Assert.AreEqual(1, rotationTasks.Length);
             Assert.AreEqual("test-0", rotationTasks[0].EntityName);

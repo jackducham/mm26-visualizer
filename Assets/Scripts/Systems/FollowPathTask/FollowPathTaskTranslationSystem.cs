@@ -32,12 +32,12 @@ namespace MM26.Systems.FollowPathTask
 
         protected override void OnUpdate()
         {
-            Task[] tasks = _mailbox.GetSubscribedTasksForType<Tasks.FollowPathTask>(this);
+            Tasks.FollowPathTask[] tasks = _mailbox.GetSubscribedTasksForType<Tasks.FollowPathTask>(this);
 
 
             for (int i = 0; i < tasks.Length; i++)
             {
-                Tasks.FollowPathTask movementTask = tasks[i] as Tasks.FollowPathTask;
+                Tasks.FollowPathTask movementTask = tasks[i];
                 _tasksToBeScheduled[movementTask.EntityName] = movementTask;
                 _mailbox.RemoveTask(movementTask);
             }
