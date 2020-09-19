@@ -8,6 +8,9 @@ using UnityEditor;
 #endif
 
 namespace MM26.Board.Helper {
+    /// <summary>
+    /// This is not actually meant to be used in the build. Only use it to generate Tile assets
+    /// </summary>
     public class BoardCreatorHelper : MonoBehaviour
     {
         /// <summary>
@@ -28,14 +31,17 @@ namespace MM26.Board.Helper {
                 foreach(string str in dir)
                 {
                     if(!str.Contains(".meta"))
-                        GenerateTileFullRelativePath(str);
-                    //Debug.Log(str);
+                        GenerateTile(str);
 
                 }
             } 
         }
 
-        public void GenerateTileFullRelativePath(string sourcePath)
+        /// <summary>
+        /// Generates a tile object from a Sprite
+        /// </summary>
+        /// <param name="sourcePath"></param>
+        public void GenerateTile(string sourcePath)
         {
             Tile newTile = ScriptableObject.CreateInstance<Tile>();
             // Assuming sourcePath starts with "mm_tiles/" we remove it
@@ -45,59 +51,15 @@ namespace MM26.Board.Helper {
             AssetDatabase.CreateAsset(newTile, g_BaseTileObjPath + sourcePath.Replace("Assets/Tiles/MM26_Tiles/mm_tiles/","").Replace(".png", ".asset").Replace(".PNG", ".asset"));
         }
 
-        public void GenerateTile(string sourcePath)
+        /// <summary>
+        /// Fetches a Sprite object from given the file path
+        /// </summary>
+        /// <param name="sourcePath">The relative path to the object starting with "Assets/"</param>
+        /// <returns></returns>
+        public Sprite LoadExistingSprite(string sourcePath)
         {
-            Tile newTile = ScriptableObject.CreateInstance<Tile>();
-            // Assuming sourcePath starts with "mm_tiles/" we remove it
-            sourcePath = sourcePath.Remove(0, 9);
-
-            newTile.sprite = LoadNewSprite(g_BaseTilePath + sourcePath, 190.0f);
-
-            AssetDatabase.CreateAsset(newTile, g_BaseTileObjPath + sourcePath.Replace(".png", ".asset"));
-        }
-        
-        public Sprite LoadExistingSprite(string FilePath)
-        {
-            return (Sprite)AssetDatabase.LoadAssetAtPath(FilePath, typeof(Sprite));
+            return (Sprite)AssetDatabase.LoadAssetAtPath(sourcePath, typeof(Sprite));
         }
 
-        // TAKEN FROM UNITY FORUMS AT : https://forum.unity.com/threads/generating-sprites-dynamically-from-png-or-jpeg-files-in-c.343735/
-        public Sprite LoadNewSprite(string FilePath, float PixelsPerUnit = 100.0f)
-        {
-
-            // Load a PNG or JPG image from disk to a Texture2D, assign this texture to a new sprite and return its reference
-
-            Texture2D SpriteTexture = LoadTexture(FilePath);
-            string targetPath = g_BaseTileObjPath + FilePath.Replace("Assets/Tiles/MM26_Tiles/mm_tiles/collection", "sprites");
-            Sprite NewSprite = Sprite.Create(SpriteTexture, new Rect(0, 0, SpriteTexture.width, SpriteTexture.height), new Vector2(0, 0), PixelsPerUnit);
-            AssetDatabase.CreateAsset(NewSprite, targetPath);
-
-            return NewSprite;
-        }
-
-        public Texture2D LoadTexture(string FilePath)
-        {
-
-            // Load a PNG or JPG file from disk to a Texture2D
-            // Returns null if load fails
-
-            Texture2D Tex2D;
-            byte[] FileData;
-
-            if (File.Exists(FilePath))
-            {
-                FileData = File.ReadAllBytes(FilePath);
-                Tex2D = new Texture2D(2, 2);           // Create new "empty" texture
-                if (Tex2D.LoadImage(FileData))  // Load the imagedata into the texture (size is set automatically)
-                {          
-
-                    return Tex2D;                 // If data = readable -> return texture
-                }
-            } else
-            {
-                Debug.Log(FilePath);
-            }
-            return null;                     // Return null if load failed
-        }
     }
 }
