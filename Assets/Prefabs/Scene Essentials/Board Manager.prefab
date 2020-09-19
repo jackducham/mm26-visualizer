@@ -254,6 +254,8 @@ MonoBehaviour:
     type: 3}
   _portalEffect: {fileID: 7168853509491909049, guid: 01e7f2084efc04f0a80ef5ce58d15e9f,
     type: 3}
+  _attackEffect: {fileID: 2576474640127799647, guid: fdd6966f3bba54e789080879f714a43e,
+    type: 3}
 --- !u!114 &6454628664683691712
 MonoBehaviour:
   m_ObjectHideFlags: 0

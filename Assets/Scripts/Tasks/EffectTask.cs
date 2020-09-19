@@ -8,7 +8,8 @@ namespace MM26.Tasks
     {
         Spawn,
         Death,
-        Portal
+        Portal,
+        Attack
     }
 
     public class EffectTask : Task

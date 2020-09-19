@@ -90,6 +90,9 @@ namespace MM26.Board
                     case EffectType.Spawn:
                         _effectsManager.CreateSpawnEffect(task.Position);
                         break;
+                    case EffectType.Attack:
+                        _effectsManager.CreateAttackEffect(task.Position);
+                        break;
                 }
 
                 _mailbox.RemoveTask(task);
