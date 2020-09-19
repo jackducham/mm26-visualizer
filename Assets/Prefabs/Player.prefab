@@ -175,7 +175,6 @@ GameObject:
   - component: {fileID: 4388124594191054807}
   - component: {fileID: 4388124594191054806}
   - component: {fileID: 6193589129590990542}
-  - component: {fileID: 8549831051034695187}
   - component: {fileID: 4388124594191054802}
   m_Layer: 0
   m_Name: Player
@@ -292,32 +291,6 @@ MonoBehaviour:
   HealthLabel: {fileID: 7856305618237222889}
   LevelLabel: {fileID: 1734384070537095664}
   ExperienceLabel: {fileID: 818676699451112058}
---- !u!61 &8549831051034695187
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4388124594191054825}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.9, y: 1.9}
-    newSize: {x: 1.9, y: 1.9}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.9, y: 1.9}
-  m_EdgeRadius: 0
 --- !u!114 &4388124594191054802
 MonoBehaviour:
   m_ObjectHideFlags: 0
