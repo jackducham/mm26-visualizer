@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace MM26.Board
 {
@@ -7,6 +8,9 @@ namespace MM26.Board
     /// </summary>
     public class EffectsManager : MonoBehaviour
     {
+        [SerializeField]
+        private Tilemap _tilemap = null;
+        
         [Header("Prefabs")]
         [SerializeField]
         private GameObject _deathEffect = null;
@@ -16,5 +20,26 @@ namespace MM26.Board
 
         [SerializeField]
         private GameObject _portalEffect = null;
+
+        public void CreateDeathEffect(Vector3Int position)
+        {
+            this.CreateEffect(_deathEffect, position);
+        }
+
+        public void CreateSpawnEffect(Vector3Int position)
+        {
+            this.CreateEffect(_spawnEffect, position);
+        }
+
+        public void CreatePortalEffect(Vector3Int position)
+        {
+            this.CreateEffect(_portalEffect, position);
+        }
+
+        private void CreateEffect(GameObject prefab, Vector3Int position)
+        {
+            GameObject effect = Instantiate(prefab);
+            effect.transform.position = _tilemap.GetCellCenterWorld(position);
+        }
     }
 }

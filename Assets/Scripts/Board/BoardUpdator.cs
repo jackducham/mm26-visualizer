@@ -7,21 +7,26 @@ namespace MM26.Board
     public class BoardUpdator : MonoBehaviour
     {
         [SerializeField]
-        internal CharactersManager CharactersManager = null;
+        private CharactersManager _charactersManager = null;
 
         [SerializeField]
-        internal Mailbox Mailbox = null;
+        private EffectsManager _effectsManager = null;
+
+        [SerializeField]
+        private Mailbox _mailbox = null;
 
         private void OnEnable()
         {
-            this.Mailbox.SubscribeToTaskType<SpawnPlayerTask>(this);
-            this.Mailbox.SubscribeToTaskType<DespawnTask>(this);
+            _mailbox.SubscribeToTaskType<SpawnPlayerTask>(this);
+            _mailbox.SubscribeToTaskType<DespawnTask>(this);
+            _mailbox.SubscribeToTaskType<EffectTask>(this);
         }
 
         private void Update()
         {
             this.HandleSpawnTasks();
             this.HandleDespawnTasks();
+            this.HandleEffectTasks();
         }
 
         /// <summary>
@@ -31,16 +36,16 @@ namespace MM26.Board
         /// </summary>
         private void HandleSpawnTasks()
         {
-            Task[] tasks = this.Mailbox.GetSubscribedTasksForType<SpawnPlayerTask>(this);
+            SpawnPlayerTask[] tasks = _mailbox.GetSubscribedTasksForType<SpawnPlayerTask>(this);
 
             for (int i = 0; i < tasks.Length; i++)
             {
-                SpawnPlayerTask task = tasks[i] as SpawnPlayerTask;
+                SpawnPlayerTask task = tasks[i];
 
-                this.CharactersManager.CreatePlayer(task.Position, task.EntityName);
+                _charactersManager.CreatePlayer(task.Position, task.EntityName);
 
                 task.IsFinished = true;
-                this.Mailbox.RemoveTask(task);
+                _mailbox.RemoveTask(task);
             }
         }
 
@@ -51,18 +56,43 @@ namespace MM26.Board
         /// </summary>
         private void HandleDespawnTasks()
         {
-            Task[] tasks = this.Mailbox.GetSubscribedTasksForType<DespawnTask>(this);
+            DespawnTask[] tasks = _mailbox.GetSubscribedTasksForType<DespawnTask>(this);
 
             for (int i = 0; i < tasks.Length; i++)
             {
-                DespawnTask task = tasks[i] as DespawnTask;
+                DespawnTask task = tasks[i];
 
                 // FIXME: might cause performance issue (this is on a hot path)
                 GameObject entity = GameObject.Find(task.EntityName);
                 GameObject.Destroy(entity);
 
                 task.IsFinished = true;
-                this.Mailbox.RemoveTask(task);
+                _mailbox.RemoveTask(task);
+            }
+        }
+
+        private void HandleEffectTasks()
+        {
+            EffectTask[] tasks = _mailbox.GetSubscribedTasksForType<EffectTask>(this);
+
+            for (int i = 0; i < tasks.Length; i++)
+            {
+                EffectTask task = tasks[i];
+
+                switch (task.Type)
+                {
+                    case EffectType.Death:
+                        _effectsManager.CreateDeathEffect(task.Position);
+                        break;
+                    case EffectType.Portal:
+                        _effectsManager.CreatePortalEffect(task.Position);
+                        break;
+                    case EffectType.Spawn:
+                        _effectsManager.CreateSpawnEffect(task.Position);
+                        break;
+                }
+
+                _mailbox.RemoveTask(task);
             }
         }
     }
