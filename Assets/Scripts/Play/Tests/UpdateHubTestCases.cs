@@ -10,7 +10,7 @@ namespace MM26.Play.Tests
     {
         private VisualizerTurn GetTurn(string playerBoard)
         {
-            
+
             var state = new GameState();
 
             state.PlayerNames["player"] = new Player()

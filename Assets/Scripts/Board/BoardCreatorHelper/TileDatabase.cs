@@ -45,7 +45,7 @@ namespace MM26.Board.Helper
         public Tile GetTile(string tilePath)
         {
             // If the path is 
-            if(!TileDictionary.ContainsKey(tilePath))
+            if (!TileDictionary.ContainsKey(tilePath))
             {
                 Debug.LogErrorFormat("Tile at {0} not found in Dictionary. Might need to regenerate tile list", tilePath);
                 return null;
@@ -57,12 +57,10 @@ namespace MM26.Board.Helper
         public void PopulateDictionary()
         {
             TileDictionary = new Dictionary<string, Tile>();
-            Debug.Log("Key & Val length");
 
-            for(int i = 0; i < TileList.Count; i++)
+            for (int i = 0; i < TileList.Count; i++)
             {
                 TileDictionary.Add(TileKeys[i], TileList[i]);
-                Debug.LogFormat("Adding key {0}", TileKeys[i]);
             }
         }
 
@@ -116,20 +114,16 @@ namespace MM26.Board.Helper
                 if (!asset.Contains(".meta"))
                 {
                     string key = asset.Replace(g_BaseTileObjPath, "mm_tiles/").Replace(".asset", ".png");
-                    if(TileDictionary.ContainsKey(key))
-                    {
-                        Debug.LogFormat("Found key {0}", key);
-                        count++;
 
-                        Debug.LogFormat("Has tile {0}", TileDictionary[key].name);
-                    } else
+                    if (TileDictionary.ContainsKey(key))
                     {
-                        Debug.LogErrorFormat("Did not find key {0}", key);
+                        count++;
+                    }
+                    else
+                    {
                     }
                 }
             }
-
-            Debug.LogFormat("Found {0} tiles", count);
         }
 #endif
     }

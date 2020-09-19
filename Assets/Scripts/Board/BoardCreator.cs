@@ -87,7 +87,7 @@ namespace MM26.Board
         {
             var board = _data.Initial.State.BoardNames[_sceneConfiguration.BoardName];
             // Lazy load if _tileDatabase hasn't been assigned
-            if(_tileDatabase == null)
+            if (_tileDatabase == null)
             {
                 _tileDatabase = TileDatabase.Instance;
             }
@@ -97,10 +97,7 @@ namespace MM26.Board
                 for (int x = 0; x < board.Columns; x++)
                 {
                     PTile ptile = board.Grid[y * board.Rows + x];
-                    Tile tile = null;
-
-                    tile = _tileDatabase.GetTile(ptile.Sprite);
-                    Debug.Log(ptile.Sprite);
+                    Tile tile = _tileDatabase.GetTile(ptile.Sprite);
 
                     // Until new test is generated with ptile.Sprite, use this
                     if (tile == null)

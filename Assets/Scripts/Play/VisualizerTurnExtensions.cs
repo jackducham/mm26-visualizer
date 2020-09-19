@@ -86,7 +86,7 @@ namespace MM26.Play
                     batch.Add(new DespawnTask(entity));
                     batch.Add(new EffectTask(EffectType.Death, position));
                 }
-                
+
                 return;
             }
             else if (characterChange.Respawned)
@@ -97,7 +97,7 @@ namespace MM26.Play
                     batch.Add(new SpawnPlayerTask(entity, position));
                     batch.Add(new EffectTask(EffectType.Spawn, position));
                 }
-                
+
                 return;
             }
 

@@ -5,7 +5,7 @@ using MM26.ECS;
 using MM26.IO;
 using MM26.Board;
 
-[assembly:InternalsVisibleTo("MM26.Play.Tests")]
+[assembly: InternalsVisibleTo("MM26.Play.Tests")]
 
 namespace MM26.Play
 {

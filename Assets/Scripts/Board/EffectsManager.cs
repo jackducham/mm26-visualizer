@@ -10,7 +10,7 @@ namespace MM26.Board
     {
         [SerializeField]
         private Tilemap _tilemap = null;
-        
+
         [Header("Prefabs")]
         [SerializeField]
         private GameObject _deathEffect = null;

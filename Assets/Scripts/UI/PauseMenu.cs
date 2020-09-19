@@ -11,7 +11,7 @@ namespace MM26.UI
         private Canvas _canvas = null;
 
         [SerializeField]
-        private string _introScene= "Intro";
+        private string _introScene = "Intro";
 
         private Configuration.Input _input = null;
 

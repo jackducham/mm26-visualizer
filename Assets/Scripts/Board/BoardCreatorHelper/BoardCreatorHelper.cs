@@ -7,7 +7,8 @@ using System.IO;
 using UnityEditor;
 #endif
 
-namespace MM26.Board.Helper {
+namespace MM26.Board.Helper
+{
     /// <summary>
     /// This is not actually meant to be used in the build. Only use it to generate Tile assets
     /// </summary>
@@ -28,13 +29,13 @@ namespace MM26.Board.Helper {
                 run = false;
                 string[] dir = Directory.GetFiles(g_BaseTilePath + "collection/");
 
-                foreach(string str in dir)
+                foreach (string str in dir)
                 {
-                    if(!str.Contains(".meta"))
+                    if (!str.Contains(".meta"))
                         GenerateTile(str);
 
                 }
-            } 
+            }
         }
 
         /// <summary>
@@ -48,7 +49,7 @@ namespace MM26.Board.Helper {
 
             newTile.sprite = LoadExistingSprite(g_BaseTilePath + sourcePath.Replace("Assets/Tiles/MM26_Tiles/mm_tiles/", "")); //LoadNewSprite(sourcePath, 190.0f);
             //newTile.sprite = Resources.Load<Sprite>(g_BaseTileObjPath + sourcePath.Replace("Assets/Tiles/MM26_Tiles/mm_tiles/", ""));
-            AssetDatabase.CreateAsset(newTile, g_BaseTileObjPath + sourcePath.Replace("Assets/Tiles/MM26_Tiles/mm_tiles/","").Replace(".png", ".asset").Replace(".PNG", ".asset"));
+            AssetDatabase.CreateAsset(newTile, g_BaseTileObjPath + sourcePath.Replace("Assets/Tiles/MM26_Tiles/mm_tiles/", "").Replace(".png", ".asset").Replace(".PNG", ".asset"));
         }
 
         /// <summary>
