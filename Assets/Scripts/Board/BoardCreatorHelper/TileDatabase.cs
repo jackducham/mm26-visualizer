@@ -19,24 +19,27 @@ namespace MM26.Board.Helper
         public Dictionary<string, Tile> TileDictionary = new Dictionary<string, Tile>();
 
         [SerializeField]
-        private List<Tile> TileList = new List<Tile>();
+        private List<Tile> TileList = null;
 
         [SerializeField]
-        private List<string> TileKeys = new List<string>();
+        private List<string> TileKeys = null;
 
         public static TileDatabase Instance;
 
         private void Awake()
         {
-            if(Instance == null)
-            {
-                Instance = this;
-            } else
-            {
-                this.gameObject.SetActive(false);
-            }
+            //if(Instance == null)
+            //{
+            //    Instance = this;
+            //} else
+            //{
+            //    this.gameObject.SetActive(false);
+            //}
 
-            TileDictionary = new Dictionary<string, Tile>();
+            PopulateDictionary();
+#if UNITY_EDITOR
+            TestDatabase();
+#endif
         }
 
         public Tile GetTile(string tilePath)
@@ -54,10 +57,12 @@ namespace MM26.Board.Helper
         public void PopulateDictionary()
         {
             TileDictionary = new Dictionary<string, Tile>();
+            Debug.Log("Key & Val length");
 
             for(int i = 0; i < TileList.Count; i++)
             {
                 TileDictionary.Add(TileKeys[i], TileList[i]);
+                Debug.LogFormat("Adding key {0}", TileKeys[i]);
             }
         }
 
@@ -111,7 +116,6 @@ namespace MM26.Board.Helper
                 if (!asset.Contains(".meta"))
                 {
                     string key = asset.Replace(g_BaseTileObjPath, "mm_tiles/").Replace(".asset", ".png");
-                    Debug.LogFormat("Searching for key {0}", key);
                     if(TileDictionary.ContainsKey(key))
                     {
                         Debug.LogFormat("Found key {0}", key);

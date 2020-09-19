@@ -19,14 +19,23 @@ MonoBehaviour:
       Rows: 3
       Grid:
       - TileType: 0
+        Sprite: mm_tiles/collection/01_dirt1.png
       - TileType: 0
+        Sprite: mm_tiles/collection/02_dirt2.png
       - TileType: 0
+        Sprite: mm_tiles/collection/03_dirt3.png
       - TileType: 0
+        Sprite: mm_tiles/collection/06_grass1.png
       - TileType: 0
+        Sprite: mm_tiles/collection/08_grass3.png
       - TileType: 0
+        Sprite: mm_tiles/collection/basicwall1.png
       - TileType: 0
+        Sprite: mm_tiles/collection/basicwall2.png
       - TileType: 0
+        Sprite: mm_tiles/collection/bat_dunce.png
       - TileType: 0
+        Sprite: mm_tiles/collection/10_grass4.png
     Characters:
     - Name: Player A
       CharacterType: 0
