@@ -24,39 +24,39 @@ namespace MM26.IO.Models {
     static ItemReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgppdGVtLnByb3RvEgRpdGVtIugBCgRJdGVtEhEKCW1heF9zdGFjaxgBIAEo",
+            "CgppdGVtLnByb3RvEgRpdGVtIvgBCgRJdGVtEhEKCW1heF9zdGFjaxgBIAEo",
             "BRIjCgVzdGF0cxgCIAEoCzIULml0ZW0uU3RhdHVzTW9kaWZpZXISIAoHY2xv",
             "dGhlcxgDIAEoCzINLml0ZW0uQ2xvdGhlc0gAEhgKA2hhdBgEIAEoCzIJLml0",
             "ZW0uSGF0SAASHAoFc2hvZXMYBSABKAsyCy5pdGVtLlNob2VzSAASHgoGd2Vh",
             "cG9uGAYgASgLMgwuaXRlbS5XZWFwb25IABImCgpjb25zdW1hYmxlGAcgASgL",
-            "MhAuaXRlbS5Db25zdW1hYmxlSABCBgoEaXRlbSIuCgdDbG90aGVzEiMKBXN0",
-            "YXRzGAEgASgLMhQuaXRlbS5TdGF0dXNNb2RpZmllciJqCgNIYXQSIwoFc3Rh",
-            "dHMYASABKAsyFC5pdGVtLlN0YXR1c01vZGlmaWVyEicKCmhhdF9lZmZlY3QY",
-            "AiABKA4yEy5pdGVtLkhhdC5IYXRFZmZlY3QiFQoJSGF0RWZmZWN0EggKBFRF",
-            "U1QQACIsCgVTaG9lcxIjCgVzdGF0cxgBIAEoCzIULml0ZW0uU3RhdHVzTW9k",
-            "aWZpZXIilAEKBldlYXBvbhIjCgVzdGF0cxgBIAEoCzIULml0ZW0uU3RhdHVz",
-            "TW9kaWZpZXISDQoFcmFuZ2UYAiABKAUSFQoNc3BsYXNoX3JhZGl1cxgDIAEo",
-            "BRIOCgZhdHRhY2sYBCABKAUSLwoNb25faGl0X2VmZmVjdBgFIAEoCzIYLml0",
-            "ZW0uVGVtcFN0YXR1c01vZGlmaWVyIkYKCkNvbnN1bWFibGUSKAoGZWZmZWN0",
-            "GAEgASgLMhguaXRlbS5UZW1wU3RhdHVzTW9kaWZpZXISDgoGc3RhY2tzGAIg",
-            "ASgFItwCCg5TdGF0dXNNb2RpZmllchIZChFmbGF0X3NwZWVkX2NoYW5nZRgB",
-            "IAEoBRIcChRwZXJjZW50X3NwZWVkX2NoYW5nZRgCIAEoARIaChJmbGF0X2hl",
-            "YWx0aF9jaGFuZ2UYAyABKAUSHQoVcGVyY2VudF9oZWFsdGhfY2hhbmdlGAQg",
-            "ASgBEh4KFmZsYXRfZXhwZXJpZW5jZV9jaGFuZ2UYBSABKAUSIQoZcGVyY2Vu",
-            "dF9leHBlcmllbmNlX2NoYW5nZRgGIAEoARIaChJmbGF0X2F0dGFja19jaGFu",
-            "Z2UYByABKAUSHQoVcGVyY2VudF9hdHRhY2tfY2hhbmdlGAggASgBEhsKE2Zs",
-            "YXRfZGVmZW5zZV9jaGFuZ2UYCSABKAUSHgoWcGVyY2VudF9kZWZlbnNlX2No",
-            "YW5nZRgKIAEoARIbChNmbGF0X3JlZ2VuX3Blcl90dXJuGAsgASgFIqkBChJU",
-            "ZW1wU3RhdHVzTW9kaWZpZXISIwoFc3RhdHMYASABKAsyFC5pdGVtLlN0YXR1",
-            "c01vZGlmaWVyEhwKFGZsYXRfZGFtYWdlX3Blcl90dXJuGAIgASgFEh8KF3Bl",
-            "cmNlbnRfZGFtYWdlX3Blcl90dXJuGAMgASgBEhsKE2ZsYXRfcmVnZW5fcGVy",
-            "X3R1cm4YBCABKAUSEgoKdHVybnNfbGVmdBgFIAEoBUI9Ch5tZWNoLm1hbmlh",
-            "LmVuZ2luZS5kb21haW4ubW9kZWxCCkl0ZW1Qcm90b3OqAg5NTTI2LklPLk1v",
-            "ZGVsc2IGcHJvdG8z"));
+            "MhAuaXRlbS5Db25zdW1hYmxlSAASDgoGc3ByaXRlGAggASgJQgYKBGl0ZW0i",
+            "LgoHQ2xvdGhlcxIjCgVzdGF0cxgBIAEoCzIULml0ZW0uU3RhdHVzTW9kaWZp",
+            "ZXIiagoDSGF0EiMKBXN0YXRzGAEgASgLMhQuaXRlbS5TdGF0dXNNb2RpZmll",
+            "chInCgpoYXRfZWZmZWN0GAIgASgOMhMuaXRlbS5IYXQuSGF0RWZmZWN0IhUK",
+            "CUhhdEVmZmVjdBIICgRURVNUEAAiLAoFU2hvZXMSIwoFc3RhdHMYASABKAsy",
+            "FC5pdGVtLlN0YXR1c01vZGlmaWVyIpQBCgZXZWFwb24SIwoFc3RhdHMYASAB",
+            "KAsyFC5pdGVtLlN0YXR1c01vZGlmaWVyEg0KBXJhbmdlGAIgASgFEhUKDXNw",
+            "bGFzaF9yYWRpdXMYAyABKAUSDgoGYXR0YWNrGAQgASgFEi8KDW9uX2hpdF9l",
+            "ZmZlY3QYBSABKAsyGC5pdGVtLlRlbXBTdGF0dXNNb2RpZmllciJGCgpDb25z",
+            "dW1hYmxlEigKBmVmZmVjdBgBIAEoCzIYLml0ZW0uVGVtcFN0YXR1c01vZGlm",
+            "aWVyEg4KBnN0YWNrcxgCIAEoBSLcAgoOU3RhdHVzTW9kaWZpZXISGQoRZmxh",
+            "dF9zcGVlZF9jaGFuZ2UYASABKAUSHAoUcGVyY2VudF9zcGVlZF9jaGFuZ2UY",
+            "AiABKAESGgoSZmxhdF9oZWFsdGhfY2hhbmdlGAMgASgFEh0KFXBlcmNlbnRf",
+            "aGVhbHRoX2NoYW5nZRgEIAEoARIeChZmbGF0X2V4cGVyaWVuY2VfY2hhbmdl",
+            "GAUgASgFEiEKGXBlcmNlbnRfZXhwZXJpZW5jZV9jaGFuZ2UYBiABKAESGgoS",
+            "ZmxhdF9hdHRhY2tfY2hhbmdlGAcgASgFEh0KFXBlcmNlbnRfYXR0YWNrX2No",
+            "YW5nZRgIIAEoARIbChNmbGF0X2RlZmVuc2VfY2hhbmdlGAkgASgFEh4KFnBl",
+            "cmNlbnRfZGVmZW5zZV9jaGFuZ2UYCiABKAESGwoTZmxhdF9yZWdlbl9wZXJf",
+            "dHVybhgLIAEoBSKpAQoSVGVtcFN0YXR1c01vZGlmaWVyEiMKBXN0YXRzGAEg",
+            "ASgLMhQuaXRlbS5TdGF0dXNNb2RpZmllchIcChRmbGF0X2RhbWFnZV9wZXJf",
+            "dHVybhgCIAEoBRIfChdwZXJjZW50X2RhbWFnZV9wZXJfdHVybhgDIAEoARIb",
+            "ChNmbGF0X3JlZ2VuX3Blcl90dXJuGAQgASgFEhIKCnR1cm5zX2xlZnQYBSAB",
+            "KAVCPQoebWVjaC5tYW5pYS5lbmdpbmUuZG9tYWluLm1vZGVsQgpJdGVtUHJv",
+            "dG9zqgIOTU0yNi5JTy5Nb2RlbHNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Item), global::MM26.IO.Models.Item.Parser, new[]{ "MaxStack", "Stats", "Clothes", "Hat", "Shoes", "Weapon", "Consumable" }, new[]{ "Item" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Item), global::MM26.IO.Models.Item.Parser, new[]{ "MaxStack", "Stats", "Clothes", "Hat", "Shoes", "Weapon", "Consumable", "Sprite" }, new[]{ "Item" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Clothes), global::MM26.IO.Models.Clothes.Parser, new[]{ "Stats" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Hat), global::MM26.IO.Models.Hat.Parser, new[]{ "Stats", "HatEffect" }, null, new[]{ typeof(global::MM26.IO.Models.Hat.Types.HatEffect) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Shoes), global::MM26.IO.Models.Shoes.Parser, new[]{ "Stats" }, null, null, null, null),
@@ -101,6 +101,7 @@ namespace MM26.IO.Models {
     public Item(Item other) : this() {
       maxStack_ = other.maxStack_;
       stats_ = other.stats_ != null ? other.stats_.Clone() : null;
+      sprite_ = other.sprite_;
       switch (other.ItemCase) {
         case ItemOneofCase.Clothes:
           Clothes = other.Clothes.Clone();
@@ -207,6 +208,20 @@ namespace MM26.IO.Models {
       }
     }
 
+    /// <summary>Field number for the "sprite" field.</summary>
+    public const int SpriteFieldNumber = 8;
+    private string sprite_ = "";
+    /// <summary>
+    /// Filepath to sprite for this item
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Sprite {
+      get { return sprite_; }
+      set {
+        sprite_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     private object item_;
     /// <summary>Enum of possible cases for the "item" oneof.</summary>
     public enum ItemOneofCase {
@@ -249,6 +264,7 @@ namespace MM26.IO.Models {
       if (!object.Equals(Shoes, other.Shoes)) return false;
       if (!object.Equals(Weapon, other.Weapon)) return false;
       if (!object.Equals(Consumable, other.Consumable)) return false;
+      if (Sprite != other.Sprite) return false;
       if (ItemCase != other.ItemCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -263,6 +279,7 @@ namespace MM26.IO.Models {
       if (itemCase_ == ItemOneofCase.Shoes) hash ^= Shoes.GetHashCode();
       if (itemCase_ == ItemOneofCase.Weapon) hash ^= Weapon.GetHashCode();
       if (itemCase_ == ItemOneofCase.Consumable) hash ^= Consumable.GetHashCode();
+      if (Sprite.Length != 0) hash ^= Sprite.GetHashCode();
       hash ^= (int) itemCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -305,6 +322,10 @@ namespace MM26.IO.Models {
         output.WriteRawTag(58);
         output.WriteMessage(Consumable);
       }
+      if (Sprite.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Sprite);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -334,6 +355,9 @@ namespace MM26.IO.Models {
       if (itemCase_ == ItemOneofCase.Consumable) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Consumable);
       }
+      if (Sprite.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Sprite);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -353,6 +377,9 @@ namespace MM26.IO.Models {
           Stats = new global::MM26.IO.Models.StatusModifier();
         }
         Stats.MergeFrom(other.Stats);
+      }
+      if (other.Sprite.Length != 0) {
+        Sprite = other.Sprite;
       }
       switch (other.ItemCase) {
         case ItemOneofCase.Clothes:
@@ -457,6 +484,10 @@ namespace MM26.IO.Models {
             Consumable = subBuilder;
             break;
           }
+          case 66: {
+            Sprite = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -525,6 +556,10 @@ namespace MM26.IO.Models {
             }
             input.ReadMessage(subBuilder);
             Consumable = subBuilder;
+            break;
+          }
+          case 66: {
+            Sprite = input.ReadString();
             break;
           }
         }

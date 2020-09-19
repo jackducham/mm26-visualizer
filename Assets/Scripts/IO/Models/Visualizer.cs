@@ -31,7 +31,7 @@ namespace MM26.IO.Models {
             "Z2UYAiABKAsyIC5wbGF5ZXJfY29tbXVuaWNhdGlvbi5HYW1lQ2hhbmdlIokC",
             "CgpHYW1lQ2hhbmdlEhgKEG5ld19wbGF5ZXJfbmFtZXMYASADKAkSUQoRY2hh",
             "cmFjdGVyX2NoYW5nZXMYAiADKAsyNi5wbGF5ZXJfY29tbXVuaWNhdGlvbi5H",
-            "YW1lQ2hhbmdlLkNoYXJhY3RlckNoYW5nZXNFbnRyeRIuChF0aWxlX3RpbWVf",
+            "YW1lQ2hhbmdlLkNoYXJhY3RlckNoYW5nZXNFbnRyeRIuChF0aWxlX2l0ZW1f",
             "Y2hhbmdlcxgDIAMoCzITLmNoYXJhY3Rlci5Qb3NpdGlvbhpeChVDaGFyYWN0",
             "ZXJDaGFuZ2VzRW50cnkSCwoDa2V5GAEgASgJEjQKBXZhbHVlGAIgASgLMiUu",
             "cGxheWVyX2NvbW11bmljYXRpb24uQ2hhcmFjdGVyQ2hhbmdlOgI4ASKRAgoP",
@@ -48,7 +48,7 @@ namespace MM26.IO.Models {
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.VisualizerInitial), global::MM26.IO.Models.VisualizerInitial.Parser, new[]{ "State" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.VisualizerTurn), global::MM26.IO.Models.VisualizerTurn.Parser, new[]{ "State", "Change" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.GameChange), global::MM26.IO.Models.GameChange.Parser, new[]{ "NewPlayerNames", "CharacterChanges", "TileTimeChanges" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.GameChange), global::MM26.IO.Models.GameChange.Parser, new[]{ "NewPlayerNames", "CharacterChanges", "TileItemChanges" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.CharacterChange), global::MM26.IO.Models.CharacterChange.Parser, new[]{ "Died", "Respawned", "Decision", "Path", "HatChanged", "ClothesChanged", "ShoesChanged", "WeaponChanged", "AttackLocations" }, null, null, null, null)
           }));
     }
@@ -456,7 +456,7 @@ namespace MM26.IO.Models {
     public GameChange(GameChange other) : this() {
       newPlayerNames_ = other.newPlayerNames_.Clone();
       characterChanges_ = other.characterChanges_.Clone();
-      tileTimeChanges_ = other.tileTimeChanges_.Clone();
+      tileItemChanges_ = other.tileItemChanges_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -485,18 +485,18 @@ namespace MM26.IO.Models {
       get { return characterChanges_; }
     }
 
-    /// <summary>Field number for the "tile_time_changes" field.</summary>
-    public const int TileTimeChangesFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::MM26.IO.Models.Position> _repeated_tileTimeChanges_codec
+    /// <summary>Field number for the "tile_item_changes" field.</summary>
+    public const int TileItemChangesFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::MM26.IO.Models.Position> _repeated_tileItemChanges_codec
         = pb::FieldCodec.ForMessage(26, global::MM26.IO.Models.Position.Parser);
-    private readonly pbc::RepeatedField<global::MM26.IO.Models.Position> tileTimeChanges_ = new pbc::RepeatedField<global::MM26.IO.Models.Position>();
+    private readonly pbc::RepeatedField<global::MM26.IO.Models.Position> tileItemChanges_ = new pbc::RepeatedField<global::MM26.IO.Models.Position>();
     /// <summary>
     /// Visualizer will check each tile and draw a treasure chest
     /// if there are any items there
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::MM26.IO.Models.Position> TileTimeChanges {
-      get { return tileTimeChanges_; }
+    public pbc::RepeatedField<global::MM26.IO.Models.Position> TileItemChanges {
+      get { return tileItemChanges_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -514,7 +514,7 @@ namespace MM26.IO.Models {
       }
       if(!newPlayerNames_.Equals(other.newPlayerNames_)) return false;
       if (!CharacterChanges.Equals(other.CharacterChanges)) return false;
-      if(!tileTimeChanges_.Equals(other.tileTimeChanges_)) return false;
+      if(!tileItemChanges_.Equals(other.tileItemChanges_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -523,7 +523,7 @@ namespace MM26.IO.Models {
       int hash = 1;
       hash ^= newPlayerNames_.GetHashCode();
       hash ^= CharacterChanges.GetHashCode();
-      hash ^= tileTimeChanges_.GetHashCode();
+      hash ^= tileItemChanges_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -539,7 +539,7 @@ namespace MM26.IO.Models {
     public void WriteTo(pb::CodedOutputStream output) {
       newPlayerNames_.WriteTo(output, _repeated_newPlayerNames_codec);
       characterChanges_.WriteTo(output, _map_characterChanges_codec);
-      tileTimeChanges_.WriteTo(output, _repeated_tileTimeChanges_codec);
+      tileItemChanges_.WriteTo(output, _repeated_tileItemChanges_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -550,7 +550,7 @@ namespace MM26.IO.Models {
       int size = 0;
       size += newPlayerNames_.CalculateSize(_repeated_newPlayerNames_codec);
       size += characterChanges_.CalculateSize(_map_characterChanges_codec);
-      size += tileTimeChanges_.CalculateSize(_repeated_tileTimeChanges_codec);
+      size += tileItemChanges_.CalculateSize(_repeated_tileItemChanges_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -564,7 +564,7 @@ namespace MM26.IO.Models {
       }
       newPlayerNames_.Add(other.newPlayerNames_);
       characterChanges_.Add(other.characterChanges_);
-      tileTimeChanges_.Add(other.tileTimeChanges_);
+      tileItemChanges_.Add(other.tileItemChanges_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -588,7 +588,7 @@ namespace MM26.IO.Models {
             break;
           }
           case 26: {
-            tileTimeChanges_.AddEntriesFrom(input, _repeated_tileTimeChanges_codec);
+            tileItemChanges_.AddEntriesFrom(input, _repeated_tileItemChanges_codec);
             break;
           }
         }
@@ -614,7 +614,7 @@ namespace MM26.IO.Models {
             break;
           }
           case 26: {
-            tileTimeChanges_.AddEntriesFrom(ref input, _repeated_tileTimeChanges_codec);
+            tileItemChanges_.AddEntriesFrom(ref input, _repeated_tileItemChanges_codec);
             break;
           }
         }
