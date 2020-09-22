@@ -11,6 +11,13 @@ namespace MM26.UI
 {
     public class PauseMenu : MonoBehaviour, IConvertGameObjectToEntity
     {
+        private enum State
+        {
+            Follow,
+            Control
+        }
+
+
         [SerializeField]
         private Canvas _canvas = null;
 
@@ -24,6 +31,9 @@ namespace MM26.UI
 
         private Entity _entity = default;
         private World _world = null;
+
+        private State _state = State.Control;
+        private string _target = "";
 
         public void Convert(
             Entity entity,
@@ -62,13 +72,28 @@ namespace MM26.UI
 
             if (_canvas.enabled)
             {
-                ecb.RemoveComponent<CameraControl>(_entity);
+                switch (_state)
+                {
+                    case State.Follow:
+                        ecb.RemoveComponent<FollowTransform>(_entity);
+                        break;
+                    case State.Control:
+                        ecb.RemoveComponent<CameraControl>(_entity);
+                        break;
+                }
             }
             else
             {
-                ecb.AddComponent<CameraControl>(_entity);
+                switch (_state)
+                {
+                    case State.Control:
+                        ecb.AddComponent<CameraControl>(_entity);
+                        break;
+                    case State.Follow:
+                        ecb.AddComponent(_entity, this.MakeFollowTransform(_target));
+                        break;
+                }
             }
-            
         }
 
         public void OnExitBoardClick()
@@ -106,10 +131,10 @@ namespace MM26.UI
             }
 
             ecb.RemoveComponent<CameraControl>(_entity);
-            ecb.AddComponent(_entity, new FollowTransform()
-            {
-                Target = follow.transform
-            });
+            ecb.AddComponent(_entity, this.MakeFollowTransform(name));
+
+            _target = name;
+            _state = State.Follow;
         }
 
         public void OnReleaseCamera()
@@ -120,6 +145,20 @@ namespace MM26.UI
 
             ecb.AddComponent<CameraControl>(_entity);
             ecb.RemoveComponent<FollowTransform>(_entity);
+
+            _state = State.Control;
+            _target = "";
+        }
+
+        private FollowTransform MakeFollowTransform(string name)
+        {
+            GameObject follow = GameObject.Find(name);
+
+            return new FollowTransform()
+            {
+                Target = follow.transform,
+                Offset = this.transform.position - follow.transform.position
+            };
         }
     }
 }

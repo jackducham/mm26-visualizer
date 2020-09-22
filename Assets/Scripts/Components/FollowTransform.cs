@@ -5,6 +5,8 @@ using Unity.Entities;
 public class FollowTransform : IComponentData, IEquatable<FollowTransform>
 {
     public Transform Target;
+    public Vector3 CurrentVelocity;
+    public Vector3 Offset;
 
     public override int GetHashCode()
     {

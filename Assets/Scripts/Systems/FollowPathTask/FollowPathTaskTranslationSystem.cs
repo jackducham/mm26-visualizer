@@ -64,7 +64,6 @@ namespace MM26.Systems.FollowPathTask
                         FollowPath followPath = new FollowPath()
                         {
                             Progress = 0,
-                            CurrentVelocity = new Vector3()
                         };
 
                         ecb.AddComponent<FollowPath>(entity, followPath);
