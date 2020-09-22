@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 using TMPro;
 using MM26.Components;
+using MM26.Utilities;
 
 namespace MM26.UI
 {
@@ -90,10 +91,24 @@ namespace MM26.UI
                 .GetOrCreateSystem<EndSimulationEntityCommandBufferSystem>()
                 .CreateCommandBuffer();
 
+            string name = _followField.text.KeepVisibles();
+            GameObject follow = GameObject.Find(name);
+
+            if (follow == null)
+            {
+                // TODO: add error in UI
+                Debug.LogErrorFormat(
+                    "{0} (length = {1}) not found!",
+                    name,
+                    name.Length);
+
+                return;
+            }
+
             ecb.RemoveComponent<CameraControl>(_entity);
             ecb.AddComponent(_entity, new FollowTransform()
             {
-                Target = GameObject.Find(_followField.text).transform
+                Target = follow.transform
             });
         }
 
