@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -508008635414941026}
   - component: {fileID: 1555258926759968230}
   - component: {fileID: 819819020418596524}
+  - component: {fileID: 8241356565306878601}
   - component: {fileID: 1555258926759968228}
   m_Layer: 0
   m_Name: Monster
@@ -129,6 +130,18 @@ MonoBehaviour:
   LevelLabel: {fileID: 3138662750859671704}
   ExperienceLabel: {fileID: 4090260383852669714}
   Canvas: {fileID: 6108555224455000530}
+--- !u!114 &8241356565306878601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555258926759968227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3558891339e8493fba6a5294fedea19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1555258926759968228
 MonoBehaviour:
   m_ObjectHideFlags: 0

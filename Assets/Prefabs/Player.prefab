@@ -175,6 +175,7 @@ GameObject:
   - component: {fileID: 4388124594191054807}
   - component: {fileID: 4388124594191054806}
   - component: {fileID: 6193589129590990542}
+  - component: {fileID: 3106208206824280123}
   - component: {fileID: 4388124594191054802}
   m_Layer: 0
   m_Name: Player
@@ -292,6 +293,18 @@ MonoBehaviour:
   LevelLabel: {fileID: 1734384070537095664}
   ExperienceLabel: {fileID: 818676699451112058}
   Canvas: {fileID: 7447531735949451450}
+--- !u!114 &3106208206824280123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4388124594191054825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3558891339e8493fba6a5294fedea19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4388124594191054802
 MonoBehaviour:
   m_ObjectHideFlags: 0

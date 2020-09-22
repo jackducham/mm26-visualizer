@@ -460,6 +460,7 @@ GameObject:
   - component: {fileID: 6038643353946968248}
   - component: {fileID: 6038643353946968254}
   - component: {fileID: 8382623597471249146}
+  - component: {fileID: -6512138130018854122}
   - component: {fileID: 6038643353946968249}
   m_Layer: 0
   m_Name: Main Camera
@@ -605,6 +606,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _canvas: {fileID: 4933588797682577649}
   _introScene: Intro
+--- !u!114 &-6512138130018854122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6038643353946968245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3558891339e8493fba6a5294fedea19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6038643353946968249
 MonoBehaviour:
   m_ObjectHideFlags: 0
