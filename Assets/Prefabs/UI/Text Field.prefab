@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 7096876307978864284}
   - component: {fileID: 7096876307978864259}
   m_Layer: 5
-  m_Name: Field
+  m_Name: Text Field
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_CaretWidth: 1
   m_ReadOnly: 0
   m_RichText: 1
-  m_GlobalFontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_GlobalFontAsset: {fileID: 11400000, guid: 0b7540bedf20d49599b618860d9ad7a1, type: 2}
   m_OnFocusSelectAll: 1
   m_ResetOnDeActivation: 1
   m_RestoreOriginalTextOnEscape: 1
@@ -288,8 +288,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 340617e47412b49508ca6b7625e11001, type: 2}
-  m_sharedMaterial: {fileID: -2461206509044150136, guid: 340617e47412b49508ca6b7625e11001,
+  m_fontAsset: {fileID: 11400000, guid: 0b7540bedf20d49599b618860d9ad7a1, type: 2}
+  m_sharedMaterial: {fileID: -8777208261890152878, guid: 0b7540bedf20d49599b618860d9ad7a1,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -445,8 +445,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: ws:/xx
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 340617e47412b49508ca6b7625e11001, type: 2}
-  m_sharedMaterial: {fileID: -2461206509044150136, guid: 340617e47412b49508ca6b7625e11001,
+  m_fontAsset: {fileID: 11400000, guid: 0b7540bedf20d49599b618860d9ad7a1, type: 2}
+  m_sharedMaterial: {fileID: -8777208261890152878, guid: 0b7540bedf20d49599b618860d9ad7a1,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
