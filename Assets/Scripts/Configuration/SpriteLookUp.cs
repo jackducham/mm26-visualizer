@@ -45,7 +45,6 @@ namespace MM26.Configuration
 
             foreach (TileEntry entry in this.TileEntries)
             {
-                Debug.Log(entry.Path);
                 _tiles[entry.Path] = entry.Tile;
             }
         }
