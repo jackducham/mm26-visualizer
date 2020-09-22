@@ -6,7 +6,7 @@ namespace MM26.Components
     /// Movement of entities
     /// </summary>
     [GenerateAuthoringComponent]
-    public struct MovementSettings : IComponentData
+    public struct FollowPathSettings : IComponentData
     {
         /// <summary>
         /// At how close to the target do we stop moving

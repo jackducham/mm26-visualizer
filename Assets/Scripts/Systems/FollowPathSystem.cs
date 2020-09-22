@@ -17,7 +17,7 @@ namespace MM26.Systems
                 .ForEach((
                     Transform transform,
                     ref FollowPath followPath,
-                    in MovementSettings movementSettings,
+                    in FollowPathSettings movementSettings,
                     in DynamicBuffer<PathElement> path) =>
                 {
                     Vector3 target = path[followPath.Progress].Position;

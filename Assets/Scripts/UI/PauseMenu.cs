@@ -135,6 +135,8 @@ namespace MM26.UI
 
             _target = name;
             _state = State.Follow;
+
+            _canvas.enabled = false;
         }
 
         public void OnReleaseCamera()
@@ -148,6 +150,8 @@ namespace MM26.UI
 
             _state = State.Control;
             _target = "";
+
+            _canvas.enabled = false;
         }
 
         private FollowTransform MakeFollowTransform(string name)

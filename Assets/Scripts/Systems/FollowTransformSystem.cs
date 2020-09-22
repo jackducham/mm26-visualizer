@@ -10,13 +10,16 @@ namespace MM26.Systems
         {
             this.Entities
                 .WithoutBurst()
-                .ForEach((Transform transform, FollowTransform followTransform) =>
+                .ForEach((
+                    Transform transform,
+                    FollowTransform followTransform,
+                    in FollowTransformSettings settings) =>
                 {
                     transform.position = Vector3.SmoothDamp(
                         transform.position,
                         followTransform.Target.position + followTransform.Offset,
                         ref followTransform.CurrentVelocity,
-                        1.0f);
+                        settings.SmoothTime);
                 })
                 .Run();
         }
