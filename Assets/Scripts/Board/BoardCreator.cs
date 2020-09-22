@@ -5,6 +5,7 @@ using UnityEngine.Tilemaps;
 using MM26.Components;
 using MM26.ECS;
 using MM26.Tasks;
+using MM26.Configuration;
 using MM26.Board.Helper;
 
 namespace MM26.Board
@@ -21,7 +22,7 @@ namespace MM26.Board
     {
         [Header("Tiles")]
         [SerializeField]
-        private TileDatabase _tileDatabase = null;
+        private SpriteLookUp _tileDatabase = null;
 
         [SerializeField]
         private Tile _voidTile = null;
@@ -86,11 +87,6 @@ namespace MM26.Board
         private void CreateMap()
         {
             var board = _data.Initial.State.BoardNames[_sceneConfiguration.BoardName];
-            // Lazy load if _tileDatabase hasn't been assigned
-            if (_tileDatabase == null)
-            {
-                _tileDatabase = TileDatabase.Instance;
-            }
 
             for (int y = 0; y < board.Rows; y++)
             {

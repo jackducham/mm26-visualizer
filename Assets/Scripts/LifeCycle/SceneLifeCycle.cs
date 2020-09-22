@@ -6,7 +6,7 @@ namespace MM26
     /// <summary>
     /// Expose events for different components to connect to
     /// </summary>
-    [CreateAssetMenu(menuName = "Scene Life Cycle", fileName = "Scene Life Cycle")]
+    [CreateAssetMenu(menuName = "Scene Life Cycle", fileName = "SceneLifeCycle")]
     public class SceneLifeCycle : ScriptableObject
     {
         [Header("Events")]

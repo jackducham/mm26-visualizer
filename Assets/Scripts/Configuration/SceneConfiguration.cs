@@ -6,7 +6,7 @@ namespace MM26
     /// Describes how the scene can be loaded. Should be configured
     /// after <c>DataFetched</c> event
     /// </summary>
-    [CreateAssetMenu(menuName = "Scene Configuration", fileName = "Scene Configuration")]
+    [CreateAssetMenu(menuName = "Configuration/Scene Configuration", fileName = "SceneConfiguration")]
     public class SceneConfiguration : ScriptableObject
     {
         /// <summary>

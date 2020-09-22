@@ -193,7 +193,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 693217861305973513}
-  - {fileID: 5464214291536153379}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -226,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d963d50d14846b6a145b2bf154ea38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tileDatabase: {fileID: 5464214291536153378}
+  _tileDatabase: {fileID: 11400000, guid: 93478089b4afa4161ad6e4e0ae3b603a, type: 2}
   _voidTile: {fileID: 11400000, guid: 58df82b6f60e28d4f96f9bd0cb7022a3, type: 2}
   _portalTile: {fileID: 11400000, guid: 51a8ca4ed3d6b5f4d8c589774dd4ca7f, type: 2}
   _impassibleTile: {fileID: 11400000, guid: 3e2316ae3f147cb4db70fe5e469e9d61, type: 2}
@@ -273,90 +272,3 @@ MonoBehaviour:
   _charactersManager: {fileID: 4835611230717269304}
   _effectsManager: {fileID: 8000956316918997821}
   _mailbox: {fileID: 11400000, guid: 107bc346b39dd46378a4e6c11216dfe0, type: 2}
---- !u!1001 &785531182770158752
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 6099384395167837155}
-    m_Modifications:
-    - target: {fileID: 4697832206496823168, guid: 3fe98549477f38f44ba095cf0c1e768f,
-        type: 3}
-      propertyPath: m_Name
-      value: Tile Database
-      objectReference: {fileID: 0}
-    - target: {fileID: 4697832206496823171, guid: 3fe98549477f38f44ba095cf0c1e768f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 421.1948
-      objectReference: {fileID: 0}
-    - target: {fileID: 4697832206496823171, guid: 3fe98549477f38f44ba095cf0c1e768f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 143.50188
-      objectReference: {fileID: 0}
-    - target: {fileID: 4697832206496823171, guid: 3fe98549477f38f44ba095cf0c1e768f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -54.34035
-      objectReference: {fileID: 0}
-    - target: {fileID: 4697832206496823171, guid: 3fe98549477f38f44ba095cf0c1e768f,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4697832206496823171, guid: 3fe98549477f38f44ba095cf0c1e768f,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4697832206496823171, guid: 3fe98549477f38f44ba095cf0c1e768f,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4697832206496823171, guid: 3fe98549477f38f44ba095cf0c1e768f,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4697832206496823171, guid: 3fe98549477f38f44ba095cf0c1e768f,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4697832206496823171, guid: 3fe98549477f38f44ba095cf0c1e768f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4697832206496823171, guid: 3fe98549477f38f44ba095cf0c1e768f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4697832206496823171, guid: 3fe98549477f38f44ba095cf0c1e768f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3fe98549477f38f44ba095cf0c1e768f, type: 3}
---- !u!4 &5464214291536153379 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4697832206496823171, guid: 3fe98549477f38f44ba095cf0c1e768f,
-    type: 3}
-  m_PrefabInstance: {fileID: 785531182770158752}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5464214291536153378 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4697832206496823170, guid: 3fe98549477f38f44ba095cf0c1e768f,
-    type: 3}
-  m_PrefabInstance: {fileID: 785531182770158752}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b02c47a234bce64b9c867d6d40e853c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
