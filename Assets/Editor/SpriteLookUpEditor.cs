@@ -49,7 +49,7 @@ public class SpriteLookUpEditor : Editor
 
                 return new SpriteLookUp.TileEntry()
                 {
-                    Path = Path.Combine(directory, $"{name}{extension}"),
+                    Path = directory + "/" + $"{name}{extension}",
                     Tile = tile,
                 };
             })
