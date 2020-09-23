@@ -29,6 +29,7 @@ public class SpriteLookUpEditor : Editor
         SpriteLookUp spriteLookUp = (SpriteLookUp)this.target;
 
         spriteLookUp.TileEntries = Directory.GetFiles(spriteLookUp.TilesPath)
+            .Where(asset => !asset.Contains(".DS_Store"))
             .Where(asset => Path.GetExtension(asset) != ".meta")
             .Select(asset =>
             {
