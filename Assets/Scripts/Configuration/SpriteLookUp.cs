@@ -35,6 +35,9 @@ namespace MM26.Configuration
         [SerializeField]
         private Tile _fallbackTile = null;
 
+        [Header("Generate Settings")]
+        public string TilesPath = "Assets/Sprites/mm26_tiles/";
+
         Dictionary<string, Tile> _tiles = null;
 
         private void OnEnable()

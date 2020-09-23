@@ -21,9 +21,6 @@ public class SpriteLookUpEditor : Editor
         }
     }
 
-    public static string g_BaseTileObjPath = "Assets/Tiles/MM26_Tiles/mm_tile_objects/";
-    public static string g_BaseTilesFolderPath = "Assets/Tiles/MM26_Tiles/";
-
     /// <summary>
     /// Populates Dictionary and TileList with Tiles
     /// </summary>
@@ -31,11 +28,11 @@ public class SpriteLookUpEditor : Editor
     {
         SpriteLookUp spriteLookUp = (SpriteLookUp)this.target;
 
-        spriteLookUp.TileEntries = Directory.GetFiles(Path.Combine(g_BaseTileObjPath, "collection"))
+        spriteLookUp.TileEntries = Directory.GetFiles(spriteLookUp.TilesPath)
             .Where(asset => Path.GetExtension(asset) != ".meta")
             .Select(asset =>
             {
-                string path = asset.Replace(g_BaseTileObjPath, "mm_tiles/").Replace(".asset", ".png");
+                string path = asset.Replace(spriteLookUp.TilesPath, "mm26_tiles/").Replace(".asset", ".png");
                 Tile tile = (Tile)AssetDatabase.LoadAssetAtPath(asset, typeof(Tile));
 
                 if (tile == null)
