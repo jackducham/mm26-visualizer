@@ -37,6 +37,18 @@ namespace MM26.IO
         private readonly byte[] _buffer = new byte[2048];
         private readonly MemoryStream _stream = new MemoryStream();
 
+        private readonly SynchronizationContext _context = null;
+
+        public StandaloneWebSocketListener()
+        {
+            _context = SynchronizationContext.Current;
+
+            if (_context == null)
+            {
+                Debug.LogWarning("Failed to capture synchronization context");
+            }
+        }
+
         public override void Dispose()
         {
             base.Dispose();
@@ -107,7 +119,17 @@ namespace MM26.IO
                     _stream.Read(message, 0, message.Length);
                     _stream.Seek(0, SeekOrigin.Begin);
 
-                    this.NewMessage?.Invoke(this, message);
+                    if (_context != null)
+                    {
+                        _context.Post((state) =>
+                        {
+                            this.NewMessage?.Invoke(this, message);
+                        }, null);
+                    }
+                    else
+                    {
+                        this.NewMessage?.Invoke(this, message);
+                    }
                 }
             }
         }

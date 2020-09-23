@@ -59,6 +59,8 @@ namespace MM26.IO
 
             _listener = WebSocketListener.Platform;
 
+            Debug.LogFormat("thread id = {0}", System.Threading.Thread.CurrentThread.ManagedThreadId);
+
             _listener.NewMessage += this.OnMessage;
             _listener.Connect(new Uri(_sceneConfiguration.WebSocketURL), this.OnConnection, this.OnError);
         }
@@ -85,7 +87,11 @@ namespace MM26.IO
             if (_data.Initial == null)
             {
                 _data.Initial = VisualizerInitial.Parser.ParseFrom(message);
+                Debug.LogFormat("thread id = {0}", System.Threading.Thread.CurrentThread.ManagedThreadId);
+
                 _sceneLifeCycle.DataFetched.Invoke();
+
+                Debug.Log("Data Fetched returns");
             }
             else
             {
