@@ -93,34 +93,15 @@ namespace MM26.Board
                 for (int x = 0; x < board.Columns; x++)
                 {
                     PTile ptile = board.Grid[y * board.Rows + x];
+                    Tile tile = null;
 
-                    Debug.Log(ptile.ToString());
-
-                    Tile tile = _tileDatabase.GetTile(ptile.GroundSprite);
-
-                    // Until new test is generated with ptile.Sprite, use this
-                    if (tile == null)
+                    if (ptile.TileType != PTileType.Void)
                     {
-                        switch (ptile.TileType)
-                        {
-                            case PTileType.Void:
-                                tile = _voidTile;
-                                break;
-                            case PTileType.Portal:
-                                tile = _portalTile;
-                                break;
-                            case PTileType.Impassible:
-                                tile = _impassibleTile;
-                                break;
-                            case PTileType.Blank:
-                                tile = _blankTile;
-                                break;
-                        }
+                        tile = _tileDatabase.GetTile(ptile.GroundSprite);
                     }
 
                     if (tile == null)
                     {
-                        Debug.LogError("tile cannot be null!");
                         continue;
                     }
 
