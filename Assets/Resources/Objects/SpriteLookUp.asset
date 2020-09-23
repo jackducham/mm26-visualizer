@@ -13,40 +13,40 @@ MonoBehaviour:
   m_Name: SpriteLookUp
   m_EditorClassIdentifier: 
   TileEntries:
-  - Path: mm26_tiles/01_dirt1.png
-    Tile: {fileID: 11400000, guid: 72920da7fc406904392fcfbfe9db1f15, type: 2}
-  - Path: mm26_tiles/02_dirt2.png
-    Tile: {fileID: 11400000, guid: 40049ba397e922e4db0cbc04ee197f17, type: 2}
-  - Path: mm26_tiles/03_dirt3.png
-    Tile: {fileID: 11400000, guid: 83a60ada71dd19448990f52b2314176b, type: 2}
-  - Path: mm26_tiles/04_dirtcracked1.png
-    Tile: {fileID: 11400000, guid: c289d2682e0ad114b958c8f5af5bc7ad, type: 2}
-  - Path: mm26_tiles/05_dirtcracked2.png
-    Tile: {fileID: 11400000, guid: ffdb221e157c96c42afc55962fd6bc49, type: 2}
-  - Path: mm26_tiles/06_grass1.png
-    Tile: {fileID: 11400000, guid: bb80b7aee497c364da867ca82883c738, type: 2}
-  - Path: mm26_tiles/07_grass2.png
-    Tile: {fileID: 11400000, guid: 915097ba892bc4d41af18c59e638d42a, type: 2}
-  - Path: mm26_tiles/08_grass3.png
-    Tile: {fileID: 11400000, guid: fbec36bad3abe574fa7d8347a08d359c, type: 2}
-  - Path: mm26_tiles/09_grass3b.png
-    Tile: {fileID: 11400000, guid: a26a7ea68c5786c418b6f463d3d713fa, type: 2}
-  - Path: mm26_tiles/10_grass4.png
-    Tile: {fileID: 11400000, guid: 80de70a227615bb46b0e4ff985e842de, type: 2}
-  - Path: mm26_tiles/11_grass4b.png
-    Tile: {fileID: 11400000, guid: d9dd8e3116894b5409c33f4255db4e59, type: 2}
-  - Path: mm26_tiles/12_grassblank.png
-    Tile: {fileID: 11400000, guid: b3f84682565a8824c93913891e1f689a, type: 2}
   - Path: mm26_tiles/Floor1.png
     Tile: {fileID: 11400000, guid: e6481a2c23287524887ef18255c73693, type: 2}
   - Path: mm26_tiles/Floor2.png
     Tile: {fileID: 11400000, guid: 0a3e7241823cf9e4abef92c9d6894137, type: 2}
   - Path: mm26_tiles/Floor3.png
     Tile: {fileID: 11400000, guid: 4efb74a5f349a0748b8fab609985f61c, type: 2}
+  - Path: mm26_tiles/Tallhousetopblue.png
+    Tile: {fileID: 11400000, guid: 07f8731eeac7440f18f549e2ad1af05b, type: 2}
+  - Path: mm26_tiles/arch rear left.png
+    Tile: {fileID: 11400000, guid: 326b6587e2a2946dabf7be7b2b12d2c3, type: 2}
+  - Path: mm26_tiles/arch rear right.png
+    Tile: {fileID: 11400000, guid: 19d4a7b623beb423f8dae2f333f72d7c, type: 2}
+  - Path: mm26_tiles/arch top right.png
+    Tile: {fileID: 11400000, guid: bdcad359a8f254ceeb2c82250c03f550, type: 2}
+  - Path: mm26_tiles/archbottomleft.png
+    Tile: {fileID: 11400000, guid: e7f69c0cdab274de7a015087791881ad, type: 2}
+  - Path: mm26_tiles/archbottomright.png
+    Tile: {fileID: 11400000, guid: 321dfffbf55bc43b69700c029b5666fd, type: 2}
+  - Path: mm26_tiles/archtopleft.png
+    Tile: {fileID: 11400000, guid: c0f4cc95da777431e856cfda022f29d9, type: 2}
   - Path: mm26_tiles/basicwall1.png
     Tile: {fileID: 11400000, guid: 574186c0b0a313042975ebbd13b505b0, type: 2}
+  - Path: mm26_tiles/basicwall1a.png
+    Tile: {fileID: 11400000, guid: e414aaebb8a924ac293a9f30acba29bf, type: 2}
+  - Path: mm26_tiles/basicwall1b.png
+    Tile: {fileID: 11400000, guid: 1ed61b7c0fb814b52b398629aa0f54b7, type: 2}
   - Path: mm26_tiles/basicwall2.png
     Tile: {fileID: 11400000, guid: 28ff43bff9db26142b67c841c8f02dc0, type: 2}
+  - Path: mm26_tiles/basicwall2a.png
+    Tile: {fileID: 11400000, guid: 031e80cd7c1f54f85b92f70159fbd77c, type: 2}
+  - Path: mm26_tiles/basicwall2b.png
+    Tile: {fileID: 11400000, guid: 27b6712984710419da322e1f383f06fc, type: 2}
+  - Path: mm26_tiles/basicwall2c.png
+    Tile: {fileID: 11400000, guid: f6e08d4c3679a469091e818b635a2bfe, type: 2}
   - Path: mm26_tiles/bat_dunce.png
     Tile: {fileID: 11400000, guid: 216e2c54c5f9c1142aded24423805961, type: 2}
   - Path: mm26_tiles/bat_toothy.png
@@ -57,14 +57,86 @@ MonoBehaviour:
     Tile: {fileID: 11400000, guid: 6be4d98ad0026a94087ab522659e6af9, type: 2}
   - Path: mm26_tiles/bottomleftcorner1.png
     Tile: {fileID: 11400000, guid: 5869cda70c5465a42907e3a4feee2278, type: 2}
+  - Path: mm26_tiles/bottomleftcorner1a.png
+    Tile: {fileID: 11400000, guid: b8fcdaaf6cf3549aab293ff64be30222, type: 2}
   - Path: mm26_tiles/bottomleftcorner2.png
     Tile: {fileID: 11400000, guid: 8e741d48eec974d4ba328ea7f255fcde, type: 2}
   - Path: mm26_tiles/bottomrightcorner1.png
     Tile: {fileID: 11400000, guid: c1887466ec50b294aa28439bb4d5525d, type: 2}
+  - Path: mm26_tiles/bottomrightcorner1a.png
+    Tile: {fileID: 11400000, guid: 6b0e06711c2b3473a8195c26e702d115, type: 2}
   - Path: mm26_tiles/bottomrightcorner2.png
     Tile: {fileID: 11400000, guid: 1e3907e720781a34fb4b161a4f7e0ca4, type: 2}
+  - Path: mm26_tiles/bushes.png
+    Tile: {fileID: 11400000, guid: 33eac5aeb030c46a7b1e72331c96b16e, type: 2}
+  - Path: mm26_tiles/bushes2.png
+    Tile: {fileID: 11400000, guid: 53818ac705f0a4aa2a0a2c09ecb9c22f, type: 2}
+  - Path: mm26_tiles/carpet-left-right.png
+    Tile: {fileID: 11400000, guid: c0566a56ea3104b5ea19046e68eb0967, type: 2}
+  - Path: mm26_tiles/carpet-up-down.png
+    Tile: {fileID: 11400000, guid: b81772f73ebbc437ab260b7be11b04d5, type: 2}
+  - Path: mm26_tiles/carpetbottom.png
+    Tile: {fileID: 11400000, guid: 8b7a6b6feed7e479bb4b3f5ab84e55be, type: 2}
+  - Path: mm26_tiles/carpetleft.png
+    Tile: {fileID: 11400000, guid: 9669b853eaf83437ba5370cfcef4c3e1, type: 2}
+  - Path: mm26_tiles/carpetright.png
+    Tile: {fileID: 11400000, guid: 9195836bb7d344d58950ab24ac0074c7, type: 2}
+  - Path: mm26_tiles/carpettop.png
+    Tile: {fileID: 11400000, guid: 53ec19176012a44d08d6038031b6c42b, type: 2}
   - Path: mm26_tiles/centipede.png
     Tile: {fileID: 11400000, guid: f3e1be4d3d594424c8d0caf715f9599e, type: 2}
+  - Path: mm26_tiles/curvytreebottom.png
+    Tile: {fileID: 11400000, guid: 7590422d1eb3b44469e0afac36d05936, type: 2}
+  - Path: mm26_tiles/curvytreetop.png
+    Tile: {fileID: 11400000, guid: 77d5f2ea4b2b04da884d29e13a8a55a7, type: 2}
+  - Path: mm26_tiles/darktree1.png
+    Tile: {fileID: 11400000, guid: 5eed67ef7db5c464cac4bf7191d169bc, type: 2}
+  - Path: mm26_tiles/darktree2.png
+    Tile: {fileID: 11400000, guid: 27586b87ef635481eaed4e1448dae574, type: 2}
+  - Path: mm26_tiles/darktree3.png
+    Tile: {fileID: 11400000, guid: 16fc75d8fb7ff427a9b1d94406bec134, type: 2}
+  - Path: mm26_tiles/darktree4.png
+    Tile: {fileID: 11400000, guid: 172fa1e3c1ad248e98be362ab3e4b6da, type: 2}
+  - Path: mm26_tiles/darktreebugs.png
+    Tile: {fileID: 11400000, guid: cf5f72fae98674cbf857353367dc9f85, type: 2}
+  - Path: mm26_tiles/dirt1.png
+    Tile: {fileID: 11400000, guid: b1ddf94a4079f4298b38834bf9ea2b6f, type: 2}
+  - Path: mm26_tiles/dirt2.png
+    Tile: {fileID: 11400000, guid: 4fa0cf27d181b49c1b184a7e8bb37e95, type: 2}
+  - Path: mm26_tiles/dirt3.png
+    Tile: {fileID: 11400000, guid: a26f3e29cdfbe413ca23de8792164af8, type: 2}
+  - Path: mm26_tiles/dirtbottomdark.png
+    Tile: {fileID: 11400000, guid: 63ee610c393e94a768dc83295bca1352, type: 2}
+  - Path: mm26_tiles/dirtcorner1dark.png
+    Tile: {fileID: 11400000, guid: 769b9d95722a14aa2be9ce2eac977a6a, type: 2}
+  - Path: mm26_tiles/dirtcorner2dark.png
+    Tile: {fileID: 11400000, guid: ed4d496929ba24fcfb17bcacc83bab1c, type: 2}
+  - Path: mm26_tiles/dirtcorner3dark.png
+    Tile: {fileID: 11400000, guid: 41f1ebf2a07e340349a0daae33782363, type: 2}
+  - Path: mm26_tiles/dirtcorner5dark.png
+    Tile: {fileID: 11400000, guid: ec34a206262e54d3e9960229f8ca2ad4, type: 2}
+  - Path: mm26_tiles/dirtcorner6dark.png
+    Tile: {fileID: 11400000, guid: 3f3f90e2c6898420ebf86dfab4f69cb0, type: 2}
+  - Path: mm26_tiles/dirtcorner7dark.png
+    Tile: {fileID: 11400000, guid: dd74c588c86ff4bf687c6587c1ff1fee, type: 2}
+  - Path: mm26_tiles/dirtcorner8dark.png
+    Tile: {fileID: 11400000, guid: 03bdf853b86bf476b8aa580396e82828, type: 2}
+  - Path: mm26_tiles/dirtcracked1.png
+    Tile: {fileID: 11400000, guid: abdaa77cd0620489ca8d0cb59d6fb426, type: 2}
+  - Path: mm26_tiles/dirtcracked2.png
+    Tile: {fileID: 11400000, guid: 95c23c44657094687a382a952837495c, type: 2}
+  - Path: mm26_tiles/dirtleftdark.png
+    Tile: {fileID: 11400000, guid: 8cbdfc877493645a89e98fe1640fd368, type: 2}
+  - Path: mm26_tiles/dirtrightdark.png
+    Tile: {fileID: 11400000, guid: 56008ad53231949fab1186a2a68f12cb, type: 2}
+  - Path: mm26_tiles/dirttopdark.png
+    Tile: {fileID: 11400000, guid: 15587472a15ea4543befcc8787cd0359, type: 2}
+  - Path: mm26_tiles/door rear.png
+    Tile: {fileID: 11400000, guid: 8858f66d662234733a3b7e17da499280, type: 2}
+  - Path: mm26_tiles/door1.png
+    Tile: {fileID: 11400000, guid: eb03412379677455591cf85b39f85d60, type: 2}
+  - Path: mm26_tiles/door2.png
+    Tile: {fileID: 11400000, guid: e95a7b00a078b4640afbe947538d384a, type: 2}
   - Path: mm26_tiles/dragon_curvy (full size).png
     Tile: {fileID: 11400000, guid: 96edfa55e8ca18948901f86f053ebdf3, type: 2}
   - Path: mm26_tiles/dragon_curvy.png
@@ -75,38 +147,96 @@ MonoBehaviour:
     Tile: {fileID: 11400000, guid: 7210b385efe78fd4e876167401abf576, type: 2}
   - Path: mm26_tiles/error.png
     Tile: {fileID: 11400000, guid: ab415fcabcd33420ab7ecdb515e73ca2, type: 2}
+  - Path: mm26_tiles/eyeballplant.png
+    Tile: {fileID: 11400000, guid: 7fe40b6700227449682bd7d35fdb2182, type: 2}
+  - Path: mm26_tiles/fireyplant.png
+    Tile: {fileID: 11400000, guid: 881b2f79d167d489f91bc60346002b9e, type: 2}
   - Path: mm26_tiles/fish_abominable.png
     Tile: {fileID: 11400000, guid: 178cb2702070d4249b3bea0a0bbbd6c4, type: 2}
   - Path: mm26_tiles/fish_goomba.png
     Tile: {fileID: 11400000, guid: 0f0029c94c51fcb4c9e0ce2a71cde29c, type: 2}
   - Path: mm26_tiles/fish_sly.png
     Tile: {fileID: 11400000, guid: f81969cc9a9fba4498ea036f7474a852, type: 2}
+  - Path: mm26_tiles/floatygrass1.png
+    Tile: {fileID: 11400000, guid: ca7e6645e9f5e4a58a3e93674ee4d796, type: 2}
+  - Path: mm26_tiles/floatygrass2.png
+    Tile: {fileID: 11400000, guid: dc72166a841ba4617a96b97bb795666d, type: 2}
+  - Path: mm26_tiles/glowplant.png
+    Tile: {fileID: 11400000, guid: d4fd4428995bc4db9a9fff828bdae90f, type: 2}
   - Path: mm26_tiles/goose.png
     Tile: {fileID: 11400000, guid: cc1c000e2a94c674eb0a1a2946ff9d61, type: 2}
+  - Path: mm26_tiles/grass1.png
+    Tile: {fileID: 11400000, guid: fa06221c5a1df4571bf32358ee3c344b, type: 2}
+  - Path: mm26_tiles/grass1dark.png
+    Tile: {fileID: 11400000, guid: f5c495c6a88ce4206a2ad88fc97d3855, type: 2}
+  - Path: mm26_tiles/grass2.png
+    Tile: {fileID: 11400000, guid: e5c63dd4d336c41c09182db212677bde, type: 2}
+  - Path: mm26_tiles/grass2dark.png
+    Tile: {fileID: 11400000, guid: 5569c9fcca73e44cd8bf04ec07ef313b, type: 2}
+  - Path: mm26_tiles/grass3.png
+    Tile: {fileID: 11400000, guid: c4b87e4e7f0254fed8c3a6e7995aa30d, type: 2}
+  - Path: mm26_tiles/grass3b.png
+    Tile: {fileID: 11400000, guid: 8f5a0583dbebf42cebba830286f32765, type: 2}
+  - Path: mm26_tiles/grass3dark.png
+    Tile: {fileID: 11400000, guid: f5185e049952741af8a7728758102ccd, type: 2}
+  - Path: mm26_tiles/grass4.png
+    Tile: {fileID: 11400000, guid: 9163ed7c43ec04ee08124e0408929064, type: 2}
+  - Path: mm26_tiles/grass4b.png
+    Tile: {fileID: 11400000, guid: ed7129784b8e7420f8fe216f9b7ec3a5, type: 2}
+  - Path: mm26_tiles/grass4dark.png
+    Tile: {fileID: 11400000, guid: b80a4e668abe94f93ab0458860c82376, type: 2}
+  - Path: mm26_tiles/grassblank.png
+    Tile: {fileID: 11400000, guid: 4a53c803b22bc4cf69ac22fa6945f22e, type: 2}
+  - Path: mm26_tiles/grassblankdark.png
+    Tile: {fileID: 11400000, guid: 6974d3b40fd104b5fb7c894ebfef6ed3, type: 2}
   - Path: mm26_tiles/grassbottom.png
     Tile: {fileID: 11400000, guid: 183b53cff91f0944aa32ac3d920ed539, type: 2}
+  - Path: mm26_tiles/grassbottomdark.png
+    Tile: {fileID: 11400000, guid: 99ae3162337604b08affdd55201e61f7, type: 2}
   - Path: mm26_tiles/grassbottomleft.png
     Tile: {fileID: 11400000, guid: 783fcc62ce5f19946a839b3fae667638, type: 2}
+  - Path: mm26_tiles/grassbottomleftdark.png
+    Tile: {fileID: 11400000, guid: 78662b94286c54b4d8b61d247f34ece9, type: 2}
   - Path: mm26_tiles/grassbottomright.png
     Tile: {fileID: 11400000, guid: 2923d067ec8492e409e7472d7cc774a3, type: 2}
+  - Path: mm26_tiles/grassbottomrightdark.png
+    Tile: {fileID: 11400000, guid: e8566ec6d0beb4b15ae2ae990b966b78, type: 2}
   - Path: mm26_tiles/grassinnerbottomleft.png
     Tile: {fileID: 11400000, guid: 2cb598844ce08f54385b037b2eda82be, type: 2}
+  - Path: mm26_tiles/grassinnerbottomleftdark.png
+    Tile: {fileID: 11400000, guid: c6159c0e502444556adc3be8306aee06, type: 2}
   - Path: mm26_tiles/grassinnerbottomright.png
     Tile: {fileID: 11400000, guid: 5fc55ed2a7a24d14a9ad6d673954672a, type: 2}
+  - Path: mm26_tiles/grassinnerbottomrightdark.png
+    Tile: {fileID: 11400000, guid: e739c412e92aa4e35b10a1e54ea38a44, type: 2}
   - Path: mm26_tiles/grassinnertopleft.png
     Tile: {fileID: 11400000, guid: 71f2af20c5400cd4ca19bf469ce01d13, type: 2}
+  - Path: mm26_tiles/grassinnertopleftdark.png
+    Tile: {fileID: 11400000, guid: bb43c72b797104440a0ce9a15eb548f2, type: 2}
   - Path: mm26_tiles/grassinnertopright.png
     Tile: {fileID: 11400000, guid: 85da26d99991f7142b30c9f8b8aa9ce3, type: 2}
+  - Path: mm26_tiles/grassinnertoprightdark.png
+    Tile: {fileID: 11400000, guid: 5415da3f5a249445fbdf109ff580e550, type: 2}
   - Path: mm26_tiles/grassleft.png
     Tile: {fileID: 11400000, guid: 92c09c4f19a80ce43b00916357947890, type: 2}
+  - Path: mm26_tiles/grassleftdark.png
+    Tile: {fileID: 11400000, guid: 7fc5fc48afd5a4b5f8ffcf99f7df3926, type: 2}
   - Path: mm26_tiles/grassright.png
     Tile: {fileID: 11400000, guid: a18899ede6fa7834c83bd9a2abb69022, type: 2}
+  - Path: mm26_tiles/grassrightdark.png
+    Tile: {fileID: 11400000, guid: d9d8765b640324088a7056908ffcacf5, type: 2}
   - Path: mm26_tiles/grasstop.png
     Tile: {fileID: 11400000, guid: db8313b96c927394dac81e329d61b888, type: 2}
+  - Path: mm26_tiles/grasstopdark.png
+    Tile: {fileID: 11400000, guid: 3224764771eb84e9e8926acfcf9cecac, type: 2}
   - Path: mm26_tiles/grasstopleft.png
     Tile: {fileID: 11400000, guid: b47154f82e7bdc34f903eb900d335326, type: 2}
+  - Path: mm26_tiles/grasstopleftdark.png
+    Tile: {fileID: 11400000, guid: 2dbddabbaf90b4f59af8118955a42191, type: 2}
   - Path: mm26_tiles/grasstopright.png
     Tile: {fileID: 11400000, guid: bbec3959ffb1dbb4db459b854a2dfd65, type: 2}
+  - Path: mm26_tiles/grasstoprightdark.png
+    Tile: {fileID: 11400000, guid: c72bf8b11d6be4aa5bbed2e6bb281086, type: 2}
   - Path: mm26_tiles/innerbottomleft.png
     Tile: {fileID: 11400000, guid: 718e41c88548daa44ad749b7dadd1a64, type: 2}
   - Path: mm26_tiles/innerbottomright.png
@@ -125,14 +255,24 @@ MonoBehaviour:
     Tile: {fileID: 11400000, guid: 485a5e64a3aed964e9f178583c205d26, type: 2}
   - Path: mm26_tiles/lizard_knight.png
     Tile: {fileID: 11400000, guid: aafacecbc87d7ef42a417527b351e993, type: 2}
+  - Path: mm26_tiles/magicportal.png
+    Tile: {fileID: 11400000, guid: 3a69ead216c2243ecb6a0022cc049ac3, type: 2}
   - Path: mm26_tiles/mimic.png
     Tile: {fileID: 11400000, guid: 621feb118c1f2af4fb0ce9111b41015f, type: 2}
   - Path: mm26_tiles/mushroom_eel.png
     Tile: {fileID: 11400000, guid: 781b99f179c780345977a2ba7898b241, type: 2}
+  - Path: mm26_tiles/nautilusplant.png
+    Tile: {fileID: 11400000, guid: 484e953e9030b4317bdeb11582195636, type: 2}
   - Path: mm26_tiles/rightside.png
     Tile: {fileID: 11400000, guid: ecf1e18aa3e92b247a98287e7b873020, type: 2}
   - Path: mm26_tiles/rock_elemental.png
     Tile: {fileID: 11400000, guid: 7eebbcbcaa811a74595a2b0e19efeb54, type: 2}
+  - Path: mm26_tiles/rocks1.png
+    Tile: {fileID: 11400000, guid: 3f60c18832b4d4ed4bd732876e688fa6, type: 2}
+  - Path: mm26_tiles/rocks2.png
+    Tile: {fileID: 11400000, guid: c4879ad9946c744b49339894bae03f37, type: 2}
+  - Path: mm26_tiles/rockwithlizard.png
+    Tile: {fileID: 11400000, guid: db3e4b66cf9464ce79a53bad231935bb, type: 2}
   - Path: mm26_tiles/sheep_cacosheep.png
     Tile: {fileID: 11400000, guid: 15f32d10c26b7b24fbe30a78bcdb04ea, type: 2}
   - Path: mm26_tiles/sheep_sheemp.png
@@ -147,6 +287,16 @@ MonoBehaviour:
     Tile: {fileID: 11400000, guid: 6ac1d81fc52e7894c858f0822d973aab, type: 2}
   - Path: mm26_tiles/slime_pacman.png
     Tile: {fileID: 11400000, guid: f2825f3323304db499daa14cddf4377c, type: 2}
+  - Path: mm26_tiles/small house green.png
+    Tile: {fileID: 11400000, guid: 63eb8f326b690434694dd7b2a930ee3f, type: 2}
+  - Path: mm26_tiles/smallhouseblue.png
+    Tile: {fileID: 11400000, guid: 391e2e66803ee490b887c0edcd15309b, type: 2}
+  - Path: mm26_tiles/smallhouseorange.png
+    Tile: {fileID: 11400000, guid: 4f333cebaeb2f423f93f108dc76179c2, type: 2}
+  - Path: mm26_tiles/smallhousered.png
+    Tile: {fileID: 11400000, guid: 1bb9645fd830b4c44ac4ff8dca521ec7, type: 2}
+  - Path: mm26_tiles/snailplant.png
+    Tile: {fileID: 11400000, guid: ba8ae697199da410c858f28fcecd3530, type: 2}
   - Path: mm26_tiles/soulcrab_helmet_v2.png
     Tile: {fileID: 11400000, guid: 08980935f6c462f4285845f21e0f0819, type: 2}
   - Path: mm26_tiles/soulcrab_v2.png
@@ -155,10 +305,46 @@ MonoBehaviour:
     Tile: {fileID: 11400000, guid: 02165b706890f4f4997298caa63405b6, type: 2}
   - Path: mm26_tiles/spider_mother.png
     Tile: {fileID: 11400000, guid: 3a86526cd66d55f43829a2a63e8d2e1f, type: 2}
+  - Path: mm26_tiles/spikes.png
+    Tile: {fileID: 11400000, guid: 8d6a066fbf3b740668413aea061b4c80, type: 2}
+  - Path: mm26_tiles/spiralbush.png
+    Tile: {fileID: 11400000, guid: 0e7973ba4e8514e9db0e2202f4a48eee, type: 2}
+  - Path: mm26_tiles/spiralbush2.png
+    Tile: {fileID: 11400000, guid: c3edde8afc6354a25bab79244c0ac080, type: 2}
+  - Path: mm26_tiles/spiralbush3.png
+    Tile: {fileID: 11400000, guid: 02908d6edbc7141e1acc1cf65dc1afbe, type: 2}
+  - Path: mm26_tiles/talldarktreebottom.png
+    Tile: {fileID: 11400000, guid: da7231c90eeb6438c9344f67b0e9246c, type: 2}
+  - Path: mm26_tiles/talldarktreetop.png
+    Tile: {fileID: 11400000, guid: 4744d24d0a66d4b85abb74639ad2379b, type: 2}
+  - Path: mm26_tiles/tallhousebottomblue.png
+    Tile: {fileID: 11400000, guid: 3388a907570a54f9c98b3eecbd5ac4c4, type: 2}
+  - Path: mm26_tiles/tallhousebottomgreen.png
+    Tile: {fileID: 11400000, guid: c4ba2852e20cd422180dbea50a24cdcd, type: 2}
+  - Path: mm26_tiles/tallhousebottomorange.png
+    Tile: {fileID: 11400000, guid: b734f515ce7d040f0b9c1a9c9eecbfc8, type: 2}
+  - Path: mm26_tiles/tallhousebottomred.png
+    Tile: {fileID: 11400000, guid: 7f69e1be578bb472cace1dc2b5a04776, type: 2}
+  - Path: mm26_tiles/tallhousetopgreen.png
+    Tile: {fileID: 11400000, guid: 269bd7d35ebef4b7988abb08e4c58161, type: 2}
+  - Path: mm26_tiles/tallhousetoporange.png
+    Tile: {fileID: 11400000, guid: d973188570c754c2284f7645c9368b95, type: 2}
+  - Path: mm26_tiles/tallhousetopred.png
+    Tile: {fileID: 11400000, guid: 8c2ae1196276542d28ad5a5819cc59ed, type: 2}
+  - Path: mm26_tiles/talltreebottom.png
+    Tile: {fileID: 11400000, guid: 82f0f062ff5eb422e92692d855c45635, type: 2}
+  - Path: mm26_tiles/talltreetop.png
+    Tile: {fileID: 11400000, guid: 237cbd9bbbc5540779d3ee55328a5e65, type: 2}
   - Path: mm26_tiles/topleftcorner.png
     Tile: {fileID: 11400000, guid: 7e44087e960376f48a673c3504f3b2ef, type: 2}
   - Path: mm26_tiles/toprightcorner.png
     Tile: {fileID: 11400000, guid: f5697413223791d4fbf4897c96592ab0, type: 2}
+  - Path: mm26_tiles/tree1.png
+    Tile: {fileID: 11400000, guid: 055169b9231094b8e88a6e9c7cae28d5, type: 2}
+  - Path: mm26_tiles/tree2.png
+    Tile: {fileID: 11400000, guid: 1540d2d085dba4eaaac7f62c65d58672, type: 2}
+  - Path: mm26_tiles/tree3.png
+    Tile: {fileID: 11400000, guid: 169b8d91d3511465c8edd1a49ae93719, type: 2}
   - Path: mm26_tiles/tusk_worm.png
     Tile: {fileID: 11400000, guid: 0ebed3593c79b4f4481774911f81fbec, type: 2}
   - Path: mm26_tiles/uniboar_pigasus.png
@@ -179,28 +365,52 @@ MonoBehaviour:
     Tile: {fileID: 11400000, guid: 3b3f71dfa217fd9408d427397118ec9f, type: 2}
   - Path: mm26_tiles/waterbottom.png
     Tile: {fileID: 11400000, guid: da23f8e33fc8eb74cb006b43d6f6d0a1, type: 2}
+  - Path: mm26_tiles/waterbottomdark.png
+    Tile: {fileID: 11400000, guid: 48890b34d4b6a448a8b4217d32f9472a, type: 2}
   - Path: mm26_tiles/watercorner1.png
     Tile: {fileID: 11400000, guid: b27245e0e2d6d3246a5a2b0858df0ba3, type: 2}
+  - Path: mm26_tiles/watercorner1dark.png
+    Tile: {fileID: 11400000, guid: dfbfae430e4e84c19a58e1a7b340ca23, type: 2}
   - Path: mm26_tiles/watercorner2.png
     Tile: {fileID: 11400000, guid: a82a8157d9de3084abf5f3a2021d0b4e, type: 2}
+  - Path: mm26_tiles/watercorner2dark.png
+    Tile: {fileID: 11400000, guid: 19b5aa3e8485b440a9856c3270609bef, type: 2}
   - Path: mm26_tiles/watercorner3.png
     Tile: {fileID: 11400000, guid: 07dc1d95ec3dfda49b870b63d0e08c9b, type: 2}
+  - Path: mm26_tiles/watercorner3dark.png
+    Tile: {fileID: 11400000, guid: 0df533a689ef244a2b42b72c7000bf7d, type: 2}
   - Path: mm26_tiles/watercorner4.png
     Tile: {fileID: 11400000, guid: 7675e8dcf9d116b4eacc81e120a04694, type: 2}
+  - Path: mm26_tiles/watercorner4dark.png
+    Tile: {fileID: 11400000, guid: 72461cae7998e47dab73f5a03975bb59, type: 2}
   - Path: mm26_tiles/watercorner5.png
     Tile: {fileID: 11400000, guid: 7c848765ae6c508459152c1040d2e56f, type: 2}
+  - Path: mm26_tiles/watercorner5dark.png
+    Tile: {fileID: 11400000, guid: cf188ee1c6cff4704996591c72e8e355, type: 2}
   - Path: mm26_tiles/watercorner6.png
     Tile: {fileID: 11400000, guid: f7a8c8f71a8ef994299f6c4efac9f431, type: 2}
+  - Path: mm26_tiles/watercorner6dark.png
+    Tile: {fileID: 11400000, guid: 3dfc2cdd5593b45e085e833839ce80bb, type: 2}
   - Path: mm26_tiles/watercorner7.png
     Tile: {fileID: 11400000, guid: 7dd9a0d7c2ee9854c819238b60025c26, type: 2}
+  - Path: mm26_tiles/watercorner7dark.png
+    Tile: {fileID: 11400000, guid: ac7cb8d529f9b4c3e952e5251da5bc65, type: 2}
   - Path: mm26_tiles/watercorner8.png
     Tile: {fileID: 11400000, guid: e83fbbd1eb61de74eabe8f4c8513beb6, type: 2}
+  - Path: mm26_tiles/watercorner8dark.png
+    Tile: {fileID: 11400000, guid: 2198920bafb994ae396c9e31106359a7, type: 2}
   - Path: mm26_tiles/waterleft.png
     Tile: {fileID: 11400000, guid: 9dfb65f840ddbb849a2db64925aca53d, type: 2}
+  - Path: mm26_tiles/waterleftdark.png
+    Tile: {fileID: 11400000, guid: 0d75b71cba5f04a1faa54eeb05366166, type: 2}
   - Path: mm26_tiles/waterright.png
     Tile: {fileID: 11400000, guid: c70e09ff2e684074583c50f79d74d63a, type: 2}
+  - Path: mm26_tiles/waterrightdark.png
+    Tile: {fileID: 11400000, guid: c22c22f5f07e4479dba0a255e2e8ff70, type: 2}
   - Path: mm26_tiles/watertop.png
     Tile: {fileID: 11400000, guid: 3b5b2cab9d471ed41b11623570a5ff55, type: 2}
+  - Path: mm26_tiles/watertopdark.png
+    Tile: {fileID: 11400000, guid: 13b1d084bf04a49d688e8bacab1181d3, type: 2}
   - Path: mm26_tiles/zombie_fish.png
     Tile: {fileID: 11400000, guid: 9bff232ed13135e4bb3f42703d3ff0e5, type: 2}
   - Path: mm26_tiles/zombie_normal.png

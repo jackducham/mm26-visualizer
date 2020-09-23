@@ -41,9 +41,15 @@ public class SpriteLookUpEditor : Editor
                     Debug.LogErrorFormat("asset not found at {0}", path);
                 }
 
+                // some path might have all cap extensions, but the path
+                // found by SpriteLookUpEditor all have lower case extension
+                string directory = Path.GetDirectoryName(path);
+                string name = Path.GetFileNameWithoutExtension(path);
+                string extension = Path.GetExtension(path);
+
                 return new SpriteLookUp.TileEntry()
                 {
-                    Path = path,
+                    Path = Path.Combine(directory, $"{name}{extension}"),
                     Tile = tile,
                 };
             })

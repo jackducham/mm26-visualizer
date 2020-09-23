@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using System.IO;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -57,6 +58,14 @@ namespace MM26.Configuration
 
         public Tile GetTile(string path)
         {
+            // some path might have all cap extensions, but the path
+            // found by SpriteLookUpEditor all have lower case extension
+            string directory = Path.GetDirectoryName(path);
+            string filename = Path.GetFileNameWithoutExtension(path);
+            string extension = Path.GetExtension(path).ToLower();
+
+            path = Path.Combine(directory, $"{filename}{extension}");
+
             if (_tiles.TryGetValue(path, out Tile tile))
             {
                 return tile;
