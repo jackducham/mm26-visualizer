@@ -32,7 +32,7 @@ namespace MM26.Systems
                     var input = _input.Camera.Zoom.ReadValue<Vector2>();
 
                     camera.orthographicSize += input.y * dt * cameraSettings.ZoomSpeed;
-                    camera.orthographicSize = Mathf.Clamp(camera.orthographicSize, 0.0f, 15.0f);
+                    camera.orthographicSize = Mathf.Clamp(camera.orthographicSize, 1f, 15.0f);
                 })
                 .Run();
         }

@@ -93,19 +93,22 @@ namespace MM26.Board
                 for (int x = 0; x < board.Columns; x++)
                 {
                     PTile ptile = board.Grid[y * board.Rows + x];
-                    Tile tile = null;
 
-                    if (ptile.TileType != PTileType.Void)
-                    {
-                        tile = _tileDatabase.GetTile(ptile.GroundSprite);
-                    }
-
-                    if (tile == null)
+                    if (ptile.TileType == PTileType.Void)
                     {
                         continue;
                     }
 
-                    _tilemap.SetTile(new Vector3Int(x, y, 0), tile);
+                    if (ptile.GroundSprite != "")
+                    {
+                        Tile tile = _tileDatabase.GetTile(ptile.GroundSprite);
+                        _tilemap.SetTile(new Vector3Int(x, y, 0), tile);
+                    }
+                    else if (ptile.AboveSprite != "")
+                    {
+                        Tile tile = _tileDatabase.GetTile(ptile.AboveSprite);
+                        _tilemap.SetTile(new Vector3Int(x, y, 1), tile);
+                    }
                 }
             }
         }
