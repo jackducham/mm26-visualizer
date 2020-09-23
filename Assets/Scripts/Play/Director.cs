@@ -35,19 +35,30 @@ namespace MM26.Play
         [FormerlySerializedAs("_sceneConfiguration")]
         internal SceneConfiguration SceneConfiguration = null;
 
+        private bool _playing = false;
+
         private void OnEnable()
         {
-            SceneLifeCycle.Play.AddListener(this.DispatchTasks);
+            SceneLifeCycle.Play.AddListener(this.OnPlay);
         }
 
         private void OnDisable()
         {
-            SceneLifeCycle.Play.RemoveListener(this.DispatchTasks);
+            SceneLifeCycle.Play.RemoveListener(this.OnPlay);
         }
 
         private void Update()
         {
-            this.DispatchTasks();
+            if (_playing)
+            {
+                this.DispatchTasks();
+            }
+            
+        }
+
+        private void OnPlay()
+        {
+            _playing = true;
         }
 
         private void DispatchTasks()

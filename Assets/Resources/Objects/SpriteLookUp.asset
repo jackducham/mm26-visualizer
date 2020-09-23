@@ -204,3 +204,4 @@ MonoBehaviour:
   - Path: mm_tiles/collection/zombie_normal.png
     Tile: {fileID: 11400000, guid: fd8307d14c4a9b54485ea95df9e80d85, type: 2}
   WearableEntries: []
+  _fallbackTile: {fileID: 11400000, guid: 3e2316ae3f147cb4db70fe5e469e9d61, type: 2}

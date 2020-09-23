@@ -37,6 +37,9 @@ namespace MM26
         private void Start()
         {
             _sceneLifeCycle.FetchData.Invoke();
+
+            // Please preserve this log
+            Debug.Log("Fetching Data");
         }
 
         private void Update()
@@ -47,6 +50,9 @@ namespace MM26
         private void OnDataFetched()
         {
             _sceneLifeCycle.CreateBoard.Invoke();
+
+            // Please preserve this log
+            Debug.Log("Creating Board");
         }
 
         private void OnBoardCreated()
@@ -54,6 +60,9 @@ namespace MM26
             if (_play)
             {
                 _sceneLifeCycle.Play.Invoke();
+
+                // Please preserve this log
+                Debug.Log("Playing");
             }
         }
     }

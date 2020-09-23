@@ -81,22 +81,18 @@ namespace MM26.IO
 
         private void OnMessage(object sender, byte[] message)
         {
-            // Please preserve this log message for diagnostic purpose
-            Debug.LogFormat("Message received, length = {0}", message.Length);
-
             if (_data.Initial == null)
             {
                 _data.Initial = VisualizerInitial.Parser.ParseFrom(message);
-                Debug.LogFormat("thread id = {0}", System.Threading.Thread.CurrentThread.ManagedThreadId);
-
                 _sceneLifeCycle.DataFetched.Invoke();
-
-                Debug.Log("Data Fetched returns");
             }
             else
             {
                 _data.Turns.Enqueue(VisualizerTurn.Parser.ParseFrom(message));
             }
+
+            // Please preserve this log message for diagnostic purpose
+            Debug.LogFormat("Message received, length = {0}", message.Length);
         }
     }
 }

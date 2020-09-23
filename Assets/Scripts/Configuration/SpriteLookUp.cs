@@ -32,6 +32,9 @@ namespace MM26.Configuration
         [SerializeField]
         internal WearableEntry[] WearableEntries = null;
 
+        [SerializeField]
+        private Tile _fallbackTile = null;
+
         Dictionary<string, Tile> _tiles = null;
 
         private void OnEnable()
@@ -51,7 +54,15 @@ namespace MM26.Configuration
 
         public Tile GetTile(string path)
         {
-            return _tiles[path];
+            if (_tiles.TryGetValue(path, out Tile tile))
+            {
+                return tile;
+            }
+
+            // Please preserve this comment
+            Debug.LogWarningFormat("Tile at {0} is not found!", path);
+
+            return _fallbackTile;
         }
     }
 }
