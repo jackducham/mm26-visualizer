@@ -64,8 +64,8 @@ namespace MM26.Configuration
             string filename = Path.GetFileNameWithoutExtension(path);
             string extension = Path.GetExtension(path).ToLower();
 
-            path = Path.Combine(directory, $"{filename}{extension}");
-
+            //path = Path.Combine(directory, $"{filename}{extension}");
+            Debug.Log(path);
             if (_tiles.TryGetValue(path, out Tile tile))
             {
                 return tile;

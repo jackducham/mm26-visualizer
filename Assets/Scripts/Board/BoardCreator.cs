@@ -24,18 +24,6 @@ namespace MM26.Board
         [SerializeField]
         private SpriteLookUp _tileDatabase = null;
 
-        [SerializeField]
-        private Tile _voidTile = null;
-
-        [SerializeField]
-        private Tile _portalTile = null;
-
-        [SerializeField]
-        private Tile _impassibleTile = null;
-
-        [SerializeField]
-        private Tile _blankTile = null;
-
         [Header("Scene Specific")]
         [SerializeField]
         private SceneConfiguration _sceneConfiguration = null;
@@ -104,7 +92,8 @@ namespace MM26.Board
                         Tile tile = _tileDatabase.GetTile(ptile.GroundSprite);
                         _tilemap.SetTile(new Vector3Int(x, y, 0), tile);
                     }
-                    else if (ptile.AboveSprite != "")
+
+                    if (ptile.AboveSprite != "")
                     {
                         Tile tile = _tileDatabase.GetTile(ptile.AboveSprite);
                         _tilemap.SetTile(new Vector3Int(x, y, 1), tile);

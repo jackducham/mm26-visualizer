@@ -33,5 +33,7 @@ namespace MM26.Tests
         /// </summary>
         [FormerlySerializedAs("Sprite")]
         public string GroundSprite;
+
+        public string AboveSprite;
     }
 }
