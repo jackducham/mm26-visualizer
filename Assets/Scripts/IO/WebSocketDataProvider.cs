@@ -79,6 +79,9 @@ namespace MM26.IO
 
         private void OnMessage(object sender, byte[] message)
         {
+            // Please preserve this log message for diagnostic purpose
+            Debug.LogFormat("Message received, length = {0}", message.Length);
+
             if (_data.Initial == null)
             {
                 _data.Initial = VisualizerInitial.Parser.ParseFrom(message);
@@ -88,9 +91,6 @@ namespace MM26.IO
             {
                 _data.Turns.Enqueue(VisualizerTurn.Parser.ParseFrom(message));
             }
-
-            // Please preserve this log message for diagnostic purpose
-            Debug.LogFormat("Message received, length = {0}", message.Length);
         }
     }
 }

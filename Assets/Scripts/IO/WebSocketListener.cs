@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Net.WebSockets;
 using System.Threading;
 using System.Threading.Tasks;
@@ -33,12 +34,14 @@ namespace MM26.IO
     {
         bool _idle = true;
         private readonly ClientWebSocket _client = new ClientWebSocket();
-        private readonly Buffer _buffer = new Buffer();
+        private readonly byte[] _buffer = new byte[2048];
+        private readonly MemoryStream _stream = new MemoryStream();
 
         public override void Dispose()
         {
             base.Dispose();
             _client.Dispose();
+            _stream.Dispose();
         }
 
         /// <summary>
@@ -87,17 +90,24 @@ namespace MM26.IO
         {
             while (_client.State == WebSocketState.Open)
             {
-                ArraySegment<byte> segment = _buffer.ArraySegment;
+                var buffer = new ArraySegment<byte>(_buffer);
 
-                WebSocketReceiveResult result = await _client.ReceiveAsync(segment, CancellationToken.None);
-                _buffer.Append(result.Count);
+                WebSocketReceiveResult result = await _client.ReceiveAsync(
+                    buffer,
+                    CancellationToken.None);
+
+                _stream.Write(buffer.Array, buffer.Offset, result.Count);
 
                 if (result.EndOfMessage)
                 {
-                    byte[] bufferContent = _buffer.Content;
-                    _buffer.Reset();
+                    _stream.Seek(0, SeekOrigin.End);
+                    var message = new byte[_stream.Seek(0, SeekOrigin.Current)];
 
-                    this.NewMessage?.Invoke(this, bufferContent);
+                    _stream.Seek(0, SeekOrigin.Begin);
+                    _stream.Read(message, 0, message.Length);
+                    _stream.Seek(0, SeekOrigin.Begin);
+
+                    this.NewMessage?.Invoke(this, message);
                 }
             }
         }
