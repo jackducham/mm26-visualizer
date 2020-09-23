@@ -93,7 +93,10 @@ namespace MM26.Board
                 for (int x = 0; x < board.Columns; x++)
                 {
                     PTile ptile = board.Grid[y * board.Rows + x];
-                    Tile tile = _tileDatabase.GetTile(ptile.Sprite);
+
+                    Debug.Log(ptile.ToString());
+
+                    Tile tile = _tileDatabase.GetTile(ptile.GroundSprite);
 
                     // Until new test is generated with ptile.Sprite, use this
                     if (tile == null)

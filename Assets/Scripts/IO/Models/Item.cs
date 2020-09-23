@@ -24,44 +24,46 @@ namespace MM26.IO.Models {
     static ItemReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgppdGVtLnByb3RvEgRpdGVtIvgBCgRJdGVtEhEKCW1heF9zdGFjaxgBIAEo",
-            "BRIjCgVzdGF0cxgCIAEoCzIULml0ZW0uU3RhdHVzTW9kaWZpZXISIAoHY2xv",
-            "dGhlcxgDIAEoCzINLml0ZW0uQ2xvdGhlc0gAEhgKA2hhdBgEIAEoCzIJLml0",
-            "ZW0uSGF0SAASHAoFc2hvZXMYBSABKAsyCy5pdGVtLlNob2VzSAASHgoGd2Vh",
-            "cG9uGAYgASgLMgwuaXRlbS5XZWFwb25IABImCgpjb25zdW1hYmxlGAcgASgL",
-            "MhAuaXRlbS5Db25zdW1hYmxlSAASDgoGc3ByaXRlGAggASgJQgYKBGl0ZW0i",
-            "LgoHQ2xvdGhlcxIjCgVzdGF0cxgBIAEoCzIULml0ZW0uU3RhdHVzTW9kaWZp",
-            "ZXIiagoDSGF0EiMKBXN0YXRzGAEgASgLMhQuaXRlbS5TdGF0dXNNb2RpZmll",
-            "chInCgpoYXRfZWZmZWN0GAIgASgOMhMuaXRlbS5IYXQuSGF0RWZmZWN0IhUK",
-            "CUhhdEVmZmVjdBIICgRURVNUEAAiLAoFU2hvZXMSIwoFc3RhdHMYASABKAsy",
-            "FC5pdGVtLlN0YXR1c01vZGlmaWVyIpQBCgZXZWFwb24SIwoFc3RhdHMYASAB",
-            "KAsyFC5pdGVtLlN0YXR1c01vZGlmaWVyEg0KBXJhbmdlGAIgASgFEhUKDXNw",
-            "bGFzaF9yYWRpdXMYAyABKAUSDgoGYXR0YWNrGAQgASgFEi8KDW9uX2hpdF9l",
-            "ZmZlY3QYBSABKAsyGC5pdGVtLlRlbXBTdGF0dXNNb2RpZmllciJGCgpDb25z",
-            "dW1hYmxlEigKBmVmZmVjdBgBIAEoCzIYLml0ZW0uVGVtcFN0YXR1c01vZGlm",
-            "aWVyEg4KBnN0YWNrcxgCIAEoBSLcAgoOU3RhdHVzTW9kaWZpZXISGQoRZmxh",
-            "dF9zcGVlZF9jaGFuZ2UYASABKAUSHAoUcGVyY2VudF9zcGVlZF9jaGFuZ2UY",
-            "AiABKAESGgoSZmxhdF9oZWFsdGhfY2hhbmdlGAMgASgFEh0KFXBlcmNlbnRf",
-            "aGVhbHRoX2NoYW5nZRgEIAEoARIeChZmbGF0X2V4cGVyaWVuY2VfY2hhbmdl",
-            "GAUgASgFEiEKGXBlcmNlbnRfZXhwZXJpZW5jZV9jaGFuZ2UYBiABKAESGgoS",
-            "ZmxhdF9hdHRhY2tfY2hhbmdlGAcgASgFEh0KFXBlcmNlbnRfYXR0YWNrX2No",
-            "YW5nZRgIIAEoARIbChNmbGF0X2RlZmVuc2VfY2hhbmdlGAkgASgFEh4KFnBl",
-            "cmNlbnRfZGVmZW5zZV9jaGFuZ2UYCiABKAESGwoTZmxhdF9yZWdlbl9wZXJf",
-            "dHVybhgLIAEoBSKpAQoSVGVtcFN0YXR1c01vZGlmaWVyEiMKBXN0YXRzGAEg",
-            "ASgLMhQuaXRlbS5TdGF0dXNNb2RpZmllchIcChRmbGF0X2RhbWFnZV9wZXJf",
-            "dHVybhgCIAEoBRIfChdwZXJjZW50X2RhbWFnZV9wZXJfdHVybhgDIAEoARIb",
-            "ChNmbGF0X3JlZ2VuX3Blcl90dXJuGAQgASgFEhIKCnR1cm5zX2xlZnQYBSAB",
-            "KAVCPQoebWVjaC5tYW5pYS5lbmdpbmUuZG9tYWluLm1vZGVsQgpJdGVtUHJv",
-            "dG9zqgIOTU0yNi5JTy5Nb2RlbHNiBnByb3RvMw=="));
+            "CgppdGVtLnByb3RvEgRpdGVtIrABCgRJdGVtEiAKB2Nsb3RoZXMYAyABKAsy",
+            "DS5pdGVtLkNsb3RoZXNIABIYCgNoYXQYBCABKAsyCS5pdGVtLkhhdEgAEhwK",
+            "BXNob2VzGAUgASgLMgsuaXRlbS5TaG9lc0gAEh4KBndlYXBvbhgGIAEoCzIM",
+            "Lml0ZW0uV2VhcG9uSAASJgoKY29uc3VtYWJsZRgHIAEoCzIQLml0ZW0uQ29u",
+            "c3VtYWJsZUgAQgYKBGl0ZW0iUQoHQ2xvdGhlcxIRCgltYXhfc3RhY2sYASAB",
+            "KAUSIwoFc3RhdHMYAiABKAsyFC5pdGVtLlN0YXR1c01vZGlmaWVyEg4KBnNw",
+            "cml0ZRgDIAEoCSKNAQoDSGF0EhEKCW1heF9zdGFjaxgBIAEoBRIjCgVzdGF0",
+            "cxgCIAEoCzIULml0ZW0uU3RhdHVzTW9kaWZpZXISJwoKaGF0X2VmZmVjdBgD",
+            "IAEoDjITLml0ZW0uSGF0LkhhdEVmZmVjdBIOCgZzcHJpdGUYBCABKAkiFQoJ",
+            "SGF0RWZmZWN0EggKBFRFU1QQACJPCgVTaG9lcxIRCgltYXhfc3RhY2sYASAB",
+            "KAUSIwoFc3RhdHMYAiABKAsyFC5pdGVtLlN0YXR1c01vZGlmaWVyEg4KBnNw",
+            "cml0ZRgDIAEoCSK3AQoGV2VhcG9uEhEKCW1heF9zdGFjaxgBIAEoBRIjCgVz",
+            "dGF0cxgCIAEoCzIULml0ZW0uU3RhdHVzTW9kaWZpZXISDQoFcmFuZ2UYAyAB",
+            "KAUSFQoNc3BsYXNoX3JhZGl1cxgEIAEoBRIOCgZhdHRhY2sYBSABKAUSLwoN",
+            "b25faGl0X2VmZmVjdBgGIAEoCzIYLml0ZW0uVGVtcFN0YXR1c01vZGlmaWVy",
+            "Eg4KBnNwcml0ZRgHIAEoCSJpCgpDb25zdW1hYmxlEhEKCW1heF9zdGFjaxgB",
+            "IAEoBRIoCgZlZmZlY3QYAiABKAsyGC5pdGVtLlRlbXBTdGF0dXNNb2RpZmll",
+            "chIOCgZzdGFja3MYAyABKAUSDgoGc3ByaXRlGAQgASgJItwCCg5TdGF0dXNN",
+            "b2RpZmllchIZChFmbGF0X3NwZWVkX2NoYW5nZRgBIAEoBRIcChRwZXJjZW50",
+            "X3NwZWVkX2NoYW5nZRgCIAEoARIaChJmbGF0X2hlYWx0aF9jaGFuZ2UYAyAB",
+            "KAUSHQoVcGVyY2VudF9oZWFsdGhfY2hhbmdlGAQgASgBEh4KFmZsYXRfZXhw",
+            "ZXJpZW5jZV9jaGFuZ2UYBSABKAUSIQoZcGVyY2VudF9leHBlcmllbmNlX2No",
+            "YW5nZRgGIAEoARIaChJmbGF0X2F0dGFja19jaGFuZ2UYByABKAUSHQoVcGVy",
+            "Y2VudF9hdHRhY2tfY2hhbmdlGAggASgBEhsKE2ZsYXRfZGVmZW5zZV9jaGFu",
+            "Z2UYCSABKAUSHgoWcGVyY2VudF9kZWZlbnNlX2NoYW5nZRgKIAEoARIbChNm",
+            "bGF0X3JlZ2VuX3Blcl90dXJuGAsgASgFIqkBChJUZW1wU3RhdHVzTW9kaWZp",
+            "ZXISIwoFc3RhdHMYASABKAsyFC5pdGVtLlN0YXR1c01vZGlmaWVyEhwKFGZs",
+            "YXRfZGFtYWdlX3Blcl90dXJuGAIgASgFEh8KF3BlcmNlbnRfZGFtYWdlX3Bl",
+            "cl90dXJuGAMgASgBEhsKE2ZsYXRfcmVnZW5fcGVyX3R1cm4YBCABKAUSEgoK",
+            "dHVybnNfbGVmdBgFIAEoBUI9Ch5tZWNoLm1hbmlhLmVuZ2luZS5kb21haW4u",
+            "bW9kZWxCCkl0ZW1Qcm90b3OqAg5NTTI2LklPLk1vZGVsc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Item), global::MM26.IO.Models.Item.Parser, new[]{ "MaxStack", "Stats", "Clothes", "Hat", "Shoes", "Weapon", "Consumable", "Sprite" }, new[]{ "Item" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Clothes), global::MM26.IO.Models.Clothes.Parser, new[]{ "Stats" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Hat), global::MM26.IO.Models.Hat.Parser, new[]{ "Stats", "HatEffect" }, null, new[]{ typeof(global::MM26.IO.Models.Hat.Types.HatEffect) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Shoes), global::MM26.IO.Models.Shoes.Parser, new[]{ "Stats" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Weapon), global::MM26.IO.Models.Weapon.Parser, new[]{ "Stats", "Range", "SplashRadius", "Attack", "OnHitEffect" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Consumable), global::MM26.IO.Models.Consumable.Parser, new[]{ "Effect", "Stacks" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Item), global::MM26.IO.Models.Item.Parser, new[]{ "Clothes", "Hat", "Shoes", "Weapon", "Consumable" }, new[]{ "Item" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Clothes), global::MM26.IO.Models.Clothes.Parser, new[]{ "MaxStack", "Stats", "Sprite" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Hat), global::MM26.IO.Models.Hat.Parser, new[]{ "MaxStack", "Stats", "HatEffect", "Sprite" }, null, new[]{ typeof(global::MM26.IO.Models.Hat.Types.HatEffect) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Shoes), global::MM26.IO.Models.Shoes.Parser, new[]{ "MaxStack", "Stats", "Sprite" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Weapon), global::MM26.IO.Models.Weapon.Parser, new[]{ "MaxStack", "Stats", "Range", "SplashRadius", "Attack", "OnHitEffect", "Sprite" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Consumable), global::MM26.IO.Models.Consumable.Parser, new[]{ "MaxStack", "Effect", "Stacks", "Sprite" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.StatusModifier), global::MM26.IO.Models.StatusModifier.Parser, new[]{ "FlatSpeedChange", "PercentSpeedChange", "FlatHealthChange", "PercentHealthChange", "FlatExperienceChange", "PercentExperienceChange", "FlatAttackChange", "PercentAttackChange", "FlatDefenseChange", "PercentDefenseChange", "FlatRegenPerTurn" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.TempStatusModifier), global::MM26.IO.Models.TempStatusModifier.Parser, new[]{ "Stats", "FlatDamagePerTurn", "PercentDamagePerTurn", "FlatRegenPerTurn", "TurnsLeft" }, null, null, null, null)
           }));
@@ -99,9 +101,6 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Item(Item other) : this() {
-      maxStack_ = other.maxStack_;
-      stats_ = other.stats_ != null ? other.stats_.Clone() : null;
-      sprite_ = other.sprite_;
       switch (other.ItemCase) {
         case ItemOneofCase.Clothes:
           Clothes = other.Clothes.Clone();
@@ -126,31 +125,6 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Item Clone() {
       return new Item(this);
-    }
-
-    /// <summary>Field number for the "max_stack" field.</summary>
-    public const int MaxStackFieldNumber = 1;
-    private int maxStack_;
-    /// <summary>
-    /// Stand-in for inheritance
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int MaxStack {
-      get { return maxStack_; }
-      set {
-        maxStack_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "stats" field.</summary>
-    public const int StatsFieldNumber = 2;
-    private global::MM26.IO.Models.StatusModifier stats_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::MM26.IO.Models.StatusModifier Stats {
-      get { return stats_; }
-      set {
-        stats_ = value;
-      }
     }
 
     /// <summary>Field number for the "clothes" field.</summary>
@@ -208,20 +182,6 @@ namespace MM26.IO.Models {
       }
     }
 
-    /// <summary>Field number for the "sprite" field.</summary>
-    public const int SpriteFieldNumber = 8;
-    private string sprite_ = "";
-    /// <summary>
-    /// Filepath to sprite for this item
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Sprite {
-      get { return sprite_; }
-      set {
-        sprite_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     private object item_;
     /// <summary>Enum of possible cases for the "item" oneof.</summary>
     public enum ItemOneofCase {
@@ -257,14 +217,11 @@ namespace MM26.IO.Models {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MaxStack != other.MaxStack) return false;
-      if (!object.Equals(Stats, other.Stats)) return false;
       if (!object.Equals(Clothes, other.Clothes)) return false;
       if (!object.Equals(Hat, other.Hat)) return false;
       if (!object.Equals(Shoes, other.Shoes)) return false;
       if (!object.Equals(Weapon, other.Weapon)) return false;
       if (!object.Equals(Consumable, other.Consumable)) return false;
-      if (Sprite != other.Sprite) return false;
       if (ItemCase != other.ItemCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -272,14 +229,11 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (MaxStack != 0) hash ^= MaxStack.GetHashCode();
-      if (stats_ != null) hash ^= Stats.GetHashCode();
       if (itemCase_ == ItemOneofCase.Clothes) hash ^= Clothes.GetHashCode();
       if (itemCase_ == ItemOneofCase.Hat) hash ^= Hat.GetHashCode();
       if (itemCase_ == ItemOneofCase.Shoes) hash ^= Shoes.GetHashCode();
       if (itemCase_ == ItemOneofCase.Weapon) hash ^= Weapon.GetHashCode();
       if (itemCase_ == ItemOneofCase.Consumable) hash ^= Consumable.GetHashCode();
-      if (Sprite.Length != 0) hash ^= Sprite.GetHashCode();
       hash ^= (int) itemCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -294,14 +248,6 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (MaxStack != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(MaxStack);
-      }
-      if (stats_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Stats);
-      }
       if (itemCase_ == ItemOneofCase.Clothes) {
         output.WriteRawTag(26);
         output.WriteMessage(Clothes);
@@ -322,10 +268,6 @@ namespace MM26.IO.Models {
         output.WriteRawTag(58);
         output.WriteMessage(Consumable);
       }
-      if (Sprite.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(Sprite);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -334,12 +276,6 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (MaxStack != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxStack);
-      }
-      if (stats_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stats);
-      }
       if (itemCase_ == ItemOneofCase.Clothes) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Clothes);
       }
@@ -355,9 +291,6 @@ namespace MM26.IO.Models {
       if (itemCase_ == ItemOneofCase.Consumable) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Consumable);
       }
-      if (Sprite.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Sprite);
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -368,18 +301,6 @@ namespace MM26.IO.Models {
     public void MergeFrom(Item other) {
       if (other == null) {
         return;
-      }
-      if (other.MaxStack != 0) {
-        MaxStack = other.MaxStack;
-      }
-      if (other.stats_ != null) {
-        if (stats_ == null) {
-          Stats = new global::MM26.IO.Models.StatusModifier();
-        }
-        Stats.MergeFrom(other.Stats);
-      }
-      if (other.Sprite.Length != 0) {
-        Sprite = other.Sprite;
       }
       switch (other.ItemCase) {
         case ItemOneofCase.Clothes:
@@ -428,17 +349,6 @@ namespace MM26.IO.Models {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            MaxStack = input.ReadInt32();
-            break;
-          }
-          case 18: {
-            if (stats_ == null) {
-              Stats = new global::MM26.IO.Models.StatusModifier();
-            }
-            input.ReadMessage(Stats);
-            break;
-          }
           case 26: {
             global::MM26.IO.Models.Clothes subBuilder = new global::MM26.IO.Models.Clothes();
             if (itemCase_ == ItemOneofCase.Clothes) {
@@ -482,10 +392,6 @@ namespace MM26.IO.Models {
             }
             input.ReadMessage(subBuilder);
             Consumable = subBuilder;
-            break;
-          }
-          case 66: {
-            Sprite = input.ReadString();
             break;
           }
         }
@@ -502,17 +408,6 @@ namespace MM26.IO.Models {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            MaxStack = input.ReadInt32();
-            break;
-          }
-          case 18: {
-            if (stats_ == null) {
-              Stats = new global::MM26.IO.Models.StatusModifier();
-            }
-            input.ReadMessage(Stats);
-            break;
-          }
           case 26: {
             global::MM26.IO.Models.Clothes subBuilder = new global::MM26.IO.Models.Clothes();
             if (itemCase_ == ItemOneofCase.Clothes) {
@@ -556,10 +451,6 @@ namespace MM26.IO.Models {
             }
             input.ReadMessage(subBuilder);
             Consumable = subBuilder;
-            break;
-          }
-          case 66: {
-            Sprite = input.ReadString();
             break;
           }
         }
@@ -598,7 +489,9 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Clothes(Clothes other) : this() {
+      maxStack_ = other.maxStack_;
       stats_ = other.stats_ != null ? other.stats_.Clone() : null;
+      sprite_ = other.sprite_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -607,14 +500,39 @@ namespace MM26.IO.Models {
       return new Clothes(this);
     }
 
+    /// <summary>Field number for the "max_stack" field.</summary>
+    public const int MaxStackFieldNumber = 1;
+    private int maxStack_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int MaxStack {
+      get { return maxStack_; }
+      set {
+        maxStack_ = value;
+      }
+    }
+
     /// <summary>Field number for the "stats" field.</summary>
-    public const int StatsFieldNumber = 1;
+    public const int StatsFieldNumber = 2;
     private global::MM26.IO.Models.StatusModifier stats_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::MM26.IO.Models.StatusModifier Stats {
       get { return stats_; }
       set {
         stats_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sprite" field.</summary>
+    public const int SpriteFieldNumber = 3;
+    private string sprite_ = "";
+    /// <summary>
+    /// Filepath to sprite for this item
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Sprite {
+      get { return sprite_; }
+      set {
+        sprite_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -631,14 +549,18 @@ namespace MM26.IO.Models {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (MaxStack != other.MaxStack) return false;
       if (!object.Equals(Stats, other.Stats)) return false;
+      if (Sprite != other.Sprite) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (MaxStack != 0) hash ^= MaxStack.GetHashCode();
       if (stats_ != null) hash ^= Stats.GetHashCode();
+      if (Sprite.Length != 0) hash ^= Sprite.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -652,9 +574,17 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+      if (MaxStack != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(MaxStack);
+      }
       if (stats_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(18);
         output.WriteMessage(Stats);
+      }
+      if (Sprite.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Sprite);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -664,8 +594,14 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (MaxStack != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxStack);
+      }
       if (stats_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stats);
+      }
+      if (Sprite.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Sprite);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -678,11 +614,17 @@ namespace MM26.IO.Models {
       if (other == null) {
         return;
       }
+      if (other.MaxStack != 0) {
+        MaxStack = other.MaxStack;
+      }
       if (other.stats_ != null) {
         if (stats_ == null) {
           Stats = new global::MM26.IO.Models.StatusModifier();
         }
         Stats.MergeFrom(other.Stats);
+      }
+      if (other.Sprite.Length != 0) {
+        Sprite = other.Sprite;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -698,11 +640,19 @@ namespace MM26.IO.Models {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 8: {
+            MaxStack = input.ReadInt32();
+            break;
+          }
+          case 18: {
             if (stats_ == null) {
               Stats = new global::MM26.IO.Models.StatusModifier();
             }
             input.ReadMessage(Stats);
+            break;
+          }
+          case 26: {
+            Sprite = input.ReadString();
             break;
           }
         }
@@ -719,11 +669,19 @@ namespace MM26.IO.Models {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 8: {
+            MaxStack = input.ReadInt32();
+            break;
+          }
+          case 18: {
             if (stats_ == null) {
               Stats = new global::MM26.IO.Models.StatusModifier();
             }
             input.ReadMessage(Stats);
+            break;
+          }
+          case 26: {
+            Sprite = input.ReadString();
             break;
           }
         }
@@ -762,8 +720,10 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Hat(Hat other) : this() {
+      maxStack_ = other.maxStack_;
       stats_ = other.stats_ != null ? other.stats_.Clone() : null;
       hatEffect_ = other.hatEffect_;
+      sprite_ = other.sprite_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -772,8 +732,19 @@ namespace MM26.IO.Models {
       return new Hat(this);
     }
 
+    /// <summary>Field number for the "max_stack" field.</summary>
+    public const int MaxStackFieldNumber = 1;
+    private int maxStack_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int MaxStack {
+      get { return maxStack_; }
+      set {
+        maxStack_ = value;
+      }
+    }
+
     /// <summary>Field number for the "stats" field.</summary>
-    public const int StatsFieldNumber = 1;
+    public const int StatsFieldNumber = 2;
     private global::MM26.IO.Models.StatusModifier stats_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::MM26.IO.Models.StatusModifier Stats {
@@ -784,13 +755,27 @@ namespace MM26.IO.Models {
     }
 
     /// <summary>Field number for the "hat_effect" field.</summary>
-    public const int HatEffectFieldNumber = 2;
+    public const int HatEffectFieldNumber = 3;
     private global::MM26.IO.Models.Hat.Types.HatEffect hatEffect_ = global::MM26.IO.Models.Hat.Types.HatEffect.Test;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::MM26.IO.Models.Hat.Types.HatEffect HatEffect {
       get { return hatEffect_; }
       set {
         hatEffect_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sprite" field.</summary>
+    public const int SpriteFieldNumber = 4;
+    private string sprite_ = "";
+    /// <summary>
+    /// Filepath to sprite for this item
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Sprite {
+      get { return sprite_; }
+      set {
+        sprite_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -807,16 +792,20 @@ namespace MM26.IO.Models {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (MaxStack != other.MaxStack) return false;
       if (!object.Equals(Stats, other.Stats)) return false;
       if (HatEffect != other.HatEffect) return false;
+      if (Sprite != other.Sprite) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (MaxStack != 0) hash ^= MaxStack.GetHashCode();
       if (stats_ != null) hash ^= Stats.GetHashCode();
       if (HatEffect != global::MM26.IO.Models.Hat.Types.HatEffect.Test) hash ^= HatEffect.GetHashCode();
+      if (Sprite.Length != 0) hash ^= Sprite.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -830,13 +819,21 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+      if (MaxStack != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(MaxStack);
+      }
       if (stats_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(18);
         output.WriteMessage(Stats);
       }
       if (HatEffect != global::MM26.IO.Models.Hat.Types.HatEffect.Test) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteEnum((int) HatEffect);
+      }
+      if (Sprite.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Sprite);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -846,11 +843,17 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (MaxStack != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxStack);
+      }
       if (stats_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stats);
       }
       if (HatEffect != global::MM26.IO.Models.Hat.Types.HatEffect.Test) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) HatEffect);
+      }
+      if (Sprite.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Sprite);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -863,6 +866,9 @@ namespace MM26.IO.Models {
       if (other == null) {
         return;
       }
+      if (other.MaxStack != 0) {
+        MaxStack = other.MaxStack;
+      }
       if (other.stats_ != null) {
         if (stats_ == null) {
           Stats = new global::MM26.IO.Models.StatusModifier();
@@ -871,6 +877,9 @@ namespace MM26.IO.Models {
       }
       if (other.HatEffect != global::MM26.IO.Models.Hat.Types.HatEffect.Test) {
         HatEffect = other.HatEffect;
+      }
+      if (other.Sprite.Length != 0) {
+        Sprite = other.Sprite;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -886,15 +895,23 @@ namespace MM26.IO.Models {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 8: {
+            MaxStack = input.ReadInt32();
+            break;
+          }
+          case 18: {
             if (stats_ == null) {
               Stats = new global::MM26.IO.Models.StatusModifier();
             }
             input.ReadMessage(Stats);
             break;
           }
-          case 16: {
+          case 24: {
             HatEffect = (global::MM26.IO.Models.Hat.Types.HatEffect) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            Sprite = input.ReadString();
             break;
           }
         }
@@ -911,15 +928,23 @@ namespace MM26.IO.Models {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 8: {
+            MaxStack = input.ReadInt32();
+            break;
+          }
+          case 18: {
             if (stats_ == null) {
               Stats = new global::MM26.IO.Models.StatusModifier();
             }
             input.ReadMessage(Stats);
             break;
           }
-          case 16: {
+          case 24: {
             HatEffect = (global::MM26.IO.Models.Hat.Types.HatEffect) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            Sprite = input.ReadString();
             break;
           }
         }
@@ -972,7 +997,9 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Shoes(Shoes other) : this() {
+      maxStack_ = other.maxStack_;
       stats_ = other.stats_ != null ? other.stats_.Clone() : null;
+      sprite_ = other.sprite_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -981,14 +1008,39 @@ namespace MM26.IO.Models {
       return new Shoes(this);
     }
 
+    /// <summary>Field number for the "max_stack" field.</summary>
+    public const int MaxStackFieldNumber = 1;
+    private int maxStack_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int MaxStack {
+      get { return maxStack_; }
+      set {
+        maxStack_ = value;
+      }
+    }
+
     /// <summary>Field number for the "stats" field.</summary>
-    public const int StatsFieldNumber = 1;
+    public const int StatsFieldNumber = 2;
     private global::MM26.IO.Models.StatusModifier stats_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::MM26.IO.Models.StatusModifier Stats {
       get { return stats_; }
       set {
         stats_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sprite" field.</summary>
+    public const int SpriteFieldNumber = 3;
+    private string sprite_ = "";
+    /// <summary>
+    /// Filepath to sprite for this item
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Sprite {
+      get { return sprite_; }
+      set {
+        sprite_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1005,14 +1057,18 @@ namespace MM26.IO.Models {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (MaxStack != other.MaxStack) return false;
       if (!object.Equals(Stats, other.Stats)) return false;
+      if (Sprite != other.Sprite) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (MaxStack != 0) hash ^= MaxStack.GetHashCode();
       if (stats_ != null) hash ^= Stats.GetHashCode();
+      if (Sprite.Length != 0) hash ^= Sprite.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1026,9 +1082,17 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+      if (MaxStack != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(MaxStack);
+      }
       if (stats_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(18);
         output.WriteMessage(Stats);
+      }
+      if (Sprite.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Sprite);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1038,8 +1102,14 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (MaxStack != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxStack);
+      }
       if (stats_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stats);
+      }
+      if (Sprite.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Sprite);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1052,11 +1122,17 @@ namespace MM26.IO.Models {
       if (other == null) {
         return;
       }
+      if (other.MaxStack != 0) {
+        MaxStack = other.MaxStack;
+      }
       if (other.stats_ != null) {
         if (stats_ == null) {
           Stats = new global::MM26.IO.Models.StatusModifier();
         }
         Stats.MergeFrom(other.Stats);
+      }
+      if (other.Sprite.Length != 0) {
+        Sprite = other.Sprite;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1072,11 +1148,19 @@ namespace MM26.IO.Models {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 8: {
+            MaxStack = input.ReadInt32();
+            break;
+          }
+          case 18: {
             if (stats_ == null) {
               Stats = new global::MM26.IO.Models.StatusModifier();
             }
             input.ReadMessage(Stats);
+            break;
+          }
+          case 26: {
+            Sprite = input.ReadString();
             break;
           }
         }
@@ -1093,11 +1177,19 @@ namespace MM26.IO.Models {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 8: {
+            MaxStack = input.ReadInt32();
+            break;
+          }
+          case 18: {
             if (stats_ == null) {
               Stats = new global::MM26.IO.Models.StatusModifier();
             }
             input.ReadMessage(Stats);
+            break;
+          }
+          case 26: {
+            Sprite = input.ReadString();
             break;
           }
         }
@@ -1136,11 +1228,13 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Weapon(Weapon other) : this() {
+      maxStack_ = other.maxStack_;
       stats_ = other.stats_ != null ? other.stats_.Clone() : null;
       range_ = other.range_;
       splashRadius_ = other.splashRadius_;
       attack_ = other.attack_;
       onHitEffect_ = other.onHitEffect_ != null ? other.onHitEffect_.Clone() : null;
+      sprite_ = other.sprite_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1149,8 +1243,19 @@ namespace MM26.IO.Models {
       return new Weapon(this);
     }
 
+    /// <summary>Field number for the "max_stack" field.</summary>
+    public const int MaxStackFieldNumber = 1;
+    private int maxStack_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int MaxStack {
+      get { return maxStack_; }
+      set {
+        maxStack_ = value;
+      }
+    }
+
     /// <summary>Field number for the "stats" field.</summary>
-    public const int StatsFieldNumber = 1;
+    public const int StatsFieldNumber = 2;
     private global::MM26.IO.Models.StatusModifier stats_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::MM26.IO.Models.StatusModifier Stats {
@@ -1161,7 +1266,7 @@ namespace MM26.IO.Models {
     }
 
     /// <summary>Field number for the "range" field.</summary>
-    public const int RangeFieldNumber = 2;
+    public const int RangeFieldNumber = 3;
     private int range_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Range {
@@ -1172,7 +1277,7 @@ namespace MM26.IO.Models {
     }
 
     /// <summary>Field number for the "splash_radius" field.</summary>
-    public const int SplashRadiusFieldNumber = 3;
+    public const int SplashRadiusFieldNumber = 4;
     private int splashRadius_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int SplashRadius {
@@ -1183,7 +1288,7 @@ namespace MM26.IO.Models {
     }
 
     /// <summary>Field number for the "attack" field.</summary>
-    public const int AttackFieldNumber = 4;
+    public const int AttackFieldNumber = 5;
     private int attack_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Attack {
@@ -1194,13 +1299,27 @@ namespace MM26.IO.Models {
     }
 
     /// <summary>Field number for the "on_hit_effect" field.</summary>
-    public const int OnHitEffectFieldNumber = 5;
+    public const int OnHitEffectFieldNumber = 6;
     private global::MM26.IO.Models.TempStatusModifier onHitEffect_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::MM26.IO.Models.TempStatusModifier OnHitEffect {
       get { return onHitEffect_; }
       set {
         onHitEffect_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sprite" field.</summary>
+    public const int SpriteFieldNumber = 7;
+    private string sprite_ = "";
+    /// <summary>
+    /// Filepath to sprite for this item
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Sprite {
+      get { return sprite_; }
+      set {
+        sprite_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1217,22 +1336,26 @@ namespace MM26.IO.Models {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (MaxStack != other.MaxStack) return false;
       if (!object.Equals(Stats, other.Stats)) return false;
       if (Range != other.Range) return false;
       if (SplashRadius != other.SplashRadius) return false;
       if (Attack != other.Attack) return false;
       if (!object.Equals(OnHitEffect, other.OnHitEffect)) return false;
+      if (Sprite != other.Sprite) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (MaxStack != 0) hash ^= MaxStack.GetHashCode();
       if (stats_ != null) hash ^= Stats.GetHashCode();
       if (Range != 0) hash ^= Range.GetHashCode();
       if (SplashRadius != 0) hash ^= SplashRadius.GetHashCode();
       if (Attack != 0) hash ^= Attack.GetHashCode();
       if (onHitEffect_ != null) hash ^= OnHitEffect.GetHashCode();
+      if (Sprite.Length != 0) hash ^= Sprite.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1246,25 +1369,33 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+      if (MaxStack != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(MaxStack);
+      }
       if (stats_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(18);
         output.WriteMessage(Stats);
       }
       if (Range != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteInt32(Range);
       }
       if (SplashRadius != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteInt32(SplashRadius);
       }
       if (Attack != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteInt32(Attack);
       }
       if (onHitEffect_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(50);
         output.WriteMessage(OnHitEffect);
+      }
+      if (Sprite.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Sprite);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1274,6 +1405,9 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (MaxStack != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxStack);
+      }
       if (stats_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stats);
       }
@@ -1289,6 +1423,9 @@ namespace MM26.IO.Models {
       if (onHitEffect_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(OnHitEffect);
       }
+      if (Sprite.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Sprite);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1299,6 +1436,9 @@ namespace MM26.IO.Models {
     public void MergeFrom(Weapon other) {
       if (other == null) {
         return;
+      }
+      if (other.MaxStack != 0) {
+        MaxStack = other.MaxStack;
       }
       if (other.stats_ != null) {
         if (stats_ == null) {
@@ -1321,6 +1461,9 @@ namespace MM26.IO.Models {
         }
         OnHitEffect.MergeFrom(other.OnHitEffect);
       }
+      if (other.Sprite.Length != 0) {
+        Sprite = other.Sprite;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1335,30 +1478,38 @@ namespace MM26.IO.Models {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 8: {
+            MaxStack = input.ReadInt32();
+            break;
+          }
+          case 18: {
             if (stats_ == null) {
               Stats = new global::MM26.IO.Models.StatusModifier();
             }
             input.ReadMessage(Stats);
             break;
           }
-          case 16: {
+          case 24: {
             Range = input.ReadInt32();
             break;
           }
-          case 24: {
+          case 32: {
             SplashRadius = input.ReadInt32();
             break;
           }
-          case 32: {
+          case 40: {
             Attack = input.ReadInt32();
             break;
           }
-          case 42: {
+          case 50: {
             if (onHitEffect_ == null) {
               OnHitEffect = new global::MM26.IO.Models.TempStatusModifier();
             }
             input.ReadMessage(OnHitEffect);
+            break;
+          }
+          case 58: {
+            Sprite = input.ReadString();
             break;
           }
         }
@@ -1375,30 +1526,38 @@ namespace MM26.IO.Models {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 8: {
+            MaxStack = input.ReadInt32();
+            break;
+          }
+          case 18: {
             if (stats_ == null) {
               Stats = new global::MM26.IO.Models.StatusModifier();
             }
             input.ReadMessage(Stats);
             break;
           }
-          case 16: {
+          case 24: {
             Range = input.ReadInt32();
             break;
           }
-          case 24: {
+          case 32: {
             SplashRadius = input.ReadInt32();
             break;
           }
-          case 32: {
+          case 40: {
             Attack = input.ReadInt32();
             break;
           }
-          case 42: {
+          case 50: {
             if (onHitEffect_ == null) {
               OnHitEffect = new global::MM26.IO.Models.TempStatusModifier();
             }
             input.ReadMessage(OnHitEffect);
+            break;
+          }
+          case 58: {
+            Sprite = input.ReadString();
             break;
           }
         }
@@ -1437,8 +1596,10 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Consumable(Consumable other) : this() {
+      maxStack_ = other.maxStack_;
       effect_ = other.effect_ != null ? other.effect_.Clone() : null;
       stacks_ = other.stacks_;
+      sprite_ = other.sprite_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1447,8 +1608,19 @@ namespace MM26.IO.Models {
       return new Consumable(this);
     }
 
+    /// <summary>Field number for the "max_stack" field.</summary>
+    public const int MaxStackFieldNumber = 1;
+    private int maxStack_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int MaxStack {
+      get { return maxStack_; }
+      set {
+        maxStack_ = value;
+      }
+    }
+
     /// <summary>Field number for the "effect" field.</summary>
-    public const int EffectFieldNumber = 1;
+    public const int EffectFieldNumber = 2;
     private global::MM26.IO.Models.TempStatusModifier effect_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::MM26.IO.Models.TempStatusModifier Effect {
@@ -1459,13 +1631,27 @@ namespace MM26.IO.Models {
     }
 
     /// <summary>Field number for the "stacks" field.</summary>
-    public const int StacksFieldNumber = 2;
+    public const int StacksFieldNumber = 3;
     private int stacks_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Stacks {
       get { return stacks_; }
       set {
         stacks_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sprite" field.</summary>
+    public const int SpriteFieldNumber = 4;
+    private string sprite_ = "";
+    /// <summary>
+    /// Filepath to sprite for this item
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Sprite {
+      get { return sprite_; }
+      set {
+        sprite_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1482,16 +1668,20 @@ namespace MM26.IO.Models {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (MaxStack != other.MaxStack) return false;
       if (!object.Equals(Effect, other.Effect)) return false;
       if (Stacks != other.Stacks) return false;
+      if (Sprite != other.Sprite) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (MaxStack != 0) hash ^= MaxStack.GetHashCode();
       if (effect_ != null) hash ^= Effect.GetHashCode();
       if (Stacks != 0) hash ^= Stacks.GetHashCode();
+      if (Sprite.Length != 0) hash ^= Sprite.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1505,13 +1695,21 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+      if (MaxStack != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(MaxStack);
+      }
       if (effect_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(18);
         output.WriteMessage(Effect);
       }
       if (Stacks != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteInt32(Stacks);
+      }
+      if (Sprite.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Sprite);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1521,11 +1719,17 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (MaxStack != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxStack);
+      }
       if (effect_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Effect);
       }
       if (Stacks != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Stacks);
+      }
+      if (Sprite.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Sprite);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1538,6 +1742,9 @@ namespace MM26.IO.Models {
       if (other == null) {
         return;
       }
+      if (other.MaxStack != 0) {
+        MaxStack = other.MaxStack;
+      }
       if (other.effect_ != null) {
         if (effect_ == null) {
           Effect = new global::MM26.IO.Models.TempStatusModifier();
@@ -1546,6 +1753,9 @@ namespace MM26.IO.Models {
       }
       if (other.Stacks != 0) {
         Stacks = other.Stacks;
+      }
+      if (other.Sprite.Length != 0) {
+        Sprite = other.Sprite;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1561,15 +1771,23 @@ namespace MM26.IO.Models {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 8: {
+            MaxStack = input.ReadInt32();
+            break;
+          }
+          case 18: {
             if (effect_ == null) {
               Effect = new global::MM26.IO.Models.TempStatusModifier();
             }
             input.ReadMessage(Effect);
             break;
           }
-          case 16: {
+          case 24: {
             Stacks = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            Sprite = input.ReadString();
             break;
           }
         }
@@ -1586,15 +1804,23 @@ namespace MM26.IO.Models {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 8: {
+            MaxStack = input.ReadInt32();
+            break;
+          }
+          case 18: {
             if (effect_ == null) {
               Effect = new global::MM26.IO.Models.TempStatusModifier();
             }
             input.ReadMessage(Effect);
             break;
           }
-          case 16: {
+          case 24: {
             Stacks = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            Sprite = input.ReadString();
             break;
           }
         }

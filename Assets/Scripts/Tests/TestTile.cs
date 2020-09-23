@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine.Serialization;
 using MM26.IO.Models;
 
 namespace MM26.Tests
@@ -30,6 +31,7 @@ namespace MM26.Tests
         /// <summary>
         /// Sprite path
         /// </summary>
-        public string Sprite;
+        [FormerlySerializedAs("Sprite")]
+        public string GroundSprite;
     }
 }

@@ -27,17 +27,18 @@ namespace MM26.IO.Models {
             "Cgtib2FyZC5wcm90bxIFYm9hcmQaCml0ZW0ucHJvdG8aD2NoYXJhY3Rlci5w",
             "cm90byJnCgVCb2FyZBIMCgRyb3dzGAEgASgFEg8KB2NvbHVtbnMYAiABKAUS",
             "GQoEZ3JpZBgDIAMoCzILLmJvYXJkLlRpbGUSJAoHcG9ydGFscxgEIAMoCzIT",
-            "LmNoYXJhY3Rlci5Qb3NpdGlvbiKXAQoEVGlsZRInCgl0aWxlX3R5cGUYASAB",
+            "LmNoYXJhY3Rlci5Qb3NpdGlvbiK0AQoEVGlsZRInCgl0aWxlX3R5cGUYASAB",
             "KA4yFC5ib2FyZC5UaWxlLlRpbGVUeXBlEhkKBWl0ZW1zGAIgAygLMgouaXRl",
-            "bS5JdGVtEg4KBnNwcml0ZRgDIAEoCSI7CghUaWxlVHlwZRIICgRWT0lEEAAS",
-            "CQoFQkxBTksQARIOCgpJTVBBU1NJQkxFEAISCgoGUE9SVEFMEANCPgoebWVj",
-            "aC5tYW5pYS5lbmdpbmUuZG9tYWluLm1vZGVsQgtCb2FyZFByb3Rvc6oCDk1N",
-            "MjYuSU8uTW9kZWxzYgZwcm90bzM="));
+            "bS5JdGVtEhUKDWdyb3VuZF9zcHJpdGUYAyABKAkSFAoMYWJvdmVfc3ByaXRl",
+            "GAQgASgJIjsKCFRpbGVUeXBlEggKBFZPSUQQABIJCgVCTEFOSxABEg4KCklN",
+            "UEFTU0lCTEUQAhIKCgZQT1JUQUwQA0I+Ch5tZWNoLm1hbmlhLmVuZ2luZS5k",
+            "b21haW4ubW9kZWxCC0JvYXJkUHJvdG9zqgIOTU0yNi5JTy5Nb2RlbHNiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::MM26.IO.Models.ItemReflection.Descriptor, global::MM26.IO.Models.CharacterReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Board), global::MM26.IO.Models.Board.Parser, new[]{ "Rows", "Columns", "Grid", "Portals" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Tile), global::MM26.IO.Models.Tile.Parser, new[]{ "TileType", "Items", "Sprite" }, null, new[]{ typeof(global::MM26.IO.Models.Tile.Types.TileType) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Tile), global::MM26.IO.Models.Tile.Parser, new[]{ "TileType", "Items", "GroundSprite", "AboveSprite" }, null, new[]{ typeof(global::MM26.IO.Models.Tile.Types.TileType) }, null, null)
           }));
     }
     #endregion
@@ -313,7 +314,8 @@ namespace MM26.IO.Models {
     public Tile(Tile other) : this() {
       tileType_ = other.tileType_;
       items_ = other.items_.Clone();
-      sprite_ = other.sprite_;
+      groundSprite_ = other.groundSprite_;
+      aboveSprite_ = other.aboveSprite_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -343,17 +345,28 @@ namespace MM26.IO.Models {
       get { return items_; }
     }
 
-    /// <summary>Field number for the "sprite" field.</summary>
-    public const int SpriteFieldNumber = 3;
-    private string sprite_ = "";
+    /// <summary>Field number for the "ground_sprite" field.</summary>
+    public const int GroundSpriteFieldNumber = 3;
+    private string groundSprite_ = "";
     /// <summary>
-    /// Filepath to sprite for this tile
+    /// Filepaths to sprites for this tile
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Sprite {
-      get { return sprite_; }
+    public string GroundSprite {
+      get { return groundSprite_; }
       set {
-        sprite_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        groundSprite_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "above_sprite" field.</summary>
+    public const int AboveSpriteFieldNumber = 4;
+    private string aboveSprite_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string AboveSprite {
+      get { return aboveSprite_; }
+      set {
+        aboveSprite_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -372,7 +385,8 @@ namespace MM26.IO.Models {
       }
       if (TileType != other.TileType) return false;
       if(!items_.Equals(other.items_)) return false;
-      if (Sprite != other.Sprite) return false;
+      if (GroundSprite != other.GroundSprite) return false;
+      if (AboveSprite != other.AboveSprite) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -381,7 +395,8 @@ namespace MM26.IO.Models {
       int hash = 1;
       if (TileType != global::MM26.IO.Models.Tile.Types.TileType.Void) hash ^= TileType.GetHashCode();
       hash ^= items_.GetHashCode();
-      if (Sprite.Length != 0) hash ^= Sprite.GetHashCode();
+      if (GroundSprite.Length != 0) hash ^= GroundSprite.GetHashCode();
+      if (AboveSprite.Length != 0) hash ^= AboveSprite.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -400,9 +415,13 @@ namespace MM26.IO.Models {
         output.WriteEnum((int) TileType);
       }
       items_.WriteTo(output, _repeated_items_codec);
-      if (Sprite.Length != 0) {
+      if (GroundSprite.Length != 0) {
         output.WriteRawTag(26);
-        output.WriteString(Sprite);
+        output.WriteString(GroundSprite);
+      }
+      if (AboveSprite.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(AboveSprite);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -416,8 +435,11 @@ namespace MM26.IO.Models {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TileType);
       }
       size += items_.CalculateSize(_repeated_items_codec);
-      if (Sprite.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Sprite);
+      if (GroundSprite.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GroundSprite);
+      }
+      if (AboveSprite.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AboveSprite);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -434,8 +456,11 @@ namespace MM26.IO.Models {
         TileType = other.TileType;
       }
       items_.Add(other.items_);
-      if (other.Sprite.Length != 0) {
-        Sprite = other.Sprite;
+      if (other.GroundSprite.Length != 0) {
+        GroundSprite = other.GroundSprite;
+      }
+      if (other.AboveSprite.Length != 0) {
+        AboveSprite = other.AboveSprite;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -460,7 +485,11 @@ namespace MM26.IO.Models {
             break;
           }
           case 26: {
-            Sprite = input.ReadString();
+            GroundSprite = input.ReadString();
+            break;
+          }
+          case 34: {
+            AboveSprite = input.ReadString();
             break;
           }
         }
@@ -486,7 +515,11 @@ namespace MM26.IO.Models {
             break;
           }
           case 26: {
-            Sprite = input.ReadString();
+            GroundSprite = input.ReadString();
+            break;
+          }
+          case 34: {
+            AboveSprite = input.ReadString();
             break;
           }
         }
