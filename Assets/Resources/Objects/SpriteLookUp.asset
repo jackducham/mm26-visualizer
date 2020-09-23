@@ -73,6 +73,8 @@ MonoBehaviour:
     Tile: {fileID: 11400000, guid: f92f7412d405aa34181014e6172a0b5f, type: 2}
   - Path: mm26_tiles/emptymiddle.png
     Tile: {fileID: 11400000, guid: 7210b385efe78fd4e876167401abf576, type: 2}
+  - Path: mm26_tiles/error.png
+    Tile: {fileID: 11400000, guid: ab415fcabcd33420ab7ecdb515e73ca2, type: 2}
   - Path: mm26_tiles/fish_abominable.png
     Tile: {fileID: 11400000, guid: 178cb2702070d4249b3bea0a0bbbd6c4, type: 2}
   - Path: mm26_tiles/fish_goomba.png
@@ -204,5 +206,5 @@ MonoBehaviour:
   - Path: mm26_tiles/zombie_normal.png
     Tile: {fileID: 11400000, guid: fd8307d14c4a9b54485ea95df9e80d85, type: 2}
   WearableEntries: []
-  _fallbackTile: {fileID: 11400000, guid: 2923d067ec8492e409e7472d7cc774a3, type: 2}
+  _fallbackTile: {fileID: 11400000, guid: ab415fcabcd33420ab7ecdb515e73ca2, type: 2}
   TilesPath: Assets/Sprites/mm26_tiles/

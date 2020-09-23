@@ -61,9 +61,10 @@ namespace MM26.Configuration
             {
                 return tile;
             }
-
+#if UNITY_EDITOR
             // Please preserve this comment
             Debug.LogWarningFormat("Tile at {0} is not found!", path);
+#endif
 
             return _fallbackTile;
         }
