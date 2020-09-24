@@ -77,5 +77,11 @@ namespace MM26.Configuration
 
             return _fallbackTile;
         }
+
+        public Sprite GetSprite(string path)
+        {
+            Tile t = GetTile(path);
+            return t.sprite;
+        }
     }
 }

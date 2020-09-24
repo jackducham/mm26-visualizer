@@ -48,16 +48,19 @@ MonoBehaviour:
     Characters:
     - Name: Player A
       CharacterType: 0
+      SpritePath: 
       Board: pvp
       X: 0
       Y: 0
     - Name: Monster B
       CharacterType: 1
+      SpritePath: mm26_tiles/uniboar_v2.png
       Board: pvp
       X: 2
       Y: 2
     - Name: Player C
       CharacterType: 0
+      SpritePath: 
       Board: other
       X: 0
       Y: 0

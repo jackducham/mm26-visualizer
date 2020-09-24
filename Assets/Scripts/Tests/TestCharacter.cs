@@ -16,6 +16,7 @@ namespace MM26.Tests
     {
         public string Name;
         public CharacterType CharacterType = CharacterType.Player;
+        public string SpritePath;
 
         public string Board = "pvp";
         public int X;

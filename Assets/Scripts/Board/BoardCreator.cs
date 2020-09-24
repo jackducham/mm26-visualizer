@@ -90,15 +90,12 @@ namespace MM26.Board
 
                     if (ptile.GroundSprite != "")
                     {
-                        Debug.Log(ptile.AboveSprite);
-
                         Tile tile = _tileDatabase.GetTile(ptile.GroundSprite);
                         _tilemap.SetTile(new Vector3Int(x, y, 0), tile);
                     }
 
                     if (ptile.AboveSprite != "")
                     {
-                        Debug.Log("NEED TO PRINT THIS ");
                         Tile tile = _tileDatabase.GetTile(ptile.AboveSprite);
                         _tilemap.SetTile(new Vector3Int(x, y, -1), tile);
                     }
@@ -133,8 +130,10 @@ namespace MM26.Board
                 {
                     continue;
                 }
-
-                this.CharactersManager.CreateMonster(new Vector3Int(position.X, position.Y, 0), character.Name);
+                Debug.Log(character.Sprite);
+                Sprite monsterSprite = _tileDatabase.GetSprite(character.Sprite);
+               
+                this.CharactersManager.CreateMonster(new Vector3Int(position.X, position.Y, 0), character.Name, monsterSprite);
             }
         }
     }

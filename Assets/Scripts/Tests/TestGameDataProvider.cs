@@ -162,7 +162,8 @@ namespace MM26.Tests
                                     BoardId = testCharacter.Board,
                                     X = testCharacter.X,
                                     Y = testCharacter.Y
-                                }
+                                },
+                                Sprite = testCharacter.SpritePath
                             }
                         };
 
@@ -179,7 +180,8 @@ namespace MM26.Tests
                                     BoardId = testCharacter.Board,
                                     X = testCharacter.X,
                                     Y = testCharacter.Y
-                                }
+                                },
+                                Sprite = testCharacter.SpritePath
                             }
                         };
 
