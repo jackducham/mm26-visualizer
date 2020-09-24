@@ -38,33 +38,34 @@ namespace MM26.IO.Models {
             "DSABKAgSGQoRdGlja3Nfc2luY2VfZGVhdGgYDiABKAUSDAoEbmFtZRgPIAEo",
             "CRITCgtiYXNlX2F0dGFjaxgQIAEoBRIUCgxiYXNlX2RlZmVuc2UYESABKAUS",
             "DgoGc3ByaXRlGBIgASgJGjoKGFRhZ2dlZFBsYXllcnNEYW1hZ2VFbnRyeRIL",
-            "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAU6AjgBIk0KB01vbnN0ZXISJwoJ",
+            "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAU6AjgBImIKB01vbnN0ZXISJwoJ",
             "Y2hhcmFjdGVyGAEgASgLMhQuY2hhcmFjdGVyLkNoYXJhY3RlchIZCgVkcm9w",
-            "cxgCIAMoCzIKLml0ZW0uSXRlbSKkAQoGUGxheWVyEicKCWNoYXJhY3RlchgB",
-            "IAEoCzIULmNoYXJhY3Rlci5DaGFyYWN0ZXISFgoDaGF0GAIgASgLMgkuaXRl",
-            "bS5IYXQSHgoHY2xvdGhlcxgDIAEoCzINLml0ZW0uQ2xvdGhlcxIaCgVzaG9l",
-            "cxgEIAEoCzILLml0ZW0uU2hvZXMSHQoJaW52ZW50b3J5GAUgAygLMgouaXRl",
-            "bS5JdGVtIsYBCgtQbGF5ZXJTdGF0cxINCgVsZXZlbBgBIAEoBRISCgpleHBl",
-            "cmllbmNlGAIgASgFEhYKDm1vbnN0ZXJzX3NsYWluGAMgASgFEg4KBmF0dGFj",
-            "axgEIAEoBRIPCgdkZWZlbnNlGAUgASgFEhYKDmN1cnJlbnRfaGVhbHRoGAYg",
-            "ASgFEhIKCm1heF9oZWFsdGgYByABKAUSEwoLZGVhdGhfY291bnQYCCABKAUS",
-            "GgoSdHVybnNfc2luY2Vfam9pbmVkGAkgASgFIpEBChFQbGF5ZXJTdGF0c0J1",
-            "bmRsZRI2CgVzdGF0cxgBIAMoCzInLmNoYXJhY3Rlci5QbGF5ZXJTdGF0c0J1",
-            "bmRsZS5TdGF0c0VudHJ5GkQKClN0YXRzRW50cnkSCwoDa2V5GAEgASgJEiUK",
-            "BXZhbHVlGAIgASgLMhYuY2hhcmFjdGVyLlBsYXllclN0YXRzOgI4ASIyCghQ",
-            "b3NpdGlvbhIQCghib2FyZF9pZBgBIAEoCRIJCgF4GAIgASgFEgkKAXkYAyAB",
-            "KAUigAEKEUNoYXJhY3RlckRlY2lzaW9uEi4KDWRlY2lzaW9uX3R5cGUYASAB",
-            "KA4yFy5jaGFyYWN0ZXIuRGVjaXNpb25UeXBlEiwKD3RhcmdldF9wb3NpdGlv",
-            "bhgCIAEoCzITLmNoYXJhY3Rlci5Qb3NpdGlvbhINCgVpbmRleBgDIAEoBSpb",
-            "CgxEZWNpc2lvblR5cGUSCAoETk9ORRAAEggKBE1PVkUQARIKCgZBVFRBQ0sQ",
-            "AhIKCgZQT1JUQUwQAxIICgREUk9QEAQSCQoFRVFVSVAQBRIKCgZQSUNLVVAQ",
-            "BkJCCh5tZWNoLm1hbmlhLmVuZ2luZS5kb21haW4ubW9kZWxCD0NoYXJhY3Rl",
-            "clByb3Rvc6oCDk1NMjYuSU8uTW9kZWxzYgZwcm90bzM="));
+            "cxgCIAMoCzIKLml0ZW0uSXRlbRITCgthZ2dyb19yYW5nZRgDIAEoBSKkAQoG",
+            "UGxheWVyEicKCWNoYXJhY3RlchgBIAEoCzIULmNoYXJhY3Rlci5DaGFyYWN0",
+            "ZXISFgoDaGF0GAIgASgLMgkuaXRlbS5IYXQSHgoHY2xvdGhlcxgDIAEoCzIN",
+            "Lml0ZW0uQ2xvdGhlcxIaCgVzaG9lcxgEIAEoCzILLml0ZW0uU2hvZXMSHQoJ",
+            "aW52ZW50b3J5GAUgAygLMgouaXRlbS5JdGVtIsYBCgtQbGF5ZXJTdGF0cxIN",
+            "CgVsZXZlbBgBIAEoBRISCgpleHBlcmllbmNlGAIgASgFEhYKDm1vbnN0ZXJz",
+            "X3NsYWluGAMgASgFEg4KBmF0dGFjaxgEIAEoBRIPCgdkZWZlbnNlGAUgASgF",
+            "EhYKDmN1cnJlbnRfaGVhbHRoGAYgASgFEhIKCm1heF9oZWFsdGgYByABKAUS",
+            "EwoLZGVhdGhfY291bnQYCCABKAUSGgoSdHVybnNfc2luY2Vfam9pbmVkGAkg",
+            "ASgFIpEBChFQbGF5ZXJTdGF0c0J1bmRsZRI2CgVzdGF0cxgBIAMoCzInLmNo",
+            "YXJhY3Rlci5QbGF5ZXJTdGF0c0J1bmRsZS5TdGF0c0VudHJ5GkQKClN0YXRz",
+            "RW50cnkSCwoDa2V5GAEgASgJEiUKBXZhbHVlGAIgASgLMhYuY2hhcmFjdGVy",
+            "LlBsYXllclN0YXRzOgI4ASIyCghQb3NpdGlvbhIQCghib2FyZF9pZBgBIAEo",
+            "CRIJCgF4GAIgASgFEgkKAXkYAyABKAUigAEKEUNoYXJhY3RlckRlY2lzaW9u",
+            "Ei4KDWRlY2lzaW9uX3R5cGUYASABKA4yFy5jaGFyYWN0ZXIuRGVjaXNpb25U",
+            "eXBlEiwKD3RhcmdldF9wb3NpdGlvbhgCIAEoCzITLmNoYXJhY3Rlci5Qb3Np",
+            "dGlvbhINCgVpbmRleBgDIAEoBSpbCgxEZWNpc2lvblR5cGUSCAoETk9ORRAA",
+            "EggKBE1PVkUQARIKCgZBVFRBQ0sQAhIKCgZQT1JUQUwQAxIICgREUk9QEAQS",
+            "CQoFRVFVSVAQBRIKCgZQSUNLVVAQBkJCCh5tZWNoLm1hbmlhLmVuZ2luZS5k",
+            "b21haW4ubW9kZWxCD0NoYXJhY3RlclByb3Rvc6oCDk1NMjYuSU8uTW9kZWxz",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::MM26.IO.Models.ItemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MM26.IO.Models.DecisionType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Character), global::MM26.IO.Models.Character.Parser, new[]{ "CurrentHealth", "BaseMaxHealth", "Experience", "Level", "BaseSpeed", "Position", "SpawnPoint", "Weapon", "ActiveEffectsTempStatusModifier", "ActiveEffectsSource", "ActiveEffectsIsPlayer", "TaggedPlayersDamage", "IsDead", "TicksSinceDeath", "Name", "BaseAttack", "BaseDefense", "Sprite" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Monster), global::MM26.IO.Models.Monster.Parser, new[]{ "Character", "Drops" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Monster), global::MM26.IO.Models.Monster.Parser, new[]{ "Character", "Drops", "AggroRange" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Player), global::MM26.IO.Models.Player.Parser, new[]{ "Character", "Hat", "Clothes", "Shoes", "Inventory" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.PlayerStats), global::MM26.IO.Models.PlayerStats.Parser, new[]{ "Level", "Experience", "MonstersSlain", "Attack", "Defense", "CurrentHealth", "MaxHealth", "DeathCount", "TurnsSinceJoined" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.PlayerStatsBundle), global::MM26.IO.Models.PlayerStatsBundle.Parser, new[]{ "Stats" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
@@ -825,6 +826,7 @@ namespace MM26.IO.Models {
     public Monster(Monster other) : this() {
       character_ = other.character_ != null ? other.character_.Clone() : null;
       drops_ = other.drops_.Clone();
+      aggroRange_ = other.aggroRange_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -854,6 +856,17 @@ namespace MM26.IO.Models {
       get { return drops_; }
     }
 
+    /// <summary>Field number for the "aggro_range" field.</summary>
+    public const int AggroRangeFieldNumber = 3;
+    private int aggroRange_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int AggroRange {
+      get { return aggroRange_; }
+      set {
+        aggroRange_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Monster);
@@ -869,6 +882,7 @@ namespace MM26.IO.Models {
       }
       if (!object.Equals(Character, other.Character)) return false;
       if(!drops_.Equals(other.drops_)) return false;
+      if (AggroRange != other.AggroRange) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -877,6 +891,7 @@ namespace MM26.IO.Models {
       int hash = 1;
       if (character_ != null) hash ^= Character.GetHashCode();
       hash ^= drops_.GetHashCode();
+      if (AggroRange != 0) hash ^= AggroRange.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -895,6 +910,10 @@ namespace MM26.IO.Models {
         output.WriteMessage(Character);
       }
       drops_.WriteTo(output, _repeated_drops_codec);
+      if (AggroRange != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(AggroRange);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -907,6 +926,9 @@ namespace MM26.IO.Models {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Character);
       }
       size += drops_.CalculateSize(_repeated_drops_codec);
+      if (AggroRange != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AggroRange);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -925,6 +947,9 @@ namespace MM26.IO.Models {
         Character.MergeFrom(other.Character);
       }
       drops_.Add(other.drops_);
+      if (other.AggroRange != 0) {
+        AggroRange = other.AggroRange;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -950,6 +975,10 @@ namespace MM26.IO.Models {
             drops_.AddEntriesFrom(input, _repeated_drops_codec);
             break;
           }
+          case 24: {
+            AggroRange = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -973,6 +1002,10 @@ namespace MM26.IO.Models {
           }
           case 18: {
             drops_.AddEntriesFrom(ref input, _repeated_drops_codec);
+            break;
+          }
+          case 24: {
+            AggroRange = input.ReadInt32();
             break;
           }
         }

@@ -84,6 +84,9 @@ namespace MM26.IO
             if (_data.Initial == null)
             {
                 _data.Initial = VisualizerInitial.Parser.ParseFrom(message);
+
+                Debug.Log(_data.Initial.State.BoardNames.Keys.Count);
+
                 _sceneLifeCycle.DataFetched.Invoke();
             }
             else

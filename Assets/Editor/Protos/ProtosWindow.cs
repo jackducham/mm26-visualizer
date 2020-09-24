@@ -62,6 +62,8 @@ public class ProtosWindow : EditorWindow
         }
 
         UnityEngine.Debug.Log("Done");
+
+        AssetDatabase.Refresh();
     }
 
     private string _protosFolder = ".";
