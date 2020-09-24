@@ -18,16 +18,16 @@ namespace MM26.Tests.Scenes
 
         private IEnumerator Simulate()
         {
-            _mailbox.SendTask(new UpdateItemTask(new Vector2Int(0, 0), true));
+            _mailbox.SendTask(new UpdateTileItemTask(new Vector2Int(0, 0), true));
 
             yield return new WaitForSecondsRealtime(1.0f);
-            _mailbox.SendTask(new UpdateItemTask(new Vector2Int(0, 0), true));
+            _mailbox.SendTask(new UpdateTileItemTask(new Vector2Int(0, 0), true));
 
             yield return new WaitForSecondsRealtime(1.0f);
-            _mailbox.SendTask(new UpdateItemTask(new Vector2Int(0, 0), false));
+            _mailbox.SendTask(new UpdateTileItemTask(new Vector2Int(0, 0), false));
 
             yield return new WaitForSecondsRealtime(1.0f);
-            _mailbox.SendTask(new UpdateItemTask(new Vector2Int(0, 0), true));
+            _mailbox.SendTask(new UpdateTileItemTask(new Vector2Int(0, 0), true));
         }
     }
 }

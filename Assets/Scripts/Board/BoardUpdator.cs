@@ -23,7 +23,7 @@ namespace MM26.Board
             _mailbox.SubscribeToTaskType<SpawnPlayerTask>(this);
             _mailbox.SubscribeToTaskType<DespawnTask>(this);
             _mailbox.SubscribeToTaskType<EffectTask>(this);
-            _mailbox.SubscribeToTaskType<UpdateItemTask>(this);
+            _mailbox.SubscribeToTaskType<UpdateTileItemTask>(this);
         }
 
         private void Update()
@@ -31,7 +31,7 @@ namespace MM26.Board
             this.HandleSpawnTasks();
             this.HandleDespawnTasks();
             this.HandleEffectTasks();
-            this.HandleUpdateItemTasks();
+            this.HandleUpdateTileItemTasks();
         }
 
         /// <summary>
@@ -104,13 +104,13 @@ namespace MM26.Board
             }
         }
 
-        private void HandleUpdateItemTasks()
+        private void HandleUpdateTileItemTasks()
         {
-            UpdateItemTask[] tasks = _mailbox.GetSubscribedTasksForType<UpdateItemTask>(this);
+            UpdateTileItemTask[] tasks = _mailbox.GetSubscribedTasksForType<UpdateTileItemTask>(this);
 
             for (int i = 0; i < tasks.Length; i++)
             {
-                UpdateItemTask task = tasks[i];
+                UpdateTileItemTask task = tasks[i];
 
                 if (task.Exists)
                 {
