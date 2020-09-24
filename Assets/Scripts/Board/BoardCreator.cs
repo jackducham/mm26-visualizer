@@ -57,7 +57,6 @@ namespace MM26.Board
 
         private void OnEnable()
         {
-            Debug.Log(_aboveTilemap);
             _sceneLifeCycle.CreateBoard.AddListener(this.OnCreateMap);
         }
 
@@ -83,8 +82,6 @@ namespace MM26.Board
         private void CreateMap()
         {
             var board = _data.Initial.State.BoardNames[_sceneConfiguration.BoardName];
-
-            _treasureTrovesManager.Initialize(board.Rows, board.Columns);
 
             for (int y = 0; y < board.Rows; y++)
             {

@@ -13,6 +13,9 @@ namespace MM26.Board
         private EffectsManager _effectsManager = null;
 
         [SerializeField]
+        private TreasureTrovesManager _treasureTroveManager = null;
+
+        [SerializeField]
         private Mailbox _mailbox = null;
 
         private void OnEnable()
@@ -20,6 +23,7 @@ namespace MM26.Board
             _mailbox.SubscribeToTaskType<SpawnPlayerTask>(this);
             _mailbox.SubscribeToTaskType<DespawnTask>(this);
             _mailbox.SubscribeToTaskType<EffectTask>(this);
+            _mailbox.SubscribeToTaskType<UpdateItemTask>(this);
         }
 
         private void Update()
@@ -27,6 +31,7 @@ namespace MM26.Board
             this.HandleSpawnTasks();
             this.HandleDespawnTasks();
             this.HandleEffectTasks();
+            this.HandleUpdateItemTasks();
         }
 
         /// <summary>
@@ -96,6 +101,25 @@ namespace MM26.Board
                 }
 
                 _mailbox.RemoveTask(task);
+            }
+        }
+
+        private void HandleUpdateItemTasks()
+        {
+            UpdateItemTask[] tasks = _mailbox.GetSubscribedTasksForType<UpdateItemTask>(this);
+
+            for (int i = 0; i < tasks.Length; i++)
+            {
+                UpdateItemTask task = tasks[i];
+
+                if (task.Exists)
+                {
+                    _treasureTroveManager.PlaceTrove(task.Position.x, task.Position.y);
+                }
+                else
+                {
+                    _treasureTroveManager.RemoveTrove(task.Position.x, task.Position.y);
+                }
             }
         }
     }

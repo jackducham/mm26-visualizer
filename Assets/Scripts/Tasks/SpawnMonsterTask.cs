@@ -20,6 +20,7 @@ namespace MM26.Tasks
 
             hash.Add(base.GetHashCode());
             hash.Add(this.Position.GetHashCode());
+            hash.Add(this.MonsterSprite.GetHashCode());
 
             return hash.Value;
         }
@@ -38,7 +39,8 @@ namespace MM26.Tasks
 
             SpawnMonsterTask task = (SpawnMonsterTask)obj;
 
-            return this.Position == task.Position;
+            return this.Position == task.Position
+                && this.MonsterSprite == task.MonsterSprite;
         }
     }
 }
