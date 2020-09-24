@@ -128,12 +128,19 @@ namespace MM26.Tests
 
             foreach (var tile in testState.Board.Grid)
             {
-                board.Grid.Add(new Tile()
+                var ptile = new Tile()
                 {
                     TileType = tile.TileType,
                     GroundSprite = tile.GroundSprite,
-                    AboveSprite = tile.AboveSprite
-                });
+                    AboveSprite = tile.AboveSprite,
+                };
+
+                if (tile.HasItems)
+                {
+                    ptile.Items.Add(new Item());
+                }
+
+                board.Grid.Add(ptile);
             }
 
             state.BoardNames.Add(testState.Board.Name, board);
