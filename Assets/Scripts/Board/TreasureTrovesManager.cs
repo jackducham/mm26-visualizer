@@ -6,20 +6,20 @@ namespace MM26.Board
     public class TreasureTrovesManager : MonoBehaviour
     {
         [SerializeField]
-        private GameObject _trovePrefab = null;
+        private Tile _troveTile = null;
 
         [SerializeField]
         private Tilemap _tilemap = null;
 
-        private GameObject[][] _troves = null;
+        private bool[][] _troves = null;
 
         public void Initialize(int rows, int columns)
         {
-            _troves = new GameObject[rows][];
+            _troves = new bool[rows][];
 
             for (int y = 0; y < rows; y++)
             {
-                var row = new GameObject[columns];
+                var row = new bool[columns];
 
                 _troves[y] = row;
             }
@@ -27,9 +27,10 @@ namespace MM26.Board
 
         public void PlaceTrove(int x, int y)
         {
-            GameObject trove = Instantiate(_trovePrefab);
+            Debug.Log("place trove");
 
-            //Vector3 position = _tilemap.GetCellCenterWorld(position);
+            _tilemap.SetTile(new Vector3Int(x, y, -2), _troveTile);
+            _troves[y][x] = true;
         }
     }
 }

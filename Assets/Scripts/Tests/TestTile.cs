@@ -35,5 +35,7 @@ namespace MM26.Tests
         public string GroundSprite;
 
         public string AboveSprite;
+
+        public bool HasItems;
     }
 }

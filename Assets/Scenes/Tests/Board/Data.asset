@@ -21,30 +21,39 @@ MonoBehaviour:
       - TileType: 1
         GroundSprite: mm26_tiles/darktree3.png
         AboveSprite: 
+        HasItems: 1
       - TileType: 1
         GroundSprite: mm26_tiles/dirt2.png
         AboveSprite: 
+        HasItems: 0
       - TileType: 1
         GroundSprite: mm26_tiles/arch rear right.png
         AboveSprite: 
+        HasItems: 0
       - TileType: 1
         GroundSprite: mm26_tiles/darktree3.png
         AboveSprite: mm26_tiles/door2.png
+        HasItems: 0
       - TileType: 1
         GroundSprite: mm26_tiles/basicwall1.png
         AboveSprite: 
+        HasItems: 0
       - TileType: 1
         GroundSprite: mm26_tiles/basicwall1.png
         AboveSprite: mm26_tiles/door2.png
+        HasItems: 0
       - TileType: 1
         GroundSprite: mm26_tiles/basicwall2.png
         AboveSprite: 
+        HasItems: 0
       - TileType: 1
         GroundSprite: mm26_tiles/basicwall1.png
         AboveSprite: 
+        HasItems: 0
       - TileType: 1
         GroundSprite: mm26_tiles/darktree4.png
         AboveSprite: 
+        HasItems: 0
     Characters:
     - Name: Player A
       CharacterType: 0
