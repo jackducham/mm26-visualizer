@@ -87,6 +87,11 @@ namespace MM26.Board
                 {
                     PTile ptile = board.Grid[y * board.Rows + x];
 
+                    if (ptile.Items.Count > 0)
+                    {
+                        _treasureTrovesManager.PlaceTrove(x, y);
+                    }
+
                     if (ptile.TileType == PTileType.Void)
                     {
                         continue;
@@ -94,15 +99,12 @@ namespace MM26.Board
 
                     if (ptile.GroundSprite != "")
                     {
-                        Debug.Log(ptile.AboveSprite);
-
                         Tile tile = _tileDatabase.GetTile(ptile.GroundSprite);
                         _tilemap.SetTile(new Vector3Int(x, y, 0), tile);
                     }
 
                     if (ptile.AboveSprite != "")
                     {
-                        Debug.Log("NEED TO PRINT THIS ");
                         Tile tile = _tileDatabase.GetTile(ptile.AboveSprite);
                         _tilemap.SetTile(new Vector3Int(x, y, -1), tile);
                     }

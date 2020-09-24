@@ -226,6 +226,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c8249cbb0554580bb12ed5fe14b94c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _trovePrefab: {fileID: 1417969067230348925, guid: d44ba491dbd7741b192b8748430149a6,
+    type: 3}
+  _tilemap: {fileID: 7747305901183254157}
 --- !u!114 &6099384395167837154
 MonoBehaviour:
   m_ObjectHideFlags: 0
