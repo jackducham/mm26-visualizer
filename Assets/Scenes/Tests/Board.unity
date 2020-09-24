@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -128,6 +128,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 686808643712479781, guid: 7fd854d829837454784ec17a6269900a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4749321103178416166, guid: 7fd854d829837454784ec17a6269900a,
+        type: 3}
+      propertyPath: m_Name
+      value: Ground Tilemap
+      objectReference: {fileID: 0}
     - target: {fileID: 6099384395167837153, guid: 7fd854d829837454784ec17a6269900a,
         type: 3}
       propertyPath: m_Name
@@ -139,6 +149,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: de3897c242d1a4bb290ef1e85b3fdc8b,
         type: 2}
+    - target: {fileID: 6099384395167837154, guid: 7fd854d829837454784ec17a6269900a,
+        type: 3}
+      propertyPath: _aboveTilemap
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6099384395167837154, guid: 7fd854d829837454784ec17a6269900a,
+        type: 3}
+      propertyPath: _tilemap
+      value: 
+      objectReference: {fileID: 812579819}
     - target: {fileID: 6099384395167837155, guid: 7fd854d829837454784ec17a6269900a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -311,6 +331,12 @@ PrefabInstance:
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 265617c07845e47018a2a1d32b15454d, type: 3}
+--- !u!1839735485 &812579819 stripped
+Tilemap:
+  m_CorrespondingSourceObject: {fileID: 7747305901183254157, guid: 7fd854d829837454784ec17a6269900a,
+    type: 3}
+  m_PrefabInstance: {fileID: 136141471}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &904837700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -377,6 +403,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998301779233684330, guid: dbe5ceda4b6164862adf825609e6cede,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.39996338
       objectReference: {fileID: 0}
     - target: {fileID: 8165182917944134687, guid: dbe5ceda4b6164862adf825609e6cede,
         type: 3}

@@ -131,7 +131,8 @@ namespace MM26.Tests
                 board.Grid.Add(new Tile()
                 {
                     TileType = tile.TileType,
-                    GroundSprite = tile.GroundSprite
+                    GroundSprite = tile.GroundSprite,
+                    AboveSprite = tile.AboveSprite
                 });
             }
 

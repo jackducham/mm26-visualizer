@@ -76,6 +76,7 @@ namespace MM26.Board
         {
             var board = _data.Initial.State.BoardNames[_sceneConfiguration.BoardName];
 
+
             for (int y = 0; y < board.Rows; y++)
             {
                 for (int x = 0; x < board.Columns; x++)
@@ -89,14 +90,17 @@ namespace MM26.Board
 
                     if (ptile.GroundSprite != "")
                     {
+                        Debug.Log(ptile.AboveSprite);
+
                         Tile tile = _tileDatabase.GetTile(ptile.GroundSprite);
                         _tilemap.SetTile(new Vector3Int(x, y, 0), tile);
                     }
 
                     if (ptile.AboveSprite != "")
                     {
+                        Debug.Log("NEED TO PRINT THIS ");
                         Tile tile = _tileDatabase.GetTile(ptile.AboveSprite);
-                        _tilemap.SetTile(new Vector3Int(x, y, 1), tile);
+                        _tilemap.SetTile(new Vector3Int(x, y, -1), tile);
                     }
                 }
             }
