@@ -43,7 +43,10 @@ namespace MM26.Board
         private Tilemap _tilemap = null;
 
         [SerializeField]
-        internal CharactersManager CharactersManager = null;
+        private CharactersManager _charactersManager = null;
+
+        [SerializeField]
+        private TreasureTrovesManager _treasureTrovesManager = null;
 
 
         private void OnEnable()
@@ -76,6 +79,7 @@ namespace MM26.Board
         {
             var board = _data.Initial.State.BoardNames[_sceneConfiguration.BoardName];
 
+            _treasureTrovesManager.Initialize(board.Rows, board.Columns);
 
             for (int y = 0; y < board.Rows; y++)
             {
@@ -121,7 +125,7 @@ namespace MM26.Board
                     continue;
                 }
 
-                this.CharactersManager.CreatePlayer(new Vector3Int(position.X, position.Y, 0), character.Name);
+                this._charactersManager.CreatePlayer(new Vector3Int(position.X, position.Y, 0), character.Name);
             }
 
             foreach (var entry in _data.Initial.State.MonsterNames)
@@ -134,7 +138,7 @@ namespace MM26.Board
                     continue;
                 }
 
-                this.CharactersManager.CreateMonster(new Vector3Int(position.X, position.Y, 0), character.Name);
+                this._charactersManager.CreateMonster(new Vector3Int(position.X, position.Y, 0), character.Name);
             }
         }
     }

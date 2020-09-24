@@ -171,6 +171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6099384395167837155}
   - component: {fileID: 4835611230717269304}
+  - component: {fileID: 4565820777754228388}
   - component: {fileID: 6099384395167837154}
   - component: {fileID: 8000956316918997821}
   - component: {fileID: 6454628664683691712}
@@ -213,6 +214,18 @@ MonoBehaviour:
     type: 3}
   _monsterPrefab: {fileID: 1555258926759968227, guid: 78cd5a4a07e6b41e6ad1766186234769,
     type: 3}
+--- !u!114 &4565820777754228388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6099384395167837153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c8249cbb0554580bb12ed5fe14b94c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6099384395167837154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,16 +239,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tileDatabase: {fileID: 11400000, guid: 93478089b4afa4161ad6e4e0ae3b603a, type: 2}
-  _voidTile: {fileID: 0}
-  _portalTile: {fileID: 0}
-  _impassibleTile: {fileID: 0}
-  _blankTile: {fileID: 0}
   _sceneConfiguration: {fileID: 0}
   _sceneLifeCycle: {fileID: 11400000, guid: e5a30a7b0ac1e4833a29854a0f787d12, type: 2}
   _data: {fileID: 11400000, guid: 10eb0f1c65a9f486fb08761d63b81067, type: 2}
   _positionLookUp: {fileID: 11400000, guid: 2be8fc4b715a646b18ec12963535586d, type: 2}
   _tilemap: {fileID: 7747305901183254157}
-  CharactersManager: {fileID: 4835611230717269304}
+  _charactersManager: {fileID: 4835611230717269304}
+  _treasureTrovesManager: {fileID: 4565820777754228388}
 --- !u!114 &8000956316918997821
 MonoBehaviour:
   m_ObjectHideFlags: 0
