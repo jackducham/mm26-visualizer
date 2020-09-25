@@ -24,8 +24,11 @@ namespace MM26.UI
 
         private void Start()
         {
-            _urlField.text = _sceneConfiguration.WebSocketURL;
-            _boardNameField.text = _sceneConfiguration.BoardName;
+            _urlField.text = "ws://engine-main.mechmania.io:8081/visualizer";
+            _boardNameField.text = "pvp";
+
+            _sceneConfiguration.WebSocketURL = "ws://engine-main.mechmania.io:8081/visualizer";
+            _sceneConfiguration.BoardName = "pvp";
         }
 
         public void OnLoadClick()
