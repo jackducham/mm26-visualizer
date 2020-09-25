@@ -227,19 +227,22 @@ namespace MM26.Play
                             }
 
                             if (entity_key == entity) {
+                                Debug.Log(batch);
                                 batch.Add(new UpdateInventoryTask(entity)
                                 {
                                     clothes_changed = characterChange.ClothesChanged,
                                     hat_changed = characterChange.HatChanged,
                                     shoes_changed = characterChange.ShoesChanged,
                                     weapon_changed = characterChange.WeaponChanged,
+                                    accesory_changed = false,
 
                                     Top = player.TopSprite,
                                     Bottom = player.BottomSprite,
                                     Head = player.HeadSprite,
-                                    Weapon = character.Weapon.Sprite
+                                    Weapon = "",
+                                    Accessory = ""
                                 });
-                                break;
+                                return;
                             }
                         }
 

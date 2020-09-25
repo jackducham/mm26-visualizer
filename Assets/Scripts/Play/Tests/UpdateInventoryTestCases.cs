@@ -75,13 +75,7 @@ namespace MM26.Play.Tests
                     {
                         hat_changed = true,
                         Head = "mm26_wearables/hats/butler_head.png"
-                    },
-                    new UpdateInventoryTask("player")
-                    {
-                        clothes_changed = true,
-                        Top = "mm26_wearables/clothes/butler_top.png"
-                    },
-
+                    }
                 }
             };
         }
