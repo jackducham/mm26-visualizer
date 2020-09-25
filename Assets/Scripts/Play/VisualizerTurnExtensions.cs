@@ -88,7 +88,8 @@ namespace MM26.Play
                 ProcessCharacter(
                     batch, entity,
                     character,
-                    characterChange,
+                    characterChange, 
+                    gameState,
                     sceneConfiguration,
                     boardPositionLookUp,
                     ignoreForHubUpdate,
@@ -101,6 +102,7 @@ namespace MM26.Play
             string entity,
             Character character,
             CharacterChange characterChange,
+            GameState gameState,
             SceneConfiguration sceneConfiguration,
             BoardPositionLookUp boardPositionLookUp,
             HashSet<string> ignoreForHubUpdate,
@@ -124,6 +126,8 @@ namespace MM26.Play
             }
             else if (characterChange.Respawned)
             {
+                Debug.Log("Butt");
+
                 if (character.Position.BoardId == sceneConfiguration.BoardName)
                 {
                     ignoreForHubUpdate.Add(entity);
@@ -211,6 +215,30 @@ namespace MM26.Play
                         }
                     }
                     break;
+                case DecisionType.Equip:
+                    if (character.Position.BoardId == sceneConfiguration.BoardName && !isMonster)
+                    {
+                        ignoreForHubUpdate.Add(entity);
+
+                        Player player = gameState.PlayerNames[entity];
+
+                        batch.Add(new UpdateInventoryTask(entity)
+                        {
+                            clothes_changed = characterChange.ClothesChanged,
+                            hat_changed = characterChange.HatChanged,
+                            shoes_changed = characterChange.ShoesChanged,
+                            weapon_changed = characterChange.WeaponChanged,
+                            accesory_changed = false,
+
+                            Top = player.Clothes?.Sprite,
+                            Bottom = player.Shoes?.Sprite,
+                            Head = player.Hat?.Sprite,
+                            Weapon = character.Weapon?.Sprite,
+                            Accessory = ""
+                        });
+                        return;
+                    }
+                    break;
                 case DecisionType.None:
                     break;
                 default:
@@ -245,7 +273,6 @@ namespace MM26.Play
                 }
 
                 Tile tile = board.Grid[change.X * board.Height + change.Y];
-
                 batch.Add(
                     new UpdateTileItemTask(
                         new Vector2Int(change.X, change.Y),

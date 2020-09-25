@@ -6,6 +6,7 @@ namespace MM26.Components
 {
     public class Inventory : MonoBehaviour
     {
+
         [Header("Equipment Slots")]
         [SerializeField]
         private SpriteRenderer _bottom = null;
