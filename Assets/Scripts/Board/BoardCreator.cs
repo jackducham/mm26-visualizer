@@ -83,11 +83,13 @@ namespace MM26.Board
         {
             var board = _data.Initial.State.BoardNames[_sceneConfiguration.BoardName];
 
-            for (int y = 0; y < board.Rows; y++)
+            // rows is width
+            for (int x = 0; x < board.Rows; x++)
             {
-                for (int x = 0; x < board.Columns; x++)
+                // columns is height
+                for (int y = 0; y < board.Columns; y++)
                 {
-                    PTile ptile = board.Grid[y * board.Rows + x];
+                    PTile ptile = board.Grid[x * board.Columns + y];
 
                     if (ptile.Items.Count > 0)
                     {
@@ -102,13 +104,13 @@ namespace MM26.Board
                     if (ptile.GroundSprite != "")
                     {
                         Tile tile = _tileDatabase.GetTile(ptile.GroundSprite);
-                        _groundTilemap.SetTile(new Vector3Int(x, y, 0), tile);
+                        _groundTilemap.SetTile(new Vector3Int(x, (board.Columns - 1) - y, 0), tile);
                     }
 
                     if (ptile.AboveSprite != "")
                     {
                         Tile tile = _tileDatabase.GetTile(ptile.AboveSprite);
-                        _aboveTilemap.SetTile(new Vector3Int(x, y, -1), tile);
+                        _aboveTilemap.SetTile(new Vector3Int(x, (board.Columns - 1) - y, -1), tile);
                     }
                 }
             }
