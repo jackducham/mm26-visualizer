@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Configuration
   m_EditorClassIdentifier: 
   BoardName: pvp
-  WebSocketURL: ws://localhost:8081/visualizer
+  WebSocketURL: ws://engine-main.mechmania.io:8081/visualizer

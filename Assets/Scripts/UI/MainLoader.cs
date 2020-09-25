@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using MM26.Utilities;
 
 namespace MM26.UI
 {
@@ -16,15 +17,22 @@ namespace MM26.UI
         private string _sceneName = "Main";
 
         [SerializeField]
-        private TextMeshProUGUI _url = null;
+        TMP_InputField _urlField = null;
 
         [SerializeField]
-        private TextMeshProUGUI _boardName = null;
+        TMP_InputField _boardNameField = null;
+
+        private void Start()
+        {
+            _urlField.text = _sceneConfiguration.WebSocketURL;
+            _boardNameField.text = _sceneConfiguration.BoardName;
+        }
 
         public void OnLoadClick()
         {
-            _sceneConfiguration.WebSocketURL = _url.text;
-            _sceneConfiguration.BoardName = _boardName.text;
+            _sceneConfiguration.WebSocketURL = _urlField.text.KeepVisibles();
+            _sceneConfiguration.BoardName = _boardNameField.text.KeepVisibles();
+
             SceneManager.LoadScene(_sceneName);
         }
     }
