@@ -84,11 +84,11 @@ namespace MM26.Board
 
                 if (state.BoardNames.ContainsKey(_sceneConfiguration.BoardName))
                 {
-                    this.CreateMap(state);
-                    this.CreateCharacters(state);
-
                     _loaded = true;
                     _waitingCanvas.enabled = false;
+
+                    this.CreateMap(state);
+                    this.CreateCharacters(state);
                 }
             }
         }
