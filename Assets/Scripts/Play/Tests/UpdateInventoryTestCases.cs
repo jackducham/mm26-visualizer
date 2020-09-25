@@ -25,24 +25,30 @@ namespace MM26.Play.Tests
                         BoardId = playerBoard,
                         X = 0,
                         Y = 0
-                    }
-                }
-            };
+                    },
 
-            gameState.MonsterNames["monster"] = new Monster()
-            {
-                Character = new Character()
-                {
-                    CurrentHealth = 10,
-                    Level = 22,
-                    Experience = 0,
-                    Position = new Position()
+                    Weapon = new Weapon()
                     {
-                        BoardId = playerBoard,
-                        X = 1,
-                        Y = 1
+                        Sprite = "mm26_wearables/weapons/wands/4.png"
                     }
-                }
+                },
+
+                Hat = new Hat()
+                {
+                    Sprite = "mm26_wearables/clothes/alchemist_head.png"
+                },
+                Clothes = new Clothes()
+                {
+                    Sprite = "mm26_wearables/clothes/alchemist_head.png"
+                },
+                Shoes = new Shoes()
+                {
+                    Sprite = "mm26_wearables/clothes/alchemist_head.png"
+                },
+                //Accessory = new Accessory()
+                //{
+                //    Sprite = "mm26_wearables/clothes/alchemist_head.png"
+                //}
             };
 
             gameChange.CharacterChanges["player"] = new CharacterChange()
@@ -75,7 +81,7 @@ namespace MM26.Play.Tests
                     new UpdateInventoryTask("player")
                     {
                         hat_changed = true,
-                        Head = "mm26_wearables/hats/butler_head.png"
+                        Head = "mm26_wearables/clothes/alchemist_head.png"
                     }
                 }
             };

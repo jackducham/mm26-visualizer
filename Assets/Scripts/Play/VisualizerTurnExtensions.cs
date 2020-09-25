@@ -126,6 +126,8 @@ namespace MM26.Play
             }
             else if (characterChange.Respawned)
             {
+                Debug.Log("Butt");
+
                 if (character.Position.BoardId == sceneConfiguration.BoardName)
                 {
                     ignoreForHubUpdate.Add(entity);
@@ -216,39 +218,25 @@ namespace MM26.Play
                 case DecisionType.Equip:
                     if (character.Position.BoardId == sceneConfiguration.BoardName && !isMonster)
                     {
-                        foreach (var pair in gameState.PlayerNames)
+                        ignoreForHubUpdate.Add(entity);
+
+                        Player player = gameState.PlayerNames[entity];
+
+                        batch.Add(new UpdateInventoryTask(entity)
                         {
-                            string entity_key = pair.Key;
-                            Player player = pair.Value;
+                            clothes_changed = characterChange.ClothesChanged,
+                            hat_changed = characterChange.HatChanged,
+                            shoes_changed = characterChange.ShoesChanged,
+                            weapon_changed = characterChange.WeaponChanged,
+                            accesory_changed = false,
 
-                            if (player.Character.Position.BoardId != sceneConfiguration.BoardName)
-                            {
-                                continue;
-                            }
-
-                            if (entity_key == entity) {
-                                Debug.Log(entity);
-                                Debug.Log(characterChange);
-
-                                batch.Add(new UpdateInventoryTask(entity)
-                                {
-                                    clothes_changed = characterChange.ClothesChanged,
-                                    hat_changed = characterChange.HatChanged,
-                                    shoes_changed = characterChange.ShoesChanged,
-                                    weapon_changed = characterChange.WeaponChanged,
-                                    accesory_changed = false,
-
-                                    Top = player.TopSprite,
-                                    Bottom = player.BottomSprite,
-                                    Head = player.HeadSprite,
-                                    Weapon = character.Weapon.Sprite,
-                                    Accessory = ""
-                                });
-                                Debug.Log(characterChange.HatChanged);
-                                return;
-                            }
-                        }
-
+                            Top = player.Clothes?.Sprite,
+                            Bottom = player.Shoes?.Sprite,
+                            Head = player.Hat?.Sprite,
+                            Weapon = character.Weapon?.Sprite,
+                            Accessory = ""
+                        });
+                        return;
                     }
                     break;
                 case DecisionType.None:
@@ -285,7 +273,6 @@ namespace MM26.Play
                 }
 
                 Tile tile = board.Grid[change.X * board.Height + change.Y];
-
                 batch.Add(
                     new UpdateTileItemTask(
                         new Vector2Int(change.X, change.Y),

@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using MM26.ECS;
 using MM26.Utilities;
+using ICSharpCode.NRefactory.Ast;
+using ICSharpCode.NRefactory.PrettyPrinter;
 
 namespace MM26.Tasks
 {
@@ -12,11 +14,11 @@ namespace MM26.Tasks
         public bool weapon_changed = false;
         public bool accesory_changed = false;
         
-        public string Head = "";
-        public string Top = "";
-        public string Bottom = ""; 
-        public string Weapon = "";
-        public string Accessory = "";
+        public string Head = "_";
+        public string Top = "_";
+        public string Bottom = "_"; 
+        public string Weapon = "_";
+        public string Accessory = "_";
 
         public UpdateInventoryTask(string entity) : base(entity)
         {
@@ -56,16 +58,37 @@ namespace MM26.Tasks
 
             UpdateInventoryTask other = (UpdateInventoryTask)obj;
 
-            return this.hat_changed == other.hat_changed
+            bool eq = this.hat_changed == other.hat_changed
                 && this.clothes_changed == other.clothes_changed
                 && this.shoes_changed == other.shoes_changed
                 && this.weapon_changed == other.weapon_changed
-                && this.accesory_changed == other.accesory_changed
-                && this.Head == other.Head
-                && this.Top == other.Top
-                && this.Bottom == other.Bottom
-                && this.Weapon == other.Weapon
-                && this.Accessory == other.Accessory;
+                && this.accesory_changed == other.accesory_changed;
+
+            //return this.hat_changed == other.hat_changed
+            //    && this.clothes_changed == other.clothes_changed
+            //    && this.shoes_changed == other.shoes_changed
+            //    && this.weapon_changed == other.weapon_changed
+            //    && this.accesory_changed == other.accesory_changed
+            //    && this.Head == other.Head
+            //    && this.Top == other.Top
+            //    && this.Bottom == other.Bottom
+            //    && this.Weapon == other.Weapon
+            //    && this.Accessory == other.Accessory;
+
+            if (!eq) return false;
+
+            if (this.hat_changed)
+                eq = eq && (this.Head == other.Head);
+            if (this.shoes_changed)
+                eq = eq && (this.Bottom == other.Bottom);
+            if (this.clothes_changed)
+                eq = eq && (this.Top == other.Top);
+            if (this.accesory_changed)
+                eq = eq && (this.Accessory == other.Accessory);
+            if (this.weapon_changed)
+                eq = eq && (this.Weapon == other.Weapon);
+            Debug.Log(eq);
+            return eq;
         }
 
         public override string ToString()
