@@ -8,5 +8,8 @@ namespace MM26.Components
     {
         public Vector3 MoveSpeed;
         public float ZoomSpeed;
+
+        public float MaxZoom;
+        public float MinZoom;
     }
 }

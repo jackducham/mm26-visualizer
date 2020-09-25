@@ -34,12 +34,35 @@ namespace MM26.Play
             TasksBatch batch = new TasksBatch();
             var ignoreForHubUpdate = new HashSet<string>();
 
+            ProcessCharacterChanges(
+                sceneConfiguration,
+                boardPositionLookUp,
+                gameChange,
+                gameState,
+                batch,
+                ignoreForHubUpdate);
+
+            ProcessTileChanges(sceneConfiguration, gameState, gameChange, batch);
+
+            ProcessGameState(batch, sceneConfiguration, gameState, ignoreForHubUpdate);
+
+            return batch;
+        }
+
+        private static void ProcessCharacterChanges(
+            SceneConfiguration sceneConfiguration,
+            BoardPositionLookUp boardPositionLookUp,
+            GameChange gameChange,
+            GameState gameState,
+            TasksBatch batch,
+            HashSet<string> ignoreForHubUpdate)
+        {
             foreach (var pair in gameChange.CharacterChanges)
             {
                 string entity = pair.Key;
                 Character character = null;
                 CharacterChange characterChange = pair.Value;
-
+                bool isMonster = false;
 
                 if (gameState.PlayerNames.ContainsKey(entity))
                 {
@@ -50,18 +73,22 @@ namespace MM26.Play
                 {
                     // if the entity is a monster
                     character = gameState.MonsterNames[entity].Character;
+                    isMonster = true;
                 }
                 else
                 {
                     throw new Exception($"Don't know how to handle entity {entity}");
                 }
 
-                ProcessCharacter(batch, entity, character, characterChange, sceneConfiguration, boardPositionLookUp, ignoreForHubUpdate);
+                ProcessCharacter(
+                    batch, entity,
+                    character,
+                    characterChange,
+                    sceneConfiguration,
+                    boardPositionLookUp,
+                    ignoreForHubUpdate,
+                    isMonster);
             }
-
-            ProcessGameState(batch, sceneConfiguration, gameState, ignoreForHubUpdate);
-
-            return batch;
         }
 
         private static void ProcessCharacter(
@@ -71,7 +98,8 @@ namespace MM26.Play
             CharacterChange characterChange,
             SceneConfiguration sceneConfiguration,
             BoardPositionLookUp boardPositionLookUp,
-            HashSet<string> ignoreForHubUpdate)
+            HashSet<string> ignoreForHubUpdate,
+            bool isMonster)
         {
             var position = new Vector3Int(
                 character.Position.X,
@@ -94,7 +122,16 @@ namespace MM26.Play
                 if (character.Position.BoardId == sceneConfiguration.BoardName)
                 {
                     ignoreForHubUpdate.Add(entity);
-                    batch.Add(new SpawnPlayerTask(entity, position));
+
+                    if (isMonster)
+                    {
+                        batch.Add(new SpawnMonsterTask(entity, position, character.Sprite));
+                    }
+                    else
+                    {
+                        batch.Add(new SpawnPlayerTask(entity, position));
+                    }
+                    
                     batch.Add(new EffectTask(EffectType.Spawn, position));
                 }
 
@@ -121,7 +158,14 @@ namespace MM26.Play
                     }
                     else
                     {
-                        batch.Add(new SpawnPlayerTask(entity, position));
+                        if (isMonster)
+                        {
+                            batch.Add(new SpawnMonsterTask(entity, position, character.Sprite));
+                        }
+                        else
+                        {
+                            batch.Add(new SpawnPlayerTask(entity, position));
+                        }
                     }
 
                     batch.Add(new EffectTask(EffectType.Portal, position));
@@ -147,6 +191,35 @@ namespace MM26.Play
                 default:
                     Debug.LogWarningFormat("Unrecognized decision type {0}", characterChange.Decision.DecisionType);
                     break;
+            }
+        }
+
+        private static void ProcessTileChanges(
+            SceneConfiguration configuration,
+            GameState gameState,
+            GameChange gameChange,
+            TasksBatch batch)
+        {
+            if (!gameState.BoardNames.ContainsKey(configuration.BoardName))
+            {
+                return;
+            }
+
+            IO.Models.Board board = gameState.BoardNames[configuration.BoardName];
+
+            foreach (var change in gameChange.TileItemChanges)
+            {
+                if (change.BoardId != configuration.BoardName)
+                {
+                    continue;
+                }
+
+                Tile tile = board.Grid[change.Y * board.Columns + change.X];
+
+                batch.Add(
+                    new UpdateTileItemTask(
+                        new Vector2Int(change.X, change.Y),
+                        tile.Items.Count > 0));
             }
         }
 

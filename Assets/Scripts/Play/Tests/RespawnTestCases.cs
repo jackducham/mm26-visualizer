@@ -32,7 +32,32 @@ namespace MM26.Play.Tests
                 }
             };
 
+            gameState.MonsterNames["monster"] = new Monster()
+            {
+                Character = new Character()
+                {
+                    CurrentHealth = 10,
+                    Sprite = "monster.png",
+                    Position = new Position()
+                    {
+                        BoardId = playerBoard,
+                        X = 0,
+                        Y = 1
+                    }
+                }
+            };
+
             gameChange.CharacterChanges["player"] = new CharacterChange()
+            {
+                Respawned = true,
+                Died = false,
+                Decision = new CharacterDecision()
+                {
+                    DecisionType = DecisionType.None
+                }
+            };
+
+            gameChange.CharacterChanges["monster"] = new CharacterChange()
             {
                 Respawned = true,
                 Died = false,
@@ -59,7 +84,9 @@ namespace MM26.Play.Tests
                 new HashSet<Task>()
                 {
                     new EffectTask(EffectType.Spawn, new Vector3Int(1, 1, 0)),
-                    new SpawnPlayerTask("player", new Vector3Int(1, 1, 0))
+                    new EffectTask(EffectType.Spawn, new Vector3Int(0, 1, 0)),
+                    new SpawnPlayerTask("player", new Vector3Int(1, 1, 0)),
+                    new SpawnMonsterTask("monster", new Vector3Int(0, 1, 0), "monster.png")
                 }
             };
         }
