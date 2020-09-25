@@ -4,19 +4,23 @@ using UnityEngine;
 
 namespace MM26.Components
 {
-    public class CharacterSpriteManager : MonoBehaviour
+    public class Inventory : MonoBehaviour
     {
         [Header("Equipment Slots")]
         [SerializeField]
-        private SpriteRenderer _bottom;
+        private SpriteRenderer _bottom = null;
+
         [SerializeField]
-        private SpriteRenderer _top;
+        private SpriteRenderer _top = null;
+
         [SerializeField]
-        private SpriteRenderer _head;
+        private SpriteRenderer _head = null;
+
         [SerializeField]
-        private SpriteRenderer _accessory;
+        private SpriteRenderer _accessory = null;
+
         [SerializeField]
-        private SpriteRenderer _weapon;
+        private SpriteRenderer _weapon = null;
 
 
         /// <summary>
@@ -28,7 +32,7 @@ namespace MM26.Components
         public Sprite SetEquipment(Sprite sprite, string slot)
         {
             Sprite pop = null;
-            switch(slot)
+            switch (slot)
             {
                 case "shoes":
                     pop = _bottom.sprite;
@@ -68,7 +72,7 @@ namespace MM26.Components
             switch (slot)
             {
                 case "shoes":
-                     pop = _bottom.sprite;
+                    pop = _bottom.sprite;
                     _bottom.sprite = null;
                     break;
                 case "clothes":

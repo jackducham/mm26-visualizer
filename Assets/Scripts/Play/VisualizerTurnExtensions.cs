@@ -131,7 +131,7 @@ namespace MM26.Play
                     {
                         batch.Add(new SpawnPlayerTask(entity, position));
                     }
-                    
+
                     batch.Add(new EffectTask(EffectType.Spawn, position));
                 }
 

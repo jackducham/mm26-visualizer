@@ -5,7 +5,7 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-[assembly : InternalsVisibleTo("Assembly-CSharp-Editor")]
+[assembly: InternalsVisibleTo("Assembly-CSharp-Editor")]
 
 namespace MM26.Configuration
 {
@@ -83,7 +83,8 @@ namespace MM26.Configuration
             if (_wearables.TryGetValue(path, out Sprite sprite))
             {
                 return sprite;
-            } else
+            }
+            else
             {
                 return null;
             }

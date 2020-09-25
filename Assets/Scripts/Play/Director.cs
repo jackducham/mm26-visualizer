@@ -53,7 +53,7 @@ namespace MM26.Play
             {
                 this.DispatchTasks();
             }
-            
+
         }
 
         private void OnPlay()

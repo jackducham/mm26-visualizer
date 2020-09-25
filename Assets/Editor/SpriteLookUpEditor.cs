@@ -81,7 +81,7 @@ public class SpriteLookUpEditor : Editor
 
                 if (dir_slot.Length > 1)
                 {
-                    if(dir_slot[1] != "_default")
+                    if (dir_slot[1] != "_default")
                         slot = dir_slot[1];
                     else
                     {
@@ -93,8 +93,8 @@ public class SpriteLookUpEditor : Editor
                             slot = "hats";
                     }
                 }
-                
-                
+
+
                 return new SpriteLookUp.WearableEntry()
                 {
                     Path = directory + "/" + $"{name}{extension}",
