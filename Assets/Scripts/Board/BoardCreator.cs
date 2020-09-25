@@ -71,10 +71,11 @@ namespace MM26.Board
         /// </summary>
         private void OnCreateMap()
         {
-            this.CreateMap();
-            this.CreateCharacters();
-
-            _positionLookUp.Grid = _grid;
+            if (_data.Initial.State.BoardNames.ContainsKey(_sceneConfiguration.BoardName))
+            {
+                this.CreateMap();
+                this.CreateCharacters();
+            }
         }
 
         /// <summary>
@@ -83,6 +84,10 @@ namespace MM26.Board
         private void CreateMap()
         {
             var board = _data.Initial.State.BoardNames[_sceneConfiguration.BoardName];
+
+            _positionLookUp.Grid = _grid;
+            _positionLookUp.Height = board.Height;
+            _positionLookUp.Width = board.Width;
 
             for (int x = 0; x < board.Width; x++)
             {
