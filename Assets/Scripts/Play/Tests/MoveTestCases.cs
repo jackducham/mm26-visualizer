@@ -24,8 +24,8 @@ namespace MM26.Play.Tests
 
             gameState.BoardNames[boardName] = new IO.Models.Board()
             {
-                Rows = 1,
-                Columns = 2,
+                Width = 1,
+                Height = 2,
             };
 
             gameState.PlayerNames["player"] = new Player()

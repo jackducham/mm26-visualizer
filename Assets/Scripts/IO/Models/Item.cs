@@ -24,43 +24,50 @@ namespace MM26.IO.Models {
     static ItemReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgppdGVtLnByb3RvEgRpdGVtIrABCgRJdGVtEiAKB2Nsb3RoZXMYAyABKAsy",
+            "CgppdGVtLnByb3RvEgRpdGVtItYBCgRJdGVtEiAKB2Nsb3RoZXMYAyABKAsy",
             "DS5pdGVtLkNsb3RoZXNIABIYCgNoYXQYBCABKAsyCS5pdGVtLkhhdEgAEhwK",
             "BXNob2VzGAUgASgLMgsuaXRlbS5TaG9lc0gAEh4KBndlYXBvbhgGIAEoCzIM",
             "Lml0ZW0uV2VhcG9uSAASJgoKY29uc3VtYWJsZRgHIAEoCzIQLml0ZW0uQ29u",
-            "c3VtYWJsZUgAQgYKBGl0ZW0iUQoHQ2xvdGhlcxIRCgltYXhfc3RhY2sYASAB",
-            "KAUSIwoFc3RhdHMYAiABKAsyFC5pdGVtLlN0YXR1c01vZGlmaWVyEg4KBnNw",
-            "cml0ZRgDIAEoCSKNAQoDSGF0EhEKCW1heF9zdGFjaxgBIAEoBRIjCgVzdGF0",
-            "cxgCIAEoCzIULml0ZW0uU3RhdHVzTW9kaWZpZXISJwoKaGF0X2VmZmVjdBgD",
-            "IAEoDjITLml0ZW0uSGF0LkhhdEVmZmVjdBIOCgZzcHJpdGUYBCABKAkiFQoJ",
-            "SGF0RWZmZWN0EggKBFRFU1QQACJPCgVTaG9lcxIRCgltYXhfc3RhY2sYASAB",
-            "KAUSIwoFc3RhdHMYAiABKAsyFC5pdGVtLlN0YXR1c01vZGlmaWVyEg4KBnNw",
-            "cml0ZRgDIAEoCSK3AQoGV2VhcG9uEhEKCW1heF9zdGFjaxgBIAEoBRIjCgVz",
-            "dGF0cxgCIAEoCzIULml0ZW0uU3RhdHVzTW9kaWZpZXISDQoFcmFuZ2UYAyAB",
-            "KAUSFQoNc3BsYXNoX3JhZGl1cxgEIAEoBRIOCgZhdHRhY2sYBSABKAUSLwoN",
-            "b25faGl0X2VmZmVjdBgGIAEoCzIYLml0ZW0uVGVtcFN0YXR1c01vZGlmaWVy",
-            "Eg4KBnNwcml0ZRgHIAEoCSJpCgpDb25zdW1hYmxlEhEKCW1heF9zdGFjaxgB",
-            "IAEoBRIoCgZlZmZlY3QYAiABKAsyGC5pdGVtLlRlbXBTdGF0dXNNb2RpZmll",
-            "chIOCgZzdGFja3MYAyABKAUSDgoGc3ByaXRlGAQgASgJItwCCg5TdGF0dXNN",
-            "b2RpZmllchIZChFmbGF0X3NwZWVkX2NoYW5nZRgBIAEoBRIcChRwZXJjZW50",
-            "X3NwZWVkX2NoYW5nZRgCIAEoARIaChJmbGF0X2hlYWx0aF9jaGFuZ2UYAyAB",
-            "KAUSHQoVcGVyY2VudF9oZWFsdGhfY2hhbmdlGAQgASgBEh4KFmZsYXRfZXhw",
-            "ZXJpZW5jZV9jaGFuZ2UYBSABKAUSIQoZcGVyY2VudF9leHBlcmllbmNlX2No",
-            "YW5nZRgGIAEoARIaChJmbGF0X2F0dGFja19jaGFuZ2UYByABKAUSHQoVcGVy",
-            "Y2VudF9hdHRhY2tfY2hhbmdlGAggASgBEhsKE2ZsYXRfZGVmZW5zZV9jaGFu",
-            "Z2UYCSABKAUSHgoWcGVyY2VudF9kZWZlbnNlX2NoYW5nZRgKIAEoARIbChNm",
-            "bGF0X3JlZ2VuX3Blcl90dXJuGAsgASgFIqkBChJUZW1wU3RhdHVzTW9kaWZp",
-            "ZXISIwoFc3RhdHMYASABKAsyFC5pdGVtLlN0YXR1c01vZGlmaWVyEhwKFGZs",
-            "YXRfZGFtYWdlX3Blcl90dXJuGAIgASgFEh8KF3BlcmNlbnRfZGFtYWdlX3Bl",
-            "cl90dXJuGAMgASgBEhsKE2ZsYXRfcmVnZW5fcGVyX3R1cm4YBCABKAUSEgoK",
-            "dHVybnNfbGVmdBgFIAEoBUI9Ch5tZWNoLm1hbmlhLmVuZ2luZS5kb21haW4u",
-            "bW9kZWxCCkl0ZW1Qcm90b3OqAg5NTTI2LklPLk1vZGVsc2IGcHJvdG8z"));
+            "c3VtYWJsZUgAEiQKCWFjY2Vzc29yeRgIIAEoCzIPLml0ZW0uQWNjZXNzb3J5",
+            "SABCBgoEaXRlbSJRCgdDbG90aGVzEhEKCW1heF9zdGFjaxgBIAEoBRIjCgVz",
+            "dGF0cxgCIAEoCzIULml0ZW0uU3RhdHVzTW9kaWZpZXISDgoGc3ByaXRlGAMg",
+            "ASgJInYKA0hhdBIRCgltYXhfc3RhY2sYASABKAUSIwoFc3RhdHMYAiABKAsy",
+            "FC5pdGVtLlN0YXR1c01vZGlmaWVyEicKDG1hZ2ljX2VmZmVjdBgDIAEoDjIR",
+            "Lml0ZW0uTWFnaWNFZmZlY3QSDgoGc3ByaXRlGAQgASgJImwKCUFjY2Vzc29y",
+            "eRIRCgltYXhfc3RhY2sYASABKAUSIwoFc3RhdHMYAiABKAsyFC5pdGVtLlN0",
+            "YXR1c01vZGlmaWVyEicKDG1hZ2ljX2VmZmVjdBgDIAEoDjIRLml0ZW0uTWFn",
+            "aWNFZmZlY3QiTwoFU2hvZXMSEQoJbWF4X3N0YWNrGAEgASgFEiMKBXN0YXRz",
+            "GAIgASgLMhQuaXRlbS5TdGF0dXNNb2RpZmllchIOCgZzcHJpdGUYAyABKAki",
+            "twEKBldlYXBvbhIRCgltYXhfc3RhY2sYASABKAUSIwoFc3RhdHMYAiABKAsy",
+            "FC5pdGVtLlN0YXR1c01vZGlmaWVyEg0KBXJhbmdlGAMgASgFEhUKDXNwbGFz",
+            "aF9yYWRpdXMYBCABKAUSDgoGYXR0YWNrGAUgASgFEi8KDW9uX2hpdF9lZmZl",
+            "Y3QYBiABKAsyGC5pdGVtLlRlbXBTdGF0dXNNb2RpZmllchIOCgZzcHJpdGUY",
+            "ByABKAkiaQoKQ29uc3VtYWJsZRIRCgltYXhfc3RhY2sYASABKAUSKAoGZWZm",
+            "ZWN0GAIgASgLMhguaXRlbS5UZW1wU3RhdHVzTW9kaWZpZXISDgoGc3RhY2tz",
+            "GAMgASgFEg4KBnNwcml0ZRgEIAEoCSLcAgoOU3RhdHVzTW9kaWZpZXISGQoR",
+            "ZmxhdF9zcGVlZF9jaGFuZ2UYASABKAUSHAoUcGVyY2VudF9zcGVlZF9jaGFu",
+            "Z2UYAiABKAESGgoSZmxhdF9oZWFsdGhfY2hhbmdlGAMgASgFEh0KFXBlcmNl",
+            "bnRfaGVhbHRoX2NoYW5nZRgEIAEoARIeChZmbGF0X2V4cGVyaWVuY2VfY2hh",
+            "bmdlGAUgASgFEiEKGXBlcmNlbnRfZXhwZXJpZW5jZV9jaGFuZ2UYBiABKAES",
+            "GgoSZmxhdF9hdHRhY2tfY2hhbmdlGAcgASgFEh0KFXBlcmNlbnRfYXR0YWNr",
+            "X2NoYW5nZRgIIAEoARIbChNmbGF0X2RlZmVuc2VfY2hhbmdlGAkgASgFEh4K",
+            "FnBlcmNlbnRfZGVmZW5zZV9jaGFuZ2UYCiABKAESGwoTZmxhdF9yZWdlbl9w",
+            "ZXJfdHVybhgLIAEoBSKpAQoSVGVtcFN0YXR1c01vZGlmaWVyEiMKBXN0YXRz",
+            "GAEgASgLMhQuaXRlbS5TdGF0dXNNb2RpZmllchIcChRmbGF0X2RhbWFnZV9w",
+            "ZXJfdHVybhgCIAEoBRIfChdwZXJjZW50X2RhbWFnZV9wZXJfdHVybhgDIAEo",
+            "ARIbChNmbGF0X3JlZ2VuX3Blcl90dXJuGAQgASgFEhIKCnR1cm5zX2xlZnQY",
+            "BSABKAUqjAEKC01hZ2ljRWZmZWN0EhUKEUxJTkdFUklOR19QT1RJT05TEAAS",
+            "DwoLU0hPRVNfQk9PU1QQARIRCg1DTE9USEVTX0JPT1NUEAISEAoMV0VBUE9O",
+            "X0JPT1NUEAMSEgoOVFJJUExFRF9PTl9ISVQQBBISCg5TVEFDS0lOR19CT05V",
+            "UxAFEggKBE5PTkUQBkI9Ch5tZWNoLm1hbmlhLmVuZ2luZS5kb21haW4ubW9k",
+            "ZWxCCkl0ZW1Qcm90b3OqAg5NTTI2LklPLk1vZGVsc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Item), global::MM26.IO.Models.Item.Parser, new[]{ "Clothes", "Hat", "Shoes", "Weapon", "Consumable" }, new[]{ "Item" }, null, null, null),
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MM26.IO.Models.MagicEffect), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Item), global::MM26.IO.Models.Item.Parser, new[]{ "Clothes", "Hat", "Shoes", "Weapon", "Consumable", "Accessory" }, new[]{ "Item" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Clothes), global::MM26.IO.Models.Clothes.Parser, new[]{ "MaxStack", "Stats", "Sprite" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Hat), global::MM26.IO.Models.Hat.Parser, new[]{ "MaxStack", "Stats", "HatEffect", "Sprite" }, null, new[]{ typeof(global::MM26.IO.Models.Hat.Types.HatEffect) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Hat), global::MM26.IO.Models.Hat.Parser, new[]{ "MaxStack", "Stats", "MagicEffect", "Sprite" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Accessory), global::MM26.IO.Models.Accessory.Parser, new[]{ "MaxStack", "Stats", "MagicEffect" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Shoes), global::MM26.IO.Models.Shoes.Parser, new[]{ "MaxStack", "Stats", "Sprite" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Weapon), global::MM26.IO.Models.Weapon.Parser, new[]{ "MaxStack", "Stats", "Range", "SplashRadius", "Attack", "OnHitEffect", "Sprite" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Consumable), global::MM26.IO.Models.Consumable.Parser, new[]{ "MaxStack", "Effect", "Stacks", "Sprite" }, null, null, null, null),
@@ -71,6 +78,19 @@ namespace MM26.IO.Models {
     #endregion
 
   }
+  #region Enums
+  public enum MagicEffect {
+    [pbr::OriginalName("LINGERING_POTIONS")] LingeringPotions = 0,
+    [pbr::OriginalName("SHOES_BOOST")] ShoesBoost = 1,
+    [pbr::OriginalName("CLOTHES_BOOST")] ClothesBoost = 2,
+    [pbr::OriginalName("WEAPON_BOOST")] WeaponBoost = 3,
+    [pbr::OriginalName("TRIPLED_ON_HIT")] TripledOnHit = 4,
+    [pbr::OriginalName("STACKING_BONUS")] StackingBonus = 5,
+    [pbr::OriginalName("NONE")] None = 6,
+  }
+
+  #endregion
+
   #region Messages
   public sealed partial class Item : pb::IMessage<Item>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -116,6 +136,9 @@ namespace MM26.IO.Models {
           break;
         case ItemOneofCase.Consumable:
           Consumable = other.Consumable.Clone();
+          break;
+        case ItemOneofCase.Accessory:
+          Accessory = other.Accessory.Clone();
           break;
       }
 
@@ -182,6 +205,17 @@ namespace MM26.IO.Models {
       }
     }
 
+    /// <summary>Field number for the "accessory" field.</summary>
+    public const int AccessoryFieldNumber = 8;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::MM26.IO.Models.Accessory Accessory {
+      get { return itemCase_ == ItemOneofCase.Accessory ? (global::MM26.IO.Models.Accessory) item_ : null; }
+      set {
+        item_ = value;
+        itemCase_ = value == null ? ItemOneofCase.None : ItemOneofCase.Accessory;
+      }
+    }
+
     private object item_;
     /// <summary>Enum of possible cases for the "item" oneof.</summary>
     public enum ItemOneofCase {
@@ -191,6 +225,7 @@ namespace MM26.IO.Models {
       Shoes = 5,
       Weapon = 6,
       Consumable = 7,
+      Accessory = 8,
     }
     private ItemOneofCase itemCase_ = ItemOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -222,6 +257,7 @@ namespace MM26.IO.Models {
       if (!object.Equals(Shoes, other.Shoes)) return false;
       if (!object.Equals(Weapon, other.Weapon)) return false;
       if (!object.Equals(Consumable, other.Consumable)) return false;
+      if (!object.Equals(Accessory, other.Accessory)) return false;
       if (ItemCase != other.ItemCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -234,6 +270,7 @@ namespace MM26.IO.Models {
       if (itemCase_ == ItemOneofCase.Shoes) hash ^= Shoes.GetHashCode();
       if (itemCase_ == ItemOneofCase.Weapon) hash ^= Weapon.GetHashCode();
       if (itemCase_ == ItemOneofCase.Consumable) hash ^= Consumable.GetHashCode();
+      if (itemCase_ == ItemOneofCase.Accessory) hash ^= Accessory.GetHashCode();
       hash ^= (int) itemCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -268,6 +305,10 @@ namespace MM26.IO.Models {
         output.WriteRawTag(58);
         output.WriteMessage(Consumable);
       }
+      if (itemCase_ == ItemOneofCase.Accessory) {
+        output.WriteRawTag(66);
+        output.WriteMessage(Accessory);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -290,6 +331,9 @@ namespace MM26.IO.Models {
       }
       if (itemCase_ == ItemOneofCase.Consumable) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Consumable);
+      }
+      if (itemCase_ == ItemOneofCase.Accessory) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Accessory);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -332,6 +376,12 @@ namespace MM26.IO.Models {
             Consumable = new global::MM26.IO.Models.Consumable();
           }
           Consumable.MergeFrom(other.Consumable);
+          break;
+        case ItemOneofCase.Accessory:
+          if (Accessory == null) {
+            Accessory = new global::MM26.IO.Models.Accessory();
+          }
+          Accessory.MergeFrom(other.Accessory);
           break;
       }
 
@@ -394,6 +444,15 @@ namespace MM26.IO.Models {
             Consumable = subBuilder;
             break;
           }
+          case 66: {
+            global::MM26.IO.Models.Accessory subBuilder = new global::MM26.IO.Models.Accessory();
+            if (itemCase_ == ItemOneofCase.Accessory) {
+              subBuilder.MergeFrom(Accessory);
+            }
+            input.ReadMessage(subBuilder);
+            Accessory = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -451,6 +510,15 @@ namespace MM26.IO.Models {
             }
             input.ReadMessage(subBuilder);
             Consumable = subBuilder;
+            break;
+          }
+          case 66: {
+            global::MM26.IO.Models.Accessory subBuilder = new global::MM26.IO.Models.Accessory();
+            if (itemCase_ == ItemOneofCase.Accessory) {
+              subBuilder.MergeFrom(Accessory);
+            }
+            input.ReadMessage(subBuilder);
+            Accessory = subBuilder;
             break;
           }
         }
@@ -722,7 +790,7 @@ namespace MM26.IO.Models {
     public Hat(Hat other) : this() {
       maxStack_ = other.maxStack_;
       stats_ = other.stats_ != null ? other.stats_.Clone() : null;
-      hatEffect_ = other.hatEffect_;
+      magicEffect_ = other.magicEffect_;
       sprite_ = other.sprite_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -754,14 +822,14 @@ namespace MM26.IO.Models {
       }
     }
 
-    /// <summary>Field number for the "hat_effect" field.</summary>
-    public const int HatEffectFieldNumber = 3;
-    private global::MM26.IO.Models.Hat.Types.HatEffect hatEffect_ = global::MM26.IO.Models.Hat.Types.HatEffect.Test;
+    /// <summary>Field number for the "magic_effect" field.</summary>
+    public const int MagicEffectFieldNumber = 3;
+    private global::MM26.IO.Models.MagicEffect magicEffect_ = global::MM26.IO.Models.MagicEffect.LingeringPotions;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::MM26.IO.Models.Hat.Types.HatEffect HatEffect {
-      get { return hatEffect_; }
+    public global::MM26.IO.Models.MagicEffect MagicEffect {
+      get { return magicEffect_; }
       set {
-        hatEffect_ = value;
+        magicEffect_ = value;
       }
     }
 
@@ -794,7 +862,7 @@ namespace MM26.IO.Models {
       }
       if (MaxStack != other.MaxStack) return false;
       if (!object.Equals(Stats, other.Stats)) return false;
-      if (HatEffect != other.HatEffect) return false;
+      if (MagicEffect != other.MagicEffect) return false;
       if (Sprite != other.Sprite) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -804,7 +872,7 @@ namespace MM26.IO.Models {
       int hash = 1;
       if (MaxStack != 0) hash ^= MaxStack.GetHashCode();
       if (stats_ != null) hash ^= Stats.GetHashCode();
-      if (HatEffect != global::MM26.IO.Models.Hat.Types.HatEffect.Test) hash ^= HatEffect.GetHashCode();
+      if (MagicEffect != global::MM26.IO.Models.MagicEffect.LingeringPotions) hash ^= MagicEffect.GetHashCode();
       if (Sprite.Length != 0) hash ^= Sprite.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -827,9 +895,9 @@ namespace MM26.IO.Models {
         output.WriteRawTag(18);
         output.WriteMessage(Stats);
       }
-      if (HatEffect != global::MM26.IO.Models.Hat.Types.HatEffect.Test) {
+      if (MagicEffect != global::MM26.IO.Models.MagicEffect.LingeringPotions) {
         output.WriteRawTag(24);
-        output.WriteEnum((int) HatEffect);
+        output.WriteEnum((int) MagicEffect);
       }
       if (Sprite.Length != 0) {
         output.WriteRawTag(34);
@@ -849,8 +917,8 @@ namespace MM26.IO.Models {
       if (stats_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stats);
       }
-      if (HatEffect != global::MM26.IO.Models.Hat.Types.HatEffect.Test) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) HatEffect);
+      if (MagicEffect != global::MM26.IO.Models.MagicEffect.LingeringPotions) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MagicEffect);
       }
       if (Sprite.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Sprite);
@@ -875,8 +943,8 @@ namespace MM26.IO.Models {
         }
         Stats.MergeFrom(other.Stats);
       }
-      if (other.HatEffect != global::MM26.IO.Models.Hat.Types.HatEffect.Test) {
-        HatEffect = other.HatEffect;
+      if (other.MagicEffect != global::MM26.IO.Models.MagicEffect.LingeringPotions) {
+        MagicEffect = other.MagicEffect;
       }
       if (other.Sprite.Length != 0) {
         Sprite = other.Sprite;
@@ -907,7 +975,7 @@ namespace MM26.IO.Models {
             break;
           }
           case 24: {
-            HatEffect = (global::MM26.IO.Models.Hat.Types.HatEffect) input.ReadEnum();
+            MagicEffect = (global::MM26.IO.Models.MagicEffect) input.ReadEnum();
             break;
           }
           case 34: {
@@ -940,7 +1008,7 @@ namespace MM26.IO.Models {
             break;
           }
           case 24: {
-            HatEffect = (global::MM26.IO.Models.Hat.Types.HatEffect) input.ReadEnum();
+            MagicEffect = (global::MM26.IO.Models.MagicEffect) input.ReadEnum();
             break;
           }
           case 34: {
@@ -952,19 +1020,233 @@ namespace MM26.IO.Models {
     }
     #endif
 
-    #region Nested types
-    /// <summary>Container for nested types declared in the Hat message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static partial class Types {
-      public enum HatEffect {
-        /// <summary>
-        /// TOOD: add actual hat effects
-        /// </summary>
-        [pbr::OriginalName("TEST")] Test = 0,
-      }
+  }
 
+  public sealed partial class Accessory : pb::IMessage<Accessory>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Accessory> _parser = new pb::MessageParser<Accessory>(() => new Accessory());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Accessory> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::MM26.IO.Models.ItemReflection.Descriptor.MessageTypes[3]; }
     }
-    #endregion
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Accessory() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Accessory(Accessory other) : this() {
+      maxStack_ = other.maxStack_;
+      stats_ = other.stats_ != null ? other.stats_.Clone() : null;
+      magicEffect_ = other.magicEffect_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Accessory Clone() {
+      return new Accessory(this);
+    }
+
+    /// <summary>Field number for the "max_stack" field.</summary>
+    public const int MaxStackFieldNumber = 1;
+    private int maxStack_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int MaxStack {
+      get { return maxStack_; }
+      set {
+        maxStack_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "stats" field.</summary>
+    public const int StatsFieldNumber = 2;
+    private global::MM26.IO.Models.StatusModifier stats_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::MM26.IO.Models.StatusModifier Stats {
+      get { return stats_; }
+      set {
+        stats_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "magic_effect" field.</summary>
+    public const int MagicEffectFieldNumber = 3;
+    private global::MM26.IO.Models.MagicEffect magicEffect_ = global::MM26.IO.Models.MagicEffect.LingeringPotions;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::MM26.IO.Models.MagicEffect MagicEffect {
+      get { return magicEffect_; }
+      set {
+        magicEffect_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Accessory);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Accessory other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (MaxStack != other.MaxStack) return false;
+      if (!object.Equals(Stats, other.Stats)) return false;
+      if (MagicEffect != other.MagicEffect) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (MaxStack != 0) hash ^= MaxStack.GetHashCode();
+      if (stats_ != null) hash ^= Stats.GetHashCode();
+      if (MagicEffect != global::MM26.IO.Models.MagicEffect.LingeringPotions) hash ^= MagicEffect.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (MaxStack != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(MaxStack);
+      }
+      if (stats_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Stats);
+      }
+      if (MagicEffect != global::MM26.IO.Models.MagicEffect.LingeringPotions) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) MagicEffect);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (MaxStack != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxStack);
+      }
+      if (stats_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stats);
+      }
+      if (MagicEffect != global::MM26.IO.Models.MagicEffect.LingeringPotions) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MagicEffect);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Accessory other) {
+      if (other == null) {
+        return;
+      }
+      if (other.MaxStack != 0) {
+        MaxStack = other.MaxStack;
+      }
+      if (other.stats_ != null) {
+        if (stats_ == null) {
+          Stats = new global::MM26.IO.Models.StatusModifier();
+        }
+        Stats.MergeFrom(other.Stats);
+      }
+      if (other.MagicEffect != global::MM26.IO.Models.MagicEffect.LingeringPotions) {
+        MagicEffect = other.MagicEffect;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            MaxStack = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            if (stats_ == null) {
+              Stats = new global::MM26.IO.Models.StatusModifier();
+            }
+            input.ReadMessage(Stats);
+            break;
+          }
+          case 24: {
+            MagicEffect = (global::MM26.IO.Models.MagicEffect) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            MaxStack = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            if (stats_ == null) {
+              Stats = new global::MM26.IO.Models.StatusModifier();
+            }
+            input.ReadMessage(Stats);
+            break;
+          }
+          case 24: {
+            MagicEffect = (global::MM26.IO.Models.MagicEffect) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
@@ -980,7 +1262,7 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MM26.IO.Models.ItemReflection.Descriptor.MessageTypes[3]; }
+      get { return global::MM26.IO.Models.ItemReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1211,7 +1493,7 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MM26.IO.Models.ItemReflection.Descriptor.MessageTypes[4]; }
+      get { return global::MM26.IO.Models.ItemReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1579,7 +1861,7 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MM26.IO.Models.ItemReflection.Descriptor.MessageTypes[5]; }
+      get { return global::MM26.IO.Models.ItemReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1842,7 +2124,7 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MM26.IO.Models.ItemReflection.Descriptor.MessageTypes[6]; }
+      get { return global::MM26.IO.Models.ItemReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2317,7 +2599,7 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::MM26.IO.Models.ItemReflection.Descriptor.MessageTypes[7]; }
+      get { return global::MM26.IO.Models.ItemReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

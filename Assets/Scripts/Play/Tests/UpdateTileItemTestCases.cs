@@ -15,8 +15,8 @@ namespace MM26.Play.Tests
 
             var board = new IO.Models.Board()
             {
-                Rows = 1,
-                Columns = 1
+                Width = 1,
+                Height = 1
             };
 
             var item = new Tile();
