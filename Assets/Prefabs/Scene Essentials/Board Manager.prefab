@@ -522,5 +522,5 @@ MonoBehaviour:
   _charactersManager: {fileID: 4835611230717269304}
   _effectsManager: {fileID: 8000956316918997821}
   _treasureTroveManager: {fileID: 4565820777754228388}
-  _spriteLookUp: {fileID: 0}
+  _spriteLookUp: {fileID: 11400000, guid: 93478089b4afa4161ad6e4e0ae3b603a, type: 2}
   _mailbox: {fileID: 11400000, guid: 107bc346b39dd46378a4e6c11216dfe0, type: 2}

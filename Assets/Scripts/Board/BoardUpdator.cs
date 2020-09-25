@@ -52,11 +52,10 @@ namespace MM26.Board
             for (int i = 0; i < tasks.Length; i++)
             {
                 SpawnPlayerTask task = tasks[i];
-
-                _charactersManager.CreatePlayer(task.Position, task.EntityName);
-
                 task.IsFinished = true;
                 _mailbox.RemoveTask(task);
+
+                _charactersManager.CreatePlayer(task.Position, task.EntityName);
             }
         }
 
@@ -67,14 +66,17 @@ namespace MM26.Board
             for (int i = 0; i < tasks.Length; i++)
             {
                 SpawnMonsterTask task = tasks[i];
+                task.IsFinished = true;
+                _mailbox.RemoveTask(task);
+
+                Debug.Log(task.Position);
+                Debug.Log(task.EntityName);
+                Debug.Log(_spriteLookUp);
 
                 _charactersManager.CreateMonster(
                     task.Position,
                     task.EntityName,
                     _spriteLookUp.GetSprite(task.Sprite));
-
-                task.IsFinished = true;
-                _mailbox.RemoveTask(task);
             }
         }
 
@@ -107,6 +109,8 @@ namespace MM26.Board
             for (int i = 0; i < tasks.Length; i++)
             {
                 EffectTask task = tasks[i];
+                task.IsFinished = true;
+                _mailbox.RemoveTask(task);
 
                 switch (task.Type)
                 {
@@ -123,8 +127,6 @@ namespace MM26.Board
                         _effectsManager.CreateAttackEffect(task.Position);
                         break;
                 }
-
-                _mailbox.RemoveTask(task);
             }
         }
 
@@ -135,6 +137,8 @@ namespace MM26.Board
             for (int i = 0; i < tasks.Length; i++)
             {
                 UpdateTileItemTask task = tasks[i];
+                task.IsFinished = true;
+                _mailbox.RemoveTask(task);
 
                 if (task.Exists)
                 {
