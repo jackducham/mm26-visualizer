@@ -9,7 +9,8 @@ namespace MM26.Systems.UpdateHubTask
 {
     public class UpdateHubSystem : SystemBase
     {
-        private Mailbox _mailbox;
+        private Mailbox _mailbox = null;
+        private SceneLifeCycle _sceneLifeCycle = null;
         private Dictionary<string, Tasks.UpdateHubTask> _tasks;
 
         protected override void OnCreate()
@@ -17,7 +18,9 @@ namespace MM26.Systems.UpdateHubTask
             base.OnCreate();
 
             _mailbox = Resources.Load<Mailbox>("Objects/Mailbox");
-            _mailbox.SubscribeToTaskType<Tasks.UpdateHubTask>(this);
+            
+            _sceneLifeCycle = Resources.Load<SceneLifeCycle>("Objects/LifeCycle");
+            _sceneLifeCycle.Play.AddListener(this.OnPlay);
 
             _tasks = new Dictionary<string, Tasks.UpdateHubTask>();
         }
@@ -60,6 +63,11 @@ namespace MM26.Systems.UpdateHubTask
                     }
                 })
                 .Run();
+        }
+
+        private void OnPlay()
+        {
+            _mailbox.SubscribeToTaskType<Tasks.UpdateHubTask>(this);
         }
     }
 }

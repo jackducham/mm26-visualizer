@@ -13,7 +13,10 @@ namespace MM26.Systems.FollowPathTask
         public Dictionary<string, Tasks.FollowPathTask> RunningTasks { get; private set; }
 
         EntityCommandBufferSystem _ecbSystem;
+
         Mailbox _mailbox = null;
+        SceneLifeCycle _lifeCycle = null;
+
         Dictionary<string, Tasks.FollowPathTask> _tasksToBeScheduled;
 
         protected override void OnCreate()
@@ -24,7 +27,9 @@ namespace MM26.Systems.FollowPathTask
                 .GetOrCreateSystem<EndSimulationEntityCommandBufferSystem>();
 
             _mailbox = Resources.Load<Mailbox>("Objects/Mailbox");
-            _mailbox.SubscribeToTaskType<Tasks.FollowPathTask>(this);
+           
+            _lifeCycle = Resources.Load<SceneLifeCycle>("Objects/LifeCycle");
+            _lifeCycle.Play.AddListener(this.OnPlay);
 
             _tasksToBeScheduled = new Dictionary<string, Tasks.FollowPathTask>();
             this.RunningTasks = new Dictionary<string, Tasks.FollowPathTask>();
@@ -49,6 +54,11 @@ namespace MM26.Systems.FollowPathTask
 
             _tasksToBeScheduled.Clear();
             _ecbSystem.AddJobHandleForProducer(this.Dependency);
+        }
+
+        private void OnPlay()
+        {
+            _mailbox.SubscribeToTaskType<Tasks.FollowPathTask>(this);
         }
 
         private void Dispatch()
