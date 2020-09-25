@@ -25,6 +25,9 @@ namespace MM26.Configuration
         [Serializable]
         internal struct WearableEntry
         {
+            public string Path;
+            public Sprite Sprite;
+            public string Slot; // bottom, top, head_sprite
         }
 
         [SerializeField]
@@ -38,8 +41,11 @@ namespace MM26.Configuration
 
         [Header("Generate Settings")]
         public string TilesPath = "Assets/Sprites/mm26_tiles/";
+        public string WearablesPath = "Assets/Sprites/mm26_wearables/";
 
         Dictionary<string, Tile> _tiles = null;
+        Dictionary<string, Sprite> _sprites = null;
+        Dictionary<string, string> _spriteSlots = null;
 
         private void OnEnable()
         {
@@ -49,10 +55,18 @@ namespace MM26.Configuration
         public void InitializeDictionaries()
         {
             _tiles = new Dictionary<string, Tile>();
+            _sprites = new Dictionary<string, Sprite>();
+            _spriteSlots = new Dictionary<string, string>();
 
             foreach (TileEntry entry in this.TileEntries)
             {
                 _tiles[entry.Path] = entry.Tile;
+            }
+
+            foreach (WearableEntry entry in this.WearableEntries)
+            {
+                _sprites[entry.Path] = entry.Sprite;
+                _spriteSlots[entry.Path] = entry.Slot;
             }
         }
 

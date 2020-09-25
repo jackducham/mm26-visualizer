@@ -18,8 +18,8 @@ namespace MM26.Board.Helper
         /// Trigger to generate Tile assets using .png files from g_BaseTilePath folder
         /// </summary>
         public bool run = false;
-        public static string g_BaseTileObjPath = "Assets/Tiles/MM26_Tiles/mm_tile_objects/";
-        public static string g_BaseTilePath = "Assets/Tiles/MM26_Tiles/mm_tiles/";
+        public static string g_BaseTileObjPath = "Assets/Sprites/mm26_tiles/";
+        public static string g_BaseTilePath = "Assets/Sprites/mm26_tiles/raw/";
 
 
         private void Update()
@@ -27,7 +27,7 @@ namespace MM26.Board.Helper
             if (run)
             {
                 run = false;
-                string[] dir = Directory.GetFiles(g_BaseTilePath + "collection/");
+                string[] dir = Directory.GetFiles(g_BaseTilePath);
 
                 foreach (string str in dir)
                 {
@@ -47,9 +47,10 @@ namespace MM26.Board.Helper
             Tile newTile = ScriptableObject.CreateInstance<Tile>();
             // Assuming sourcePath starts with "mm_tiles/" we remove it
 
-            newTile.sprite = LoadExistingSprite(g_BaseTilePath + sourcePath.Replace("Assets/Tiles/MM26_Tiles/mm_tiles/", "")); //LoadNewSprite(sourcePath, 190.0f);
+            newTile.sprite = LoadExistingSprite(sourcePath); //LoadNewSprite(sourcePath, 190.0f);
+            Debug.Log(sourcePath.Replace(g_BaseTilePath, g_BaseTileObjPath).Replace(".png", ".asset").Replace(".PNG", ".asset"));
             //newTile.sprite = Resources.Load<Sprite>(g_BaseTileObjPath + sourcePath.Replace("Assets/Tiles/MM26_Tiles/mm_tiles/", ""));
-            AssetDatabase.CreateAsset(newTile, g_BaseTileObjPath + sourcePath.Replace("Assets/Tiles/MM26_Tiles/mm_tiles/", "").Replace(".png", ".asset").Replace(".PNG", ".asset"));
+            AssetDatabase.CreateAsset(newTile, sourcePath.Replace(g_BaseTilePath, g_BaseTileObjPath).Replace(".png", ".asset").Replace(".PNG", ".asset"));
         }
 
         /// <summary>
