@@ -28,7 +28,7 @@ namespace MM26.Components
         public Sprite SetEquipment(Sprite sprite, string slot)
         {
             Sprite pop = null;
-            switch(slot)
+            switch (slot)
             {
                 case "shoes":
                     pop = _bottom.sprite;
@@ -68,7 +68,7 @@ namespace MM26.Components
             switch (slot)
             {
                 case "shoes":
-                     pop = _bottom.sprite;
+                    pop = _bottom.sprite;
                     _bottom.sprite = null;
                     break;
                 case "clothes":

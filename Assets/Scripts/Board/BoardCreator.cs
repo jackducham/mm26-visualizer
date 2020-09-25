@@ -145,7 +145,7 @@ namespace MM26.Board
                 }
 
                 Sprite monsterSprite = _tileDatabase.GetSprite(character.Sprite);
-               
+
                 this._charactersManager.CreateMonster(
                     new Vector3Int(position.X, position.Y, 0),
                     character.Name,
