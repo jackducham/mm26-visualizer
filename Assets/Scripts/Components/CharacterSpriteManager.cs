@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-namespace MM26.Board
+namespace MM26.Components
 {
     public class CharacterSpriteManager : MonoBehaviour
     {
@@ -18,6 +17,7 @@ namespace MM26.Board
         private SpriteRenderer _accessory;
         [SerializeField]
         private SpriteRenderer _weapon;
+
 
         /// <summary>
         /// Sets the sprite of an equipment, and returns the previous sprite in that slot

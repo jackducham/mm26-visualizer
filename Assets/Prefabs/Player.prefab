@@ -232,7 +232,7 @@ SpriteRenderer:
   m_SortingLayerID: 951453247
   m_SortingLayer: 5
   m_SortingOrder: 1
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: d387be90a1acb024e900296076ba0f0b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -240,7 +240,7 @@ SpriteRenderer:
   m_Size: {x: 1.9, y: 1.9}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &4388124594191054825
@@ -343,6 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f71794a3e74504454aa811a24b0c88da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CharacterSpriteManager: {fileID: 0}
 --- !u!114 &4388124594191054806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -570,7 +571,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6113953780935811123}
-  - component: {fileID: 5890820519290252780}
+  - component: {fileID: 8593130519045489212}
   m_Layer: 0
   m_Name: Equipables
   m_TagString: Untagged
@@ -586,7 +587,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5249393481051031394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.01, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7893468900631405646}
@@ -597,7 +598,7 @@ Transform:
   m_Father: {fileID: 4388124594191054805}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5890820519290252780
+--- !u!114 &8593130519045489212
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -606,7 +607,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5249393481051031394}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98013dac5b411d148bf87c883a9c1cb4, type: 3}
+  m_Script: {fileID: 11500000, guid: ff9c34e5b0419014791068befa2a3973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _bottom: {fileID: 8749105421811855999}

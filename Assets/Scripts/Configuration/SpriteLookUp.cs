@@ -70,6 +70,50 @@ namespace MM26.Configuration
             }
         }
 
+        public Sprite GetWearable(string path)
+        {
+            // some path might have all cap extensions, but the path
+            // found by SpriteLookUpEditor all have lower case extension
+            string directory = Path.GetDirectoryName(path);
+            string filename = Path.GetFileNameWithoutExtension(path);
+            string extension = Path.GetExtension(path).ToLower();
+
+            path = directory + "/" + $"{filename}{extension}";
+
+            if (_wearables.TryGetValue(path, out Sprite sprite))
+            {
+                return sprite;
+            } else
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Returns the slot id of the equipment at a given path
+        /// </summary>
+        /// <param name="path">path to the item</param>
+        /// <returns>the slot id</returns>
+        public string GetWearableSlot(string path)
+        {
+            // some path might have all cap extensions, but the path
+            // found by SpriteLookUpEditor all have lower case extension
+            string directory = Path.GetDirectoryName(path);
+            string filename = Path.GetFileNameWithoutExtension(path);
+            string extension = Path.GetExtension(path).ToLower();
+
+            path = directory + "/" + $"{filename}{extension}";
+
+            if (_wearableSlots.TryGetValue(path, out string slot))
+            {
+                return slot;
+            }
+            else
+            {
+                return "";
+            }
+        }
+
         public Tile GetTile(string path)
         {
             // some path might have all cap extensions, but the path
