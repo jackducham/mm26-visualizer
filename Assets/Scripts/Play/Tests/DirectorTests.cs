@@ -30,6 +30,7 @@ namespace MM26.Play.Tests
         [TestCaseSource(typeof(RespawnTestCases))]
         [TestCaseSource(typeof(UpdateHubTestCases))]
         [TestCaseSource(typeof(AttackTestCases))]
+        [TestCaseSource(typeof(UpdateTileItemTestCases))]
         public void Test(VisualizerTurn turn, HashSet<Task> expectedTasks)
         {
             TasksBatch batch = turn.ToTasksBatch(_sceneConfiguration, _mockPositionLookup);

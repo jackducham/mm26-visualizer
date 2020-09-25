@@ -7,11 +7,12 @@ namespace MM26.Tasks
     public sealed class SpawnMonsterTask : Task
     {
         public readonly Vector3Int Position;
-        public Sprite MonsterSprite;
+        public string Sprite;
 
-        public SpawnMonsterTask(string entity, Vector3Int position) : base(entity)
+        public SpawnMonsterTask(string entity, Vector3Int position, string sprite) : base(entity)
         {
             this.Position = position;
+            this.Sprite = sprite;
         }
 
         public override int GetHashCode()
@@ -20,7 +21,7 @@ namespace MM26.Tasks
 
             hash.Add(base.GetHashCode());
             hash.Add(this.Position.GetHashCode());
-            hash.Add(this.MonsterSprite.GetHashCode());
+            hash.Add(this.Sprite.GetHashCode());
 
             return hash.Value;
         }
@@ -40,7 +41,7 @@ namespace MM26.Tasks
             SpawnMonsterTask task = (SpawnMonsterTask)obj;
 
             return this.Position == task.Position
-                && this.MonsterSprite == task.MonsterSprite;
+                && this.Sprite == task.Sprite;
         }
     }
 }

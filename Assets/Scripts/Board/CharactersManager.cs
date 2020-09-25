@@ -15,7 +15,7 @@ namespace MM26.Board
         [SerializeField]
         private GameObject _monsterPrefab = null;
 
-        public void CreateMonster(Vector3Int position, string name, Sprite sprite = null)
+        public void CreateMonster(Vector3Int position, string name, Sprite sprite)
         {
             this.CreateCharacter(this._monsterPrefab, position, name, sprite);
         }

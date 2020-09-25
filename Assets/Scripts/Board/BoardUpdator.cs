@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using MM26.ECS;
 using MM26.Tasks;
+using MM26.Configuration;
 
 namespace MM26.Board
 {
@@ -16,11 +17,15 @@ namespace MM26.Board
         private TreasureTrovesManager _treasureTroveManager = null;
 
         [SerializeField]
+        SpriteLookUp _spriteLookUp = null;
+
+        [SerializeField]
         private Mailbox _mailbox = null;
 
         private void OnEnable()
         {
             _mailbox.SubscribeToTaskType<SpawnPlayerTask>(this);
+            _mailbox.SubscribeToTaskType<SpawnMonsterTask>(this);
             _mailbox.SubscribeToTaskType<DespawnTask>(this);
             _mailbox.SubscribeToTaskType<EffectTask>(this);
             _mailbox.SubscribeToTaskType<UpdateTileItemTask>(this);
@@ -28,7 +33,8 @@ namespace MM26.Board
 
         private void Update()
         {
-            this.HandleSpawnTasks();
+            this.HandleSpawnPlayerTasks();
+            this.HandleSpawnMonsterTasks();
             this.HandleDespawnTasks();
             this.HandleEffectTasks();
             this.HandleUpdateTileItemTasks();
@@ -39,7 +45,7 @@ namespace MM26.Board
         ///
         /// 
         /// </summary>
-        private void HandleSpawnTasks()
+        private void HandleSpawnPlayerTasks()
         {
             SpawnPlayerTask[] tasks = _mailbox.GetSubscribedTasksForType<SpawnPlayerTask>(this);
 
@@ -48,6 +54,24 @@ namespace MM26.Board
                 SpawnPlayerTask task = tasks[i];
 
                 _charactersManager.CreatePlayer(task.Position, task.EntityName);
+
+                task.IsFinished = true;
+                _mailbox.RemoveTask(task);
+            }
+        }
+
+        private void HandleSpawnMonsterTasks()
+        {
+            SpawnMonsterTask[] tasks = _mailbox.GetSubscribedTasksForType<SpawnMonsterTask>(this);
+
+            for (int i = 0; i < tasks.Length; i++)
+            {
+                SpawnMonsterTask task = tasks[i];
+
+                _charactersManager.CreateMonster(
+                    task.Position,
+                    task.EntityName,
+                    _spriteLookUp.GetSprite(task.Sprite));
 
                 task.IsFinished = true;
                 _mailbox.RemoveTask(task);

@@ -45,10 +45,5 @@ namespace MM26.Tasks
 
             return this.Position == task.Position;
         }
-
-        public override string ToString()
-        {
-            return JsonUtility.ToJson(this);
-        }
     }
 }
