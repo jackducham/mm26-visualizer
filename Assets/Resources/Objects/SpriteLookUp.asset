@@ -13,14 +13,6 @@ MonoBehaviour:
   m_Name: SpriteLookUp
   m_EditorClassIdentifier: 
   TileEntries:
-  - Path: mm26_tiles/Floor1.png
-    Tile: {fileID: 11400000, guid: e6481a2c23287524887ef18255c73693, type: 2}
-  - Path: mm26_tiles/Floor2.png
-    Tile: {fileID: 11400000, guid: 0a3e7241823cf9e4abef92c9d6894137, type: 2}
-  - Path: mm26_tiles/Floor3.png
-    Tile: {fileID: 11400000, guid: 4efb74a5f349a0748b8fab609985f61c, type: 2}
-  - Path: mm26_tiles/Tallhousetopblue.png
-    Tile: {fileID: 11400000, guid: 07f8731eeac7440f18f549e2ad1af05b, type: 2}
   - Path: mm26_tiles/arch rear left.png
     Tile: {fileID: 11400000, guid: 326b6587e2a2946dabf7be7b2b12d2c3, type: 2}
   - Path: mm26_tiles/arch rear right.png
@@ -31,6 +23,14 @@ MonoBehaviour:
     Tile: {fileID: 11400000, guid: e7f69c0cdab274de7a015087791881ad, type: 2}
   - Path: mm26_tiles/archbottomright.png
     Tile: {fileID: 11400000, guid: 321dfffbf55bc43b69700c029b5666fd, type: 2}
+  - Path: mm26_tiles/archleftside1.png
+    Tile: {fileID: 11400000, guid: a9c6e165c6b83144b8874698f02af377, type: 2}
+  - Path: mm26_tiles/archleftside2.png
+    Tile: {fileID: 11400000, guid: 4d215a05e64d1164f89a0747f9907834, type: 2}
+  - Path: mm26_tiles/archrightside1.png
+    Tile: {fileID: 11400000, guid: 0f6cee2dc3bfc3448a1d5d4eb94a070a, type: 2}
+  - Path: mm26_tiles/archrightside2.png
+    Tile: {fileID: 11400000, guid: d342703237493a04b9d3106d6f1e0c7a, type: 2}
   - Path: mm26_tiles/archtopleft.png
     Tile: {fileID: 11400000, guid: c0f4cc95da777431e856cfda022f29d9, type: 2}
   - Path: mm26_tiles/basicwall1.png
@@ -137,6 +137,10 @@ MonoBehaviour:
     Tile: {fileID: 11400000, guid: eb03412379677455591cf85b39f85d60, type: 2}
   - Path: mm26_tiles/door2.png
     Tile: {fileID: 11400000, guid: e95a7b00a078b4640afbe947538d384a, type: 2}
+  - Path: mm26_tiles/doorleftside.png
+    Tile: {fileID: 11400000, guid: df98234c6ee5c794a97de638a5b1280e, type: 2}
+  - Path: mm26_tiles/doorrightside.png
+    Tile: {fileID: 11400000, guid: 8cc957b700b04f24d885cc56554ffd64, type: 2}
   - Path: mm26_tiles/dragon_curvy (full size).png
     Tile: {fileID: 11400000, guid: 96edfa55e8ca18948901f86f053ebdf3, type: 2}
   - Path: mm26_tiles/dragon_curvy.png
@@ -161,6 +165,12 @@ MonoBehaviour:
     Tile: {fileID: 11400000, guid: ca7e6645e9f5e4a58a3e93674ee4d796, type: 2}
   - Path: mm26_tiles/floatygrass2.png
     Tile: {fileID: 11400000, guid: dc72166a841ba4617a96b97bb795666d, type: 2}
+  - Path: mm26_tiles/Floor1.png
+    Tile: {fileID: 11400000, guid: e6481a2c23287524887ef18255c73693, type: 2}
+  - Path: mm26_tiles/Floor2.png
+    Tile: {fileID: 11400000, guid: 0a3e7241823cf9e4abef92c9d6894137, type: 2}
+  - Path: mm26_tiles/Floor3.png
+    Tile: {fileID: 11400000, guid: 4efb74a5f349a0748b8fab609985f61c, type: 2}
   - Path: mm26_tiles/glowplant.png
     Tile: {fileID: 11400000, guid: d4fd4428995bc4db9a9fff828bdae90f, type: 2}
   - Path: mm26_tiles/goose.png
@@ -265,14 +275,14 @@ MonoBehaviour:
     Tile: {fileID: 11400000, guid: 484e953e9030b4317bdeb11582195636, type: 2}
   - Path: mm26_tiles/rightside.png
     Tile: {fileID: 11400000, guid: ecf1e18aa3e92b247a98287e7b873020, type: 2}
-  - Path: mm26_tiles/rock_elemental.png
-    Tile: {fileID: 11400000, guid: 7eebbcbcaa811a74595a2b0e19efeb54, type: 2}
   - Path: mm26_tiles/rocks1.png
     Tile: {fileID: 11400000, guid: 3f60c18832b4d4ed4bd732876e688fa6, type: 2}
   - Path: mm26_tiles/rocks2.png
     Tile: {fileID: 11400000, guid: c4879ad9946c744b49339894bae03f37, type: 2}
   - Path: mm26_tiles/rockwithlizard.png
     Tile: {fileID: 11400000, guid: db3e4b66cf9464ce79a53bad231935bb, type: 2}
+  - Path: mm26_tiles/rock_elemental.png
+    Tile: {fileID: 11400000, guid: 7eebbcbcaa811a74595a2b0e19efeb54, type: 2}
   - Path: mm26_tiles/sheep_cacosheep.png
     Tile: {fileID: 11400000, guid: 15f32d10c26b7b24fbe30a78bcdb04ea, type: 2}
   - Path: mm26_tiles/sheep_sheemp.png
@@ -325,6 +335,8 @@ MonoBehaviour:
     Tile: {fileID: 11400000, guid: b734f515ce7d040f0b9c1a9c9eecbfc8, type: 2}
   - Path: mm26_tiles/tallhousebottomred.png
     Tile: {fileID: 11400000, guid: 7f69e1be578bb472cace1dc2b5a04776, type: 2}
+  - Path: mm26_tiles/Tallhousetopblue.png
+    Tile: {fileID: 11400000, guid: 07f8731eeac7440f18f549e2ad1af05b, type: 2}
   - Path: mm26_tiles/tallhousetopgreen.png
     Tile: {fileID: 11400000, guid: 269bd7d35ebef4b7988abb08e4c58161, type: 2}
   - Path: mm26_tiles/tallhousetoporange.png
@@ -415,6 +427,277 @@ MonoBehaviour:
     Tile: {fileID: 11400000, guid: 9bff232ed13135e4bb3f42703d3ff0e5, type: 2}
   - Path: mm26_tiles/zombie_normal.png
     Tile: {fileID: 11400000, guid: fd8307d14c4a9b54485ea95df9e80d85, type: 2}
-  WearableEntries: []
+  WearableEntries:
+  - Path: mm26_wearables/accessories/Acc - Airpods.png
+    Sprite: {fileID: 21300000, guid: 2c20223f026535c4998aa1d8e97a7fea, type: 3}
+    Slot: accessories
+  - Path: mm26_wearables/accessories/Acc - Ammulet.png
+    Sprite: {fileID: 21300000, guid: b53cbaeb18fa6d64caa152272ef0d92d, type: 3}
+    Slot: accessories
+  - Path: mm26_wearables/accessories/Acc - Civilized Weapon.png
+    Sprite: {fileID: 21300000, guid: 2e665e8fc9a0d4142abec67899d3298a, type: 3}
+    Slot: accessories
+  - Path: mm26_wearables/accessories/Acc - Cursed Necklace.png
+    Sprite: {fileID: 21300000, guid: f902602611328a34b83cc4b114129fb7, type: 3}
+    Slot: accessories
+  - Path: mm26_wearables/accessories/Acc - Forever Gauntlet.png
+    Sprite: {fileID: 21300000, guid: 8c54483b98d93b14182084071e2fb15c, type: 3}
+    Slot: accessories
+  - Path: mm26_wearables/accessories/Acc - Hero Mask.png
+    Sprite: {fileID: 21300000, guid: 4e78f556582155e4fb8655f62c46514b, type: 3}
+    Slot: accessories
+  - Path: mm26_wearables/accessories/Acc - Mask.png
+    Sprite: {fileID: 21300000, guid: 9daf90a1defbb194a894ad81d6395d1f, type: 3}
+    Slot: accessories
+  - Path: mm26_wearables/accessories/Acc - Monster Balls.png
+    Sprite: {fileID: 21300000, guid: e8e88a3436397954c99953391c337fa4, type: 3}
+    Slot: accessories
+  - Path: mm26_wearables/accessories/Acc - Nose Ring.png
+    Sprite: {fileID: 21300000, guid: 53c9c5f86e79d3543a0c61736c0cbdb8, type: 3}
+    Slot: accessories
+  - Path: mm26_wearables/accessories/Acc - Pharoh_s Selfie Stick.png
+    Sprite: {fileID: 21300000, guid: ac86653a1a00572448c806561d82f756, type: 3}
+    Slot: accessories
+  - Path: mm26_wearables/accessories/Acc - Power Gloves.png
+    Sprite: {fileID: 21300000, guid: 05535e6c93698dc4fbf6b6fd7dd2b2ae, type: 3}
+    Slot: accessories
+  - Path: mm26_wearables/accessories/Acc - Quill.png
+    Sprite: {fileID: 21300000, guid: 379eb43216647f848a27b959c67bf72f, type: 3}
+    Slot: accessories
+  - Path: mm26_wearables/accessories/Acc - Red Scarf.png
+    Sprite: {fileID: 21300000, guid: dbba646906f7ef34f8c765b0bca14d18, type: 3}
+    Slot: accessories
+  - Path: mm26_wearables/accessories/Acc - Rings.png
+    Sprite: {fileID: 21300000, guid: e60226bb85e272b4897fba057f3b5ea3, type: 3}
+    Slot: accessories
+  - Path: mm26_wearables/accessories/Acc - Sunglasses.png
+    Sprite: {fileID: 21300000, guid: e371779f248bd7a47a3ea4d351b8f86c, type: 3}
+    Slot: accessories
+  - Path: mm26_wearables/accessories/bow1_acc.png
+    Sprite: {fileID: 21300000, guid: 3a84a1cf023203b4ea7baf2104883119, type: 3}
+    Slot: accessories
+  - Path: mm26_wearables/accessories/bow2_acc.png
+    Sprite: {fileID: 21300000, guid: f20fe96173efec645b8ddf44ec047f58, type: 3}
+    Slot: accessories
+  - Path: mm26_wearables/accessories/earrings_acc.png
+    Sprite: {fileID: 21300000, guid: 19042ed8e5e2d834a955e7e51880033d, type: 3}
+    Slot: accessories
+  - Path: mm26_wearables/accessories/onimask_acc.png
+    Sprite: {fileID: 21300000, guid: fb6aa78b4777b3640a55e09f1934da34, type: 3}
+    Slot: accessories
+  - Path: mm26_wearables/clothes/alchemist_top.png
+    Sprite: {fileID: 21300000, guid: 1ffd8cfd965401b48974cac2805bb40a, type: 3}
+    Slot: clothes
+  - Path: mm26_wearables/clothes/antler_boi_top.png
+    Sprite: {fileID: 21300000, guid: 11b9858d485fc8f4b8200394a554eddc, type: 3}
+    Slot: clothes
+  - Path: mm26_wearables/clothes/butler_top.png
+    Sprite: {fileID: 21300000, guid: b34586b46a52c7c4ca544642d4a895ba, type: 3}
+    Slot: clothes
+  - Path: mm26_wearables/clothes/Fruity Legolas - Top.png
+    Sprite: {fileID: 21300000, guid: 2ea689ba61bb3324e97cd68cda4d914c, type: 3}
+    Slot: clothes
+  - Path: mm26_wearables/clothes/Hooded - Top.png
+    Sprite: {fileID: 21300000, guid: 7ae42138dc9ed154cbd7ab660d108167, type: 3}
+    Slot: clothes
+  - Path: mm26_wearables/clothes/knight_top.PNG
+    Sprite: {fileID: 21300000, guid: 72123f343a3ea344a88320e241e276bc, type: 3}
+    Slot: clothes
+  - Path: mm26_wearables/clothes/knight_top_alt.png
+    Sprite: {fileID: 21300000, guid: 56d439f88482b534a9255ddb0f12021a, type: 3}
+    Slot: clothes
+  - Path: mm26_wearables/clothes/maid_top.PNG
+    Sprite: {fileID: 21300000, guid: 5c10574d6dd7d26448ba982c0caefaa0, type: 3}
+    Slot: clothes
+  - Path: mm26_wearables/clothes/maid_top_alt.png
+    Sprite: {fileID: 21300000, guid: 004ceb7996ef5644c99067062da5d0ec, type: 3}
+    Slot: clothes
+  - Path: mm26_wearables/clothes/villager_gal_top.png
+    Sprite: {fileID: 21300000, guid: 498a1bf62f9cb594180364f92c0dc3ca, type: 3}
+    Slot: clothes
+  - Path: mm26_wearables/clothes/witch_top.PNG
+    Sprite: {fileID: 21300000, guid: 9e0c8eb0e0a7e464aa15a4af74ea655a, type: 3}
+    Slot: clothes
+  - Path: mm26_wearables/clothes/witch_top_alt.png
+    Sprite: {fileID: 21300000, guid: bb9146582df663f459d7cf5bee3a28a3, type: 3}
+    Slot: clothes
+  - Path: mm26_wearables/hats/alchemist_head.png
+    Sprite: {fileID: 21300000, guid: 8cee0dd48d9bd014fa93189f33b948ac, type: 3}
+    Slot: hats
+  - Path: mm26_wearables/hats/antler_boi_head.png
+    Sprite: {fileID: 21300000, guid: e7f5f71e1e36f3a459b56f9975de73ea, type: 3}
+    Slot: hats
+  - Path: mm26_wearables/hats/butler_head.png
+    Sprite: {fileID: 21300000, guid: d64d3df035075034680ffab2f09bda2b, type: 3}
+    Slot: hats
+  - Path: mm26_wearables/hats/Fruity Legolas - Head.png
+    Sprite: {fileID: 21300000, guid: 42d302acedb80a14aa163786a8e8049a, type: 3}
+    Slot: hats
+  - Path: mm26_wearables/hats/Hooded - Head.png
+    Sprite: {fileID: 21300000, guid: 04c89a9fa871758409ba696a0a958f23, type: 3}
+    Slot: hats
+  - Path: mm26_wearables/hats/knight_head.PNG
+    Sprite: {fileID: 21300000, guid: 64dbaa09853daf043841184a1dbc81c8, type: 3}
+    Slot: hats
+  - Path: mm26_wearables/hats/knight_head_alt.png
+    Sprite: {fileID: 21300000, guid: a31ac4520b77e834ab3b43dbfe0f3435, type: 3}
+    Slot: hats
+  - Path: mm26_wearables/hats/maid_head.PNG
+    Sprite: {fileID: 21300000, guid: 335e70b0304af2e4cb9e8cf96c465237, type: 3}
+    Slot: hats
+  - Path: mm26_wearables/hats/maid_head_alt.png
+    Sprite: {fileID: 21300000, guid: ffd4901dc73c2c246887b13e5b620eed, type: 3}
+    Slot: hats
+  - Path: mm26_wearables/hats/villager_gal_head.png
+    Sprite: {fileID: 21300000, guid: 4e88981d277e79547b794eb633b71b45, type: 3}
+    Slot: hats
+  - Path: mm26_wearables/hats/witch_head.PNG
+    Sprite: {fileID: 21300000, guid: 1845beeaa91a2334baa20c8d9f49a64e, type: 3}
+    Slot: hats
+  - Path: mm26_wearables/hats/witch_head_alt.png
+    Sprite: {fileID: 21300000, guid: a77e89ae75e0d4b419cd5fb4840e7a83, type: 3}
+    Slot: hats
+  - Path: mm26_wearables/shoes/alchemist_bottom.png
+    Sprite: {fileID: 21300000, guid: 18adb6c55b8ab914098593de68f77f16, type: 3}
+    Slot: shoes
+  - Path: mm26_wearables/shoes/antler_boi_bottom.png
+    Sprite: {fileID: 21300000, guid: 42b2719cb931603468e05f9dc38ce088, type: 3}
+    Slot: shoes
+  - Path: mm26_wearables/shoes/butler_bottom.png
+    Sprite: {fileID: 21300000, guid: 42fc0b73b20638e4c90d553add4e3101, type: 3}
+    Slot: shoes
+  - Path: mm26_wearables/shoes/Fruity Legolas - Bottom.png
+    Sprite: {fileID: 21300000, guid: b5e53d360e7f9e147bbc8b4a385cbd1d, type: 3}
+    Slot: shoes
+  - Path: mm26_wearables/shoes/Hooded - Bottom.png
+    Sprite: {fileID: 21300000, guid: b1c5799302abfb94c9c81d31dd19aef0, type: 3}
+    Slot: shoes
+  - Path: mm26_wearables/shoes/knight_bottom.PNG
+    Sprite: {fileID: 21300000, guid: 5770da6eec935a243ade805cba924101, type: 3}
+    Slot: shoes
+  - Path: mm26_wearables/shoes/knight_bottom_alt.png
+    Sprite: {fileID: 21300000, guid: 6082b6758e7622f46a0a1a19bb737e4f, type: 3}
+    Slot: shoes
+  - Path: mm26_wearables/shoes/maid_bottom.PNG
+    Sprite: {fileID: 21300000, guid: 1efaeb414a474b54d99d0055738d6cdc, type: 3}
+    Slot: shoes
+  - Path: mm26_wearables/shoes/maid_bottom_alt.png
+    Sprite: {fileID: 21300000, guid: b46fd47711a1fb845b906f745446a920, type: 3}
+    Slot: shoes
+  - Path: mm26_wearables/shoes/villager_gal_bottom.png
+    Sprite: {fileID: 21300000, guid: a27ffd13ebc06b54982c88fa4827658d, type: 3}
+    Slot: shoes
+  - Path: mm26_wearables/shoes/witch_bottom.PNG
+    Sprite: {fileID: 21300000, guid: 23bb292ca4d3f5143a599321a029a97e, type: 3}
+    Slot: shoes
+  - Path: mm26_wearables/shoes/witch_bottom_alt.PNG
+    Sprite: {fileID: 21300000, guid: b33b5ec1bb45a624ab4c40a9740c619b, type: 3}
+    Slot: shoes
+  - Path: mm26_wearables/weapons/bows/1.png
+    Sprite: {fileID: 21300000, guid: 05acc414cdaff4148b53bc4e943ee30f, type: 3}
+    Slot: weapons
+  - Path: mm26_wearables/weapons/bows/2.png
+    Sprite: {fileID: 21300000, guid: 9d502b34e4926b649b672af982edb2b5, type: 3}
+    Slot: weapons
+  - Path: mm26_wearables/weapons/bows/3.png
+    Sprite: {fileID: 21300000, guid: 35bfe176617d6f042ab5e6419d782f0e, type: 3}
+    Slot: weapons
+  - Path: mm26_wearables/weapons/bows/4.png
+    Sprite: {fileID: 21300000, guid: 8961ac54c76a45f4d8a56bd43a97b6c1, type: 3}
+    Slot: weapons
+  - Path: mm26_wearables/weapons/bows/5.png
+    Sprite: {fileID: 21300000, guid: db337139a88011e4b84eaa64534eceaf, type: 3}
+    Slot: weapons
+  - Path: mm26_wearables/weapons/bows/6.png
+    Sprite: {fileID: 21300000, guid: 8fb7966f550e2ba45a03908e47be8046, type: 3}
+    Slot: weapons
+  - Path: mm26_wearables/weapons/bows/7.png
+    Sprite: {fileID: 21300000, guid: fa67800b72caaf149bd352b8d357c2b2, type: 3}
+    Slot: weapons
+  - Path: mm26_wearables/weapons/staves/1.png
+    Sprite: {fileID: 21300000, guid: a5824fccb63b88e4b992cf58a6af1071, type: 3}
+    Slot: weapons
+  - Path: mm26_wearables/weapons/staves/2.png
+    Sprite: {fileID: 21300000, guid: 15e056b0557e8fc45978c804bf49e17d, type: 3}
+    Slot: weapons
+  - Path: mm26_wearables/weapons/staves/3.png
+    Sprite: {fileID: 21300000, guid: e1ed6c9dbc8fdae419a6f99e7f544adf, type: 3}
+    Slot: weapons
+  - Path: mm26_wearables/weapons/staves/4.png
+    Sprite: {fileID: 21300000, guid: d96a3069e83a01e49b453b03570363da, type: 3}
+    Slot: weapons
+  - Path: mm26_wearables/weapons/staves/5.png
+    Sprite: {fileID: 21300000, guid: 74fa06cce2024b749a4756bac51113e2, type: 3}
+    Slot: weapons
+  - Path: mm26_wearables/weapons/swords/1.png
+    Sprite: {fileID: 21300000, guid: a4abc516fa1855542a4b1f6431244f6f, type: 3}
+    Slot: weapons
+  - Path: mm26_wearables/weapons/swords/2.png
+    Sprite: {fileID: 21300000, guid: 9cd5ee7584ece42479a0a98e0d2843b5, type: 3}
+    Slot: weapons
+  - Path: mm26_wearables/weapons/swords/3.png
+    Sprite: {fileID: 21300000, guid: 8b59b46ca63d5eb468f539a6917c79a7, type: 3}
+    Slot: weapons
+  - Path: mm26_wearables/weapons/swords/4.png
+    Sprite: {fileID: 21300000, guid: 91df1f838956b1842b95731febb775b4, type: 3}
+    Slot: weapons
+  - Path: mm26_wearables/weapons/swords/5.png
+    Sprite: {fileID: 21300000, guid: 8bb52424df1f6ac4ea90cf905a118637, type: 3}
+    Slot: weapons
+  - Path: mm26_wearables/weapons/swords/6.png
+    Sprite: {fileID: 21300000, guid: 23f391b7ff0ddb341a6f5e1a5b06ee1d, type: 3}
+    Slot: weapons
+  - Path: mm26_wearables/weapons/swords/7.png
+    Sprite: {fileID: 21300000, guid: 94d04b4109ae97e4e95954a00aade5bf, type: 3}
+    Slot: weapons
+  - Path: mm26_wearables/weapons/wands/1.png
+    Sprite: {fileID: 21300000, guid: 28b8197b7e961a942b95b83866bd2af2, type: 3}
+    Slot: weapons
+  - Path: mm26_wearables/weapons/wands/2.png
+    Sprite: {fileID: 21300000, guid: d387be90a1acb024e900296076ba0f0b, type: 3}
+    Slot: weapons
+  - Path: mm26_wearables/weapons/wands/3.png
+    Sprite: {fileID: 21300000, guid: befd4e2164264504f966272442bf142f, type: 3}
+    Slot: weapons
+  - Path: mm26_wearables/weapons/wands/4.png
+    Sprite: {fileID: 21300000, guid: 7d36f2160fbdd8b4695f52e5a088117e, type: 3}
+    Slot: weapons
+  - Path: mm26_wearables/weapons/wands/5.png
+    Sprite: {fileID: 21300000, guid: 051230485f61b034489c7c6b96c019f9, type: 3}
+    Slot: weapons
+  - Path: mm26_wearables/weapons/wands/6.png
+    Sprite: {fileID: 21300000, guid: 9223b0af0ca04fe429b5cc70b0785180, type: 3}
+    Slot: weapons
+  - Path: mm26_wearables/_defaults/default_bod.PNG
+    Sprite: {fileID: 21300000, guid: d31d3514add952648a44a21df0dba3f3, type: 3}
+    Slot: _defaults
+  - Path: mm26_wearables/_defaults/default_bod_2.png
+    Sprite: {fileID: 21300000, guid: 08c55acbbfdc16a478484e9587e8f270, type: 3}
+    Slot: _defaults
+  - Path: mm26_wearables/_defaults/default_bod_3.png
+    Sprite: {fileID: 21300000, guid: f66ea52e96f48d2468bfe3ce2f97ddd0, type: 3}
+    Slot: _defaults
+  - Path: mm26_wearables/_defaults/default_bod_4.png
+    Sprite: {fileID: 21300000, guid: 60b24fc63339a044fa422d35b7b79e87, type: 3}
+    Slot: _defaults
+  - Path: mm26_wearables/_defaults/default_bottom.PNG
+    Sprite: {fileID: 21300000, guid: 7127463c826012b4d9f9e50f2930c496, type: 3}
+    Slot: _defaults
+  - Path: mm26_wearables/_defaults/default_bottom_alt.png
+    Sprite: {fileID: 21300000, guid: 90fef0cfcd9a531489117343b8eb831c, type: 3}
+    Slot: _defaults
+  - Path: mm26_wearables/_defaults/default_head.PNG
+    Sprite: {fileID: 21300000, guid: 2c2deddffe82fc041a5bd16cf847ac19, type: 3}
+    Slot: _defaults
+  - Path: mm26_wearables/_defaults/default_head_alt.png
+    Sprite: {fileID: 21300000, guid: dc6fc85abcda4c44b82ba1a2f7244a7e, type: 3}
+    Slot: _defaults
+  - Path: mm26_wearables/_defaults/default_top.PNG
+    Sprite: {fileID: 21300000, guid: cd8e0061a0507454fae62dba620aa024, type: 3}
+    Slot: _defaults
+  - Path: mm26_wearables/_defaults/default_top_alt.png
+    Sprite: {fileID: 21300000, guid: 7856bb36b7545eb40a5841f7b45da556, type: 3}
+    Slot: _defaults
   _fallbackTile: {fileID: 11400000, guid: ab415fcabcd33420ab7ecdb515e73ca2, type: 2}
   TilesPath: Assets/Sprites/mm26_tiles/
+  WearablesPath: Assets/Sprites/mm26_wearables/
