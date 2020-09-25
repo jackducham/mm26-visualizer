@@ -25,7 +25,7 @@ namespace MM26.IO.Models {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cgtib2FyZC5wcm90bxIFYm9hcmQaCml0ZW0ucHJvdG8aD2NoYXJhY3Rlci5w",
-            "cm90byJnCgVCb2FyZBIMCgRyb3dzGAEgASgFEg8KB2NvbHVtbnMYAiABKAUS",
+            "cm90byJnCgVCb2FyZBINCgV3aWR0aBgBIAEoBRIOCgZoZWlnaHQYAiABKAUS",
             "GQoEZ3JpZBgDIAMoCzILLmJvYXJkLlRpbGUSJAoHcG9ydGFscxgEIAMoCzIT",
             "LmNoYXJhY3Rlci5Qb3NpdGlvbiK0AQoEVGlsZRInCgl0aWxlX3R5cGUYASAB",
             "KA4yFC5ib2FyZC5UaWxlLlRpbGVUeXBlEhkKBWl0ZW1zGAIgAygLMgouaXRl",
@@ -37,7 +37,7 @@ namespace MM26.IO.Models {
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::MM26.IO.Models.ItemReflection.Descriptor, global::MM26.IO.Models.CharacterReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Board), global::MM26.IO.Models.Board.Parser, new[]{ "Rows", "Columns", "Grid", "Portals" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Board), global::MM26.IO.Models.Board.Parser, new[]{ "Width", "Height", "Grid", "Portals" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Tile), global::MM26.IO.Models.Tile.Parser, new[]{ "TileType", "Items", "GroundSprite", "AboveSprite" }, null, new[]{ typeof(global::MM26.IO.Models.Tile.Types.TileType) }, null, null)
           }));
     }
@@ -74,8 +74,8 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Board(Board other) : this() {
-      rows_ = other.rows_;
-      columns_ = other.columns_;
+      width_ = other.width_;
+      height_ = other.height_;
       grid_ = other.grid_.Clone();
       portals_ = other.portals_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -86,25 +86,25 @@ namespace MM26.IO.Models {
       return new Board(this);
     }
 
-    /// <summary>Field number for the "rows" field.</summary>
-    public const int RowsFieldNumber = 1;
-    private int rows_;
+    /// <summary>Field number for the "width" field.</summary>
+    public const int WidthFieldNumber = 1;
+    private int width_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Rows {
-      get { return rows_; }
+    public int Width {
+      get { return width_; }
       set {
-        rows_ = value;
+        width_ = value;
       }
     }
 
-    /// <summary>Field number for the "columns" field.</summary>
-    public const int ColumnsFieldNumber = 2;
-    private int columns_;
+    /// <summary>Field number for the "height" field.</summary>
+    public const int HeightFieldNumber = 2;
+    private int height_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int Columns {
-      get { return columns_; }
+    public int Height {
+      get { return height_; }
       set {
-        columns_ = value;
+        height_ = value;
       }
     }
 
@@ -144,8 +144,8 @@ namespace MM26.IO.Models {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Rows != other.Rows) return false;
-      if (Columns != other.Columns) return false;
+      if (Width != other.Width) return false;
+      if (Height != other.Height) return false;
       if(!grid_.Equals(other.grid_)) return false;
       if(!portals_.Equals(other.portals_)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -154,8 +154,8 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Rows != 0) hash ^= Rows.GetHashCode();
-      if (Columns != 0) hash ^= Columns.GetHashCode();
+      if (Width != 0) hash ^= Width.GetHashCode();
+      if (Height != 0) hash ^= Height.GetHashCode();
       hash ^= grid_.GetHashCode();
       hash ^= portals_.GetHashCode();
       if (_unknownFields != null) {
@@ -171,13 +171,13 @@ namespace MM26.IO.Models {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Rows != 0) {
+      if (Width != 0) {
         output.WriteRawTag(8);
-        output.WriteInt32(Rows);
+        output.WriteInt32(Width);
       }
-      if (Columns != 0) {
+      if (Height != 0) {
         output.WriteRawTag(16);
-        output.WriteInt32(Columns);
+        output.WriteInt32(Height);
       }
       grid_.WriteTo(output, _repeated_grid_codec);
       portals_.WriteTo(output, _repeated_portals_codec);
@@ -189,11 +189,11 @@ namespace MM26.IO.Models {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Rows != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Rows);
+      if (Width != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Width);
       }
-      if (Columns != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Columns);
+      if (Height != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Height);
       }
       size += grid_.CalculateSize(_repeated_grid_codec);
       size += portals_.CalculateSize(_repeated_portals_codec);
@@ -208,11 +208,11 @@ namespace MM26.IO.Models {
       if (other == null) {
         return;
       }
-      if (other.Rows != 0) {
-        Rows = other.Rows;
+      if (other.Width != 0) {
+        Width = other.Width;
       }
-      if (other.Columns != 0) {
-        Columns = other.Columns;
+      if (other.Height != 0) {
+        Height = other.Height;
       }
       grid_.Add(other.grid_);
       portals_.Add(other.portals_);
@@ -231,11 +231,11 @@ namespace MM26.IO.Models {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Rows = input.ReadInt32();
+            Width = input.ReadInt32();
             break;
           }
           case 16: {
-            Columns = input.ReadInt32();
+            Height = input.ReadInt32();
             break;
           }
           case 26: {
@@ -261,11 +261,11 @@ namespace MM26.IO.Models {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Rows = input.ReadInt32();
+            Width = input.ReadInt32();
             break;
           }
           case 16: {
-            Columns = input.ReadInt32();
+            Height = input.ReadInt32();
             break;
           }
           case 26: {

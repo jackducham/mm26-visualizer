@@ -123,8 +123,8 @@ namespace MM26.Tests
         {
             var board = new IO.Models.Board();
 
-            board.Columns = testState.Board.Columns;
-            board.Rows = testState.Board.Rows;
+            board.Height = testState.Board.Height;
+            board.Width = testState.Board.Width;
 
             foreach (var tile in testState.Board.Grid)
             {

@@ -214,7 +214,7 @@ namespace MM26.Play
                     continue;
                 }
 
-                Tile tile = board.Grid[change.X * board.Columns + change.Y];
+                Tile tile = board.Grid[change.X * board.Height + change.Y];
 
                 batch.Add(
                     new UpdateTileItemTask(

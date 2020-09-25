@@ -69,10 +69,6 @@ namespace MM26.Board
                 task.IsFinished = true;
                 _mailbox.RemoveTask(task);
 
-                Debug.Log(task.Position);
-                Debug.Log(task.EntityName);
-                Debug.Log(_spriteLookUp);
-
                 _charactersManager.CreateMonster(
                     task.Position,
                     task.EntityName,
@@ -92,13 +88,12 @@ namespace MM26.Board
             for (int i = 0; i < tasks.Length; i++)
             {
                 DespawnTask task = tasks[i];
+                task.IsFinished = true;
+                _mailbox.RemoveTask(task);
 
                 // FIXME: might cause performance issue (this is on a hot path)
                 GameObject entity = GameObject.Find(task.EntityName);
                 GameObject.Destroy(entity);
-
-                task.IsFinished = true;
-                _mailbox.RemoveTask(task);
             }
         }
 

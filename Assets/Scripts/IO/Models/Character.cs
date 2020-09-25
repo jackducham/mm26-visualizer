@@ -40,33 +40,35 @@ namespace MM26.IO.Models {
             "DgoGc3ByaXRlGBIgASgJGjoKGFRhZ2dlZFBsYXllcnNEYW1hZ2VFbnRyeRIL",
             "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAU6AjgBImIKB01vbnN0ZXISJwoJ",
             "Y2hhcmFjdGVyGAEgASgLMhQuY2hhcmFjdGVyLkNoYXJhY3RlchIZCgVkcm9w",
-            "cxgCIAMoCzIKLml0ZW0uSXRlbRITCgthZ2dyb19yYW5nZRgDIAEoBSKkAQoG",
+            "cxgCIAMoCzIKLml0ZW0uSXRlbRITCgthZ2dyb19yYW5nZRgDIAEoBSKIAgoG",
             "UGxheWVyEicKCWNoYXJhY3RlchgBIAEoCzIULmNoYXJhY3Rlci5DaGFyYWN0",
             "ZXISFgoDaGF0GAIgASgLMgkuaXRlbS5IYXQSHgoHY2xvdGhlcxgDIAEoCzIN",
-            "Lml0ZW0uQ2xvdGhlcxIaCgVzaG9lcxgEIAEoCzILLml0ZW0uU2hvZXMSHQoJ",
-            "aW52ZW50b3J5GAUgAygLMgouaXRlbS5JdGVtIsYBCgtQbGF5ZXJTdGF0cxIN",
-            "CgVsZXZlbBgBIAEoBRISCgpleHBlcmllbmNlGAIgASgFEhYKDm1vbnN0ZXJz",
-            "X3NsYWluGAMgASgFEg4KBmF0dGFjaxgEIAEoBRIPCgdkZWZlbnNlGAUgASgF",
-            "EhYKDmN1cnJlbnRfaGVhbHRoGAYgASgFEhIKCm1heF9oZWFsdGgYByABKAUS",
-            "EwoLZGVhdGhfY291bnQYCCABKAUSGgoSdHVybnNfc2luY2Vfam9pbmVkGAkg",
-            "ASgFIpEBChFQbGF5ZXJTdGF0c0J1bmRsZRI2CgVzdGF0cxgBIAMoCzInLmNo",
-            "YXJhY3Rlci5QbGF5ZXJTdGF0c0J1bmRsZS5TdGF0c0VudHJ5GkQKClN0YXRz",
-            "RW50cnkSCwoDa2V5GAEgASgJEiUKBXZhbHVlGAIgASgLMhYuY2hhcmFjdGVy",
-            "LlBsYXllclN0YXRzOgI4ASIyCghQb3NpdGlvbhIQCghib2FyZF9pZBgBIAEo",
-            "CRIJCgF4GAIgASgFEgkKAXkYAyABKAUigAEKEUNoYXJhY3RlckRlY2lzaW9u",
-            "Ei4KDWRlY2lzaW9uX3R5cGUYASABKA4yFy5jaGFyYWN0ZXIuRGVjaXNpb25U",
-            "eXBlEiwKD3RhcmdldF9wb3NpdGlvbhgCIAEoCzITLmNoYXJhY3Rlci5Qb3Np",
-            "dGlvbhINCgVpbmRleBgDIAEoBSpbCgxEZWNpc2lvblR5cGUSCAoETk9ORRAA",
-            "EggKBE1PVkUQARIKCgZBVFRBQ0sQAhIKCgZQT1JUQUwQAxIICgREUk9QEAQS",
-            "CQoFRVFVSVAQBRIKCgZQSUNLVVAQBkJCCh5tZWNoLm1hbmlhLmVuZ2luZS5k",
-            "b21haW4ubW9kZWxCD0NoYXJhY3RlclByb3Rvc6oCDk1NMjYuSU8uTW9kZWxz",
-            "YgZwcm90bzM="));
+            "Lml0ZW0uQ2xvdGhlcxIaCgVzaG9lcxgEIAEoCzILLml0ZW0uU2hvZXMSIgoJ",
+            "YWNjZXNzb3J5GAUgASgLMg8uaXRlbS5BY2Nlc3NvcnkSHQoJaW52ZW50b3J5",
+            "GAYgAygLMgouaXRlbS5JdGVtEhUKDWJvdHRvbV9zcHJpdGUYByABKAkSEgoK",
+            "dG9wX3Nwcml0ZRgIIAEoCRITCgtoZWFkX3Nwcml0ZRgJIAEoCSLGAQoLUGxh",
+            "eWVyU3RhdHMSDQoFbGV2ZWwYASABKAUSEgoKZXhwZXJpZW5jZRgCIAEoBRIW",
+            "Cg5tb25zdGVyc19zbGFpbhgDIAEoBRIOCgZhdHRhY2sYBCABKAUSDwoHZGVm",
+            "ZW5zZRgFIAEoBRIWCg5jdXJyZW50X2hlYWx0aBgGIAEoBRISCgptYXhfaGVh",
+            "bHRoGAcgASgFEhMKC2RlYXRoX2NvdW50GAggASgFEhoKEnR1cm5zX3NpbmNl",
+            "X2pvaW5lZBgJIAEoBSKRAQoRUGxheWVyU3RhdHNCdW5kbGUSNgoFc3RhdHMY",
+            "ASADKAsyJy5jaGFyYWN0ZXIuUGxheWVyU3RhdHNCdW5kbGUuU3RhdHNFbnRy",
+            "eRpECgpTdGF0c0VudHJ5EgsKA2tleRgBIAEoCRIlCgV2YWx1ZRgCIAEoCzIW",
+            "LmNoYXJhY3Rlci5QbGF5ZXJTdGF0czoCOAEiMgoIUG9zaXRpb24SEAoIYm9h",
+            "cmRfaWQYASABKAkSCQoBeBgCIAEoBRIJCgF5GAMgASgFIoABChFDaGFyYWN0",
+            "ZXJEZWNpc2lvbhIuCg1kZWNpc2lvbl90eXBlGAEgASgOMhcuY2hhcmFjdGVy",
+            "LkRlY2lzaW9uVHlwZRIsCg90YXJnZXRfcG9zaXRpb24YAiABKAsyEy5jaGFy",
+            "YWN0ZXIuUG9zaXRpb24SDQoFaW5kZXgYAyABKAUqWwoMRGVjaXNpb25UeXBl",
+            "EggKBE5PTkUQABIICgRNT1ZFEAESCgoGQVRUQUNLEAISCgoGUE9SVEFMEAMS",
+            "CAoERFJPUBAEEgkKBUVRVUlQEAUSCgoGUElDS1VQEAZCQgoebWVjaC5tYW5p",
+            "YS5lbmdpbmUuZG9tYWluLm1vZGVsQg9DaGFyYWN0ZXJQcm90b3OqAg5NTTI2",
+            "LklPLk1vZGVsc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::MM26.IO.Models.ItemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MM26.IO.Models.DecisionType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Character), global::MM26.IO.Models.Character.Parser, new[]{ "CurrentHealth", "BaseMaxHealth", "Experience", "Level", "BaseSpeed", "Position", "SpawnPoint", "Weapon", "ActiveEffectsTempStatusModifier", "ActiveEffectsSource", "ActiveEffectsIsPlayer", "TaggedPlayersDamage", "IsDead", "TicksSinceDeath", "Name", "BaseAttack", "BaseDefense", "Sprite" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Monster), global::MM26.IO.Models.Monster.Parser, new[]{ "Character", "Drops", "AggroRange" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Player), global::MM26.IO.Models.Player.Parser, new[]{ "Character", "Hat", "Clothes", "Shoes", "Inventory" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Player), global::MM26.IO.Models.Player.Parser, new[]{ "Character", "Hat", "Clothes", "Shoes", "Accessory", "Inventory", "BottomSprite", "TopSprite", "HeadSprite" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.PlayerStats), global::MM26.IO.Models.PlayerStats.Parser, new[]{ "Level", "Experience", "MonstersSlain", "Attack", "Defense", "CurrentHealth", "MaxHealth", "DeathCount", "TurnsSinceJoined" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.PlayerStatsBundle), global::MM26.IO.Models.PlayerStatsBundle.Parser, new[]{ "Stats" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Position), global::MM26.IO.Models.Position.Parser, new[]{ "BoardId", "X", "Y" }, null, null, null, null),
@@ -1048,7 +1050,11 @@ namespace MM26.IO.Models {
       hat_ = other.hat_ != null ? other.hat_.Clone() : null;
       clothes_ = other.clothes_ != null ? other.clothes_.Clone() : null;
       shoes_ = other.shoes_ != null ? other.shoes_.Clone() : null;
+      accessory_ = other.accessory_ != null ? other.accessory_.Clone() : null;
       inventory_ = other.inventory_.Clone();
+      bottomSprite_ = other.bottomSprite_;
+      topSprite_ = other.topSprite_;
+      headSprite_ = other.headSprite_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1101,14 +1107,61 @@ namespace MM26.IO.Models {
       }
     }
 
+    /// <summary>Field number for the "accessory" field.</summary>
+    public const int AccessoryFieldNumber = 5;
+    private global::MM26.IO.Models.Accessory accessory_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::MM26.IO.Models.Accessory Accessory {
+      get { return accessory_; }
+      set {
+        accessory_ = value;
+      }
+    }
+
     /// <summary>Field number for the "inventory" field.</summary>
-    public const int InventoryFieldNumber = 5;
+    public const int InventoryFieldNumber = 6;
     private static readonly pb::FieldCodec<global::MM26.IO.Models.Item> _repeated_inventory_codec
-        = pb::FieldCodec.ForMessage(42, global::MM26.IO.Models.Item.Parser);
+        = pb::FieldCodec.ForMessage(50, global::MM26.IO.Models.Item.Parser);
     private readonly pbc::RepeatedField<global::MM26.IO.Models.Item> inventory_ = new pbc::RepeatedField<global::MM26.IO.Models.Item>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::MM26.IO.Models.Item> Inventory {
       get { return inventory_; }
+    }
+
+    /// <summary>Field number for the "bottom_sprite" field.</summary>
+    public const int BottomSpriteFieldNumber = 7;
+    private string bottomSprite_ = "";
+    /// <summary>
+    /// Filepaths for other sprites
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string BottomSprite {
+      get { return bottomSprite_; }
+      set {
+        bottomSprite_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "top_sprite" field.</summary>
+    public const int TopSpriteFieldNumber = 8;
+    private string topSprite_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string TopSprite {
+      get { return topSprite_; }
+      set {
+        topSprite_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "head_sprite" field.</summary>
+    public const int HeadSpriteFieldNumber = 9;
+    private string headSprite_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string HeadSprite {
+      get { return headSprite_; }
+      set {
+        headSprite_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1128,7 +1181,11 @@ namespace MM26.IO.Models {
       if (!object.Equals(Hat, other.Hat)) return false;
       if (!object.Equals(Clothes, other.Clothes)) return false;
       if (!object.Equals(Shoes, other.Shoes)) return false;
+      if (!object.Equals(Accessory, other.Accessory)) return false;
       if(!inventory_.Equals(other.inventory_)) return false;
+      if (BottomSprite != other.BottomSprite) return false;
+      if (TopSprite != other.TopSprite) return false;
+      if (HeadSprite != other.HeadSprite) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1139,7 +1196,11 @@ namespace MM26.IO.Models {
       if (hat_ != null) hash ^= Hat.GetHashCode();
       if (clothes_ != null) hash ^= Clothes.GetHashCode();
       if (shoes_ != null) hash ^= Shoes.GetHashCode();
+      if (accessory_ != null) hash ^= Accessory.GetHashCode();
       hash ^= inventory_.GetHashCode();
+      if (BottomSprite.Length != 0) hash ^= BottomSprite.GetHashCode();
+      if (TopSprite.Length != 0) hash ^= TopSprite.GetHashCode();
+      if (HeadSprite.Length != 0) hash ^= HeadSprite.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1169,7 +1230,23 @@ namespace MM26.IO.Models {
         output.WriteRawTag(34);
         output.WriteMessage(Shoes);
       }
+      if (accessory_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Accessory);
+      }
       inventory_.WriteTo(output, _repeated_inventory_codec);
+      if (BottomSprite.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(BottomSprite);
+      }
+      if (TopSprite.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(TopSprite);
+      }
+      if (HeadSprite.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(HeadSprite);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1190,7 +1267,19 @@ namespace MM26.IO.Models {
       if (shoes_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Shoes);
       }
+      if (accessory_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Accessory);
+      }
       size += inventory_.CalculateSize(_repeated_inventory_codec);
+      if (BottomSprite.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BottomSprite);
+      }
+      if (TopSprite.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TopSprite);
+      }
+      if (HeadSprite.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(HeadSprite);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1226,7 +1315,22 @@ namespace MM26.IO.Models {
         }
         Shoes.MergeFrom(other.Shoes);
       }
+      if (other.accessory_ != null) {
+        if (accessory_ == null) {
+          Accessory = new global::MM26.IO.Models.Accessory();
+        }
+        Accessory.MergeFrom(other.Accessory);
+      }
       inventory_.Add(other.inventory_);
+      if (other.BottomSprite.Length != 0) {
+        BottomSprite = other.BottomSprite;
+      }
+      if (other.TopSprite.Length != 0) {
+        TopSprite = other.TopSprite;
+      }
+      if (other.HeadSprite.Length != 0) {
+        HeadSprite = other.HeadSprite;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1270,7 +1374,26 @@ namespace MM26.IO.Models {
             break;
           }
           case 42: {
+            if (accessory_ == null) {
+              Accessory = new global::MM26.IO.Models.Accessory();
+            }
+            input.ReadMessage(Accessory);
+            break;
+          }
+          case 50: {
             inventory_.AddEntriesFrom(input, _repeated_inventory_codec);
+            break;
+          }
+          case 58: {
+            BottomSprite = input.ReadString();
+            break;
+          }
+          case 66: {
+            TopSprite = input.ReadString();
+            break;
+          }
+          case 74: {
+            HeadSprite = input.ReadString();
             break;
           }
         }
@@ -1316,7 +1439,26 @@ namespace MM26.IO.Models {
             break;
           }
           case 42: {
+            if (accessory_ == null) {
+              Accessory = new global::MM26.IO.Models.Accessory();
+            }
+            input.ReadMessage(Accessory);
+            break;
+          }
+          case 50: {
             inventory_.AddEntriesFrom(ref input, _repeated_inventory_codec);
+            break;
+          }
+          case 58: {
+            BottomSprite = input.ReadString();
+            break;
+          }
+          case 66: {
+            TopSprite = input.ReadString();
+            break;
+          }
+          case 74: {
+            HeadSprite = input.ReadString();
             break;
           }
         }

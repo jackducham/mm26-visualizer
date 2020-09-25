@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine.Serialization;
 
 namespace MM26.Tests
 {
@@ -16,12 +17,14 @@ namespace MM26.Tests
         /// <summary>
         /// Size of X dimension of the map
         /// </summary>
-        public int Columns;
+        [FormerlySerializedAs("Columns")]
+        public int Height;
 
         /// <summary>
         /// Size of Y dimension of the map
         /// </summary>
-        public int Rows;
+        [FormerlySerializedAs("Width")]
+        public int Width;
 
         /// <summary>
         /// List of tile coordinates (z is tile type)

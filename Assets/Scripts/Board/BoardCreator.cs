@@ -13,6 +13,7 @@ namespace MM26.Board
     using PTileType = MM26.IO.Models.Tile.Types.TileType;
     using PTile = MM26.IO.Models.Tile;
     using PCharacter = MM26.IO.Models.Character;
+    using PPlayer = MM26.IO.Models.Player;
     using PPosition = MM26.IO.Models.Position;
 
     /// <summary>
@@ -83,13 +84,11 @@ namespace MM26.Board
         {
             var board = _data.Initial.State.BoardNames[_sceneConfiguration.BoardName];
 
-            // rows is width
-            for (int x = 0; x < board.Rows; x++)
+            for (int x = 0; x < board.Width; x++)
             {
-                // columns is height
-                for (int y = 0; y < board.Columns; y++)
+                for (int y = 0; y < board.Height; y++)
                 {
-                    PTile ptile = board.Grid[x * board.Columns + y];
+                    PTile ptile = board.Grid[x * board.Height + y];
 
                     if (ptile.Items.Count > 0)
                     {
@@ -104,13 +103,13 @@ namespace MM26.Board
                     if (ptile.GroundSprite != "")
                     {
                         Tile tile = _tileDatabase.GetTile(ptile.GroundSprite);
-                        _groundTilemap.SetTile(new Vector3Int(x, (board.Columns - 1) - y, 0), tile);
+                        _groundTilemap.SetTile(new Vector3Int(x, (board.Height - 1) - y, 0), tile);
                     }
 
                     if (ptile.AboveSprite != "")
                     {
                         Tile tile = _tileDatabase.GetTile(ptile.AboveSprite);
-                        _aboveTilemap.SetTile(new Vector3Int(x, (board.Columns - 1) - y, -1), tile);
+                        _aboveTilemap.SetTile(new Vector3Int(x, (board.Height - 1) - y, -1), tile);
                     }
                 }
             }
@@ -123,6 +122,7 @@ namespace MM26.Board
         {
             foreach (var entry in _data.Initial.State.PlayerNames)
             {
+                PPlayer player = entry.Value;
                 PCharacter character = entry.Value.Character;
                 PPosition position = character.Position;
 
