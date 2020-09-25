@@ -80,7 +80,19 @@ public class SpriteLookUpEditor : Editor
                 string slot = "unassigned";
 
                 if (dir_slot.Length > 1)
-                    slot = dir_slot[1];
+                {
+                    if(dir_slot[1] != "_default")
+                        slot = dir_slot[1];
+                    else
+                    {
+                        if (name.Contains("bod"))
+                            slot = "clothes";
+                        else if (name.Contains("bottom"))
+                            slot = "shoes";
+                        else if (name.Contains("head"))
+                            slot = "hats";
+                    }
+                }
                 
                 
                 return new SpriteLookUp.WearableEntry()
