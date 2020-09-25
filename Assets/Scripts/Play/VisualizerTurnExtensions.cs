@@ -227,7 +227,9 @@ namespace MM26.Play
                             }
 
                             if (entity_key == entity) {
-                                Debug.Log(batch);
+                                Debug.Log(entity);
+                                Debug.Log(characterChange);
+
                                 batch.Add(new UpdateInventoryTask(entity)
                                 {
                                     clothes_changed = characterChange.ClothesChanged,
@@ -239,9 +241,10 @@ namespace MM26.Play
                                     Top = player.TopSprite,
                                     Bottom = player.BottomSprite,
                                     Head = player.HeadSprite,
-                                    Weapon = "",
+                                    Weapon = character.Weapon.Sprite,
                                     Accessory = ""
                                 });
+                                Debug.Log(characterChange.HatChanged);
                                 return;
                             }
                         }

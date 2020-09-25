@@ -68,9 +68,9 @@ namespace MM26.Tasks
                 && this.Accessory == other.Accessory;
         }
 
-        //public override string ToString()
-        //{
-        //    return JsonUtility.ToJson(this);
-        //}
+        public override string ToString()
+        {
+            return JsonUtility.ToJson(this);
+        }
     }
 }

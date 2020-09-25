@@ -52,7 +52,8 @@ namespace MM26.Play.Tests
                 Decision = new CharacterDecision()
                 {
                     DecisionType = DecisionType.Equip
-                }
+                },
+                HatChanged = true,
             };
 
             var turn = new VisualizerTurn()
