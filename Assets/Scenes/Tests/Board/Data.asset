@@ -73,4 +73,13 @@ MonoBehaviour:
       Board: other
       X: 0
       Y: 0
-  Turns: []
+  Turns:
+  - State:
+      Board:
+        Name: 
+        Columns: 0
+        Rows: 0
+        Grid: []
+      Characters: []
+    Change:
+      CharacterChanges: []
