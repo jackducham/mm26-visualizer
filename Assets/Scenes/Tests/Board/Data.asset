@@ -15,8 +15,8 @@ MonoBehaviour:
   InitialState:
     Board:
       Name: pvp
-      Columns: 3
-      Rows: 3
+      Height: 3
+      Width: 3
       Grid:
       - TileType: 1
         GroundSprite: mm26_tiles/dirt1.png
@@ -77,8 +77,8 @@ MonoBehaviour:
   - State:
       Board:
         Name: 
-        Columns: 0
-        Rows: 0
+        Height: 0
+        Width: 0
         Grid: []
       Characters: []
     Change:
