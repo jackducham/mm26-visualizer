@@ -10,8 +10,9 @@ namespace MM26.Systems.UpdateInventoryTask
 {
     public class UpdateInventorySystem : SystemBase
     {
-        private Mailbox _mailbox;
-        private SpriteLookUp _spriteDatabase;
+        private Mailbox _mailbox = null;
+        private SpriteLookUp _spriteDatabase = null;
+        private SceneLifeCycle _sceneLifeCycle = null;
         private Dictionary<string, Tasks.UpdateInventoryTask> _tasks;
 
         protected override void OnCreate()
@@ -22,6 +23,9 @@ namespace MM26.Systems.UpdateInventoryTask
             _mailbox.SubscribeToTaskType<Tasks.UpdateInventoryTask>(this);
 
             _spriteDatabase = Resources.Load<SpriteLookUp>("Objects/SpriteLookUp");
+
+            _sceneLifeCycle = Resources.Load<SceneLifeCycle>("Objects/LifeCycle");
+            _sceneLifeCycle.Play.AddListener(this.OnPlay);
 
             _tasks = new Dictionary<string, Tasks.UpdateInventoryTask>();
         }
@@ -74,6 +78,12 @@ namespace MM26.Systems.UpdateInventoryTask
                     }
                 })
                 .Run();
+        }
+
+
+        private void OnPlay()
+        {
+            _mailbox.SubscribeToTaskType<Tasks.UpdateInventoryTask>(this);
         }
     }
 }

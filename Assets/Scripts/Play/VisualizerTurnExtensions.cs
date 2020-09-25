@@ -88,7 +88,8 @@ namespace MM26.Play
                 ProcessCharacter(
                     batch, entity,
                     character,
-                    characterChange,
+                    characterChange, 
+                    gameState,
                     sceneConfiguration,
                     boardPositionLookUp,
                     ignoreForHubUpdate,
@@ -101,6 +102,7 @@ namespace MM26.Play
             string entity,
             Character character,
             CharacterChange characterChange,
+            GameState gameState,
             SceneConfiguration sceneConfiguration,
             BoardPositionLookUp boardPositionLookUp,
             HashSet<string> ignoreForHubUpdate,
@@ -211,15 +213,38 @@ namespace MM26.Play
                         }
                     }
                     break;
-                //case DecisionType.Equip:
-                //    if (character.Position.BoardId == sceneConfiguration.BoardName && !isMonster)
-                //    {
-                //        batch.Add(new UpdateInventoryTask(entity)
-                //        {
-                //            characterChange.
-                //        });
-                //    }
-                //    break;
+                case DecisionType.Equip:
+                    if (character.Position.BoardId == sceneConfiguration.BoardName && !isMonster)
+                    {
+                        foreach (var pair in gameState.PlayerNames)
+                        {
+                            string entity_key = pair.Key;
+                            Player player = pair.Value;
+
+                            if (player.Character.Position.BoardId != sceneConfiguration.BoardName)
+                            {
+                                continue;
+                            }
+
+                            if (entity_key == entity) {
+                                batch.Add(new UpdateInventoryTask(entity)
+                                {
+                                    clothes_changed = characterChange.ClothesChanged,
+                                    hat_changed = characterChange.HatChanged,
+                                    shoes_changed = characterChange.ShoesChanged,
+                                    weapon_changed = characterChange.WeaponChanged,
+
+                                    Top = player.TopSprite,
+                                    Bottom = player.BottomSprite,
+                                    Head = player.HeadSprite,
+                                    Weapon = character.Weapon.Sprite
+                                });
+                                break;
+                            }
+                        }
+
+                    }
+                    break;
                 case DecisionType.None:
                     break;
                 default:
