@@ -23,7 +23,10 @@ namespace MM26.Components
 
         private void OnDestroy()
         {
-            _world.EntityManager.DestroyEntity(_entity);
+            if (_world.EntityManager.Exists(_entity))
+            {
+                _world.EntityManager.DestroyEntity(_entity);
+            }
         }
     }
 }

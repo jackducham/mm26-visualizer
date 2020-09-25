@@ -19,13 +19,13 @@ MonoBehaviour:
       Rows: 3
       Grid:
       - TileType: 1
-        GroundSprite: mm26_tiles/darktree3.png
-        AboveSprite: 
-        HasItems: 1
+        GroundSprite: mm26_tiles/dirt1.png
+        AboveSprite: mm26_tiles/darktree1.png
+        HasItems: 0
       - TileType: 1
         GroundSprite: mm26_tiles/dirt2.png
         AboveSprite: 
-        HasItems: 0
+        HasItems: 1
       - TileType: 1
         GroundSprite: mm26_tiles/arch rear right.png
         AboveSprite: 

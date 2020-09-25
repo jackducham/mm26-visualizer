@@ -26,12 +26,6 @@ namespace MM26
             _sceneLifeCycle.BoardCreated.RemoveListener(this.OnBoardCreated);
             _sceneLifeCycle.DataFetched.RemoveListener(this.OnDataFetched);
             _sceneLifeCycle.Reset.Invoke();
-
-            // Properly clean up ECS entities
-            foreach (World world in World.All)
-            {
-                world.EntityManager.DestroyEntity(world.EntityManager.UniversalQuery);
-            }
         }
 
         private void Start()

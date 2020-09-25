@@ -9,7 +9,7 @@ namespace MM26.Board
     [CreateAssetMenu(fileName = "BoardPositionLookUp", menuName = "Board/Board Position Lookup")]
     public class BoardPositionLookUp : ScriptableObject
     {
-        public Tilemap Tilemap { get; set; } = null;
+        public Grid Grid { get; set; } = null;
 
         /// <summary>
         /// Given a tilemap position, translate to game position
@@ -18,12 +18,12 @@ namespace MM26.Board
         /// <returns>game position</returns>
         public virtual Vector3 Translate(Vector3Int position)
         {
-            return this.Tilemap.GetCellCenterWorld(position);
+            return this.Grid.GetCellCenterWorld(position);
         }
 
         public void Reset()
         {
-            this.Tilemap = null;
+            this.Grid = null;
         }
     }
 }

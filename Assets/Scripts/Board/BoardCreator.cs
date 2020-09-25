@@ -40,7 +40,13 @@ namespace MM26.Board
 
         [Header("Others")]
         [SerializeField]
-        private Tilemap _tilemap = null;
+        private Grid _grid = null;
+
+        [SerializeField]
+        private Tilemap _aboveTilemap = null;
+
+        [SerializeField]
+        private Tilemap _groundTilemap = null;
 
         [SerializeField]
         private CharactersManager _charactersManager = null;
@@ -67,9 +73,7 @@ namespace MM26.Board
             this.CreateMap();
             this.CreateCharacters();
 
-            _positionLookUp.Tilemap = _tilemap;
-
-            _sceneLifeCycle.BoardCreated.Invoke();
+            _positionLookUp.Grid = _grid;
         }
 
         /// <summary>
@@ -78,8 +82,6 @@ namespace MM26.Board
         private void CreateMap()
         {
             var board = _data.Initial.State.BoardNames[_sceneConfiguration.BoardName];
-
-            _treasureTrovesManager.Initialize(board.Rows, board.Columns);
 
             for (int y = 0; y < board.Rows; y++)
             {
@@ -100,13 +102,13 @@ namespace MM26.Board
                     if (ptile.GroundSprite != "")
                     {
                         Tile tile = _tileDatabase.GetTile(ptile.GroundSprite);
-                        _tilemap.SetTile(new Vector3Int(x, y, 0), tile);
+                        _groundTilemap.SetTile(new Vector3Int(x, y, 0), tile);
                     }
 
                     if (ptile.AboveSprite != "")
                     {
                         Tile tile = _tileDatabase.GetTile(ptile.AboveSprite);
-                        _tilemap.SetTile(new Vector3Int(x, y, -1), tile);
+                        _aboveTilemap.SetTile(new Vector3Int(x, y, -1), tile);
                     }
                 }
             }
