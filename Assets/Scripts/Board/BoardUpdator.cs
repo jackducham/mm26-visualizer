@@ -2,6 +2,7 @@
 using MM26.ECS;
 using MM26.Tasks;
 using MM26.Configuration;
+using MM26.Components;
 
 namespace MM26.Board
 {
@@ -55,7 +56,15 @@ namespace MM26.Board
                 task.IsFinished = true;
                 _mailbox.RemoveTask(task);
 
-                _charactersManager.CreatePlayer(task.Position, task.EntityName);
+                GameObject player = _charactersManager.CreatePlayer(
+                    task.Position,
+                    task.EntityName);
+
+                var hub = player.GetComponent<Hub>();
+
+                hub.Level = task.Level;
+                hub.Health = task.Health;
+                hub.Experience = task.Experience;
             }
         }
 
@@ -69,10 +78,16 @@ namespace MM26.Board
                 task.IsFinished = true;
                 _mailbox.RemoveTask(task);
 
-                _charactersManager.CreateMonster(
+                GameObject monster = _charactersManager.CreateMonster(
                     task.Position,
                     task.EntityName,
                     _spriteLookUp.GetSprite(task.Sprite));
+
+                var hub = monster.GetComponent<Hub>();
+
+                hub.Level = task.Level;
+                hub.Health = task.Health;
+                hub.Experience = task.Experience;
             }
         }
 

@@ -23,6 +23,8 @@ namespace MM26.Play.Tests
                 Character = new Character()
                 {
                     CurrentHealth = 17,
+                    Level = 17,
+                    Experience = 17,
                     Position = new Position()
                     {
                         BoardId = playerBoard,
@@ -36,7 +38,9 @@ namespace MM26.Play.Tests
             {
                 Character = new Character()
                 {
-                    CurrentHealth = 10,
+                    CurrentHealth = 17,
+                    Level = 17,
+                    Experience = 17,
                     Sprite = "monster.png",
                     Position = new Position()
                     {
@@ -85,8 +89,18 @@ namespace MM26.Play.Tests
                 {
                     new EffectTask(EffectType.Spawn, new Vector3Int(1, 1, 0)),
                     new EffectTask(EffectType.Spawn, new Vector3Int(0, 1, 0)),
-                    new SpawnPlayerTask("player", new Vector3Int(1, 1, 0)),
+                    new SpawnPlayerTask("player", new Vector3Int(1, 1, 0))
+                    {
+                        Health = 17,
+                        Level = 17,
+                        Experience = 17,
+                    },
                     new SpawnMonsterTask("monster", new Vector3Int(0, 1, 0), "monster.png")
+                    {
+                        Health = 17,
+                        Level = 17,
+                        Experience = 17,
+                    }
                 }
             };
         }

@@ -41,17 +41,17 @@ namespace MM26.Systems.UpdateHubTask
                     {
                         if (task.Health.HasValue)
                         {
-                            hub.HealthLabel.text = $"Health: {task.Health}";
+                            hub.Health = task.Health.Value;
                         }
 
                         if (task.Level.HasValue)
                         {
-                            hub.LevelLabel.text = $"Level: {task.Level}";
+                            hub.Level = task.Level.Value;
                         }
 
                         if (task.Experience.HasValue)
                         {
-                            hub.ExperienceLabel.text = $"Experience: {task.Experience}";
+                            hub.Experience = task.Experience.Value;
                         }
 
                         task.IsFinished = true;

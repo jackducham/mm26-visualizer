@@ -14,16 +14,20 @@ namespace MM26.Board
         [SerializeField]
         private GameObject _monsterPrefab = null;
 
-        public void CreateMonster(Vector3Int position, string name, Sprite sprite)
+        public GameObject CreateMonster(Vector3Int position, string name, Sprite sprite)
         {
             GameObject monster = this.CreateCharacter(this._monsterPrefab, position, name);
             monster.GetComponent<SpriteRenderer>().sprite = sprite;
+
+            return monster;
         }
 
-        public void CreatePlayer(Vector3Int position, string name)
+        public GameObject CreatePlayer(Vector3Int position, string name)
         {
             GameObject player = this.CreateCharacter(this._playerPrefab, position, name);
             var inventory = player.GetComponent<Inventory>();
+
+            return player;
         }
 
         /// <summary>

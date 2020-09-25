@@ -125,11 +125,21 @@ namespace MM26.Play
 
                     if (isMonster)
                     {
-                        batch.Add(new SpawnMonsterTask(entity, position, character.Sprite));
+                        batch.Add(new SpawnMonsterTask(entity, position, character.Sprite)
+                        {
+                            Health = character.CurrentHealth,
+                            Level = character.Level,
+                            Experience = character.Experience
+                        });
                     }
                     else
                     {
-                        batch.Add(new SpawnPlayerTask(entity, position));
+                        batch.Add(new SpawnPlayerTask(entity, position)
+                        {
+                            Health = character.CurrentHealth,
+                            Level = character.Level,
+                            Experience = character.Experience
+                        });
                     }
 
                     batch.Add(new EffectTask(EffectType.Spawn, position));
@@ -160,11 +170,21 @@ namespace MM26.Play
                     {
                         if (isMonster)
                         {
-                            batch.Add(new SpawnMonsterTask(entity, position, character.Sprite));
+                            batch.Add(new SpawnMonsterTask(entity, position, character.Sprite)
+                            {
+                                Health = character.CurrentHealth,
+                                Level = character.Level,
+                                Experience = character.Experience
+                            });
                         }
                         else
                         {
-                            batch.Add(new SpawnPlayerTask(entity, position));
+                            batch.Add(new SpawnPlayerTask(entity, position)
+                            {
+                                Health = character.CurrentHealth,
+                                Level = character.Level,
+                                Experience = character.Experience
+                            });
                         }
                     }
 

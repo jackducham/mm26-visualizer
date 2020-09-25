@@ -127,7 +127,7 @@ namespace MM26.Board
         {
             foreach (var entry in _data.Initial.State.PlayerNames)
             {
-                PPlayer player = entry.Value;
+                PPlayer pplayer = entry.Value;
                 PCharacter character = entry.Value.Character;
                 PPosition position = character.Position;
 
@@ -136,7 +136,15 @@ namespace MM26.Board
                     continue;
                 }
 
-                this._charactersManager.CreatePlayer(new Vector3Int(position.X, position.Y, 0), character.Name);
+                GameObject player = this._charactersManager.CreatePlayer(
+                    new Vector3Int(position.X, position.Y, 0),
+                    character.Name);
+
+                var hub = player.GetComponent<Hub>();
+
+                hub.Level = character.Level;
+                hub.Health = character.CurrentHealth;
+                hub.Experience = character.Experience;
             }
 
             foreach (var entry in _data.Initial.State.MonsterNames)
@@ -151,10 +159,16 @@ namespace MM26.Board
 
                 Sprite monsterSprite = _tileDatabase.GetSprite(character.Sprite);
 
-                this._charactersManager.CreateMonster(
+                GameObject monster = this._charactersManager.CreateMonster(
                     new Vector3Int(position.X, position.Y, 0),
                     character.Name,
                     monsterSprite);
+
+                var hub = monster.GetComponent<Hub>();
+
+                hub.Health = character.CurrentHealth;
+                hub.Experience = character.Experience;
+                hub.Level = character.Level;
             }
         }
     }

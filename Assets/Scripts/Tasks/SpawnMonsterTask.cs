@@ -8,6 +8,9 @@ namespace MM26.Tasks
     {
         public readonly Vector3Int Position;
         public string Sprite;
+        public int Health;
+        public int Level;
+        public int Experience;
 
         public SpawnMonsterTask(string entity, Vector3Int position, string sprite) : base(entity)
         {
@@ -22,6 +25,9 @@ namespace MM26.Tasks
             hash.Add(base.GetHashCode());
             hash.Add(this.Position.GetHashCode());
             hash.Add(this.Sprite.GetHashCode());
+            hash.Add(this.Health.GetHashCode());
+            hash.Add(this.Level.GetHashCode());
+            hash.Add(this.Experience.GetHashCode());
 
             return hash.Value;
         }
@@ -41,7 +47,10 @@ namespace MM26.Tasks
             SpawnMonsterTask task = (SpawnMonsterTask)obj;
 
             return this.Position == task.Position
-                && this.Sprite == task.Sprite;
+                && this.Sprite == task.Sprite
+                && this.Health == task.Health
+                && this.Level == task.Level
+                && this.Experience == task.Experience;
         }
     }
 }

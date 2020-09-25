@@ -13,6 +13,9 @@ namespace MM26.Tasks
         /// The position of spawning
         /// </summary>
         public readonly Vector3Int Position;
+        public int Health;
+        public int Level;
+        public int Experience;
 
         public SpawnPlayerTask(string entity, Vector3Int position) : base(entity)
         {
@@ -25,6 +28,9 @@ namespace MM26.Tasks
 
             hash.Add(base.GetHashCode());
             hash.Add(this.Position.GetHashCode());
+            hash.Add(this.Health.GetHashCode());
+            hash.Add(this.Level.GetHashCode());
+            hash.Add(this.Experience.GetHashCode());
 
             return hash.Value;
         }
@@ -43,7 +49,10 @@ namespace MM26.Tasks
 
             SpawnPlayerTask task = (SpawnPlayerTask)obj;
 
-            return this.Position == task.Position;
+            return this.Position == task.Position
+                && this.Health == task.Health
+                && this.Level == task.Level
+                && this.Experience == task.Experience;
         }
     }
 }
