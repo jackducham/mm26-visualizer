@@ -45,27 +45,27 @@ namespace MM26.Systems.UpdateInventoryTask
                 {
                     if (_tasks.TryGetValue(character.name, out Tasks.UpdateInventoryTask task))
                     {
-                        if (task.shoes_changed.HasValue)
+                        if (task.shoes_changed)
                         {
                             inventory.Bottom = _spriteDatabase.GetWearable(task.Bottom);
                         }
 
-                        if(task.clothes_changed.HasValue)
+                        if(task.clothes_changed)
                         {
                             inventory.Top = _spriteDatabase.GetWearable(task.Top);
                         }
 
-                        if(task.hat_changed.HasValue)
+                        if(task.hat_changed)
                         {
                             inventory.Head = _spriteDatabase.GetWearable(task.Head);
                         }
 
-                        if(task.accesory_changed.HasValue)
+                        if(task.accesory_changed)
                         {
                             inventory.Accessory = _spriteDatabase.GetWearable(task.Accessory);
                         }
 
-                        if(task.weapon_changed.HasValue)
+                        if(task.weapon_changed)
                         {
                             inventory.Weapon = _spriteDatabase.GetWearable(task.Weapon);
                         }

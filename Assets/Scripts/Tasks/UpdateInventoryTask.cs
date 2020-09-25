@@ -6,11 +6,11 @@ namespace MM26.Tasks
 {
     public sealed class UpdateInventoryTask : Task
     {
-        public bool? hat_changed;
-        public bool? clothes_changed;
-        public bool? shoes_changed;
-        public bool? weapon_changed;
-        public bool? accesory_changed;
+        public bool hat_changed = false;
+        public bool clothes_changed = false;
+        public bool shoes_changed = false;
+        public bool weapon_changed = false;
+        public bool accesory_changed = false;
         
         public string Head = "";
         public string Top = "";
@@ -46,7 +46,6 @@ namespace MM26.Tasks
         {
             if (!(obj is UpdateInventoryTask))
             {
-                //Debug.LogError(obj);
                 return false;
             }
 

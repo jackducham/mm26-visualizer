@@ -206,6 +206,15 @@ namespace MM26.Play
                         }
                     }
                     break;
+                //case DecisionType.Equip:
+                //    if (character.Position.BoardId == sceneConfiguration.BoardName && !isMonster)
+                //    {
+                //        batch.Add(new UpdateInventoryTask(entity)
+                //        {
+                //            characterChange.
+                //        });
+                //    }
+                //    break;
                 case DecisionType.None:
                     break;
                 default:
