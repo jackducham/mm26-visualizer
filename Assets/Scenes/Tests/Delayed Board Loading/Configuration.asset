@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e506a4435e7541fba31c83ae7959a03, type: 3}
   m_Name: Configuration
   m_EditorClassIdentifier: 
-  BoardName: pvp
+  BoardName: player
   WebSocketURL: 

@@ -117,24 +117,31 @@ namespace MM26.Configuration
 
         public Tile GetTile(string path)
         {
-            // some path might have all cap extensions, but the path
-            // found by SpriteLookUpEditor all have lower case extension
-            string directory = Path.GetDirectoryName(path);
-            string filename = Path.GetFileNameWithoutExtension(path);
-            string extension = Path.GetExtension(path).ToLower();
-
-            path = directory + "/" + $"{filename}{extension}";
-
-            if (_tiles.TryGetValue(path, out Tile tile))
+            try
             {
-                return tile;
-            }
-#if UNITY_EDITOR
-            // Please preserve this comment
-            Debug.LogWarningFormat("Tile at {0} is not found!", path);
-#endif
+                // some path might have all cap extensions, but the path
+                // found by SpriteLookUpEditor all have lower case extension
+                string directory = Path.GetDirectoryName(path);
+                string filename = Path.GetFileNameWithoutExtension(path);
+                string extension = Path.GetExtension(path).ToLower();
 
-            return _fallbackTile;
+                path = directory + "/" + $"{filename}{extension}";
+
+                if (_tiles.TryGetValue(path, out Tile tile))
+                {
+                    return tile;
+                }
+
+#if UNITY_EDITOR
+                // Please preserve this comment
+                Debug.LogWarningFormat("Tile at {0} is not found!", path);
+#endif
+                return _fallbackTile;
+            }
+            catch (Exception)
+            {
+                return _fallbackTile;
+            }
         }
 
         public Sprite GetSprite(string path)
