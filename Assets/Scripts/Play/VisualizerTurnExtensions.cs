@@ -57,6 +57,11 @@ namespace MM26.Play
             TasksBatch batch,
             HashSet<string> ignoreForHubUpdate)
         {
+            if (gameChange == null || gameState == null)
+            {
+                return;
+            }
+
             foreach (var pair in gameChange.CharacterChanges)
             {
                 string entity = pair.Key;
@@ -229,6 +234,11 @@ namespace MM26.Play
             GameChange gameChange,
             TasksBatch batch)
         {
+            if (gameChange == null || gameState == null)
+            {
+                return;
+            }
+
             if (!gameState.BoardNames.ContainsKey(configuration.BoardName))
             {
                 return;
@@ -266,6 +276,11 @@ namespace MM26.Play
             GameState gameState,
             HashSet<string> ignoreForHubUpdate)
         {
+            if (gameState == null)
+            {
+                return;
+            }
+
             foreach (var pair in gameState.PlayerNames)
             {
                 string entity = pair.Key;

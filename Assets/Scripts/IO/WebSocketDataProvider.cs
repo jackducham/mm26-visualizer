@@ -83,8 +83,6 @@ namespace MM26.IO
             {
                 _data.Initial = VisualizerInitial.Parser.ParseFrom(message);
 
-                Debug.Log(_data.Initial.State.BoardNames.Keys.Count);
-
                 _sceneLifeCycle.DataFetched.Invoke();
             }
             else

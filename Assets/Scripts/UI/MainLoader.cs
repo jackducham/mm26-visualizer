@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using MM26.Utilities;
 
 namespace MM26.UI
 {
@@ -16,15 +17,25 @@ namespace MM26.UI
         private string _sceneName = "Main";
 
         [SerializeField]
-        private TextMeshProUGUI _url = null;
+        TMP_InputField _urlField = null;
 
         [SerializeField]
-        private TextMeshProUGUI _boardName = null;
+        TMP_InputField _boardNameField = null;
+
+        private void Start()
+        {
+            _urlField.text = "ws://engine-main.mechmania.io:8081/visualizer";
+            _boardNameField.text = "pvp";
+
+            _sceneConfiguration.WebSocketURL = "ws://engine-main.mechmania.io:8081/visualizer";
+            _sceneConfiguration.BoardName = "pvp";
+        }
 
         public void OnLoadClick()
         {
-            _sceneConfiguration.WebSocketURL = _url.text;
-            _sceneConfiguration.BoardName = _boardName.text;
+            _sceneConfiguration.WebSocketURL = _urlField.text.KeepVisibles();
+            _sceneConfiguration.BoardName = _boardNameField.text.KeepVisibles();
+
             SceneManager.LoadScene(_sceneName);
         }
     }
