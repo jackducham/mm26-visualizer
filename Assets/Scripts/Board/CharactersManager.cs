@@ -14,6 +14,9 @@ namespace MM26.Board
         [SerializeField]
         private GameObject _monsterPrefab = null;
 
+        [SerializeField]
+        private BoardPositionLookUp _boardPositionLookUp = null;
+
         public GameObject CreateMonster(Vector3Int position, string name, Sprite sprite)
         {
             GameObject monster = this.CreateCharacter(this._monsterPrefab, position, name);
@@ -39,7 +42,7 @@ namespace MM26.Board
         /// <param name="name">the name of the player</param>
         private GameObject CreateCharacter(GameObject prefab, Vector3Int position, string name)
         {
-            Vector3 wordPosition = this.Tilemap.GetCellCenterWorld(position);
+            Vector3 wordPosition = _boardPositionLookUp.Translate(position);
 
             GameObject character = Instantiate(prefab, wordPosition, new Quaternion());
 

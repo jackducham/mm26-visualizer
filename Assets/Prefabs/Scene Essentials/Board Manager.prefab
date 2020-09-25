@@ -707,6 +707,8 @@ MonoBehaviour:
     type: 3}
   _monsterPrefab: {fileID: 1555258926759968227, guid: 78cd5a4a07e6b41e6ad1766186234769,
     type: 3}
+  _boardPositionLookUp: {fileID: 11400000, guid: 2be8fc4b715a646b18ec12963535586d,
+    type: 2}
 --- !u!114 &4565820777754228388
 MonoBehaviour:
   m_ObjectHideFlags: 0
