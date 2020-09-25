@@ -28,7 +28,7 @@ namespace MM26.Systems
         {
             this.Entities
                 .WithoutBurst()
-                .ForEach((Transform transform, CameraSettings cameraSetting, CameraControl control) =>
+                .ForEach((Camera camera, CameraSettings cameraSetting, CameraControl control) =>
                 {
                     float deltaTime = Time.DeltaTime;
                     var input = _input.Camera.Movement.ReadValue<Vector2>();
@@ -36,11 +36,11 @@ namespace MM26.Systems
                     Vector3 translation = new Vector3(input.x, input.y);
                     translation *= deltaTime;
 
-                    translation.x *= cameraSetting.MoveSpeed.x;
-                    translation.y *= cameraSetting.MoveSpeed.y;
-                    translation.z *= cameraSetting.MoveSpeed.z;
+                    translation.x *= cameraSetting.MoveSpeed.x * camera.orthographicSize;
+                    translation.y *= cameraSetting.MoveSpeed.y * camera.orthographicSize;
+                    translation.z *= cameraSetting.MoveSpeed.z * camera.orthographicSize;
 
-                    transform.Translate(translation);
+                    camera.transform.Translate(translation);
                 })
                 .Run();
         }
