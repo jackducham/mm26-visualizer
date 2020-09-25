@@ -39,6 +39,10 @@ namespace MM26.Board
         [SerializeField]
         private BoardPositionLookUp _positionLookUp = null;
 
+        [Header("UI")]
+        [SerializeField]
+        private Canvas _waitingCanvas = null;
+
         [Header("Others")]
         [SerializeField]
         private Grid _grid = null;
@@ -55,6 +59,12 @@ namespace MM26.Board
         [SerializeField]
         private TreasureTrovesManager _treasureTrovesManager = null;
 
+        private bool _loaded = false;
+
+        private void Awake()
+        {
+            _waitingCanvas.enabled = true;
+        }
 
         private void OnEnable()
         {
@@ -66,6 +76,23 @@ namespace MM26.Board
             _sceneLifeCycle.CreateBoard.RemoveListener(this.OnCreateMap);
         }
 
+        private void Update()
+        {
+            if (!_loaded && _data.Turns.Count > 0)
+            {
+                IO.Models.GameState state = _data.Turns.Peek().State;
+
+                if (state.BoardNames.ContainsKey(_sceneConfiguration.BoardName))
+                {
+                    this.CreateMap(state);
+                    this.CreateCharacters(state);
+
+                    _loaded = true;
+                    _waitingCanvas.enabled = false;
+                }
+            }
+        }
+
         /// <summary>
         /// Event handler for <c>_sceneLifeCycle.CreateBoard</c>
         /// </summary>
@@ -73,17 +100,22 @@ namespace MM26.Board
         {
             if (_data.Initial.State.BoardNames.ContainsKey(_sceneConfiguration.BoardName))
             {
-                this.CreateMap();
-                this.CreateCharacters();
+                this.CreateMap(_data.Initial.State);
+                this.CreateCharacters(_data.Initial.State);
+
+                _loaded = true;
+                _waitingCanvas.enabled = false;
             }
+
+            _sceneLifeCycle.BoardCreated.Invoke();
         }
 
         /// <summary>
         /// Helper function for creating the board
         /// </summary>
-        private void CreateMap()
+        private void CreateMap(IO.Models.GameState state)
         {
-            var board = _data.Initial.State.BoardNames[_sceneConfiguration.BoardName];
+            var board = state.BoardNames[_sceneConfiguration.BoardName];
 
             _positionLookUp.Grid = _grid;
             _positionLookUp.Height = board.Height;
@@ -123,9 +155,9 @@ namespace MM26.Board
         /// <summary>
         /// Helper function for creating players
         /// </summary>
-        private void CreateCharacters()
+        private void CreateCharacters(IO.Models.GameState state)
         {
-            foreach (var entry in _data.Initial.State.PlayerNames)
+            foreach (var entry in state.PlayerNames)
             {
                 PPlayer pplayer = entry.Value;
                 PCharacter character = entry.Value.Character;

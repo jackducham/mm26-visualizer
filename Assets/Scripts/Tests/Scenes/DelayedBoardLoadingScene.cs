@@ -26,13 +26,24 @@ namespace MM26.Tests.Scenes
 
             board.Grid.Add(new Tile()
             {
-                GroundSprite = "mm26_tiles/dirt1.png"
+                GroundSprite = "mm26_tiles/dirt1.png",
+                TileType = Tile.Types.TileType.Blank,
             });
 
             state.BoardNames["pvp"] = board;
 
             initial.State = state;
             _data.Initial = initial;
+
+            _lifeCycle.FetchData.Invoke();
+            _lifeCycle.DataFetched.Invoke();
+
+            StartCoroutine(this.Simulate(board));
+        }
+
+        private IEnumerator Simulate(IO.Models.Board board)
+        {
+            yield return new WaitForSecondsRealtime(2.0f);
 
             var turn1State = new GameState();
             turn1State.BoardNames["player"] = board;
@@ -46,9 +57,6 @@ namespace MM26.Tests.Scenes
             {
                 State = turn1State
             });
-
-            _lifeCycle.FetchData.Invoke();
-            _lifeCycle.DataFetched.Invoke();
         }
     }
 }
