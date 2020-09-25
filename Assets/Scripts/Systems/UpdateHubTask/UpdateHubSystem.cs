@@ -24,6 +24,8 @@ namespace MM26.Systems.UpdateHubTask
 
         protected override void OnUpdate()
         {
+            _tasks.Clear();
+
             Tasks.UpdateHubTask[] tasks = _mailbox.GetSubscribedTasksForType<Tasks.UpdateHubTask>(this);
 
             for (int i = 0; i < tasks.Length; i++)
