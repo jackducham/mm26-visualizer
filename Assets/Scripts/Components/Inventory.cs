@@ -22,80 +22,34 @@ namespace MM26.Components
         [SerializeField]
         private SpriteRenderer _weapon = null;
 
-
-        /// <summary>
-        /// Sets the sprite of an equipment, and returns the previous sprite in that slot
-        /// </summary>
-        /// <param name="sprite">new sprite</param>
-        /// <param name="slot">the slot of the item to be removed</param>
-        /// <returns>the previous item in specified slot</returns>
-        public Sprite SetEquipment(Sprite sprite, string slot)
+        public Sprite Bottom
         {
-            Sprite pop = null;
-            switch (slot)
-            {
-                case "shoes":
-                    pop = _bottom.sprite;
-                    _bottom.sprite = sprite;
-                    break;
-                case "clothes":
-                    pop = _top.sprite;
-                    _top.sprite = sprite;
-                    break;
-                case "hats":
-                    pop = _head.sprite;
-                    _head.sprite = sprite;
-                    break;
-                case "accessories":
-                    pop = _accessory.sprite;
-                    _accessory.sprite = sprite;
-                    break;
-                case "weapons":
-                    pop = _weapon.sprite;
-                    _weapon.sprite = sprite;
-                    break;
-                default:
-                    Debug.LogError("Non-Classified equipment!");
-                    break;
-            }
-            return pop;
+            get => _bottom.sprite;
+            set => _bottom.sprite = value;
         }
 
-        /// <summary>
-        /// Removes an item from equipment and returns the sprite to that item
-        /// </summary>
-        /// <param name="slot">the slot of the item to be removed</param>
-        /// <returns>the previous item in specified slot</returns>
-        public Sprite RemoveItem(string slot)
+        public Sprite Top
         {
-            Sprite pop = null;
-            switch (slot)
-            {
-                case "shoes":
-                    pop = _bottom.sprite;
-                    _bottom.sprite = null;
-                    break;
-                case "clothes":
-                    pop = _top.sprite;
-                    _top.sprite = null;
-                    break;
-                case "hats":
-                    pop = _head.sprite;
-                    _head.sprite = null;
-                    break;
-                case "accessories":
-                    pop = _accessory.sprite;
-                    _accessory.sprite = null;
-                    break;
-                case "weapons":
-                    pop = _weapon.sprite;
-                    _weapon.sprite = null;
-                    break;
-                default:
-                    Debug.LogError("Non-Classified equipment!");
-                    break;
-            }
-            return pop;
+            get => _top.sprite;
+            set => _top.sprite = value;
+        }
+
+        public Sprite Head
+        {
+            get => _head.sprite;
+            set => _head.sprite = value;
+        }
+
+        public Sprite Accessory
+        {
+            get => _accessory.sprite;
+            set => _accessory.sprite = value;
+        }
+
+        public Sprite Weapon
+        {
+            get => _weapon.sprite;
+            set => _weapon.sprite = value;
         }
     }
 }
