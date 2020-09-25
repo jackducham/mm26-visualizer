@@ -59,8 +59,6 @@ namespace MM26.IO
 
             _listener = WebSocketListener.Platform;
 
-            Debug.LogFormat("thread id = {0}", System.Threading.Thread.CurrentThread.ManagedThreadId);
-
             _listener.NewMessage += this.OnMessage;
             _listener.Connect(new Uri(_sceneConfiguration.WebSocketURL), this.OnConnection, this.OnError);
         }

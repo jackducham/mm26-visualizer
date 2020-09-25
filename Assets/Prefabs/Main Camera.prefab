@@ -426,6 +426,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: {x: 5, y: 5, z: 0}
   ZoomSpeed: 1
+  MaxZoom: 40
+  MinZoom: 2
 --- !u!114 &3365481555269974696
 MonoBehaviour:
   m_ObjectHideFlags: 0
