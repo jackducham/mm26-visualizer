@@ -44,8 +44,8 @@ namespace MM26.Configuration
         public string WearablesPath = "Assets/Sprites/mm26_wearables/";
 
         Dictionary<string, Tile> _tiles = null;
-        Dictionary<string, Sprite> _sprites = null;
-        Dictionary<string, string> _spriteSlots = null;
+        Dictionary<string, Sprite> _wearables = null;
+        Dictionary<string, string> _wearableSlots = null;
 
         private void OnEnable()
         {
@@ -55,8 +55,8 @@ namespace MM26.Configuration
         public void InitializeDictionaries()
         {
             _tiles = new Dictionary<string, Tile>();
-            _sprites = new Dictionary<string, Sprite>();
-            _spriteSlots = new Dictionary<string, string>();
+            _wearables = new Dictionary<string, Sprite>();
+            _wearableSlots = new Dictionary<string, string>();
 
             foreach (TileEntry entry in this.TileEntries)
             {
@@ -65,8 +65,8 @@ namespace MM26.Configuration
 
             foreach (WearableEntry entry in this.WearableEntries)
             {
-                _sprites[entry.Path] = entry.Sprite;
-                _spriteSlots[entry.Path] = entry.Slot;
+                _wearables[entry.Path] = entry.Sprite;
+                _wearableSlots[entry.Path] = entry.Slot;
             }
         }
 
