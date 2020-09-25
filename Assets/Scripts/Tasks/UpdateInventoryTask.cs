@@ -12,11 +12,11 @@ namespace MM26.Tasks
         public bool? weapon_changed;
         public bool? accesory_changed;
         
-        public string Head;
-        public string Top;
-        public string Bottom; 
-        public string Weapon;
-        public string Accessory;
+        public string Head = "";
+        public string Top = "";
+        public string Bottom = ""; 
+        public string Weapon = "";
+        public string Accessory = "";
 
         public UpdateInventoryTask(string entity) : base(entity)
         {
@@ -38,13 +38,15 @@ namespace MM26.Tasks
             hash.Add(this.Bottom.GetHashCode());
             hash.Add(this.Weapon.GetHashCode());
             hash.Add(this.Accessory.GetHashCode());
+
             return hash.Value;
         }
 
         public override bool Equals(object obj)
         {
-            if (!(obj is UpdateHubTask))
+            if (!(obj is UpdateInventoryTask))
             {
+                //Debug.LogError(obj);
                 return false;
             }
 
@@ -67,9 +69,9 @@ namespace MM26.Tasks
                 && this.Accessory == other.Accessory;
         }
 
-        public override string ToString()
-        {
-            return JsonUtility.ToJson(this);
-        }
+        //public override string ToString()
+        //{
+        //    return JsonUtility.ToJson(this);
+        //}
     }
 }

@@ -10,9 +10,10 @@ namespace MM26.Play.Tests
     {
         private VisualizerTurn GetTurn(string playerBoard)
         {
-            var state = new GameState();
+            GameState gameState = new GameState();
+            GameChange gameChange = new GameChange();
 
-            state.PlayerNames["player"] = new Player()
+            gameState.PlayerNames["player"] = new Player()
             {
                 Character = new Character()
                 {
@@ -28,7 +29,7 @@ namespace MM26.Play.Tests
                 }
             };
 
-            state.MonsterNames["monster"] = new Monster()
+            gameState.MonsterNames["monster"] = new Monster()
             {
                 Character = new Character()
                 {
@@ -44,10 +45,20 @@ namespace MM26.Play.Tests
                 }
             };
 
+            gameChange.CharacterChanges["player"] = new CharacterChange()
+            {
+                Respawned = false,
+                Died = false,
+                Decision = new CharacterDecision()
+                {
+                    DecisionType = DecisionType.Equip
+                }
+            };
+
             var turn = new VisualizerTurn()
             {
-                State = state,
-                Change = new GameChange()
+                State = gameState,
+                Change = gameChange
             };
 
             return turn;
@@ -63,11 +74,14 @@ namespace MM26.Play.Tests
                     new UpdateInventoryTask("player")
                     {
                         hat_changed = true,
-                        clothes_changed = true,
-
-                        Top = "mm26_wearables/clothes/maid_top_alt.png",
                         Head = "mm26_wearables/hats/butler_head.png"
-                    }
+                    },
+                    new UpdateInventoryTask("player")
+                    {
+                        clothes_changed = true,
+                        Top = "mm26_wearables/clothes/butler_top.png"
+                    },
+
                 }
             };
         }
