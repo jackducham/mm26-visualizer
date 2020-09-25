@@ -82,4 +82,9 @@ MonoBehaviour:
         Grid: []
       Characters: []
     Change:
-      CharacterChanges: []
+      CharacterChanges:
+      - Entity: Player A
+        Died: 0
+        Respawned: 0
+        DecisionType: 5
+        Path: []
