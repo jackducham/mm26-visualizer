@@ -157,11 +157,12 @@ namespace MM26.UI
         private FollowTransform MakeFollowTransform(string name)
         {
             GameObject follow = GameObject.Find(name);
+            Vector3 offset = this.transform.position - follow.transform.position;
 
             return new FollowTransform()
             {
                 Target = follow.transform,
-                Offset = this.transform.position - follow.transform.position
+                Offset = new Vector3(0, 0, offset.z)
             };
         }
     }

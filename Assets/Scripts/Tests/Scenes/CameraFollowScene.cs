@@ -10,9 +10,32 @@ namespace MM26.Tests.Scenes
         [SerializeField]
         Mailbox _mailbox = null;
 
+        [SerializeField]
+        IO.Data _data = null;
+
+        [SerializeField]
+        SceneLifeCycle _sceneLifeCycle = null;
+
         private void Start()
         {
-            _mailbox.SendTask(new SpawnPlayerTask("player", new Vector3Int()));
+            var state = new IO.Models.GameState();
+            state.BoardNames["pvp"] = new IO.Models.Board()
+            {
+                Height = 1,
+                Width = 1
+            };
+
+            state.BoardNames["pvp"].Grid.Add(new IO.Models.Tile());
+
+            _data.Initial = new IO.Models.VisualizerInitial()
+            {
+                State = state
+            };
+
+            _sceneLifeCycle.DataFetched.Invoke();
+
+
+            _mailbox.SendTask(new SpawnPlayerTask("Player", new Vector3Int()));
             StartCoroutine(this.Simulate());
         }
 
@@ -20,7 +43,7 @@ namespace MM26.Tests.Scenes
         {
             yield return new WaitForSecondsRealtime(5.0f);
 
-            _mailbox.SendTask(new FollowPathTask("player", new Vector3[]
+            _mailbox.SendTask(new FollowPathTask("Player", new Vector3[]
             {
                 new Vector3(0.0f, 1.0f),
                 new Vector3(0.0f, 2.0f),
