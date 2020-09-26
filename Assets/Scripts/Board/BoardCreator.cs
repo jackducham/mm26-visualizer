@@ -178,7 +178,7 @@ namespace MM26.Board
                 hub.Experience = character.Experience;
             }
 
-            foreach (var entry in _data.Initial.State.MonsterNames)
+            foreach (var entry in state.MonsterNames)
             {
                 PCharacter character = entry.Value.Character;
                 PPosition position = character.Position;
