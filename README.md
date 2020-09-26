@@ -21,6 +21,7 @@ will see "Waiting..." on screen.
 
 - Use `W, A, S, D` to move around in scene
 - Use mouse wheel or correspondig trackpad gesture to zoom in and out
+- Move mouse over characters to see their status
 - Press `ESC` to bring up in game options
   - To follow a player, type player name in the text box and click on `Follow`; this will 
     disable `W, A, S, D` control
