@@ -29,48 +29,52 @@ namespace MM26.IO.Models {
             "BXNob2VzGAUgASgLMgsuaXRlbS5TaG9lc0gAEh4KBndlYXBvbhgGIAEoCzIM",
             "Lml0ZW0uV2VhcG9uSAASJgoKY29uc3VtYWJsZRgHIAEoCzIQLml0ZW0uQ29u",
             "c3VtYWJsZUgAEiQKCWFjY2Vzc29yeRgIIAEoCzIPLml0ZW0uQWNjZXNzb3J5",
-            "SABCBgoEaXRlbSJRCgdDbG90aGVzEhEKCW1heF9zdGFjaxgBIAEoBRIjCgVz",
+            "SABCBgoEaXRlbSJsCgdDbG90aGVzEhEKCW1heF9zdGFjaxgBIAEoBRIjCgVz",
             "dGF0cxgCIAEoCzIULml0ZW0uU3RhdHVzTW9kaWZpZXISDgoGc3ByaXRlGAMg",
-            "ASgJInYKA0hhdBIRCgltYXhfc3RhY2sYASABKAUSIwoFc3RhdHMYAiABKAsy",
-            "FC5pdGVtLlN0YXR1c01vZGlmaWVyEicKDG1hZ2ljX2VmZmVjdBgDIAEoDjIR",
-            "Lml0ZW0uTWFnaWNFZmZlY3QSDgoGc3ByaXRlGAQgASgJImwKCUFjY2Vzc29y",
-            "eRIRCgltYXhfc3RhY2sYASABKAUSIwoFc3RhdHMYAiABKAsyFC5pdGVtLlN0",
-            "YXR1c01vZGlmaWVyEicKDG1hZ2ljX2VmZmVjdBgDIAEoDjIRLml0ZW0uTWFn",
-            "aWNFZmZlY3QiTwoFU2hvZXMSEQoJbWF4X3N0YWNrGAEgASgFEiMKBXN0YXRz",
-            "GAIgASgLMhQuaXRlbS5TdGF0dXNNb2RpZmllchIOCgZzcHJpdGUYAyABKAki",
-            "twEKBldlYXBvbhIRCgltYXhfc3RhY2sYASABKAUSIwoFc3RhdHMYAiABKAsy",
-            "FC5pdGVtLlN0YXR1c01vZGlmaWVyEg0KBXJhbmdlGAMgASgFEhUKDXNwbGFz",
-            "aF9yYWRpdXMYBCABKAUSDgoGYXR0YWNrGAUgASgFEi8KDW9uX2hpdF9lZmZl",
-            "Y3QYBiABKAsyGC5pdGVtLlRlbXBTdGF0dXNNb2RpZmllchIOCgZzcHJpdGUY",
-            "ByABKAkiaQoKQ29uc3VtYWJsZRIRCgltYXhfc3RhY2sYASABKAUSKAoGZWZm",
-            "ZWN0GAIgASgLMhguaXRlbS5UZW1wU3RhdHVzTW9kaWZpZXISDgoGc3RhY2tz",
-            "GAMgASgFEg4KBnNwcml0ZRgEIAEoCSLcAgoOU3RhdHVzTW9kaWZpZXISGQoR",
-            "ZmxhdF9zcGVlZF9jaGFuZ2UYASABKAUSHAoUcGVyY2VudF9zcGVlZF9jaGFu",
-            "Z2UYAiABKAESGgoSZmxhdF9oZWFsdGhfY2hhbmdlGAMgASgFEh0KFXBlcmNl",
-            "bnRfaGVhbHRoX2NoYW5nZRgEIAEoARIeChZmbGF0X2V4cGVyaWVuY2VfY2hh",
-            "bmdlGAUgASgFEiEKGXBlcmNlbnRfZXhwZXJpZW5jZV9jaGFuZ2UYBiABKAES",
-            "GgoSZmxhdF9hdHRhY2tfY2hhbmdlGAcgASgFEh0KFXBlcmNlbnRfYXR0YWNr",
-            "X2NoYW5nZRgIIAEoARIbChNmbGF0X2RlZmVuc2VfY2hhbmdlGAkgASgFEh4K",
-            "FnBlcmNlbnRfZGVmZW5zZV9jaGFuZ2UYCiABKAESGwoTZmxhdF9yZWdlbl9w",
-            "ZXJfdHVybhgLIAEoBSKpAQoSVGVtcFN0YXR1c01vZGlmaWVyEiMKBXN0YXRz",
-            "GAEgASgLMhQuaXRlbS5TdGF0dXNNb2RpZmllchIcChRmbGF0X2RhbWFnZV9w",
-            "ZXJfdHVybhgCIAEoBRIfChdwZXJjZW50X2RhbWFnZV9wZXJfdHVybhgDIAEo",
-            "ARIbChNmbGF0X3JlZ2VuX3Blcl90dXJuGAQgASgFEhIKCnR1cm5zX2xlZnQY",
-            "BSABKAUqjAEKC01hZ2ljRWZmZWN0EhUKEUxJTkdFUklOR19QT1RJT05TEAAS",
-            "DwoLU0hPRVNfQk9PU1QQARIRCg1DTE9USEVTX0JPT1NUEAISEAoMV0VBUE9O",
-            "X0JPT1NUEAMSEgoOVFJJUExFRF9PTl9ISVQQBBISCg5TVEFDS0lOR19CT05V",
-            "UxAFEggKBE5PTkUQBkI9Ch5tZWNoLm1hbmlhLmVuZ2luZS5kb21haW4ubW9k",
-            "ZWxCCkl0ZW1Qcm90b3OqAg5NTTI2LklPLk1vZGVsc2IGcHJvdG8z"));
+            "ASgJEhkKEXR1cm5zX3RvX2RlbGV0aW9uGAQgASgFIpEBCgNIYXQSEQoJbWF4",
+            "X3N0YWNrGAEgASgFEiMKBXN0YXRzGAIgASgLMhQuaXRlbS5TdGF0dXNNb2Rp",
+            "ZmllchInCgxtYWdpY19lZmZlY3QYAyABKA4yES5pdGVtLk1hZ2ljRWZmZWN0",
+            "Eg4KBnNwcml0ZRgEIAEoCRIZChF0dXJuc190b19kZWxldGlvbhgFIAEoBSKX",
+            "AQoJQWNjZXNzb3J5EhEKCW1heF9zdGFjaxgBIAEoBRIjCgVzdGF0cxgCIAEo",
+            "CzIULml0ZW0uU3RhdHVzTW9kaWZpZXISJwoMbWFnaWNfZWZmZWN0GAMgASgO",
+            "MhEuaXRlbS5NYWdpY0VmZmVjdBIOCgZzcHJpdGUYBCABKAkSGQoRdHVybnNf",
+            "dG9fZGVsZXRpb24YBSABKAUiagoFU2hvZXMSEQoJbWF4X3N0YWNrGAEgASgF",
+            "EiMKBXN0YXRzGAIgASgLMhQuaXRlbS5TdGF0dXNNb2RpZmllchIOCgZzcHJp",
+            "dGUYAyABKAkSGQoRdHVybnNfdG9fZGVsZXRpb24YBCABKAUi0gEKBldlYXBv",
+            "bhIRCgltYXhfc3RhY2sYASABKAUSIwoFc3RhdHMYAiABKAsyFC5pdGVtLlN0",
+            "YXR1c01vZGlmaWVyEg0KBXJhbmdlGAMgASgFEhUKDXNwbGFzaF9yYWRpdXMY",
+            "BCABKAUSDgoGYXR0YWNrGAUgASgFEi8KDW9uX2hpdF9lZmZlY3QYBiABKAsy",
+            "GC5pdGVtLlRlbXBTdGF0dXNNb2RpZmllchIOCgZzcHJpdGUYByABKAkSGQoR",
+            "dHVybnNfdG9fZGVsZXRpb24YCCABKAUihAEKCkNvbnN1bWFibGUSEQoJbWF4",
+            "X3N0YWNrGAEgASgFEigKBmVmZmVjdBgCIAEoCzIYLml0ZW0uVGVtcFN0YXR1",
+            "c01vZGlmaWVyEg4KBnN0YWNrcxgDIAEoBRIOCgZzcHJpdGUYBCABKAkSGQoR",
+            "dHVybnNfdG9fZGVsZXRpb24YBiABKAUi3AIKDlN0YXR1c01vZGlmaWVyEhkK",
+            "EWZsYXRfc3BlZWRfY2hhbmdlGAEgASgFEhwKFHBlcmNlbnRfc3BlZWRfY2hh",
+            "bmdlGAIgASgBEhoKEmZsYXRfaGVhbHRoX2NoYW5nZRgDIAEoBRIdChVwZXJj",
+            "ZW50X2hlYWx0aF9jaGFuZ2UYBCABKAESHgoWZmxhdF9leHBlcmllbmNlX2No",
+            "YW5nZRgFIAEoBRIhChlwZXJjZW50X2V4cGVyaWVuY2VfY2hhbmdlGAYgASgB",
+            "EhoKEmZsYXRfYXR0YWNrX2NoYW5nZRgHIAEoBRIdChVwZXJjZW50X2F0dGFj",
+            "a19jaGFuZ2UYCCABKAESGwoTZmxhdF9kZWZlbnNlX2NoYW5nZRgJIAEoBRIe",
+            "ChZwZXJjZW50X2RlZmVuc2VfY2hhbmdlGAogASgBEhsKE2ZsYXRfcmVnZW5f",
+            "cGVyX3R1cm4YCyABKAUiqQEKElRlbXBTdGF0dXNNb2RpZmllchIjCgVzdGF0",
+            "cxgBIAEoCzIULml0ZW0uU3RhdHVzTW9kaWZpZXISHAoUZmxhdF9kYW1hZ2Vf",
+            "cGVyX3R1cm4YAiABKAUSHwoXcGVyY2VudF9kYW1hZ2VfcGVyX3R1cm4YAyAB",
+            "KAESGwoTZmxhdF9yZWdlbl9wZXJfdHVybhgEIAEoBRISCgp0dXJuc19sZWZ0",
+            "GAUgASgFKowBCgtNYWdpY0VmZmVjdBIVChFMSU5HRVJJTkdfUE9USU9OUxAA",
+            "Eg8KC1NIT0VTX0JPT1NUEAESEQoNQ0xPVEhFU19CT09TVBACEhAKDFdFQVBP",
+            "Tl9CT09TVBADEhIKDlRSSVBMRURfT05fSElUEAQSEgoOU1RBQ0tJTkdfQk9O",
+            "VVMQBRIICgROT05FEAZCPQoebWVjaC5tYW5pYS5lbmdpbmUuZG9tYWluLm1v",
+            "ZGVsQgpJdGVtUHJvdG9zqgIOTU0yNi5JTy5Nb2RlbHNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MM26.IO.Models.MagicEffect), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Item), global::MM26.IO.Models.Item.Parser, new[]{ "Clothes", "Hat", "Shoes", "Weapon", "Consumable", "Accessory" }, new[]{ "Item" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Clothes), global::MM26.IO.Models.Clothes.Parser, new[]{ "MaxStack", "Stats", "Sprite" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Hat), global::MM26.IO.Models.Hat.Parser, new[]{ "MaxStack", "Stats", "MagicEffect", "Sprite" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Accessory), global::MM26.IO.Models.Accessory.Parser, new[]{ "MaxStack", "Stats", "MagicEffect" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Shoes), global::MM26.IO.Models.Shoes.Parser, new[]{ "MaxStack", "Stats", "Sprite" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Weapon), global::MM26.IO.Models.Weapon.Parser, new[]{ "MaxStack", "Stats", "Range", "SplashRadius", "Attack", "OnHitEffect", "Sprite" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Consumable), global::MM26.IO.Models.Consumable.Parser, new[]{ "MaxStack", "Effect", "Stacks", "Sprite" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Clothes), global::MM26.IO.Models.Clothes.Parser, new[]{ "MaxStack", "Stats", "Sprite", "TurnsToDeletion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Hat), global::MM26.IO.Models.Hat.Parser, new[]{ "MaxStack", "Stats", "MagicEffect", "Sprite", "TurnsToDeletion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Accessory), global::MM26.IO.Models.Accessory.Parser, new[]{ "MaxStack", "Stats", "MagicEffect", "Sprite", "TurnsToDeletion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Shoes), global::MM26.IO.Models.Shoes.Parser, new[]{ "MaxStack", "Stats", "Sprite", "TurnsToDeletion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Weapon), global::MM26.IO.Models.Weapon.Parser, new[]{ "MaxStack", "Stats", "Range", "SplashRadius", "Attack", "OnHitEffect", "Sprite", "TurnsToDeletion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.Consumable), global::MM26.IO.Models.Consumable.Parser, new[]{ "MaxStack", "Effect", "Stacks", "Sprite", "TurnsToDeletion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.StatusModifier), global::MM26.IO.Models.StatusModifier.Parser, new[]{ "FlatSpeedChange", "PercentSpeedChange", "FlatHealthChange", "PercentHealthChange", "FlatExperienceChange", "PercentExperienceChange", "FlatAttackChange", "PercentAttackChange", "FlatDefenseChange", "PercentDefenseChange", "FlatRegenPerTurn" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.TempStatusModifier), global::MM26.IO.Models.TempStatusModifier.Parser, new[]{ "Stats", "FlatDamagePerTurn", "PercentDamagePerTurn", "FlatRegenPerTurn", "TurnsLeft" }, null, null, null, null)
           }));
@@ -560,6 +564,7 @@ namespace MM26.IO.Models {
       maxStack_ = other.maxStack_;
       stats_ = other.stats_ != null ? other.stats_.Clone() : null;
       sprite_ = other.sprite_;
+      turnsToDeletion_ = other.turnsToDeletion_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -604,6 +609,17 @@ namespace MM26.IO.Models {
       }
     }
 
+    /// <summary>Field number for the "turns_to_deletion" field.</summary>
+    public const int TurnsToDeletionFieldNumber = 4;
+    private int turnsToDeletion_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int TurnsToDeletion {
+      get { return turnsToDeletion_; }
+      set {
+        turnsToDeletion_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Clothes);
@@ -620,6 +636,7 @@ namespace MM26.IO.Models {
       if (MaxStack != other.MaxStack) return false;
       if (!object.Equals(Stats, other.Stats)) return false;
       if (Sprite != other.Sprite) return false;
+      if (TurnsToDeletion != other.TurnsToDeletion) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -629,6 +646,7 @@ namespace MM26.IO.Models {
       if (MaxStack != 0) hash ^= MaxStack.GetHashCode();
       if (stats_ != null) hash ^= Stats.GetHashCode();
       if (Sprite.Length != 0) hash ^= Sprite.GetHashCode();
+      if (TurnsToDeletion != 0) hash ^= TurnsToDeletion.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -654,6 +672,10 @@ namespace MM26.IO.Models {
         output.WriteRawTag(26);
         output.WriteString(Sprite);
       }
+      if (TurnsToDeletion != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(TurnsToDeletion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -670,6 +692,9 @@ namespace MM26.IO.Models {
       }
       if (Sprite.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Sprite);
+      }
+      if (TurnsToDeletion != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TurnsToDeletion);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -693,6 +718,9 @@ namespace MM26.IO.Models {
       }
       if (other.Sprite.Length != 0) {
         Sprite = other.Sprite;
+      }
+      if (other.TurnsToDeletion != 0) {
+        TurnsToDeletion = other.TurnsToDeletion;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -723,6 +751,10 @@ namespace MM26.IO.Models {
             Sprite = input.ReadString();
             break;
           }
+          case 32: {
+            TurnsToDeletion = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -750,6 +782,10 @@ namespace MM26.IO.Models {
           }
           case 26: {
             Sprite = input.ReadString();
+            break;
+          }
+          case 32: {
+            TurnsToDeletion = input.ReadInt32();
             break;
           }
         }
@@ -792,6 +828,7 @@ namespace MM26.IO.Models {
       stats_ = other.stats_ != null ? other.stats_.Clone() : null;
       magicEffect_ = other.magicEffect_;
       sprite_ = other.sprite_;
+      turnsToDeletion_ = other.turnsToDeletion_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -847,6 +884,17 @@ namespace MM26.IO.Models {
       }
     }
 
+    /// <summary>Field number for the "turns_to_deletion" field.</summary>
+    public const int TurnsToDeletionFieldNumber = 5;
+    private int turnsToDeletion_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int TurnsToDeletion {
+      get { return turnsToDeletion_; }
+      set {
+        turnsToDeletion_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Hat);
@@ -864,6 +912,7 @@ namespace MM26.IO.Models {
       if (!object.Equals(Stats, other.Stats)) return false;
       if (MagicEffect != other.MagicEffect) return false;
       if (Sprite != other.Sprite) return false;
+      if (TurnsToDeletion != other.TurnsToDeletion) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -874,6 +923,7 @@ namespace MM26.IO.Models {
       if (stats_ != null) hash ^= Stats.GetHashCode();
       if (MagicEffect != global::MM26.IO.Models.MagicEffect.LingeringPotions) hash ^= MagicEffect.GetHashCode();
       if (Sprite.Length != 0) hash ^= Sprite.GetHashCode();
+      if (TurnsToDeletion != 0) hash ^= TurnsToDeletion.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -903,6 +953,10 @@ namespace MM26.IO.Models {
         output.WriteRawTag(34);
         output.WriteString(Sprite);
       }
+      if (TurnsToDeletion != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(TurnsToDeletion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -922,6 +976,9 @@ namespace MM26.IO.Models {
       }
       if (Sprite.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Sprite);
+      }
+      if (TurnsToDeletion != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TurnsToDeletion);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -948,6 +1005,9 @@ namespace MM26.IO.Models {
       }
       if (other.Sprite.Length != 0) {
         Sprite = other.Sprite;
+      }
+      if (other.TurnsToDeletion != 0) {
+        TurnsToDeletion = other.TurnsToDeletion;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -982,6 +1042,10 @@ namespace MM26.IO.Models {
             Sprite = input.ReadString();
             break;
           }
+          case 40: {
+            TurnsToDeletion = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -1013,6 +1077,10 @@ namespace MM26.IO.Models {
           }
           case 34: {
             Sprite = input.ReadString();
+            break;
+          }
+          case 40: {
+            TurnsToDeletion = input.ReadInt32();
             break;
           }
         }
@@ -1054,6 +1122,8 @@ namespace MM26.IO.Models {
       maxStack_ = other.maxStack_;
       stats_ = other.stats_ != null ? other.stats_.Clone() : null;
       magicEffect_ = other.magicEffect_;
+      sprite_ = other.sprite_;
+      turnsToDeletion_ = other.turnsToDeletion_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1095,6 +1165,31 @@ namespace MM26.IO.Models {
       }
     }
 
+    /// <summary>Field number for the "sprite" field.</summary>
+    public const int SpriteFieldNumber = 4;
+    private string sprite_ = "";
+    /// <summary>
+    /// Filepath to sprite for this item
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Sprite {
+      get { return sprite_; }
+      set {
+        sprite_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "turns_to_deletion" field.</summary>
+    public const int TurnsToDeletionFieldNumber = 5;
+    private int turnsToDeletion_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int TurnsToDeletion {
+      get { return turnsToDeletion_; }
+      set {
+        turnsToDeletion_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Accessory);
@@ -1111,6 +1206,8 @@ namespace MM26.IO.Models {
       if (MaxStack != other.MaxStack) return false;
       if (!object.Equals(Stats, other.Stats)) return false;
       if (MagicEffect != other.MagicEffect) return false;
+      if (Sprite != other.Sprite) return false;
+      if (TurnsToDeletion != other.TurnsToDeletion) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1120,6 +1217,8 @@ namespace MM26.IO.Models {
       if (MaxStack != 0) hash ^= MaxStack.GetHashCode();
       if (stats_ != null) hash ^= Stats.GetHashCode();
       if (MagicEffect != global::MM26.IO.Models.MagicEffect.LingeringPotions) hash ^= MagicEffect.GetHashCode();
+      if (Sprite.Length != 0) hash ^= Sprite.GetHashCode();
+      if (TurnsToDeletion != 0) hash ^= TurnsToDeletion.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1145,6 +1244,14 @@ namespace MM26.IO.Models {
         output.WriteRawTag(24);
         output.WriteEnum((int) MagicEffect);
       }
+      if (Sprite.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Sprite);
+      }
+      if (TurnsToDeletion != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(TurnsToDeletion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1161,6 +1268,12 @@ namespace MM26.IO.Models {
       }
       if (MagicEffect != global::MM26.IO.Models.MagicEffect.LingeringPotions) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MagicEffect);
+      }
+      if (Sprite.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Sprite);
+      }
+      if (TurnsToDeletion != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TurnsToDeletion);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1184,6 +1297,12 @@ namespace MM26.IO.Models {
       }
       if (other.MagicEffect != global::MM26.IO.Models.MagicEffect.LingeringPotions) {
         MagicEffect = other.MagicEffect;
+      }
+      if (other.Sprite.Length != 0) {
+        Sprite = other.Sprite;
+      }
+      if (other.TurnsToDeletion != 0) {
+        TurnsToDeletion = other.TurnsToDeletion;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1214,6 +1333,14 @@ namespace MM26.IO.Models {
             MagicEffect = (global::MM26.IO.Models.MagicEffect) input.ReadEnum();
             break;
           }
+          case 34: {
+            Sprite = input.ReadString();
+            break;
+          }
+          case 40: {
+            TurnsToDeletion = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -1241,6 +1368,14 @@ namespace MM26.IO.Models {
           }
           case 24: {
             MagicEffect = (global::MM26.IO.Models.MagicEffect) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            Sprite = input.ReadString();
+            break;
+          }
+          case 40: {
+            TurnsToDeletion = input.ReadInt32();
             break;
           }
         }
@@ -1282,6 +1417,7 @@ namespace MM26.IO.Models {
       maxStack_ = other.maxStack_;
       stats_ = other.stats_ != null ? other.stats_.Clone() : null;
       sprite_ = other.sprite_;
+      turnsToDeletion_ = other.turnsToDeletion_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1326,6 +1462,17 @@ namespace MM26.IO.Models {
       }
     }
 
+    /// <summary>Field number for the "turns_to_deletion" field.</summary>
+    public const int TurnsToDeletionFieldNumber = 4;
+    private int turnsToDeletion_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int TurnsToDeletion {
+      get { return turnsToDeletion_; }
+      set {
+        turnsToDeletion_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Shoes);
@@ -1342,6 +1489,7 @@ namespace MM26.IO.Models {
       if (MaxStack != other.MaxStack) return false;
       if (!object.Equals(Stats, other.Stats)) return false;
       if (Sprite != other.Sprite) return false;
+      if (TurnsToDeletion != other.TurnsToDeletion) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1351,6 +1499,7 @@ namespace MM26.IO.Models {
       if (MaxStack != 0) hash ^= MaxStack.GetHashCode();
       if (stats_ != null) hash ^= Stats.GetHashCode();
       if (Sprite.Length != 0) hash ^= Sprite.GetHashCode();
+      if (TurnsToDeletion != 0) hash ^= TurnsToDeletion.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1376,6 +1525,10 @@ namespace MM26.IO.Models {
         output.WriteRawTag(26);
         output.WriteString(Sprite);
       }
+      if (TurnsToDeletion != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(TurnsToDeletion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1392,6 +1545,9 @@ namespace MM26.IO.Models {
       }
       if (Sprite.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Sprite);
+      }
+      if (TurnsToDeletion != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TurnsToDeletion);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1415,6 +1571,9 @@ namespace MM26.IO.Models {
       }
       if (other.Sprite.Length != 0) {
         Sprite = other.Sprite;
+      }
+      if (other.TurnsToDeletion != 0) {
+        TurnsToDeletion = other.TurnsToDeletion;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1445,6 +1604,10 @@ namespace MM26.IO.Models {
             Sprite = input.ReadString();
             break;
           }
+          case 32: {
+            TurnsToDeletion = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -1472,6 +1635,10 @@ namespace MM26.IO.Models {
           }
           case 26: {
             Sprite = input.ReadString();
+            break;
+          }
+          case 32: {
+            TurnsToDeletion = input.ReadInt32();
             break;
           }
         }
@@ -1517,6 +1684,7 @@ namespace MM26.IO.Models {
       attack_ = other.attack_;
       onHitEffect_ = other.onHitEffect_ != null ? other.onHitEffect_.Clone() : null;
       sprite_ = other.sprite_;
+      turnsToDeletion_ = other.turnsToDeletion_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1605,6 +1773,17 @@ namespace MM26.IO.Models {
       }
     }
 
+    /// <summary>Field number for the "turns_to_deletion" field.</summary>
+    public const int TurnsToDeletionFieldNumber = 8;
+    private int turnsToDeletion_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int TurnsToDeletion {
+      get { return turnsToDeletion_; }
+      set {
+        turnsToDeletion_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Weapon);
@@ -1625,6 +1804,7 @@ namespace MM26.IO.Models {
       if (Attack != other.Attack) return false;
       if (!object.Equals(OnHitEffect, other.OnHitEffect)) return false;
       if (Sprite != other.Sprite) return false;
+      if (TurnsToDeletion != other.TurnsToDeletion) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1638,6 +1818,7 @@ namespace MM26.IO.Models {
       if (Attack != 0) hash ^= Attack.GetHashCode();
       if (onHitEffect_ != null) hash ^= OnHitEffect.GetHashCode();
       if (Sprite.Length != 0) hash ^= Sprite.GetHashCode();
+      if (TurnsToDeletion != 0) hash ^= TurnsToDeletion.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1679,6 +1860,10 @@ namespace MM26.IO.Models {
         output.WriteRawTag(58);
         output.WriteString(Sprite);
       }
+      if (TurnsToDeletion != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(TurnsToDeletion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1707,6 +1892,9 @@ namespace MM26.IO.Models {
       }
       if (Sprite.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Sprite);
+      }
+      if (TurnsToDeletion != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TurnsToDeletion);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1745,6 +1933,9 @@ namespace MM26.IO.Models {
       }
       if (other.Sprite.Length != 0) {
         Sprite = other.Sprite;
+      }
+      if (other.TurnsToDeletion != 0) {
+        TurnsToDeletion = other.TurnsToDeletion;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1792,6 +1983,10 @@ namespace MM26.IO.Models {
           }
           case 58: {
             Sprite = input.ReadString();
+            break;
+          }
+          case 64: {
+            TurnsToDeletion = input.ReadInt32();
             break;
           }
         }
@@ -1842,6 +2037,10 @@ namespace MM26.IO.Models {
             Sprite = input.ReadString();
             break;
           }
+          case 64: {
+            TurnsToDeletion = input.ReadInt32();
+            break;
+          }
         }
       }
     }
@@ -1882,6 +2081,7 @@ namespace MM26.IO.Models {
       effect_ = other.effect_ != null ? other.effect_.Clone() : null;
       stacks_ = other.stacks_;
       sprite_ = other.sprite_;
+      turnsToDeletion_ = other.turnsToDeletion_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1937,6 +2137,17 @@ namespace MM26.IO.Models {
       }
     }
 
+    /// <summary>Field number for the "turns_to_deletion" field.</summary>
+    public const int TurnsToDeletionFieldNumber = 6;
+    private int turnsToDeletion_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int TurnsToDeletion {
+      get { return turnsToDeletion_; }
+      set {
+        turnsToDeletion_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Consumable);
@@ -1954,6 +2165,7 @@ namespace MM26.IO.Models {
       if (!object.Equals(Effect, other.Effect)) return false;
       if (Stacks != other.Stacks) return false;
       if (Sprite != other.Sprite) return false;
+      if (TurnsToDeletion != other.TurnsToDeletion) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1964,6 +2176,7 @@ namespace MM26.IO.Models {
       if (effect_ != null) hash ^= Effect.GetHashCode();
       if (Stacks != 0) hash ^= Stacks.GetHashCode();
       if (Sprite.Length != 0) hash ^= Sprite.GetHashCode();
+      if (TurnsToDeletion != 0) hash ^= TurnsToDeletion.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1993,6 +2206,10 @@ namespace MM26.IO.Models {
         output.WriteRawTag(34);
         output.WriteString(Sprite);
       }
+      if (TurnsToDeletion != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(TurnsToDeletion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2012,6 +2229,9 @@ namespace MM26.IO.Models {
       }
       if (Sprite.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Sprite);
+      }
+      if (TurnsToDeletion != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TurnsToDeletion);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2038,6 +2258,9 @@ namespace MM26.IO.Models {
       }
       if (other.Sprite.Length != 0) {
         Sprite = other.Sprite;
+      }
+      if (other.TurnsToDeletion != 0) {
+        TurnsToDeletion = other.TurnsToDeletion;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2072,6 +2295,10 @@ namespace MM26.IO.Models {
             Sprite = input.ReadString();
             break;
           }
+          case 48: {
+            TurnsToDeletion = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -2103,6 +2330,10 @@ namespace MM26.IO.Models {
           }
           case 34: {
             Sprite = input.ReadString();
+            break;
+          }
+          case 48: {
+            TurnsToDeletion = input.ReadInt32();
             break;
           }
         }

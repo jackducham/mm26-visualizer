@@ -34,22 +34,23 @@ namespace MM26.IO.Models {
             "YW1lQ2hhbmdlLkNoYXJhY3RlckNoYW5nZXNFbnRyeRIuChF0aWxlX2l0ZW1f",
             "Y2hhbmdlcxgDIAMoCzITLmNoYXJhY3Rlci5Qb3NpdGlvbhpeChVDaGFyYWN0",
             "ZXJDaGFuZ2VzRW50cnkSCwoDa2V5GAEgASgJEjQKBXZhbHVlGAIgASgLMiUu",
-            "cGxheWVyX2NvbW11bmljYXRpb24uQ2hhcmFjdGVyQ2hhbmdlOgI4ASKRAgoP",
+            "cGxheWVyX2NvbW11bmljYXRpb24uQ2hhcmFjdGVyQ2hhbmdlOgI4ASKsAgoP",
             "Q2hhcmFjdGVyQ2hhbmdlEgwKBGRpZWQYASABKAgSEQoJcmVzcGF3bmVkGAIg",
             "ASgIEi4KCGRlY2lzaW9uGAMgASgLMhwuY2hhcmFjdGVyLkNoYXJhY3RlckRl",
             "Y2lzaW9uEiEKBHBhdGgYBCADKAsyEy5jaGFyYWN0ZXIuUG9zaXRpb24SEwoL",
             "aGF0X2NoYW5nZWQYBSABKAgSFwoPY2xvdGhlc19jaGFuZ2VkGAYgASgIEhUK",
             "DXNob2VzX2NoYW5nZWQYByABKAgSFgoOd2VhcG9uX2NoYW5nZWQYCCABKAgS",
-            "LQoQYXR0YWNrX2xvY2F0aW9ucxgJIAMoCzITLmNoYXJhY3Rlci5Qb3NpdGlv",
-            "bkJDCh5tZWNoLm1hbmlhLmVuZ2luZS5kb21haW4ubW9kZWxCEFZpc3VhbGl6",
-            "ZXJQcm90b3OqAg5NTTI2LklPLk1vZGVsc2IGcHJvdG8z"));
+            "GQoRYWNjZXNzb3J5X2NoYW5nZWQYCSABKAgSLQoQYXR0YWNrX2xvY2F0aW9u",
+            "cxgKIAMoCzITLmNoYXJhY3Rlci5Qb3NpdGlvbkJDCh5tZWNoLm1hbmlhLmVu",
+            "Z2luZS5kb21haW4ubW9kZWxCEFZpc3VhbGl6ZXJQcm90b3OqAg5NTTI2LklP",
+            "Lk1vZGVsc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::MM26.IO.Models.GameReflection.Descriptor, global::MM26.IO.Models.CharacterReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.VisualizerInitial), global::MM26.IO.Models.VisualizerInitial.Parser, new[]{ "State" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.VisualizerTurn), global::MM26.IO.Models.VisualizerTurn.Parser, new[]{ "State", "Change" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.GameChange), global::MM26.IO.Models.GameChange.Parser, new[]{ "NewPlayerNames", "CharacterChanges", "TileItemChanges" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.CharacterChange), global::MM26.IO.Models.CharacterChange.Parser, new[]{ "Died", "Respawned", "Decision", "Path", "HatChanged", "ClothesChanged", "ShoesChanged", "WeaponChanged", "AttackLocations" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::MM26.IO.Models.CharacterChange), global::MM26.IO.Models.CharacterChange.Parser, new[]{ "Died", "Respawned", "Decision", "Path", "HatChanged", "ClothesChanged", "ShoesChanged", "WeaponChanged", "AccessoryChanged", "AttackLocations" }, null, null, null, null)
           }));
     }
     #endregion
@@ -661,6 +662,7 @@ namespace MM26.IO.Models {
       clothesChanged_ = other.clothesChanged_;
       shoesChanged_ = other.shoesChanged_;
       weaponChanged_ = other.weaponChanged_;
+      accessoryChanged_ = other.accessoryChanged_;
       attackLocations_ = other.attackLocations_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -768,10 +770,21 @@ namespace MM26.IO.Models {
       }
     }
 
+    /// <summary>Field number for the "accessory_changed" field.</summary>
+    public const int AccessoryChangedFieldNumber = 9;
+    private bool accessoryChanged_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool AccessoryChanged {
+      get { return accessoryChanged_; }
+      set {
+        accessoryChanged_ = value;
+      }
+    }
+
     /// <summary>Field number for the "attack_locations" field.</summary>
-    public const int AttackLocationsFieldNumber = 9;
+    public const int AttackLocationsFieldNumber = 10;
     private static readonly pb::FieldCodec<global::MM26.IO.Models.Position> _repeated_attackLocations_codec
-        = pb::FieldCodec.ForMessage(74, global::MM26.IO.Models.Position.Parser);
+        = pb::FieldCodec.ForMessage(82, global::MM26.IO.Models.Position.Parser);
     private readonly pbc::RepeatedField<global::MM26.IO.Models.Position> attackLocations_ = new pbc::RepeatedField<global::MM26.IO.Models.Position>();
     /// <summary>
     /// If successful ATTACK decision was made, this will not be null
@@ -802,6 +815,7 @@ namespace MM26.IO.Models {
       if (ClothesChanged != other.ClothesChanged) return false;
       if (ShoesChanged != other.ShoesChanged) return false;
       if (WeaponChanged != other.WeaponChanged) return false;
+      if (AccessoryChanged != other.AccessoryChanged) return false;
       if(!attackLocations_.Equals(other.attackLocations_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -817,6 +831,7 @@ namespace MM26.IO.Models {
       if (ClothesChanged != false) hash ^= ClothesChanged.GetHashCode();
       if (ShoesChanged != false) hash ^= ShoesChanged.GetHashCode();
       if (WeaponChanged != false) hash ^= WeaponChanged.GetHashCode();
+      if (AccessoryChanged != false) hash ^= AccessoryChanged.GetHashCode();
       hash ^= attackLocations_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -860,6 +875,10 @@ namespace MM26.IO.Models {
         output.WriteRawTag(64);
         output.WriteBool(WeaponChanged);
       }
+      if (AccessoryChanged != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(AccessoryChanged);
+      }
       attackLocations_.WriteTo(output, _repeated_attackLocations_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -889,6 +908,9 @@ namespace MM26.IO.Models {
         size += 1 + 1;
       }
       if (WeaponChanged != false) {
+        size += 1 + 1;
+      }
+      if (AccessoryChanged != false) {
         size += 1 + 1;
       }
       size += attackLocations_.CalculateSize(_repeated_attackLocations_codec);
@@ -927,6 +949,9 @@ namespace MM26.IO.Models {
       }
       if (other.WeaponChanged != false) {
         WeaponChanged = other.WeaponChanged;
+      }
+      if (other.AccessoryChanged != false) {
+        AccessoryChanged = other.AccessoryChanged;
       }
       attackLocations_.Add(other.attackLocations_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -978,7 +1003,11 @@ namespace MM26.IO.Models {
             WeaponChanged = input.ReadBool();
             break;
           }
-          case 74: {
+          case 72: {
+            AccessoryChanged = input.ReadBool();
+            break;
+          }
+          case 82: {
             attackLocations_.AddEntriesFrom(input, _repeated_attackLocations_codec);
             break;
           }
@@ -1031,7 +1060,11 @@ namespace MM26.IO.Models {
             WeaponChanged = input.ReadBool();
             break;
           }
-          case 74: {
+          case 72: {
+            AccessoryChanged = input.ReadBool();
+            break;
+          }
+          case 82: {
             attackLocations_.AddEntriesFrom(ref input, _repeated_attackLocations_codec);
             break;
           }
