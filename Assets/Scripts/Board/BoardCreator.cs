@@ -88,6 +88,8 @@ namespace MM26.Board
 
                     this.CreateMap(state);
                     this.CreateCharacters(state);
+
+                    Debug.Log("Actually create board");
                 }
             }
         }
@@ -104,6 +106,8 @@ namespace MM26.Board
 
                 _loaded = true;
                 _waitingCanvas.enabled = false;
+
+                Debug.Log(_data.Initial.State.BoardNames.Keys);
             }
 
             _sceneLifeCycle.BoardCreated.Invoke();

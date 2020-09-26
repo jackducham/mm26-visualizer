@@ -19,7 +19,8 @@ namespace MM26.Utilities
             {
                 if (char.IsSymbol(c)
                     || char.IsLetterOrDigit(c)
-                    || char.IsPunctuation(c))
+                    || char.IsPunctuation(c)
+                    || char.IsWhiteSpace(c))
                 {
                     builder.Append(c);
                 }

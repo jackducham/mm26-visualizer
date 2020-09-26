@@ -28,6 +28,8 @@ namespace MM26.UI
         {
             _boardNameField.text = "pvp";
 
+            this.OnUseMainServer();
+
             _sceneConfiguration.WebSocketURL = "ws://engine-main.mechmania.io:8081/visualizer";
             _sceneConfiguration.BoardName = "pvp";
         }
