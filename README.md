@@ -10,8 +10,8 @@ Please check back at https://github.com/jackducham/mm26-visualizer/releases ofte
 
 - Type in the name of the board to view in the "Board" text field
 - Click on one of "Use X Server" to connect the visualizer to different servers
-  - "Use Main Server": connect to production server
-  - "Use Test Server": connect to development server
+  - "Use Main Server": connect to the server used for competition
+  - "Use Test Server": connect to the server used for experimenting
   - "Use Local Server": connect to a localhosted server
 
 Until either the server has been reached and the the requested board is present, you
