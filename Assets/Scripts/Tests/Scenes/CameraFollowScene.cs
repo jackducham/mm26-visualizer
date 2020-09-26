@@ -35,7 +35,7 @@ namespace MM26.Tests.Scenes
             _sceneLifeCycle.DataFetched.Invoke();
 
 
-            _mailbox.SendTask(new SpawnPlayerTask("Player", new Vector3Int()));
+            _mailbox.SendTask(new SpawnPlayerTask("Player 1", new Vector3Int()));
             StartCoroutine(this.Simulate());
         }
 
@@ -43,7 +43,7 @@ namespace MM26.Tests.Scenes
         {
             yield return new WaitForSecondsRealtime(5.0f);
 
-            _mailbox.SendTask(new FollowPathTask("Player", new Vector3[]
+            _mailbox.SendTask(new FollowPathTask("Player 1", new Vector3[]
             {
                 new Vector3(0.0f, 1.0f),
                 new Vector3(0.0f, 2.0f),

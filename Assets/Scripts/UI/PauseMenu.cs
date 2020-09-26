@@ -29,6 +29,9 @@ namespace MM26.UI
         [SerializeField]
         private TextMeshProUGUI _followField = null;
 
+        [SerializeField]
+        private TextMeshProUGUI _messageLabel = null;
+
         private Entity _entity = default;
         private World _world = null;
 
@@ -65,6 +68,7 @@ namespace MM26.UI
         private void OnPause(InputAction.CallbackContext context)
         {
             _canvas.enabled = !_canvas.enabled;
+            _messageLabel.text = "";
 
             var ecb = _world
                 .GetOrCreateSystem<EndSimulationEntityCommandBufferSystem>()
@@ -121,12 +125,7 @@ namespace MM26.UI
 
             if (follow == null)
             {
-                // TODO: add error in UI
-                Debug.LogErrorFormat(
-                    "{0} (length = {1}) not found!",
-                    name,
-                    name.Length);
-
+                _messageLabel.text = string.Format("{0} not found!", name);
                 return;
             }
 
