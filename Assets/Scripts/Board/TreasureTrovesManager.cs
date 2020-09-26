@@ -11,14 +11,17 @@ namespace MM26.Board
         [SerializeField]
         private Tilemap _tilemap = null;
 
+        [SerializeField]
+        private BoardPositionLookUp _boardPositionLookUp = null;
+
         public void PlaceTrove(int x, int y)
         {
-            _tilemap.SetTile(new Vector3Int(x, y, 0), _troveTile);
+            _tilemap.SetTile(new Vector3Int(x, (_boardPositionLookUp.Height - 1) - y, 0), _troveTile);
         }
 
         public void RemoveTrove(int x, int y)
         {
-            _tilemap.SetTile(new Vector3Int(x, y, 0), null);
+            _tilemap.SetTile(new Vector3Int(x, (_boardPositionLookUp.Height - 1) - y, 0), null);
         }
     }
 }

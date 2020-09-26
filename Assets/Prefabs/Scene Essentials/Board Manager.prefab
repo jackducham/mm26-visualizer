@@ -723,6 +723,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _troveTile: {fileID: 11400000, guid: 72038b1d7413142f9abe771aa76f1f4c, type: 2}
   _tilemap: {fileID: 1187212770057618288}
+  _boardPositionLookUp: {fileID: 11400000, guid: 2be8fc4b715a646b18ec12963535586d,
+    type: 2}
 --- !u!114 &6099384395167837154
 MonoBehaviour:
   m_ObjectHideFlags: 0
