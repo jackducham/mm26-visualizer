@@ -124,6 +124,8 @@ namespace MM26.Board
             _positionLookUp.Height = board.Height;
             _positionLookUp.Width = board.Width;
 
+            _treasureTrovesManager.mapHeight = board.Height;
+
             for (int x = 0; x < board.Width; x++)
             {
                 for (int y = 0; y < board.Height; y++)
