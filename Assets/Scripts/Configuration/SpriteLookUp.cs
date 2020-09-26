@@ -74,18 +74,24 @@ namespace MM26.Configuration
         {
             // some path might have all cap extensions, but the path
             // found by SpriteLookUpEditor all have lower case extension
-            string directory = Path.GetDirectoryName(path);
-            string filename = Path.GetFileNameWithoutExtension(path);
-            string extension = Path.GetExtension(path).ToLower();
+            //string directory = Path.GetDirectoryName(path);
+            //string filename = Path.GetFileNameWithoutExtension(path);
+            //string extension = Path.GetExtension(path).ToLower();
 
-            path = directory + "/" + $"{filename}{extension}";
+            if (path == "" || path == null)
+                return null;
 
+            //path = (directory + "/" + $"{filename}{extension}").Replace('\\', '/');
+            path = path.Replace("\\", "/").Replace(".PNG", ".png");
             if (_wearables.TryGetValue(path, out Sprite sprite))
             {
                 return sprite;
             }
             else
             {
+#if UNITY_EDITOR
+                Debug.LogWarningFormat("Failed to get sprite from path {0}", path);
+#endif
                 return null;
             }
         }

@@ -117,6 +117,9 @@ namespace MM26.Play
             {
                 if (character.Position.BoardId == sceneConfiguration.BoardName)
                 {
+#if UNITY_EDITOR
+                    Debug.Log("Character Dies");
+#endif
                     ignoreForHubUpdate.Add(entity);
                     batch.Add(new DespawnTask(entity));
                     batch.Add(new EffectTask(EffectType.Death, position));
@@ -126,8 +129,6 @@ namespace MM26.Play
             }
             else if (characterChange.Respawned)
             {
-                Debug.Log("Butt");
-
                 if (character.Position.BoardId == sceneConfiguration.BoardName)
                 {
                     ignoreForHubUpdate.Add(entity);
@@ -228,13 +229,13 @@ namespace MM26.Play
                             hat_changed = characterChange.HatChanged,
                             shoes_changed = characterChange.ShoesChanged,
                             weapon_changed = characterChange.WeaponChanged,
-                            accesory_changed = false,
+                            accesory_changed = characterChange.AccessoryChanged,
 
                             Top = player.Clothes?.Sprite,
                             Bottom = player.Shoes?.Sprite,
                             Head = player.Hat?.Sprite,
                             Weapon = character.Weapon?.Sprite,
-                            Accessory = ""
+                            Accessory = player.Accessory?.Sprite
                         });
                         return;
                     }

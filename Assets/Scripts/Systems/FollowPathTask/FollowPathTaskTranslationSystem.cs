@@ -88,7 +88,10 @@ namespace MM26.Systems.FollowPathTask
                             });
                         }
 
-                        this.RunningTasks.Add(character.name, task);
+                        if (!this.RunningTasks.ContainsKey(character.name))
+                            this.RunningTasks.Add(character.name, task);
+                        else
+                            this.RunningTasks[character.name] = task;
                     }
                 })
                 .Run();

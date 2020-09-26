@@ -45,10 +45,10 @@ namespace MM26.Play.Tests
                 {
                     Sprite = "mm26_wearables/clothes/alchemist_head.png"
                 },
-                //Accessory = new Accessory()
-                //{
-                //    Sprite = "mm26_wearables/clothes/alchemist_head.png"
-                //}
+                Accessory = new Accessory()
+                {
+                    Sprite = "mm26_wearables/clothes/alchemist_head.png"
+                }
             };
 
             gameChange.CharacterChanges["player"] = new CharacterChange()

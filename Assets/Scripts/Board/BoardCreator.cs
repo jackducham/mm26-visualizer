@@ -180,6 +180,32 @@ namespace MM26.Board
                 hub.Level = character.Level;
                 hub.Health = character.CurrentHealth;
                 hub.Experience = character.Experience;
+
+                var inventory = player.GetComponent<Inventory>();
+
+                if (inventory != null)
+                {
+                    Sprite head = _tileDatabase.GetWearable(pplayer.Hat?.Sprite);
+                    if (head != null)
+                        inventory.Head = head;
+
+                    Sprite top = _tileDatabase.GetWearable(pplayer.Clothes?.Sprite);
+                    if (top != null)
+                        inventory.Top = top;
+
+                    Sprite bottom = _tileDatabase.GetWearable(pplayer.Shoes?.Sprite);
+                    if (bottom != null)
+                        inventory.Bottom = bottom;
+
+                    Sprite accessory = _tileDatabase.GetWearable(pplayer.Accessory?.Sprite);
+                    if (accessory != null)
+                        inventory.Accessory = accessory;
+
+                    Sprite weapon = _tileDatabase.GetWearable(character.Weapon?.Sprite);
+                    if (weapon != null)
+                        inventory.Weapon = weapon;
+                }
+
             }
 
             foreach (var entry in state.MonsterNames)

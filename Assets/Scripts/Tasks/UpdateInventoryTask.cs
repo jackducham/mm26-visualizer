@@ -33,11 +33,16 @@ namespace MM26.Tasks
             hash.Add(this.weapon_changed.GetHashCode());
             hash.Add(this.accesory_changed.GetHashCode());
 
-            hash.Add(this.Head.GetHashCode());
-            hash.Add(this.Top.GetHashCode());
-            hash.Add(this.Bottom.GetHashCode());
-            hash.Add(this.Weapon.GetHashCode());
-            hash.Add(this.Accessory.GetHashCode());
+            if(this.Head != null)
+                hash.Add(this.Head.GetHashCode());
+            if (this.Top != null)
+                hash.Add(this.Top.GetHashCode());
+            if(this.Bottom != null)
+                hash.Add(this.Bottom.GetHashCode());
+            if(this.Weapon != null)
+                hash.Add(this.Weapon.GetHashCode());
+            if(this.Accessory != null)
+                hash.Add(this.Accessory.GetHashCode());
 
             return hash.Value;
         }
@@ -85,6 +90,7 @@ namespace MM26.Tasks
                 eq = eq && (this.Accessory == other.Accessory);
             if (this.weapon_changed)
                 eq = eq && (this.Weapon == other.Weapon);
+
             Debug.Log(eq);
             return eq;
         }
